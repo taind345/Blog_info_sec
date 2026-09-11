@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-trjxt6">
+<div class="excalidraw-container" id="ex-5y7r2y">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -25,22 +25,22 @@ tags:
 <g transform="translate(-221.93,-246.73)">
 <text x="261.93" y="648.12" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="261.93" dy="0">2-bypass nhu the nao??</tspan></text>
 </g>
-<a href="../ssrf/blacklist-filter-bypass" class="excalidraw-node-link" target="_self" title="Blacklist filter bypass"><g transform="translate(-221.93,-246.73)">
+<a href="./blacklist-filter-bypass" class="excalidraw-node-link" target="_self" title="Blacklist filter bypass"><g transform="translate(-221.93,-246.73)">
 <text x="313.10" y="728.25" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="313.10" dy="0">📍Blacklist filter bypass</tspan></text>
 </g></a>
-<a href="../ssrf/whitelist-bypass" class="excalidraw-node-link" target="_self" title="whitelist bypass"><g transform="translate(-221.93,-246.73)">
+<a href="./whitelist-bypass" class="excalidraw-node-link" target="_self" title="whitelist bypass"><g transform="translate(-221.93,-246.73)">
 <text x="312.13" y="800.61" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="312.13" dy="0">📍whitelist bypass</tspan></text>
 </g></a>
 <g transform="translate(-221.93,-246.73)">
 <text x="279.29" y="306.73" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="279.29" dy="0">1-dinh nghia</tspan></text>
 </g>
-<a href="../ssrf/blind-ssrf" class="excalidraw-node-link" target="_self" title="blind ssrf"><g transform="translate(-221.93,-246.73)">
+<a href="./blind-ssrf" class="excalidraw-node-link" target="_self" title="blind ssrf"><g transform="translate(-221.93,-246.73)">
 <text x="337.12" y="420.67" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="337.12" dy="0">📍blind ssrf</tspan></text>
 </g></a>
-<a href="../ssrf/blind-ssrf-là-gì,-kịch-bản-tấn-công" class="excalidraw-node-link" target="_self" title="Blind SSRF là gì, kịch bản tấn công"><g transform="translate(-221.93,-246.73)">
+<a href="./blind-ssrf-là-gì,-kịch-bản-tấn-công" class="excalidraw-node-link" target="_self" title="Blind SSRF là gì, kịch bản tấn công"><g transform="translate(-221.93,-246.73)">
 <text x="595.39" y="416.69" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="595.39" dy="0">📍Blind SSRF là gì, kịch bản tấn công</tspan></text>
 </g></a>
-<a href="../ssrf/mã-hóa-url-để-bypass-blacklist" class="excalidraw-node-link" target="_self" title="mã hóa url để bypass blacklist"><g transform="translate(-221.93,-246.73)">
+<a href="./mã-hóa-url-để-bypass-blacklist" class="excalidraw-node-link" target="_self" title="mã hóa url để bypass blacklist"><g transform="translate(-221.93,-246.73)">
 <text x="627.80" y="731.29" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="627.80" dy="0">📍mã hóa url để bypass blacklist</tspan></text>
 </g></a>
 <g transform="translate(-221.93,-246.73)">
@@ -55,16 +55,16 @@ tags:
 <g transform="translate(-221.93,-246.73)">
 <path d="M552.07 402.83 L552.84 402.05 L553.68 402.05 L554.53 402.05 L555.38 402.05 L556.23 402.05 L558.99 404.78 L562.68 409.33 L564.44 411.95 L566.33 414.68 L567.18 416.39 L568.04 417.24 L567.26 418.79 L564.08 421.80 L557.04 425.90 L549.49 428.87 L538.60 432.26 L527.08 434.86 L524.90 434.86 L524.90 434.86" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<a href="../ssrf/các-cách-để-bypass-ssrf" class="excalidraw-node-link" target="_self" title="các cách để bypass ssrf"><g transform="translate(-221.93,-246.73)">
+<a href="./các-cách-để-bypass-ssrf" class="excalidraw-node-link" target="_self" title="các cách để bypass ssrf"><g transform="translate(-221.93,-246.73)">
 <text x="575.88" y="650.83" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="575.88" dy="0">📍các cách để bypass ssrf</tspan></text>
 </g></a>
-<a href="../ssrf/hướng-tư-duy-khai-thác-ssrf" class="excalidraw-node-link" target="_self" title="Hướng tư duy khai thác SSRF"><g transform="translate(-221.93,-246.73)">
+<a href="./hướng-tư-duy-khai-thác-ssrf" class="excalidraw-node-link" target="_self" title="Hướng tư duy khai thác SSRF"><g transform="translate(-221.93,-246.73)">
 <text x="350.65" y="485.43" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="350.65" dy="0">📍Hướng tư duy khai thác SSRF</tspan></text>
 </g></a>
-<a href="../ssrf/dấu-hiệu-phát-hiện-ssrf" class="excalidraw-node-link" target="_self" title="Dấu hiệu phát hiện ssrf"><g transform="translate(-221.93,-246.73)">
+<a href="./dấu-hiệu-phát-hiện-ssrf" class="excalidraw-node-link" target="_self" title="Dấu hiệu phát hiện ssrf"><g transform="translate(-221.93,-246.73)">
 <text x="348.34" y="373.55" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="348.34" dy="0">📍Dấu hiệu phát hiện ssrf</tspan></text>
 </g></a>
-<a href="../ssrf/index" class="excalidraw-node-link" target="_self" title="SSRF"><g transform="translate(-221.93,-246.73)">
+<a href="./index" class="excalidraw-node-link" target="_self" title="SSRF"><g transform="translate(-221.93,-246.73)">
 <text x="457.66" y="315.00" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="457.66" dy="0">📍SSRF</tspan></text>
 </g></a>
 </svg>

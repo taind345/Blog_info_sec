@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-z3qvvr">
+<div class="excalidraw-container" id="ex-r42dcs">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -22,22 +22,22 @@ tags:
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1170 964" class="excalidraw-svg" data-width="1170" data-height="964">
-<a href="../xss/xss-là-gì" class="excalidraw-node-link" target="_self" title="Xss là gì"><g transform="translate(14.31,-129.40)">
+<a href="./xss-là-gì" class="excalidraw-node-link" target="_self" title="Xss là gì"><g transform="translate(14.31,-129.40)">
 <text x="64.37" y="298.85" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="64.37" dy="0">📍Xss là gì</tspan></text>
 </g></a>
-<a href="../xss/các-cách-phát-hiện-lỗ-hổng-xss" class="excalidraw-node-link" target="_self" title="các cách phát hiện lỗ hổng XSS"><g transform="translate(14.31,-129.40)">
+<a href="./các-cách-phát-hiện-lỗ-hổng-xss" class="excalidraw-node-link" target="_self" title="các cách phát hiện lỗ hổng XSS"><g transform="translate(14.31,-129.40)">
 <text x="63.35" y="371.73" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="63.35" dy="0">📍các cách phát</tspan><tspan x="63.35" dy="25">hiện lỗ hổng XSS</tspan></text>
 </g></a>
-<a href="../xss/csp" class="excalidraw-node-link" target="_self" title="CSP"><g transform="translate(14.31,-129.40)">
+<a href="./csp" class="excalidraw-node-link" target="_self" title="CSP"><g transform="translate(14.31,-129.40)">
 <text x="323.49" y="459.98" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="323.49" dy="0">📍CSP</tspan></text>
 </g></a>
-<a href="../xss/dangling-markup" class="excalidraw-node-link" target="_self" title="Dangling Markup"><g transform="translate(14.31,-129.40)">
+<a href="./dangling-markup" class="excalidraw-node-link" target="_self" title="Dangling Markup"><g transform="translate(14.31,-129.40)">
 <text x="143.53" y="690.50" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="143.53" dy="0">📍Dangling Markup</tspan></text>
 </g></a>
-<a href="../xss/phòng-chống-xss" class="excalidraw-node-link" target="_self" title="phòng chống xss"><g transform="translate(14.31,-129.40)">
+<a href="./phòng-chống-xss" class="excalidraw-node-link" target="_self" title="phòng chống xss"><g transform="translate(14.31,-129.40)">
 <text x="80.19" y="454.87" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="80.19" dy="0">📍phòng</tspan><tspan x="80.19" dy="25">chống xss</tspan></text>
 </g></a>
-<a href="../xss/so-sánh-xss.-csrf,-sql-injection" class="excalidraw-node-link" target="_self" title="so sánh xss. csrf, sql injection"><g transform="translate(14.31,-129.40)">
+<a href="./so-sánh-xss.-csrf,-sql-injection" class="excalidraw-node-link" target="_self" title="so sánh xss. csrf, sql injection"><g transform="translate(14.31,-129.40)">
 <text x="322.01" y="295.83" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="322.01" dy="0">📍so sánh xss. csrf, sql injection</tspan></text>
 </g></a>
 <g transform="translate(14.31,-129.40)">
@@ -52,13 +52,13 @@ tags:
 <g transform="translate(14.31,-129.40)">
 <path d="M855.93 226.00 L855.93 226.00" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<a href="../xss/xss-portswigger-lab" class="excalidraw-node-link" target="_self" title="XSS portswigger lab"><g transform="translate(14.31,-129.40)">
+<a href="./xss-portswigger-lab" class="excalidraw-node-link" target="_self" title="XSS portswigger lab"><g transform="translate(14.31,-129.40)">
 <text x="122.10" y="1047.93" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="122.10" dy="0">📍XSS portswigger lab</tspan></text>
 </g></a>
-<a href="../xss/stored-xss" class="excalidraw-node-link" target="_self" title="stored xss"><g transform="translate(14.31,-129.40)">
+<a href="./stored-xss" class="excalidraw-node-link" target="_self" title="stored xss"><g transform="translate(14.31,-129.40)">
 <text x="157.79" y="838.48" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="157.79" dy="0">📍stored xss</tspan></text>
 </g></a>
-<a href="../xss/điểm-chung-của-các-loại-xss" class="excalidraw-node-link" target="_self" title="điểm chung của các loại XSS"><g transform="translate(14.31,-129.40)">
+<a href="./điểm-chung-của-các-loại-xss" class="excalidraw-node-link" target="_self" title="điểm chung của các loại XSS"><g transform="translate(14.31,-129.40)">
 <text x="572.95" y="752.07" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="572.95" dy="0">📍điểm chung</tspan><tspan x="572.95" dy="25">của các loại XSS</tspan></text>
 </g></a>
 <g transform="translate(14.31,-129.40)">
@@ -67,13 +67,13 @@ tags:
 <g transform="translate(14.31,-129.40)">
 <path d="M495.22 771.66 L495.66 771.66 L497.21 771.66 L499.77 772.52 L504.39 775.20 L507.57 778.17 L510.47 780.04 L512.46 780.95 L513.31 782.66 L514.22 782.66 L513.42 783.45 L509.66 786.09 L504.59 790.46 L497.11 794.51 L491.20 797.34 L486.81 799.06 L484.89 800.12 L484.89 800.12" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<a href="../xss/reflect-xss" class="excalidraw-node-link" target="_self" title="reflect XSS"><g transform="translate(14.31,-129.40)">
+<a href="./reflect-xss" class="excalidraw-node-link" target="_self" title="reflect XSS"><g transform="translate(14.31,-129.40)">
 <text x="161.33" y="758.09" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="161.33" dy="0">📍reflect XSS</tspan></text>
 </g></a>
-<a href="../xss/dom-based-xss" class="excalidraw-node-link" target="_self" title="DOM based Xss"><g transform="translate(14.31,-129.40)">
+<a href="./dom-based-xss" class="excalidraw-node-link" target="_self" title="DOM based Xss"><g transform="translate(14.31,-129.40)">
 <text x="171.78" y="907.93" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="171.78" dy="0">📍DOM based Xss</tspan></text>
 </g></a>
-<a href="../xss/tab-source" class="excalidraw-node-link" target="_self" title="tab source"><g transform="translate(14.31,-129.40)">
+<a href="./tab-source" class="excalidraw-node-link" target="_self" title="tab source"><g transform="translate(14.31,-129.40)">
 <text x="813.51" y="292.59" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="813.51" dy="0">📍tab source</tspan></text>
 </g></a>
 <g transform="translate(14.31,-129.40)">

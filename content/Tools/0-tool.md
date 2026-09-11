@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-0dk958">
+<div class="excalidraw-container" id="ex-fewx2f">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -22,31 +22,31 @@ tags:
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 861 1001" class="excalidraw-svg" data-width="861" data-height="1001">
-<a href="../tools/burpsite" class="excalidraw-node-link" target="_self" title="Burpsite"><g transform="translate(-105.01,92.88)">
+<a href="./burpsite" class="excalidraw-node-link" target="_self" title="Burpsite"><g transform="translate(-105.01,92.88)">
 <text x="785.10" y="303.30" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="785.10" dy="0">📍Burpsite</tspan></text>
 </g></a>
-<a href="../tools/danh-sách-các-tool-kali" class="excalidraw-node-link" target="_self" title="danh sách các tool kali"><g transform="translate(-105.01,92.88)">
+<a href="./danh-sách-các-tool-kali" class="excalidraw-node-link" target="_self" title="danh sách các tool kali"><g transform="translate(-105.01,92.88)">
 <text x="152.06" y="211.91" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="152.06" dy="0">📍danh sách các tool kali</tspan></text>
 </g></a>
 <a href="../1-linux/cheetsheet-nmap" class="excalidraw-node-link" target="_self" title="cheetsheet nmap"><g transform="translate(-105.01,92.88)">
 <text x="145.01" y="160.35" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="145.01" dy="0">📍cheetsheet nmap</tspan></text>
 </g></a>
-<a href="../tools/curl" class="excalidraw-node-link" target="_self" title="curl"><g transform="translate(-105.01,92.88)">
+<a href="./curl" class="excalidraw-node-link" target="_self" title="curl"><g transform="translate(-105.01,92.88)">
 <text x="156.98" y="417.25" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="156.98" dy="0">📍curl</tspan></text>
 </g></a>
-<a href="../tools/crawl-enpoind-ẩn" class="excalidraw-node-link" target="_self" title="crawl enpoind ẩn"><g transform="translate(-105.01,92.88)">
+<a href="./crawl-enpoind-ẩn" class="excalidraw-node-link" target="_self" title="crawl enpoind ẩn"><g transform="translate(-105.01,92.88)">
 <text x="162.92" y="459.32" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="162.92" dy="0">📍crawl enpoind ẩn</tspan></text>
 </g></a>
-<a href="../tools/template-fuff-dùng-cho-cổng-đăng-nhập" class="excalidraw-node-link" target="_self" title="template fuff dùng cho cổng đăng nhập"><g transform="translate(-105.01,92.88)">
+<a href="./template-fuff-dùng-cho-cổng-đăng-nhập" class="excalidraw-node-link" target="_self" title="template fuff dùng cho cổng đăng nhập"><g transform="translate(-105.01,92.88)">
 <text x="207.21" y="754.18" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="207.21" dy="0">📍template fuff dùng cho cổng đăng nhập</tspan></text>
 </g></a>
-<a href="../tools/sql-map-template" class="excalidraw-node-link" target="_self" title="sql map template"><g transform="translate(-105.01,92.88)">
+<a href="./sql-map-template" class="excalidraw-node-link" target="_self" title="sql map template"><g transform="translate(-105.01,92.88)">
 <text x="184.69" y="564.90" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="184.69" dy="0">📍sql map template</tspan></text>
 </g></a>
-<a href="../tools/workflow-sql-map" class="excalidraw-node-link" target="_self" title="workflow sql map"><g transform="translate(-105.01,92.88)">
+<a href="./workflow-sql-map" class="excalidraw-node-link" target="_self" title="workflow sql map"><g transform="translate(-105.01,92.88)">
 <text x="200.40" y="624.42" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="200.40" dy="0">📍workflow sql map</tspan></text>
 </g></a>
-<a href="../tools/wordlist" class="excalidraw-node-link" target="_self" title="wordlist"><g transform="translate(-105.01,92.88)">
+<a href="./wordlist" class="excalidraw-node-link" target="_self" title="wordlist"><g transform="translate(-105.01,92.88)">
 <text x="212.09" y="812.76" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="212.09" dy="0">📍wordlist</tspan></text>
 </g></a>
 <g transform="translate(-105.01,92.88)">
@@ -55,14 +55,17 @@ tags:
 <g transform="translate(-105.01,92.88)">
 <path d="M192.41 729.49 L193.00 729.01 L194.06 729.07 L194.76 729.72 L195.66 732.22 L195.72 733.23 L195.56 736.73 L195.08 739.47 L194.22 742.08 L193.21 744.63 L192.62 745.70 L191.56 747.66 L190.49 749.27 L190.06 749.92 L189.21 750.69 L188.52 751.23 L187.82 750.87 L188.25 750.22 L188.89 749.68 L189.85 749.27 L190.76 749.39 L191.40 750.04 L192.62 752.47 L193.26 754.55 L193.69 756.87 L194.01 759.42 L194.22 762.33 L194.28 763.82 L194.33 767.09 L194.33 770.77 L194.28 774.75 L194.28 778.73 L194.44 782.53 L194.76 786.21 L195.34 789.48 L196.14 792.27 L197.00 794.71 L198.17 796.85 L199.45 798.69 L200.94 800.29 L202.76 801.48 L204.84 802.49 L207.02 803.20 L208.20 803.38 L210.49 803.50 L210.49 803.50" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<a href="../tools/dùng-fuff-trong-thực-tế" class="excalidraw-node-link" target="_self" title="dùng fuff trong thực tế"><g transform="translate(-105.01,92.88)">
+<a href="./dùng-fuff-trong-thực-tế" class="excalidraw-node-link" target="_self" title="dùng fuff trong thực tế"><g transform="translate(-105.01,92.88)">
 <text x="207.63" y="862.17" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="207.63" dy="0">📍dùng fuff trong thực tế</tspan></text>
 </g></a>
-<a href="../tools/dùng-niko-trước-và-sau-khi-login-có-khác-nhau-ko" class="excalidraw-node-link" target="_self" title="dùng niko trước và sau khi login có khác nhau ko"><g transform="translate(-105.01,92.88)">
+<a href="./dùng-niko-trước-và-sau-khi-login-có-khác-nhau-ko" class="excalidraw-node-link" target="_self" title="dùng niko trước và sau khi login có khác nhau ko"><g transform="translate(-105.01,92.88)">
 <text x="639.19" y="496.03" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="639.19" dy="0">📍dùng niko trước và sau</tspan><tspan x="639.19" dy="25">khi login có khác nhau ko</tspan></text>
 </g></a>
-<a href="../tools/search-scipt-nmap" class="excalidraw-node-link" target="_self" title="search scipt nmap"><g transform="translate(-105.01,92.88)">
+<a href="./search-scipt-nmap" class="excalidraw-node-link" target="_self" title="search scipt nmap"><g transform="translate(-105.01,92.88)">
 <text x="150.15" y="107.40" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="150.15" dy="0">📍search scipt nmap</tspan></text>
+</g></a>
+<a href="../0-asset/pasted-image-20260901155559_681.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260901155559_681.png"><g transform="translate(-105.01,92.88)">
+<image x="460.92411078404876" y="-52.876849006204026" width="465.0858208104555" height="315.27056525735304" href="../0-asset/pasted-image-20260901155559_681.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
 </svg>
     </div>

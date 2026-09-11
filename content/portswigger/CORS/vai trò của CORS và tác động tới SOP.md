@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-9beh2a">
+<div class="excalidraw-container" id="ex-lvl791">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -22,6 +22,9 @@ tags:
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 1455" class="excalidraw-svg" data-width="1020" data-height="1455">
+<a href="../../0-asset/pasted-image-20260629131818_192.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629131818_192.png"><g transform="translate(-43.83,-126.47)">
+<image x="207.50006103515625" y="166.46597871326264" width="374.66668701171886" height="195.44301205589662" href="../../0-asset/pasted-image-20260629131818_192.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-43.83,-126.47)">
 <text x="83.83" y="437.59" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="83.83" dy="0">-Tại sao cần CORS</tspan></text>
 </g>
@@ -52,6 +55,9 @@ tags:
 <g transform="translate(-43.83,-126.47)">
 <text x="431.83" y="648.92" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="431.83" dy="0">CORS giúp các trang web</tspan><tspan x="431.83" dy="25">giao tiếp với nhau</tspan></text>
 </g>
+<a href="../../0-asset/pasted-image-20260629132047_341.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629132047_341.png"><g transform="translate(-43.83,-126.47)">
+<image x="437.16668701171875" y="696.7380331070697" width="337.33325195312506" height="100.2322162565638" href="../../0-asset/pasted-image-20260629132047_341.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-43.83,-126.47)">
 <text x="100.50" y="842.25" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="100.50" dy="0">-CORS hoạt động ntn?</tspan></text>
 </g>
@@ -162,13 +168,16 @@ tags:
 <g transform="translate(-43.83,-126.47)">
 <text x="231.17" y="1010.92" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="231.17" dy="0">đọc respond và</tspan><tspan x="231.17" dy="25">mở khóa SOP cho</tspan><tspan x="231.17" dy="25">phép A đọc dữ</tspan><tspan x="231.17" dy="25">liệu từ B</tspan></text>
 </g>
+<a href="../../0-asset/pasted-image-20260630224508_076.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260630224508_076.png"><g transform="translate(-43.83,-126.47)">
+<image x="140.6952116051499" y="1155.0209503173828" width="882.2763248365752" height="317.6666259765625" href="../../0-asset/pasted-image-20260630224508_076.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-43.83,-126.47)">
 <path d="M147.21 1369.26 C203.20 1368.28,256.59 1370.50,335.08 1372.38 M149.27 1369.92 C202.91 1370.61,256.24 1371.06,334.94 1370.61 M336.04 1372.03 C336.73 1379.21,335.71 1388.74,333.67 1401.65 M335.66 1369.95 C336.19 1381.68,336.09 1393.92,335.14 1399.00 M333.37 1401.21 C280.08 1399.72,223.32 1400.65,148.21 1398.85 M334.21 1399.94 C264.99 1399.06,193.70 1399.46,149.07 1399.88 M149.82 1398.05 C149.28 1389.53,149.65 1380.49,149.07 1371.39 M148.03 1399.97 C149.23 1388.95,148.47 1378.02,147.71 1370.25" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-43.83,-126.47)">
 <path d="M687.92 1228.69 C769.52 1225.44,852.57 1226.51,1013.35 1229.27 M688.64 1228.95 C804.53 1227.79,920.41 1227.07,1013.60 1228.92 M1012.35 1228.29 C1013.54 1235.21,1013.74 1242.02,1014.70 1262.78 M1013.13 1228.82 C1014.88 1241.37,1014.19 1254.16,1014.72 1262.34 M1012.77 1262.33 C887.02 1264.48,759.24 1264.52,687.91 1260.76 M1013.84 1261.67 C915.71 1264.40,816.60 1264.50,687.88 1261.28 M687.92 1261.72 C687.11 1251.53,687.41 1241.02,688.97 1226.96 M688.20 1261.94 C689.13 1249.52,688.93 1235.34,688.94 1228.32" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<a href="../cors/bai1--cors" class="excalidraw-node-link" target="_self" title="bai1- cors"><g transform="translate(-43.83,-126.47)">
+<a href="./bai1--cors" class="excalidraw-node-link" target="_self" title="bai1- cors"><g transform="translate(-43.83,-126.47)">
 <text x="342.50" y="1535.92" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="342.50" dy="0">📍bai1- cors</tspan></text>
 </g></a>
 </svg>

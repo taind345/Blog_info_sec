@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-2iybzb">
+<div class="excalidraw-container" id="ex-nibijo">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -22,6 +22,9 @@ tags:
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 961 592" class="excalidraw-svg" data-width="961" data-height="592">
+<a href="../0-asset/pasted-image-20260830023738_667.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830023738_667.png"><g transform="translate(-148.24,-193.13)">
+<image x="188.24053906214453" y="262.77333068847656" width="880.5094614264921" height="482" href="../0-asset/pasted-image-20260830023738_667.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-148.24,-193.13)">
 <path d="M278.54 242.63 L267.93 239.96 L265.58 240.20 L259.55 241.45 L252.94 243.88 L244.67 248.22 L237.26 253.21 L234.54 255.52 L230.59 259.86 L228.14 264.20 L227.02 268.65 L227.93 275.36 L230.59 280.18 L234.97 284.87 L242.43 290.21 L250.81 294.49 L255.50 296.45 L265.53 299.24 L276.89 301.08 L289.15 301.98 L302.06 302.09 L315.29 301.50 L328.62 300.37 L347.71 297.70 L359.50 295.56 L364.89 294.37 L374.06 291.94 L381.05 289.38 L389.05 285.88 L395.07 282.91 L400.51 279.88 L404.73 277.32 L408.09 274.77 L410.49 272.63 L411.18 271.62 L411.61 270.79 L410.17 267.29 L406.86 265.15 L401.21 262.65 L391.02 259.15 L379.29 255.17 L364.09 249.94 L348.94 244.77 L333.90 240.20 L327.61 238.48 L315.07 235.62 L302.70 233.72 L290.38 233.13 L271.98 235.15 L260.14 238.30 L249.37 242.81 L249.37 242.81" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>

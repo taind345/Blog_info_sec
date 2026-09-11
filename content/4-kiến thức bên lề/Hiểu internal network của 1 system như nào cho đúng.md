@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-5qxcig">
+<div class="excalidraw-container" id="ex-3pwmdh">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -23,11 +23,51 @@ tags:
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1269 1106" class="excalidraw-svg" data-width="1269" data-height="1106">
 <g transform="translate(-96.27,-7.15)">
+
+<rect x="136.26535034179688" y="91.010009765625" width="688.5701272898707" height="624.0166778564453" rx="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5" class="excalidraw-md-bg"/>
+<foreignObject x="136.26535034179688" y="91.010009765625" width="688.5701272898707" height="624.0166778564453" class="excalidraw-foreign-md">
+  <div xmlns="http://www.w3.org/1999/xhtml" class="notion-embed-card">
+    <div class="notion-embed-header">
+      <div class="notion-embed-header-left">
+        <span class="notion-embed-icon">📝</span>
+        <span class="notion-embed-title">Còn mấy dịch vụ internal?</span>
+      </div>
+      <a href="#doc-8eb072521e3b6a119ea2883f252d4bdc1275d57f" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
+    </div>
+    <div class="notion-embed-body">
+      <p>Ừ, mày hiểu gần đúng rồi nhưng để tao bổ sung cho rõ:</p>
+<ul>
+<li><strong>Tên miền</strong> (ví dụ <code>thang.com</code>) → DNS phân giải ra <strong>IP public</strong> của server (hoặc IP của load balancer).</li>
+<li>Khi mày gửi request tới IP public đó, thực ra là mày gõ vào <strong>cánh cửa ngoài cùng</strong> – thường là <strong>router/firewall/gateway</strong> của hệ thống.</li>
+<li>Thằng gateway này nhận request rồi <strong>chuyển tiếp (forward)</strong> vào các <strong>IP nội bộ</strong> (private IP) bên trong mạng. Cơ chế này gọi là <strong>NAT (Network Address Translation)</strong> hoặc <strong>port forwarding</strong>.</li>
+</ul>
+<p>Ví dụ:</p>
+<ul>
+<li>Mày gõ <code>thang.com</code> → DNS ra <code>203.0.113.10</code> (public IP của công ty).</li>
+<li>Request tới <code>203.0.113.10:80</code> → router thấy cổng 80 → forward vào máy web server nội bộ <code>192.168.1.10:80</code>.</li>
+<li>Máy web server đó xử lý xong, trả dữ liệu ngược ra ngoài qua router.</li>
+</ul>
+<h3>Còn mấy dịch vụ internal?</h3>
+<ul>
+<li><strong>Database</strong> (<code>192.168.1.20:3306</code>) không lộ ra ngoài, chỉ nằm sâu bên trong. Muốn tới được nó, mày phải <strong>xâm nhập vào một máy trong mạng nội bộ</strong> trước, rồi từ đó mới connect tới DB được.</li>
+<li>Mấy dịch vụ nội bộ thường không có port forwarding ra ngoài, nên từ Internet không với tay tới.</li>
+</ul>
+<p>Tóm lại:<br><strong>Request từ ngoài → Public IP (router) → chuyển tiếp vào Private IP (web server) → nếu cần dữ liệu → gọi tiếp các internal IP khác (DB, file server...).</strong><br>Vậy nên attacker muốn chạm vào internal thì phải lọt vào trong trước. Rõ chưa mày? 😎</p>
+
+    </div>
+  </div>
+</foreignObject>
+
+</g>
+<g transform="translate(-96.27,-7.15)">
 <text x="375.87" y="63.15" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="375.87" dy="0">đọc thêm về cơ chế NAT ở đây </tspan><tspan x="375.87" dy="20"></tspan></text>
 </g>
 <g transform="translate(-96.27,-7.15)">
 <text x="633.50" y="63.80" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="633.50" dy="0">📍networking etentials#6-Nat</tspan></text>
 </g>
+<a href="../0-asset/pasted-image-20260811101627.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted image 20260811101627.png"><g transform="translate(-96.27,-7.15)">
+<image x="211.65866088867188" y="687.3099517822266" width="499.99999999999994" height="385.83441138421733" href="../0-asset/pasted-image-20260811101627.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-96.27,-7.15)">
 <path d="M954.91 599.65 L954.65 600.42 L954.54 601.61 L954.49 602.85 L954.33 605.64 L954.11 607.78 L953.90 610.99 L953.85 612.00 L953.79 613.78 L953.79 615.33 L953.79 616.69 L953.79 617.76 L953.79 617.76" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -185,6 +225,37 @@ tags:
     </div>
   </div>
 </div>
+
+
+---
+
+## 📖 Nội dung chi tiết bài viết (Writeup)
+
+<div id="doc-8eb072521e3b6a119ea2883f252d4bdc1275d57f" class="notion-callout-card">
+
+Ừ, mày hiểu gần đúng rồi nhưng để tao bổ sung cho rõ:
+
+- **Tên miền** (ví dụ `thang.com`) → DNS phân giải ra **IP public** của server (hoặc IP của load balancer).
+- Khi mày gửi request tới IP public đó, thực ra là mày gõ vào **cánh cửa ngoài cùng** – thường là **router/firewall/gateway** của hệ thống.
+- Thằng gateway này nhận request rồi **chuyển tiếp (forward)** vào các **IP nội bộ** (private IP) bên trong mạng. Cơ chế này gọi là **NAT (Network Address Translation)** hoặc **port forwarding**.
+
+Ví dụ:
+- Mày gõ `thang.com` → DNS ra `203.0.113.10` (public IP của công ty).
+- Request tới `203.0.113.10:80` → router thấy cổng 80 → forward vào máy web server nội bộ `192.168.1.10:80`.
+- Máy web server đó xử lý xong, trả dữ liệu ngược ra ngoài qua router.
+
+### Còn mấy dịch vụ internal?
+- **Database** (`192.168.1.20:3306`) không lộ ra ngoài, chỉ nằm sâu bên trong. Muốn tới được nó, mày phải **xâm nhập vào một máy trong mạng nội bộ** trước, rồi từ đó mới connect tới DB được.
+- Mấy dịch vụ nội bộ thường không có port forwarding ra ngoài, nên từ Internet không với tay tới.
+
+Tóm lại:  
+**Request từ ngoài → Public IP (router) → chuyển tiếp vào Private IP (web server) → nếu cần dữ liệu → gọi tiếp các internal IP khác (DB, file server...).**  
+Vậy nên attacker muốn chạm vào internal thì phải lọt vào trong trước. Rõ chưa mày? 😎
+
+</div>
+
+---
+
 
 
 ### 🔗 Các bài viết liên kết trong sơ đồ

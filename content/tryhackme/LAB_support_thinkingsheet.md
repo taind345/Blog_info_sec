@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-6t20fd">
+<div class="excalidraw-container" id="ex-k7x9td">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -22,6 +22,282 @@ tags:
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1747 15658" class="excalidraw-svg" data-width="1747" data-height="15658">
+<g transform="translate(-162.80,29.87)">
+
+<rect x="218.63550797957708" y="1837.6093487742805" width="800" height="6180" rx="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5" class="excalidraw-md-bg"/>
+<foreignObject x="218.63550797957708" y="1837.6093487742805" width="800" height="6180" class="excalidraw-foreign-md">
+  <div xmlns="http://www.w3.org/1999/xhtml" class="notion-embed-card">
+    <div class="notion-embed-header">
+      <div class="notion-embed-header-left">
+        <span class="notion-embed-icon">📝</span>
+        <span class="notion-embed-title">Báo Cáo Reconnaissance - Support Operations Panel</span>
+      </div>
+      <a href="#doc-b0d24878bbc041158694fa7665a307be07826852" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
+    </div>
+    <div class="notion-embed-body">
+      <h1>Báo Cáo Reconnaissance - Support Operations Panel</h1>
+<p><strong>Mục tiêu:</strong> <code>http://10.48.187.204/</code><br><strong>Thời gian thực hiện:</strong> 29/08/2026<br><strong>Thư mục làm việc:</strong> <code>/home/ti/SEUCURITY_LABLAB/THM/support_lab</code>  </p>
+<hr>
+<h2>1. Tổng Quan Mục Tiêu (Target Overview)</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Thông tin</th>
+<th align="left">Chi tiết</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>IP Address</strong></td>
+<td align="left"><code>10.48.187.204</code></td>
+</tr>
+<tr>
+<td align="left"><strong>Operating System</strong></td>
+<td align="left">Linux (Ubuntu)</td>
+</tr>
+<tr>
+<td align="left"><strong>Web Server</strong></td>
+<td align="left">Apache/2.4.58 (Ubuntu)</td>
+</tr>
+<tr>
+<td align="left"><strong>Backend Technology</strong></td>
+<td align="left">PHP 8.3.6</td>
+</tr>
+<tr>
+<td align="left"><strong>Corporate Domain</strong></td>
+<td align="left"><code>support.thm</code> (Contact: <code>help@support.thm</code>)</td>
+</tr>
+<tr>
+<td align="left"><strong>Network Latency</strong></td>
+<td align="left">~187 ms - 209 ms</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>2. Kết Quả Quét Cổng (Port Scanning &amp; Service Enumeration)</h2>
+<p>Tiến hành quét toàn bộ 65,535 cổng TCP trên mục tiêu bằng <code>nmap</code>:</p>
+<h3>Danh Sách Dịch Vụ Mở (Open Ports):</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Port</th>
+<th align="left">State</th>
+<th align="left">Service</th>
+<th align="left">Version / Details</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>22/tcp</strong></td>
+<td align="left"><code>OPEN</code></td>
+<td align="left">SSH</td>
+<td align="left">OpenSSH 9.6p1 Ubuntu 3ubuntu13.11<br>• ECDSA key: <code>b4:23:fa:e0:89:50:58:14:b5:f0:f3:01:81:ef:a5:3b</code><br>• ED25519 key: <code>fd:62:7d:e5:54:e7:5c:05:6b:72:e5:94:28:d1:5e:1b</code></td>
+</tr>
+<tr>
+<td align="left"><strong>80/tcp</strong></td>
+<td align="left"><code>OPEN</code></td>
+<td align="left">HTTP</td>
+<td align="left">Apache httpd 2.4.58 ((Ubuntu))<br>• Title: <code>Support Operations Panel</code><br>• Cookie: <code>PHPSESSID</code> (httponly: not set)</td>
+</tr>
+</tbody></table>
+<p><em>Tất cả các cổng khác (65,533 ports) ở trạng thái closed hoặc filtered.</em></p>
+<hr>
+<h2>3. Chi Tiết Quá Trình Recon &amp; Các Câu Lệnh Đã Sử Dụng (Detailed Methodology &amp; Commands)</h2>
+<p>Quá trình thu thập thông tin được thực hiện theo 8 bước chiến lược sau:</p>
+<h3>Bước 1: Kiểm Tra Kết Nối Mạng (Network Connectivity Check)</h3>
+<p>Thực hiện kiểm tra ICMP ping để xác định mục tiêu đang hoạt động và đo độ trễ mạng.</p>
+<p><strong>Câu lệnh đã dùng:</strong></p>
+<pre><code class="language-bash">ping -c 2 10.48.187.204
+</code></pre>
+<p><strong>Kết quả:</strong></p>
+<ul>
+<li>Host phản hồi tốt (<code>64 bytes from 10.48.187.204: icmp_seq=1 ttl=62 time=187 ms</code>)</li>
+<li>Packet loss: 0%, RTT trung bình ~197ms.</li>
+</ul>
+<hr>
+<h3>Bước 2: Quét Dịch Vụ Cổng Ban Đầu (Initial Service Discovery Scan)</h3>
+<p>Thực hiện quét Nmap kiểm tra các script mặc định (<code>-sC</code>) và xác định phiên bản dịch vụ (<code>-sV</code>) trên các cổng tiêu chuẩn.</p>
+<p><strong>Câu lệnh đã dùng:</strong></p>
+<pre><code class="language-bash">nmap -sC -sV -oN nmap_initial.txt 10.48.187.204
+</code></pre>
+<p><strong>Kết quả thu được:</strong></p>
+<ul>
+<li><strong>Port 22/tcp</strong>: OpenSSH 9.6p1 Ubuntu 3ubuntu13.11.</li>
+<li><strong>Port 80/tcp</strong>: Apache httpd 2.4.58 (Ubuntu), HTML Title: &quot;Support Operations Panel&quot;, set cookie <code>PHPSESSID</code>.</li>
+</ul>
+<hr>
+<h3>Bước 3: Quét Toàn Bộ Cổng TCP (Full Port Scan)</h3>
+<p>Quét toàn bộ dải cổng TCP từ 1 đến 65535 nhằm đảm bảo không bỏ sót bất kỳ dịch vụ ẩn nào (quản trị, database, proxy, custom ports).</p>
+<p><strong>Câu lệnh đã dùng:</strong></p>
+<pre><code class="language-bash">nmap -p- -T4 --min-rate 1000 -oN nmap_allports.txt 10.48.187.204
+</code></pre>
+<p><strong>Kết quả:</strong></p>
+<ul>
+<li>Xác nhận chỉ có duy nhất 2 cổng mở trên toàn hệ thống: <strong>Port 22 (SSH)</strong> và <strong>Port 80 (HTTP)</strong>.</li>
+</ul>
+<hr>
+<h3>Bước 4: Khảo Sát Bề Mặt Web &amp; HTTP Response Headers</h3>
+<p>Sử dụng <code>curl</code> kiểm tra phản hồi HTTP Header và cấu trúc HTML trang chủ <code>http://10.48.187.204/</code>.</p>
+<p><strong>Câu lệnh đã dùng:</strong></p>
+<pre><code class="language-bash">curl -s -i http://10.48.187.204/
+</code></pre>
+<p><strong>Kết quả thu được:</strong></p>
+<ul>
+<li>Server Banner: <code>Apache/2.4.58 (Ubuntu)</code></li>
+<li>Set-Cookie: <code>PHPSESSID=...</code> (thiếu thuộc tính <code>HttpOnly</code>)</li>
+<li>Giao diện: Form &quot;Employee Authentication&quot; nhận tham số POST <code>email</code> và <code>password</code>.</li>
+<li>Domain hỗ trợ: <code>help@support.thm</code>.</li>
+</ul>
+<hr>
+<h3>Bước 5: Dò Tìm Đường Dẫn Thư Mục &amp; File Ẩn (Web Directory Brute-Forcing)</h3>
+<p>Sử dụng <code>gobuster</code> kết hợp với tập từ điển <code>SecLists</code> (<code>common.txt</code>, <code>raft-medium-files.txt</code>, <code>raft-medium-directories.txt</code>) để quét tất cả đường dẫn ẩn.</p>
+<p><strong>Các câu lệnh đã dùng:</strong></p>
+<pre><code class="language-bash"># Quét danh mục cơ bản
+gobuster dir -u http://10.48.187.204/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -o gobuster_common.txt
+
+# Quét với các đuôi mở rộng file
+gobuster dir -u http://10.48.187.204/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -x php,html,txt,json,bak -o gobuster_ext.txt
+
+# Quét tập tin theo danh sách raft
+gobuster dir -u http://10.48.187.204/ -w /usr/share/seclists/Discovery/Web-Content/raft-medium-files.txt -o gobuster_raft_files.txt
+
+# Quét thư mục theo danh sách raft
+gobuster dir -u http://10.48.187.204/ -w /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt -o gobuster_raft_dirs.txt
+</code></pre>
+<p><strong>Các đường dẫn phát hiện được:</strong></p>
+<ul>
+<li><code>/index.php</code> (Status 200)</li>
+<li><code>/config.php</code> (Status 200, 0 bytes)</li>
+<li><code>/footer.php</code> (Status 200)</li>
+<li><code>/info.php</code> (Status 200, 73KB)</li>
+<li><code>/dashboard.php</code> (Status 302 -&gt; <code>index.php</code>)</li>
+<li><code>/api.php</code> (Status 302 -&gt; <code>index.php</code>)</li>
+<li><code>/logout.php</code> (Status 302 -&gt; <code>index.php</code>)</li>
+<li>Thư mục: <code>/includes/</code>, <code>/skins/</code>, <code>/layout/</code>, <code>/js/</code></li>
+</ul>
+<hr>
+<h3>Bước 6: Kiểm Tra Liệt Kê Thư Mục (Directory Listing Inspection)</h3>
+<p>Truy cập trực tiếp vào các thư mục đã phát hiện để kiểm tra tính năng Indexing của Apache Server.</p>
+<p><strong>Các câu lệnh đã dùng:</strong></p>
+<pre><code class="language-bash">curl -s -i http://10.48.187.204/layout/
+curl -s -i http://10.48.187.204/js/
+curl -s -i http://10.48.187.204/includes/
+curl -s -i http://10.48.187.204/skins/
+</code></pre>
+<p><strong>Kết quả thu được:</strong></p>
+<ul>
+<li>Tính năng <strong>Directory Listing</strong> bật trên cả 4 thư mục:<ul>
+<li><code>/layout/</code> chứa <code>bootstrap.min.css</code></li>
+<li><code>/js/</code> chứa <code>bootstrap.bundle.min.js</code></li>
+<li><code>/includes/</code> chứa <code>header.php</code>, <code>skin.php</code></li>
+<li><code>/skins/</code> chứa <code>blue.php</code>, <code>default.php</code>, <code>green.php</code>, <code>red.php</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3>Bước 7: Trích Xuất &amp; Phân Tích Thông Tin Môi Trường Từ <code>info.php</code></h3>
+<p>Sử dụng script Python với <code>BeautifulSoup</code> để lọc các thông số nguy hiểm từ tập tin <code>info.php</code>.</p>
+<p><strong>Câu lệnh đã dùng:</strong></p>
+<pre><code class="language-bash">python3 -c &#39;
+import urllib.request
+from bs4 import BeautifulSoup
+
+url = &quot;http://10.48.187.204/info.php&quot;
+html = urllib.request.urlopen(url).read().decode(&quot;utf-8&quot;, errors=&quot;ignore&quot;)
+soup = BeautifulSoup(html, &quot;html.parser&quot;)
+
+keywords = [&quot;DOCUMENT_ROOT&quot;, &quot;SCRIPT_FILENAME&quot;, &quot;disable_functions&quot;, &quot;open_basedir&quot;, &quot;allow_url_include&quot;, &quot;allow_url_fopen&quot;, &quot;APACHE_RUN_USER&quot;]
+for row in soup.find_all(&quot;tr&quot;):
+    txt = row.text.strip().replace(&quot;\n&quot;, &quot; &quot;)
+    for kw in keywords:
+        if kw in txt:
+            print(f&quot;{kw}: {txt[:100]}&quot;)
+            break
+&#39;
+</code></pre>
+<p><strong>Thông tin cấu hình quan trọng thu được:</strong></p>
+<ul>
+<li>PHP Version: <code>8.3.6</code></li>
+<li>Web Server User: <code>www-data</code> (UID: 33)</li>
+<li>Document Root: <code>/var/www/html</code></li>
+<li><code>disable_functions</code>: <strong>no value</strong> (Không cấm hàm thực thi hệ thống)</li>
+<li><code>open_basedir</code>: <strong>no value</strong> (Không giới hạn đường dẫn đọc file)</li>
+<li><code>session.save_path</code>: <code>/var/lib/php/sessions</code></li>
+<li><code>session.upload_progress.enabled</code>: <code>On</code></li>
+</ul>
+<hr>
+<h3>Bước 8: Kiểm Tra Chuyển Hướng Xác Thực &amp; Fuzzing Tham Số (Auth &amp; Parameter Testing)</h3>
+<p>Kiểm tra các hành vi chuyển hướng (HTTP 302) xem có lỗ hổng Execution After Redirect (EAR) hay không và đọc nội dung component <code>footer.php</code>.</p>
+<p><strong>Các câu lệnh đã dùng:</strong></p>
+<pre><code class="language-bash"># Kiểm tra EAR trên dashboard.php, api.php, header.php
+curl -s -i --max-redirs 0 http://10.48.187.204/dashboard.php
+curl -s -i --max-redirs 0 http://10.48.187.204/api.php
+curl -s -i --max-redirs 0 http://10.48.187.204/includes/header.php
+
+# Đọc mã HTML nguồn của footer.php
+curl -s http://10.48.187.204/footer.php
+</code></pre>
+<p><strong>Kết quả:</strong></p>
+<ul>
+<li><code>dashboard.php</code> và <code>api.php</code> trả về <code>Content-Length: 0</code> khi bị chuyển hướng (không bị EAR).</li>
+<li><code>footer.php</code> chứa giao diện chọn Theme chuyển hướng tham số <code>?skin=default</code>, <code>?skin=red</code>, <code>?skin=green</code>, <code>?skin=blue</code>.</li>
+</ul>
+<hr>
+<h2>4. Cấu Trúc Ứng Dụng Web Tổng Hợp</h2>
+<pre><code>http://10.48.187.204/
+├── index.php             (Trang chủ / Form đăng nhập nhân viên)
+├── dashboard.php         (Trang quản trị / Dashboard - Yêu cầu auth, HTTP 302 -&gt; index.php)
+├── api.php               (Endpoint API hệ thống - Yêu cầu auth, HTTP 302 -&gt; index.php)
+├── logout.php            (Endpoint đăng xuất - HTTP 302 -&gt; index.php)
+├── config.php            (File cấu hình PHP backend - HTTP 200, 0 bytes output)
+├── footer.php            (Component footer chứa theme selector `?skin=...`)
+├── info.php              (File phpinfo() công khai tiết lộ thông tin cấu hình server)
+├── includes/             (Thư mục backend includes - Bật Directory Listing)
+│   ├── header.php        (Component header - HTTP 302 -&gt; index.php khi gọi trực tiếp)
+│   └── skin.php          (Component xử lý giao diện/theme - HTTP 200)
+├── skins/                (Thư mục chứa các file giao diện CSS - Bật Directory Listing)
+│   ├── default.php       (&lt;style&gt;body { background-color: #f8f9fa; }&lt;/style&gt;)
+│   ├── blue.php          (&lt;style&gt;body { background-color: #e5f0ff; }&lt;/style&gt;)
+│   ├── green.php         (&lt;style&gt;body { background-color: #e5ffe5; }&lt;/style&gt;)
+│   └── red.php           (&lt;style&gt;body { background-color: #ffe5e5; }&lt;/style&gt;)
+├── layout/               (Thư mục giao diện CSS - Bật Directory Listing)
+│   └── bootstrap.min.css
+└── js/                   (Thư mục Javascript - Bật Directory Listing)
+    └── bootstrap.bundle.min.js
+</code></pre>
+<hr>
+<h2>5. Danh Sách Lỗ Hổng &amp; Điểm Yếu Ghi Nhận (Security Findings)</h2>
+<h3>1. Phơi Nhiễm Thông Tin Cấu Hình Hóa (<code>info.php</code>)</h3>
+<ul>
+<li><strong>Mức độ</strong>: Trung bình (Medium)</li>
+<li><strong>Mô tả</strong>: Endpoint <code>/info.php</code> công khai cho phép bất kỳ ai xem toàn bộ thông số môi trường PHP, thông tin đường dẫn thư mục gốc (<code>/var/www/html</code>), phiên bản OS, người dùng hệ thống (<code>www-data</code>), và cấu hình session.</li>
+</ul>
+<h3>2. Cấu Hình Bật Liệt Kê Thư Mục (Directory Listing / Indexing Enabled)</h3>
+<ul>
+<li><strong>Mức độ</strong>: Thấp - Trung bình (Low - Medium)</li>
+<li><strong>Mô tả</strong>: Các thư mục <code>/includes/</code>, <code>/skins/</code>, <code>/layout/</code>, và <code>/js/</code> không cấm liệt kê tập tin. Người dùng có thể duyệt toàn bộ danh sách file mã nguồn/tài nguyên bên trong.</li>
+</ul>
+<h3>3. Thiếu Thuộc Tính <code>HttpOnly</code> Trên Session Cookie</h3>
+<ul>
+<li><strong>Mức độ</strong>: Thấp (Low)</li>
+<li><strong>Mô tả</strong>: Cookie <code>PHPSESSID</code> được thiết lập không kèm cờ <code>HttpOnly</code>, tạo điều kiện cho các kịch bản đánh cắp session cookie nếu ứng dụng có lỗ hổng Cross-Site Scripting (XSS).</li>
+</ul>
+<h3>4. Bề Mặt Tấn Công Ứng Dụng (Attack Surface for Next Steps)</h3>
+<ul>
+<li><strong>Cơ chế Theme Selector (<code>?skin=...</code>)</strong>: File <code>footer.php</code> chứa tính năng chuyển đổi giao diện với các tham số <code>default</code>, <code>red</code>, <code>green</code>, <code>blue</code>. Cần kiểm tra kỹ hơn cơ chế Dynamic File Inclusion trong ứng dụng.</li>
+<li><strong>Xác thực Đăng nhập (<code>index.php</code>)</strong>: Giao diện đăng nhập nhân viên chấp nhận email dạng <code>@support.thm</code>. Các trang <code>/dashboard.php</code> và <code>/api.php</code> kiểm tra session trước khi cho phép truy cập.</li>
+</ul>
+<hr>
+<h2>6. Kết Luận &amp; Đề Xuất Khắc Phục (Remediation Recommendations)</h2>
+<ol>
+<li><strong>Xóa hoặc bảo vệ file <code>info.php</code></strong>: Xóa bỏ file <code>info.php</code> trên môi trường production hoặc giới hạn quyền truy cập theo IP nội bộ.</li>
+<li><strong>Tắt Directory Listing</strong>: Thêm directive <code>Options -Indexes</code> trong file cấu hình Apache hoặc <code>.htaccess</code> để cấm liệt kê thư mục.</li>
+<li><strong>Cấu hình an toàn cho Session Cookie</strong>: Thiết lập cờ <code>HttpOnly</code> và <code>Secure</code> cho cookie <code>PHPSESSID</code> trong <code>php.ini</code> (<code>session.cookie_httponly = On</code>).</li>
+<li><strong>Vệ sinh đầu vào (Input Sanitization)</strong>: Đảm bảo các tham số giao diện (như <code>skin</code>) được whitelist nghiêm ngặt để tránh rủi ro Local File Inclusion (LFI).</li>
+</ol>
+
+    </div>
+  </div>
+</foreignObject>
+
+</g>
 <g transform="translate(-162.80,29.87)">
 <path d="M1050.45 2554.78 L1049.08 2554.99 L1047.83 2555.06 L1048.83 2555.47 L1051.76 2555.61 L1053.39 2555.75 L1056.82 2555.96 L1060.45 2556.38 L1064.13 2556.72 L1067.57 2557.14 L1070.75 2557.56 L1073.44 2557.98 L1075.43 2558.25 L1075.43 2558.25" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -37,6 +313,9 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <text x="457.69" y="716.64" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="457.69" dy="0">liệu có thể bruteforce bằng fuzzing ko?</tspan><tspan x="457.69" dy="25"></tspan></text>
 </g>
+<a href="../0-asset/pasted-image-20260829211528_024.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829211528_024.png"><g transform="translate(-162.80,29.87)">
+<image x="886.938789147621" y="530.0792058308915" width="684.5975138183609" height="408.08484893591907" href="../0-asset/pasted-image-20260829211528_024.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M918.27 879.46 L917.70 878.55 L916.95 877.85 L915.56 877.57 L910.02 878.34 L906.31 879.04 L902.15 879.95 L900.01 880.44 L895.73 881.63 L891.45 883.11 L887.42 884.72 L883.77 886.55 L880.49 888.51 L877.66 890.61 L875.45 892.93 L873.69 895.17 L872.12 899.03 L871.42 901.76 L871.24 904.50 L871.24 906.04 L871.68 908.78 L872.49 911.65 L873.94 914.32 L876.08 916.98 L878.85 919.44 L882.51 921.68 L886.98 923.71 L892.39 925.47 L901.65 927.78 L908.26 929.04 L911.72 929.61 L918.65 930.66 L925.57 931.50 L932.62 932.27 L939.87 932.69 L947.61 932.90 L955.48 932.97 L963.48 932.90 L972.23 932.76 L986.02 932.34 L994.64 931.99 L998.61 931.92 L1006.73 931.71 L1014.54 931.50 L1022.16 931.15 L1029.53 930.86 L1036.89 930.44 L1044.13 930.09 L1051.56 929.61 L1058.87 929.04 L1066.04 928.41 L1073.10 927.78 L1079.96 927.22 L1086.57 926.73 L1092.80 926.17 L1098.41 925.68 L1103.70 925.11 L1108.80 924.55 L1113.90 923.92 L1118.62 923.22 L1123.28 922.45 L1127.69 921.68 L1134.05 920.21 L1136.06 919.72 L1139.96 918.80 L1143.62 917.75 L1146.70 916.77 L1149.60 915.86 L1152.30 914.80 L1154.82 913.82 L1157.22 912.77 L1159.23 911.65 L1161.18 910.74 L1162.06 910.25 L1163.39 909.41 L1164.52 908.70 L1165.40 908.08 L1166.28 907.44 L1167.29 906.81 L1167.98 906.11 L1168.49 905.20 L1168.55 904.01 L1167.79 902.32 L1166.28 900.36 L1164.08 898.04 L1161.18 895.66 L1157.72 893.35 L1153.25 890.68 L1148.15 888.16 L1142.42 885.77 L1135.30 883.18 L1127.75 880.80 L1120.07 878.69 L1111.95 876.66 L1107.98 875.68 L1095.32 872.66 L1086.82 870.84 L1078.26 868.94 L1069.51 867.12 L1060.82 865.30 L1052.00 863.75 L1042.94 862.28 L1034.00 860.95 L1024.93 859.90 L1015.86 859.05 L1011.33 858.70 L1002.14 858.15 L988.85 857.72 L980.60 857.51 L971.60 857.65 L962.15 857.86 L952.65 858.28 L943.27 858.85 L934.14 859.40 L925.76 859.90 L918.02 860.53 L910.34 861.16 L906.56 861.44 L899.32 862.14 L889.62 863.12 L884.46 863.75 L879.55 864.39 L874.95 865.09 L871.17 865.72 L867.96 866.42 L865.06 867.19 L862.55 868.10 L860.41 869.36 L859.46 870.07 L857.89 871.68 L857.89 871.68" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -112,6 +391,9 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <text x="1011.96" y="1103.06" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1011.96" dy="0">dùng AI recon được ko ?</tspan></text>
 </g>
+<a href="../0-asset/pasted-image-20260829212448_767.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829212448_767.png"><g transform="translate(-162.80,29.87)">
+<image x="202.8007650233768" y="1407.2138675964347" width="730.0997380610285" height="287.7703061129434" href="../0-asset/pasted-image-20260829212448_767.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M687.00 1502.95 L686.37 1501.90 L685.81 1500.91 L685.30 1500.00 L684.67 1499.30 L684.36 1500.35 L684.55 1502.81 L684.86 1505.89 L685.37 1508.91 L686.06 1511.85 L686.50 1513.32 L687.57 1516.20 L689.71 1520.06 L691.54 1522.37 L693.87 1524.48 L696.57 1526.44 L699.53 1528.12 L702.49 1529.53 L705.52 1530.65 L708.60 1531.49 L711.62 1532.26 L714.64 1532.96 L717.60 1533.45 L720.69 1533.73 L725.10 1533.87 L726.61 1533.87 L729.38 1533.59 L731.96 1533.45 L733.85 1533.31 L735.30 1533.10 L736.49 1532.96 L737.94 1532.75 L739.20 1532.47 L739.20 1532.47" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -121,6 +403,9 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <text x="769.27" y="1571.07" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="769.27" dy="0">nhìn lại giữ kiện của Burp , mình cũng</tspan><tspan x="769.27" dy="25">chẳng nhìn thấy chút gì là có thể mò</tspan><tspan x="769.27" dy="25">được từ đây cả ?</tspan></text>
 </g>
+<a href="../0-asset/pasted-image-20260829212855_109.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829212855_109.png"><g transform="translate(-162.80,29.87)">
+<image x="1040.6175147713664" y="1157.8096693685782" width="486.536129582585" height="259.09514370542473" href="../0-asset/pasted-image-20260829212855_109.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M789.62 1054.43 L788.99 1055.05 L788.24 1055.68 L787.56 1056.30 L787.56 1056.30" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -166,6 +451,9 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <text x="247.01" y="1746.92" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="247.01" dy="0">ok bây giờ mình sẽ đọc lại kết quả recon từ AI , nó sẽ</tspan><tspan x="247.01" dy="25">trả loiwf được các câu hỏi về epoint ,phiên bản, các</tspan><tspan x="247.01" dy="25">internal API đưược dùng ?</tspan></text>
 </g>
+<a href="../0-asset/pasted-image-20260829211258_824.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829211258_824.png"><g transform="translate(-162.80,29.87)">
+<image x="221.2418800087445" y="56.925275349457365" width="884.8676552864307" height="444.9537924873997" href="../0-asset/pasted-image-20260829211258_824.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M1112.20 284.94 L1110.75 284.94 L1109.49 285.01 L1112.26 284.87 L1115.91 284.66 L1117.93 284.66 L1122.71 284.66 L1127.62 284.59 L1132.35 284.66 L1136.63 284.73 L1140.47 284.94 L1143.74 284.94 L1145.19 284.94 L1145.19 284.94" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -262,6 +550,9 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <path d="M640.67 6587.01 L641.49 6587.50 L641.49 6587.50" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../0-asset/pasted-image-20260829215909_804.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829215909_804.png"><g transform="translate(-162.80,29.87)">
+<image x="1112.9018191914963" y="6619.4994705613735" width="427.4589917742211" height="209.31764849494542" href="../0-asset/pasted-image-20260829215909_804.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M941.66 6905.89 L941.41 6907.01 L941.22 6908.19 L941.22 6908.19" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -298,6 +589,9 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <path d="M778.71 6790.40 L778.02 6789.77 L778.53 6789.00 L779.72 6788.93 L780.97 6788.86 L785.24 6789.00 L788.06 6789.15 L790.64 6789.28 L793.21 6789.42 L794.53 6789.57 L797.10 6789.77 L799.67 6790.05 L801.87 6790.33 L804.50 6790.54 L805.82 6790.75 L807.95 6790.96 L809.90 6791.17 L813.10 6791.45 L814.42 6791.73 L815.61 6791.80 L819.18 6792.15 L820.25 6792.29 L823.64 6792.57 L826.27 6792.78 L828.85 6792.92 L830.98 6793.06 L832.93 6793.20 L835.12 6793.34 L836.38 6793.41 L838.57 6793.48 L841.71 6793.76 L842.84 6793.83 L844.97 6794.04 L846.86 6794.18 L848.42 6794.25 L849.93 6794.46 L853.13 6794.73 L855.07 6795.02 L858.27 6795.37 L859.66 6795.50 L860.91 6795.71 L863.29 6796.13 L865.11 6796.34 L866.81 6796.62 L868.31 6796.76 L871.45 6797.32 L873.40 6797.60 L875.09 6797.81 L876.60 6797.95 L878.04 6798.16 L881.30 6798.58 L883.69 6798.93 L885.88 6799.14 L887.83 6799.35 L891.34 6799.77 L893.91 6799.91 L895.04 6799.98 L897.24 6800.05 L900.56 6800.33 L903.07 6800.40 L906.40 6800.60 L908.28 6800.67 L912.05 6800.82 L914.37 6800.95 L916.44 6800.95 L918.26 6801.02 L919.89 6801.02 L922.65 6801.02 L925.16 6800.95 L926.42 6800.95 L928.61 6800.82 L930.49 6800.82 L932.19 6800.67 L935.07 6800.47 L937.15 6800.26 L938.90 6800.05 L940.47 6799.84 L941.79 6799.63 L942.98 6799.42 L945.37 6798.93 L947.37 6798.23 L949.13 6797.74 L950.51 6797.18 L951.83 6796.69 L952.96 6796.27 L954.02 6795.86 L955.47 6795.15 L956.91 6794.46 L958.10 6793.76 L958.98 6793.06 L959.67 6792.50 L960.55 6791.66 L961.05 6790.82 L961.36 6789.77 L961.30 6788.58 L960.93 6787.68 L960.36 6786.77 L959.23 6785.09 L957.79 6783.48 L956.22 6782.02 L954.59 6780.69 L952.96 6779.43 L950.89 6778.31 L948.82 6777.13 L946.43 6776.07 L943.98 6775.03 L941.35 6774.19 L938.78 6773.21 L935.95 6772.37 L933.00 6771.39 L930.18 6770.49 L928.55 6770.07 L925.54 6769.23 L920.77 6767.90 L917.57 6767.13 L914.12 6766.22 L910.67 6765.52 L907.03 6764.69 L903.58 6763.98 L900.13 6763.36 L898.37 6763.01 L894.98 6762.31 L891.72 6761.61 L888.39 6761.05 L885.19 6760.42 L880.30 6759.58 L876.91 6759.30 L873.58 6758.95 L870.26 6758.60 L868.69 6758.53 L865.37 6758.26 L862.29 6758.12 L859.22 6757.84 L856.27 6757.70 L853.32 6757.49 L850.43 6757.35 L847.67 6757.14 L843.40 6757.00 L842.02 6756.93 L839.26 6756.93 L837.95 6756.93 L834.24 6756.93 L831.67 6756.93 L828.85 6757.07 L827.72 6757.14 L825.58 6757.28 L823.70 6757.35 L820.75 6757.70 L819.44 6757.84 L815.61 6758.33 L813.29 6758.60 L812.03 6758.89 L808.52 6759.37 L806.57 6759.58 L805.00 6759.93 L803.50 6760.21 L802.24 6760.35 L799.42 6761.05 L797.73 6761.40 L796.35 6761.75 L795.15 6762.03 L794.02 6762.38 L793.02 6762.73 L792.02 6763.08 L791.07 6763.43 L789.82 6764.06 L789.00 6764.62 L787.56 6765.31 L786.37 6766.08 L785.43 6766.85 L784.61 6767.62 L783.86 6768.39 L783.23 6769.09 L782.48 6770.00 L781.91 6770.97 L781.41 6772.02 L781.04 6773.21 L780.97 6774.47 L781.41 6776.07 L782.23 6778.17 L783.48 6780.13 L784.24 6780.97 L785.93 6782.71 L788.88 6785.02 L790.89 6786.28 L792.83 6787.47 L794.90 6788.51 L796.91 6789.35 L797.91 6789.77 L797.91 6789.77" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../0-asset/pasted-image-20260829220217_061.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829220217_061.png"><g transform="translate(-162.80,29.87)">
+<image x="1078.0942975277314" y="6863.137661335735" width="553.3211431016848" height="322.2217371038582" href="../0-asset/pasted-image-20260829220217_061.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M1365.95 6990.50 L1364.69 6990.78 L1363.25 6991.06 L1362.06 6991.41 L1364.56 6991.62 L1367.95 6991.47 L1371.84 6991.20 L1376.36 6991.06 L1380.88 6990.92 L1385.15 6990.78 L1389.10 6990.78 L1392.55 6990.78 L1395.69 6990.78 L1396.94 6990.78 L1398.89 6990.78 L1400.33 6990.71 L1400.33 6990.71" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -355,6 +649,9 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <path d="M665.90 8469.55 L665.58 8468.64 L664.64 8468.15 L663.70 8467.66 L663.70 8467.66" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../0-asset/pasted-image-20260829221209_118.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829221209_118.png"><g transform="translate(-162.80,29.87)">
+<image x="419.00053120928317" y="8344.91595651613" width="1106.2336735403694" height="342.1664881268453" href="../0-asset/pasted-image-20260829221209_118.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M767.86 8488.35 L768.11 8487.30 L767.36 8486.74 L765.85 8486.53 L763.91 8486.46 L760.52 8486.32 L756.31 8486.11 L751.61 8486.04 L746.28 8486.04 L740.63 8486.04 L733.79 8486.25 L726.82 8486.53 L715.91 8487.30 L712.46 8487.58 L705.49 8488.27 L698.97 8489.11 L692.75 8490.09 L686.86 8491.21 L681.84 8492.19 L677.13 8493.31 L672.68 8494.42 L668.35 8495.68 L666.40 8496.24 L662.95 8497.36 L658.81 8498.69 L656.80 8499.46 L655.29 8500.02 L654.29 8500.78 L653.41 8501.76 L653.04 8502.60 L652.66 8503.58 L652.78 8504.91 L653.35 8506.80 L654.42 8509.10 L656.05 8511.34 L659.69 8514.55 L663.08 8516.58 L667.40 8518.60 L672.42 8520.63 L675.12 8521.47 L680.77 8523.15 L686.67 8524.75 L692.75 8526.08 L698.97 8527.34 L705.37 8528.46 L711.89 8529.23 L718.73 8530.00 L729.15 8530.76 L736.17 8531.18 L739.69 8531.26 L746.46 8531.39 L753.11 8531.67 L758.95 8531.67 L764.66 8531.81 L770.24 8532.02 L775.58 8532.09 L780.53 8532.23 L785.24 8532.30 L789.69 8532.58 L793.77 8532.58 L797.66 8532.65 L801.37 8532.65 L805.07 8532.58 L808.52 8532.51 L811.72 8532.23 L814.60 8531.88 L817.30 8531.46 L819.56 8530.84 L820.69 8530.42 L822.70 8529.36 L824.46 8528.04 L826.46 8525.31 L827.53 8523.22 L828.28 8520.84 L828.60 8518.75 L828.60 8516.72 L828.16 8514.13 L827.84 8512.80 L826.84 8510.01 L824.96 8506.86 L822.26 8503.65 L818.37 8500.22 L812.97 8496.45 L806.20 8492.75 L791.77 8487.30 L780.60 8484.71 L774.26 8483.66 L763.84 8482.40 L753.87 8481.78 L744.20 8481.64 L735.04 8482.27 L727.14 8483.17 L723.62 8483.80 L723.62 8483.80" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -808,6 +1105,9 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <path d="M1734.14 9325.87 L1731.44 9327.69 L1730.25 9328.39 L1729.24 9328.74 L1729.24 9328.74" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../0-asset/pasted-image-20260829233123_151.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829233123_151.png"><g transform="translate(-162.80,29.87)">
+<image x="588.6116917626196" y="9550.60592434668" width="487.0639265955339" height="208.14098733650866" href="../0-asset/pasted-image-20260829233123_151.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M1005.35 9626.36 L1004.85 9625.31 L1004.41 9624.48 L1004.91 9623.50 L1008.05 9622.73 L1011.12 9622.17 L1015.14 9621.89 L1019.91 9621.54 L1024.99 9621.26 L1030.01 9621.26 L1037.60 9621.33 L1040.24 9621.54 L1045.19 9621.89 L1050.03 9622.31 L1054.86 9622.87 L1059.50 9623.36 L1064.08 9623.99 L1068.66 9624.48 L1073.24 9624.90 L1077.88 9625.25 L1082.59 9625.46 L1087.30 9625.73 L1094.45 9625.80 L1098.53 9625.80 L1102.29 9625.73 L1105.87 9625.67 L1107.63 9625.67 L1110.89 9625.46 L1113.96 9625.25 L1116.85 9624.96 L1118.17 9624.90 L1120.36 9624.62 L1122.06 9624.48 L1123.37 9624.41 L1124.57 9624.20 L1125.95 9624.13 L1127.14 9623.99 L1128.27 9623.78 L1129.40 9623.64 L1130.47 9623.50 L1131.59 9623.22 L1132.85 9623.08 L1133.92 9622.80 L1134.86 9622.45 L1135.74 9622.03 L1135.74 9622.03" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -817,6 +1117,9 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <text x="1000.83" y="9612.33" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1000.83" dy="0">quét sqlmap</tspan></text>
 </g>
+<a href="../0-asset/pasted-image-20260829233242_469.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829233242_469.png"><g transform="translate(-162.80,29.87)">
+<image x="1156.0985464896144" y="9544.725605480224" width="697.533260569853" height="169.0201749749877" href="../0-asset/pasted-image-20260829233242_469.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M1423.49 9333.77 L1422.67 9334.47 L1422.29 9335.59 L1422.73 9336.42 L1424.87 9338.03 L1428.57 9339.50 L1430.14 9339.92 L1433.78 9340.69 L1437.98 9341.18 L1442.50 9341.53 L1446.64 9341.67 L1450.59 9341.95 L1454.11 9342.02 L1457.43 9342.15 L1460.19 9342.22 L1462.20 9342.44 L1463.64 9342.51 L1464.90 9342.64 L1464.90 9342.64" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -845,6 +1148,60 @@ tags:
 <text x="1203.18" y="9155.49" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1203.18" dy="0">pathtravesal trên url pagram</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
+
+<rect x="202.81066160909995" y="9794.033962270305" width="850" height="983" rx="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5" class="excalidraw-md-bg"/>
+<foreignObject x="202.81066160909995" y="9794.033962270305" width="850" height="983" class="excalidraw-foreign-md">
+  <div xmlns="http://www.w3.org/1999/xhtml" class="notion-embed-card">
+    <div class="notion-embed-header">
+      <div class="notion-embed-header-left">
+        <span class="notion-embed-icon">📝</span>
+        <span class="notion-embed-title">Ghi chú Markdown</span>
+      </div>
+      <a href="#doc-ed665c6a396f9b2a95e69edf11855e4ca3b08bec" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
+    </div>
+    <div class="notion-embed-body">
+      <p>Nhìn sơ đồ này có 3 điểm hở cực to, xâu chuỗi lại là thấy ngay bài bypass login:</p>
+<ol>
+<li>Lỗ hổng LFI ở tính năng đổi theme (<code>footer.php?skin=...</code>)</li>
+</ol>
+<ul>
+<li>Web có thư mục <code>skins/</code> chứa các file <code>default.php</code>, <code>blue.php</code>, <code>green.php</code>, <code>red.php</code>.</li>
+<li>Khi người dùng bấm chọn màu trên giao diện, server gọi <code>footer.php?skin=blue</code>. Điều này cho thấy backend đang nối chuỗi kiểu <code>include(&quot;skins/&quot; . $_GET[&#39;skin&#39;] . &quot;.php&quot;)</code> hoặc <code>include($_GET[&#39;skin&#39;])</code>.</li>
+<li>Đây chính là điểm vào (entry point) để khai thác LFI.</li>
+</ul>
+<ol start="2">
+<li>Đọc mã nguồn <code>config.php</code> bằng PHP Wrapper</li>
+</ol>
+<ul>
+<li>Thư mục gốc có file <code>config.php</code>. Mày mở trực tiếp qua trình duyệt thì thấy trắng trơn (0 bytes) vì PHP thực thi mã chứ không in ra màn hình.</li>
+<li>Nhưng nếu tận dụng LFI ở tham số <code>skin</code> kết hợp với PHP filter để đọc file dưới dạng base64:
+<code>?skin=php://filter/convert.base64-encode/resource=../config</code> (hoặc <code>resource=config.php</code>)</li>
+<li>Lúc này server sẽ trả về chuỗi base64 của file <code>config.php</code>. Giải mã ra là đọc được thông tin nhạy cảm bên trong, thường là mật khẩu cứng của admin hoặc thông tin kết nối database để login thẳng vào <code>index.php</code>.</li>
+</ul>
+<ol start="3">
+<li>Đọc mã nguồn kiểm tra đăng nhập (<code>index.php</code>, <code>header.php</code>)</li>
+</ol>
+<ul>
+<li>Dùng tiếp bài PHP filter để đọc source code của <code>index.php</code> hoặc <code>includes/header.php</code> xem dev viết logic xác thực như thế nào.</li>
+<li>Nhiều bài lab viết logic auth rất ngớ ngẩn (ví dụ chỉ check xem có cookie <code>role=admin</code>, <code>admin=true</code> hay <code>logged_in=1</code> không). Đọc được code là biết ngay cách chế cookie để nhảy thẳng vào <code>dashboard.php</code> mà không cần tài khoản.</li>
+</ul>
+<ol start="4">
+<li>Tận dụng <code>info.php</code> (phpinfo)</li>
+</ol>
+<ul>
+<li>Mở <code>[http://10.48.187.204/info.php](http://10.48.187.204/info.php)</code> để soi:</li>
+<li>Cấu hình <code>allow_url_include</code>: nếu đang <code>On</code> thì ném link RFI vào <code>?skin=</code> để lấy shell luôn khỏi cần login.</li>
+<li>Mục <code>Environment</code> / <code>PHP Variables</code>: nhiều khi dev lưu luôn pass admin hoặc API key trong biến môi trường của server.</li>
+</ul>
+<p>Các bước mày nên làm ngay:
+Bắt request <code>footer.php?skin=default</code> ném vào Burp Repeater, đổi <code>skin</code> thành <code>php://filter/convert.base64-encode/resource=../config</code> hoặc thử lùi thư mục <code>../../../../etc/passwd</code> để test LFI trước.</p>
+
+    </div>
+  </div>
+</foreignObject>
+
+</g>
+<g transform="translate(-162.80,29.87)">
 <text x="311.26" y="9786.02" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="311.26" dy="0">mình ném cây thư mục cho con gemini , bảo nó phân tích thử</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
@@ -859,6 +1216,9 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <path d="M748.21 10013.13 L748.21 10013.13" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../0-asset/pasted-image-20260830005557_478.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830005557_478.png"><g transform="translate(-162.80,29.87)">
+<image x="1071.3205740147514" y="9920.318921053684" width="711.3824847639461" height="463.62742704503677" href="../0-asset/pasted-image-20260830005557_478.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M1331.05 10209.02 L1332.37 10208.81 L1332.37 10208.81" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -970,6 +1330,9 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <path d="M515.59 9951.08 L516.66 9950.38 L519.92 9949.97 L523.18 9949.68 L526.82 9949.48 L530.65 9949.34 L534.60 9949.26 L538.62 9949.20 L542.70 9949.26 L546.59 9949.48 L550.60 9949.55 L554.49 9949.75 L558.38 9950.03 L560.33 9950.10 L566.04 9950.52 L569.74 9950.74 L573.32 9950.94 L576.83 9951.15 L579.97 9951.36 L582.98 9951.50 L585.80 9951.64 L588.00 9951.78 L589.76 9951.92 L591.26 9951.99 L592.64 9952.06 L593.77 9952.13 L595.40 9952.13 L596.78 9952.20 L598.29 9952.34 L599.73 9952.41 L601.11 9952.48 L602.68 9952.55 L603.81 9952.62 L605.13 9952.62 L606.45 9952.76 L607.83 9952.83 L609.21 9952.83 L610.59 9952.90 L612.03 9952.90 L613.47 9952.97 L615.04 9952.97 L616.55 9953.04 L618.18 9953.04 L620.88 9953.32 L622.89 9953.39 L624.64 9953.46 L626.21 9953.46 L627.59 9953.60 L628.97 9953.67 L630.73 9953.74 L632.42 9953.74 L633.93 9953.81 L635.56 9953.81 L637.07 9953.95 L638.51 9954.02 L639.95 9954.09 L641.40 9954.16 L642.71 9954.23 L644.16 9954.44 L645.41 9954.51 L646.60 9954.64 L647.86 9954.79 L649.05 9954.86 L650.24 9954.93 L651.50 9955.06 L652.69 9955.21 L653.88 9955.28 L653.88 9955.28" stroke="#1971c2" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../0-asset/pasted-image-20260830010129_340.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830010129_340.png"><g transform="translate(-162.80,29.87)">
+<image x="1077.1987159519294" y="10405.436238209535" width="792.0507781308205" height="290.28726694346824" href="../0-asset/pasted-image-20260830010129_340.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M1801.14 10431.41 L1784.32 10428.54 L1779.81 10428.26 L1771.08 10428.05 L1762.49 10428.47 L1758.16 10428.96 L1749.94 10430.71 L1742.41 10433.15 L1736.45 10436.02 L1730.43 10441.12 L1728.42 10445.04 L1727.73 10449.51 L1727.98 10451.82 L1729.42 10456.91 L1732.87 10462.30 L1738.27 10467.33 L1746.61 10472.57 L1757.59 10476.62 L1769.14 10478.58 L1775.04 10478.93 L1787.27 10478.51 L1807.10 10475.16 L1818.83 10471.80 L1827.18 10468.80 L1834.02 10465.58 L1837.03 10463.84 L1841.61 10460.55 L1845.06 10456.91 L1847.07 10452.93 L1847.45 10448.39 L1845.75 10443.15 L1841.61 10437.00 L1837.72 10433.15 L1821.85 10424.21 L1808.54 10420.36 L1793.92 10418.13 L1779.18 10417.43 L1767.63 10417.78 L1760.73 10418.62 L1754.33 10419.67 L1754.33 10419.67" stroke="#1971c2" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -1033,6 +1396,12 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <text x="489.26" y="11023.06" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="489.26" dy="0">ok buồn vl là mình phải xem writeup, nó đơn thuần là bruteforce password cho thằng </tspan><tspan x="489.26" dy="20">help@support.thm thôi</tspan></text>
 </g>
+<a href="../0-asset/pasted-image-20260830014022_922.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830014022_922.png"><g transform="translate(-162.80,29.87)">
+<image x="419.55449611349894" y="11099.928882960798" width="613.9492351536247" height="190.8159636076291" href="../0-asset/pasted-image-20260830014022_922.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
+<a href="../0-asset/pasted-image-20260830014055_729.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830014055_729.png"><g transform="translate(-162.80,29.87)">
+<image x="411.5124525279727" y="11284.362428330252" width="629.9574442737766" height="231.59472421062642" href="../0-asset/pasted-image-20260830014055_729.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M1061.88 11109.31 L1061.65 11107.75 L1061.60 11106.31 L1061.82 11105.13 L1062.67 11102.75 L1063.39 11101.63 L1064.07 11101.13 L1065.81 11102.00 L1066.93 11104.31 L1068.05 11108.00 L1068.95 11113.26 L1069.51 11119.44 L1069.68 11126.14 L1069.74 11133.20 L1069.57 11140.33 L1069.35 11144.40 L1068.84 11152.46 L1067.94 11163.09 L1067.49 11169.41 L1067.10 11174.91 L1066.99 11179.41 L1067.16 11183.41 L1067.72 11186.48 L1068.73 11188.91 L1069.51 11189.79 L1071.48 11190.85 L1073.78 11191.10 L1076.42 11190.48 L1079.34 11189.16 L1083.10 11186.10 L1084.90 11184.10 L1086.02 11182.22 L1086.58 11180.85 L1086.13 11179.85 L1082.54 11181.54 L1078.78 11184.41 L1074.17 11188.91 L1069.12 11195.61 L1063.62 11204.17 L1058.79 11213.49 L1054.58 11223.55 L1051.32 11234.00 L1049.08 11243.88 L1047.62 11252.32 L1046.50 11261.07 L1045.60 11270.01 L1044.81 11278.83 L1044.03 11287.52 L1043.69 11291.71 L1043.02 11300.09 L1042.12 11312.16 L1041.84 11316.09 L1041.11 11326.35 L1040.66 11332.85 L1040.32 11339.04 L1039.93 11344.55 L1039.76 11347.11 L1039.42 11351.92 L1039.09 11356.74 L1038.81 11361.49 L1038.47 11366.18 L1038.24 11370.62 L1038.19 11374.87 L1038.13 11379.87 L1038.19 11381.31 L1038.36 11383.81 L1038.36 11385.63 L1038.24 11387.00 L1038.13 11388.06 L1037.57 11388.94 L1036.73 11389.25 L1035.27 11388.31 L1033.75 11386.31 L1032.07 11380.75 L1032.07 11380.75" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -1147,6 +1516,15 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <path d="M925.05 11595.36 L923.93 11595.41 L922.86 11595.58 L921.95 11595.92 L920.88 11596.37 L919.26 11597.28 L918.39 11597.68 L916.87 11598.69 L915.34 11599.71 L914.13 11600.67 L912.96 11601.69 L911.99 11602.60 L911.23 11603.39 L910.62 11604.24 L909.96 11605.48 L909.35 11606.67 L908.84 11607.69 L908.54 11608.59 L908.23 11609.78 L908.18 11610.74 L908.23 11611.93 L908.44 11612.95 L908.74 11613.80 L909.20 11614.53 L911.03 11616.12 L912.30 11616.80 L913.41 11617.36 L914.48 11617.76 L915.34 11618.10 L916.16 11618.38 L916.97 11618.55 L918.65 11618.95 L920.68 11619.23 L922.66 11619.40 L924.44 11619.46 L926.06 11619.46 L928.30 11619.51 L929.47 11619.46 L930.48 11619.46 L932.21 11619.40 L933.73 11619.40 L935.00 11619.40 L936.17 11619.40 L937.34 11619.46 L939.52 11619.57 L941.35 11619.68 L942.93 11619.74 L944.35 11619.80 L946.13 11619.91 L948.31 11620.14 L950.39 11620.25 L951.31 11620.36 L954.20 11620.53 L955.88 11620.59 L957.45 11620.70 L958.82 11620.76 L960.60 11620.87 L961.57 11620.93 L963.19 11621.04 L964.56 11621.15 L965.88 11621.21 L966.95 11621.27 L969.08 11621.55 L969.95 11621.72 L971.67 11621.83 L973.10 11622.00 L974.87 11622.11 L976.91 11622.23 L978.58 11622.45 L980.00 11622.51 L981.17 11622.68 L982.24 11622.79 L983.26 11622.85 L984.17 11623.02 L985.54 11623.08 L986.81 11623.08 L989.15 11623.13 L990.93 11623.08 L992.50 11623.08 L993.77 11623.02 L995.04 11623.02 L996.11 11623.02 L997.12 11622.91 L999.66 11622.85 L1001.49 11622.79 L1003.42 11622.57 L1005.55 11622.34 L1007.59 11622.06 L1009.57 11621.77 L1011.19 11621.55 L1012.61 11621.38 L1013.93 11621.21 L1015.10 11621.09 L1016.17 11621.04 L1017.85 11620.93 L1018.76 11620.81 L1020.49 11620.70 L1023.03 11620.47 L1023.89 11620.36 L1025.41 11620.19 L1026.68 11620.08 L1027.85 11620.02 L1028.82 11619.91 L1030.09 11619.85 L1031.26 11619.85 L1032.42 11619.80 L1033.54 11619.80 L1034.76 11619.74 L1036.23 11619.68 L1037.96 11619.51 L1040.35 11619.40 L1041.72 11619.29 L1042.89 11619.23 L1043.95 11619.17 L1044.97 11619.12 L1046.04 11619.06 L1047.10 11619.06 L1048.12 11619.06 L1049.14 11619.06 L1050.46 11619.06 L1051.78 11619.06 L1052.69 11619.17 L1053.66 11619.29 L1054.67 11619.46 L1055.74 11619.68 L1056.75 11619.80 L1057.67 11619.91 L1058.73 11620.02 L1059.65 11620.14 L1060.72 11620.19 L1061.78 11620.25 L1062.80 11620.36 L1063.92 11620.36 L1064.98 11620.36 L1066.10 11620.25 L1067.27 11620.14 L1068.69 11620.02 L1069.66 11619.74 L1071.23 11619.40 L1072.45 11619.12 L1073.52 11618.83 L1074.43 11618.61 L1075.24 11618.38 L1076.26 11618.10 L1077.22 11617.82 L1078.19 11617.48 L1079.00 11617.25 L1079.81 11616.97 L1080.63 11616.80 L1081.54 11616.63 L1082.35 11616.46 L1083.42 11616.23 L1084.33 11616.06 L1085.15 11615.83 L1086.01 11615.61 L1087.03 11615.38 L1087.94 11615.16 L1088.91 11614.93 L1089.87 11614.76 L1090.79 11614.48 L1091.70 11614.19 L1092.46 11613.91 L1093.12 11613.40 L1093.48 11612.50 L1093.68 11611.65 L1093.68 11610.46 L1093.53 11609.56 L1093.12 11608.76 L1091.95 11607.63 L1090.38 11606.56 L1088.50 11605.54 L1086.01 11604.46 L1083.17 11603.33 L1080.07 11602.20 L1076.72 11601.18 L1073.26 11600.22 L1069.55 11599.60 L1065.69 11599.09 L1061.53 11598.92 L1057.06 11598.86 L1052.39 11598.86 L1047.66 11598.86 L1045.22 11598.75 L1040.40 11598.69 L1035.42 11598.52 L1028.82 11598.02 L1024.70 11597.73 L1020.89 11597.45 L1017.34 11597.39 L1014.19 11597.34 L1011.04 11597.39 L1009.57 11597.45 L1006.62 11597.56 L1003.78 11597.62 L1001.03 11597.62 L998.29 11597.56 L995.70 11597.56 L993.16 11597.56 L989.35 11597.84 L986.76 11598.18 L985.39 11598.30 L982.65 11598.75 L979.95 11599.20 L977.21 11599.66 L974.47 11599.99 L971.73 11600.22 L968.88 11600.22 L966.14 11600.22 L963.60 11600.05 L961.21 11599.94 L959.03 11599.88 L958.01 11599.88 L956.23 11599.88 L953.64 11599.99 L951.66 11600.22 L949.63 11600.33 L948.67 11600.39 L945.87 11600.62 L944.86 11600.62 L943.18 11600.67 L941.76 11600.73 L940.59 11600.84 L939.52 11600.90 L938.51 11600.96 L937.54 11601.07 L936.12 11601.35 L934.44 11601.52 L933.22 11601.69 L932.16 11601.75 L931.19 11601.86 L929.87 11601.75 L927.99 11601.41 L926.21 11601.01 L924.74 11600.67 L923.67 11600.39 L922.76 11600.28 L921.95 11600.05 L921.08 11599.88 L920.07 11599.66 L919.15 11599.54 L918.19 11599.66 L917.17 11600.22 L917.17 11600.22" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../0-asset/pasted-image-20260830022210_018.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830022210_018.png"><g transform="translate(-162.80,29.87)">
+<image x="667.9742132602271" y="11733.451180229884" width="520.2867867336103" height="81.12326217534603" href="../0-asset/pasted-image-20260830022210_018.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
+<a href="../0-asset/pasted-image-20260830022328_470.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830022328_470.png"><g transform="translate(-162.80,29.87)">
+<image x="645.4283145276338" y="11820.506899227508" width="658.0252332418413" height="291.4796239481457" href="../0-asset/pasted-image-20260830022328_470.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
+<a href="../0-asset/pasted-image-20260830022359_962.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830022359_962.png"><g transform="translate(-162.80,29.87)">
+<image x="549.6194248935433" y="12114.82237695125" width="904.309417364391" height="281.0817415828494" href="../0-asset/pasted-image-20260830022359_962.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <text x="486.94" y="12360.28" font-family="Cascadia, Fira Code, monospace" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="486.94" dy="0">ok bây giờ tiến tới thằng này</tspan></text>
 </g>
@@ -1159,6 +1537,9 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <path d="M717.73 12319.32 L716.91 12318.55 L715.16 12319.18 L714.84 12321.35 L715.16 12331.48 L715.53 12332.88 L716.54 12335.60 L717.85 12337.98 L719.61 12339.79 L721.68 12341.34 L722.87 12341.82 L726.70 12342.17 L729.78 12341.34 L733.16 12339.79 L748.22 12326.73 L750.61 12323.93 L750.61 12323.93" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../0-asset/pasted-image-20260830023004_865.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830023004_865.png"><g transform="translate(-162.80,29.87)">
+<image x="336.8287035566841" y="12447.40099436457" width="1137.7583992494656" height="494.45943171694074" href="../0-asset/pasted-image-20260830023004_865.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M1012.79 12282.23 L1011.99 12282.70 L1010.28 12284.66 L1008.74 12286.39 L1006.76 12288.70 L1005.70 12290.01 L1003.24 12293.04 L999.30 12298.56 L996.63 12302.78 L993.75 12307.71 L990.76 12313.53 L987.88 12319.77 L985.11 12326.30 L982.50 12332.96 L981.32 12336.34 L979.14 12342.64 L977.59 12347.92 L976.04 12352.85 L974.92 12357.19 L973.43 12362.83 L973.00 12364.62 L971.62 12369.49 L970.92 12372.16 L970.60 12373.47 L969.96 12375.78 L969.38 12378.04 L968.84 12380.06 L968.20 12382.02 L967.51 12384.04 L966.82 12386.06 L965.96 12388.08 L965.16 12389.92 L964.31 12391.76 L963.94 12392.48 L963.46 12393.72 L962.92 12394.67 L962.60 12395.39 L962.23 12396.22 L961.86 12396.99 L961.54 12397.76 L961.06 12398.53 L960.74 12399.37 L960.36 12400.38 L959.99 12401.39 L959.72 12402.16 L959.46 12403.05 L958.92 12405.07 L958.02 12407.86 L957.80 12408.69 L957.38 12410.12 L957.00 12411.36 L956.63 12412.49 L956.36 12413.44 L956.04 12414.22 L955.72 12415.29 L955.40 12416.06 L955.08 12417.01 L954.76 12417.78 L954.34 12418.79 L953.96 12419.68 L953.48 12420.51 L953.06 12421.40 L952.58 12422.24 L951.99 12423.13 L951.46 12423.84 L950.98 12424.55 L950.50 12425.26 L949.91 12426.04 L949.11 12426.39 L949.11 12426.39" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -1192,6 +1573,9 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <text x="454.35" y="13043.16" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="454.35" dy="0">đó , vẫn cần nikto, tại cái thằng AI nó recon thiếu</tspan><tspan x="454.35" dy="20">này, nó ko nhận ra info.php nhận tham số đầu vào</tspan><tspan x="454.35" dy="20">là file</tspan></text>
 </g>
+<a href="../0-asset/pasted-image-20260830023916_804.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830023916_804.png"><g transform="translate(-162.80,29.87)">
+<image x="411.6334883805623" y="13115.630437534583" width="682.1214571811187" height="336.72662353515636" href="../0-asset/pasted-image-20260830023916_804.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M754.34 13277.96 L754.76 13277.31 L755.40 13276.90 L754.28 13277.07 L752.36 13278.20 L749.70 13279.75 L746.98 13281.71 L744.31 13284.02 L740.95 13287.88 L739.30 13290.85 L738.28 13294.24 L738.07 13296.02 L738.39 13299.65 L739.72 13303.69 L741.86 13307.78 L745.11 13311.64 L746.92 13313.43 L759.35 13321.56 L764.68 13323.76 L772.58 13326.14 L778.02 13327.15 L780.68 13327.51 L785.59 13327.68 L791.19 13327.27 L796.63 13326.14 L802.18 13324.06 L807.40 13321.09 L811.83 13317.47 L815.08 13313.61 L817.27 13309.15 L818.60 13304.22 L818.50 13299.76 L817.27 13295.37 L814.34 13291.57 L809.06 13288.66 L801.59 13287.17 L790.98 13287.17 L778.71 13288.54 L767.24 13290.80 L757.38 13293.82 L750.60 13296.97 L745.59 13300.60 L745.59 13300.60" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -1204,9 +1588,15 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <text x="906.39" y="13282.74" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="906.39" dy="0">sau khi login thành công nó có thêm trường isIUser kẹp vào để auth</tspan></text>
 </g>
+<a href="../0-asset/pasted-image-20260830030145_048.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830030145_048.png"><g transform="translate(-162.80,29.87)">
+<image x="445.77377076064147" y="13353.77792182558" width="679.4438233170774" height="254.88916732033053" href="../0-asset/pasted-image-20260830030145_048.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M901.59 13464.50 L898.34 13461.94 L895.46 13460.58 L892.20 13459.57 L889.06 13459.21 L885.75 13459.57 L882.39 13460.70 L878.98 13462.77 L875.78 13465.86 L873.16 13469.61 L872.15 13471.74 L870.55 13476.32 L870.02 13480.77 L870.71 13487.96 L872.31 13492.71 L874.82 13497.17 L878.18 13501.33 L882.18 13504.83 L886.55 13507.44 L891.19 13509.23 L896.15 13510.24 L900.84 13510.41 L903.19 13510.24 L908.26 13509.05 L913.06 13506.97 L917.54 13503.82 L921.59 13499.60 L926.18 13491.82 L927.83 13486.36 L928.84 13480.71 L929.11 13475.49 L928.68 13470.97 L927.35 13466.46 L926.39 13464.50 L923.83 13461.11 L920.31 13458.85 L916.10 13457.61 L907.99 13458.08 L901.16 13459.69 L894.50 13462.36 L887.35 13465.98 L884.10 13467.94 L884.10 13467.94" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../0-asset/pasted-image-20260830030718_518.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830030718_518.png"><g transform="translate(-162.80,29.87)">
+<image x="459.5519738551726" y="13610.802144718" width="852.2275660537961" height="294.5816192325991" href="../0-asset/pasted-image-20260830030718_518.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M1459.01 13509.66 L1459.01 13509.66" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -1225,6 +1615,12 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <path d="M782.76 13805.87 L781.91 13806.11 L782.34 13811.87 L782.44 13812.94 L782.98 13815.85 L783.14 13817.40 L783.24 13818.71 L783.24 13819.77 L783.19 13820.96 L782.34 13822.63 L781.38 13821.20 L781.54 13820.25 L781.80 13819.42 L782.23 13818.47 L782.66 13817.64 L783.24 13816.75 L783.83 13815.97 L784.42 13815.26 L785.11 13814.78 L785.91 13814.31 L786.76 13814.55 L787.24 13815.20 L787.62 13815.91 L788.04 13816.75 L788.36 13817.64 L788.63 13818.47 L788.90 13819.30 L789.22 13820.13 L789.00 13819.06 L788.84 13817.93 L788.79 13816.63 L788.90 13815.38 L789.22 13813.95 L789.54 13812.35 L790.07 13811.10 L790.44 13810.15 L791.08 13809.38 L791.99 13809.68 L792.36 13810.45 L792.84 13812.35 L793.16 13813.24 L793.59 13815.14 L793.91 13816.57 L794.28 13817.70 L794.66 13818.65 L795.14 13819.54 L795.88 13820.13 L796.74 13819.72 L797.22 13819.00 L797.96 13817.34 L798.07 13816.27 L798.28 13814.55 L798.44 13813.18 L798.50 13812.11 L798.50 13810.98 L798.28 13810.09 L798.07 13811.22 L798.18 13812.35 L798.28 13813.48 L798.60 13814.55 L799.03 13815.32 L799.67 13815.85 L800.36 13815.20 L800.74 13814.43 L801.16 13813.42 L801.54 13812.59 L802.02 13813.18 L802.39 13814.19 L803.14 13815.97 L803.46 13816.69 L804.20 13817.81 L804.95 13818.71 L805.86 13819.18 L806.98 13819.42 L807.99 13819.06 L808.58 13818.53 L809.80 13816.86 L810.12 13816.09 L810.55 13814.67 L810.71 13813.42 L810.55 13812.23 L810.34 13811.34 L810.02 13810.63 L809.32 13809.80 L808.42 13809.50 L807.72 13809.91 L807.14 13810.98 L806.34 13812.71 L806.07 13813.54 L805.86 13815.14 L805.96 13816.57 L806.55 13817.99 L807.78 13819.42 L810.34 13820.73 L812.42 13820.90 L814.92 13820.43 L816.31 13820.07 L816.31 13820.07" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../0-asset/pasted-image-20260830031119_881.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830031119_881.png"><g transform="translate(-162.80,29.87)">
+<image x="487.5586266872042" y="13884.79631983328" width="840.6241724991085" height="290.57078151966226" href="../0-asset/pasted-image-20260830031119_881.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
+<a href="../0-asset/pasted-image-20260830031946_242.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830031946_242.png"><g transform="translate(-162.80,29.87)">
+<image x="491.0547211580516" y="14151.961217097962" width="765.8685558230417" height="251.39196870527317" href="../0-asset/pasted-image-20260830031946_242.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M563.30 14172.07 L560.26 14171.72 L558.66 14171.48 L554.87 14171.18 L550.98 14171.12 L547.62 14171.18 L543.88 14171.48 L540.47 14172.13 L537.16 14173.20 L534.12 14174.80 L531.40 14176.88 L529.00 14179.50 L527.67 14181.16 L524.74 14186.27 L523.46 14189.77 L522.76 14193.34 L522.66 14196.72 L523.40 14200.35 L524.90 14203.85 L527.40 14207.48 L530.66 14210.68 L534.66 14213.24 L539.24 14215.20 L541.70 14215.85 L546.55 14216.39 L554.55 14215.67 L560.15 14213.89 L565.75 14211.28 L570.55 14207.83 L574.44 14204.03 L577.32 14200.05 L579.46 14195.65 L580.58 14191.14 L580.90 14186.63 L580.58 14182.17 L580.26 14180.15 L579.03 14176.53 L576.10 14172.19 L573.43 14170.35 L570.28 14169.34 L566.71 14169.34 L562.34 14170.41 L557.54 14172.13 L552.47 14174.51 L552.47 14174.51" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -1261,6 +1657,12 @@ tags:
 <g transform="translate(-162.80,29.87)">
 <path d="M1065.22 14334.89 L1065.70 14334.24 L1066.34 14333.76 L1067.51 14333.64 L1068.47 14333.70 L1071.30 14334.24 L1073.80 14334.65 L1076.52 14335.13 L1079.40 14335.66 L1082.55 14336.20 L1084.20 14336.55 L1089.22 14337.50 L1092.42 14338.40 L1095.40 14339.23 L1098.23 14340.12 L1100.84 14340.95 L1103.46 14341.84 L1104.79 14342.26 L1107.19 14343.09 L1109.64 14343.98 L1112.15 14344.69 L1114.82 14345.23 L1117.54 14345.82 L1121.70 14346.47 L1124.42 14346.83 L1125.86 14347.07 L1128.58 14347.31 L1131.24 14347.60 L1133.86 14347.84 L1136.31 14348.02 L1138.76 14348.14 L1141.16 14348.26 L1143.67 14348.32 L1145.00 14348.32 L1147.51 14348.26 L1151.46 14348.14 L1154.02 14347.84 L1156.74 14347.54 L1159.40 14347.19 L1161.96 14346.77 L1163.19 14346.47 L1165.54 14345.94 L1167.83 14345.52 L1170.02 14345.11 L1171.99 14344.69 L1174.02 14344.16 L1176.90 14343.33 L1177.91 14343.03 L1179.78 14342.61 L1181.70 14342.08 L1183.46 14341.60 L1185.32 14341.07 L1186.76 14340.65 L1187.99 14340.36 L1189.00 14340.12 L1189.86 14339.88 L1190.87 14339.58 L1191.88 14339.29 L1192.79 14338.99 L1193.64 14338.81 L1194.50 14338.51 L1195.51 14338.40 L1195.51 14338.40" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../0-asset/pasted-image-20260830032355_005.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830032355_005.png"><g transform="translate(-162.80,29.87)">
+<image x="461.28461832678784" y="14840.636937778723" width="827.1102118173145" height="746.8021102111991" href="../0-asset/pasted-image-20260830032355_005.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
+<a href="../0-asset/pasted-image-20260830032820_553.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830032820_553.png"><g transform="translate(-162.80,29.87)">
+<image x="490.1746381235207" y="14415.957067173254" width="884.6804070635798" height="329.61334228515636" href="../0-asset/pasted-image-20260830032820_553.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M752.84 14582.99 L751.72 14582.87 L750.76 14582.69 L749.70 14582.45 L748.68 14582.39 L749.27 14583.29 L752.42 14584.89 L754.87 14585.84 L757.54 14586.61 L760.68 14587.44 L763.88 14588.10 L766.98 14588.51 L768.47 14588.69 L772.10 14589.05 L775.35 14589.23 L778.98 14589.40 L784.47 14589.52 L788.58 14589.52 L792.63 14589.40 L796.74 14589.40 L800.84 14589.34 L804.90 14589.05 L808.90 14588.81 L812.84 14588.45 L814.82 14588.22 L818.60 14587.80 L822.39 14587.44 L826.18 14586.85 L831.94 14586.14 L835.67 14585.54 L839.46 14585.13 L843.14 14584.65 L846.71 14584.18 L850.28 14583.76 L853.48 14583.46 L855.30 14583.35 L858.44 14582.99 L861.48 14582.69 L864.42 14582.45 L867.14 14582.34 L870.92 14582.22 L873.16 14582.04 L874.87 14581.98 L876.36 14581.98 L877.75 14581.98 L879.03 14581.98 L882.18 14581.92 L884.63 14581.74 L887.19 14581.56 L889.70 14581.33 L892.15 14581.03 L895.67 14580.67 L897.64 14580.37 L899.24 14580.20 L900.52 14580.02 L901.59 14579.90 L902.82 14579.78 L903.88 14579.60 L904.90 14579.48 L905.91 14579.42 L906.82 14579.25 L907.83 14579.19 L907.83 14579.19" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -1289,6 +1691,310 @@ tags:
     </div>
   </div>
 </div>
+
+
+---
+
+## 📖 Nội dung chi tiết bài viết (Writeup)
+
+<div id="doc-b0d24878bbc041158694fa7665a307be07826852" class="notion-callout-card">
+
+# Báo Cáo Reconnaissance - Support Operations Panel
+
+**Mục tiêu:** `http://10.48.187.204/`  
+**Thời gian thực hiện:** 29/08/2026  
+**Thư mục làm việc:** `/home/ti/SEUCURITY_LABLAB/THM/support_lab`  
+
+---
+
+## 1. Tổng Quan Mục Tiêu (Target Overview)
+
+| Thông tin | Chi tiết |
+| :--- | :--- |
+| **IP Address** | `10.48.187.204` |
+| **Operating System** | Linux (Ubuntu) |
+| **Web Server** | Apache/2.4.58 (Ubuntu) |
+| **Backend Technology** | PHP 8.3.6 |
+| **Corporate Domain** | `support.thm` (Contact: `help@support.thm`) |
+| **Network Latency** | ~187 ms - 209 ms |
+
+---
+
+## 2. Kết Quả Quét Cổng (Port Scanning & Service Enumeration)
+
+Tiến hành quét toàn bộ 65,535 cổng TCP trên mục tiêu bằng `nmap`:
+
+### Danh Sách Dịch Vụ Mở (Open Ports):
+
+| Port | State | Service | Version / Details |
+| :--- | :--- | :--- | :--- |
+| **22/tcp** | `OPEN` | SSH | OpenSSH 9.6p1 Ubuntu 3ubuntu13.11<br>• ECDSA key: `b4:23:fa:e0:89:50:58:14:b5:f0:f3:01:81:ef:a5:3b`<br>• ED25519 key: `fd:62:7d:e5:54:e7:5c:05:6b:72:e5:94:28:d1:5e:1b` |
+| **80/tcp** | `OPEN` | HTTP | Apache httpd 2.4.58 ((Ubuntu))<br>• Title: `Support Operations Panel`<br>• Cookie: `PHPSESSID` (httponly: not set) |
+
+*Tất cả các cổng khác (65,533 ports) ở trạng thái closed hoặc filtered.*
+
+---
+
+## 3. Chi Tiết Quá Trình Recon & Các Câu Lệnh Đã Sử Dụng (Detailed Methodology & Commands)
+
+Quá trình thu thập thông tin được thực hiện theo 8 bước chiến lược sau:
+
+### Bước 1: Kiểm Tra Kết Nối Mạng (Network Connectivity Check)
+Thực hiện kiểm tra ICMP ping để xác định mục tiêu đang hoạt động và đo độ trễ mạng.
+
+**Câu lệnh đã dùng:**
+```bash
+ping -c 2 10.48.187.204
+```
+
+**Kết quả:**
+- Host phản hồi tốt (`64 bytes from 10.48.187.204: icmp_seq=1 ttl=62 time=187 ms`)
+- Packet loss: 0%, RTT trung bình ~197ms.
+
+---
+
+### Bước 2: Quét Dịch Vụ Cổng Ban Đầu (Initial Service Discovery Scan)
+Thực hiện quét Nmap kiểm tra các script mặc định (`-sC`) và xác định phiên bản dịch vụ (`-sV`) trên các cổng tiêu chuẩn.
+
+**Câu lệnh đã dùng:**
+```bash
+nmap -sC -sV -oN nmap_initial.txt 10.48.187.204
+```
+
+**Kết quả thu được:**
+- **Port 22/tcp**: OpenSSH 9.6p1 Ubuntu 3ubuntu13.11.
+- **Port 80/tcp**: Apache httpd 2.4.58 (Ubuntu), HTML Title: "Support Operations Panel", set cookie `PHPSESSID`.
+
+---
+
+### Bước 3: Quét Toàn Bộ Cổng TCP (Full Port Scan)
+Quét toàn bộ dải cổng TCP từ 1 đến 65535 nhằm đảm bảo không bỏ sót bất kỳ dịch vụ ẩn nào (quản trị, database, proxy, custom ports).
+
+**Câu lệnh đã dùng:**
+```bash
+nmap -p- -T4 --min-rate 1000 -oN nmap_allports.txt 10.48.187.204
+```
+
+**Kết quả:**
+- Xác nhận chỉ có duy nhất 2 cổng mở trên toàn hệ thống: **Port 22 (SSH)** và **Port 80 (HTTP)**.
+
+---
+
+### Bước 4: Khảo Sát Bề Mặt Web & HTTP Response Headers
+Sử dụng `curl` kiểm tra phản hồi HTTP Header và cấu trúc HTML trang chủ `http://10.48.187.204/`.
+
+**Câu lệnh đã dùng:**
+```bash
+curl -s -i http://10.48.187.204/
+```
+
+**Kết quả thu được:**
+- Server Banner: `Apache/2.4.58 (Ubuntu)`
+- Set-Cookie: `PHPSESSID=...` (thiếu thuộc tính `HttpOnly`)
+- Giao diện: Form "Employee Authentication" nhận tham số POST `email` và `password`.
+- Domain hỗ trợ: `help@support.thm`.
+
+---
+
+### Bước 5: Dò Tìm Đường Dẫn Thư Mục & File Ẩn (Web Directory Brute-Forcing)
+Sử dụng `gobuster` kết hợp với tập từ điển `SecLists` (`common.txt`, `raft-medium-files.txt`, `raft-medium-directories.txt`) để quét tất cả đường dẫn ẩn.
+
+**Các câu lệnh đã dùng:**
+```bash
+# Quét danh mục cơ bản
+gobuster dir -u http://10.48.187.204/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -o gobuster_common.txt
+
+# Quét với các đuôi mở rộng file
+gobuster dir -u http://10.48.187.204/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -x php,html,txt,json,bak -o gobuster_ext.txt
+
+# Quét tập tin theo danh sách raft
+gobuster dir -u http://10.48.187.204/ -w /usr/share/seclists/Discovery/Web-Content/raft-medium-files.txt -o gobuster_raft_files.txt
+
+# Quét thư mục theo danh sách raft
+gobuster dir -u http://10.48.187.204/ -w /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt -o gobuster_raft_dirs.txt
+```
+
+**Các đường dẫn phát hiện được:**
+- `/index.php` (Status 200)
+- `/config.php` (Status 200, 0 bytes)
+- `/footer.php` (Status 200)
+- `/info.php` (Status 200, 73KB)
+- `/dashboard.php` (Status 302 -> `index.php`)
+- `/api.php` (Status 302 -> `index.php`)
+- `/logout.php` (Status 302 -> `index.php`)
+- Thư mục: `/includes/`, `/skins/`, `/layout/`, `/js/`
+
+---
+
+### Bước 6: Kiểm Tra Liệt Kê Thư Mục (Directory Listing Inspection)
+Truy cập trực tiếp vào các thư mục đã phát hiện để kiểm tra tính năng Indexing của Apache Server.
+
+**Các câu lệnh đã dùng:**
+```bash
+curl -s -i http://10.48.187.204/layout/
+curl -s -i http://10.48.187.204/js/
+curl -s -i http://10.48.187.204/includes/
+curl -s -i http://10.48.187.204/skins/
+```
+
+**Kết quả thu được:**
+- Tính năng **Directory Listing** bật trên cả 4 thư mục:
+  - `/layout/` chứa `bootstrap.min.css`
+  - `/js/` chứa `bootstrap.bundle.min.js`
+  - `/includes/` chứa `header.php`, `skin.php`
+  - `/skins/` chứa `blue.php`, `default.php`, `green.php`, `red.php`
+
+---
+
+### Bước 7: Trích Xuất & Phân Tích Thông Tin Môi Trường Từ `info.php`
+Sử dụng script Python với `BeautifulSoup` để lọc các thông số nguy hiểm từ tập tin `info.php`.
+
+**Câu lệnh đã dùng:**
+```bash
+python3 -c '
+import urllib.request
+from bs4 import BeautifulSoup
+
+url = "http://10.48.187.204/info.php"
+html = urllib.request.urlopen(url).read().decode("utf-8", errors="ignore")
+soup = BeautifulSoup(html, "html.parser")
+
+keywords = ["DOCUMENT_ROOT", "SCRIPT_FILENAME", "disable_functions", "open_basedir", "allow_url_include", "allow_url_fopen", "APACHE_RUN_USER"]
+for row in soup.find_all("tr"):
+    txt = row.text.strip().replace("\n", " ")
+    for kw in keywords:
+        if kw in txt:
+            print(f"{kw}: {txt[:100]}")
+            break
+'
+```
+
+**Thông tin cấu hình quan trọng thu được:**
+- PHP Version: `8.3.6`
+- Web Server User: `www-data` (UID: 33)
+- Document Root: `/var/www/html`
+- `disable_functions`: **no value** (Không cấm hàm thực thi hệ thống)
+- `open_basedir`: **no value** (Không giới hạn đường dẫn đọc file)
+- `session.save_path`: `/var/lib/php/sessions`
+- `session.upload_progress.enabled`: `On`
+
+---
+
+### Bước 8: Kiểm Tra Chuyển Hướng Xác Thực & Fuzzing Tham Số (Auth & Parameter Testing)
+Kiểm tra các hành vi chuyển hướng (HTTP 302) xem có lỗ hổng Execution After Redirect (EAR) hay không và đọc nội dung component `footer.php`.
+
+**Các câu lệnh đã dùng:**
+```bash
+# Kiểm tra EAR trên dashboard.php, api.php, header.php
+curl -s -i --max-redirs 0 http://10.48.187.204/dashboard.php
+curl -s -i --max-redirs 0 http://10.48.187.204/api.php
+curl -s -i --max-redirs 0 http://10.48.187.204/includes/header.php
+
+# Đọc mã HTML nguồn của footer.php
+curl -s http://10.48.187.204/footer.php
+```
+
+**Kết quả:**
+- `dashboard.php` và `api.php` trả về `Content-Length: 0` khi bị chuyển hướng (không bị EAR).
+- `footer.php` chứa giao diện chọn Theme chuyển hướng tham số `?skin=default`, `?skin=red`, `?skin=green`, `?skin=blue`.
+
+---
+
+## 4. Cấu Trúc Ứng Dụng Web Tổng Hợp
+
+```
+http://10.48.187.204/
+├── index.php             (Trang chủ / Form đăng nhập nhân viên)
+├── dashboard.php         (Trang quản trị / Dashboard - Yêu cầu auth, HTTP 302 -> index.php)
+├── api.php               (Endpoint API hệ thống - Yêu cầu auth, HTTP 302 -> index.php)
+├── logout.php            (Endpoint đăng xuất - HTTP 302 -> index.php)
+├── config.php            (File cấu hình PHP backend - HTTP 200, 0 bytes output)
+├── footer.php            (Component footer chứa theme selector `?skin=...`)
+├── info.php              (File phpinfo() công khai tiết lộ thông tin cấu hình server)
+├── includes/             (Thư mục backend includes - Bật Directory Listing)
+│   ├── header.php        (Component header - HTTP 302 -> index.php khi gọi trực tiếp)
+│   └── skin.php          (Component xử lý giao diện/theme - HTTP 200)
+├── skins/                (Thư mục chứa các file giao diện CSS - Bật Directory Listing)
+│   ├── default.php       (<style>body { background-color: #f8f9fa; }</style>)
+│   ├── blue.php          (<style>body { background-color: #e5f0ff; }</style>)
+│   ├── green.php         (<style>body { background-color: #e5ffe5; }</style>)
+│   └── red.php           (<style>body { background-color: #ffe5e5; }</style>)
+├── layout/               (Thư mục giao diện CSS - Bật Directory Listing)
+│   └── bootstrap.min.css
+└── js/                   (Thư mục Javascript - Bật Directory Listing)
+    └── bootstrap.bundle.min.js
+```
+
+---
+
+## 5. Danh Sách Lỗ Hổng & Điểm Yếu Ghi Nhận (Security Findings)
+
+### 1. Phơi Nhiễm Thông Tin Cấu Hình Hóa (`info.php`)
+- **Mức độ**: Trung bình (Medium)
+- **Mô tả**: Endpoint `/info.php` công khai cho phép bất kỳ ai xem toàn bộ thông số môi trường PHP, thông tin đường dẫn thư mục gốc (`/var/www/html`), phiên bản OS, người dùng hệ thống (`www-data`), và cấu hình session.
+
+### 2. Cấu Hình Bật Liệt Kê Thư Mục (Directory Listing / Indexing Enabled)
+- **Mức độ**: Thấp - Trung bình (Low - Medium)
+- **Mô tả**: Các thư mục `/includes/`, `/skins/`, `/layout/`, và `/js/` không cấm liệt kê tập tin. Người dùng có thể duyệt toàn bộ danh sách file mã nguồn/tài nguyên bên trong.
+
+### 3. Thiếu Thuộc Tính `HttpOnly` Trên Session Cookie
+- **Mức độ**: Thấp (Low)
+- **Mô tả**: Cookie `PHPSESSID` được thiết lập không kèm cờ `HttpOnly`, tạo điều kiện cho các kịch bản đánh cắp session cookie nếu ứng dụng có lỗ hổng Cross-Site Scripting (XSS).
+
+### 4. Bề Mặt Tấn Công Ứng Dụng (Attack Surface for Next Steps)
+- **Cơ chế Theme Selector (`?skin=...`)**: File `footer.php` chứa tính năng chuyển đổi giao diện với các tham số `default`, `red`, `green`, `blue`. Cần kiểm tra kỹ hơn cơ chế Dynamic File Inclusion trong ứng dụng.
+- **Xác thực Đăng nhập (`index.php`)**: Giao diện đăng nhập nhân viên chấp nhận email dạng `@support.thm`. Các trang `/dashboard.php` và `/api.php` kiểm tra session trước khi cho phép truy cập.
+
+---
+
+## 6. Kết Luận & Đề Xuất Khắc Phục (Remediation Recommendations)
+
+1. **Xóa hoặc bảo vệ file `info.php`**: Xóa bỏ file `info.php` trên môi trường production hoặc giới hạn quyền truy cập theo IP nội bộ.
+2. **Tắt Directory Listing**: Thêm directive `Options -Indexes` trong file cấu hình Apache hoặc `.htaccess` để cấm liệt kê thư mục.
+3. **Cấu hình an toàn cho Session Cookie**: Thiết lập cờ `HttpOnly` và `Secure` cho cookie `PHPSESSID` trong `php.ini` (`session.cookie_httponly = On`).
+4. **Vệ sinh đầu vào (Input Sanitization)**: Đảm bảo các tham số giao diện (như `skin`) được whitelist nghiêm ngặt để tránh rủi ro Local File Inclusion (LFI).
+
+</div>
+
+---
+
+<div id="doc-ed665c6a396f9b2a95e69edf11855e4ca3b08bec" class="notion-callout-card">
+
+Nhìn sơ đồ này có 3 điểm hở cực to, xâu chuỗi lại là thấy ngay bài bypass login:
+
+1. Lỗ hổng LFI ở tính năng đổi theme (`footer.php?skin=...`)
+
+* Web có thư mục `skins/` chứa các file `default.php`, `blue.php`, `green.php`, `red.php`.
+* Khi người dùng bấm chọn màu trên giao diện, server gọi `footer.php?skin=blue`. Điều này cho thấy backend đang nối chuỗi kiểu `include("skins/" . $_GET['skin'] . ".php")` hoặc `include($_GET['skin'])`.
+* Đây chính là điểm vào (entry point) để khai thác LFI.
+
+2. Đọc mã nguồn `config.php` bằng PHP Wrapper
+
+* Thư mục gốc có file `config.php`. Mày mở trực tiếp qua trình duyệt thì thấy trắng trơn (0 bytes) vì PHP thực thi mã chứ không in ra màn hình.
+* Nhưng nếu tận dụng LFI ở tham số `skin` kết hợp với PHP filter để đọc file dưới dạng base64:
+`?skin=php://filter/convert.base64-encode/resource=../config` (hoặc `resource=config.php`)
+* Lúc này server sẽ trả về chuỗi base64 của file `config.php`. Giải mã ra là đọc được thông tin nhạy cảm bên trong, thường là mật khẩu cứng của admin hoặc thông tin kết nối database để login thẳng vào `index.php`.
+
+3. Đọc mã nguồn kiểm tra đăng nhập (`index.php`, `header.php`)
+
+* Dùng tiếp bài PHP filter để đọc source code của `index.php` hoặc `includes/header.php` xem dev viết logic xác thực như thế nào.
+* Nhiều bài lab viết logic auth rất ngớ ngẩn (ví dụ chỉ check xem có cookie `role=admin`, `admin=true` hay `logged_in=1` không). Đọc được code là biết ngay cách chế cookie để nhảy thẳng vào `dashboard.php` mà không cần tài khoản.
+
+4. Tận dụng `info.php` (phpinfo)
+
+* Mở `[http://10.48.187.204/info.php](http://10.48.187.204/info.php)` để soi:
+* Cấu hình `allow_url_include`: nếu đang `On` thì ném link RFI vào `?skin=` để lấy shell luôn khỏi cần login.
+* Mục `Environment` / `PHP Variables`: nhiều khi dev lưu luôn pass admin hoặc API key trong biến môi trường của server.
+
+
+
+Các bước mày nên làm ngay:
+Bắt request `footer.php?skin=default` ném vào Burp Repeater, đổi `skin` thành `php://filter/convert.base64-encode/resource=../config` hoặc thử lùi thư mục `../../../../etc/passwd` để test LFI trước.
+
+</div>
+
+---
+
 
 
 ### 🔗 Các bài viết liên kết trong sơ đồ

@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-b97or0">
+<div class="excalidraw-container" id="ex-amwitw">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -34,6 +34,9 @@ tags:
 <g transform="translate(31.17,-320.69)">
 <path d="M277.00 395.52 L277.00 398.19 L277.00 400.19 L277.00 401.52 L277.00 403.52 L277.00 406.19 L277.00 408.19 L277.67 411.52 L277.67 413.52 L278.33 419.52 L279.00 420.19 L279.00 420.85 L279.00 423.52 L279.00 426.85 L279.67 429.52 L279.67 430.19 L279.67 430.19" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../0-asset/pasted-image-20260604152942_518.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260604152942_518.png"><g transform="translate(31.17,-320.69)">
+<image x="8.833343505859034" y="550.5062287852483" width="740.9999847412113" height="110.02932862335125" href="../0-asset/pasted-image-20260604152942_518.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(31.17,-320.69)">
 <path d="M397.00 657.52 L399.00 656.85 L401.67 656.19 L406.33 656.19 L421.67 655.52 L425.67 655.52 L430.33 655.52 L439.67 654.85 L449.67 654.85 L463.00 654.85 L475.67 654.85 L488.33 654.85 L512.33 654.85 L517.67 654.85 L532.33 654.85 L547.00 655.52 L563.67 655.52 L577.00 655.52 L591.00 655.52 L603.67 655.52 L616.33 655.52 L626.33 655.52 L638.33 655.52 L645.00 655.52 L654.33 655.52 L662.33 655.52 L672.33 655.52 L680.33 656.19 L688.33 656.19 L695.67 656.19 L701.00 656.19 L706.33 656.19 L711.00 656.85 L713.67 656.85 L716.33 656.85 L717.00 656.85 L717.67 656.85 L719.00 656.85 L720.33 656.85 L721.00 656.85 L721.67 656.85 L722.33 656.85 L723.00 656.85 L723.67 656.85 L724.33 656.85 L724.33 656.85" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>

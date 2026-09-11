@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-lmy1n5">
+<div class="excalidraw-container" id="ex-h7qpem">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -22,6 +22,9 @@ tags:
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 744 925" class="excalidraw-svg" data-width="744" data-height="925">
+<a href="../../0-asset/pasted-image-20260513212353_976.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260513212353_976.png"><g transform="translate(235.25,322.57)">
+<image x="-170.7656645859687" y="-259.40626525878906" width="632.3647031953749" height="284.995158938092" href="../../0-asset/pasted-image-20260513212353_976.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(235.25,322.57)">
 <path d="M-145.25 -163.24 L-144.58 -163.24 L-143.92 -163.24 L-142.58 -163.24 L-140.58 -163.24 L-139.25 -163.24 L-136.58 -163.24 L-133.92 -163.24 L-130.58 -162.57 L-127.25 -162.57 L-123.92 -162.57 L-119.92 -162.57 L-115.92 -162.57 L-112.58 -161.91 L-108.58 -161.91 L-105.25 -161.91 L-103.25 -161.91 L-100.58 -161.91 L-97.92 -161.91 L-95.25 -161.91 L-92.58 -161.91 L-89.25 -161.91 L-86.58 -161.91 L-83.25 -161.91 L-79.92 -162.57 L-76.58 -163.24 L-72.58 -163.24 L-68.58 -163.91 L-65.92 -163.91 L-62.58 -163.91 L-59.25 -164.57 L-56.58 -164.57 L-53.92 -164.57 L-51.25 -165.24 L-48.58 -165.24 L-46.58 -165.24 L-43.92 -165.24 L-42.58 -165.91 L-39.92 -165.91 L-37.92 -165.91 L-35.92 -166.57 L-34.58 -166.57 L-32.58 -166.57 L-30.58 -166.57 L-29.25 -167.24 L-27.25 -167.24 L-26.58 -167.24 L-25.92 -167.24 L-24.58 -167.24 L-23.25 -167.24 L-22.58 -167.24 L-21.92 -167.24 L-21.25 -167.24 L-20.58 -167.24 L-19.92 -167.24 L-19.25 -167.24 L-19.25 -167.24" stroke="#9c36b5" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -106,6 +109,9 @@ tags:
 <g transform="translate(235.25,322.57)">
 <path d="M306.08 -230.57 L306.08 -229.91 L306.08 -229.91" stroke="#9c36b5" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../../0-asset/pasted-image-20260513214235_134.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260513214235_134.png"><g transform="translate(235.25,322.57)">
+<image x="-143.41665649414062" y="109.92710876464844" width="611.6666564941406" height="302.75790930380373" href="../../0-asset/pasted-image-20260513214235_134.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(235.25,322.57)">
 <path d="M-40.58 400.09 L-39.25 400.09 L-38.58 400.09 L-37.25 400.09 L-35.92 400.76 L-33.92 401.43 L-31.25 402.09 L-28.58 403.43 L-25.25 404.09 L-21.92 405.43 L-19.25 405.43 L-16.58 405.43 L-13.25 406.09 L-9.92 406.09 L-7.25 406.76 L-5.25 406.76 L-2.58 406.76 L-0.58 406.76 L2.08 406.76 L2.75 406.76 L4.08 406.76 L6.08 406.76 L6.75 406.09 L8.08 406.09 L9.42 405.43 L10.08 405.43 L11.42 405.43 L12.75 404.09 L13.42 404.09 L14.08 403.43 L14.75 402.76 L16.08 402.09 L17.42 402.09 L18.08 400.76 L18.75 400.09 L20.08 400.09 L20.75 399.43 L21.42 398.76 L22.08 398.09 L22.75 397.43 L23.42 396.76 L24.08 396.09 L24.08 394.76 L24.75 394.09 L25.42 393.43 L25.42 392.76 L26.08 391.43 L26.75 390.76 L26.75 390.09 L27.42 388.76 L27.42 387.43 L27.42 386.09 L27.42 384.76 L28.08 382.76 L28.08 381.43 L28.08 379.43 L27.42 378.76 L26.75 377.43 L26.08 376.09 L25.42 375.43 L24.75 374.76 L23.42 374.09 L22.08 373.43 L20.75 372.09 L19.42 371.43 L17.42 370.76 L15.42 370.76 L13.42 370.09 L10.75 369.43 L8.75 368.76 L6.75 368.76 L3.42 368.09 L0.75 368.09 L-1.92 368.09 L-4.58 368.09 L-7.25 368.09 L-9.25 368.09 L-11.92 368.09 L-13.25 368.09 L-14.58 368.09 L-16.58 368.09 L-17.92 368.09 L-19.92 368.76 L-20.58 369.43 L-23.25 370.09 L-24.58 370.76 L-26.58 371.43 L-28.58 372.09 L-31.25 373.43 L-32.58 374.09 L-35.25 374.09 L-36.58 375.43 L-37.92 376.09 L-38.58 377.43 L-39.92 378.09 L-39.92 378.76 L-40.58 380.09 L-41.92 381.43 L-42.58 382.09 L-43.25 383.43 L-43.25 384.76 L-43.92 385.43 L-43.92 386.09 L-43.92 387.43 L-43.92 388.09 L-43.92 388.76 L-43.92 389.43 L-43.92 390.09 L-43.92 390.76 L-43.92 391.43 L-43.92 392.09 L-43.25 393.43 L-41.92 394.09 L-40.58 394.76 L-39.92 396.09 L-38.58 397.43 L-37.25 398.09 L-35.92 400.09 L-34.58 401.43 L-34.58 401.43" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>

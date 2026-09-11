@@ -33,7 +33,7 @@ jobs:
         run: npm ci
 
       - name: Build Blog
-        run: npx quartz build
+        run: npm run build
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3

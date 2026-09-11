@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-1h13hs">
+<div class="excalidraw-container" id="ex-iehwt0">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -68,8 +68,14 @@ tags:
 <g transform="translate(205.19,567.24)">
 <path d="M351.75 -279.91 L351.75 -279.91" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<a href="../sql-injection/các-kỹ-thuật-chèn-sql" class="excalidraw-node-link" target="_self" title="các kỹ thuật chèn sql"><g transform="translate(205.19,567.24)">
+<a href="./các-kỹ-thuật-chèn-sql" class="excalidraw-node-link" target="_self" title="các kỹ thuật chèn sql"><g transform="translate(205.19,567.24)">
 <text x="62.42" y="-441.84" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="62.42" dy="0">📍các kỹ thuật chèn sql</tspan></text>
+</g></a>
+<a href="../../0-asset/pasted-image-20260515155902_523.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260515155902_523.png"><g transform="translate(205.19,567.24)">
+<image x="-30.371741047319517" y="-30.128382008873132" width="589.3333435058594" height="188.586669921875" href="../../0-asset/pasted-image-20260515155902_523.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
+<a href="../../0-asset/pasted-image-20260515161057_323.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260515161057_323.png"><g transform="translate(205.19,567.24)">
+<image x="-19.871710529741563" y="181.29166193643937" width="685.6666259765627" height="161.49768126098337" href="../../0-asset/pasted-image-20260515161057_323.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
 <g transform="translate(205.19,567.24)">
 <path d="M482.67 273.77 C516.67 276.13,549.90 277.23,630.31 274.62 M482.78 275.32 C521.45 274.72,560.78 276.01,628.75 275.68 M628.54 274.58 C628.88 297.69,631.07 321.79,631.16 340.17 M629.01 275.98 C629.58 294.83,630.31 314.14,629.40 339.96 M631.14 340.64 C578.42 338.31,527.39 341.21,481.20 341.31 M630.06 339.12 C596.75 339.61,566.33 339.72,483.58 339.59 M482.53 337.92 C481.98 324.05,481.97 305.86,482.33 273.97 M482.29 339.59 C483.98 319.65,484.05 299.92,483.93 274.22" stroke="#9c36b5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>

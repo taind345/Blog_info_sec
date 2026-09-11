@@ -1,6 +1,6 @@
-# 🛡️ Ti's InfoSec Knowledge Garden & Pentest Blog
+# 🛡️ Security Blog
 
-> Trang blog cá nhân chia sẻ kiến thức An toàn thông tin, Web Security, Writeup các phòng Lab (PortSwigger, TryHackMe, HackTheBox), cẩm nang Linux và công cụ Pentest.
+> Blog chia sẻ kiến thức An toàn thông tin, Web Security, Writeup các phòng Lab (PortSwigger, TryHackMe, HackTheBox), cẩm nang Linux và công cụ Pentest.
 > Được đồng bộ tự động từ Obsidian Vault: [taind345/PortSwigger__TryHackMe__Writeup....etc-](https://github.com/taind345/PortSwigger__TryHackMe__Writeup....etc-)
 
 ---

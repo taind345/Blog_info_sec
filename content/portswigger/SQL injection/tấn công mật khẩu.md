@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-ij21ax">
+<div class="excalidraw-container" id="ex-kpvg5q">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -52,9 +52,21 @@ tags:
 <g transform="translate(842.71,481.21)">
 <text x="-783.95" y="68.96" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-783.95" dy="0">'UNION SELECT username, password FROM users--</tspan></text>
 </g>
+<a href="../../0-asset/pasted-image-20260520110526_115.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260520110526_115.png"><g transform="translate(842.71,481.21)">
+<image x="-211.87912116336804" y="-207.93227910629219" width="320.41533313989726" height="207.32756850228645" href="../../0-asset/pasted-image-20260520110526_115.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
+<a href="../../0-asset/pasted-image-20260520110546_700.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260520110546_700.png"><g transform="translate(842.71,481.21)">
+<image x="-787.0154319912667" y="101.96363226201657" width="741.4922262457039" height="174.50477661438944" href="../../0-asset/pasted-image-20260520110546_700.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
+<a href="../../0-asset/pasted-image-20260520111237_007.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260520111237_007.png"><g transform="translate(842.71,481.21)">
+<image x="-655.4784651081569" y="-230.39448487476824" width="333.3108874533674" height="234.58335876464844" href="../../0-asset/pasted-image-20260520111237_007.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(842.71,481.21)">
 <path d="M-802.66 -246.85 C-489.43 -245.83,-174.39 -245.30,427.47 -246.99 M-802.81 -247.37 C-485.24 -245.76,-168.80 -246.14,427.65 -247.32 M427.48 -247.70 C425.90 -27.21,425.46 193.56,426.78 341.10 M427.07 -247.15 C429.48 -118.36,429.13 10.18,426.89 340.82 M427.00 340.81 C39.68 340.96,-346.65 341.58,-802.02 341.45 M427.32 341.40 C176.49 345.98,-75.40 345.49,-803.10 341.33 M-803.47 341.87 C-803.02 167.80,-802.02 -4.13,-803.30 -247.47 M-802.89 341.14 C-801.67 213.28,-802.28 85.44,-802.40 -247.51" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../../0-asset/pasted-image-20260520112002_934.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260520112002_934.png"><g transform="translate(842.71,481.21)">
+<image x="-753.6614440667868" y="406.6707121161985" width="583.2310791015625" height="283.5843423551757" href="../../0-asset/pasted-image-20260520112002_934.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(842.71,481.21)">
 <path d="M-560.05 409.17 L-564.05 409.17 L-566.05 409.17 L-570.05 409.17 L-575.38 409.17 L-581.38 409.17 L-588.05 409.84 L-594.05 410.50 L-599.38 411.84 L-604.71 411.84 L-608.05 412.50 L-611.38 413.84 L-614.05 415.84 L-616.05 416.50 L-618.05 419.17 L-618.71 421.84 L-619.38 425.17 L-619.38 427.84 L-619.38 431.84 L-619.38 435.17 L-618.05 438.50 L-615.38 441.84 L-612.71 443.84 L-610.05 447.17 L-606.05 449.84 L-602.05 451.17 L-596.71 453.84 L-591.38 455.84 L-586.05 457.84 L-580.05 459.84 L-573.38 461.84 L-566.71 463.17 L-561.38 464.50 L-554.05 465.84 L-548.05 466.50 L-541.38 467.17 L-536.05 467.17 L-530.71 467.17 L-526.05 467.17 L-522.05 465.84 L-519.38 463.84 L-516.71 460.50 L-514.05 457.84 L-512.71 454.50 L-512.05 451.17 L-511.38 447.84 L-511.38 445.84 L-511.38 443.84 L-511.38 441.17 L-511.38 439.84 L-512.05 437.17 L-512.71 435.17 L-514.71 433.17 L-516.05 431.17 L-518.05 428.50 L-520.05 427.84 L-520.71 426.50 L-522.71 424.50 L-524.71 423.84 L-526.71 422.50 L-530.05 421.17 L-533.38 420.50 L-537.38 419.84 L-542.05 417.84 L-547.38 417.17 L-552.05 416.50 L-558.05 415.17 L-562.71 414.50 L-567.38 413.84 L-572.71 413.17 L-576.05 413.17 L-578.05 413.17 L-580.05 413.17 L-580.71 413.17 L-581.38 413.17 L-581.38 414.50 L-581.38 415.84 L-580.71 417.17 L-580.71 417.17" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -70,6 +82,9 @@ tags:
 <g transform="translate(842.71,481.21)">
 <text x="-752.71" y="775.24" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-752.71" dy="0">writeup2</tspan></text>
 </g>
+<a href="../../0-asset/pasted-image-20260520114153_513.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260520114153_513.png"><g transform="translate(842.71,481.21)">
+<image x="-645.3172809544832" y="744.7448020142023" width="293.2290270490866" height="187.71670193142378" href="../../0-asset/pasted-image-20260520114153_513.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(842.71,481.21)">
 <path d="M-788.25 739.06 C-399.10 741.04,-10.07 740.92,474.81 738.68 M-788.36 739.70 C-384.98 743.97,18.72 744.51,475.07 739.38 M475.43 739.58 C476.23 1055.09,475.42 1371.83,475.03 1555.36 M475.11 739.48 C478.21 931.86,477.82 1124.43,475.46 1555.89 M474.94 1555.31 C-14.34 1552.13,-504.01 1552.08,-788.88 1555.92 M475.65 1555.84 C3.18 1554.63,-468.58 1554.56,-788.04 1555.76 M-787.72 1556.07 C-786.30 1243.65,-784.88 931.64,-787.50 739.29 M-788.21 1555.29 C-789.74 1273.70,-789.46 992.68,-788.27 739.47" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -84,6 +99,9 @@ tags:
 <path d="M-694.69 1293.15 C-692.37 1297.74,-690.95 1302.85,-685.12 1306.79 M-694.46 1294.66 C-692.27 1297.89,-689.69 1301.47,-685.88 1307.35" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M-687.26 1306.18 C-685.01 1303.42,-683.55 1301.18,-677.55 1293.84 M-687.03 1307.70 C-684.68 1304.05,-682.05 1300.75,-678.31 1294.40" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../../0-asset/pasted-image-20260520115438_007.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260520115438_007.png"><g transform="translate(842.71,481.21)">
+<image x="-518.6045894419798" y="1043.3865476874876" width="668.1974856529708" height="93.09252896094019" href="../../0-asset/pasted-image-20260520115438_007.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(842.71,481.21)">
 <path d="M-482.13 1156.28 C-429.50 1159.45,-378.46 1158.19,-232.11 1158.62 M-481.87 1157.21 C-395.52 1158.58,-310.51 1159.75,-231.15 1157.78 M-233.19 1156.62 C-230.09 1182.82,-230.36 1212.11,-232.34 1274.70 M-231.65 1157.42 C-231.01 1203.77,-232.80 1246.88,-231.85 1274.95 M-232.65 1275.73 C-305.42 1276.05,-378.24 1276.83,-480.79 1274.82 M-232.04 1275.82 C-287.15 1274.64,-343.81 1275.22,-481.95 1276.30 M-481.94 1276.69 C-483.04 1236.91,-482.27 1200.32,-482.18 1157.13 M-482.52 1275.55 C-483.17 1240.72,-483.14 1205.98,-481.99 1157.80" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -132,6 +150,12 @@ tags:
 <g transform="translate(842.71,481.21)">
 <path d="M-543.07 1384.50 L-541.59 1384.50 L-540.85 1384.50 L-540.11 1384.50 L-538.63 1384.50 L-538.63 1385.24 L-537.15 1385.24 L-536.41 1385.24 L-535.67 1385.24 L-534.93 1385.24 L-534.93 1385.98 L-534.18 1386.72 L-534.18 1387.46 L-533.44 1388.94 L-531.96 1390.42 L-531.96 1391.91 L-531.22 1392.65 L-530.48 1394.13 L-530.48 1394.87 L-529.74 1395.61 L-529.00 1396.35 L-528.26 1396.35 L-527.52 1397.09 L-526.78 1397.83 L-526.04 1397.83 L-525.30 1397.83 L-524.56 1397.83 L-523.81 1397.83 L-523.07 1397.83 L-522.33 1397.83 L-521.59 1397.83 L-520.85 1397.83 L-520.11 1397.83 L-519.37 1397.83 L-518.63 1397.83 L-517.89 1397.83 L-517.89 1397.09 L-517.89 1396.35 L-517.89 1394.13 L-517.89 1392.65 L-517.89 1391.16 L-517.89 1390.42 L-517.15 1388.94 L-517.15 1388.20 L-516.41 1387.46 L-516.41 1386.72 L-516.41 1385.98 L-516.41 1385.24 L-516.41 1384.50 L-516.41 1384.50" stroke="#343a40" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../../0-asset/pasted-image-20260520120230_911.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260520120230_911.png"><g transform="translate(842.71,481.21)">
+<image x="-391.8698859070646" y="1400.4606870212058" width="616.111043294271" height="110.95574444847053" href="../../0-asset/pasted-image-20260520120230_911.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
+<a href="../../0-asset/pasted-image-20260520120338_558.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260520120338_558.png"><g transform="translate(842.71,481.21)">
+<image x="-246.51811317485976" y="782.590296602418" width="371.58610903756414" height="140.77050495849562" href="../../0-asset/pasted-image-20260520120338_558.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(842.71,481.21)">
 <text x="-154.93" y="776.34" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#343a40" text-anchor="start"><tspan x="-154.93" dy="0">kết quả</tspan></text>
 </g>

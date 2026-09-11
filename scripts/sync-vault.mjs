@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { execSync } from "child_process";
 import LZString from "lz-string";
+import { marked } from "marked";
 import { slugifyFilePath } from "@quartz-community/utils";
 import { getBoundingBox } from "../node_modules/@moona3k/excalidraw-export/src/utils.js";
 import {
@@ -33,8 +34,25 @@ const RENDERERS = {
 
 const PADDING = 40;
 
-// High-performance, clean SVG renderer with clickable links and 0 font bloat
-function renderExcalidrawToSvgWithLinks(doc, slugMap, currentFileRel) {
+function escapeXml(str) {
+  if (!str) return "";
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
+// High-performance, clean SVG renderer with clickable links, embedded images, and markdown cards
+function renderExcalidrawToSvgWithLinks(
+  doc,
+  slugMap,
+  currentFileRel,
+  embeddedFiles = new Map(),
+  markdownImages = new Map(),
+  assetImageMap = new Map()
+) {
   const elements = (doc.elements || []).filter((el) => !el.isDeleted);
   if (elements.length === 0) {
     return '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"></svg>';
@@ -47,12 +65,74 @@ function renderExcalidrawToSvgWithLinks(doc, slugMap, currentFileRel) {
   const offsetY = -bbox.minY + PADDING;
   const files = doc.files || {};
 
+  const currentSlug = slugifyFilePath(currentFileRel);
+  const currentDir = path.dirname(currentSlug);
+
   const rendered = [];
   for (const el of elements) {
-    const render = RENDERERS[el.type];
-    if (!render) continue;
+    let svg = "";
+    let isMarkdownCard = false;
 
-    const svg = render(el, files);
+    // Handle element rendering
+    if (el.type === "image") {
+      const isMdImage =
+        el.customData?.markdownImage ||
+        embeddedFiles.get(el.fileId) === "markdown-image" ||
+        markdownImages.has(el.fileId);
+
+      if (isMdImage) {
+        // Render Notion-style markdown card on the canvas
+        isMarkdownCard = true;
+        const mdText = markdownImages.get(el.fileId) || "";
+        const html = marked.parse(mdText);
+
+        // Find first title/heading for card label
+        let cardTitle = "Ghi chú Markdown";
+        const titleMatch = mdText.match(/^#+\s+(.+)$/m);
+        if (titleMatch) {
+          cardTitle = titleMatch[1].trim();
+        }
+
+        svg = `
+<rect x="${el.x}" y="${el.y}" width="${el.width}" height="${el.height}" rx="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5" class="excalidraw-md-bg"/>
+<foreignObject x="${el.x}" y="${el.y}" width="${el.width}" height="${el.height}" class="excalidraw-foreign-md">
+  <div xmlns="http://www.w3.org/1999/xhtml" class="notion-embed-card">
+    <div class="notion-embed-header">
+      <div class="notion-embed-header-left">
+        <span class="notion-embed-icon">📝</span>
+        <span class="notion-embed-title">${escapeXml(cardTitle)}</span>
+      </div>
+      <a href="#doc-${el.fileId}" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
+    </div>
+    <div class="notion-embed-body">
+      ${html}
+    </div>
+  </div>
+</foreignObject>
+`;
+      } else {
+        // Normal image (e.g. [[Pasted Image ...]])
+        const embeddedTarget = embeddedFiles.get(el.fileId) || "";
+        const cleanName = embeddedTarget.replace(/^\[\[|\]\]$/g, "").trim();
+        const assetPath = assetImageMap.get(cleanName.toLowerCase());
+
+        if (assetPath) {
+          let relImgPath = path.relative(currentDir, assetPath);
+          if (!relImgPath.startsWith(".")) relImgPath = "./" + relImgPath;
+
+          svg = `<image x="${el.x}" y="${el.y}" width="${el.width}" height="${el.height}" href="${relImgPath}" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>`;
+        } else {
+          // Fallback to default shape renderer
+          svg = renderImage(el, files);
+        }
+      }
+    } else {
+      const render = RENDERERS[el.type];
+      if (render) {
+        svg = render(el, files);
+      }
+    }
+
     if (!svg) continue;
 
     const opacity = el.opacity != null && el.opacity < 100
@@ -78,7 +158,6 @@ function renderExcalidrawToSvgWithLinks(doc, slugMap, currentFileRel) {
       const targetName = linkMatch[1].trim();
       const targetSlug = slugMap.get(targetName.toLowerCase());
       if (targetSlug) {
-        const currentDir = path.dirname(currentFileRel);
         let relUrl = path.relative(currentDir, targetSlug);
         if (!relUrl.startsWith(".")) relUrl = "./" + relUrl;
         linkUrl = relUrl;
@@ -87,12 +166,23 @@ function renderExcalidrawToSvgWithLinks(doc, slugMap, currentFileRel) {
     } else if (el.link && (el.link.startsWith("http://") || el.link.startsWith("https://"))) {
       linkUrl = el.link;
       linkTitle = el.link;
+    } else if (el.type === "image" && !isMarkdownCard) {
+      // Allow clicking normal images to view full resolution
+      const embeddedTarget = embeddedFiles.get(el.fileId) || "";
+      const cleanName = embeddedTarget.replace(/^\[\[|\]\]$/g, "").trim();
+      const assetPath = assetImageMap.get(cleanName.toLowerCase());
+      if (assetPath) {
+        let relImgPath = path.relative(currentDir, assetPath);
+        if (!relImgPath.startsWith(".")) relImgPath = "./" + relImgPath;
+        linkUrl = relImgPath;
+        linkTitle = `Xem ảnh: ${cleanName}`;
+      }
     }
 
     // Wrap ONLY this element group in an anchor tag (NO regex, NO nesting!)
-    if (linkUrl) {
-      const isExt = linkUrl.startsWith("http");
-      group = `<a href="${linkUrl}" class="excalidraw-node-link${isExt ? ' external' : ''}" ${isExt ? 'target="_blank" rel="noopener"' : 'target="_self"'} title="${linkTitle}">${group}</a>`;
+    if (linkUrl && !isMarkdownCard) {
+      const isExt = linkUrl.startsWith("http") || linkUrl.endsWith(".png") || linkUrl.endsWith(".jpg");
+      group = `<a href="${linkUrl}" class="excalidraw-node-link${isExt ? ' external' : ''}" ${isExt ? 'target="_blank" rel="noopener"' : 'target="_self"'} title="${escapeXml(linkTitle)}">${group}</a>`;
     }
 
     rendered.push(group);
@@ -180,7 +270,7 @@ async function main() {
     fs.copyFileSync(path.join(vaultPath, "0-INDEX.md"), path.join(CONTENT_DIR, "0-INDEX.md"));
   }
 
-  // 2. Build slug map
+  // Build slug map for markdown files
   const allMdFiles = getAllFiles(CONTENT_DIR, ".md");
   const slugMap = new Map();
 
@@ -191,7 +281,19 @@ async function main() {
     slugMap.set(baseName.toLowerCase(), slug);
   }
 
-  // 3. Process each Markdown file
+  // Build asset image map for 0-asset files
+  const assetImageMap = new Map();
+  const assetDir = path.join(CONTENT_DIR, "0-asset");
+  if (fs.existsSync(assetDir)) {
+    const allAssetFiles = fs.readdirSync(assetDir);
+    for (const f of allAssetFiles) {
+      const relPath = path.join("0-asset", f);
+      const slug = slugifyFilePath(relPath);
+      assetImageMap.set(f.toLowerCase(), slug);
+    }
+  }
+
+  // Process each Markdown file
   let excalidrawCount = 0;
   let normalNoteCount = 0;
 
@@ -208,9 +310,50 @@ async function main() {
 
     if (isExcalidraw) {
       excalidrawCount++;
+
+      // 1. Extract Embedded Files map: fileId -> target
+      const embeddedFiles = new Map();
+      const embeddedMatch = content.match(/## Embedded Files([\s\S]*?)(?:%%|##|$)/);
+      if (embeddedMatch) {
+        const lines = embeddedMatch[1].split("\n");
+        for (const line of lines) {
+          const m = line.match(/^([a-f0-9]+):\s*(.+)$/);
+          if (m) {
+            embeddedFiles.set(m[1].trim(), m[2].trim());
+          }
+        }
+      }
+
+      // 2. Extract Markdown Images content: fileId -> markdown text
+      const markdownImages = new Map();
+      const mdImageRegex = /<!-- excalidraw-markdown-image:([a-f0-9]+) -->([\s\S]*?)<!-- \/excalidraw-markdown-image:\1 -->/g;
+      let mm;
+      while ((mm = mdImageRegex.exec(content)) !== null) {
+        const fileId = mm[1].trim();
+        const mdText = mm[2].trim();
+        markdownImages.set(fileId, mdText);
+      }
+
+      // 3. Extract backlinks for Obsidian graph & backlink panel
+      const backlinksList = [];
+      const textElementsMatch = content.match(/## Text Elements([\s\S]*?)(?:%%|##|$)/);
+      if (textElementsMatch) {
+        const rawText = textElementsMatch[1];
+        const linkRegex = /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g;
+        let lm;
+        const seen = new Set();
+        while ((lm = linkRegex.exec(rawText)) !== null) {
+          const target = lm[1].trim();
+          if (!seen.has(target)) {
+            seen.add(target);
+            backlinksList.push(target);
+          }
+        }
+      }
+
+      // 4. Render Compressed JSON Excalidraw diagram
       const match = content.match(/```compressed-json\s+([\s\S]*?)\s+```/);
       let svgHtml = "";
-      let backlinksList = [];
 
       if (match) {
         try {
@@ -218,15 +361,22 @@ async function main() {
           const decompressed = LZString.decompressFromBase64(raw);
           const json = JSON.parse(decompressed);
 
-          // Clean, lightweight SVG with direct non-nested links
-          const cleanSvg = renderExcalidrawToSvgWithLinks(json, slugMap, relPath);
+          // Clean, lightweight SVG with direct links, embedded images & markdown cards
+          const cleanSvg = renderExcalidrawToSvgWithLinks(
+            json,
+            slugMap,
+            relPath,
+            embeddedFiles,
+            markdownImages,
+            assetImageMap
+          );
 
           const diagramId = "ex-" + Math.random().toString(36).substring(2, 8);
           svgHtml = `
 <div class="excalidraw-container" id="${diagramId}">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -243,22 +393,6 @@ async function main() {
   </div>
 </div>
 `;
-
-          // Extract backlinks for Obsidian graph & backlink panel
-          const textElementsMatch = content.match(/## Text Elements([\s\S]*?)(?:%%|##|$)/);
-          if (textElementsMatch) {
-            const rawText = textElementsMatch[1];
-            const linkRegex = /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g;
-            let lm;
-            const seen = new Set();
-            while ((lm = linkRegex.exec(rawText)) !== null) {
-              const target = lm[1].trim();
-              if (!seen.has(target)) {
-                seen.add(target);
-                backlinksList.push(target);
-              }
-            }
-          }
         } catch (err) {
           console.error(`Lỗi render Excalidraw cho ${baseName}:`, err.message);
         }
@@ -274,6 +408,18 @@ tags:
 `;
 
       let body = frontmatter + svgHtml;
+
+      // 5. If note contains Markdown writeup images, append full writeup below the diagram
+      if (markdownImages.size > 0) {
+        body += `\n\n---\n\n## 📖 Nội dung chi tiết bài viết (Writeup)\n\n`;
+        for (const [fileId, mdText] of markdownImages.entries()) {
+          body += `<div id="doc-${fileId}" class="notion-callout-card">\n\n`;
+          body += `${mdText}\n\n`;
+          body += `</div>\n\n---\n\n`;
+        }
+      }
+
+      // 6. Append backlinks
       if (backlinksList.length > 0) {
         body += `\n\n### 🔗 Các bài viết liên kết trong sơ đồ\n\n`;
         for (const item of backlinksList) {
@@ -297,7 +443,7 @@ title: "${baseName}"
 
   console.log(`Đã xử lý: ${excalidrawCount} sơ đồ Excalidraw và ${normalNoteCount} bài viết Markdown.`);
 
-  // 4. Create Clean HomePage index.md (Lightweight & Fast!)
+  // Create Clean HomePage index.md (Notion minimal style)
   createHomePage(CONTENT_DIR);
 
   console.log("=== Hoàn tất xử lý! ===");
@@ -307,15 +453,15 @@ function createHomePage(contentDir) {
   const indexMdPath = path.join(contentDir, "index.md");
 
   const homeContent = `---
-title: "Cyber Security & Pentest Knowledge Garden"
+title: "Security Blog"
 ---
 
 <div class="hero-section">
-  <div class="hero-badge">🛡️ InfoSec Knowledge Base & CTF Writeups</div>
-  <h1 class="hero-title">Bảo Mật Thông Tin & Pentest Lab</h1>
+  <div class="hero-badge">🛡️ InfoSec Knowledge Base &amp; CTF Writeups</div>
+  <h1 class="hero-title">Security Blog</h1>
   <p class="hero-desc">
-    Khu vườn tri thức số về an toàn thông tin, tổng hợp các ghi chú, sơ đồ tư duy (Mindmap), writeup từ các nền tảng hàng đầu: 
-    <strong>PortSwigger Web Security Academy</strong>, <strong>TryHackMe</strong>, <strong>HackTheBox</strong>, <strong>Linux</strong> &amp; <strong>Công cụ Pentest</strong>.
+    Ghi chú, sơ đồ tư duy tương tác (Mindmap) và bài viết phân tích kỹ thuật về an toàn thông tin &amp; pentest từ:
+    <strong>PortSwigger Web Security Academy</strong>, <strong>TryHackMe</strong>, <strong>HackTheBox</strong>, <strong>Linux</strong> &amp; <strong>Tools</strong>.
   </p>
 </div>
 
@@ -324,7 +470,7 @@ title: "Cyber Security & Pentest Knowledge Garden"
     <div class="cat-icon">🌐</div>
     <div class="cat-info">
       <h3>PortSwigger Academy</h3>
-      <p>XSS, SQLi, SSRF, CORS, Server-side &amp; Client-side vulnerabilities.</p>
+      <p>XSS, SQLi, SSRF, CORS, Server-side &amp; Client-side labs.</p>
     </div>
   </a>
 
@@ -332,23 +478,23 @@ title: "Cyber Security & Pentest Knowledge Garden"
     <div class="cat-icon">🚩</div>
     <div class="cat-info">
       <h3>TryHackMe Labs</h3>
-      <p>Network, Active Directory, CVEs, Reverse Shell, RCE &amp; Web Pentest.</p>
+      <p>Active Directory, CVEs, RCE, Reverse Shells &amp; Walkthroughs.</p>
     </div>
   </a>
 
   <a href="./1-linux/0-linux" class="cat-card">
     <div class="cat-icon">🐧</div>
     <div class="cat-info">
-      <h3>Linux Administration</h3>
-      <p>Lệnh cơ bản, hệ thống Fedora/Ubuntu, Cheatsheet, Netcat &amp; Cấu hình mạng.</p>
+      <h3>Linux &amp; Systems</h3>
+      <p>Lệnh quản trị, Shell script, Netcat, mạng và cấu hình.</p>
     </div>
   </a>
 
   <a href="./tools/0-tool" class="cat-card">
     <div class="cat-icon">🛠️</div>
     <div class="cat-info">
-      <h3>Công Cụ (Tools)</h3>
-      <p>Burp Suite, ffuf, sqlmap, nmap, nikto &amp; bí kíp sử dụng thực chiến.</p>
+      <h3>Tools &amp; Cheatsheets</h3>
+      <p>Burp Suite, ffuf, sqlmap, nmap, nikto thực chiến.</p>
     </div>
   </a>
 
@@ -356,7 +502,7 @@ title: "Cyber Security & Pentest Knowledge Garden"
     <div class="cat-icon">💡</div>
     <div class="cat-info">
       <h3>Kiến Thức Cốt Lõi</h3>
-      <p>SOP, Reverse Proxy, MFA Bypass, JWT, Cookie &amp; Session, IDOR.</p>
+      <p>SOP, Reverse Proxy, MFA Bypass, JWT, Sessions, IDOR.</p>
     </div>
   </a>
 
@@ -364,14 +510,14 @@ title: "Cyber Security & Pentest Knowledge Garden"
     <div class="cat-icon">🎯</div>
     <div class="cat-info">
       <h3>CTF Writeups</h3>
-      <p>Tổng hợp các thử thách và giải pháp CTF (PTIT CTF, HackTheBox,...).</p>
+      <p>Writeup giải đề PTIT CTF, HackTheBox, TryHackMe.</p>
     </div>
   </a>
 </div>
 
 ---
 
-## 🗺️ Sơ đồ tư duy tổng thể (Master Mindmap)
+## 🗺️ Bản đồ tư duy tổng thể (Master Mindmap)
 
 Toàn bộ hệ thống kiến thức được kết nối trực quan qua sơ đồ tư duy tương tác. Bạn có thể mở trực tiếp để phóng to, thu nhỏ và bấm vào các nút liên kết:
 

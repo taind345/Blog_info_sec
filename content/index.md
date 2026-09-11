@@ -1,13 +1,13 @@
 ---
-title: "Cyber Security & Pentest Knowledge Garden"
+title: "Security Blog"
 ---
 
 <div class="hero-section">
-  <div class="hero-badge">🛡️ InfoSec Knowledge Base & CTF Writeups</div>
-  <h1 class="hero-title">Bảo Mật Thông Tin & Pentest Lab</h1>
+  <div class="hero-badge">🛡️ InfoSec Knowledge Base &amp; CTF Writeups</div>
+  <h1 class="hero-title">Security Blog</h1>
   <p class="hero-desc">
-    Khu vườn tri thức số về an toàn thông tin, tổng hợp các ghi chú, sơ đồ tư duy (Mindmap), writeup từ các nền tảng hàng đầu: 
-    <strong>PortSwigger Web Security Academy</strong>, <strong>TryHackMe</strong>, <strong>HackTheBox</strong>, <strong>Linux</strong> &amp; <strong>Công cụ Pentest</strong>.
+    Ghi chú, sơ đồ tư duy tương tác (Mindmap) và bài viết phân tích kỹ thuật về an toàn thông tin &amp; pentest từ:
+    <strong>PortSwigger Web Security Academy</strong>, <strong>TryHackMe</strong>, <strong>HackTheBox</strong>, <strong>Linux</strong> &amp; <strong>Tools</strong>.
   </p>
 </div>
 
@@ -16,7 +16,7 @@ title: "Cyber Security & Pentest Knowledge Garden"
     <div class="cat-icon">🌐</div>
     <div class="cat-info">
       <h3>PortSwigger Academy</h3>
-      <p>XSS, SQLi, SSRF, CORS, Server-side &amp; Client-side vulnerabilities.</p>
+      <p>XSS, SQLi, SSRF, CORS, Server-side &amp; Client-side labs.</p>
     </div>
   </a>
 
@@ -24,23 +24,23 @@ title: "Cyber Security & Pentest Knowledge Garden"
     <div class="cat-icon">🚩</div>
     <div class="cat-info">
       <h3>TryHackMe Labs</h3>
-      <p>Network, Active Directory, CVEs, Reverse Shell, RCE &amp; Web Pentest.</p>
+      <p>Active Directory, CVEs, RCE, Reverse Shells &amp; Walkthroughs.</p>
     </div>
   </a>
 
   <a href="./1-linux/0-linux" class="cat-card">
     <div class="cat-icon">🐧</div>
     <div class="cat-info">
-      <h3>Linux Administration</h3>
-      <p>Lệnh cơ bản, hệ thống Fedora/Ubuntu, Cheatsheet, Netcat &amp; Cấu hình mạng.</p>
+      <h3>Linux &amp; Systems</h3>
+      <p>Lệnh quản trị, Shell script, Netcat, mạng và cấu hình.</p>
     </div>
   </a>
 
   <a href="./tools/0-tool" class="cat-card">
     <div class="cat-icon">🛠️</div>
     <div class="cat-info">
-      <h3>Công Cụ (Tools)</h3>
-      <p>Burp Suite, ffuf, sqlmap, nmap, nikto &amp; bí kíp sử dụng thực chiến.</p>
+      <h3>Tools &amp; Cheatsheets</h3>
+      <p>Burp Suite, ffuf, sqlmap, nmap, nikto thực chiến.</p>
     </div>
   </a>
 
@@ -48,7 +48,7 @@ title: "Cyber Security & Pentest Knowledge Garden"
     <div class="cat-icon">💡</div>
     <div class="cat-info">
       <h3>Kiến Thức Cốt Lõi</h3>
-      <p>SOP, Reverse Proxy, MFA Bypass, JWT, Cookie &amp; Session, IDOR.</p>
+      <p>SOP, Reverse Proxy, MFA Bypass, JWT, Sessions, IDOR.</p>
     </div>
   </a>
 
@@ -56,14 +56,14 @@ title: "Cyber Security & Pentest Knowledge Garden"
     <div class="cat-icon">🎯</div>
     <div class="cat-info">
       <h3>CTF Writeups</h3>
-      <p>Tổng hợp các thử thách và giải pháp CTF (PTIT CTF, HackTheBox,...).</p>
+      <p>Writeup giải đề PTIT CTF, HackTheBox, TryHackMe.</p>
     </div>
   </a>
 </div>
 
 ---
 
-## 🗺️ Sơ đồ tư duy tổng thể (Master Mindmap)
+## 🗺️ Bản đồ tư duy tổng thể (Master Mindmap)
 
 Toàn bộ hệ thống kiến thức được kết nối trực quan qua sơ đồ tư duy tương tác. Bạn có thể mở trực tiếp để phóng to, thu nhỏ và bấm vào các nút liên kết:
 

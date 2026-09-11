@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-bcqqdh">
+<div class="excalidraw-container" id="ex-jus5uz">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -129,7 +129,7 @@ tags:
 <g transform="translate(429.75,446.42)">
 <text x="87.58" y="-15.51" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="87.58" dy="0">bypass lớp</tspan><tspan x="87.58" dy="25">lọc này ??</tspan></text>
 </g>
-<a href="../ssrf/blacklist-filter-bypass" class="excalidraw-node-link" target="_self" title="Blacklist filter bypass"><g transform="translate(429.75,446.42)">
+<a href="./blacklist-filter-bypass" class="excalidraw-node-link" target="_self" title="Blacklist filter bypass"><g transform="translate(429.75,446.42)">
 <text x="202.92" y="-4.17" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#099268" text-anchor="start"><tspan x="202.92" dy="0">📍Blacklist filter bypass</tspan></text>
 </g></a>
 <g transform="translate(429.75,446.42)">
@@ -138,6 +138,9 @@ tags:
 <g transform="translate(429.75,446.42)">
 <text x="-343.75" y="407.76" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="-343.75" dy="0">giải pháp</tspan></text>
 </g>
+<a href="../../0-asset/pasted-image-20260518061848_933.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260518061848_933.png"><g transform="translate(429.75,446.42)">
+<image x="-284.32299207026216" y="447.1805974308361" width="498.5716774743775" height="330.29815696601554" href="../../0-asset/pasted-image-20260518061848_933.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(429.75,446.42)">
 <path d="M-145.50 577.54 L-146.17 577.54 L-148.17 577.54 L-150.17 577.54 L-152.83 576.87 L-155.50 576.87 L-159.50 576.21 L-163.50 575.54 L-167.50 574.87 L-172.17 574.87 L-176.83 574.21 L-182.17 574.21 L-187.50 574.21 L-192.17 574.21 L-196.83 574.21 L-202.17 574.21 L-207.50 574.21 L-212.17 574.21 L-216.83 574.21 L-220.83 574.21 L-224.83 574.87 L-228.83 575.54 L-232.17 575.54 L-234.83 576.21 L-238.17 576.87 L-240.83 577.54 L-244.17 577.54 L-247.50 578.21 L-250.17 579.54 L-252.83 580.21 L-255.50 581.54 L-257.50 581.54 L-259.50 582.21 L-260.17 583.54 L-262.17 584.21 L-262.83 584.87 L-264.17 585.54 L-264.17 586.21 L-264.83 586.87 L-264.83 587.54 L-264.83 588.21 L-264.83 588.87 L-264.83 589.54 L-263.50 590.21 L-262.17 590.87 L-260.83 592.21 L-260.17 592.87 L-258.17 592.87 L-256.83 593.54 L-254.17 594.87 L-252.17 595.54 L-249.50 596.87 L-246.17 596.87 L-242.83 598.21 L-239.50 599.54 L-234.17 600.87 L-229.50 600.87 L-224.83 602.21 L-218.83 602.87 L-213.50 603.54 L-208.17 604.21 L-202.83 604.87 L-198.17 604.87 L-193.50 604.87 L-189.50 604.87 L-186.17 605.54 L-182.83 605.54 L-179.50 606.21 L-176.17 606.21 L-172.83 606.21 L-168.83 606.21 L-164.83 606.21 L-160.17 606.21 L-156.17 606.21 L-152.17 606.21 L-148.17 605.54 L-143.50 605.54 L-138.83 605.54 L-134.17 605.54 L-129.50 604.87 L-126.17 604.87 L-122.17 604.87 L-118.17 604.21 L-114.17 604.21 L-110.83 603.54 L-107.50 603.54 L-104.83 602.87 L-102.83 602.21 L-100.83 601.54 L-98.83 601.54 L-97.50 600.87 L-96.83 600.21 L-96.17 599.54 L-95.50 598.87 L-94.83 598.21 L-94.17 597.54 L-93.50 596.87 L-93.50 595.54 L-92.83 594.21 L-92.83 593.54 L-92.17 592.87 L-92.17 591.54 L-92.17 590.21 L-92.17 589.54 L-92.17 588.21 L-92.17 586.87 L-92.17 586.21 L-92.83 586.21 L-92.83 585.54 L-93.50 584.87 L-94.83 584.21 L-95.50 584.21 L-96.83 582.87 L-97.50 582.21 L-99.50 582.21 L-102.17 580.87 L-104.17 579.54 L-107.50 578.87 L-110.83 578.21 L-114.17 577.54 L-117.50 576.87 L-122.17 576.21 L-126.17 575.54 L-129.50 575.54 L-135.50 574.87 L-140.83 574.87 L-145.50 574.21 L-150.17 574.21 L-154.17 574.21 L-158.17 574.21 L-162.83 574.21 L-166.17 574.21 L-169.50 573.54 L-173.50 573.54 L-176.17 573.54 L-178.83 573.54 L-182.17 573.54 L-184.83 573.54 L-186.83 573.54 L-188.83 573.54 L-190.17 573.54 L-190.17 573.54" stroke="#0c8599" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -159,6 +162,9 @@ tags:
 <g transform="translate(429.75,446.42)">
 <text x="-36.17" y="618.94" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-36.17" dy="0">mã hóa chữ &quot;a&quot;</tspan><tspan x="-36.17" dy="25">theo double url</tspan><tspan x="-36.17" dy="25">encode</tspan></text>
 </g>
+<a href="../../0-asset/pasted-image-20260518062131_725.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260518062131_725.png"><g transform="translate(429.75,446.42)">
+<image x="266.6668701171875" y="567.2078313883924" width="402.3333740234376" height="153.76398585186476" href="../../0-asset/pasted-image-20260518062131_725.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(429.75,446.42)">
 <path d="M-81.42 589.98 C-38.04 585.08,118.09 557.42,178.74 559.79 C239.38 562.15,264.87 596.73,282.45 604.18 M-82.49 589.51 C-39.30 584.20,116.67 555.20,177.92 557.79 C239.16 560.39,267.12 597.18,284.97 605.10" stroke="#1971c2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M267.94 607.22 C273.85 605.24,277.83 605.81,283.08 605.65 M267.61 606.28 C272.58 605.69,277.46 605.05,283.41 604.36" stroke="#1971c2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>

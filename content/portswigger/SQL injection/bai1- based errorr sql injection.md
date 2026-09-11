@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-82jzh4">
+<div class="excalidraw-container" id="ex-e62fkv">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -25,27 +25,42 @@ tags:
 <g transform="translate(-55.80,664.54)">
 <text x="943.47" y="-189.53" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="943.47" dy="0">TRUE/FALSE--&gt; đều</tspan><tspan x="943.47" dy="25">cho ra kết quả đúng</tspan></text>
 </g>
-<a href="../sql-injection/blind-sql-injection" class="excalidraw-node-link" target="_self" title="Blind sql injection"><g transform="translate(-55.80,664.54)">
+<a href="./blind-sql-injection" class="excalidraw-node-link" target="_self" title="Blind sql injection"><g transform="translate(-55.80,664.54)">
 <text x="942.30" y="-101.44" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="942.30" dy="0">📍Blind sql injection</tspan></text>
 </g></a>
 <g transform="translate(-55.80,664.54)">
 <text x="966.28" y="-1.76" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="966.28" dy="0">Cho ra phản hồi</tspan><tspan x="966.28" dy="25">khi có error ở lỗi</tspan><tspan x="966.28" dy="25">cú pháp--&gt; base</tspan><tspan x="966.28" dy="25">error injection</tspan></text>
 </g>
+<a href="../../0-asset/pasted-image-20260629065159_523.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629065159_523.png"><g transform="translate(-55.80,664.54)">
+<image x="684.3192391927508" y="845.4242903509421" width="456.97094726562466" height="78.89817752190925" href="../../0-asset/pasted-image-20260629065159_523.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
+<a href="../../0-asset/pasted-image-20260629051154_398.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629051154_398.png"><g transform="translate(-55.80,664.54)">
+<image x="95.79614553932288" y="-624.537778568274" width="654.9164343725279" height="259.9919513338176" href="../../0-asset/pasted-image-20260629051154_398.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-55.80,664.54)">
 <text x="112.14" y="-311.12" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="112.14" dy="0">bước 1 : Nhận biết , test</tspan></text>
 </g>
+<a href="../../0-asset/pasted-image-20260629051949_333.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629051949_333.png"><g transform="translate(-55.80,664.54)">
+<image x="130.78393425878983" y="-300.4045667624132" width="754.5321350097656" height="150.90642700195315" href="../../0-asset/pasted-image-20260629051949_333.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-55.80,664.54)">
 <path d="M353.26 -243.23 C373.15 -244.83,394.98 -242.22,420.61 -242.24 M353.26 -243.03 C367.73 -243.90,383.11 -243.56,421.63 -243.30 M420.20 -244.94 C423.97 -236.90,422.21 -229.15,423.06 -217.11 M422.03 -242.94 C421.43 -233.22,422.57 -224.65,422.06 -215.85 M420.45 -217.23 C401.73 -217.64,384.77 -215.46,353.46 -215.78 M422.59 -216.11 C398.10 -216.32,372.96 -217.67,352.78 -216.75 M354.20 -215.72 C353.30 -224.82,355.12 -228.43,351.83 -244.98 M353.16 -216.36 C352.74 -226.00,353.30 -236.58,353.34 -244.02" stroke="#1971c2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-55.80,664.54)">
 <path d="M631.26 -269.38 C652.61 -266.98,673.02 -266.42,727.52 -265.65 M632.03 -267.70 C663.67 -267.97,695.13 -267.89,728.85 -267.07 M730.83 -268.28 C728.76 -256.09,729.76 -244.31,730.27 -232.80 M728.32 -266.83 C729.44 -258.65,729.06 -248.23,728.76 -234.30 M727.12 -234.15 C705.80 -232.20,684.03 -232.96,633.68 -232.75 M729.50 -233.36 C698.75 -234.08,668.82 -233.08,632.11 -234.19 M632.70 -235.05 C634.33 -241.37,631.17 -253.93,633.84 -268.35 M632.18 -233.24 C632.71 -245.23,632.84 -256.36,631.97 -268.56" stroke="#1971c2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../../0-asset/pasted-image-20260629052022_935.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629052022_935.png"><g transform="translate(-55.80,664.54)">
+<image x="131.76862132324783" y="-27.951200673546055" width="747.883897355459" height="117.69601440429682" href="../../0-asset/pasted-image-20260629052022_935.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-55.80,664.54)">
 <path d="M356.87 27.94 C376.57 28.09,398.50 26.46,452.60 25.36 M357.89 26.88 C385.46 26.82,413.56 25.30,450.69 27.37 M452.30 26.16 C452.49 34.79,450.78 41.13,452.77 52.44 M451.30 27.42 C451.08 36.40,450.78 46.62,451.09 53.00 M451.70 54.98 C426.49 55.79,399.74 55.82,359.65 54.79 M451.02 54.01 C419.52 52.61,388.50 53.64,358.86 54.04 M357.09 52.68 C359.31 46.87,358.65 41.31,359.14 25.64 M358.60 53.64 C357.66 43.50,357.43 35.24,358.28 26.47" stroke="#1971c2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-55.80,664.54)">
 <path d="M669.62 -3.66 C725.81 -6.42,780.63 -7.93,828.40 -6.51 M670.96 -5.08 C723.40 -7.17,773.97 -5.37,828.20 -5.66 M829.68 -4.73 C828.17 5.59,830.16 15.48,830.13 34.83 M828.18 -6.23 C827.86 4.43,828.28 15.16,828.30 33.82 M829.58 35.09 C767.76 35.90,707.87 35.69,671.94 33.38 M828.02 33.64 C796.59 34.70,765.61 34.18,670.54 35.07 M672.44 33.41 C672.02 18.76,672.26 2.22,672.17 -5.40 M670.56 33.19 C670.22 24.03,671.05 13.14,671.55 -6.37" stroke="#1971c2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../../0-asset/pasted-image-20260629053349_190.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629053349_190.png"><g transform="translate(-55.80,664.54)">
+<image x="127.44374299194976" y="-144.6471257559258" width="649.644608124258" height="106.6432800292971" href="../../0-asset/pasted-image-20260629053349_190.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-55.80,664.54)">
 <path d="M321.35 -82.83 C351.04 -82.67,382.80 -82.72,398.59 -82.17 M319.44 -80.81 C347.53 -80.96,375.48 -80.45,397.68 -81.09 M399.30 -83.23 C399.38 -69.43,397.25 -58.66,399.68 -49.02 M397.62 -82.67 C397.43 -73.89,398.52 -65.33,398.35 -47.81 M399.16 -47.55 C371.46 -48.68,341.63 -48.55,320.11 -49.34 M398.38 -48.30 C377.53 -46.95,359.42 -48.53,319.42 -47.73 M320.88 -49.21 C320.95 -56.92,319.25 -65.48,319.36 -82.96 M320.02 -48.38 C320.72 -55.99,319.73 -61.24,320.01 -81.81" stroke="#1971c2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -171,6 +186,9 @@ tags:
 <g transform="translate(-55.80,664.54)">
 <text x="155.17" y="957.62" font-family="Cascadia, Fira Code, monospace" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="155.17" dy="0">Bước 3: xác định lenght và char cho password</tspan></text>
 </g>
+<a href="../../0-asset/pasted-image-20260629064250_708.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629064250_708.png"><g transform="translate(-55.80,664.54)">
+<image x="128.10423587867888" y="110.67194838895239" width="731.90278941009" height="124.66011713393564" href="../../0-asset/pasted-image-20260629064250_708.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-55.80,664.54)">
 <path d="M335.02 136.91 C377.32 139.65,421.76 136.34,519.22 136.43 M335.96 138.52 C408.89 138.31,483.07 138.80,521.58 137.28 M521.36 139.87 C521.59 145.80,519.03 152.84,520.00 160.08 M520.94 137.25 C519.77 144.00,521.50 149.08,520.89 159.33 M519.95 157.45 C460.01 160.05,399.84 161.15,337.07 157.94 M519.93 158.44 C450.15 160.10,378.67 160.33,335.78 160.16 M336.16 159.09 C333.90 155.94,336.85 148.88,333.40 139.61 M334.34 159.55 C335.96 153.35,335.03 145.58,335.20 137.81" stroke="#1971c2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -180,8 +198,14 @@ tags:
 <g transform="translate(-55.80,664.54)">
 <path d="M158.10 237.88 C225.80 236.62,296.54 237.44,449.05 240.39 M159.08 240.11 C255.44 237.60,351.32 238.50,449.27 239.64" stroke="#1971c2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<a href="../sql-injection/payload-giúp-brute-force-mật-khẩu-cho-blind--and--and--error-sql" class="excalidraw-node-link" target="_self" title="payload giúp brute force mật khẩu cho blind && error-sql"><g transform="translate(-55.80,664.54)">
+<a href="../../0-asset/pasted-image-20260629064856_005.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629064856_005.png"><g transform="translate(-55.80,664.54)">
+<image x="258.8015711326517" y="978.1598215618124" width="470.81790260185227" height="253.42694091796875" href="../../0-asset/pasted-image-20260629064856_005.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
+<a href="./payload-giúp-brute-force-mật-khẩu-cho-blind--and--and--error-sql" class="excalidraw-node-link" target="_self" title="payload giúp brute force mật khẩu cho blind &amp;&amp; error-sql"><g transform="translate(-55.80,664.54)">
 <text x="277.08" y="1304.73" font-family="Cascadia, Fira Code, monospace" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="277.08" dy="0">📍payload giúp brute force mật khẩu cho blind &amp;&amp; error-sql</tspan></text>
+</g></a>
+<a href="../../0-asset/pasted-image-20260629071447_375.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629071447_375.png"><g transform="translate(-55.80,664.54)">
+<image x="279.0797372396254" y="1336.5452026108778" width="555.9999389648434" height="137.7009194632556" href="../../0-asset/pasted-image-20260629071447_375.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
 </svg>
     </div>

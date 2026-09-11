@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-jjj837">
+<div class="excalidraw-container" id="ex-9eu48v">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -108,6 +108,9 @@ tags:
 <g transform="translate(517.18,683.48)">
 <text x="-48.79" y="-313.51" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="-48.79" dy="0">bypass ?</tspan></text>
 </g>
+<a href="../../0-asset/pasted-image-20260518073812_911.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260518073812_911.png"><g transform="translate(517.18,683.48)">
+<image x="-381.24746794760694" y="-222.25192831337952" width="457.7773487773487" height="333.35801312089967" href="../../0-asset/pasted-image-20260518073812_911.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(517.18,683.48)">
 <path d="M-51.29 -184.65 L-50.86 -184.65 L-50.43 -184.65 L-49.99 -184.65 L-49.56 -184.65 L-49.13 -184.65 L-48.70 -184.65 L-48.26 -184.65 L-47.40 -184.65 L-46.53 -184.65 L-45.67 -184.65 L-43.93 -184.65 L-42.64 -184.65 L-40.90 -184.65 L-38.74 -184.65 L-37.44 -184.65 L-35.71 -184.65 L-33.98 -184.65 L-32.68 -184.65 L-31.38 -184.65 L-30.95 -184.65 L-30.52 -184.65 L-30.08 -184.65 L-29.65 -184.65 L-29.22 -184.65 L-28.79 -184.65 L-28.35 -184.65 L-27.49 -184.65 L-27.05 -184.65 L-26.19 -184.65 L-25.76 -184.65 L-25.32 -184.65 L-24.89 -184.65 L-23.59 -184.65 L-23.16 -184.65 L-22.29 -184.65 L-21.43 -184.65 L-21.00 -184.65 L-20.13 -184.65 L-19.70 -184.65 L-18.40 -184.65 L-18.40 -185.08 L-17.10 -185.08 L-16.23 -185.08 L-15.80 -185.08 L-14.94 -185.08 L-14.50 -185.08 L-14.07 -185.08 L-13.64 -185.08 L-13.20 -185.08 L-12.77 -185.08 L-12.34 -185.08 L-12.34 -185.51 L-12.34 -185.51" stroke="#1971c2" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -186,9 +189,15 @@ tags:
 <g transform="translate(517.18,683.48)">
 <path d="M-59.02 -61.70 L-58.55 -61.70 L-58.07 -61.70 L-57.12 -61.70 L-55.68 -61.70 L-54.25 -61.70 L-52.82 -61.70 L-50.91 -61.70 L-48.53 -61.70 L-46.14 -61.70 L-43.28 -62.18 L-40.42 -62.18 L-37.55 -62.18 L-34.21 -62.18 L-31.35 -62.18 L-28.49 -62.18 L-24.67 -62.18 L-21.81 -62.18 L-18.95 -62.18 L-16.56 -62.18 L-14.17 -62.18 L-12.27 -62.18 L-10.36 -62.18 L-8.93 -62.18 L-7.02 -62.18 L-5.59 -62.66 L-4.16 -62.66 L-2.72 -62.66 L-0.82 -63.13 L1.09 -63.13 L3.00 -63.13 L4.91 -63.13 L7.30 -63.61 L8.73 -63.61 L10.64 -63.61 L12.54 -63.61 L14.45 -63.61 L16.84 -63.61 L19.22 -63.61 L21.61 -63.61 L24.47 -63.61 L26.86 -63.61 L29.72 -63.61 L33.06 -63.61 L35.92 -63.61 L38.79 -63.61 L41.65 -63.61 L44.03 -63.61 L46.90 -63.61 L49.28 -63.13 L51.19 -63.13 L52.62 -63.13 L54.05 -63.13 L55.48 -63.13 L56.92 -63.13 L58.35 -63.13 L59.30 -63.13 L60.73 -63.13 L61.21 -63.13 L62.16 -63.13 L62.64 -63.13 L63.60 -63.13 L64.07 -63.13 L64.55 -63.13 L65.50 -63.13 L65.98 -63.13 L66.46 -63.13 L66.94 -63.13 L67.41 -63.13 L67.89 -63.13 L68.37 -63.13 L68.84 -62.66 L69.32 -62.66 L69.32 -62.66" stroke="#1971c2" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../../0-asset/pasted-image-20260518075524_297.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260518075524_297.png"><g transform="translate(517.18,683.48)">
+<image x="-387.0884591124035" y="159.52864007780784" width="553.9041565885952" height="63.3593197984596" href="../../0-asset/pasted-image-20260518075524_297.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(517.18,683.48)">
 <text x="-385.83" y="148.89" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-385.83" dy="0">redirect</tspan></text>
 </g>
+<a href="../../0-asset/pasted-image-20260518075603_937.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260518075603_937.png"><g transform="translate(517.18,683.48)">
+<image x="-346.07992809959126" y="247.20182227210478" width="474.0105569107983" height="85.60298467122233" href="../../0-asset/pasted-image-20260518075603_937.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(517.18,683.48)">
 <path d="M-90.67 169.81 L-92.79 169.81 L-94.21 169.10 L-96.33 169.10 L-99.17 169.10 L-102.70 169.10 L-106.95 169.10 L-110.49 169.10 L-114.03 169.10 L-117.57 169.10 L-121.11 169.81 L-123.23 169.81 L-123.94 170.51 L-125.35 171.22 L-126.06 171.93 L-126.77 172.64 L-127.48 173.35 L-128.19 174.76 L-129.60 176.88 L-131.02 178.30 L-131.02 180.42 L-132.43 181.84 L-132.43 183.96 L-133.14 185.38 L-133.14 187.50 L-133.14 188.92 L-133.14 190.33 L-133.14 192.46 L-133.14 193.87 L-133.14 195.29 L-133.14 197.41 L-132.43 198.83 L-131.73 200.24 L-130.31 201.66 L-128.19 202.37 L-127.48 203.78 L-124.65 205.20 L-123.23 205.91 L-121.11 206.61 L-119.69 207.32 L-117.57 208.03 L-115.45 208.74 L-114.03 209.44 L-111.91 210.15 L-110.49 210.15 L-108.37 210.15 L-106.95 210.15 L-106.24 210.86 L-104.83 210.86 L-103.41 210.86 L-102.70 211.57 L-100.58 211.57 L-99.17 211.57 L-97.04 211.57 L-95.63 212.28 L-94.21 212.28 L-92.79 212.28 L-90.67 212.28 L-89.26 212.28 L-87.84 212.28 L-86.42 212.28 L-85.72 212.28 L-84.30 211.57 L-82.89 210.86 L-82.18 210.86 L-81.47 210.86 L-80.05 210.15 L-78.64 209.44 L-78.64 208.74 L-77.22 207.32 L-75.10 206.61 L-74.39 206.61 L-73.68 205.20 L-72.98 203.78 L-71.56 203.07 L-70.85 202.37 L-70.14 201.66 L-70.14 200.95 L-70.14 200.24 L-70.14 198.83 L-69.44 198.83 L-69.44 197.41 L-68.73 196.00 L-68.02 194.58 L-68.02 193.87 L-68.02 193.16 L-68.02 191.75 L-67.31 191.04 L-67.31 190.33 L-67.31 189.63 L-67.31 188.21 L-67.31 187.50 L-67.31 186.09 L-67.31 184.67 L-67.31 183.96 L-67.31 182.55 L-68.02 181.84 L-68.73 181.13 L-69.44 179.72 L-69.44 179.01 L-70.14 177.59 L-71.56 177.59 L-72.98 176.18 L-73.68 174.76 L-75.10 174.05 L-76.52 173.35 L-77.93 172.64 L-78.64 171.93 L-80.05 171.22 L-81.47 170.51 L-82.89 169.81 L-84.30 169.81 L-85.72 169.10 L-87.84 168.39 L-89.26 167.68 L-89.96 167.68 L-90.67 166.98 L-91.38 166.98 L-92.09 166.98 L-92.79 166.98 L-94.21 166.98 L-95.63 166.98 L-97.04 166.98 L-97.75 166.98 L-98.46 166.98 L-99.87 166.98 L-100.58 166.98 L-101.29 166.98 L-102.00 166.98 L-102.70 166.98 L-104.12 166.98 L-104.83 166.98 L-105.54 166.98 L-105.54 166.98" stroke="#1971c2" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -307,7 +316,7 @@ tags:
 <g transform="translate(517.18,683.48)">
 <path d="M-477.89 446.03 C-250.96 446.78,-23.82 446.50,466.18 446.18 M-476.88 445.87 C-178.64 443.05,120.04 443.30,465.28 445.80 M465.84 445.11 C465.81 861.33,464.87 1277.63,465.01 1600.85 M465.12 445.61 C469.51 716.76,469.38 987.33,465.76 1600.41 M465.24 1600.88 C245.98 1604.69,25.30 1604.20,-477.91 1600.69 M465.48 1600.48 C230.39 1603.05,-3.93 1603.56,-477.06 1600.53 M-477.59 1599.80 C-472.89 1359.29,-473.62 1119.42,-477.08 445.74 M-476.90 1600.16 C-479.39 1235.10,-479.06 869.10,-477.12 445.72" stroke="#000000" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 8"/>
 </g>
-<a href="../ssrf/hướng-tư-duy-khai-thác-ssrf" class="excalidraw-node-link" target="_self" title="Hướng tư duy khai thác SSRF"><g transform="translate(517.18,683.48)">
+<a href="./hướng-tư-duy-khai-thác-ssrf" class="excalidraw-node-link" target="_self" title="Hướng tư duy khai thác SSRF"><g transform="translate(517.18,683.48)">
 <text x="-223.51" y="500.05" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-223.51" dy="0">📍Hướng tư duy khai thác SSRF</tspan></text>
 </g></a>
 <g transform="translate(517.18,683.48)">

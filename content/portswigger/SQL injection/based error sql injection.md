@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-d7gxq1">
+<div class="excalidraw-container" id="ex-yxcbr3">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -22,6 +22,9 @@ tags:
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1249 1922" class="excalidraw-svg" data-width="1249" data-height="1922">
+<a href="../../0-asset/pasted-image-20260629045856_592.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629045856_592.png"><g transform="translate(-63.28,-48.96)">
+<image x="181.35914414833974" y="244.74124908447266" width="711.3680154142581" height="416" href="../../0-asset/pasted-image-20260629045856_592.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-63.28,-48.96)">
 <path d="M536.92 108.70 L636.24 109.48 L632.85 203.39 L537.80 203.70" stroke="none" fill="#eeeeee"/>
 <path d="M539.13 108.90 C571.54 109.41,604.77 109.82,634.30 110.98 M538.04 110.01 C558.94 110.17,577.96 111.62,635.16 110.23 M632.83 110.68 C635.64 140.13,634.34 172.30,634.40 203.12 M633.92 110.37 C634.97 141.92,635.96 173.63,634.53 205.10 M635.81 203.55 C596.08 206.05,557.33 206.93,537.62 205.24 M635.47 204.42 C612.86 204.29,592.40 205.72,537.68 204.38 M539.38 203.38 C540.41 168.30,537.74 132.73,539.86 109.72 M537.48 205.39 C538.59 174.30,537.95 142.18,539.27 109.87" stroke="#000000" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -116,12 +119,18 @@ tags:
 <g transform="translate(-63.28,-48.96)">
 <text x="127.32" y="130.77" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="127.32" dy="0">lý thuyết</tspan></text>
 </g>
-<a href="../sql-injection/bai1--based-errorr-sql-injection" class="excalidraw-node-link" target="_self" title="bai1- based errorr sql injection"><g transform="translate(-63.28,-48.96)">
+<a href="../../0-asset/pasted-image-20260629083625_830.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629083625_830.png"><g transform="translate(-63.28,-48.96)">
+<image x="131.10830776069753" y="789.5929383162608" width="635.1284003200303" height="245.18910337936055" href="../../0-asset/pasted-image-20260629083625_830.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
+<a href="./bai1--based-errorr-sql-injection" class="excalidraw-node-link" target="_self" title="bai1- based errorr sql injection"><g transform="translate(-63.28,-48.96)">
 <text x="942.83" y="388.85" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="942.83" dy="0">📍bai1- based</tspan><tspan x="942.83" dy="25">errorr sql injection</tspan></text>
 </g></a>
 <g transform="translate(-63.28,-48.96)">
 <text x="818.83" y="924.25" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="818.83" dy="0">đại khái là thông báo lỗi nó sẽ</tspan><tspan x="818.83" dy="25">vô tình khai luôn sai ở đâu</tspan><tspan x="818.83" dy="25">--&gt; biết được thêm thông tin</tspan></text>
 </g>
+<a href="../../0-asset/pasted-image-20260629084206_996.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629084206_996.png"><g transform="translate(-63.28,-48.96)">
+<image x="116.50871604692833" y="1037.468192946613" width="615.3155679107837" height="250.77190710693725" href="../../0-asset/pasted-image-20260629084206_996.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-63.28,-48.96)">
 <path d="M125.51 1118.90 C142.43 1118.08,159.00 1117.66,186.01 1119.47 M124.02 1118.22 C145.79 1117.40,165.52 1116.69,186.63 1118.15 M186.99 1118.50 C184.91 1136.96,185.74 1152.19,186.49 1162.99 M186.77 1118.03 C186.13 1133.26,187.10 1151.29,187.63 1163.59 M187.65 1163.33 C166.19 1165.16,143.83 1163.11,122.65 1165.02 M187.67 1163.14 C165.81 1162.65,144.73 1163.24,124.93 1163.61 M123.40 1163.90 C125.06 1148.39,126.39 1129.67,124.22 1118.52 M123.93 1164.02 C124.82 1145.75,123.55 1128.20,124.08 1117.97" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -131,7 +140,7 @@ tags:
 <g transform="translate(-63.28,-48.96)">
 <text x="782.00" y="1185.10" font-family="Cascadia, Fira Code, monospace" font-size="15.777791341145825" fill="#1e1e1e" text-anchor="start"><tspan x="782.00" dy="0">Ví dụ: Lệnh CAST('Tên_bí_mật' AS</tspan><tspan x="782.00" dy="19.722239176432282">int) sẽ gây lỗi: Invalid input for</tspan><tspan x="782.00" dy="19.722239176432282">integer: &quot;Tên_bí_mật&quot;. Lúc này, kẻ</tspan><tspan x="782.00" dy="19.722239176432282">xấu đã đọc được &quot;Tên_bí_mật&quot; ngay</tspan><tspan x="782.00" dy="19.722239176432282">trong dòng lỗi.</tspan></text>
 </g>
-<a href="../sql-injection/bai2-error-based-injection" class="excalidraw-node-link" target="_self" title="bai2-error based injection"><g transform="translate(-63.28,-48.96)">
+<a href="./bai2-error-based-injection" class="excalidraw-node-link" target="_self" title="bai2-error based injection"><g transform="translate(-63.28,-48.96)">
 <text x="203.50" y="1366.85" font-family="Cascadia, Fira Code, monospace" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="203.50" dy="0">📍bai2-error based injection</tspan></text>
 </g></a>
 <g transform="translate(-63.28,-48.96)">

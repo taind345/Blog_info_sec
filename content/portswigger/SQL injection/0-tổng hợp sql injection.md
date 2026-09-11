@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-bzdde4">
+<div class="excalidraw-container" id="ex-w6la40">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -22,19 +22,19 @@ tags:
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1412 1037" class="excalidraw-svg" data-width="1412" data-height="1037">
-<a href="../sql-injection/các-kỹ-thuật-chèn-sql" class="excalidraw-node-link" target="_self" title="các kỹ thuật chèn sql"><g transform="translate(1144.41,680.87)">
+<a href="./các-kỹ-thuật-chèn-sql" class="excalidraw-node-link" target="_self" title="các kỹ thuật chèn sql"><g transform="translate(1144.41,680.87)">
 <text x="-1075.05" y="-104.91" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-1075.05" dy="0">📍các kỹ thuật chèn sql</tspan></text>
 </g></a>
 <g transform="translate(1144.41,680.87)">
 <path d="M-1104.87 -566.74 C-661.97 -565.77,-218.18 -566.96,227.66 -567.81 M-1104.70 -567.26 C-580.89 -570.13,-57.89 -570.08,227.53 -567.87 M226.62 -566.73 C228.46 -334.94,228.30 -103.52,227.35 315.75 M227.47 -567.71 C225.33 -315.69,225.47 -62.98,226.90 316.06 M227.96 315.19 C-49.04 313.08,-326.44 311.81,-1104.88 315.05 M227.05 316.22 C-173.95 310.78,-574.69 311.52,-1104.02 316.23 M-1104.66 316.48 C-1104.03 133.72,-1103.14 -47.08,-1104.20 -567.36 M-1104.48 315.97 C-1102.06 23.93,-1102.51 -268.81,-1104.63 -567.41" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 8"/>
 </g>
-<a href="../sql-injection/cơ-bản-về-sql-injection" class="excalidraw-node-link" target="_self" title="cơ bản về sql injection"><g transform="translate(1144.41,680.87)">
+<a href="./cơ-bản-về-sql-injection" class="excalidraw-node-link" target="_self" title="cơ bản về sql injection"><g transform="translate(1144.41,680.87)">
 <text x="-136.21" y="-491.12" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-136.21" dy="0">📍cơ bản về sql injection</tspan></text>
 </g></a>
-<a href="../sql-injection/các-bước-thu-thập-thông-tin-về-csdl" class="excalidraw-node-link" target="_self" title="các bước thu thập thông tin về csdl"><g transform="translate(1144.41,680.87)">
+<a href="./các-bước-thu-thập-thông-tin-về-csdl" class="excalidraw-node-link" target="_self" title="các bước thu thập thông tin về csdl"><g transform="translate(1144.41,680.87)">
 <text x="-885.98" y="-450.98" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-885.98" dy="0">📍các bước thu thập</tspan><tspan x="-885.98" dy="25">thông tin về csdl</tspan></text>
 </g></a>
-<a href="../sql-injection/xác-định-số-cột-and-kiểu-dl" class="excalidraw-node-link" target="_self" title="xác định số cột&kiểu dl"><g transform="translate(1144.41,680.87)">
+<a href="./xác-định-số-cột-and-kiểu-dl" class="excalidraw-node-link" target="_self" title="xác định số cột&amp;kiểu dl"><g transform="translate(1144.41,680.87)">
 <text x="-876.64" y="-325.08" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-876.64" dy="0">📍xác định số cột&amp;kiểu dl</tspan></text>
 </g></a>
 <g transform="translate(1144.41,680.87)">
@@ -45,10 +45,10 @@ tags:
 <path d="M-551.11 -400.38 C-546.87 -401.28,-540.87 -405.55,-538.02 -406.83 M-550.10 -399.63 C-546.63 -401.30,-544.38 -404.28,-537.82 -406.73" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M-538.07 -407.79 C-542.42 -408.91,-545.02 -413.24,-550.96 -414.42 M-537.06 -407.04 C-540.19 -408.69,-544.54 -411.71,-550.76 -414.32" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<a href="../sql-injection/union-sql--injection" class="excalidraw-node-link" target="_self" title="union sql  injection"><g transform="translate(1144.41,680.87)">
+<a href="./union-sql--injection" class="excalidraw-node-link" target="_self" title="union sql  injection"><g transform="translate(1144.41,680.87)">
 <text x="-504.81" y="-442.41" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-504.81" dy="0">📍union sql  injection</tspan></text>
 </g></a>
-<a href="../sql-injection/tấn-công-mật-khẩu" class="excalidraw-node-link" target="_self" title="tấn công mật khẩu"><g transform="translate(1144.41,680.87)">
+<a href="./tấn-công-mật-khẩu" class="excalidraw-node-link" target="_self" title="tấn công mật khẩu"><g transform="translate(1144.41,680.87)">
 <text x="-501.48" y="-366.56" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-501.48" dy="0">📍tấn công mật khẩu</tspan></text>
 </g></a>
 <g transform="translate(1144.41,680.87)">
@@ -56,7 +56,7 @@ tags:
 <path d="M-898.34 -210.25 C-893.62 -212.50,-890.63 -214.23,-884.89 -216.94 M-898.07 -211.63 C-894.48 -213.54,-889.82 -215.18,-884.93 -217.75" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M-884.64 -216.36 C-888.71 -219.50,-894.51 -222.15,-897.04 -225.75 M-884.37 -217.75 C-889.72 -220.64,-893.98 -223.21,-897.07 -226.55" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<a href="../sql-injection/sql-cheet-sheet" class="excalidraw-node-link" target="_self" title="SQL cheet sheet"><g transform="translate(1144.41,680.87)">
+<a href="./sql-cheet-sheet" class="excalidraw-node-link" target="_self" title="SQL cheet sheet"><g transform="translate(1144.41,680.87)">
 <text x="-796.81" y="-211.08" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-796.81" dy="0">📍SQL cheet sheet</tspan></text>
 </g></a>
 <g transform="translate(1144.41,680.87)">
@@ -70,7 +70,7 @@ tags:
 <g transform="translate(1144.41,680.87)">
 <text x="-1036.43" y="-480.01" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="-1036.43" dy="0">workflow tự rút ra</tspan></text>
 </g>
-<a href="../sql-injection/blind-sql-injection" class="excalidraw-node-link" target="_self" title="Blind sql injection"><g transform="translate(1144.41,680.87)">
+<a href="./blind-sql-injection" class="excalidraw-node-link" target="_self" title="Blind sql injection"><g transform="translate(1144.41,680.87)">
 <text x="-701.58" y="-46.75" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-701.58" dy="0">📍Blind sql injection</tspan></text>
 </g></a>
 <g transform="translate(1144.41,680.87)">
@@ -85,10 +85,10 @@ tags:
 <g transform="translate(1144.41,680.87)">
 <path d="M-554.65 -617.62 L-554.65 -617.62" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<a href="../sql-injection/payload-giúp-brute-force-mật-khẩu-cho-blind--and--and--error-sql" class="excalidraw-node-link" target="_self" title="payload giúp brute force mật khẩu cho blind && error-sql"><g transform="translate(1144.41,680.87)">
+<a href="./payload-giúp-brute-force-mật-khẩu-cho-blind--and--and--error-sql" class="excalidraw-node-link" target="_self" title="payload giúp brute force mật khẩu cho blind &amp;&amp; error-sql"><g transform="translate(1144.41,680.87)">
 <text x="-372.87" y="-41.85" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-372.87" dy="0">📍payload giúp brute force</tspan><tspan x="-372.87" dy="25">mật khẩu cho blind &amp;&amp;</tspan><tspan x="-372.87" dy="25">error-sql</tspan></text>
 </g></a>
-<a href="../sql-injection/based-error-sql-injection" class="excalidraw-node-link" target="_self" title="based error sql injection"><g transform="translate(1144.41,680.87)">
+<a href="./based-error-sql-injection" class="excalidraw-node-link" target="_self" title="based error sql injection"><g transform="translate(1144.41,680.87)">
 <text x="-702.85" y="16.58" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-702.85" dy="0">📍based error sql injection</tspan></text>
 </g></a>
 <g transform="translate(1144.41,680.87)">

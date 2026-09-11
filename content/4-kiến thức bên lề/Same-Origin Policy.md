@@ -6,10 +6,10 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-79yxdy">
+<div class="excalidraw-container" id="ex-tvdkvy">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
       <span>Excalidraw Mindmap</span>
     </div>
     <div class="excalidraw-controls">
@@ -100,6 +100,9 @@ tags:
 <g transform="translate(21.78,-135.02)">
 <text x="362.33" y="748.92" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="362.33" dy="0">SOP ngăn chặn</tspan></text>
 </g>
+<a href="../0-asset/pasted-image-20260604070050_403.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260604070050_403.png"><g transform="translate(21.78,-135.02)">
+<image x="25.333312988281136" y="801.268198033383" width="642.6666564941407" height="172.50526042737462" href="../0-asset/pasted-image-20260604070050_403.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+</g></a>
 <g transform="translate(21.78,-135.02)">
 <text x="56.33" y="791.59" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="56.33" dy="0">-Chặn dựa trên quy tắc nào</tspan></text>
 </g>
