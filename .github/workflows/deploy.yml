@@ -32,8 +32,8 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Build Blog & Process Excalidraw Diagrams
-        run: npm run build
+      - name: Build Blog
+        run: npx quartz build
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
