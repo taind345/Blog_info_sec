@@ -243,9 +243,16 @@ function getVaultPath() {
     execSync(`git clone --depth 1 "${REPO_URL}" "${CACHE_DIR}"`, { stdio: "inherit" });
   } else {
     try {
-      execSync(`git -C "${CACHE_DIR}" pull`, { stdio: "inherit" });
+      execSync(`git -C "${CACHE_DIR}" fetch --depth 1 origin`, { stdio: "inherit" });
+      execSync(`git -C "${CACHE_DIR}" reset --hard origin/HEAD`, { stdio: "inherit" });
     } catch (e) {
-      console.warn("Git pull failed, using existing cache.");
+      console.warn("Git fetch/reset failed, re-cloning cache...", e?.message || e);
+      try {
+        fs.rmSync(CACHE_DIR, { recursive: true, force: true });
+        execSync(`git clone --depth 1 "${REPO_URL}" "${CACHE_DIR}"`, { stdio: "inherit" });
+      } catch (cloneErr) {
+        console.error("Critical: failed to clone vault repository:", cloneErr);
+      }
     }
   }
   return CACHE_DIR;

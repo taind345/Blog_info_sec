@@ -13,6 +13,7 @@
   },
   "scripts": {
     "sync": "node scripts/sync-vault.mjs",
+    "auto-sync": "bash scripts/auto-sync.sh",
     "build": "node scripts/sync-vault.mjs && ./quartz/bootstrap-cli.mjs build",
     "serve": "./quartz/bootstrap-cli.mjs build --serve",
     "dev": "./quartz/bootstrap-cli.mjs build --serve",
