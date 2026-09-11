@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-h7qpem">
+<div class="excalidraw-container" id="ex-g0obmw">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -119,13 +119,13 @@ tags:
 <path d="M108.08 398.09 L108.75 398.76 L111.42 398.76 L113.42 399.43 L116.08 400.09 L118.75 400.09 L122.08 400.76 L126.08 400.76 L130.08 401.43 L134.75 402.09 L139.42 402.76 L143.42 402.76 L148.08 402.76 L152.75 402.76 L156.08 402.76 L158.75 402.76 L162.75 402.76 L165.42 402.09 L166.75 400.76 L169.42 400.76 L170.75 399.43 L173.42 398.09 L174.75 397.43 L175.42 396.76 L176.75 396.09 L177.42 395.43 L178.08 394.09 L179.42 392.76 L180.75 392.09 L182.08 390.76 L182.08 389.43 L182.75 388.76 L182.75 386.76 L183.42 385.43 L183.42 384.09 L183.42 382.76 L182.75 381.43 L181.42 379.43 L180.08 378.09 L178.75 376.76 L176.75 374.76 L175.42 373.43 L172.08 372.09 L170.08 370.76 L167.42 369.43 L164.75 368.76 L162.08 368.09 L159.42 366.76 L156.75 366.09 L153.42 365.43 L150.75 364.76 L147.42 364.09 L144.08 363.43 L140.75 362.76 L136.75 362.76 L133.42 362.09 L129.42 362.09 L126.08 362.09 L122.08 362.09 L118.75 362.76 L115.42 363.43 L110.75 364.76 L106.75 366.09 L102.75 367.43 L98.75 368.76 L96.08 370.76 L93.42 372.76 L91.42 374.09 L90.08 375.43 L89.42 376.76 L88.08 378.76 L87.42 380.76 L87.42 381.43 L87.42 383.43 L87.42 384.76 L87.42 386.76 L88.75 388.09 L89.42 389.43 L91.42 390.76 L94.08 392.09 L96.75 393.43 L98.08 394.09 L100.75 394.76 L102.08 394.76 L103.42 395.43 L104.75 395.43 L105.42 396.09 L107.42 396.09 L108.75 396.76 L110.08 396.76 L111.42 397.43 L112.75 397.43 L113.42 398.09 L114.08 398.76 L114.75 398.76 L115.42 398.76 L116.08 398.76 L117.42 398.76 L118.75 398.09 L120.08 397.43 L120.08 396.76 L120.08 396.76" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(235.25,322.57)">
-<text x="-57.92" y="556.93" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="-57.92" dy="0">dùng &quot;ctr u&quot; để chuyển sang url encode</tspan></text>
+<text x="-57.92" y="556.93" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="-57.92" dy="0">dùng &quot;ctr u&quot; để chuyển sang url encode</tspan></text>
 </g>
 <g transform="translate(235.25,322.57)">
-<text x="228.75" y="446.83" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="228.75" dy="0">&amp; echo 2</tspan></text>
+<text x="228.75" y="446.83" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="228.75" dy="0">&amp; echo 2</tspan></text>
 </g>
 <g transform="translate(235.25,322.57)">
-<text x="21.42" y="493.43" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="21.42" dy="0">&amp; whoami</tspan></text>
+<text x="21.42" y="493.43" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="21.42" dy="0">&amp; whoami</tspan></text>
 </g>
 <g transform="translate(235.25,322.57)">
 <path d="M-60.58 413.43 L-61.25 413.43 L-62.58 414.76 L-63.92 417.43 L-65.92 421.43 L-69.25 426.09 L-71.25 430.76 L-73.92 436.76 L-77.92 443.43 L-81.25 449.43 L-84.58 455.43 L-88.58 462.09 L-91.92 467.43 L-94.58 472.76 L-97.25 478.76 L-99.92 482.76 L-101.25 486.09 L-103.25 490.09 L-103.92 492.76 L-104.58 495.43 L-105.25 498.76 L-105.25 500.76 L-105.92 503.43 L-105.92 505.43 L-105.92 507.43 L-105.92 509.43 L-105.92 511.43 L-105.25 513.43 L-105.25 514.76 L-103.25 516.76 L-101.92 518.76 L-101.25 519.43 L-99.25 520.76 L-97.25 522.09 L-95.92 522.76 L-94.58 523.43 L-93.25 524.76 L-91.92 525.43 L-90.58 526.09 L-89.92 526.09 L-89.25 526.09 L-88.58 526.76 L-87.92 526.76 L-87.25 527.43 L-86.58 527.43 L-85.92 527.43 L-85.92 528.09 L-85.25 528.09 L-83.92 528.76 L-83.25 528.76 L-82.58 528.76 L-81.92 529.43 L-81.25 529.43 L-80.58 529.43 L-79.25 529.43 L-77.92 530.09 L-76.58 530.09 L-75.25 530.09 L-74.58 530.09 L-73.92 530.76 L-73.25 530.76 L-72.58 530.76 L-71.92 531.43 L-71.25 532.09 L-70.58 532.09 L-70.58 532.76 L-70.58 533.43 L-69.92 533.43 L-69.92 533.43" stroke="#1971c2" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>

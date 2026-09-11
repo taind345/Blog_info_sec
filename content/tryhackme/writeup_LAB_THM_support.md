@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-pyr3dc">
+<div class="excalidraw-container" id="ex-p8ozu0">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -293,7 +293,7 @@ THM{I_AM_ADMIN999}
 <path d="M1043.55 1003.12 L1043.55 1003.12" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-27.09,-133.18)">
-<text x="318.28" y="386.10" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="318.28" dy="0">đại khái là mình hiểu hoàn toàn những gì ở đây</tspan></text>
+<text x="318.28" y="386.10" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="318.28" dy="0">đại khái là mình hiểu hoàn toàn những gì ở đây</tspan></text>
 </g>
 <g transform="translate(-27.09,-133.18)">
 <path d="M500.32 2021.96 L502.18 2022.41 L506.65 2022.41 L512.65 2022.19 L523.78 2021.89 L531.05 2021.82 L537.25 2021.82 L540.18 2021.89 L545.65 2021.96 L550.78 2022.26 L555.12 2022.48 L558.72 2022.78 L560.45 2023.01 L560.45 2023.01" stroke="#c2255c" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>

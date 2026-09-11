@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-6taqyr">
+<div class="excalidraw-container" id="ex-r8jjq5">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -26,17 +26,17 @@ tags:
 <image x="208.666748046875" y="269.3528881217276" width="468.33325195312494" height="321.6691322038105" href="../../0-asset/pasted-image-20260629133041_363.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
 <g transform="translate(-168.67,-229.35)">
-<text x="677.83" y="470.19" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="677.83" dy="0">evil.com</tspan></text>
+<text x="677.83" y="470.19" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="677.83" dy="0">evil.com</tspan></text>
 </g>
 <g transform="translate(-168.67,-229.35)">
-<text x="992.42" y="474.80" font-family="Virgil, Segoe UI Emoji, cursive" font-size="25.20706916250164" fill="#1e1e1e" text-anchor="start"><tspan x="992.42" dy="0">b.com</tspan></text>
+<text x="992.42" y="474.80" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="25.20706916250164" fill="#1e1e1e" text-anchor="start"><tspan x="992.42" dy="0">b.com</tspan></text>
 </g>
 <g transform="translate(-168.67,-229.35)">
 <path d="M942.41 422.34 L984.55 422.34 L984.55 501.01 L942.41 501.01" stroke="none" fill="#ced4da"/>
 <path d="M942.41 422.34 C955.60 422.34,968.79 422.34,984.55 422.34 M942.41 422.34 C956.23 422.34,970.06 422.34,984.55 422.34 M984.55 422.34 C984.55 449.73,984.55 477.12,984.55 501.01 M984.55 422.34 C984.55 450.11,984.55 477.87,984.55 501.01 M984.55 501.01 C971.18 501.01,957.81 501.01,942.41 501.01 M984.55 501.01 C970.76 501.01,956.97 501.01,942.41 501.01 M942.41 501.01 C942.41 476.79,942.41 452.57,942.41 422.34 M942.41 501.01 C942.41 483.65,942.41 466.28,942.41 422.34" stroke="#000000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-168.67,-229.35)">
-<text x="963.37" y="524.56" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16.568487990566346" fill="#000000" text-anchor="middle"><tspan x="963.37" dy="0">Server</tspan></text>
+<text x="963.37" y="524.56" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16.568487990566346" fill="#000000" text-anchor="middle"><tspan x="963.37" dy="0">Server</tspan></text>
 </g>
 <g transform="translate(-168.67,-229.35)">
 <path d="M947.48 431.04 C955.88 431.04,964.28 431.04,979.79 431.04 M947.48 431.04 C955.96 431.04,964.43 431.04,979.79 431.04" stroke="#000000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -97,10 +97,10 @@ tags:
 <path d="M749.17 514.19 L749.17 512.85 L749.17 510.19 L748.50 508.19 L747.83 504.19 L747.83 500.19 L747.83 498.85 L747.83 494.85 L747.83 492.85 L747.83 490.85 L747.83 488.85 L747.83 485.52 L748.50 485.52 L749.17 485.52 L750.50 485.52 L753.17 485.52 L756.50 487.52 L761.17 490.19 L765.83 492.85 L770.50 496.19 L775.17 500.19 L779.17 503.52 L783.83 507.52 L789.17 512.19 L792.50 515.52 L792.50 515.52" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-168.67,-229.35)">
-<text x="849.83" y="563.02" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="849.83" dy="0">respond</tspan></text>
+<text x="849.83" y="563.02" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="849.83" dy="0">respond</tspan></text>
 </g>
 <g transform="translate(-168.67,-229.35)">
-<text x="811.17" y="600.35" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="811.17" dy="0">header: Acces-Contrrol -Allow: all site</tspan></text>
+<text x="811.17" y="600.35" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="811.17" dy="0">header: Acces-Contrrol -Allow: all site</tspan></text>
 </g>
 <g transform="translate(-168.67,-229.35)">
 <path d="M300.16 500.92 C337.16 499.76,373.47 501.68,457.86 500.81 M302.61 502.18 C351.95 501.08,400.47 500.51,457.44 503.15 M456.97 501.06 C456.68 510.10,454.62 523.01,456.54 535.39 M455.55 502.29 C456.37 510.93,456.75 520.53,456.31 535.94 M455.53 537.24 C405.56 537.21,357.22 538.65,300.17 538.79 M456.38 537.52 C424.19 538.66,390.41 537.07,301.54 536.45 M302.74 537.95 C302.77 523.20,302.15 507.93,303.30 502.45 M301.60 537.31 C301.24 523.95,302.17 510.33,302.58 501.67" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>

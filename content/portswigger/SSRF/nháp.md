@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-jus5uz">
+<div class="excalidraw-container" id="ex-ra9ecx">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -49,14 +49,14 @@ tags:
 <path d="M195.26 -140.15 C196.27 -139.57,196.98 -136.94,197.43 -135.51 C197.89 -134.08,198.45 -133.05,198.00 -131.58 C197.55 -130.11,196.03 -127.65,194.75 -126.68 C193.47 -125.71,191.64 -125.41,190.31 -125.77 C188.99 -126.13,187.49 -127.81,186.80 -128.83 C186.10 -129.85,186.20 -130.57,186.15 -131.88 C186.09 -133.19,185.68 -135.50,186.48 -136.68 C187.29 -137.86,189.39 -138.68,190.98 -138.96 C192.56 -139.24,195.15 -138.40,195.99 -138.35 C196.84 -138.29,196.23 -138.75,196.06 -138.65 M192.14 -139.73 C193.50 -139.77,195.92 -140.56,197.12 -139.53 C198.32 -138.49,199.11 -135.19,199.32 -133.52 C199.52 -131.86,199.37 -130.94,198.36 -129.56 C197.36 -128.17,194.79 -125.82,193.30 -125.21 C191.82 -124.59,190.55 -125.03,189.47 -125.87 C188.40 -126.70,187.40 -128.79,186.86 -130.22 C186.32 -131.66,186.29 -132.82,186.26 -134.47 C186.22 -136.13,185.65 -139.00,186.67 -140.16 C187.69 -141.31,191.41 -141.30,192.38 -141.38 C193.34 -141.46,192.49 -140.74,192.46 -140.64" stroke="#0a11d3" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(429.75,446.42)">
-<text x="126.25" y="-76.74" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="126.25" dy="0">database</tspan></text>
+<text x="126.25" y="-76.74" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="126.25" dy="0">database</tspan></text>
 </g>
 <g transform="translate(429.75,446.42)">
 <path d="M-61.17 -212.67 L36.03 -216.16 L34.48 -118.25 L-61.13 -119.20" stroke="none" fill="#eeeeee"/>
 <path d="M-60.60 -214.06 C-31.63 -214.93,-2.02 -216.39,37.96 -214.96 M-60.13 -214.87 C-33.53 -215.37,-6.74 -215.48,36.59 -214.70 M34.78 -214.02 C34.32 -189.53,33.88 -167.88,35.13 -120.26 M35.70 -213.84 C35.43 -195.02,35.39 -175.87,36.67 -119.26 M36.16 -118.75 C-2.35 -120.94,-37.26 -119.99,-60.06 -120.64 M35.70 -120.76 C5.95 -118.71,-23.01 -119.16,-59.20 -120.77 M-61.43 -120.25 C-61.53 -155.85,-59.59 -195.37,-59.23 -215.66 M-59.16 -121.06 C-60.14 -153.14,-61.31 -185.80,-59.65 -215.13" stroke="#000000" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(429.75,446.42)">
-<text x="-12.00" y="-172.54" font-family="Virgil, Segoe UI Emoji, cursive" font-size="14.876839160052583" fill="#000000" text-anchor="middle"><tspan x="-12.00" dy="0">Application</tspan><tspan x="-12.00" dy="18.59604895006573">server</tspan></text>
+<text x="-12.00" y="-172.54" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="14.876839160052583" fill="#000000" text-anchor="middle"><tspan x="-12.00" dy="0">Application</tspan><tspan x="-12.00" dy="18.59604895006573">server</tspan></text>
 </g>
 <g transform="translate(429.75,446.42)">
 <path d="M56.10 -164.26 C66.72 -168.30,78.80 -166.78,101.88 -170.50 M58.12 -165.00 C73.98 -167.56,92.30 -171.27,101.69 -171.12" stroke="#1971c2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -90,19 +90,19 @@ tags:
 <path d="M-114.92 117.01 C-61.66 115.75,-12.46 117.00,102.19 114.79 M-116.54 115.56 C-68.71 114.75,-21.48 114.11,102.07 116.62 M100.86 116.78 C102.40 139.88,100.14 167.36,102.58 220.49 M101.58 117.30 C102.94 141.17,103.06 167.39,101.85 221.71 M100.52 220.44 C26.86 220.93,-48.68 221.03,-115.38 219.79 M102.22 220.26 C23.10 223.37,-54.59 223.33,-115.47 221.26 M-116.50 222.69 C-113.96 187.67,-115.95 151.40,-117.24 114.87 M-115.52 221.49 C-115.94 182.05,-115.31 144.81,-114.80 115.54" stroke="#1971c2" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(429.75,446.42)">
-<text x="-103.39" y="142.33" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16.855664058121825" fill="#c2255c" text-anchor="start"><tspan x="-103.39" dy="0">checkstock</tspan></text>
+<text x="-103.39" y="142.33" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16.855664058121825" fill="#c2255c" text-anchor="start"><tspan x="-103.39" dy="0">checkstock</tspan></text>
 </g>
 <g transform="translate(429.75,446.42)">
-<text x="-101.70" y="167.13" font-family="Virgil, Segoe UI Emoji, cursive" font-size="15.81520004031968" fill="#1971c2" text-anchor="start"><tspan x="-101.70" dy="0">lấy tham số từ url để</tspan><tspan x="-101.70" dy="19.7690000503996">làm đầu vào cho sql</tspan><tspan x="-101.70" dy="19.7690000503996">queries</tspan></text>
+<text x="-101.70" y="167.13" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="15.81520004031968" fill="#1971c2" text-anchor="start"><tspan x="-101.70" dy="0">lấy tham số từ url để</tspan><tspan x="-101.70" dy="19.7690000503996">làm đầu vào cho sql</tspan><tspan x="-101.70" dy="19.7690000503996">queries</tspan></text>
 </g>
 <g transform="translate(429.75,446.42)">
-<text x="-231.08" y="-176.84" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-231.08" dy="0">checkstock</tspan></text>
+<text x="-231.08" y="-176.84" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-231.08" dy="0">checkstock</tspan></text>
 </g>
 <g transform="translate(429.75,446.42)">
-<text x="-337.75" y="-288.84" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="-337.75" dy="0">Bài toán tổng quan</tspan></text>
+<text x="-337.75" y="-288.84" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="-337.75" dy="0">Bài toán tổng quan</tspan></text>
 </g>
 <g transform="translate(429.75,446.42)">
-<text x="-251.08" y="-135.49" font-family="Virgil, Segoe UI Emoji, cursive" font-size="17.354465060763896" fill="#1971c2" text-anchor="start"><tspan x="-251.08" dy="0">checkstock api=url</tspan></text>
+<text x="-251.08" y="-135.49" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="17.354465060763896" fill="#1971c2" text-anchor="start"><tspan x="-251.08" dy="0">checkstock api=url</tspan></text>
 </g>
 <g transform="translate(429.75,446.42)">
 <path d="M-52.74 -57.23 C-18.70 -60.00,20.09 -57.45,66.90 -59.14 M-55.03 -57.98 C-17.68 -57.87,19.70 -56.27,67.20 -57.35 M67.08 -58.01 C69.12 -30.00,66.00 -1.95,69.50 34.76 M67.41 -58.78 C67.89 -25.20,66.59 6.40,67.37 32.42 M68.97 32.99 C40.07 33.02,9.51 35.32,-54.84 32.07 M67.52 32.65 C32.87 32.87,0.48 33.27,-54.45 34.08 M-53.41 34.01 C-54.78 -4.90,-56.14 -39.97,-53.93 -57.75 M-53.97 32.43 C-53.93 14.72,-53.40 -4.52,-53.68 -58.48" stroke="#1971c2" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -118,25 +118,25 @@ tags:
 <path d="M-58.21 111.80 C-56.85 108.24,-54.18 103.71,-48.60 98.99 M-58.51 111.45 C-57.10 108.78,-54.25 106.07,-50.11 98.61" stroke="#1971c2" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(429.75,446.42)">
-<text x="-26.42" y="-92.84" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-26.42" dy="0">url</tspan></text>
+<text x="-26.42" y="-92.84" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-26.42" dy="0">url</tspan></text>
 </g>
 <g transform="translate(429.75,446.42)">
-<text x="-43.69" y="-40.11" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16.944444444444443" fill="#1971c2" text-anchor="start"><tspan x="-43.69" dy="0"></tspan><tspan x="-43.69" dy="21.180555555555554">chặn string</tspan><tspan x="-43.69" dy="21.180555555555554">&quot;admin&quot; ,</tspan><tspan x="-43.69" dy="21.180555555555554">&quot;127.0.0.1&quot;</tspan></text>
+<text x="-43.69" y="-40.11" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16.944444444444443" fill="#1971c2" text-anchor="start"><tspan x="-43.69" dy="0"></tspan><tspan x="-43.69" dy="21.180555555555554">chặn string</tspan><tspan x="-43.69" dy="21.180555555555554">&quot;admin&quot; ,</tspan><tspan x="-43.69" dy="21.180555555555554">&quot;127.0.0.1&quot;</tspan></text>
 </g>
 <g transform="translate(429.75,446.42)">
-<text x="-38.04" y="-40.11" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16.944444444444443" fill="#c2255c" text-anchor="start"><tspan x="-38.04" dy="0">filter</tspan></text>
+<text x="-38.04" y="-40.11" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16.944444444444443" fill="#c2255c" text-anchor="start"><tspan x="-38.04" dy="0">filter</tspan></text>
 </g>
 <g transform="translate(429.75,446.42)">
-<text x="87.58" y="-15.51" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="87.58" dy="0">bypass lớp</tspan><tspan x="87.58" dy="25">lọc này ??</tspan></text>
+<text x="87.58" y="-15.51" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="87.58" dy="0">bypass lớp</tspan><tspan x="87.58" dy="25">lọc này ??</tspan></text>
 </g>
 <a href="./blacklist-filter-bypass" class="excalidraw-node-link" target="_self" title="Blacklist filter bypass"><g transform="translate(429.75,446.42)">
-<text x="202.92" y="-4.17" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#099268" text-anchor="start"><tspan x="202.92" dy="0">📍Blacklist filter bypass</tspan></text>
+<text x="202.92" y="-4.17" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#099268" text-anchor="start"><tspan x="202.92" dy="0">📍Blacklist filter bypass</tspan></text>
 </g></a>
 <g transform="translate(429.75,446.42)">
 <path d="M-389.19 -332.83 C-75.82 -332.26,236.39 -332.57,403.31 -333.49 M-389.59 -333.07 C-90.37 -330.82,209.07 -331.34,403.96 -332.75 M403.86 -332.33 C401.99 -173.82,403.36 -14.27,403.78 283.77 M403.83 -333.21 C402.53 -191.28,402.72 -49.73,403.19 284.11 M403.72 283.69 C198.51 285.16,-6.24 285.13,-389.67 282.97 M403.41 284.16 C150.57 285.36,-101.65 285.32,-389.53 283.67 M-390.06 283.51 C-391.53 131.47,-392.14 -20.62,-389.77 -332.59 M-390.02 284.00 C-391.08 134.49,-390.77 -14.71,-389.95 -333.08" stroke="#000000" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 8"/>
 </g>
 <g transform="translate(429.75,446.42)">
-<text x="-343.75" y="407.76" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="-343.75" dy="0">giải pháp</tspan></text>
+<text x="-343.75" y="407.76" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="-343.75" dy="0">giải pháp</tspan></text>
 </g>
 <a href="../../0-asset/pasted-image-20260518061848_933.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260518061848_933.png"><g transform="translate(429.75,446.42)">
 <image x="-284.32299207026216" y="447.1805974308361" width="498.5716774743775" height="330.29815696601554" href="../../0-asset/pasted-image-20260518061848_933.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
@@ -157,10 +157,10 @@ tags:
 <path d="M-75.50 621.54 L-73.50 622.21 L-72.17 622.87 L-70.83 623.54 L-68.83 624.21 L-67.50 624.87 L-65.50 625.54 L-64.17 626.21 L-62.83 626.21 L-60.83 626.87 L-60.17 627.54 L-58.83 627.54 L-58.17 628.21 L-57.50 628.21 L-56.83 628.87 L-56.17 628.87 L-56.17 629.54 L-56.17 630.21 L-56.17 630.87 L-56.17 632.21 L-56.17 632.87 L-56.17 634.21 L-57.50 635.54 L-58.83 636.87 L-59.50 637.54 L-60.83 639.54 L-61.50 640.87 L-62.17 641.54 L-62.83 642.21 L-63.50 642.87 L-63.50 643.54 L-63.50 644.21 L-63.50 644.21" stroke="#0c8599" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(429.75,446.42)">
-<text x="-261.50" y="694.94" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-261.50" dy="0">thay cách</tspan><tspan x="-261.50" dy="25">viết ip khác</tspan></text>
+<text x="-261.50" y="694.94" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-261.50" dy="0">thay cách</tspan><tspan x="-261.50" dy="25">viết ip khác</tspan></text>
 </g>
 <g transform="translate(429.75,446.42)">
-<text x="-36.17" y="618.94" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-36.17" dy="0">mã hóa chữ &quot;a&quot;</tspan><tspan x="-36.17" dy="25">theo double url</tspan><tspan x="-36.17" dy="25">encode</tspan></text>
+<text x="-36.17" y="618.94" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-36.17" dy="0">mã hóa chữ &quot;a&quot;</tspan><tspan x="-36.17" dy="25">theo double url</tspan><tspan x="-36.17" dy="25">encode</tspan></text>
 </g>
 <a href="../../0-asset/pasted-image-20260518062131_725.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260518062131_725.png"><g transform="translate(429.75,446.42)">
 <image x="266.6668701171875" y="567.2078313883924" width="402.3333740234376" height="153.76398585186476" href="../../0-asset/pasted-image-20260518062131_725.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
@@ -171,7 +171,7 @@ tags:
 <path d="M282.84 605.51 C280.44 600.10,276.03 597.03,274.15 593.60 M282.52 604.57 C280.01 600.57,277.41 596.68,274.47 592.31" stroke="#1971c2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(429.75,446.42)">
-<text x="-350.63" y="-386.42" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-350.63" dy="0">#ssrf</tspan></text>
+<text x="-350.63" y="-386.42" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-350.63" dy="0">#ssrf</tspan></text>
 </g>
 </svg>
     </div>

@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-1n4jde">
+<div class="excalidraw-container" id="ex-3bzmuy">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -23,7 +23,7 @@ tags:
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 453 239" class="excalidraw-svg" data-width="453" data-height="239">
 <g transform="translate(-82.88,-288.10)">
-<text x="122.88" y="348.10" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="122.88" dy="0">tìm phần tử--&gt; tìm thẻ HTML</tspan></text>
+<text x="122.88" y="348.10" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="122.88" dy="0">tìm phần tử--&gt; tìm thẻ HTML</tspan></text>
 </g>
 <g transform="translate(-82.88,-288.10)">
 <path d="M495.56 486.29 L495.56 485.49 L495.56 485.49" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -35,7 +35,7 @@ tags:
 <path d="M316.97 373.63 L317.58 373.63 L319.22 374.48 L321.33 375.52 L323.27 375.52 L324.12 377.44 L326.18 378.29 L327.19 379.30 L327.19 380.32 L327.19 382.02 L327.19 383.73 L327.19 384.58 L326.34 386.29 L323.09 387.33 L319.35 389.50 L314.03 391.56 L309.09 392.91 L304.56 394.03 L300.24 394.03 L297.05 394.03 L293.96 394.03 L293.96 394.03" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-82.88,-288.10)">
-<text x="350.11" y="394.86" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="350.11" dy="0">đổi nội dung  </tspan></text>
+<text x="350.11" y="394.86" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="350.11" dy="0">đổi nội dung  </tspan></text>
 </g>
 </svg>
     </div>

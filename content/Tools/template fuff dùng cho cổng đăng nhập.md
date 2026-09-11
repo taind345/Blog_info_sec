@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-0plmj8">
+<div class="excalidraw-container" id="ex-1efcz6">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -232,10 +232,10 @@ ffuf -w passes.txt:PASS \
 <path d="M490.32 -760.20 L490.00 -761.25 L488.87 -761.39 L487.87 -761.04 L486.99 -760.48 L486.24 -759.64 L485.61 -758.80 L485.11 -757.89 L484.67 -756.84 L485.48 -756.42 L486.68 -757.41 L488.18 -759.36 L489.44 -761.74 L490.63 -764.53 L491.76 -767.54 L492.70 -770.61 L493.08 -772.01 L493.77 -774.81 L494.21 -777.11 L494.46 -778.79 L494.71 -780.04 L494.83 -781.44 L494.58 -782.49 L494.02 -781.65 L493.26 -778.44 L492.70 -775.78 L492.01 -771.94 L491.76 -769.21 L491.76 -766.91 L491.76 -764.95 L491.88 -763.28 L492.39 -760.55 L492.76 -758.80 L493.26 -757.54 L493.77 -756.50 L494.77 -755.87 L496.21 -755.87 L497.15 -756.50 L498.60 -758.10 L499.66 -760.06 L500.54 -762.15 L500.86 -763.06 L501.36 -764.53 L501.67 -765.72 L501.92 -766.91 L500.92 -766.56 L500.79 -765.30 L500.79 -763.83 L501.04 -762.86 L501.42 -762.02 L502.11 -761.39 L503.37 -761.32 L504.50 -761.74 L505.00 -762.51 L505.50 -763.34 L505.94 -764.25 L505.81 -762.72 L505.94 -761.39 L505.81 -759.85 L505.81 -758.45 L505.75 -757.12 L505.69 -755.87 L505.37 -754.82 L505.00 -753.98 L504.24 -753.42 L503.12 -753.70 L502.42 -754.47 L502.11 -755.52 L502.55 -756.50 L504.50 -757.68 L506.69 -758.59 L509.14 -759.29 L510.27 -759.64 L510.27 -759.64" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(125.62,1772.48)">
-<text x="629.84" y="-646.15" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="629.84" dy="0">h</tspan></text>
+<text x="629.84" y="-646.15" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="629.84" dy="0">h</tspan></text>
 </g>
 <g transform="translate(125.62,1772.48)">
-<text x="923.05" y="-1056.61" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="923.05" dy="0">h</tspan></text>
+<text x="923.05" y="-1056.61" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="923.05" dy="0">h</tspan></text>
 </g>
 <g transform="translate(125.62,1772.48)">
 <path d="M56.73 -693.59 L55.78 -693.16 L55.14 -692.45 L55.78 -691.60 L56.79 -691.03 L57.94 -690.61 L60.55 -689.83 L62.27 -689.34 L63.73 -688.98 L65.00 -688.70 L66.21 -688.56 L67.74 -688.34 L69.26 -688.34 L70.66 -688.34 L72.13 -688.56 L74.23 -688.70 L75.24 -688.98 L76.96 -689.19 L78.49 -689.55 L79.82 -689.90 L80.97 -690.25 L82.12 -690.61 L83.13 -690.89 L84.41 -691.32 L85.61 -691.81 L86.63 -692.24 L87.59 -692.53 L88.67 -692.95 L89.75 -693.30 L89.75 -693.30" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -358,7 +358,7 @@ ffuf -w passes.txt:PASS \
 <path d="M-33.90 -715.43 L-34.52 -714.59 L-35.28 -712.98 L-36.09 -710.75 L-36.91 -708.02 L-37.47 -705.15 L-37.79 -702.22 L-38.04 -699.35 L-38.04 -696.00 L-37.97 -694.26 L-37.72 -692.86 L-37.41 -691.67 L-36.97 -690.69 L-35.97 -689.50 L-34.71 -688.39 L-33.27 -687.90 L-30.38 -687.90 L-29.06 -688.10 L-26.18 -689.08 L-22.79 -690.69 L-17.71 -694.12 L-16.08 -695.79 L-16.08 -695.79" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(125.62,1772.48)">
-<text x="-85.62" y="-666.90" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-85.62" dy="0">--request</tspan></text>
+<text x="-85.62" y="-666.90" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-85.62" dy="0">--request</tspan></text>
 </g>
 </svg>
     </div>

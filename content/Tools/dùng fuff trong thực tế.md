@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-j3r0xx">
+<div class="excalidraw-container" id="ex-ycd1eh">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -44,7 +44,7 @@ tags:
 <path d="M406.29 475.90 L408.53 477.53 L409.32 478.66 L409.83 480.22 L410.05 481.72 L409.83 483.72 L408.87 486.47 L407.02 489.47 L404.16 492.85 L398.60 497.16 L394.72 498.73 L394.72 498.73" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-7.13,-74.95)">
-<text x="440.44" y="508.53" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="440.44" dy="0">thay bằng FUZZ</tspan></text>
+<text x="440.44" y="508.53" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="440.44" dy="0">thay bằng FUZZ</tspan></text>
 </g>
 <g transform="translate(-7.13,-74.95)">
 <path d="M143.33 455.14 L143.89 455.96 L145.01 456.52 L145.97 457.02 L149.11 458.15 L151.52 458.89 L154.16 459.58 L155.51 459.96 L161.24 461.33 L164.27 461.83 L167.52 462.40 L171.06 462.84 L174.37 463.08 L177.85 463.21 L183.02 463.21 L184.65 463.15 L187.90 462.77 L191.16 462.33 L194.30 461.83 L197.33 461.27 L200.37 460.71 L203.23 460.15 L206.09 459.58 L208.96 459.08 L211.82 458.46 L213.28 458.15 L217.66 457.21 L220.58 456.46 L223.44 455.58 L226.30 454.77 L229.00 454.08 L231.69 453.27 L234.16 452.58 L236.41 451.95 L237.53 451.71 L239.50 451.14 L241.01 450.64 L242.30 450.14 L244.55 449.02 L245.33 448.58 L246.46 447.76 L248.03 446.33 L248.59 445.70 L249.38 444.64 L249.99 443.76 L250.39 442.95 L250.67 442.08 L250.67 440.89 L249.94 438.95 L248.65 437.20 L246.74 435.63 L245.73 434.88 L242.81 433.26 L239.38 431.95 L235.34 430.76 L230.96 430.13 L226.13 429.82 L220.86 429.82 L214.74 429.95 L208.11 430.26 L201.32 430.63 L193.91 431.26 L186.16 432.01 L178.42 432.95 L170.67 434.20 L163.37 435.39 L157.14 436.57 L151.30 437.95 L145.74 439.39 L140.58 440.82 L138.28 441.58 L134.18 442.83 L130.47 444.26 L125.64 446.39 L123.06 447.83 L120.87 449.27 L119.02 450.83 L117.45 452.52 L116.16 454.14 L115.71 455.08 L115.26 455.96 L114.86 457.58 L115.26 460.02 L116.38 461.96 L118.63 463.77 L120.20 464.65 L120.20 464.65" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>

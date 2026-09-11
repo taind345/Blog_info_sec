@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-0ymlws">
+<div class="excalidraw-container" id="ex-392xgu">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -23,7 +23,7 @@ tags:
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 691 515" class="excalidraw-svg" data-width="691" data-height="515">
 <g transform="translate(-130.00,-196.19)">
-<text x="264.50" y="256.19" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="264.50" dy="0">php chứa html</tspan><tspan x="264.50" dy="25"></tspan><tspan x="264.50" dy="25">html chưa php</tspan></text>
+<text x="264.50" y="256.19" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="264.50" dy="0">php chứa html</tspan><tspan x="264.50" dy="25"></tspan><tspan x="264.50" dy="25">html chưa php</tspan></text>
 </g>
 <g transform="translate(-130.00,-196.19)">
 <path d="M364.50 418.85 L364.50 418.85" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -38,13 +38,13 @@ tags:
 <path d="M421.83 320.19 L424.50 321.52 L426.50 324.19 L428.50 326.19 L430.50 328.19 L431.83 330.19 L432.50 332.19 L433.83 333.52 L434.50 335.52 L434.50 336.19 L435.17 336.19 L435.17 337.52 L433.17 339.52 L430.50 341.52 L425.17 344.19 L417.83 346.19 L410.50 349.52 L403.17 352.19 L396.50 355.52 L392.50 356.19 L392.50 356.19" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-130.00,-196.19)">
-<text x="461.83" y="359.59" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="461.83" dy="0">thường gặp cái này hơn</tspan></text>
+<text x="461.83" y="359.59" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="461.83" dy="0">thường gặp cái này hơn</tspan></text>
 </g>
 <a href="../../0-asset/pasted-image-20260617134538_004.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260617134538_004.png"><g transform="translate(-130.00,-196.19)">
 <image x="169.99993896484375" y="408.3535669651918" width="610.9999389648438" height="262.334522563757" href="../../0-asset/pasted-image-20260617134538_004.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
 <g transform="translate(-130.00,-196.19)">
-<text x="405.17" y="549.59" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="405.17" dy="0">-phân biệt hoa thường vs biến</tspan><tspan x="405.17" dy="25">-ko phân biệt với lệnh hệ thống</tspan></text>
+<text x="405.17" y="549.59" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="405.17" dy="0">-phân biệt hoa thường vs biến</tspan><tspan x="405.17" dy="25">-ko phân biệt với lệnh hệ thống</tspan></text>
 </g>
 </svg>
     </div>

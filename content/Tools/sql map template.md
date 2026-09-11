@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-dykf21">
+<div class="excalidraw-container" id="ex-xlu3oc">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -195,7 +195,7 @@ tags:
 
 </g>
 <a href="./sql-map-template_md" class="excalidraw-node-link" target="_self" title="sql map template_md"><g transform="translate(422.95,-746.87)">
-<text x="-69.58" y="806.87" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-69.58" dy="0">📍sql map template_md</tspan></text>
+<text x="-69.58" y="806.87" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-69.58" dy="0">📍sql map template_md</tspan></text>
 </g></a>
 <g transform="translate(422.95,-746.87)">
 <path d="M-120.51 1027.96 L-120.92 1028.75 L-120.92 1028.75" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -213,10 +213,10 @@ tags:
 <path d="M-71.79 1305.93 L-72.91 1305.86 L-73.98 1305.74 L-73.53 1305.11 L-70.67 1304.55 L-68.31 1304.18 L-65.84 1303.86 L-63.31 1303.67 L-60.79 1303.43 L-58.26 1303.30 L-57.25 1303.18 L-54.95 1303.11 L-52.98 1303.11 L-51.24 1303.18 L-48.49 1303.43 L-47.26 1303.49 L-46.19 1303.67 L-45.18 1303.74 L-43.78 1303.86 L-42.43 1303.92 L-41.03 1303.92 L-39.57 1304.05 L-38.16 1304.05 L-36.87 1304.05 L-35.75 1304.05 L-34.34 1304.05 L-33.17 1304.05 L-32.04 1304.05 L-32.04 1304.05" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(422.95,-746.87)">
-<text x="219.86" y="1141.28" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="219.86" dy="0">-u</tspan><tspan x="219.86" dy="25">-batch</tspan></text>
+<text x="219.86" y="1141.28" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="219.86" dy="0">-u</tspan><tspan x="219.86" dy="25">-batch</tspan></text>
 </g>
 <g transform="translate(422.95,-746.87)">
-<text x="235.49" y="1269.15" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="235.49" dy="0">--level</tspan><tspan x="235.49" dy="25">--risk </tspan></text>
+<text x="235.49" y="1269.15" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="235.49" dy="0">--level</tspan><tspan x="235.49" dy="25">--risk </tspan></text>
 </g>
 <g transform="translate(422.95,-746.87)">
 <path d="M-251.83 1154.86 L-251.21 1154.30 L-250.32 1153.98 L-249.14 1154.11 L-248.07 1154.30 L-247.06 1154.49 L-245.88 1154.61 L-243.75 1154.73 L-241.33 1154.92 L-240.21 1154.98 L-238.36 1155.05 L-236.62 1155.11 L-235.10 1155.30 L-232.07 1155.49 L-229.94 1155.73 L-227.75 1155.99 L-225.50 1156.36 L-223.14 1156.55 L-220.84 1156.86 L-219.61 1157.05 L-217.19 1157.24 L-214.78 1157.49 L-212.42 1157.67 L-210.18 1157.80 L-209.11 1157.86 L-205.80 1157.92 L-203.83 1157.99 L-200.52 1157.99 L-197.15 1157.99 L-195.19 1157.99 L-193.00 1157.92 L-190.58 1157.92 L-188.06 1157.80 L-185.81 1157.61 L-183.85 1157.55 L-182.16 1157.42 L-180.70 1157.30 L-178.74 1157.24 L-176.77 1157.17 L-175.03 1157.11 L-173.57 1157.05 L-172.23 1156.92 L-170.93 1156.86 L-169.81 1156.86 L-167.45 1156.73 L-165.71 1156.67 L-162.79 1156.67 L-161.50 1156.67 L-160.38 1156.67 L-158.70 1156.67 L-156.39 1156.80 L-153.98 1156.73 L-152.01 1156.73 L-148.59 1156.55 L-146.12 1156.42 L-143.71 1156.36 L-140.28 1156.17 L-138.48 1156.17 L-136.91 1156.17 L-135.45 1156.17 L-134.11 1156.17 L-132.93 1156.17 L-131.80 1156.17 L-128.77 1156.17 L-126.86 1156.17 L-125.35 1156.11 L-124.11 1156.11 L-122.88 1156.11 L-121.42 1156.11 L-120.07 1156.11 L-118.78 1156.11 L-117.43 1156.11 L-114.12 1156.30 L-112.32 1156.36 L-110.64 1156.42 L-108.00 1156.49 L-106.93 1156.55 L-105.53 1156.67 L-104.24 1156.67 L-102.95 1156.73 L-101.60 1156.73 L-98.68 1156.92 L-96.72 1157.05 L-94.53 1157.11 L-90.93 1157.24 L-88.69 1157.42 L-86.89 1157.49 L-85.21 1157.61 L-83.35 1157.86 L-82.23 1157.99 L-81.17 1158.17 L-78.30 1158.55 L-77.29 1158.67 L-75.55 1158.99 L-72.91 1159.36 L-70.72 1159.67 L-67.47 1160.11 L-65.39 1160.43 L-63.65 1160.61 L-62.08 1160.74 L-60.79 1160.86 L-59.55 1160.92 L-58.43 1161.11 L-57.03 1161.24 L-55.73 1161.43 L-54.61 1161.55 L-53.54 1161.67 L-52.42 1161.86 L-51.35 1161.99 L-50.29 1162.18 L-49.28 1162.30 L-48.15 1162.55 L-48.15 1162.55" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -228,7 +228,7 @@ tags:
 <path d="M6.47 1056.25 L6.02 1056.94 L6.13 1058.07 L6.92 1058.51 L8.55 1059.19 L10.62 1059.88 L12.93 1060.57 L15.51 1061.13 L19.83 1062.01 L21.18 1062.26 L24.10 1062.76 L26.85 1063.13 L29.54 1063.44 L32.13 1063.70 L34.60 1063.88 L35.72 1063.88 L37.63 1063.94 L39.20 1063.94 L40.66 1063.94 L41.95 1063.82 L44.20 1063.63 L45.82 1063.44 L47.23 1063.13 L48.41 1062.94 L49.42 1062.76 L50.32 1062.51 L51.44 1062.19 L52.50 1061.88 L53.40 1061.51 L55.26 1060.57 L56.43 1059.69 L57.33 1058.88 L58.74 1056.94 L59.63 1055.25 L60.20 1053.82 L60.48 1052.38 L60.65 1051.19 L60.65 1050.00 L60.08 1047.38 L59.19 1045.31 L57.95 1043.44 L55.42 1040.81 L53.40 1039.31 L52.11 1038.43 L49.47 1036.99 L46.55 1035.74 L43.75 1034.74 L40.55 1033.99 L37.46 1033.37 L34.37 1032.87 L31.23 1032.56 L28.03 1032.37 L26.46 1032.37 L22.08 1032.37 L19.27 1032.56 L16.86 1032.87 L14.44 1033.37 L12.42 1034.24 L10.62 1035.18 L9.05 1036.31 L7.76 1037.69 L6.64 1039.18 L6.13 1040.12 L5.63 1041.69 L5.23 1043.19 L5.01 1044.63 L5.12 1047.87 L5.63 1050.50 L6.64 1053.06 L8.04 1055.57 L8.94 1056.88 L8.94 1056.88" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(422.95,-746.87)">
-<text x="327.59" y="1489.49" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20.300318667763165" fill="#1e1e1e" text-anchor="start"><tspan x="327.59" dy="0">--data : Body Post</tspan></text>
+<text x="327.59" y="1489.49" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20.300318667763165" fill="#1e1e1e" text-anchor="start"><tspan x="327.59" dy="0">--data : Body Post</tspan></text>
 </g>
 <g transform="translate(422.95,-746.87)">
 <path d="M-348.03 1433.98 L-347.23 1434.22 L-346.37 1434.46 L-345.36 1434.69 L-344.19 1434.81 L-341.95 1435.23 L-339.65 1435.58 L-338.48 1435.76 L-336.08 1435.94 L-333.63 1436.24 L-331.12 1436.48 L-328.56 1436.59 L-325.95 1436.77 L-323.28 1436.77 L-320.77 1436.77 L-316.99 1436.42 L-315.76 1436.24 L-313.47 1435.88 L-311.17 1435.41 L-309.09 1434.81 L-307.12 1434.16 L-305.31 1433.39 L-303.60 1432.50 L-302.00 1431.66 L-301.31 1431.19 L-299.49 1429.70 L-297.73 1427.80 L-297.04 1427.03 L-296.56 1426.14 L-296.13 1425.43 L-295.76 1424.65 L-295.44 1423.59 L-295.12 1422.52 L-294.96 1421.33 L-295.33 1418.42 L-296.29 1415.74 L-297.31 1414.26 L-298.64 1412.89 L-300.24 1411.82 L-302.11 1410.87 L-303.17 1410.46 L-305.52 1409.80 L-308.08 1409.39 L-310.96 1409.15 L-314.05 1409.09 L-317.63 1409.33 L-323.39 1409.86 L-327.23 1410.46 L-331.07 1411.11 L-332.83 1411.53 L-336.40 1412.30 L-339.65 1413.13 L-342.59 1413.90 L-345.15 1414.73 L-347.55 1415.63 L-349.68 1416.64 L-351.55 1417.70 L-353.15 1418.83 L-354.48 1420.08 L-355.55 1421.33 L-356.35 1422.40 L-356.93 1423.41 L-357.31 1424.36 L-357.57 1425.55 L-357.73 1426.73 L-357.52 1427.80 L-356.99 1428.93 L-355.12 1431.25 L-354.21 1431.96 L-350.85 1433.62 L-348.03 1434.34 L-346.59 1434.57 L-346.59 1434.57" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -249,7 +249,7 @@ tags:
 <path d="M13.68 1523.44 L14.91 1523.62 L15.65 1524.03 L16.40 1524.69 L17.57 1525.93 L18.27 1527.06 L18.80 1528.01 L18.91 1529.14 L18.69 1530.09 L17.84 1532.17 L16.29 1534.25 L14.11 1536.51 L11.60 1538.29 L10.37 1539.06 L10.37 1539.06" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(422.95,-746.87)">
-<text x="34.99" y="1542.00" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="34.99" dy="0">Body Post bình thường</tspan></text>
+<text x="34.99" y="1542.00" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="34.99" dy="0">Body Post bình thường</tspan></text>
 </g>
 <g transform="translate(422.95,-746.87)">
 <path d="M79.60 1614.08 L79.65 1612.78 L79.60 1611.71 L79.49 1610.70 L79.23 1611.65 L78.64 1614.08 L78.16 1616.22 L77.57 1618.48 L77.04 1620.68 L76.56 1622.70 L75.92 1625.73 L75.76 1626.68 L75.55 1627.87 L75.44 1628.99 L75.76 1629.89 L76.61 1630.24 L77.63 1630.36 L81.20 1630.30 L84.03 1629.94 L87.01 1629.59 L88.61 1629.35 L91.55 1628.93 L94.32 1628.58 L96.99 1628.22 L99.28 1627.92 L100.99 1627.69 L102.37 1627.57 L103.49 1627.45 L104.83 1627.27 L106.05 1627.15 L106.05 1627.15" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -258,7 +258,7 @@ tags:
 <path d="M107.97 1618.54 L107.60 1617.65 L108.03 1616.94 L109.04 1617.23 L109.68 1617.83 L110.43 1618.90 L110.75 1619.61 L111.28 1620.97 L111.49 1622.16 L111.12 1624.42 L110.69 1625.43 L109.47 1627.33 L107.65 1629.17 L105.15 1630.78 L102.53 1631.85 L102.53 1631.85" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(422.95,-746.87)">
-<text x="132.35" y="1633.59" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="132.35" dy="0">Body post dạng json</tspan></text>
+<text x="132.35" y="1633.59" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="132.35" dy="0">Body post dạng json</tspan></text>
 </g>
 <g transform="translate(422.95,-746.87)">
 <path d="M350.64 1678.04 L350.64 1676.85 L350.85 1678.28 L350.75 1681.49 L350.48 1686.53 L349.89 1693.43 L349.47 1697.35 L348.24 1707.03 L346.75 1717.96 L344.51 1734.47 L342.96 1744.39 L341.47 1753.90 L339.71 1763.76 L338.21 1772.31 L336.77 1780.39 L335.76 1785.62 L334.11 1793.58 L332.56 1800.94 L331.07 1807.95 L329.73 1814.66 L327.97 1823.04 L326.96 1828.09 L326.16 1832.36 L325.36 1836.05 L324.83 1839.31 L324.51 1840.62 L324.08 1843.06 L323.65 1845.08 L323.39 1846.50 L323.07 1847.57 L322.85 1848.76 L322.64 1849.59 L322.64 1849.59" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -390,7 +390,7 @@ tags:
 <path d="M-355.80 2668.11 C-148.04 2667.84,59.99 2667.00,417.08 2667.83 M-356.37 2667.38 C-105.29 2667.88,145.16 2667.60,417.04 2668.03 M415.68 2668.99 C415.95 2685.99,415.56 2706.57,415.95 2731.83 M418.21 2667.86 C417.70 2694.15,417.88 2720.78,416.64 2732.63 M417.48 2732.51 C213.99 2735.18,10.24 2733.71,-356.13 2733.27 M417.74 2733.51 C183.71 2730.70,-49.41 2730.56,-355.84 2733.37 M-357.72 2731.84 C-355.71 2712.95,-355.50 2696.07,-357.29 2667.86 M-356.83 2733.60 C-355.76 2713.14,-356.41 2692.02,-356.20 2667.16" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(422.95,-746.87)">
-<text x="464.61" y="2716.41" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="464.61" dy="0">-- technique</tspan></text>
+<text x="464.61" y="2716.41" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="464.61" dy="0">-- technique</tspan></text>
 </g>
 <a href="../0-asset/pasted-image-20260829233028_686.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829233028_686.png"><g transform="translate(422.95,-746.87)">
 <image x="646.4655525930305" y="1229.6382581922735" width="598.8821209038628" height="435.72668457031244" href="../0-asset/pasted-image-20260829233028_686.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>

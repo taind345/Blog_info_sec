@@ -20,13 +20,51 @@ const REPO_URL = "https://github.com/taind345/PortSwigger__TryHackMe__Writeup...
 const CACHE_DIR = path.resolve(".vault-cache");
 const CONTENT_DIR = path.resolve("content");
 
+function renderCustomText(el) {
+  let fontFamily = "'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive";
+  if (el.fontFamily === 2) {
+    fontFamily = "Cascadia Code, -apple-system, sans-serif";
+  } else if (el.fontFamily === 3) {
+    fontFamily = "Cascadia Code, Consolas, monospace";
+  }
+  const fontSize = el.fontSize || 20;
+  const color = el.strokeColor || "#1e1e1e";
+  const lines = (el.text || el.originalText || "").split("\n");
+  const lineHeight = fontSize * 1.25;
+
+  let anchor = "start";
+  let dx = 0;
+  if (el.textAlign === "center") {
+    anchor = "middle";
+    dx = (el.width || 0) / 2;
+  } else if (el.textAlign === "right") {
+    anchor = "end";
+    dx = el.width || 0;
+  }
+
+  let startY = el.y + fontSize;
+  if (el.verticalAlign === "middle" && el.height) {
+    const totalH = lines.length * lineHeight;
+    startY = el.y + (el.height - totalH) / 2 + fontSize;
+  }
+
+  const tspans = lines
+    .map(
+      (line, i) =>
+        `<tspan x="${(el.x + dx).toFixed(2)}" dy="${i === 0 ? 0 : lineHeight}">${escapeXml(line)}</tspan>`
+    )
+    .join("");
+
+  return `<text x="${(el.x + dx).toFixed(2)}" y="${startY.toFixed(2)}" font-family="${fontFamily}" font-size="${fontSize}" fill="${color}" text-anchor="${anchor}">${tspans}</text>`;
+}
+
 const RENDERERS = {
   rectangle: renderRectangle,
   ellipse: renderEllipse,
   diamond: renderDiamond,
   line: renderLine,
   arrow: renderLine,
-  text: renderText,
+  text: renderCustomText,
   freedraw: renderFreedraw,
   image: renderImage,
   frame: renderFrame,

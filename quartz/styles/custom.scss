@@ -62,10 +62,38 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-// Virgil Font for Excalidraw handwritten diagrams
+// === DFVN-excalidraw Handwriting Font (Full Vietnamese Diacritics Support) ===
+@font-face {
+  font-family: 'DFVN-excalidraw';
+  src: url('./static/fonts/DFVN-Excalifont.woff2') format('woff2'),
+       url('./static/fonts/DFVN-Excalifont.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DFVN Excalifont';
+  src: url('./static/fonts/DFVN-Excalifont.woff2') format('woff2'),
+       url('./static/fonts/DFVN-Excalifont.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'Virgil';
-  src: url('./static/fonts/Virgil-Regular.woff2') format('woff2');
+  src: url('./static/fonts/DFVN-Excalifont.woff2') format('woff2'),
+       url('./static/fonts/DFVN-Excalifont.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Excalifont';
+  src: url('./static/fonts/DFVN-Excalifont.woff2') format('woff2'),
+       url('./static/fonts/DFVN-Excalifont.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -297,6 +325,17 @@ code, pre, kbd, samp {
   cursor: grab;
   background-image: radial-gradient(var(--lightgray) 1px, transparent 1px);
   background-size: 20px 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+.excalidraw-viewport.is-panning {
+  cursor: grabbing !important;
+}
+
+.excalidraw-viewport.is-panning * {
+  pointer-events: none !important;
 }
 
 .excalidraw-container.is-fullscreen .excalidraw-viewport {
@@ -311,12 +350,24 @@ code, pre, kbd, samp {
   display: flex;
   align-items: center;
   justify-content: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .excalidraw-svg {
   max-width: 100%;
   height: auto;
   display: block;
+  shape-rendering: geometricPrecision;
+  text-rendering: optimizeLegibility;
+
+  text {
+    font-family: 'DFVN-excalidraw', 'DFVN Excalifont', 'Virgil', cursive;
+  }
+
+  text[font-family*="Cascadia"] {
+    font-family: 'Cascadia Code', Consolas, monospace !important;
+  }
 }
 
 // Embedded Screenshots inside Excalidraw

@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-yxcbr3">
+<div class="excalidraw-container" id="ex-rczjs1">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -30,7 +30,7 @@ tags:
 <path d="M539.13 108.90 C571.54 109.41,604.77 109.82,634.30 110.98 M538.04 110.01 C558.94 110.17,577.96 111.62,635.16 110.23 M632.83 110.68 C635.64 140.13,634.34 172.30,634.40 203.12 M633.92 110.37 C634.97 141.92,635.96 173.63,634.53 205.10 M635.81 203.55 C596.08 206.05,557.33 206.93,537.62 205.24 M635.47 204.42 C612.86 204.29,592.40 205.72,537.68 204.38 M539.38 203.38 C540.41 168.30,537.74 132.73,539.86 109.72 M537.48 205.39 C538.59 174.30,537.95 142.18,539.27 109.87" stroke="#000000" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-63.28,-48.96)">
-<text x="586.44" y="152.45" font-family="Virgil, Segoe UI Emoji, cursive" font-size="14.876839160052583" fill="#000000" text-anchor="middle"><tspan x="586.44" dy="0">Application</tspan><tspan x="586.44" dy="18.59604895006573">server</tspan></text>
+<text x="586.44" y="152.45" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="14.876839160052583" fill="#000000" text-anchor="middle"><tspan x="586.44" dy="0">Application</tspan><tspan x="586.44" dy="18.59604895006573">server</tspan></text>
 </g>
 <g transform="translate(-63.28,-48.96)">
 <path d="M373.30 150.40 L373.30 149.82 L373.30 149.23 L373.89 149.23 L374.47 149.23 L375.05 149.23 L375.64 148.65 L377.98 148.06 L379.15 147.48 L380.32 146.31 L383.83 145.72 L385.00 145.14 L387.92 144.55 L394.35 142.80 L399.03 141.63 L405.46 139.88 L413.07 138.71 L417.74 138.12 L423.59 137.54 L431.78 137.54 L436.46 137.54 L439.97 137.54 L445.23 137.54 L448.74 137.54 L453.42 138.12 L457.51 138.12 L463.36 138.71 L471.55 139.88 L476.22 141.05 L480.90 142.80 L485.00 143.38 L488.51 145.14 L492.01 146.31 L494.94 146.89 L499.62 149.23 L503.13 150.40 L506.63 152.16 L510.14 153.33 L511.90 153.91 L515.41 155.67 L518.33 156.83 L520.08 157.42 L523.01 158.59 L525.35 159.76 L527.10 160.34 L528.86 160.93 L530.61 161.51 L531.78 162.10 L532.95 162.68 L533.53 163.27 L534.12 163.27 L534.70 163.27 L534.70 163.85 L535.29 163.85 L535.87 163.85 L536.46 163.85 L536.46 163.85" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -39,7 +39,7 @@ tags:
 <path d="M529.44 150.40 L531.78 150.99 L532.36 150.99 L533.53 151.57 L534.12 153.33 L534.70 153.33 L535.87 155.08 L536.46 155.67 L537.04 156.83 L537.04 158.00 L537.63 159.17 L537.63 160.34 L537.63 161.51 L537.63 163.27 L537.63 163.85 L537.63 164.44 L537.63 165.02 L537.63 165.61 L536.46 165.61 L533.53 165.61 L530.61 165.61 L526.52 165.61 L521.84 165.61 L518.91 166.19 L517.16 166.78 L515.99 166.78 L515.99 166.78" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-63.28,-48.96)">
-<text x="411.31" y="135.31" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="411.31" dy="0">sql injection</tspan></text>
+<text x="411.31" y="135.31" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="411.31" dy="0">sql injection</tspan></text>
 </g>
 <g transform="translate(-63.28,-48.96)">
 <path d="M525.93 196.60 L525.93 196.02 L525.35 196.60 L514.82 203.03 L512.48 203.62 L511.31 204.20 L504.88 207.13 L501.96 207.71 L497.86 208.30 L493.77 209.47 L487.92 210.64 L484.41 211.22 L479.73 211.81 L473.89 212.39 L469.21 212.39 L465.11 212.39 L459.27 212.39 L455.17 212.39 L449.91 211.22 L446.98 210.64 L443.48 209.47 L439.38 208.88 L436.46 207.71 L433.53 207.13 L431.78 207.13 L429.44 206.54 L427.10 206.54 L424.76 205.96 L422.42 205.96 L419.50 205.37 L416.58 205.37 L414.24 205.37 L411.90 205.37 L408.97 204.79 L406.05 204.20 L402.54 204.20 L400.20 203.62 L397.86 203.03 L394.94 202.45 L390.84 202.45 L387.34 201.86 L384.41 201.28 L382.07 200.69 L379.73 200.69 L377.98 200.11 L375.64 199.52 L374.47 199.52 L373.30 199.52 L372.13 198.94 L370.38 198.94 L368.62 198.94 L367.45 198.94 L365.70 198.94 L365.11 198.36 L363.36 198.36 L361.60 197.77 L361.02 197.77 L360.43 197.77 L360.43 197.19 L360.43 197.19" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -48,7 +48,7 @@ tags:
 <path d="M372.13 183.74 L372.13 184.90 L372.13 186.66 L372.13 187.24 L371.55 187.24 L368.62 189.58 L368.04 190.17 L366.28 191.34 L365.11 191.92 L362.77 192.51 L358.10 194.85 L357.51 194.85 L356.34 194.85 L355.76 195.43 L355.76 196.02 L355.76 196.60 L355.76 197.19 L355.76 197.77 L356.34 198.36 L356.93 198.36 L357.51 198.94 L358.10 200.11 L358.68 200.69 L360.43 201.86 L361.02 203.03 L362.77 204.20 L365.11 205.37 L366.87 207.13 L369.21 208.30 L371.55 208.88 L373.89 210.05 L376.22 210.64 L378.56 211.22 L378.56 211.22" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-63.28,-48.96)">
-<text x="386.17" y="194.64" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="386.17" dy="0">trả về mã lỗi</tspan></text>
+<text x="386.17" y="194.64" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="386.17" dy="0">trả về mã lỗi</tspan></text>
 </g>
 <g transform="translate(-63.28,-48.96)">
 <path d="M309.85 197.71 C312.43 197.71,322.76 200.54,325.34 197.71 C327.92 194.88,326.09 184.75,325.34 180.74 C324.59 176.74,323.28 175.53,320.83 173.69 C318.37 171.85,314.30 169.62,310.62 169.70 C306.95 169.78,301.42 172.19,298.78 174.16 C296.14 176.13,295.51 177.58,294.77 181.51 C294.04 185.43,291.85 195.01,294.36 197.71 C296.88 200.41,307.27 197.71,309.85 197.71" stroke="none" fill="#4c6ef5"/>
@@ -102,10 +102,10 @@ tags:
 <path d="M500.79 232.27 L504.29 232.27 L504.88 232.27 L506.63 232.86 L506.63 233.44 L510.14 234.61 L510.14 235.20 L510.73 235.20 L510.73 235.78 L506.63 238.71 L504.29 239.29 L501.96 239.88 L497.28 240.46 L493.18 241.63 L489.09 243.38 L487.34 243.38 L487.34 243.38" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-63.28,-48.96)">
-<text x="518.91" y="253.44" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="518.91" dy="0">khi câu truy vấn bị sai</tspan></text>
+<text x="518.91" y="253.44" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="518.91" dy="0">khi câu truy vấn bị sai</tspan></text>
 </g>
 <g transform="translate(-63.28,-48.96)">
-<text x="546.40" y="738.24" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="546.40" dy="0">nếu when đúng:</tspan><tspan x="546.40" dy="25">        then 1/0--&gt; trả về lỗi</tspan><tspan x="546.40" dy="25">                  --&gt; biết là when đúng</tspan><tspan x="546.40" dy="25">    when sai: ko trả về gì do else ko có lỗi</tspan></text>
+<text x="546.40" y="738.24" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="546.40" dy="0">nếu when đúng:</tspan><tspan x="546.40" dy="25">        then 1/0--&gt; trả về lỗi</tspan><tspan x="546.40" dy="25">                  --&gt; biết là when đúng</tspan><tspan x="546.40" dy="25">    when sai: ko trả về gì do else ko có lỗi</tspan></text>
 </g>
 <g transform="translate(-63.28,-48.96)">
 <path d="M475.64 680.81 L474.47 681.98 L474.47 682.57 L473.89 683.74 L473.30 684.90 L473.30 687.24 L472.72 687.83 L471.55 691.34 L471.55 691.92 L471.55 693.68 L471.55 694.85 L470.96 696.02 L470.96 697.19 L470.96 698.36 L470.38 700.11 L470.38 701.28 L470.38 701.86 L470.38 704.20 L470.38 704.79 L470.38 705.96 L470.38 707.13 L470.38 708.30 L470.96 708.30 L470.96 708.88 L471.55 710.05 L472.72 711.22 L473.30 711.81 L473.89 712.39 L475.05 713.56 L476.22 714.73 L477.98 715.31 L479.73 716.48 L482.66 717.65 L485.00 718.82 L487.92 718.82 L491.43 719.41 L494.94 719.99 L498.45 720.58 L501.96 720.58 L504.88 721.16 L506.63 721.16 L509.56 721.16 L510.73 721.16 L511.90 721.16 L512.48 721.16 L513.07 721.16 L513.65 721.16 L514.24 721.16 L514.82 721.16 L515.41 721.16 L515.41 720.58 L515.41 720.58" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -117,16 +117,16 @@ tags:
 <path d="M102.75 89.33 C433.11 85.54,761.73 85.99,1210.30 89.21 M103.43 89.29 C417.07 86.81,729.82 87.02,1210.37 89.27 M1211.08 88.61 C1215.78 420.94,1214.40 752.39,1210.53 1583.26 M1210.74 88.74 C1208.92 475.76,1208.78 862.60,1210.21 1582.71 M1210.53 1581.68 C869.81 1585.85,529.77 1584.85,103.48 1583.16 M1210.47 1582.56 C794.82 1583.60,378.36 1584.08,103.27 1582.19 M103.65 1582.02 C104.42 1180.78,104.16 780.26,103.60 89.54 M103.62 1582.08 C99.13 1155.14,99.40 728.33,102.92 89.23" stroke="#1971c2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-63.28,-48.96)">
-<text x="127.32" y="130.77" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="127.32" dy="0">lý thuyết</tspan></text>
+<text x="127.32" y="130.77" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="127.32" dy="0">lý thuyết</tspan></text>
 </g>
 <a href="../../0-asset/pasted-image-20260629083625_830.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629083625_830.png"><g transform="translate(-63.28,-48.96)">
 <image x="131.10830776069753" y="789.5929383162608" width="635.1284003200303" height="245.18910337936055" href="../../0-asset/pasted-image-20260629083625_830.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
 <a href="./bai1--based-errorr-sql-injection" class="excalidraw-node-link" target="_self" title="bai1- based errorr sql injection"><g transform="translate(-63.28,-48.96)">
-<text x="942.83" y="388.85" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="942.83" dy="0">📍bai1- based</tspan><tspan x="942.83" dy="25">errorr sql injection</tspan></text>
+<text x="942.83" y="388.85" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="942.83" dy="0">📍bai1- based</tspan><tspan x="942.83" dy="25">errorr sql injection</tspan></text>
 </g></a>
 <g transform="translate(-63.28,-48.96)">
-<text x="818.83" y="924.25" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="818.83" dy="0">đại khái là thông báo lỗi nó sẽ</tspan><tspan x="818.83" dy="25">vô tình khai luôn sai ở đâu</tspan><tspan x="818.83" dy="25">--&gt; biết được thêm thông tin</tspan></text>
+<text x="818.83" y="924.25" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="818.83" dy="0">đại khái là thông báo lỗi nó sẽ</tspan><tspan x="818.83" dy="25">vô tình khai luôn sai ở đâu</tspan><tspan x="818.83" dy="25">--&gt; biết được thêm thông tin</tspan></text>
 </g>
 <a href="../../0-asset/pasted-image-20260629084206_996.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629084206_996.png"><g transform="translate(-63.28,-48.96)">
 <image x="116.50871604692833" y="1037.468192946613" width="615.3155679107837" height="250.77190710693725" href="../../0-asset/pasted-image-20260629084206_996.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
@@ -135,22 +135,22 @@ tags:
 <path d="M125.51 1118.90 C142.43 1118.08,159.00 1117.66,186.01 1119.47 M124.02 1118.22 C145.79 1117.40,165.52 1116.69,186.63 1118.15 M186.99 1118.50 C184.91 1136.96,185.74 1152.19,186.49 1162.99 M186.77 1118.03 C186.13 1133.26,187.10 1151.29,187.63 1163.59 M187.65 1163.33 C166.19 1165.16,143.83 1163.11,122.65 1165.02 M187.67 1163.14 C165.81 1162.65,144.73 1163.24,124.93 1163.61 M123.40 1163.90 C125.06 1148.39,126.39 1129.67,124.22 1118.52 M123.93 1164.02 C124.82 1145.75,123.55 1128.20,124.08 1117.97" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-63.28,-48.96)">
-<text x="779.56" y="1098.82" font-family="Cascadia, Fira Code, monospace" font-size="15.833333333333327" fill="#1e1e1e" text-anchor="start"><tspan x="779.56" dy="0">Lộ bí mật: Thông báo lỗi đó</tspan><tspan x="779.56" dy="19.791666666666657">chứa chính xác nội dung dữ</tspan><tspan x="779.56" dy="19.791666666666657">liệu mà kẻ tấn công muốn</tspan><tspan x="779.56" dy="19.791666666666657">biết.</tspan></text>
+<text x="779.56" y="1098.82" font-family="Cascadia Code, Consolas, monospace" font-size="15.833333333333327" fill="#1e1e1e" text-anchor="start"><tspan x="779.56" dy="0">Lộ bí mật: Thông báo lỗi đó</tspan><tspan x="779.56" dy="19.791666666666657">chứa chính xác nội dung dữ</tspan><tspan x="779.56" dy="19.791666666666657">liệu mà kẻ tấn công muốn</tspan><tspan x="779.56" dy="19.791666666666657">biết.</tspan></text>
 </g>
 <g transform="translate(-63.28,-48.96)">
-<text x="782.00" y="1185.10" font-family="Cascadia, Fira Code, monospace" font-size="15.777791341145825" fill="#1e1e1e" text-anchor="start"><tspan x="782.00" dy="0">Ví dụ: Lệnh CAST('Tên_bí_mật' AS</tspan><tspan x="782.00" dy="19.722239176432282">int) sẽ gây lỗi: Invalid input for</tspan><tspan x="782.00" dy="19.722239176432282">integer: &quot;Tên_bí_mật&quot;. Lúc này, kẻ</tspan><tspan x="782.00" dy="19.722239176432282">xấu đã đọc được &quot;Tên_bí_mật&quot; ngay</tspan><tspan x="782.00" dy="19.722239176432282">trong dòng lỗi.</tspan></text>
+<text x="782.00" y="1185.10" font-family="Cascadia Code, Consolas, monospace" font-size="15.777791341145825" fill="#1e1e1e" text-anchor="start"><tspan x="782.00" dy="0">Ví dụ: Lệnh CAST(&apos;Tên_bí_mật&apos; AS</tspan><tspan x="782.00" dy="19.722239176432282">int) sẽ gây lỗi: Invalid input for</tspan><tspan x="782.00" dy="19.722239176432282">integer: &quot;Tên_bí_mật&quot;. Lúc này, kẻ</tspan><tspan x="782.00" dy="19.722239176432282">xấu đã đọc được &quot;Tên_bí_mật&quot; ngay</tspan><tspan x="782.00" dy="19.722239176432282">trong dòng lỗi.</tspan></text>
 </g>
 <a href="./bai2-error-based-injection" class="excalidraw-node-link" target="_self" title="bai2-error based injection"><g transform="translate(-63.28,-48.96)">
-<text x="203.50" y="1366.85" font-family="Cascadia, Fira Code, monospace" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="203.50" dy="0">📍bai2-error based injection</tspan></text>
+<text x="203.50" y="1366.85" font-family="Cascadia Code, Consolas, monospace" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="203.50" dy="0">📍bai2-error based injection</tspan></text>
 </g></a>
 <g transform="translate(-63.28,-48.96)">
 <path d="M350.52 1040.87 C435.47 1040.59,519.99 1038.94,642.75 1039.12 M352.08 1039.51 C423.22 1038.94,495.27 1039.58,642.56 1039.85 M644.16 1039.35 C641.59 1047.72,643.61 1052.81,643.98 1056.85 M643.26 1040.42 C642.59 1045.36,642.27 1050.50,643.07 1058.80 M642.10 1058.15 C550.98 1056.67,458.10 1057.70,352.70 1057.95 M643.41 1057.53 C563.53 1060.05,483.69 1060.01,350.83 1057.51 M351.76 1056.83 C350.59 1052.77,351.46 1050.04,351.62 1040.45 M351.01 1059.03 C350.51 1053.42,352.12 1047.36,351.79 1039.40" stroke="#1971c2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-63.28,-48.96)">
-<text x="201.50" y="1665.52" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="201.50" dy="0">tóm tắt lại</tspan></text>
+<text x="201.50" y="1665.52" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="201.50" dy="0">tóm tắt lại</tspan></text>
 </g>
 <g transform="translate(-63.28,-48.96)">
-<text x="364.83" y="1662.85" font-family="Cascadia, Fira Code, monospace" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="364.83" dy="0">True/false</tspan><tspan x="364.83" dy="25"></tspan><tspan x="364.83" dy="25">Mã lỗi</tspan></text>
+<text x="364.83" y="1662.85" font-family="Cascadia Code, Consolas, monospace" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="364.83" dy="0">True/false</tspan><tspan x="364.83" dy="25"></tspan><tspan x="364.83" dy="25">Mã lỗi</tspan></text>
 </g>
 <g transform="translate(-63.28,-48.96)">
 <path d="M318.83 1654.85 L319.50 1655.52 L320.17 1655.52 L322.17 1655.52 L322.83 1655.52 L324.83 1654.85 L327.50 1653.52 L330.17 1652.85 L332.17 1652.85 L334.17 1652.19 L340.17 1651.52 L341.50 1651.52 L342.83 1650.85 L344.83 1650.85 L346.17 1650.85 L348.17 1650.85 L349.50 1650.85 L351.50 1650.85 L352.83 1650.85 L353.50 1650.85 L354.83 1650.85 L356.17 1650.85 L357.50 1651.52 L358.17 1651.52 L358.83 1652.19 L360.83 1652.19 L361.50 1652.19 L361.50 1653.52 L362.17 1653.52 L362.83 1654.19 L362.83 1654.85 L363.50 1654.85 L363.50 1654.85" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -171,10 +171,10 @@ tags:
 <path d="M492.83 1703.52 L493.50 1703.52 L495.50 1704.85 L496.83 1707.52 L497.50 1708.85 L498.17 1710.85 L498.17 1712.19 L498.83 1713.52 L498.83 1715.52 L497.50 1716.19 L494.83 1718.19 L481.50 1720.85 L476.83 1720.85 L473.50 1720.85 L472.17 1720.85 L472.17 1720.85" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-63.28,-48.96)">
-<text x="529.50" y="1722.19" font-family="Cascadia, Fira Code, monospace" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="529.50" dy="0">SELECT CASE WHEN... THEN...ELSE..END FROM...</tspan></text>
+<text x="529.50" y="1722.19" font-family="Cascadia Code, Consolas, monospace" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="529.50" dy="0">SELECT CASE WHEN... THEN...ELSE..END FROM...</tspan></text>
 </g>
 <g transform="translate(-63.28,-48.96)">
-<text x="894.83" y="1640.19" font-family="Cascadia, Fira Code, monospace" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="894.83" dy="0">khoanh vùng được user name</tspan><tspan x="894.83" dy="25">                 password length</tspan><tspan x="894.83" dy="25">                 password char</tspan></text>
+<text x="894.83" y="1640.19" font-family="Cascadia Code, Consolas, monospace" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="894.83" dy="0">khoanh vùng được user name</tspan><tspan x="894.83" dy="25">                 password length</tspan><tspan x="894.83" dy="25">                 password char</tspan></text>
 </g>
 <g transform="translate(-63.28,-48.96)">
 <path d="M1087.57 1629.52 L1088.13 1632.73 L1088.13 1633.54 L1088.13 1634.34 L1088.13 1635.14 L1088.13 1635.95 L1088.13 1637.55 L1088.13 1639.16 L1088.13 1640.77 L1088.13 1641.57 L1088.13 1642.38 L1088.13 1643.18 L1088.13 1643.98 L1088.13 1644.79 L1088.13 1645.59 L1088.13 1647.20 L1088.13 1648.80 L1088.13 1649.61 L1088.13 1650.41 L1088.13 1651.21 L1088.13 1652.02 L1088.13 1652.82 L1088.13 1653.62 L1088.13 1654.43 L1087.85 1654.43 L1087.57 1654.43 L1087.29 1654.43 L1087.29 1655.23 L1087.01 1655.23 L1086.73 1656.03 L1086.45 1656.84 L1086.17 1656.84 L1086.45 1656.84 L1087.01 1657.64 L1087.57 1658.44 L1087.85 1659.25 L1088.13 1659.25 L1088.13 1660.05 L1088.13 1661.66 L1088.41 1663.26 L1088.41 1664.07 L1088.41 1665.67 L1088.41 1668.08 L1088.69 1669.69 L1088.69 1672.91 L1088.69 1674.51 L1088.69 1676.92 L1088.69 1678.53 L1088.97 1680.94 L1088.97 1682.55 L1089.25 1683.35 L1089.54 1685.76 L1089.54 1687.37 L1089.54 1688.17 L1089.54 1688.97 L1089.82 1688.97 L1089.82 1689.78 L1090.10 1690.58 L1090.94 1691.38 L1091.50 1692.19 L1091.50 1692.19" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -201,7 +201,7 @@ tags:
 <path d="M486.83 1753.52 L488.17 1754.19 L488.83 1755.52 L489.50 1756.19 L490.17 1757.52 L490.83 1758.19 L491.50 1758.85 L491.50 1759.52 L491.50 1760.19 L491.50 1760.85 L491.50 1761.52 L489.50 1762.19 L488.83 1762.85 L486.17 1763.52 L485.50 1764.19 L483.50 1764.19 L481.50 1764.85 L480.83 1765.52 L479.50 1766.19 L477.50 1766.85 L475.50 1767.52 L473.50 1768.19 L473.50 1768.19" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-63.28,-48.96)">
-<text x="517.50" y="1766.19" font-family="Cascadia, Fira Code, monospace" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="517.50" dy="0">CAST()</tspan><tspan x="517.50" dy="25">CONVERT()</tspan><tspan x="517.50" dy="25">..</tspan></text>
+<text x="517.50" y="1766.19" font-family="Cascadia Code, Consolas, monospace" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="517.50" dy="0">CAST()</tspan><tspan x="517.50" dy="25">CONVERT()</tspan><tspan x="517.50" dy="25">..</tspan></text>
 </g>
 <g transform="translate(-63.28,-48.96)">
 <path d="M502.83 1749.52 L502.83 1750.19 L502.83 1754.19 L502.83 1754.85 L502.83 1756.19 L502.83 1758.19 L502.83 1758.85 L502.83 1761.52 L502.17 1762.85 L501.50 1764.19 L501.50 1765.52 L501.50 1766.19 L500.83 1766.85 L500.17 1766.85 L499.50 1767.52 L499.50 1768.19 L499.50 1768.85 L499.50 1770.85 L499.50 1772.19 L500.17 1773.52 L500.83 1774.85 L500.83 1776.85 L500.83 1778.19 L500.83 1780.19 L500.83 1781.52 L500.83 1782.85 L500.83 1784.19 L500.83 1785.52 L500.17 1786.19 L498.83 1787.52 L498.17 1788.85 L497.50 1789.52 L496.83 1790.85 L496.17 1792.85 L496.17 1793.52 L495.50 1794.19 L494.83 1796.19 L494.83 1796.85 L494.17 1796.85 L494.17 1797.52 L494.17 1798.85 L494.17 1799.52 L494.17 1800.85 L495.50 1802.19 L496.17 1803.52 L496.83 1804.19 L497.50 1804.85 L498.17 1805.52 L498.83 1806.85 L500.83 1807.52 L501.50 1808.85 L504.83 1808.85 L508.83 1808.85 L512.83 1808.85 L514.17 1808.85 L514.17 1808.85" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -213,7 +213,7 @@ tags:
 <path d="M728.17 1781.52 L727.50 1781.52 L728.83 1781.52 L730.17 1781.52 L732.83 1782.19 L734.17 1782.85 L736.83 1784.19 L738.17 1784.85 L739.50 1784.85 L741.50 1785.52 L742.17 1786.19 L742.83 1786.85 L743.50 1787.52 L744.17 1788.19 L744.17 1788.85 L744.83 1788.85 L744.83 1790.19 L745.50 1790.85 L745.50 1792.19 L745.50 1792.85 L745.50 1793.52 L744.83 1794.85 L744.17 1795.52 L743.50 1796.85 L742.17 1796.85 L740.83 1798.19 L738.83 1798.85 L736.83 1800.19 L734.17 1800.85 L732.17 1801.52 L729.50 1802.85 L729.50 1802.85" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-63.28,-48.96)">
-<text x="768.83" y="1802.19" font-family="Cascadia, Fira Code, monospace" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="768.83" dy="0">cố tình cho lỗi để ép trả về thông báo lỗi</tspan></text>
+<text x="768.83" y="1802.19" font-family="Cascadia Code, Consolas, monospace" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="768.83" dy="0">cố tình cho lỗi để ép trả về thông báo lỗi</tspan></text>
 </g>
 <g transform="translate(-63.28,-48.96)">
 <path d="M1230.17 1812.85 L1230.83 1812.19 L1231.50 1812.19 L1234.83 1811.52 L1235.50 1811.52 L1238.17 1811.52 L1240.17 1811.52 L1243.50 1811.52 L1246.17 1812.19 L1248.83 1812.19 L1251.50 1812.19 L1254.17 1812.19 L1255.50 1812.19 L1257.50 1812.19 L1258.83 1812.19 L1260.17 1812.19 L1261.50 1812.19 L1262.83 1812.19 L1264.83 1812.19 L1266.17 1812.19 L1266.83 1812.19 L1267.50 1812.19 L1268.83 1812.19 L1269.50 1812.19 L1270.17 1812.19 L1270.83 1812.19 L1271.50 1812.19 L1271.50 1812.19" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -228,7 +228,7 @@ tags:
 <path d="M1090.83 1834.85 L1082.17 1838.19 L1078.83 1838.19 L1075.50 1839.52 L1074.17 1840.19 L1071.50 1840.85 L1068.17 1841.52 L1067.50 1842.19 L1066.83 1842.19 L1067.50 1842.19 L1068.83 1842.19 L1070.17 1843.52 L1071.50 1845.52 L1073.50 1847.52 L1076.17 1850.19 L1079.50 1851.52 L1082.83 1852.85 L1083.50 1853.52 L1083.50 1853.52" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-63.28,-48.96)">
-<text x="852.17" y="1854.85" font-family="Cascadia, Fira Code, monospace" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="852.17" dy="0">tiết lộ thông tin</tspan><tspan x="852.17" dy="25">về thông tin truy</tspan><tspan x="852.17" dy="25">vấn được đặt bên</tspan><tspan x="852.17" dy="25">trong CAST()</tspan></text>
+<text x="852.17" y="1854.85" font-family="Cascadia Code, Consolas, monospace" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="852.17" dy="0">tiết lộ thông tin</tspan><tspan x="852.17" dy="25">về thông tin truy</tspan><tspan x="852.17" dy="25">vấn được đặt bên</tspan><tspan x="852.17" dy="25">trong CAST()</tspan></text>
 </g>
 </svg>
     </div>

@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-k7x9td">
+<div class="excalidraw-container" id="ex-5ywa6c">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -305,13 +305,13 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1073.69 2546.64 L1073.12 2545.81 L1072.50 2544.83 L1072.06 2544.00 L1072.75 2544.83 L1073.75 2546.85 L1074.25 2547.89 L1075.18 2550.26 L1076.06 2552.69 L1076.56 2556.59 L1076.37 2559.23 L1075.43 2562.15 L1073.50 2565.49 L1070.56 2568.76 L1066.19 2571.82 L1066.19 2571.82" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1113.95" y="2540.17" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1113.95" dy="0">ko có gì đặc biệt, phải chăng là nếu</tspan><tspan x="1113.95" dy="25">bí có thể search phiên bản để tìm</tspan><tspan x="1113.95" dy="25">lỗi</tspan></text>
+<text x="1113.95" y="2540.17" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1113.95" dy="0">ko có gì đặc biệt, phải chăng là nếu</tspan><tspan x="1113.95" dy="25">bí có thể search phiên bản để tìm</tspan><tspan x="1113.95" dy="25">lỗi</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="440.26" y="569.90" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="440.26" dy="0">bài này bắt mình escalate lên admin, hmm,</tspan><tspan x="440.26" dy="25">ban đầu mình đ biết như nào, một trang</tspan><tspan x="440.26" dy="25">đăng nhập trống trơn thì làm thế nào??</tspan></text>
+<text x="440.26" y="569.90" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="440.26" dy="0">bài này bắt mình escalate lên admin, hmm,</tspan><tspan x="440.26" dy="25">ban đầu mình đ biết như nào, một trang</tspan><tspan x="440.26" dy="25">đăng nhập trống trơn thì làm thế nào??</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="457.69" y="716.64" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="457.69" dy="0">liệu có thể bruteforce bằng fuzzing ko?</tspan><tspan x="457.69" dy="25"></tspan></text>
+<text x="457.69" y="716.64" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="457.69" dy="0">liệu có thể bruteforce bằng fuzzing ko?</tspan><tspan x="457.69" dy="25"></tspan></text>
 </g>
 <a href="../0-asset/pasted-image-20260829211528_024.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829211528_024.png"><g transform="translate(-162.80,29.87)">
 <image x="886.938789147621" y="530.0792058308915" width="684.5975138183609" height="408.08484893591907" href="../0-asset/pasted-image-20260829211528_024.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
@@ -326,7 +326,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1175.48 635.00 L1176.42 634.44 L1177.36 634.79 L1178.31 635.49 L1179.88 637.52 L1180.89 639.21 L1181.27 640.12 L1181.65 641.80 L1181.77 643.34 L1181.08 646.01 L1179.69 648.32 L1177.43 650.71 L1174.15 653.09 L1169.93 655.26 L1165.34 656.95 L1163.13 657.58 L1163.13 657.58" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1208.79" y="665.66" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1208.79" dy="0">phần POST giúp đăng nhập</tspan></text>
+<text x="1208.79" y="665.66" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1208.79" dy="0">phần POST giúp đăng nhập</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M1123.53 870.42 L1124.48 869.92 L1125.48 869.57 L1128.13 869.22 L1131.09 869.09 L1134.61 869.09 L1139.08 869.09 L1141.73 869.15 L1147.83 869.51 L1154.82 869.71 L1162.38 869.99 L1170.31 870.14 L1183.35 870.07 L1192.66 869.71 L1201.67 869.15 L1209.35 868.52 L1216.53 867.96 L1222.89 867.33 L1225.59 867.12 L1230.51 866.63 L1234.41 866.21 L1237.49 865.86 L1240.08 865.58 L1241.84 865.44 L1243.29 865.30 L1244.80 865.16 L1245.99 864.87 L1245.99 864.87" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -338,10 +338,10 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1287.99 887.67 L1288.31 888.86 L1289.63 891.03 L1290.26 892.57 L1290.57 893.91 L1289.82 896.29 L1287.05 899.24 L1283.65 900.92 L1279.05 902.32 L1279.05 902.32" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1318.59" y="901.09" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1318.59" dy="0">cookie có thể là cách mã</tspan><tspan x="1318.59" dy="25">hóa đơn giản, hay hash</tspan><tspan x="1318.59" dy="25">đơn giản ko??</tspan></text>
+<text x="1318.59" y="901.09" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1318.59" dy="0">cookie có thể là cách mã</tspan><tspan x="1318.59" dy="25">hóa đơn giản, hay hash</tspan><tspan x="1318.59" dy="25">đơn giản ko??</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="240.22" y="965.59" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="240.22" dy="0">??các bước recon khác có thể làm với trangweb này là gì??</tspan></text>
+<text x="240.22" y="965.59" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="240.22" dy="0">??các bước recon khác có thể làm với trangweb này là gì??</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M360.98 993.35 L361.61 992.58 L362.17 991.73 L362.43 993.84 L361.92 997.20 L361.10 1001.77 L359.97 1006.60 L358.96 1011.58 L357.45 1018.60 L356.76 1022.87 L356.44 1026.24 L356.26 1029.18 L356.07 1030.52 L356.07 1032.55 L356.07 1034.09 L356.26 1035.29 L356.70 1036.13 L357.26 1036.83 L358.14 1037.25 L359.66 1037.81 L363.37 1038.51 L364.76 1038.58 L367.84 1038.72 L371.43 1038.86 L375.33 1038.72 L379.62 1038.65 L383.77 1038.58 L387.74 1038.44 L391.58 1038.23 L394.92 1038.16 L398.00 1038.09 L399.20 1037.95 L401.21 1037.88 L402.72 1037.88 L403.86 1037.74 L404.99 1037.32 L404.99 1037.32" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -350,13 +350,13 @@ curl -s http://10.48.187.204/footer.php
 <path d="M403.42 1026.24 L403.04 1025.19 L404.17 1025.40 L406.19 1026.73 L408.58 1029.04 L409.27 1029.89 L410.40 1033.74 L410.03 1036.13 L408.64 1039.07 L406.37 1042.30 L402.72 1045.94 L398.13 1049.38 L392.21 1052.47 L389.25 1053.66 L389.25 1053.66" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="409.15" y="1070.43" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="409.15" dy="0">dùng nikto được ko??</tspan></text>
+<text x="409.15" y="1070.43" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="409.15" dy="0">dùng nikto được ko??</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="395.93" y="1128.00" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="395.93" dy="0">?? enpoint ẩn là gì??</tspan><tspan x="395.93" dy="25">?? phiên bản đang dùng??</tspan></text>
+<text x="395.93" y="1128.00" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="395.93" dy="0">?? enpoint ẩn là gì??</tspan><tspan x="395.93" dy="25">?? phiên bản đang dùng??</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="244.94" y="1302.90" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="244.94" dy="0">ok mình sẽ tiến hành recon  bằng AI, sau đó trả lời các câu hỏi mình tò mò</tspan></text>
+<text x="244.94" y="1302.90" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="244.94" dy="0">ok mình sẽ tiến hành recon  bằng AI, sau đó trả lời các câu hỏi mình tò mò</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M653.51 1146.71 L653.00 1146.01 L652.50 1145.24 L651.87 1144.47 L652.12 1143.28 L653.32 1142.86 L656.21 1142.36 L658.86 1141.88 L661.44 1141.52 L664.27 1141.17 L667.04 1140.89 L670.32 1140.82 L672.14 1140.75 L673.53 1140.75 L674.85 1140.75 L676.49 1140.82 L678.06 1140.89 L679.45 1140.96 L681.09 1140.89 L683.54 1140.75 L686.06 1140.33 L686.06 1140.33" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -365,7 +365,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M692.17 1131.64 L691.66 1130.51 L691.41 1129.32 L691.66 1128.13 L692.92 1128.13 L693.68 1128.62 L694.31 1129.60 L694.62 1130.79 L694.43 1133.46 L693.43 1135.98 L691.91 1138.36 L688.39 1141.88 L685.24 1143.98 L681.78 1145.66 L681.78 1145.66" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="728.76" y="1155.70" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="728.76" dy="0">curl.....</tspan></text>
+<text x="728.76" y="1155.70" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="728.76" dy="0">curl.....</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M632.41 1107.95 L631.60 1107.53 L631.97 1106.62 L634.18 1104.80 L636.57 1103.18 L638.21 1102.27 L644.19 1099.05 L649.16 1096.87 L654.51 1094.91 L660.18 1093.16 L665.91 1091.61 L671.70 1090.49 L676.87 1089.79 L679.45 1089.51 L684.55 1089.16 L689.46 1089.02 L693.87 1089.02 L697.77 1089.09 L703.19 1089.23 L706.40 1089.58 L709.36 1089.79 L710.68 1089.86 L711.81 1090.00 L713.76 1090.21 L715.27 1090.35 L716.97 1090.35 L716.97 1090.35" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -374,7 +374,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M716.66 1079.41 L717.29 1078.64 L718.23 1078.99 L719.62 1079.83 L720.37 1080.53 L721.63 1082.15 L722.58 1084.11 L722.89 1085.30 L722.96 1087.41 L721.89 1092.52 L720.50 1095.61 L718.30 1098.83 L716.97 1100.45 L714.02 1103.40 L711.06 1105.99 L711.06 1105.99" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="744.81" y="1114.91" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="744.81" dy="0">gobuster</tspan></text>
+<text x="744.81" y="1114.91" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="744.81" dy="0">gobuster</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M867.46 971.49 L867.52 969.73 L867.90 968.33 L868.53 965.80 L869.54 963.56 L870.86 961.67 L872.18 960.33 L873.38 959.70 L874.45 959.98 L875.58 961.46 L876.52 964.61 L876.90 969.45 L876.84 975.69 L876.34 983.06 L876.08 986.91 L875.08 998.48 L874.64 1005.99 L874.57 1013.00 L874.89 1019.10 L875.20 1021.84 L876.52 1026.54 L878.16 1030.60 L881.56 1035.09 L883.77 1036.91 L885.91 1037.89 L887.48 1038.39 L888.68 1038.46 L885.78 1039.09 L882.82 1041.40 L877.59 1047.36 L874.19 1052.97 L871.42 1059.56 L870.48 1062.79 L869.16 1069.45 L868.40 1076.40 L868.02 1083.55 L868.21 1090.84 L868.65 1098.13 L869.16 1105.15 L869.54 1112.16 L869.79 1118.82 L869.79 1124.71 L869.54 1130.25 L868.97 1135.44 L868.40 1140.28 L867.52 1144.77 L866.45 1148.56 L865.13 1152.13 L863.81 1154.80 L863.11 1156.06 L861.04 1158.87 L860.34 1159.57 L859.15 1160.20 L858.08 1160.05 L857.38 1159.28 L857.38 1156.13 L858.33 1152.20 L858.33 1152.20" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -389,7 +389,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M966.37 1060.41 L967.32 1059.77 L969.77 1060.34 L972.73 1061.18 L975.63 1062.23 L977.01 1062.86 L980.79 1065.24 L982.81 1067.14 L984.07 1069.52 L984.51 1072.19 L983.88 1075.20 L982.30 1078.92 L981.17 1080.88 L977.96 1085.09 L973.99 1089.09 L969.65 1092.81 L965.18 1095.96 L962.85 1097.08 L962.85 1097.08" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1011.96" y="1103.06" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1011.96" dy="0">dùng AI recon được ko ?</tspan></text>
+<text x="1011.96" y="1103.06" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1011.96" dy="0">dùng AI recon được ko ?</tspan></text>
 </g>
 <a href="../0-asset/pasted-image-20260829212448_767.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829212448_767.png"><g transform="translate(-162.80,29.87)">
 <image x="202.8007650233768" y="1407.2138675964347" width="730.0997380610285" height="287.7703061129434" href="../0-asset/pasted-image-20260829212448_767.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
@@ -401,7 +401,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M732.53 1516.69 L733.47 1517.19 L734.54 1518.37 L735.99 1520.34 L737.75 1523.99 L738.45 1526.65 L738.63 1528.12 L738.63 1529.67 L737.94 1534.22 L736.49 1537.59 L734.48 1540.82 L731.83 1543.83 L728.56 1546.49 L724.97 1548.39 L721.32 1549.44 L721.32 1549.44" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="769.27" y="1571.07" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="769.27" dy="0">nhìn lại giữ kiện của Burp , mình cũng</tspan><tspan x="769.27" dy="25">chẳng nhìn thấy chút gì là có thể mò</tspan><tspan x="769.27" dy="25">được từ đây cả ?</tspan></text>
+<text x="769.27" y="1571.07" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="769.27" dy="0">nhìn lại giữ kiện của Burp , mình cũng</tspan><tspan x="769.27" dy="25">chẳng nhìn thấy chút gì là có thể mò</tspan><tspan x="769.27" dy="25">được từ đây cả ?</tspan></text>
 </g>
 <a href="../0-asset/pasted-image-20260829212855_109.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829212855_109.png"><g transform="translate(-162.80,29.87)">
 <image x="1040.6175147713664" y="1157.8096693685782" width="486.536129582585" height="259.09514370542473" href="../0-asset/pasted-image-20260829212855_109.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
@@ -437,10 +437,10 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1392.77 1146.09 L1393.89 1143.59 L1394.51 1142.34 L1396.14 1139.14 L1398.07 1135.80 L1400.01 1132.18 L1401.95 1128.49 L1403.63 1125.15 L1404.88 1122.37 L1405.44 1120.98 L1406.44 1118.69 L1407.32 1116.67 L1407.82 1115.28 L1408.32 1114.23 L1408.75 1113.05 L1409.13 1112.22 L1410.88 1113.89 L1411.69 1116.74 L1412.50 1120.35 L1413.56 1124.46 L1415.19 1130.93 L1416.56 1135.38 L1417.19 1137.54 L1418.62 1141.64 L1419.37 1143.66 L1419.37 1143.66" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1376.95" y="1084.71" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1376.95" dy="0">username là admin?</tspan></text>
+<text x="1376.95" y="1084.71" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1376.95" dy="0">username là admin?</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1338.23" y="1598.39" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1338.23" dy="0">pathtraversal?</tspan><tspan x="1338.23" dy="25"></tspan><tspan x="1338.23" dy="25">file inclusion ?</tspan></text>
+<text x="1338.23" y="1598.39" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1338.23" dy="0">pathtraversal?</tspan><tspan x="1338.23" dy="25"></tspan><tspan x="1338.23" dy="25">file inclusion ?</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M1321.51 1581.38 L1321.07 1580.34 L1320.70 1579.36 L1320.26 1578.53 L1319.64 1577.90 L1319.01 1578.67 L1317.64 1581.38 L1316.14 1584.93 L1314.51 1588.96 L1313.14 1592.99 L1311.58 1597.03 L1310.95 1599.05 L1309.58 1602.94 L1308.27 1606.49 L1306.96 1609.62 L1305.83 1612.19 L1304.02 1615.46 L1302.65 1617.20 L1301.84 1617.97 L1301.09 1618.53 L1299.78 1619.15 L1298.59 1619.43 L1297.28 1619.22 L1296.40 1618.53 L1296.09 1617.55 L1296.40 1616.64 L1298.65 1617.55 L1300.46 1619.22 L1302.40 1621.65 L1303.27 1623.12 L1305.15 1626.31 L1306.71 1629.65 L1308.08 1633.06 L1308.89 1636.19 L1309.14 1639.46 L1308.39 1644.61 L1307.08 1648.30 L1306.40 1650.10 L1304.71 1653.65 L1303.02 1656.78 L1301.71 1659.35 L1300.59 1661.44 L1300.34 1663.32 L1301.09 1665.06 L1303.15 1666.73 L1304.71 1667.63 L1308.83 1668.82 L1311.20 1669.37 L1311.20 1669.37" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -449,7 +449,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M840.55 2024.14 L840.55 2024.14" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="247.01" y="1746.92" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="247.01" dy="0">ok bây giờ mình sẽ đọc lại kết quả recon từ AI , nó sẽ</tspan><tspan x="247.01" dy="25">trả loiwf được các câu hỏi về epoint ,phiên bản, các</tspan><tspan x="247.01" dy="25">internal API đưược dùng ?</tspan></text>
+<text x="247.01" y="1746.92" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="247.01" dy="0">ok bây giờ mình sẽ đọc lại kết quả recon từ AI , nó sẽ</tspan><tspan x="247.01" dy="25">trả loiwf được các câu hỏi về epoint ,phiên bản, các</tspan><tspan x="247.01" dy="25">internal API đưược dùng ?</tspan></text>
 </g>
 <a href="../0-asset/pasted-image-20260829211258_824.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829211258_824.png"><g transform="translate(-162.80,29.87)">
 <image x="221.2418800087445" y="56.925275349457365" width="884.8676552864307" height="444.9537924873997" href="../0-asset/pasted-image-20260829211258_824.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
@@ -461,10 +461,10 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1143.43 273.02 L1142.86 271.90 L1142.48 270.98 L1142.67 269.58 L1143.62 269.09 L1145.13 269.16 L1146.58 269.93 L1148.34 271.20 L1149.60 272.60 L1150.16 274.07 L1149.91 276.80 L1148.78 279.26 L1146.39 282.14 L1142.86 285.43 L1138.20 288.66 L1135.75 290.27 L1133.29 291.96 L1133.29 291.96" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1154.45" y="311.74" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1154.45" dy="0">-internal API??? ==&gt; có thể authorise ko?</tspan><tspan x="1154.45" dy="25"></tspan></text>
+<text x="1154.45" y="311.74" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1154.45" dy="0">-internal API??? ==&gt; có thể authorise ko?</tspan><tspan x="1154.45" dy="25"></tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1163.07" y="380.33" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1163.07" dy="0">-system diagnosstic==&gt; liệu nó cho chạy scipt ko?</tspan><tspan x="1163.07" dy="25">có hàm exec() =&gt; có command injection ko</tspan></text>
+<text x="1163.07" y="380.33" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1163.07" dy="0">-system diagnosstic==&gt; liệu nó cho chạy scipt ko?</tspan><tspan x="1163.07" dy="25">có hàm exec() =&gt; có command injection ko</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M367.73 3767.39 L366.86 3766.83 L366.10 3766.06 L365.47 3765.37 L364.66 3764.73 L362.90 3763.62 L361.90 3762.99 L359.64 3762.01 L356.94 3760.96 L353.87 3760.12 L348.35 3758.93 L344.08 3758.38 L339.56 3757.96 L334.86 3757.89 L330.09 3757.89 L327.64 3757.96 L322.75 3758.38 L317.85 3759.08 L313.08 3759.92 L308.19 3760.96 L303.11 3762.36 L297.65 3763.83 L289.87 3766.41 L285.60 3767.88 L283.47 3768.65 L279.39 3770.26 L275.44 3771.86 L271.86 3773.54 L268.35 3775.22 L265.52 3776.75 L262.89 3778.22 L260.63 3779.48 L258.68 3780.67 L256.24 3782.21 L255.48 3782.84 L254.79 3783.74 L254.79 3785.07 L255.48 3785.84 L258.24 3787.38 L260.63 3788.50 L264.83 3789.90 L267.84 3790.80 L271.04 3791.78 L274.43 3792.76 L278.26 3793.60 L282.02 3794.58 L284.03 3794.86 L288.17 3795.62 L292.57 3796.32 L297.15 3796.88 L301.79 3797.51 L306.56 3798.07 L313.52 3798.70 L318.10 3798.98 L322.62 3799.26 L326.64 3799.47 L328.58 3799.47 L332.66 3799.61 L336.74 3799.61 L340.82 3799.54 L345.40 3799.33 L350.04 3799.12 L354.75 3798.77 L359.51 3798.28 L366.79 3797.30 L369.30 3796.88 L374.20 3796.25 L379.09 3795.41 L383.86 3794.72 L388.44 3794.02 L392.96 3793.46 L397.16 3792.83 L400.93 3792.41 L404.69 3791.99 L406.51 3791.85 L410.21 3791.50 L415.55 3791.01 L419.06 3790.73 L422.51 3790.38 L425.90 3790.17 L429.10 3789.82 L432.42 3789.55 L435.50 3789.26 L437.19 3789.06 L440.39 3788.64 L443.66 3788.29 L446.92 3787.94 L450.18 3787.66 L455.07 3787.10 L458.21 3786.82 L461.35 3786.54 L464.36 3786.40 L467.25 3786.12 L468.69 3786.05 L471.20 3785.84 L472.46 3785.77 L474.59 3785.70 L476.41 3785.63 L478.04 3785.49 L479.48 3785.42 L480.80 3785.35 L482.56 3785.28 L484.63 3785.07 L487.33 3784.93 L488.52 3784.86 L490.71 3784.65 L494.16 3784.52 L495.29 3784.44 L498.68 3784.23 L501.07 3784.16 L503.07 3784.16 L504.96 3784.16 L507.78 3784.16 L510.48 3784.23 L511.80 3784.23 L513.87 3784.23 L517.51 3784.44 L519.70 3784.44 L521.52 3784.52 L523.84 3784.65 L526.10 3784.65 L528.05 3784.65 L531.31 3784.65 L532.69 3784.79 L533.95 3784.79 L535.20 3784.79 L539.03 3784.86 L541.22 3784.93 L543.04 3784.93 L544.74 3785.07 L548.13 3785.35 L550.13 3785.49 L551.77 3785.63 L553.27 3785.63 L554.53 3785.70 L556.22 3785.70 L557.54 3785.70 L558.92 3785.49 L561.18 3785.28 L563.62 3784.86 L566.01 3784.23 L568.46 3783.68 L570.90 3783.04 L573.35 3782.42 L575.61 3781.72 L577.99 3781.16 L579.81 3780.67 L581.44 3780.11 L582.76 3779.76 L584.02 3779.34 L585.21 3778.92 L586.84 3778.43 L587.91 3778.08 L589.60 3777.52 L590.98 3777.11 L592.05 3776.69 L593.24 3776.27 L594.18 3775.85 L595.00 3775.36 L595.75 3774.59 L595.44 3773.40 L592.67 3771.93 L589.79 3770.95 L585.84 3770.12 L583.51 3769.70 L578.49 3769.00 L572.16 3768.30 L565.26 3767.81 L558.17 3767.39 L550.82 3767.04 L543.23 3766.83 L531.31 3766.41 L523.34 3766.06 L519.26 3765.85 L511.36 3765.44 L503.51 3765.15 L495.86 3764.73 L488.33 3764.25 L481.05 3763.83 L473.96 3763.55 L467.25 3763.34 L461.22 3763.27 L455.26 3763.20 L449.43 3763.34 L443.28 3763.55 L437.38 3763.69 L431.17 3763.83 L425.21 3764.11 L419.44 3764.39 L413.79 3764.60 L408.20 3764.88 L402.75 3765.22 L400.05 3765.44 L394.90 3765.72 L389.76 3766.06 L382.23 3766.62 L377.40 3766.97 L372.75 3767.46 L368.42 3768.02 L364.09 3768.44 L360.20 3769.00 L358.45 3769.14 L355.00 3769.70 L351.61 3770.12 L348.41 3770.53 L345.27 3770.89 L340.82 3770.75 L339.37 3770.53 L339.37 3770.53" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -479,7 +479,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M569.21 5141.99 L568.89 5140.95 L569.15 5139.90 L569.96 5139.41 L571.22 5139.20 L572.47 5139.34 L574.92 5139.90 L577.24 5140.39 L579.50 5141.15 L581.19 5141.79 L582.51 5142.34 L583.51 5142.83 L584.27 5143.39 L584.46 5144.44 L583.64 5145.91 L581.19 5148.07 L575.42 5151.64 L575.42 5151.64" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="610.31" y="5163.60" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="610.31" dy="0">cái này mình có thể suy ra được gì?</tspan></text>
+<text x="610.31" y="5163.60" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="610.31" dy="0">cái này mình có thể suy ra được gì?</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M261.32 5905.46 L260.44 5905.04 L259.88 5905.73 L259.25 5906.71 L258.87 5907.55 L258.06 5909.79 L257.30 5911.46 L256.24 5914.26 L255.92 5915.31 L255.55 5916.36 L255.23 5917.68 L254.98 5918.87 L254.79 5919.99 L254.60 5921.04 L254.48 5922.16 L254.35 5923.35 L254.29 5924.53 L254.23 5925.72 L254.23 5927.33 L254.23 5928.59 L254.29 5929.84 L254.35 5931.17 L254.48 5932.50 L254.60 5933.90 L254.73 5935.22 L254.86 5936.55 L254.98 5937.81 L255.11 5939.00 L255.29 5940.19 L255.48 5941.31 L255.61 5942.63 L255.92 5943.75 L256.17 5944.73 L256.49 5945.99 L256.93 5946.97 L257.43 5947.88 L258.06 5948.85 L258.87 5949.62 L259.62 5950.46 L261.07 5951.65 L262.45 5952.56 L263.58 5953.33 L264.64 5953.95 L265.77 5954.44 L266.78 5954.86 L267.78 5955.21 L269.98 5955.77 L272.11 5956.40 L273.11 5956.75 L274.81 5957.03 L277.57 5957.73 L278.76 5958.01 L279.77 5958.22 L281.21 5958.50 L282.53 5958.84 L284.72 5959.26 L285.85 5959.41 L287.80 5959.68 L289.43 5959.82 L291.06 5959.90 L293.95 5960.10 L295.14 5960.17 L297.21 5960.17 L299.09 5960.17 L300.78 5960.10 L302.29 5960.10 L303.61 5960.03 L307.00 5959.82 L308.19 5959.75 L310.20 5959.61 L311.95 5959.33 L313.65 5959.26 L316.47 5958.99 L318.54 5958.91 L320.42 5958.78 L321.93 5958.64 L323.25 5958.57 L324.63 5958.50 L326.38 5958.43 L328.08 5958.43 L331.09 5958.43 L332.41 5958.43 L334.67 5958.50 L338.06 5958.50 L339.50 5958.43 L341.82 5958.29 L344.52 5958.15 L347.22 5958.01 L349.91 5957.73 L352.61 5957.38 L355.06 5957.17 L357.88 5956.82 L361.90 5956.19 L363.34 5955.98 L366.04 5955.56 L368.68 5955.14 L371.25 5954.72 L373.82 5954.30 L376.33 5953.88 L377.33 5953.61 L380.91 5953.11 L381.98 5952.91 L383.86 5952.77 L385.49 5952.49 L387.06 5952.35 L388.38 5952.28 L389.57 5952.14 L390.76 5952.07 L392.27 5952.00 L393.71 5952.00 L395.22 5951.93 L396.72 5951.93 L399.80 5952.00 L403.25 5951.93 L405.07 5951.93 L406.70 5951.86 L408.20 5951.86 L409.65 5951.72 L411.40 5951.65 L413.10 5951.65 L415.61 5951.65 L417.05 5951.58 L419.18 5951.51 L421.00 5951.30 L424.14 5951.16 L425.52 5951.09 L426.78 5951.02 L428.03 5950.88 L429.60 5950.81 L431.17 5950.74 L432.55 5950.67 L434.12 5950.60 L435.56 5950.60 L436.94 5950.60 L438.38 5950.60 L439.89 5950.67 L441.33 5950.74 L442.78 5950.81 L444.22 5950.88 L445.66 5951.02 L447.11 5951.16 L448.61 5951.23 L450.06 5951.44 L451.62 5951.44 L455.45 5951.51 L457.46 5951.44 L459.22 5951.30 L460.72 5951.30 L462.10 5951.23 L463.36 5951.16 L465.05 5951.09 L466.62 5951.09 L468.19 5951.02 L470.51 5950.81 L472.96 5950.60 L474.09 5950.39 L475.91 5950.11 L477.60 5949.90 L480.42 5949.41 L481.68 5949.13 L483.75 5948.71 L485.44 5948.36 L486.95 5948.01 L488.39 5947.73 L490.71 5947.11 L491.78 5946.82 L494.73 5946.20 L495.73 5945.92 L498.68 5945.15 L499.69 5944.94 L501.51 5944.52 L503.51 5944.10 L505.33 5943.68 L506.97 5943.26 L508.41 5942.98 L509.60 5942.63 L510.73 5942.28 L511.80 5942.08 L512.80 5941.79 L514.06 5941.37 L516.50 5940.47 L518.01 5939.70 L519.70 5938.79 L521.96 5937.11 L522.65 5936.41 L523.84 5935.30 L525.10 5934.11 L526.10 5932.78 L527.04 5931.59 L527.73 5930.61 L528.30 5929.57 L528.80 5928.66 L529.24 5927.75 L529.55 5926.35 L529.74 5925.02 L529.80 5923.77 L529.68 5922.51 L528.86 5919.43 L528.55 5918.52 L527.86 5916.91 L526.60 5914.75 L525.41 5913.28 L523.97 5911.81 L522.34 5910.56 L520.46 5909.23 L518.57 5908.25 L516.57 5907.13 L514.56 5906.30 L512.42 5905.46 L510.23 5904.69 L507.97 5904.06 L506.90 5903.71 L504.71 5903.08 L501.07 5902.24 L498.68 5901.75 L496.42 5901.26 L494.17 5900.77 L491.84 5900.08 L490.97 5899.72 L487.89 5898.89 L484.94 5898.05 L482.75 5897.49 L480.74 5896.93 L478.35 5896.37 L474.65 5895.60 L472.33 5895.11 L469.95 5894.69 L467.56 5894.27 L465.30 5893.99 L462.92 5893.64 L460.85 5893.50 L458.78 5893.50 L457.15 5893.44 L455.51 5893.44 L452.00 5893.57 L447.61 5893.71 L446.23 5893.86 L443.47 5893.99 L440.64 5894.27 L438.07 5894.48 L435.37 5894.76 L432.93 5895.04 L430.79 5895.18 L428.97 5895.32 L426.28 5895.67 L423.58 5895.88 L422.20 5896.02 L418.18 5896.51 L415.36 5896.86 L412.66 5897.21 L410.09 5897.56 L407.39 5897.98 L404.82 5898.33 L402.31 5898.75 L399.67 5899.17 L398.42 5899.31 L395.91 5899.72 L393.46 5900.14 L391.08 5900.56 L389.07 5900.84 L387.37 5900.98 L385.74 5901.26 L384.24 5901.26 L381.54 5901.47 L380.28 5901.47 L379.09 5901.61 L377.08 5901.61 L373.44 5901.68 L371.37 5901.68 L369.43 5901.68 L367.73 5901.68 L365.22 5901.47 L363.09 5901.47 L361.21 5901.40 L359.51 5901.33 L357.95 5901.33 L355.06 5901.26 L352.24 5901.19 L349.41 5901.05 L346.53 5900.98 L343.77 5900.91 L340.88 5900.84 L339.50 5900.63 L334.98 5900.42 L332.03 5900.21 L329.21 5900.01 L326.26 5899.79 L323.25 5899.66 L320.30 5899.51 L317.48 5899.31 L314.53 5899.02 L311.83 5898.89 L310.38 5898.82 L307.69 5898.61 L305.05 5898.54 L301.16 5898.19 L298.46 5897.98 L295.77 5897.77 L293.19 5897.56 L290.62 5897.35 L288.55 5897.28 L284.97 5896.93 L282.53 5896.72 L280.46 5896.44 L272.99 5895.74 L271.73 5895.67 L270.48 5895.60 L266.97 5895.53 L265.65 5895.53 L262.95 5895.67 L260.19 5896.09 L257.49 5896.93 L254.79 5898.33 L251.91 5900.01 L251.91 5900.01" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -491,7 +491,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M740.44 5855.91 L741.44 5855.28 L742.51 5855.49 L745.46 5856.54 L747.84 5857.72 L749.91 5859.26 L751.73 5861.01 L753.05 5863.04 L753.55 5864.15 L754.18 5866.46 L754.24 5868.56 L753.68 5871.07 L752.49 5873.66 L750.54 5876.52 L746.34 5880.93 L743.20 5883.65 L740.13 5885.89 L738.87 5886.66 L738.87 5886.66" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="794.46" y="5880.52" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="794.46" dy="0">liệu có command injection</tspan><tspan x="794.46" dy="25">Local File inclusion</tspan></text>
+<text x="794.46" y="5880.52" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="794.46" dy="0">liệu có command injection</tspan><tspan x="794.46" dy="25">Local File inclusion</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M1064.83 5880.37 L1063.70 5880.51 L1063.26 5879.60 L1063.70 5878.48 L1064.52 5877.78 L1065.71 5877.64 L1066.90 5878.06 L1067.53 5878.83 L1067.66 5881.28 L1067.22 5882.53 L1065.84 5884.98 L1062.76 5888.89 L1060.06 5891.55 L1057.24 5894.06 L1054.54 5896.37 L1052.35 5898.33 L1050.40 5899.93 L1048.89 5901.26 L1047.89 5902.24 L1047.14 5902.94 L1047.14 5902.94" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -509,7 +509,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M923.91 6184.78 L924.47 6187.15 L925.41 6189.18 L926.42 6191.21 L927.29 6193.37 L927.80 6195.54 L928.05 6196.59 L928.05 6198.41 L927.29 6200.85 L925.85 6203.16 L923.47 6205.61 L920.33 6207.77 L914.62 6210.42 L910.67 6211.33 L909.04 6211.41 L907.47 6211.33 L907.47 6211.33" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="947.06" y="6219.17" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="947.06" dy="0">cái này là gì ?</tspan></text>
+<text x="947.06" y="6219.17" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="947.06" dy="0">cái này là gì ?</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M875.47 5172.35 L876.47 5172.70 L876.41 5175.15 L875.72 5178.08 L874.90 5181.71 L874.02 5185.77 L873.52 5189.89 L873.40 5193.73 L873.46 5197.65 L874.02 5201.42 L874.65 5203.31 L876.22 5206.80 L878.67 5209.81 L884.25 5213.23 L889.46 5214.84 L894.73 5215.68 L900.25 5215.96 L905.84 5215.75 L908.53 5215.61 L916.31 5214.70 L924.66 5213.23 L926.23 5212.88 L929.05 5212.39 L931.37 5211.91 L932.88 5211.62 L934.01 5211.42 L934.01 5211.42" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -518,7 +518,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M931.12 5201.49 L930.56 5200.86 L931.56 5200.51 L932.50 5201.00 L934.95 5203.31 L936.14 5205.13 L936.77 5207.43 L936.96 5208.55 L936.96 5210.65 L936.27 5213.44 L935.01 5216.38 L932.88 5219.59 L930.31 5222.45 L927.42 5224.97 L922.90 5227.07 L922.90 5227.07" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="962.94" y="5213.87" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="962.94" dy="0">cái này là lỗi config --&gt; bật caí này là vào</tspan><tspan x="962.94" dy="25">index là nó phun hết cấu trúc thư mục ra</tspan></text>
+<text x="962.94" y="5213.87" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="962.94" dy="0">cái này là lỗi config --&gt; bật caí này là vào</tspan><tspan x="962.94" dy="25">index là nó phun hết cấu trúc thư mục ra</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M422.57 6601.54 L421.88 6602.17 L422.45 6603.08 L423.83 6603.36 L426.21 6603.43 L429.16 6603.08 L432.24 6602.52 L435.44 6601.75 L438.82 6600.85 L440.71 6600.15 L445.41 6598.47 L448.36 6597.00 L450.87 6595.67 L453.26 6594.07 L455.26 6592.46 L457.15 6590.71 L458.71 6589.03 L460.28 6587.36 L460.91 6586.52 L462.16 6585.05 L463.23 6583.86 L464.61 6582.54 L466.56 6580.79 L468.19 6579.46 L469.95 6578.20 L471.70 6577.22 L473.40 6576.18 L474.84 6575.48 L476.28 6574.85 L477.47 6574.36 L478.48 6574.01 L479.80 6573.59 L481.11 6573.31 L482.49 6573.17 L483.69 6572.89 L483.69 6572.89" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -563,7 +563,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1276.66 6724.68 L1276.78 6723.56 L1277.98 6723.63 L1279.17 6724.26 L1280.17 6725.24 L1281.36 6726.85 L1281.93 6728.38 L1282.18 6729.85 L1282.12 6731.32 L1281.18 6734.18 L1279.98 6736.28 L1278.35 6738.31 L1276.22 6740.19 L1272.83 6742.43 L1270.64 6743.55 L1268.94 6744.25 L1268.94 6744.25" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1296.31" y="6752.43" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1296.31" dy="0">ko có gì đặc biệt</tspan></text>
+<text x="1296.31" y="6752.43" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1296.31" dy="0">ko có gì đặc biệt</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M271.48 6708.95 L272.61 6708.40 L273.68 6708.18 L276.69 6708.25 L278.76 6708.95 L281.02 6709.51 L284.16 6710.56 L286.35 6711.26 L288.55 6711.96 L290.81 6712.73 L293.26 6713.50 L295.83 6714.27 L298.53 6714.89 L299.97 6715.24 L302.86 6715.66 L305.87 6716.08 L309.00 6716.43 L312.20 6716.71 L317.35 6716.92 L320.93 6717.13 L324.44 6717.20 L328.08 6717.34 L329.84 6717.48 L333.29 6717.69 L336.67 6717.97 L339.87 6718.18 L343.01 6718.53 L345.96 6718.88 L348.85 6719.23 L351.61 6719.58 L355.62 6719.92 L357.95 6720.00 L360.02 6720.00 L363.22 6719.92 L365.54 6719.78 L367.36 6719.65 L369.05 6719.43 L370.43 6719.30 L371.69 6719.02 L372.88 6718.81 L374.01 6718.53 L376.64 6717.69 L378.09 6717.13 L379.15 6716.50 L380.09 6715.94 L380.85 6715.24 L381.47 6714.62 L382.16 6713.56 L382.42 6712.59 L381.54 6710.35 L379.03 6707.91 L376.83 6706.30 L374.32 6704.97 L371.18 6703.64 L367.73 6702.45 L365.85 6701.96 L362.15 6700.78 L358.26 6699.80 L354.06 6698.96 L349.73 6698.33 L345.27 6697.70 L340.88 6697.28 L336.36 6696.93 L329.84 6696.65 L327.64 6696.44 L323.69 6696.23 L319.55 6695.89 L315.66 6695.32 L312.14 6694.77 L308.69 6694.21 L305.30 6693.51 L301.91 6692.88 L298.53 6692.32 L296.89 6692.04 L291.75 6691.55 L288.30 6691.62 L284.72 6691.90 L281.08 6692.60 L277.19 6693.44 L273.49 6694.49 L269.85 6695.82 L266.40 6697.07 L263.39 6698.19 L262.01 6698.82 L259.50 6700.01 L256.05 6701.83 L254.10 6703.08 L252.41 6704.48 L250.96 6705.74 L250.09 6706.86 L249.46 6707.83 L249.02 6708.82 L248.96 6710.21 L249.33 6711.47 L251.59 6714.47 L253.66 6715.94 L256.36 6717.27 L260.13 6718.46 L264.77 6719.23 L267.34 6719.43 L272.93 6719.65 L279.77 6719.43 L283.15 6719.16 L283.15 6719.16" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -575,7 +575,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1085.91 6787.43 L1085.85 6788.69 L1086.10 6789.81 L1086.42 6790.92 L1086.79 6792.25 L1086.86 6793.72 L1086.16 6798.12 L1084.91 6801.13 L1082.96 6804.20 L1080.39 6807.07 L1077.57 6809.65 L1074.68 6812.10 L1071.98 6814.20 L1069.79 6815.67 L1068.78 6816.02 L1068.78 6816.02" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1085.10" y="6833.22" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1085.10" dy="0">ko có phản hồi</tspan></text>
+<text x="1085.10" y="6833.22" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1085.10" dy="0">ko có phản hồi</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M490.90 6739.39 L491.53 6740.16 L491.53 6740.16" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -602,13 +602,13 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1401.96 6980.09 L1402.46 6979.25 L1403.22 6978.55 L1404.41 6977.99 L1405.66 6977.85 L1406.73 6978.20 L1407.92 6979.18 L1408.49 6979.80 L1409.18 6981.27 L1409.55 6982.74 L1408.86 6986.16 L1407.36 6989.03 L1404.97 6992.11 L1401.96 6995.39 L1398.32 6998.25 L1396.13 6999.58 L1396.13 6999.58" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1412.13" y="7007.35" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="1412.13" dy="0">directory listing</tspan></text>
+<text x="1412.13" y="7007.35" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="1412.13" dy="0">directory listing</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M310.89 6771.82 L310.57 6770.77 L310.13 6769.93 L309.26 6769.16 L308.44 6768.54 L307.50 6768.12 L305.24 6767.28 L302.54 6766.44 L299.47 6765.74 L296.02 6765.11 L291.87 6764.62 L287.55 6764.20 L282.78 6764.06 L275.44 6764.27 L272.99 6764.41 L268.28 6765.04 L263.76 6765.60 L259.50 6766.37 L255.80 6767.07 L252.60 6767.91 L249.84 6768.74 L247.39 6769.58 L245.26 6770.56 L243.50 6771.75 L242.75 6772.45 L241.30 6774.41 L240.74 6775.73 L240.49 6776.99 L240.49 6778.32 L240.99 6780.28 L241.74 6782.58 L243.00 6784.82 L244.56 6786.91 L245.51 6788.03 L247.89 6790.06 L250.84 6792.02 L256.49 6794.46 L260.88 6795.79 L265.84 6796.91 L271.48 6797.61 L277.13 6797.89 L283.15 6797.96 L286.10 6797.89 L292.56 6797.61 L298.21 6797.33 L303.73 6796.98 L309.00 6796.49 L314.15 6796.07 L321.68 6795.16 L326.64 6794.60 L331.66 6793.90 L334.16 6793.62 L339.25 6792.78 L344.39 6791.88 L349.22 6791.04 L354.12 6790.20 L358.76 6789.29 L363.28 6788.45 L367.55 6787.62 L371.62 6786.78 L375.33 6786.08 L378.59 6785.45 L381.79 6784.82 L384.74 6784.12 L387.44 6783.56 L389.88 6782.86 L390.89 6782.58 L392.58 6781.95 L393.90 6781.46 L394.90 6780.76 L395.53 6780.21 L396.03 6779.16 L395.72 6777.69 L394.46 6776.08 L392.33 6774.41 L389.13 6772.52 L385.18 6770.77 L379.72 6768.89 L373.38 6767.14 L369.99 6766.30 L362.40 6764.83 L353.87 6763.78 L344.77 6763.02 L330.46 6762.74 L320.86 6763.16 L311.58 6763.99 L302.79 6765.32 L294.51 6767.07 L290.62 6768.05 L290.62 6768.05" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="206.55" y="8103.69" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="206.55" dy="0">Ok bây giờ mình sẽ hỏi con AI các câu hỏi mà mình vẫn còn bỏ ngỏ</tspan></text>
+<text x="206.55" y="8103.69" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="206.55" dy="0">Ok bây giờ mình sẽ hỏi con AI các câu hỏi mà mình vẫn còn bỏ ngỏ</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M408.77 8150.32 L409.08 8151.44 L409.08 8151.44" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -620,7 +620,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M334.29 8158.35 L333.48 8157.73 L334.23 8159.19 L335.55 8161.01 L336.80 8162.83 L337.43 8163.95 L338.49 8167.30 L338.49 8169.75 L337.74 8172.61 L335.92 8176.11 L332.78 8180.23 L328.83 8184.28 L324.44 8188.13 L319.73 8191.41 L317.29 8192.81 L317.29 8192.81" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="357.14" y="8183.60" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="357.14" dy="0">đầu tiên 2 cái mình nghi nhất là pathtravelser, LFI, RFI thì nó sẽ vô dụng nếu mình ko vượt qua được cổng đăng nhập</tspan></text>
+<text x="357.14" y="8183.60" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="357.14" dy="0">đầu tiên 2 cái mình nghi nhất là pathtravelser, LFI, RFI thì nó sẽ vô dụng nếu mình ko vượt qua được cổng đăng nhập</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M450.75 8191.62 L449.99 8190.99 L448.49 8192.60 L447.23 8194.97 L445.85 8198.12 L444.60 8201.68 L443.40 8205.67 L442.53 8209.58 L441.77 8213.28 L441.15 8216.64 L440.71 8221.53 L440.64 8224.53 L440.89 8227.33 L441.15 8228.59 L442.02 8231.04 L443.34 8233.27 L445.22 8235.09 L447.55 8236.55 L450.62 8237.53 L454.38 8238.09 L458.84 8238.09 L463.92 8237.81 L471.26 8236.84 L475.72 8236.27 L479.80 8235.71 L483.06 8235.16 L486.01 8234.74 L487.20 8234.60 L489.21 8234.32 L490.65 8234.25 L491.78 8234.11 L491.78 8234.11" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -629,7 +629,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M486.51 8218.24 L486.89 8217.13 L487.95 8217.76 L490.09 8219.22 L492.41 8221.18 L494.79 8223.56 L496.68 8226.14 L498.06 8228.94 L498.87 8232.08 L498.87 8235.44 L498.06 8239.21 L495.98 8243.61 L489.65 8251.16 L482.31 8257.10 L482.31 8257.10" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="523.29" y="8227.90" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="523.29" dy="0">phải byppass cái cổng đăng nhập đã,</tspan><tspan x="523.29" dy="25">có cấu trúc thư mục, thử vượt qua</tspan><tspan x="523.29" dy="25">bằng cách authorise cũng ko được </tspan></text>
+<text x="523.29" y="8227.90" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="523.29" dy="0">phải byppass cái cổng đăng nhập đã,</tspan><tspan x="523.29" dy="25">có cấu trúc thư mục, thử vượt qua</tspan><tspan x="523.29" dy="25">bằng cách authorise cũng ko được </tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M880.36 8255.15 L880.55 8256.26 L883.18 8256.40 L886.51 8256.05 L893.29 8255.35 L898.37 8254.73 L903.77 8254.02 L909.41 8253.19 L915.06 8252.49 L919.95 8251.65 L924.47 8250.88 L928.55 8250.18 L931.75 8249.62 L933.19 8249.34 L935.77 8248.71 L937.71 8248.29 L939.15 8248.02 L939.15 8248.02" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -638,7 +638,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M934.38 8235.86 L934.13 8234.53 L934.51 8233.55 L937.08 8234.53 L938.65 8236.27 L940.16 8238.65 L941.29 8241.52 L941.85 8244.52 L942.04 8247.74 L941.41 8251.09 L939.91 8254.79 L937.21 8258.64 L933.26 8262.48 L928.36 8265.63 L925.66 8267.02 L925.66 8267.02" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="988.23" y="8264.31" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="988.23" dy="0">brutefoce</tspan><tspan x="988.23" dy="25"></tspan><tspan x="988.23" dy="25">SQL injection</tspan></text>
+<text x="988.23" y="8264.31" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="988.23" dy="0">brutefoce</tspan><tspan x="988.23" dy="25"></tspan><tspan x="988.23" dy="25">SQL injection</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M956.35 8239.70 L955.59 8239.14 L954.84 8238.58 L956.28 8241.52 L957.04 8244.31 L957.47 8247.38 L957.54 8250.88 L957.41 8254.31 L957.22 8256.05 L956.53 8259.62 L955.78 8262.97 L954.84 8266.18 L953.84 8269.05 L952.33 8272.55 L951.89 8273.45 L951.20 8274.78 L950.64 8275.62 L949.95 8276.39 L949.38 8277.16 L950.20 8277.58 L950.95 8278.07 L953.84 8280.51 L955.34 8282.40 L956.60 8284.42 L957.79 8286.80 L958.67 8289.25 L959.23 8291.97 L959.55 8294.84 L959.73 8297.91 L959.55 8301.27 L959.29 8304.62 L958.92 8308.11 L958.42 8313.36 L958.04 8316.71 L957.98 8320.00 L958.04 8321.60 L958.48 8324.54 L959.42 8327.33 L961.11 8329.85 L963.44 8331.95 L966.82 8333.69 L970.09 8334.39 L971.91 8334.67 L971.91 8334.67" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -662,7 +662,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1157.07 8329.15 L1157.07 8327.82 L1159.20 8325.31 L1162.65 8323.07 L1164.28 8322.51 L1165.73 8322.23 L1166.98 8322.23 L1167.86 8322.65 L1168.74 8323.28 L1169.55 8324.61 L1170.24 8326.71 L1170.49 8327.82 L1170.49 8331.46 L1170.06 8334.39 L1169.24 8337.33 L1168.30 8340.40 L1168.30 8340.40" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1177.97" y="8326.09" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1177.97" dy="0">ko có rate limit==&gt; brute force ngon</tspan></text>
+<text x="1177.97" y="8326.09" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1177.97" dy="0">ko có rate limit==&gt; brute force ngon</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M1281.91 8286.45 L1281.04 8286.87 L1280.03 8287.43 L1279.09 8287.85 L1278.27 8288.27 L1280.78 8286.24 L1283.54 8284.07 L1286.93 8281.77 L1291.14 8279.11 L1295.65 8276.60 L1297.91 8275.27 L1303.50 8272.33 L1306.76 8270.73 L1309.21 8269.54 L1311.40 8268.42 L1313.16 8267.51 L1314.42 8266.88 L1315.42 8266.40 L1316.30 8265.98 L1317.11 8265.27 L1317.11 8265.27" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -671,10 +671,10 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1316.11 8255.84 L1316.36 8254.58 L1317.62 8254.51 L1320.50 8256.05 L1322.20 8257.94 L1323.39 8260.11 L1324.08 8262.69 L1324.20 8265.42 L1323.83 8268.49 L1321.94 8273.38 L1320.00 8276.74 L1317.55 8279.67 L1316.11 8281.07 L1314.60 8282.12 L1314.60 8282.12" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1337.32" y="8233.21" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1337.32" dy="0">con AI nó từ chối</tspan><tspan x="1337.32" dy="25">bruteforce==&gt; bây giờ</tspan><tspan x="1337.32" dy="25">mình brutefoce chay thôi</tspan></text>
+<text x="1337.32" y="8233.21" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1337.32" dy="0">con AI nó từ chối</tspan><tspan x="1337.32" dy="25">bruteforce==&gt; bây giờ</tspan><tspan x="1337.32" dy="25">mình brutefoce chay thôi</tspan></text>
 </g>
 <a href="../tools/template-fuff-dùng-cho-cổng-đăng-nhập" class="excalidraw-node-link" target="_self" title="template fuff dùng cho cổng đăng nhập"><g transform="translate(-162.80,29.87)">
-<text x="1137.75" y="8110.84" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1137.75" dy="0">📍template fuff dùng cho cổng đăng nhập</tspan></text>
+<text x="1137.75" y="8110.84" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1137.75" dy="0">📍template fuff dùng cho cổng đăng nhập</tspan></text>
 </g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M1515.21 8227.96 L1516.46 8227.83 L1518.53 8227.13 L1522.11 8225.52 L1523.30 8224.89 L1525.87 8222.93 L1528.51 8220.28 L1531.02 8216.99 L1533.72 8212.66 L1536.29 8207.77 L1538.55 8202.67 L1539.55 8200.08 L1541.43 8194.84 L1542.94 8189.81 L1543.88 8184.99 L1544.38 8177.93 L1544.01 8173.46 L1543.13 8169.19 L1542.50 8167.24 L1540.99 8163.39 L1539.11 8159.90 L1537.10 8156.75 L1535.10 8153.82 L1533.21 8151.51 L1531.46 8149.35 L1529.76 8147.32 L1528.95 8146.41 L1527.32 8144.66 L1524.99 8142.15 L1523.55 8140.68 L1522.17 8139.15 L1520.73 8137.54 L1519.35 8136.00 L1518.66 8135.23 L1517.21 8133.76 L1516.52 8133.06 L1514.70 8131.32 L1513.14 8130.13 L1512.38 8129.64 L1511.06 8128.66 L1508.74 8127.33 L1507.74 8126.91 L1506.86 8126.49 L1505.79 8126.00 L1504.98 8125.58 L1504.04 8125.17 L1503.10 8124.75 L1502.22 8124.33 L1501.46 8123.70 L1501.46 8123.70" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -683,10 +683,10 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1492.93 8133.76 L1492.55 8132.64 L1492.99 8131.53 L1494.19 8128.94 L1495.88 8124.96 L1497.07 8122.30 L1498.33 8119.58 L1499.39 8117.06 L1500.52 8114.75 L1501.34 8113.01 L1501.97 8111.68 L1502.47 8110.56 L1503.10 8109.44 L1503.79 8108.67 L1504.79 8108.40 L1505.67 8108.82 L1507.36 8110.49 L1509.18 8112.38 L1511.57 8115.10 L1514.20 8118.04 L1517.46 8121.32 L1520.66 8124.33 L1522.42 8126.00 L1522.42 8126.00" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="431.79" y="8773.29" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="431.79" dy="0">khi nhập sai username hay password, nó auto</tspan><tspan x="431.79" dy="25">nhả ra invalid credential, nhưng mình nghĩ</tspan><tspan x="431.79" dy="25">admin@support.thm là đúng rồi</tspan></text>
+<text x="431.79" y="8773.29" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="431.79" dy="0">khi nhập sai username hay password, nó auto</tspan><tspan x="431.79" dy="25">nhả ra invalid credential, nhưng mình nghĩ</tspan><tspan x="431.79" dy="25">admin@support.thm là đúng rồi</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="506.88" y="8919.63" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="506.88" dy="0">nhưng mà API nội bộ nó xử lý kiểu gì ??7</tspan></text>
+<text x="506.88" y="8919.63" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="506.88" dy="0">nhưng mà API nội bộ nó xử lý kiểu gì ??7</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M912.35 8912.28 L911.97 8911.45 L911.54 8910.47 L911.10 8909.42 L910.72 8908.58 L911.79 8908.02 L916.99 8908.30 L920.82 8908.44 L925.53 8908.58 L928.04 8908.65 L933.37 8908.72 L938.95 8908.86 L944.48 8908.93 L950.00 8908.93 L955.08 8908.93 L959.91 8908.86 L966.12 8908.23 L969.39 8907.81 L972.15 8907.11 L973.34 8906.83 L973.34 8906.83" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -737,10 +737,10 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1503.85 8939.51 L1503.97 8941.74 L1503.47 8944.19 L1502.84 8946.99 L1502.34 8949.92 L1501.97 8952.86 L1501.53 8955.86 L1501.46 8958.73 L1501.34 8960.20 L1501.34 8961.45 L1501.46 8963.55 L1501.46 8965.23 L1501.59 8966.62 L1501.72 8968.09 L1502.09 8965.09 L1502.22 8960.96 L1502.22 8955.86 L1502.22 8950.90 L1502.34 8946.71 L1502.47 8943.14 L1502.72 8940.28 L1503.03 8937.90 L1503.47 8936.36 L1504.04 8935.25 L1504.73 8934.55 L1505.79 8934.20 L1507.11 8934.55 L1509.37 8936.65 L1510.56 8938.18 L1511.32 8939.51 L1511.69 8940.70 L1511.69 8942.38 L1511.06 8943.91 L1509.62 8945.45 L1507.43 8946.78 L1504.66 8947.61 L1501.15 8947.90 L1499.27 8947.96 L1499.27 8947.96" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="990.54" y="8938.05" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="990.54" dy="0">ko truy cập được api.php</tspan></text>
+<text x="990.54" y="8938.05" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="990.54" dy="0">ko truy cập được api.php</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="432.89" y="9020.70" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="432.89" dy="0">Problems signing in? Contact IT Operations @ help@support.thm</tspan></text>
+<text x="432.89" y="9020.70" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="432.89" dy="0">Problems signing in? Contact IT Operations @ help@support.thm</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M852.62 8804.07 L854.00 8803.24 L857.32 8802.33 L864.16 8800.58 L870.00 8799.53 L876.08 8798.49 L882.23 8797.50 L887.94 8796.74 L893.21 8796.11 L898.11 8795.48 L902.56 8794.99 L906.08 8794.43 L907.77 8794.22 L910.72 8793.80 L913.17 8793.52 L914.92 8793.17 L916.37 8792.82 L917.37 8792.34 L918.19 8791.70 L918.19 8791.70" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -749,7 +749,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M915.74 8782.06 L915.24 8781.15 L915.99 8780.38 L917.31 8780.52 L920.26 8782.76 L921.76 8784.44 L922.77 8786.47 L923.14 8787.37 L923.39 8789.26 L922.70 8792.69 L921.45 8795.41 L919.19 8798.41 L917.75 8799.95 L914.05 8803.03 L909.40 8805.75 L906.83 8806.94 L906.83 8806.94" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="933.44" y="8804.51" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="933.44" dy="0">nma cái mật khẩu nó nó dài vcl thì bruteforce kiểu gì?</tspan></text>
+<text x="933.44" y="8804.51" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="933.44" dy="0">nma cái mật khẩu nó nó dài vcl thì bruteforce kiểu gì?</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M895.91 8974.03 L890.89 8973.26 L888.13 8972.98 L881.67 8972.98 L873.64 8974.10 L858.14 8978.92 L847.97 8983.89 L840.07 8989.48 L834.92 8995.00 L832.92 8998.21 L830.53 9004.71 L830.22 9011.35 L832.16 9018.55 L836.93 9026.80 L844.46 9034.97 L854.37 9041.89 L866.80 9047.20 L889.07 9052.44 L913.86 9054.75 L930.74 9054.89 L947.17 9053.70 L963.05 9051.40 L978.30 9048.32 L992.48 9044.54 L1004.96 9040.42 L1015.57 9035.81 L1023.10 9032.18 L1026.17 9030.36 L1033.51 9025.19 L1036.84 9021.83 L1039.03 9018.27 L1040.04 9014.29 L1039.79 9010.02 L1037.90 9004.36 L1033.01 8996.47 L1025.54 8987.59 L1021.03 8983.26 L1011.11 8974.87 L1000.13 8967.25 L988.52 8961.03 L970.45 8955.16 L960.10 8954.12 L947.86 8955.44 L933.75 8959.50 L933.75 8959.50" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -761,7 +761,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M958.15 9066.00 L957.65 9066.84 L957.90 9067.96 L958.91 9070.47 L959.91 9073.76 L960.10 9074.80 L959.85 9078.23 L959.41 9079.56 L957.65 9082.84 L954.58 9086.41 L950.37 9090.11 L944.73 9093.53 L944.73 9093.53" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1009.98" y="9116.61" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1009.98" dy="0">contact cái này kiểu gì ?</tspan></text>
+<text x="1009.98" y="9116.61" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1009.98" dy="0">contact cái này kiểu gì ?</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M1374.91 8764.78 L1374.03 8764.08 L1372.96 8763.38 L1370.77 8762.05 L1368.01 8760.51 L1364.49 8759.05 L1356.65 8756.88 L1349.68 8755.90 L1340.77 8755.13 L1335.88 8755.06 L1325.40 8755.20 L1311.66 8756.25 L1298.61 8757.86 L1288.63 8759.60 L1280.04 8761.91 L1272.07 8764.85 L1262.03 8770.23 L1256.70 8774.42 L1254.75 8776.45 L1251.74 8780.92 L1250.61 8783.37 L1249.61 8790.21 L1251.11 8795.24 L1254.69 8800.84 L1261.21 8807.48 L1271.00 8814.26 L1283.11 8820.33 L1298.42 8826.28 L1314.11 8831.44 L1330.67 8835.71 L1348.05 8839.41 L1366.19 8842.21 L1382.94 8844.24 L1399.82 8845.49 L1416.45 8845.70 L1432.45 8845.07 L1440.29 8844.51 L1455.47 8842.84 L1469.53 8840.53 L1482.39 8837.95 L1497.45 8833.96 L1505.54 8831.17 L1513.32 8828.23 L1520.10 8825.09 L1525.62 8821.94 L1527.94 8820.33 L1531.77 8816.84 L1534.41 8813.07 L1535.41 8808.73 L1534.91 8803.98 L1532.27 8797.83 L1526.75 8790.08 L1517.97 8781.90 L1506.74 8774.14 L1491.68 8766.17 L1474.86 8759.95 L1456.41 8755.13 L1436.52 8751.50 L1415.69 8748.98 L1396.49 8747.44 L1379.05 8746.89 L1362.80 8746.89 L1347.80 8747.38 L1341.84 8747.73 L1335.19 8748.42 L1335.19 8748.42" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -773,7 +773,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1177.14 8716.35 L1175.57 8716.28 L1173.87 8716.28 L1169.73 8716.56 L1165.34 8716.98 L1158.69 8718.02 L1154.61 8719.07 L1150.91 8720.26 L1148.08 8721.45 L1146.77 8722.08 L1144.70 8723.48 L1143.32 8724.87 L1143.00 8726.34 L1143.57 8728.02 L1145.70 8730.19 L1152.48 8733.96 L1159.88 8736.75 L1170.67 8739.62 L1176.63 8740.95 L1176.63 8740.95" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="939.28" y="8713.64" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="939.28" dy="0">liệu có sql injection???</tspan></text>
+<text x="939.28" y="8713.64" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="939.28" dy="0">liệu có sql injection???</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M1190.88 8705.10 L1189.50 8704.82 L1191.69 8704.05 L1195.39 8704.05 L1200.41 8704.40 L1203.30 8704.68 L1210.08 8705.31 L1217.42 8706.21 L1225.76 8707.40 L1234.11 8708.59 L1241.83 8709.71 L1249.10 8710.62 L1259.65 8711.73 L1266.11 8712.30 L1268.81 8712.57 L1273.57 8712.99 L1277.03 8713.13 L1278.28 8713.06 L1279.91 8712.85 L1279.91 8712.85" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -782,7 +782,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1270.25 8702.86 L1271.50 8702.44 L1273.39 8702.09 L1276.65 8701.67 L1278.34 8701.81 L1279.72 8702.02 L1280.73 8702.51 L1281.48 8703.28 L1281.79 8704.54 L1281.23 8706.35 L1279.22 8709.08 L1275.33 8712.50 L1270.12 8716.28 L1263.54 8720.33 L1255.25 8724.73 L1255.25 8724.73" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1278.98" y="8733.27" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="1278.98" dy="0">Dùng sql map check được ko??</tspan></text>
+<text x="1278.98" y="8733.27" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="1278.98" dy="0">Dùng sql map check được ko??</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M377.34 9209.95 L376.02 9210.22 L375.20 9210.64 L376.21 9211.21 L380.35 9212.25 L384.30 9212.74 L386.56 9213.02 L391.45 9213.44 L396.35 9213.86 L401.24 9214.07 L406.14 9214.28 L410.72 9214.14 L414.48 9213.65 L416.11 9213.44 L416.11 9213.44" stroke="#1971c2" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -827,7 +827,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M656.24 9227.98 L655.67 9226.93 L655.30 9225.88 L655.55 9227.49 L655.92 9230.84 L656.36 9238.53 L656.49 9241.61 L656.55 9252.09 L656.49 9259.50 L656.30 9267.04 L656.24 9274.45 L656.05 9281.79 L655.86 9289.06 L655.67 9292.55 L655.30 9299.33 L655.05 9304.99 L654.61 9310.16 L654.29 9314.84 L654.04 9318.48 L653.79 9322.95 L653.60 9324.97 L653.60 9326.44 L654.17 9325.25 L654.17 9325.25" stroke="#1971c2" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="686.42" y="9253.71" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="686.42" dy="0">-vượt qua cơ chế đăng nhập trc</tspan><tspan x="686.42" dy="25"></tspan><tspan x="686.42" dy="25"></tspan><tspan x="686.42" dy="25">- sau đó làm gì thì làm </tspan></text>
+<text x="686.42" y="9253.71" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="686.42" dy="0">-vượt qua cơ chế đăng nhập trc</tspan><tspan x="686.42" dy="25"></tspan><tspan x="686.42" dy="25"></tspan><tspan x="686.42" dy="25">- sau đó làm gì thì làm </tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M999.89 9248.87 L999.20 9249.92 L1000.90 9247.19 L1004.10 9243.00 L1005.35 9241.39 L1008.55 9237.55 L1012.00 9233.43 L1015.77 9229.17 L1019.59 9225.04 L1023.74 9220.99 L1028.57 9216.93 L1033.21 9213.30 L1037.98 9210.15 L1042.75 9207.43 L1046.95 9205.26 L1050.72 9203.66 L1054.10 9202.47 L1057.12 9201.70 L1059.81 9201.28 L1061.01 9201.21 L1062.89 9201.14 L1064.33 9201.14 L1065.52 9201.28 L1065.52 9201.28" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -836,7 +836,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1062.01 9193.80 L1062.70 9193.10 L1063.64 9193.59 L1065.08 9194.50 L1066.90 9195.62 L1068.60 9196.74 L1070.29 9198.35 L1070.92 9199.32 L1070.98 9200.58 L1069.54 9203.80 L1067.28 9207.01 L1063.83 9210.72 L1059.69 9214.14 L1057.55 9215.96 L1057.55 9215.96" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1090.69" y="9204.30" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1090.69" dy="0">bruteforce</tspan></text>
+<text x="1090.69" y="9204.30" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1090.69" dy="0">bruteforce</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M1199.61 9212.60 L1198.61 9211.62 L1197.79 9210.86 L1196.97 9209.95 L1196.54 9208.97 L1196.66 9207.78 L1198.35 9206.24 L1201.87 9204.50 L1203.37 9204.01 L1206.95 9203.03 L1211.15 9202.19 L1215.55 9201.63 L1220.06 9201.21 L1224.39 9200.79 L1228.41 9200.37 L1231.80 9200.02 L1233.43 9199.81 L1239.33 9199.19 L1240.52 9198.77 L1240.52 9198.77" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -893,7 +893,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1057.24 9235.17 L1057.74 9234.41 L1059.00 9234.48 L1060.00 9234.97 L1060.88 9235.87 L1061.38 9236.92 L1061.38 9239.30 L1060.63 9242.16 L1059.00 9245.38 L1057.05 9248.45 L1054.73 9251.25 L1053.41 9252.44 L1053.41 9252.44" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1076.26" y="9257.69" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1076.26" dy="0">SQL injection?==&gt; sql mapp??</tspan></text>
+<text x="1076.26" y="9257.69" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1076.26" dy="0">SQL injection?==&gt; sql mapp??</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M1012.94 9250.83 L1013.13 9253.48 L1013.70 9256.07 L1014.45 9259.08 L1015.33 9262.22 L1015.83 9264.11 L1016.77 9267.81 L1018.03 9271.52 L1019.53 9275.01 L1021.48 9278.29 L1023.92 9281.37 L1028.63 9285.14 L1032.52 9287.17 L1036.91 9288.77 L1039.17 9289.41 L1043.88 9290.52 L1048.39 9291.36 L1052.66 9292.13 L1056.49 9292.76 L1059.56 9293.25 L1062.39 9293.67 L1064.90 9293.95 L1066.84 9294.09 L1068.47 9294.22 L1069.73 9294.37 L1071.23 9294.37 L1072.55 9294.02 L1072.55 9294.02" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -902,7 +902,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1076.69 9285.35 L1078.07 9285.35 L1079.14 9285.77 L1080.08 9286.33 L1080.83 9287.10 L1081.08 9288.22 L1080.08 9291.15 L1077.82 9294.02 L1073.87 9297.09 L1064.14 9301.84 L1060.13 9303.31 L1060.13 9303.31" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1111.64" y="9305.61" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1111.64" dy="0">tận dụng cái helpsupport kia kiểu gì ?</tspan></text>
+<text x="1111.64" y="9305.61" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1111.64" dy="0">tận dụng cái helpsupport kia kiểu gì ?</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M759.26 9335.23 L758.45 9334.74 L757.45 9335.09 L756.82 9336.07 L756.06 9338.45 L755.31 9341.25 L754.62 9344.39 L753.93 9349.42 L753.81 9352.98 L753.68 9356.48 L753.87 9359.69 L754.31 9362.77 L754.56 9364.17 L755.12 9366.68 L755.88 9369.13 L756.88 9371.36 L758.26 9373.11 L760.65 9374.93 L762.15 9375.63 L763.66 9376.05 L765.10 9376.12 L766.36 9376.12 L767.61 9376.05 L770.18 9375.35 L772.50 9374.44 L774.70 9373.46 L776.65 9372.20 L778.28 9370.74 L779.03 9369.97 L779.59 9369.06 L779.59 9369.06" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -971,7 +971,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1096.90 9310.63 L1098.40 9310.92 L1100.41 9313.22 L1101.54 9315.25 L1102.29 9317.55 L1102.79 9319.86 L1102.79 9322.23 L1102.17 9325.03 L1100.85 9328.11 L1098.90 9331.18 L1096.27 9334.33 L1093.07 9337.54 L1089.43 9340.13 L1089.43 9340.13" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1125.33" y="9342.03" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1125.33" dy="0">nikkto quét ra được cái gì?</tspan><tspan x="1125.33" dy="25"></tspan></text>
+<text x="1125.33" y="9342.03" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1125.33" dy="0">nikkto quét ra được cái gì?</tspan><tspan x="1125.33" dy="25"></tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M1009.05 9257.45 L1007.99 9257.60 L1006.29 9260.32 L1005.04 9263.33 L1003.85 9267.31 L1002.84 9271.92 L1002.09 9277.09 L1001.65 9282.75 L1001.65 9288.62 L1001.84 9291.98 L1003.16 9302.18 L1004.79 9308.89 L1007.11 9315.95 L1009.99 9322.52 L1013.13 9328.25 L1016.90 9333.98 L1020.79 9338.94 L1024.68 9343.41 L1028.82 9347.67 L1033.08 9351.66 L1037.41 9355.29 L1041.62 9358.58 L1045.57 9361.58 L1048.96 9363.89 L1052.28 9365.84 L1055.48 9367.59 L1058.31 9369.13 L1061.01 9370.25 L1063.70 9371.16 L1066.40 9371.78 L1069.04 9372.27 L1071.74 9372.48 L1073.99 9372.48 L1077.82 9372.27 L1080.46 9371.99 L1081.52 9371.85 L1083.47 9371.51 L1085.16 9371.16 L1086.67 9370.81 L1088.80 9370.32 L1090.43 9369.83 L1091.88 9369.34 L1093.13 9368.78 L1094.32 9368.36 L1095.33 9367.94 L1096.27 9367.59 L1097.40 9367.17 L1097.40 9367.17" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -980,7 +980,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1100.16 9358.72 L1099.16 9358.93 L1099.59 9360.04 L1100.47 9362.77 L1101.10 9365.22 L1101.41 9367.94 L1101.35 9370.81 L1100.72 9373.88 L1099.41 9376.96 L1097.27 9380.17 L1096.02 9381.78 L1090.81 9386.53 L1086.73 9388.83 L1082.97 9390.44 L1082.97 9390.44" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1127.64" y="9395.83" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1127.64" dy="0">cơ chế đặt lại mật khẩu??</tspan></text>
+<text x="1127.64" y="9395.83" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1127.64" dy="0">cơ chế đặt lại mật khẩu??</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M1144.21 9373.25 L1146.53 9373.95 L1149.66 9374.30 L1154.06 9374.93 L1159.52 9375.84 L1165.92 9376.89 L1173.45 9378.35 L1181.79 9379.96 L1190.51 9381.71 L1204.06 9384.50 L1216.11 9386.95 L1221.26 9387.93 L1230.54 9389.88 L1240.02 9391.70 L1251.06 9394.01 L1259.72 9395.89 L1268.00 9397.64 L1275.85 9399.46 L1282.43 9401.00 L1288.77 9402.60 L1294.73 9404.07 L1302.51 9405.75 L1307.03 9406.59 L1311.36 9407.36 L1314.81 9407.91 L1317.82 9408.40 L1319.20 9408.61 L1320.46 9408.82 L1322.28 9409.10 L1323.85 9409.38 L1324.91 9409.52 L1326.29 9409.66 L1327.61 9409.87 L1328.86 9410.01 L1330.31 9410.08 L1331.56 9410.22 L1331.56 9410.22" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1013,10 +1013,10 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1101.41 9417.28 L1102.17 9416.79 L1103.05 9417.35 L1104.11 9418.47 L1105.24 9420.28 L1106.06 9422.52 L1106.43 9424.89 L1106.06 9428.81 L1105.24 9431.74 L1102.29 9436.92 L1098.90 9440.69 L1094.83 9444.33 L1090.18 9447.26 L1087.86 9448.59 L1087.86 9448.59" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1193.34" y="9491.43" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1193.34" dy="0">cookie: đoán được ko </tspan></text>
+<text x="1193.34" y="9491.43" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1193.34" dy="0">cookie: đoán được ko </tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1108.95" y="9444.13" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1108.95" dy="0">ứng dụng này authorise bằng cookie</tspan></text>
+<text x="1108.95" y="9444.13" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1108.95" dy="0">ứng dụng này authorise bằng cookie</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M1387.78 9457.32 L1389.79 9457.67 L1394.25 9457.18 L1396.00 9456.97 L1399.89 9456.83 L1404.72 9456.62 L1409.87 9456.48 L1415.26 9456.41 L1420.79 9456.13 L1426.18 9455.85 L1431.33 9455.43 L1435.97 9455.16 L1438.10 9454.94 L1441.87 9454.60 L1446.64 9454.11 L1448.08 9453.97 L1450.28 9453.69 L1451.91 9453.48 L1453.29 9453.27 L1454.48 9452.92 L1455.48 9452.50 L1456.80 9451.66 L1458.18 9450.26 L1459.25 9448.65 L1459.94 9447.12 L1460.38 9445.51 L1460.44 9443.97 L1460.00 9440.48 L1459.69 9439.08 L1458.68 9436.36 L1457.43 9433.63 L1455.80 9430.83 L1453.79 9428.25 L1451.59 9425.94 L1449.21 9423.85 L1446.45 9421.89 L1443.19 9420.42 L1441.37 9419.65 L1435.72 9417.84 L1431.77 9417.14 L1428.06 9416.79 L1424.30 9416.72 L1419.97 9417.21 L1415.58 9418.19 L1411.12 9419.65 L1408.74 9420.63 L1404.22 9422.59 L1399.96 9424.69 L1396.38 9426.99 L1391.48 9430.34 L1388.85 9432.51 L1386.90 9434.89 L1385.59 9436.92 L1384.90 9439.22 L1385.40 9442.30 L1386.72 9444.60 L1389.35 9447.12 L1392.80 9449.42 L1396.76 9451.31 L1403.28 9453.55 L1405.48 9453.97 L1405.48 9453.97" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1115,7 +1115,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1137.68 9609.03 L1137.81 9607.71 L1138.81 9607.36 L1139.75 9607.71 L1140.38 9608.61 L1140.69 9609.87 L1140.69 9611.83 L1140.19 9614.69 L1139.25 9617.56 L1136.49 9621.96 L1133.54 9624.83 L1129.40 9627.76 L1124.13 9630.14 L1121.37 9631.05 L1121.37 9631.05" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1000.83" y="9612.33" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1000.83" dy="0">quét sqlmap</tspan></text>
+<text x="1000.83" y="9612.33" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1000.83" dy="0">quét sqlmap</tspan></text>
 </g>
 <a href="../0-asset/pasted-image-20260829233242_469.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260829233242_469.png"><g transform="translate(-162.80,29.87)">
 <image x="1156.0985464896144" y="9544.725605480224" width="697.533260569853" height="169.0201749749877" href="../0-asset/pasted-image-20260829233242_469.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
@@ -1127,7 +1127,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1462.07 9331.11 L1461.64 9330.13 L1463.33 9329.65 L1464.08 9330.35 L1465.27 9332.23 L1465.84 9334.33 L1465.84 9336.35 L1465.34 9338.87 L1464.40 9341.53 L1462.83 9343.97 L1460.38 9346.28 L1456.93 9347.89 L1454.98 9348.44 L1454.98 9348.44" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1477.45" y="9349.16" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1477.45" dy="0">missconfiguration</tspan></text>
+<text x="1477.45" y="9349.16" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1477.45" dy="0">missconfiguration</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M1247.77 9238.61 L1247.59 9237.49 L1247.46 9236.16 L1246.90 9235.32 L1243.95 9237.42 L1240.50 9240.21 L1236.10 9243.70 L1230.58 9247.97 L1224.75 9252.30 L1221.73 9254.40 L1215.96 9258.31 L1208.81 9263.07 L1204.35 9265.65 L1200.72 9267.61 L1197.70 9268.94 L1195.13 9269.63 L1193.19 9269.36 L1193.19 9269.36" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1145,7 +1145,7 @@ curl -s http://10.48.187.204/footer.php
 <path d="M1169.53 9134.62 L1169.41 9133.36 L1169.91 9132.45 L1170.79 9131.82 L1171.73 9131.47 L1172.86 9131.75 L1173.48 9132.45 L1173.61 9133.64 L1173.48 9135.53 L1172.54 9138.18 L1171.10 9140.98 L1168.84 9144.05 L1165.45 9147.13 L1161.31 9149.78 L1159.55 9150.76 L1159.55 9150.76" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1203.18" y="9155.49" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1203.18" dy="0">pathtravesal trên url pagram</tspan></text>
+<text x="1203.18" y="9155.49" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1203.18" dy="0">pathtravesal trên url pagram</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 
@@ -1202,7 +1202,7 @@ Bắt request <code>footer.php?skin=default</code> ném vào Burp Repeater, đ�
 
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="311.26" y="9786.02" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="311.26" dy="0">mình ném cây thư mục cho con gemini , bảo nó phân tích thử</tspan></text>
+<text x="311.26" y="9786.02" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="311.26" dy="0">mình ném cây thư mục cho con gemini , bảo nó phân tích thử</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M242.61 9876.37 L242.68 9875.19 L243.49 9874.70 L246.19 9874.62 L249.39 9874.35 L251.34 9874.21 L256.36 9873.86 L262.25 9873.51 L272.86 9873.09 L280.01 9873.02 L287.04 9873.09 L293.75 9873.23 L299.59 9873.51 L305.17 9873.93 L307.93 9874.07 L313.27 9874.49 L318.47 9874.84 L323.74 9875.19 L328.70 9875.32 L333.41 9875.46 L339.74 9875.26 L343.63 9875.11 L347.15 9874.84 L348.78 9874.70 L351.85 9874.35 L354.68 9874.00 L361.58 9872.25 L363.46 9871.48 L367.98 9868.97 L369.23 9867.91 L370.61 9866.52 L371.56 9865.12 L372.06 9863.65 L372.18 9862.04 L371.93 9859.32 L370.93 9856.39 L368.98 9853.10 L365.97 9849.75 L345.58 9838.15 L341.75 9836.82 L304.79 9827.87 L295.70 9826.62 L291.24 9826.06 L281.83 9825.29 L272.29 9825.01 L262.82 9825.22 L253.72 9826.06 L245.00 9827.52 L232.95 9830.95 L225.61 9833.95 L218.96 9837.59 L216.01 9839.54 L211.12 9843.60 L207.48 9847.51 L204.97 9851.42 L203.52 9855.06 L203.27 9858.55 L204.21 9862.26 L206.41 9866.31 L209.61 9870.57 L213.63 9874.70 L218.77 9879.10 L224.61 9882.87 L231.26 9886.22 L238.72 9888.74 L246.82 9890.70 L255.67 9891.89 L265.27 9892.38 L275.05 9892.02 L275.05 9892.02" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1289,7 +1289,7 @@ Bắt request <code>footer.php?skin=default</code> ném vào Burp Repeater, đ�
 <path d="M1622.99 10035.16 L1622.68 10036.07 L1622.87 10037.60 L1623.12 10038.79 L1623.69 10040.82 L1624.19 10042.57 L1624.56 10044.04 L1624.88 10045.22 L1625.32 10046.48 L1625.76 10047.53 L1627.14 10047.46 L1629.71 10046.06 L1633.03 10043.97 L1637.36 10040.89 L1641.76 10037.26 L1643.83 10035.23 L1648.22 10030.90 L1648.22 10030.90" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1552.79" y="9953.06" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="1552.79" dy="0">mình bỏ qua chi tiết này</tspan></text>
+<text x="1552.79" y="9953.06" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="1552.79" dy="0">mình bỏ qua chi tiết này</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M1273.95 9280.00 L1273.13 9278.04 L1273.19 9276.85 L1274.14 9276.22 L1277.84 9276.92 L1280.91 9278.18 L1284.49 9280.00 L1288.63 9282.16 L1293.46 9284.89 L1298.29 9287.75 L1303.00 9290.62 L1307.45 9293.48 L1309.59 9294.81 L1313.04 9297.26 L1317.49 9300.75 L1319.88 9302.78 L1321.88 9304.53 L1323.64 9306.21 L1325.27 9307.74 L1326.03 9308.51 L1327.28 9309.56 L1328.47 9310.33 L1329.48 9310.75 L1329.48 9310.75" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1379,10 +1379,10 @@ Bắt request <code>footer.php?skin=default</code> ném vào Burp Repeater, đ�
 <path d="M1318.15 10406.14 L1317.40 10405.44 L1318.09 10404.67 L1319.28 10404.95 L1321.48 10405.86 L1323.30 10407.19 L1324.68 10409.07 L1325.24 10410.05 L1325.75 10412.64 L1325.24 10415.58 L1322.73 10420.89 L1319.28 10424.73 L1314.33 10428.71 L1314.33 10428.71" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1359.44" y="10438.65" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="1359.44" dy="0">khả năng có </tspan><tspan x="1359.44" dy="25">    nối chuỗi skins/input.php</tspan><tspan x="1359.44" dy="25">    cho vào include</tspan><tspan x="1359.44" dy="25">    </tspan><tspan x="1359.44" dy="25"></tspan></text>
+<text x="1359.44" y="10438.65" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="1359.44" dy="0">khả năng có </tspan><tspan x="1359.44" dy="25">    nối chuỗi skins/input.php</tspan><tspan x="1359.44" dy="25">    cho vào include</tspan><tspan x="1359.44" dy="25">    </tspan><tspan x="1359.44" dy="25"></tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="837.48" y="10930.68" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="837.48" dy="0">mở file config.php trắng tinh==&gt; do cái này file này nó thực thi</tspan></text>
+<text x="837.48" y="10930.68" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="837.48" dy="0">mở file config.php trắng tinh==&gt; do cái này file này nó thực thi</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M962.97 10963.23 L961.77 10961.48 L961.27 10960.79 L960.52 10959.39 L959.83 10958.41 L959.33 10957.64 L958.64 10956.81 L957.88 10956.03 L956.06 10959.04 L954.68 10962.54 L953.49 10966.38 L952.68 10970.50 L952.30 10974.56 L952.49 10978.40 L953.37 10982.66 L953.87 10984.69 L956.63 10990.28 L959.26 10993.49 L963.03 10996.15 L968.05 10998.17 L974.01 10999.43 L980.85 10999.92 L988.06 10999.85 L995.34 10999.22 L998.98 10998.81 L1005.88 10997.83 L1012.41 10996.64 L1018.43 10995.38 L1026.40 10993.49 L1030.86 10992.30 L1034.87 10991.26 L1038.26 10990.42 L1041.15 10989.65 L1042.40 10989.44 L1044.54 10988.81 L1044.54 10988.81" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1391,10 +1391,10 @@ Bắt request <code>footer.php?skin=default</code> ném vào Burp Repeater, đ�
 <path d="M1035.56 10985.88 L1034.56 10985.46 L1035.06 10984.69 L1036.06 10984.97 L1037.45 10985.81 L1039.01 10987.14 L1039.70 10987.97 L1040.71 10989.86 L1040.96 10992.79 L1040.21 10995.38 L1038.64 10998.25 L1036.19 11001.11 L1032.93 11003.70 L1029.41 11005.58 L1027.53 11006.28 L1027.53 11006.28" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1073.16" y="10988.06" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="1073.16" dy="0">dùng php wrapper</tspan></text>
+<text x="1073.16" y="10988.06" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="1073.16" dy="0">dùng php wrapper</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="489.26" y="11023.06" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="489.26" dy="0">ok buồn vl là mình phải xem writeup, nó đơn thuần là bruteforce password cho thằng </tspan><tspan x="489.26" dy="20">help@support.thm thôi</tspan></text>
+<text x="489.26" y="11023.06" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="489.26" dy="0">ok buồn vl là mình phải xem writeup, nó đơn thuần là bruteforce password cho thằng </tspan><tspan x="489.26" dy="20">help@support.thm thôi</tspan></text>
 </g>
 <a href="../0-asset/pasted-image-20260830014022_922.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830014022_922.png"><g transform="translate(-162.80,29.87)">
 <image x="419.55449611349894" y="11099.928882960798" width="613.9492351536247" height="190.8159636076291" href="../0-asset/pasted-image-20260830014022_922.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
@@ -1415,7 +1415,7 @@ Bắt request <code>footer.php?skin=default</code> ném vào Burp Repeater, đ�
 <path d="M1144.29 11162.90 L1144.07 11161.78 L1144.29 11160.78 L1145.14 11160.40 L1146.26 11160.47 L1148.50 11161.59 L1149.35 11162.15 L1150.64 11163.47 L1151.48 11165.28 L1151.59 11167.09 L1151.09 11169.84 L1149.57 11172.91 L1146.71 11176.47 L1142.61 11180.22 L1137.33 11183.79 L1134.47 11185.16 L1128.35 11187.73 L1128.35 11187.73" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="1189.49" y="11110.60" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="1189.49" dy="0">chạy sqlmap và  thử LFI với</tspan><tspan x="1189.49" dy="20">footer.php lòi shit ra cũng ko</tspan><tspan x="1189.49" dy="20">đc, tiến hành bruteforc, tự</tspan><tspan x="1189.49" dy="20">nhiên nhớ ra web nó ko cho</tspan><tspan x="1189.49" dy="20">ratelimit thì nó cũng gợi ý dùng</tspan><tspan x="1189.49" dy="20">bruteforc rồi</tspan></text>
+<text x="1189.49" y="11110.60" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="1189.49" dy="0">chạy sqlmap và  thử LFI với</tspan><tspan x="1189.49" dy="20">footer.php lòi shit ra cũng ko</tspan><tspan x="1189.49" dy="20">đc, tiến hành bruteforc, tự</tspan><tspan x="1189.49" dy="20">nhiên nhớ ra web nó ko cho</tspan><tspan x="1189.49" dy="20">ratelimit thì nó cũng gợi ý dùng</tspan><tspan x="1189.49" dy="20">bruteforc rồi</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M342.33 9120.69 C402.49 9119.13,462.78 9120.50,626.57 9119.86 M340.85 9120.77 C409.43 9118.54,477.48 9119.39,625.82 9120.99 M626.05 9119.54 C628.73 9182.85,626.70 9247.38,625.12 9324.92 M626.77 9121.03 C625.25 9174.27,625.41 9227.86,626.32 9326.34 M626.02 9326.85 C516.44 9329.12,406.13 9328.65,341.99 9326.30 M626.02 9325.81 C568.38 9323.84,510.25 9323.47,341.24 9325.45 M343.13 9325.85 C339.61 9247.26,340.70 9170.84,342.37 9122.48 M342.14 9326.44 C343.91 9282.30,343.95 9239.68,342.00 9120.26" stroke="#c2255c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1496,13 +1496,13 @@ Bắt request <code>footer.php?skin=default</code> ném vào Burp Repeater, đ�
 <path d="M1843.67 9195.48 L1845.05 9195.89 L1846.31 9196.94 L1848.31 9198.55 L1850.76 9200.65 L1853.71 9203.02 L1856.66 9205.33 L1858.04 9206.52 L1858.04 9206.52" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <a href="../tools/dùng-fuff-trong-thực-tế" class="excalidraw-node-link" target="_self" title="dùng fuff trong thực tế"><g transform="translate(-162.80,29.87)">
-<text x="648.65" y="11688.98" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="648.65" dy="0">📍dùng fuff trong thực tế</tspan></text>
+<text x="648.65" y="11688.98" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="648.65" dy="0">📍dùng fuff trong thực tế</tspan></text>
 </g></a>
 <g transform="translate(-162.80,29.87)">
-<text x="727.72" y="11724.28" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="727.72" dy="0">ok nhé, quay lại phần /tool để biết cách dùng -f và -request nha &lt;3 </tspan></text>
+<text x="727.72" y="11724.28" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="727.72" dy="0">ok nhé, quay lại phần /tool để biết cách dùng -f và -request nha &lt;3 </tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="642.00" y="11619.51" font-family="Cascadia, Fira Code, monospace" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="642.00" dy="0">ffuf -request login_post.txt -request-proto http -w /usr/share/seclists/Passwords/Common-Credentials/10k-most-</tspan><tspan x="642.00" dy="20">common.txt -fr &quot;Invalid credentials&quot;</tspan></text>
+<text x="642.00" y="11619.51" font-family="Cascadia Code, Consolas, monospace" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="642.00" dy="0">ffuf -request login_post.txt -request-proto http -w /usr/share/seclists/Passwords/Common-Credentials/10k-most-</tspan><tspan x="642.00" dy="20">common.txt -fr &quot;Invalid credentials&quot;</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M1103.38 11599.32 L1100.23 11600.28 L1099.27 11600.67 L1097.49 11601.63 L1096.02 11602.94 L1093.88 11605.94 L1092.56 11608.76 L1091.40 11611.93 L1090.89 11613.57 L1090.13 11616.97 L1089.67 11620.19 L1089.57 11623.13 L1089.87 11625.79 L1090.74 11628.17 L1092.26 11630.26 L1094.49 11631.96 L1097.54 11633.15 L1101.10 11633.82 L1105.16 11634.11 L1109.22 11633.94 L1113.34 11633.37 L1117.10 11632.64 L1120.50 11631.68 L1123.45 11630.37 L1125.83 11628.62 L1127.66 11626.42 L1128.27 11625.00 L1129.08 11621.77 L1129.19 11618.10 L1128.17 11611.82 L1126.60 11607.46 L1124.51 11603.50 L1121.92 11600.16 L1118.93 11597.34 L1115.67 11595.36 L1112.32 11594.28 L1110.54 11594.00 L1107.19 11594.05 L1103.69 11594.90 L1100.64 11596.21 L1098.05 11598.07 L1096.88 11599.20 L1096.88 11599.20" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1526,7 +1526,7 @@ Bắt request <code>footer.php?skin=default</code> ném vào Burp Repeater, đ�
 <image x="549.6194248935433" y="12114.82237695125" width="904.309417364391" height="281.0817415828494" href="../0-asset/pasted-image-20260830022359_962.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
 <g transform="translate(-162.80,29.87)">
-<text x="486.94" y="12360.28" font-family="Cascadia, Fira Code, monospace" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="486.94" dy="0">ok bây giờ tiến tới thằng này</tspan></text>
+<text x="486.94" y="12360.28" font-family="Cascadia Code, Consolas, monospace" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="486.94" dy="0">ok bây giờ tiến tới thằng này</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M836.63 12180.74 L836.76 12179.55 L836.94 12178.36 L837.38 12177.46 L838.45 12177.81 L839.33 12178.85 L840.77 12180.88 L841.40 12182.00 L842.72 12184.45 L843.97 12186.89 L845.29 12189.20 L846.48 12191.08 L847.05 12191.92 L848.11 12193.18 L848.99 12193.95 L850.37 12193.81 L852.32 12191.43 L853.64 12188.71 L854.26 12187.31 L855.52 12184.45 L856.58 12181.58 L857.78 12178.78 L859.03 12176.20 L860.47 12173.82 L862.36 12171.31 L864.62 12168.93 L864.62 12168.93" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1562,7 +1562,7 @@ Bắt request <code>footer.php?skin=default</code> ném vào Burp Repeater, đ�
 <path d="M560.52 12963.86 L559.99 12963.09 L561.00 12963.15 L562.87 12963.98 L563.78 12964.46 L565.54 12965.35 L567.94 12967.07 L569.27 12968.44 L570.12 12970.04 L570.34 12970.87 L570.23 12973.67 L569.32 12975.92 L567.62 12978.36 L565.11 12980.62 L563.67 12981.63 L560.31 12983.35 L556.79 12984.60 L553.64 12985.43 L550.82 12985.96 L550.82 12985.96" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="583.34" y="12992.40" font-family="Cascadia, Fira Code, monospace" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="583.34" dy="0">nhận tham số file này==&gt; RFI hoặc LFI</tspan></text>
+<text x="583.34" y="12992.40" font-family="Cascadia Code, Consolas, monospace" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="583.34" dy="0">nhận tham số file này==&gt; RFI hoặc LFI</tspan></text>
 </g>
 <g transform="translate(-162.80,29.87)">
 <path d="M406.44 12816.02 L404.15 12813.88 L403.24 12813.11 L401.00 12811.81 L398.28 12810.50 L393.70 12809.73 L390.07 12810.02 L385.32 12811.39 L379.94 12814.00 L376.20 12816.50 L368.74 12822.50 L361.54 12829.45 L354.71 12837.23 L348.74 12845.78 L343.35 12854.81 L338.76 12864.32 L334.98 12874.35 L330.50 12890.27 L329.32 12895.80 L327.46 12906.67 L326.44 12915.70 L325.80 12926.51 L326.02 12935.66 L327.08 12947.48 L328.90 12958.82 L331.40 12969.57 L334.28 12979.61 L337.70 12988.82 L339.51 12993.10 L344.04 13002.84 L347.46 13008.48 L351.24 13013.83 L355.51 13018.46 L360.10 13022.56 L365.00 13026.12 L370.12 13029.15 L374.76 13031.29 L377.22 13032.24 L381.80 13033.73 L386.12 13034.80 L390.07 13035.51 L395.40 13035.93 L398.55 13036.10 L401.59 13036.10 L404.58 13035.87 L407.30 13035.57 L409.96 13035.21 L411.19 13035.09 L413.54 13034.74 L415.83 13034.38 L417.91 13034.02 L418.87 13033.85 L420.42 13033.61 L423.03 13033.25 L424.10 13033.13 L425.00 13033.01 L425.96 13032.90 L427.08 13032.72 L428.04 13032.60 L429.16 13032.54 L429.16 13032.54" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1571,7 +1571,7 @@ Bắt request <code>footer.php?skin=default</code> ném vào Burp Repeater, đ�
 <path d="M426.76 13023.09 L426.12 13022.68 L425.22 13022.26 L426.34 13022.20 L428.10 13022.62 L429.16 13022.92 L432.20 13024.28 L433.06 13024.82 L435.08 13027.43 L435.78 13029.69 L435.62 13032.42 L434.50 13035.93 L432.04 13040.20 L428.31 13044.89 L423.72 13049.23 L421.32 13051.07 L416.58 13053.27 L416.58 13053.27" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="454.35" y="13043.16" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="454.35" dy="0">đó , vẫn cần nikto, tại cái thằng AI nó recon thiếu</tspan><tspan x="454.35" dy="20">này, nó ko nhận ra info.php nhận tham số đầu vào</tspan><tspan x="454.35" dy="20">là file</tspan></text>
+<text x="454.35" y="13043.16" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="454.35" dy="0">đó , vẫn cần nikto, tại cái thằng AI nó recon thiếu</tspan><tspan x="454.35" dy="20">này, nó ko nhận ra info.php nhận tham số đầu vào</tspan><tspan x="454.35" dy="20">là file</tspan></text>
 </g>
 <a href="../0-asset/pasted-image-20260830023916_804.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830023916_804.png"><g transform="translate(-162.80,29.87)">
 <image x="411.6334883805623" y="13115.630437534583" width="682.1214571811187" height="336.72662353515636" href="../0-asset/pasted-image-20260830023916_804.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
@@ -1586,7 +1586,7 @@ Bắt request <code>footer.php?skin=default</code> ném vào Burp Repeater, đ�
 <path d="M883.08 13244.64 L883.99 13244.46 L885.16 13244.64 L888.04 13245.71 L889.75 13246.96 L891.19 13248.38 L892.26 13250.16 L892.95 13252.30 L892.84 13254.74 L891.94 13257.71 L889.75 13261.69 L885.75 13266.44 L878.71 13272.56 L874.71 13275.53 L874.71 13275.53" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="906.39" y="13282.74" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="906.39" dy="0">sau khi login thành công nó có thêm trường isIUser kẹp vào để auth</tspan></text>
+<text x="906.39" y="13282.74" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="906.39" dy="0">sau khi login thành công nó có thêm trường isIUser kẹp vào để auth</tspan></text>
 </g>
 <a href="../0-asset/pasted-image-20260830030145_048.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260830030145_048.png"><g transform="translate(-162.80,29.87)">
 <image x="445.77377076064147" y="13353.77792182558" width="679.4438233170774" height="254.88916732033053" href="../0-asset/pasted-image-20260830030145_048.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
@@ -1676,10 +1676,10 @@ Bắt request <code>footer.php?skin=default</code> ném vào Burp Repeater, đ�
 <path d="M681.59 14416.90 L682.02 14416.07 L683.08 14416.01 L684.10 14416.19 L686.39 14417.20 L687.78 14418.15 L688.26 14418.74 L688.84 14419.99 L689.06 14421.36 L688.42 14424.51 L687.19 14426.70 L686.34 14428.01 L686.34 14428.01" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-162.80,29.87)">
-<text x="691.18" y="14406.44" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="691.18" dy="0">cái này phân tích bên trên</tspan><tspan x="691.18" dy="20">==&gt; vào được config.php nhờ LFI </tspan></text>
+<text x="691.18" y="14406.44" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="691.18" dy="0">cái này phân tích bên trên</tspan><tspan x="691.18" dy="20">==&gt; vào được config.php nhờ LFI </tspan></text>
 </g>
 <a href="./writeup_lab_thm_support" class="excalidraw-node-link" target="_self" title="writeup_LAB_THM_support"><g transform="translate(-162.80,29.87)">
-<text x="367.21" y="26.13" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="367.21" dy="0">📍writeup_LAB_THM_support</tspan></text>
+<text x="367.21" y="26.13" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="367.21" dy="0">📍writeup_LAB_THM_support</tspan></text>
 </g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M1326.70 13028.98 L1326.70 13027.98 L1326.70 13027.98" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>

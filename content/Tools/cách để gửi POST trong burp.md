@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-epxch1">
+<div class="excalidraw-container" id="ex-jkmay4">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -93,10 +93,10 @@ Content-Length: 35
 <path d="M438.01 929.99 L437.69 930.82 L437.69 930.82" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(20.45,-21.59)">
-<text x="216.06" y="915.77" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="216.06" dy="0">2-cấu trúc của POST nhìn như nào để còn viết</tspan></text>
+<text x="216.06" y="915.77" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="216.06" dy="0">2-cấu trúc của POST nhìn như nào để còn viết</tspan></text>
 </g>
 <g transform="translate(20.45,-21.59)">
-<text x="171.14" y="81.59" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="171.14" dy="0">1-cách tạo POST request tại Burp</tspan></text>
+<text x="171.14" y="81.59" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="171.14" dy="0">1-cách tạo POST request tại Burp</tspan></text>
 </g>
 <g transform="translate(20.45,-21.59)">
 <path d="M597.85 955.89 L598.91 955.65 L600.89 956.07 L602.17 956.31 L605.10 956.90 L608.62 957.61 L612.46 958.33 L616.62 959.16 L621.31 960.05 L626.22 960.88 L630.97 961.65 L638.11 962.90 L642.70 963.73 L644.94 964.09 L649.26 964.92 L653.63 965.57 L657.90 966.29 L662.22 966.82 L666.33 967.35 L670.11 967.89 L673.63 968.42 L676.57 968.78 L678.01 968.96 L681.58 969.43 L683.29 969.61 L684.51 969.85 L685.53 969.97 L686.65 970.21 L687.66 970.32 L688.67 970.50 L689.74 970.62 L689.74 970.62" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -123,7 +123,7 @@ Content-Length: 35
 <path d="M155.43 1239.71 L154.72 1239.12 L154.19 1239.91 L153.59 1241.36 L152.70 1243.74 L151.99 1246.51 L151.28 1249.75 L150.63 1252.98 L150.16 1256.08 L149.86 1259.05 L149.68 1261.56 L149.68 1263.47 L149.92 1264.99 L150.33 1266.18 L150.99 1266.97 L151.76 1267.50 L153.18 1267.83 L155.19 1267.56 L157.92 1266.90 L161.89 1265.65 L164.38 1264.79 L166.57 1263.60 L167.70 1263.01 L167.70 1263.01" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(20.45,-21.59)">
-<text x="19.55" y="1303.07" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="19.55" dy="0">cái này là trường tham</tspan><tspan x="19.55" dy="25">số truyền vào à</tspan></text>
+<text x="19.55" y="1303.07" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="19.55" dy="0">cái này là trường tham</tspan><tspan x="19.55" dy="25">số truyền vào à</tspan></text>
 </g>
 </svg>
     </div>

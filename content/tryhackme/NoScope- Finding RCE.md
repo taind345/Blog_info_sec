@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-180x84">
+<div class="excalidraw-container" id="ex-j4xq3w">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -85,13 +85,13 @@ tags:
 <path d="M177.03 446.80 C293.74 444.65,412.24 444.35,737.22 446.21 M177.17 446.92 C364.52 445.88,552.28 445.62,736.50 446.73 M735.44 446.27 C736.20 482.29,737.04 520.32,734.71 572.12 M735.78 446.73 C736.53 479.06,736.74 513.06,736.80 573.67 M737.15 574.20 C597.99 573.75,460.69 572.79,177.37 574.07 M736.09 573.71 C516.19 571.66,296.35 572.27,176.96 573.92 M175.97 574.73 C177.85 544.09,177.16 512.12,178.64 448.30 M176.48 573.90 C176.82 542.94,178.33 513.64,177.43 446.13" stroke="#c2255c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-56.90,-122.44)">
-<text x="766.73" y="435.02" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="766.73" dy="0">sắp mất việc rồi =))</tspan></text>
+<text x="766.73" y="435.02" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="766.73" dy="0">sắp mất việc rồi =))</tspan></text>
 </g>
 <g transform="translate(-56.90,-122.44)">
-<text x="114.75" y="178.44" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="114.75" dy="0">II) NoScope</tspan></text>
+<text x="114.75" y="178.44" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="114.75" dy="0">II) NoScope</tspan></text>
 </g>
 <g transform="translate(-56.90,-122.44)">
-<text x="96.90" y="942.91" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="96.90" dy="0">III)</tspan></text>
+<text x="96.90" y="942.91" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="96.90" dy="0">III)</tspan></text>
 </g>
 <g transform="translate(-56.90,-122.44)">
 <path d="M542.42 336.53 L543.27 336.29 L544.87 336.11 L547.64 335.87 L551.11 335.63 L555.43 335.58 L560.12 335.63 L565.72 335.87 L568.66 336.11 L575.00 336.35 L585.35 336.94 L593.24 337.24 L601.67 337.36 L610.26 337.42 L619.06 337.36 L627.80 337.30 L636.39 337.24 L640.66 337.18 L649.08 337.06 L657.35 337.18 L664.87 337.18 L671.96 337.24 L678.84 337.30 L688.98 337.54 L695.54 337.60 L701.88 337.77 L704.92 337.89 L710.84 338.07 L716.39 338.37 L721.30 338.66 L726.10 338.90 L730.84 339.08 L735.43 339.26 L739.86 339.38 L746.31 339.44 L748.44 339.44 L752.60 339.44 L756.71 339.44 L760.44 339.38 L763.80 339.38 L767.00 339.32 L769.99 339.38 L772.55 339.38 L773.62 339.38 L775.32 339.38 L776.66 339.44 L777.99 339.44 L779.00 339.50 L780.23 339.61 L781.14 339.73 L781.14 339.73" stroke="#c2255c" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -106,10 +106,10 @@ tags:
 <path d="M814.26 297.68 L814.90 298.27 L816.23 299.52 L817.51 300.94 L818.84 302.61 L820.12 304.57 L821.24 306.47 L821.88 308.55 L822.15 310.57 L821.78 312.59 L820.60 314.67 L818.04 316.57 L816.12 317.52 L816.12 317.52" stroke="#c2255c" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-56.90,-122.44)">
-<text x="848.52" y="305.99" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="848.52" dy="0">vibe code khiến attack</tspan><tspan x="848.52" dy="20">surface càng rộng hơn ??</tspan></text>
+<text x="848.52" y="305.99" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="848.52" dy="0">vibe code khiến attack</tspan><tspan x="848.52" dy="20">surface càng rộng hơn ??</tspan></text>
 </g>
 <g transform="translate(-56.90,-122.44)">
-<text x="452.66" y="854.65" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="452.66" dy="0">nma AI agent nó cũng pentest được mà ???</tspan></text>
+<text x="452.66" y="854.65" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="452.66" dy="0">nma AI agent nó cũng pentest được mà ???</tspan></text>
 </g>
 <g transform="translate(-56.90,-122.44)">
 <path d="M374.90 822.49 L375.32 821.60 L375.75 820.70 L376.18 820.05 L376.34 821.24 L376.34 822.55 L376.12 825.04 L375.91 827.36 L375.75 829.79 L375.48 833.42 L375.32 835.85 L375.27 837.10 L375.11 838.88 L374.95 840.25 L374.90 841.26 L375.06 842.56 L375.43 843.45 L376.07 844.17 L377.83 845.41 L379.48 846.07 L381.40 846.72 L383.59 847.14 L385.99 847.43 L388.82 847.55 L391.80 847.61 L395.06 847.55 L396.71 847.49 L400.28 847.14 L403.86 846.72 L407.32 846.25 L410.36 845.89 L414.63 845.53 L417.14 845.36 L419.43 845.12 L421.19 845.00 L422.58 844.88 L423.64 844.82 L424.82 844.76 L425.78 844.70 L425.78 844.70" stroke="#c2255c" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>

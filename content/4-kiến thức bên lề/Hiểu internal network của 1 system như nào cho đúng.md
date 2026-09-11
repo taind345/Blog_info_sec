@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-3pwmdh">
+<div class="excalidraw-container" id="ex-7eclrf">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -60,10 +60,10 @@ tags:
 
 </g>
 <g transform="translate(-96.27,-7.15)">
-<text x="375.87" y="63.15" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="375.87" dy="0">đọc thêm về cơ chế NAT ở đây </tspan><tspan x="375.87" dy="20"></tspan></text>
+<text x="375.87" y="63.15" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="375.87" dy="0">đọc thêm về cơ chế NAT ở đây </tspan><tspan x="375.87" dy="20"></tspan></text>
 </g>
 <g transform="translate(-96.27,-7.15)">
-<text x="633.50" y="63.80" font-family="Virgil, Segoe UI Emoji, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="633.50" dy="0">📍networking etentials#6-Nat</tspan></text>
+<text x="633.50" y="63.80" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="633.50" dy="0">📍networking etentials#6-Nat</tspan></text>
 </g>
 <a href="../0-asset/pasted-image-20260811101627.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted image 20260811101627.png"><g transform="translate(-96.27,-7.15)">
 <image x="211.65866088867188" y="687.3099517822266" width="499.99999999999994" height="385.83441138421733" href="../0-asset/pasted-image-20260811101627.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>

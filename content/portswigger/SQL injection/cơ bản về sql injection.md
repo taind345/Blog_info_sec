@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-iehwt0">
+<div class="excalidraw-container" id="ex-ltgnwe">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -23,26 +23,26 @@ tags:
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 911 1488" class="excalidraw-svg" data-width="911" data-height="1488">
 <g transform="translate(205.19,567.24)">
-<text x="-53.25" y="-310.57" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-53.25" dy="0">cách test sql injection</tspan></text>
+<text x="-53.25" y="-310.57" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-53.25" dy="0">cách test sql injection</tspan></text>
 </g>
 <g transform="translate(205.19,567.24)">
-<text x="-26.58" y="-98.51" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-26.58" dy="0">khai thác cơ bản</tspan></text>
+<text x="-26.58" y="-98.51" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-26.58" dy="0">khai thác cơ bản</tspan></text>
 </g>
 <g transform="translate(205.19,567.24)">
-<text x="83.42" y="-57.17" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="83.42" dy="0">chèn url--&gt; thay đổi tham số truy vấn sql</tspan></text>
+<text x="83.42" y="-57.17" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="83.42" dy="0">chèn url--&gt; thay đổi tham số truy vấn sql</tspan></text>
 </g>
 <g transform="translate(205.19,567.24)">
 <path d="M5.42 -94.57 C5.31 -89.91,-7.25 -71.55,4.75 -66.57 C16.75 -61.60,65.31 -65.03,77.42 -64.72 M5.42 -94.57 C5.31 -89.91,-7.25 -71.55,4.75 -66.57 C16.75 -61.60,65.31 -65.03,77.42 -64.72" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M64.24 -57.56 L77.42 -64.72 L64.62 -72.55" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(205.19,567.24)">
-<text x="221.75" y="-397.91" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="221.75" dy="0">chèn dấu nháy ',\,&quot;; ...--&gt; ứng dụng trả về lõi</tspan><tspan x="221.75" dy="25">truy vấn</tspan></text>
+<text x="221.75" y="-397.91" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="221.75" dy="0">chèn dấu nháy &apos;,\,&quot;; ...--&gt; ứng dụng trả về lõi</tspan><tspan x="221.75" dy="25">truy vấn</tspan></text>
 </g>
 <g transform="translate(205.19,567.24)">
-<text x="247.75" y="-203.17" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="247.75" dy="0">chèn câu lệnh như sleep, delay,...--&gt; xem có</tspan><tspan x="247.75" dy="25">sự thay đổi thời gian thực thi ko</tspan></text>
+<text x="247.75" y="-203.17" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="247.75" dy="0">chèn câu lệnh như sleep, delay,...--&gt; xem có</tspan><tspan x="247.75" dy="25">sự thay đổi thời gian thực thi ko</tspan></text>
 </g>
 <g transform="translate(205.19,567.24)">
-<text x="229.08" y="-327.24" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="229.08" dy="0">nếu ứng dụng chặn thông báo lỗi--&gt;</tspan><tspan x="229.08" dy="25">dùng kiểm tra đúng sai</tspan><tspan x="229.08" dy="25">--&gt; chèn 'OR 1=1  -- để xem ứng</tspan><tspan x="229.08" dy="25">dụng có thay đổi hành vi ko</tspan></text>
+<text x="229.08" y="-327.24" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="229.08" dy="0">nếu ứng dụng chặn thông báo lỗi--&gt;</tspan><tspan x="229.08" dy="25">dùng kiểm tra đúng sai</tspan><tspan x="229.08" dy="25">--&gt; chèn &apos;OR 1=1  -- để xem ứng</tspan><tspan x="229.08" dy="25">dụng có thay đổi hành vi ko</tspan></text>
 </g>
 <g transform="translate(205.19,567.24)">
 <path d="M215.08 -527.24 L215.08 -527.24" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -69,7 +69,7 @@ tags:
 <path d="M351.75 -279.91 L351.75 -279.91" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <a href="./các-kỹ-thuật-chèn-sql" class="excalidraw-node-link" target="_self" title="các kỹ thuật chèn sql"><g transform="translate(205.19,567.24)">
-<text x="62.42" y="-441.84" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="62.42" dy="0">📍các kỹ thuật chèn sql</tspan></text>
+<text x="62.42" y="-441.84" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="62.42" dy="0">📍các kỹ thuật chèn sql</tspan></text>
 </g></a>
 <a href="../../0-asset/pasted-image-20260515155902_523.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260515155902_523.png"><g transform="translate(205.19,567.24)">
 <image x="-30.371741047319517" y="-30.128382008873132" width="589.3333435058594" height="188.586669921875" href="../../0-asset/pasted-image-20260515155902_523.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
@@ -87,16 +87,16 @@ tags:
 <path d="M168.29 375.12 L171.63 377.79 L172.96 378.46 L178.29 383.12 L178.96 383.79 L180.96 387.12 L181.63 390.46 L178.29 393.79 L170.29 395.79 L166.96 396.46 L166.96 396.46" stroke="#000000" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(205.19,567.24)">
-<text x="212.29" y="404.52" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#9c36b5" text-anchor="start"><tspan x="212.29" dy="0">luôn đúng</tspan></text>
+<text x="212.29" y="404.52" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#9c36b5" text-anchor="start"><tspan x="212.29" dy="0">luôn đúng</tspan></text>
 </g>
 <g transform="translate(205.19,567.24)">
-<text x="162.96" y="841.86" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#000000" text-anchor="start"><tspan x="162.96" dy="0">check name='admin'-- '</tspan></text>
+<text x="162.96" y="841.86" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#000000" text-anchor="start"><tspan x="162.96" dy="0">check name=&apos;admin&apos;-- &apos;</tspan></text>
 </g>
 <g transform="translate(205.19,567.24)">
-<text x="300.96" y="875.19" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#000000" text-anchor="start"><tspan x="300.96" dy="0">'admin</tspan></text>
+<text x="300.96" y="875.19" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#000000" text-anchor="start"><tspan x="300.96" dy="0">&apos;admin</tspan></text>
 </g>
 <g transform="translate(205.19,567.24)">
-<text x="-159.45" y="-449.71" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-159.45" dy="0">#sql</tspan></text>
+<text x="-159.45" y="-449.71" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-159.45" dy="0">#sql</tspan></text>
 </g>
 <g transform="translate(205.19,567.24)">
 <path d="M-165.13 -478.95 C-149.13 -478.78,-133.13 -479.98,-101.49 -478.62 M-164.66 -480.55 C-144.81 -480.40,-125.88 -481.43,-100.29 -479.76 M-101.52 -478.69 C-100.52 -466.50,-101.36 -451.81,-98.56 -425.22 M-100.09 -481.17 C-100.57 -463.97,-100.01 -445.94,-100.01 -423.12 M-101.64 -422.44 C-123.09 -423.28,-141.92 -421.48,-166.49 -425.39 M-100.13 -422.60 C-117.23 -423.06,-136.17 -423.32,-164.85 -422.47 M-163.81 -421.84 C-165.56 -440.98,-164.13 -457.72,-163.48 -479.64 M-164.99 -424.43 C-165.51 -439.55,-166.31 -456.63,-165.15 -479.63" stroke="#1971c2" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>

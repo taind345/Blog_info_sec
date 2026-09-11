@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-oc7ion">
+<div class="excalidraw-container" id="ex-lvt9op">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -57,7 +57,7 @@ tags:
 <path d="M332.00 209.22 C330.50 210.31,328.47 211.20,327.61 213.71 M331.36 208.69 C330.71 209.87,329.63 210.79,327.55 212.84" stroke="#c92a2a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-126.25,-157.80)">
-<text x="522.50" y="333.02" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="522.50" dy="0">-exploit-website.com</tspan></text>
+<text x="522.50" y="333.02" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="522.50" dy="0">-exploit-website.com</tspan></text>
 </g>
 <g transform="translate(-126.25,-157.80)">
 <path d="M315.59 476.31 C320.27 476.31,339.00 481.44,343.68 476.31 C348.36 471.18,345.05 452.79,343.68 445.53 C342.32 438.27,339.94 436.09,335.49 432.75 C331.05 429.41,323.65 425.37,316.99 425.51 C310.32 425.65,300.30 430.03,295.51 433.60 C290.72 437.17,289.58 439.80,288.25 446.92 C286.91 454.04,282.95 471.41,287.51 476.31 C292.06 481.21,310.91 476.31,315.59 476.31" stroke="none" fill="#4c6ef5"/>
@@ -103,16 +103,16 @@ tags:
 <path d="M313.52 378.31 C311.91 378.20,306.60 377.54,303.86 377.65 C301.11 377.76,298.17 378.76,297.03 378.99 M313.52 378.31 C311.91 378.20,306.60 377.54,303.86 377.65 C301.11 377.76,298.17 378.76,297.03 378.99" stroke="#000000" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-126.25,-157.80)">
-<text x="319.45" y="523.23" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#000000" text-anchor="middle"><tspan x="319.45" dy="0">administrator</tspan></text>
+<text x="319.45" y="523.23" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#000000" text-anchor="middle"><tspan x="319.45" dy="0">administrator</tspan></text>
 </g>
 <g transform="translate(-126.25,-157.80)">
 <path d="M507.16 300.73 C641.00 301.36,774.37 300.80,939.75 300.98 M506.69 299.74 C608.95 301.29,710.96 301.27,939.49 300.38 M938.81 300.46 C939.03 371.26,937.46 444.16,939.28 575.35 M939.43 300.61 C936.95 372.22,937.56 443.60,939.02 574.00 M938.15 574.91 C829.28 572.57,720.48 573.46,506.91 574.73 M939.40 573.72 C845.18 573.21,751.19 573.63,506.57 574.40 M505.55 573.33 C508.82 517.49,505.95 465.03,507.18 299.99 M506.01 573.41 C508.04 500.76,507.43 428.64,506.82 300.52" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-126.25,-157.80)">
-<text x="561.17" y="286.25" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="561.17" dy="0">trình duyệt của admin</tspan></text>
+<text x="561.17" y="286.25" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="561.17" dy="0">trình duyệt của admin</tspan></text>
 </g>
 <g transform="translate(-126.25,-157.80)">
-<text x="521.83" y="504.92" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="521.83" dy="0">- https:.../account..</tspan><tspan x="521.83" dy="25">(lúc này admin đã đăng nhập,</tspan><tspan x="521.83" dy="25">cookie lưu phiên đăng nhập của admin)</tspan></text>
+<text x="521.83" y="504.92" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="521.83" dy="0">- https:.../account..</tspan><tspan x="521.83" dy="25">(lúc này admin đã đăng nhập,</tspan><tspan x="521.83" dy="25">cookie lưu phiên đăng nhập của admin)</tspan></text>
 </g>
 <g transform="translate(-126.25,-157.80)">
 <path d="M654.81 345.88 C656.82 384.53,654.57 426.91,655.98 477.08 M656.27 344.54 C656.31 373.32,655.75 404.95,654.34 478.70" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -120,7 +120,7 @@ tags:
 <path d="M654.67 477.46 C657.52 474.65,658.57 470.68,660.75 467.08 M653.82 479.50 C656.68 474.63,659.82 469.02,662.02 465.33" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-126.25,-157.80)">
-<text x="536.50" y="377.59" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="536.50" dy="0">gửi request yêu cầu đọc</tspan><tspan x="536.50" dy="25">cookie với header:</tspan><tspan x="536.50" dy="25">Origin=exploit-website.com </tspan></text>
+<text x="536.50" y="377.59" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="536.50" dy="0">gửi request yêu cầu đọc</tspan><tspan x="536.50" dy="25">cookie với header:</tspan><tspan x="536.50" dy="25">Origin=exploit-website.com </tspan></text>
 </g>
 <g transform="translate(-126.25,-157.80)">
 <path d="M838.77 512.95 C843.71 489.51,887.59 404.39,868.69 373.68 C849.78 342.97,749.51 336.27,725.35 328.66 M840.41 515.26 C845.33 491.91,887.44 406.35,868.19 374.95 C848.94 343.56,749.03 334.49,724.91 326.89" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -128,7 +128,7 @@ tags:
 <path d="M725.32 328.94 C726.44 331.26,730.76 333.85,735.81 339.16 M724.68 327.79 C727.19 329.61,729.28 332.78,734.54 338.07" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-126.25,-157.80)">
-<text x="824.50" y="412.25" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="824.50" dy="0">trả về cookie nhạy</tspan><tspan x="824.50" dy="25">cảm</tspan></text>
+<text x="824.50" y="412.25" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="824.50" dy="0">trả về cookie nhạy</tspan><tspan x="824.50" dy="25">cảm</tspan></text>
 </g>
 <g transform="translate(-126.25,-157.80)">
 <path d="M394.92 479.66 C416.42 479.15,437.18 476.11,501.45 472.09 M394.93 479.78 C434.09 476.70,471.51 475.86,500.30 472.25" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -141,7 +141,7 @@ tags:
 <path d="M533.36 329.05 C532.94 327.27,528.49 322.05,524.26 315.89 M533.32 327.64 C529.90 324.41,525.43 319.85,524.09 316.96" stroke="#c2255c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-126.25,-157.80)">
-<text x="385.83" y="288.92" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="385.83" dy="0">đọc dl</tspan><tspan x="385.83" dy="25">nhạy cảm</tspan></text>
+<text x="385.83" y="288.92" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="385.83" dy="0">đọc dl</tspan><tspan x="385.83" dy="25">nhạy cảm</tspan></text>
 </g>
 <a href="../../0-asset/pasted-image-20260630230252_652.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260630230252_652.png"><g transform="translate(-126.25,-157.80)">
 <image x="188.28156510019687" y="1057.033279254125" width="514.8117728924387" height="234.3084109741719" href="../../0-asset/pasted-image-20260630230252_652.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
@@ -150,7 +150,7 @@ tags:
 <image x="196.50006103515625" y="755.0512813588299" width="817.9999389648436" height="254.27246779991836" href="../../0-asset/pasted-image-20260630230454_000.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
 <g transform="translate(-126.25,-157.80)">
-<text x="221.17" y="744.25" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="221.17" dy="0">nhận biết</tspan></text>
+<text x="221.17" y="744.25" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="221.17" dy="0">nhận biết</tspan></text>
 </g>
 <a href="../../0-asset/pasted-image-20260630231447_818.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260630231447_818.png"><g transform="translate(-126.25,-157.80)">
 <image x="168.45200118404762" y="1339.0213637999072" width="874.0763740130517" height="38.500529339432276" href="../../0-asset/pasted-image-20260630231447_818.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>

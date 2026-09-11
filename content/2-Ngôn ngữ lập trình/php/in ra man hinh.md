@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-smzliy">
+<div class="excalidraw-container" id="ex-fm595z">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -35,7 +35,7 @@ tags:
 <path d="M659.83 405.52 L663.83 405.52 L664.50 405.52 L667.17 405.52 L670.50 406.19 L671.83 407.52 L673.17 408.19 L674.50 410.85 L675.17 412.85 L675.83 416.19 L675.83 420.19 L675.83 424.19 L675.83 427.52 L675.83 431.52 L675.83 435.52 L673.83 439.52 L669.83 442.85 L664.50 444.85 L659.83 445.52 L659.83 445.52" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(-49.50,-166.02)">
-<text x="704.50" y="435.02" font-family="Virgil, Segoe UI Emoji, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="704.50" dy="0">xuong dong</tspan></text>
+<text x="704.50" y="435.02" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="704.50" dy="0">xuong dong</tspan></text>
 </g>
 </svg>
     </div>
