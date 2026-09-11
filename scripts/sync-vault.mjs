@@ -311,42 +311,46 @@ async function main() {
     fs.mkdirSync(CONTENT_DIR, { recursive: true });
   }
 
-  // Xóa các thư mục bị loại trừ hoặc bị ignore (như hack the box) khỏi blog
-  const ignoredFolders = ["hack the box", "hackthebox", ".trash"];
-  for (const ign of ignoredFolders) {
-    const dest = path.join(CONTENT_DIR, ign);
-    if (fs.existsSync(dest)) {
-      console.log(`Loại bỏ thư mục ${ign} khỏi blog...`);
-      fs.rmSync(dest, { recursive: true, force: true });
-    }
-  }
+  // Các tệp / thư mục hệ thống hoặc file mật khẩu cá nhân TUYỆT ĐỐI không đưa lên blog công khai
+  const excludedEntries = new Set([
+    ".git",
+    ".obsidian",
+    ".trash",
+    ".gitignore",
+    "pass.md" // Giữ an toàn cho mật khẩu và mã 2FA tài khoản
+  ]);
 
-  const foldersToCopy = [
-    "0-asset",
-    "0_Excalidraw",
-    "1-Linux",
-    "2-Ngôn ngữ lập trình",
-    "3-ctf",
-    "4-kiến thức bên lề",
-    "5-Kinh nghiệm trải nghiệm",
-    "portswigger",
-    "Tools",
-    "tryhackme"
-  ];
+  console.log("Đồng bộ toàn bộ nội dung từ Vault gốc sang Blog (không giới hạn whitelist)...");
 
-  for (const folder of foldersToCopy) {
-    const src = path.join(vaultPath, folder);
-    const dest = path.join(CONTENT_DIR, folder);
-    if (fs.existsSync(src)) {
+  // 1. Sao chép toàn bộ thư mục và tệp từ vault gốc
+  for (const entry of fs.readdirSync(vaultPath, { withFileTypes: true })) {
+    const name = entry.name;
+    if (excludedEntries.has(name)) continue;
+
+    const src = path.join(vaultPath, name);
+    const dest = path.join(CONTENT_DIR, name);
+
+    if (entry.isDirectory()) {
       if (fs.existsSync(dest)) {
         fs.rmSync(dest, { recursive: true, force: true });
       }
       copyDirRecursive(src, dest);
+    } else {
+      // Bỏ qua README.md ở gốc vault nếu blog đã có trang chủ riêng (index.md)
+      if (name.toLowerCase() === "readme.md") continue;
+      fs.copyFileSync(src, dest);
     }
   }
 
-  if (fs.existsSync(path.join(vaultPath, "0-INDEX.md"))) {
-    fs.copyFileSync(path.join(vaultPath, "0-INDEX.md"), path.join(CONTENT_DIR, "0-INDEX.md"));
+  // 2. Dọn dẹp các tệp/thư mục trong content/ đã bị xóa ở vault gốc
+  for (const entry of fs.readdirSync(CONTENT_DIR, { withFileTypes: true })) {
+    const name = entry.name;
+    if (name === "index.md" || name === ".gitkeep") continue;
+    const src = path.join(vaultPath, name);
+    if (!fs.existsSync(src) || excludedEntries.has(name)) {
+      console.log(`Dọn dẹp tệp/thư mục không còn trong vault: ${name}`);
+      fs.rmSync(path.join(CONTENT_DIR, name), { recursive: true, force: true });
+    }
   }
 
   // Build slug map for markdown files
