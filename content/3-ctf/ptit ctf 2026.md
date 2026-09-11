@@ -21,13 +21,16 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 928 833" class="excalidraw-svg" data-width="928" data-height="833">
-<a href="./domixi" class="excalidraw-node-link" target="_self" title="domixi"><g transform="translate(-243.17,-189.91)">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 588 299" class="excalidraw-svg" data-width="588" data-height="299">
+<a href="./domixi" class="excalidraw-node-link" target="_self" title="domixi"><g transform="translate(-243.17,-298.76)">
 <text x="326.54" y="479.79" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="326.54" dy="0">📍domixi</tspan></text>
 </g></a>
-<a href="./operation" class="excalidraw-node-link" target="_self" title="operation"><g transform="translate(-243.17,-189.91)">
+<a href="./operation" class="excalidraw-node-link" target="_self" title="operation"><g transform="translate(-243.17,-298.76)">
 <text x="283.17" y="552.33" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="283.17" dy="0">📍operation</tspan></text>
 </g></a>
+<g transform="translate(-243.17,-298.76)">
+<text x="308.89" y="358.76" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="308.89" dy="0">🌐https://github.com/taind345/PTIT_CTF2026</tspan></text>
+</g>
 </svg>
     </div>
   </div>
