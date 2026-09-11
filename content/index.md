@@ -67,7 +67,7 @@ title: "Cyber Security & Pentest Knowledge Garden"
 
 Dưới đây là sơ đồ Mindmap tổng quan toàn bộ hệ thống kiến thức trong kho ghi chú. Bạn có thể tương tác (Zoom, kéo thả) hoặc **click trực tiếp vào các nút** (📍0-XSS, 📍0-SSRF, 📍0-linux...) để mở bài viết tương ứng:
 
-<div class="excalidraw-container" id="ex-5qhchr">
+<div class="excalidraw-container" id="ex-aoypzn">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
