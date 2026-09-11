@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import crypto from "crypto";
 import { execSync } from "child_process";
 import LZString from "lz-string";
 import { marked } from "marked";
@@ -416,7 +417,7 @@ async function main() {
             assetImageMap
           );
 
-          const diagramId = "ex-" + Math.random().toString(36).substring(2, 8);
+          const diagramId = "ex-" + crypto.createHash("md5").update(relPath).digest("hex").substring(0, 8);
           svgHtml = `
 <div class="excalidraw-container" id="${diagramId}">
   <div class="excalidraw-toolbar">
