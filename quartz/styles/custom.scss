@@ -1,3 +1,250 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// === BLOG INFOSEC & CYBERSECURITY CUSTOM THEME ===
+
+// 1. Hero Section
+.hero-section {
+  padding: 2.5rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(40, 75, 99, 0.12) 0%, rgba(132, 165, 157, 0.1) 100%);
+  border: 1px solid var(--lightgray);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+.hero-badge {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  background: var(--secondary);
+  color: #ffffff !important;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin: 0.5rem 0 1rem;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  color: var(--darkgray);
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+// 2. Category Grid
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.cat-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 12px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.cat-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--secondary);
+  box-shadow: 0 8px 24px rgba(40, 75, 99, 0.12);
+}
+
+.cat-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+  padding: 0.4rem;
+  background: rgba(132, 165, 157, 0.15);
+  border-radius: 10px;
+}
+
+.cat-info h3 {
+  margin: 0 0 0.35rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.cat-info p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--darkgray);
+  line-height: 1.45;
+}
+
+// 3. Excalidraw Container & Interactive Viewer
+.excalidraw-container {
+  margin: 2rem 0;
+  border-radius: 14px;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.excalidraw-container.is-fullscreen {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 99999 !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  background: var(--light) !important;
+}
+
+.excalidraw-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  background: var(--light);
+  border-bottom: 1px solid var(--lightgray);
+  user-select: none;
+  z-index: 10;
+}
+
+.excalidraw-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.excalidraw-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.excalidraw-btn {
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  color: var(--dark);
+  padding: 0.35rem 0.65rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.excalidraw-btn:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border-color: var(--secondary);
+}
+
+.excalidraw-viewport {
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+  background-image: radial-gradient(var(--lightgray) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.excalidraw-container.is-fullscreen .excalidraw-viewport {
+  height: calc(100vh - 50px);
+}
+
+.excalidraw-canvas-wrapper {
+  width: 100%;
+  height: 100%;
+  transform-origin: 0 0;
+  transition: transform 0.05s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.excalidraw-svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: auto;
+}
+
+// 4. Clickable Links inside Excalidraw SVGs
+.excalidraw-node-link {
+  cursor: pointer !important;
+  text-decoration: none !important;
+  transition: filter 0.2s, opacity 0.2s;
+}
+
+.excalidraw-node-link:hover text {
+  fill: var(--secondary) !important;
+  filter: drop-shadow(0 0 3px var(--secondary));
+  text-decoration: underline !important;
+}
+
+// 5. Dark Mode Adaptations for Excalidraw SVGs
+:root[saved-theme="dark"] {
+  .excalidraw-container {
+    background: #141416;
+    border-color: #2e2e32;
+  }
+  
+  .excalidraw-toolbar {
+    background: #18181b;
+    border-color: #2e2e32;
+  }
+
+  .excalidraw-btn {
+    background: #222226;
+    border-color: #38383e;
+    color: #e4e4e7;
+  }
+
+  .excalidraw-btn:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: #ffffff;
+  }
+
+  .excalidraw-viewport {
+    background-image: radial-gradient(#27272a 1px, transparent 1px);
+  }
+
+  .excalidraw-svg text[fill="#1e1e1e"],
+  .excalidraw-svg text[fill="#000000"] {
+    fill: #f4f4f5 !important;
+  }
+
+  .excalidraw-svg path[stroke="#1e1e1e"],
+  .excalidraw-svg path[stroke="#000000"] {
+    stroke: #f4f4f5 !important;
+  }
+}

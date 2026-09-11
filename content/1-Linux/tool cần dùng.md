@@ -1,0 +1,10 @@
+---
+title: "tool cần dùng"
+---
+
+- nmap
+- searchsploit
+- go buster
+- mfsconsole ( metasploit)
+- nikto trong [[Modern Web Stacks#6-Automation]]
+- 
