@@ -65,26 +65,20 @@ title: "Cyber Security & Pentest Knowledge Garden"
 
 ## 🗺️ Sơ đồ tư duy tổng thể (Master Mindmap)
 
-Dưới đây là sơ đồ Mindmap tổng quan toàn bộ hệ thống kiến thức trong kho ghi chú. Bạn có thể tương tác (Zoom, kéo thả) hoặc **click trực tiếp vào các nút** (📍0-XSS, 📍0-SSRF, 📍0-linux...) để mở bài viết tương ứng:
+Toàn bộ hệ thống kiến thức được kết nối trực quan qua sơ đồ tư duy tương tác. Bạn có thể mở trực tiếp để phóng to, thu nhỏ và bấm vào các nút liên kết:
 
-<div class="excalidraw-container" id="ex-aoypzn">
-  <div class="excalidraw-toolbar">
-    <div class="excalidraw-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
-      <span>Excalidraw Mindmap</span>
-    </div>
-    <div class="excalidraw-controls">
-      <button type="button" class="excalidraw-btn zoom-in" title="Phóng to">🔍+</button>
-      <button type="button" class="excalidraw-btn zoom-out" title="Thu nhỏ">🔍-</button>
-      <button type="button" class="excalidraw-btn zoom-reset" title="Vừa màn hình">↺</button>
-      <button type="button" class="excalidraw-btn fullscreen" title="Toàn màn hình">⛶</button>
-    </div>
+<div class="mindmap-preview-card">
+  <div class="preview-info">
+    <h3>📍 Sơ đồ tổng thể 0-INDEX</h3>
+    <p>Khám phá bản đồ tư duy liên kết giữa PortSwigger, TryHackMe, Linux, Tools và các lỗ hổng Web Security.</p>
+    <a href="./0-index" class="open-mindmap-btn">🚀 Mở Sơ Đồ Toàn Màn Hình</a>
   </div>
+</div>
 
 ---
 
-### 📌 Liên kết nhanh tới các mục chính
-- [[0-INDEX|🗺️ Xem trang Sơ đồ tổng thể 0-INDEX]]
+### 📌 Liên kết nhanh tới các sơ đồ chính
+- [[0-INDEX|🗺️ Bản đồ tổng quan kiến thức (0-INDEX)]]
 - [[0-server side|🌐 Lỗ hổng Server Side (PortSwigger)]]
 - [[0-XSS|⚡ Tổng quan Cross-Site Scripting (XSS)]]
 - [[0-tổng hợp sql injection|💉 Tổng hợp SQL Injection]]
