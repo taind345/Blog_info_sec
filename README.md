@@ -60,22 +60,28 @@ Kết quả static site sẽ được tạo trong thư mục `public/`.
 
 ## 🌐 Triển khai lên GitHub Pages (Miễn phí)
 
-Repository đã được cấu hình sẵn GitHub Actions Workflow tại [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml):
+Repository đã được cấu hình sẵn file tự động triển khai [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml):
 
-1. Tạo một repository mới trên GitHub (ví dụ: `Blog_info_sec`).
-2. Đẩy toàn bộ mã nguồn của thư mục này lên repository đó:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: InfoSec Blog with Obsidian & Excalidraw"
-   git branch -M main
-   git remote add origin https://github.com/taind345/Blog_info_sec.git
-   git push -u origin main
-   ```
-3. Trên GitHub, vào mục **Settings** -> **Pages**:
-   - Tại **Source**, chọn **GitHub Actions**.
-4. GitHub Actions sẽ tự động biên dịch và triển khai website lên địa chỉ:  
-   `https://taind345.github.io/Blog_info_sec/`
+### Bước 1: Đẩy mã nguồn lên GitHub của bạn
+Do repository cục bộ đã được khởi tạo và commit sẵn các bài viết, bạn chỉ cần trỏ remote về repo của mình và đẩy code lên:
+
+```bash
+# 1. Trỏ origin về repository của bạn
+git remote set-url origin https://github.com/taind345/Blog_info_sec.git
+
+# 2. Đẩy toàn bộ mã nguồn lên branch main
+git push -u origin main
+```
+
+*(Mẹo: Nếu bạn muốn đẩy thay đổi sau này, chỉ cần chạy `git add . && git commit -m "cập nhật" && git push`)*
+
+### Bước 2: Kích hoạt GitHub Pages
+1. Mở trình duyệt vào repository: `https://github.com/taind345/Blog_info_sec`
+2. Vào **Settings** -> chọn tab **Pages** ở danh mục bên trái:
+   - Tại mục **Build and deployment** > **Source**: Chọn **GitHub Actions**.
+3. (Tùy chọn nếu gặp lỗi quyền Actions): Vào **Settings** -> **Actions** -> **General** -> mục **Workflow permissions** -> chọn **Read and write permissions** rồi bấm Save.
+4. GitHub Actions sẽ tự động kích hoạt workflow biên dịch và xuất bản website lên:  
+   👉 **`https://taind345.github.io/Blog_info_sec/`**
 
 ---
 
