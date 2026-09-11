@@ -236,8 +236,16 @@ function getVaultPath() {
   if (customPath && fs.existsSync(customPath)) {
     return customPath;
   }
-  if (fs.existsSync("/tmp/user-vault/.git")) {
-    return "/tmp/user-vault";
+  // Ưu tiên đọc trực tiếp từ Vault Obsidian local nếu đang chạy trên máy
+  const localCandidates = [
+    "/home/ti/Desktop/DATA_DESKTOP/0_Obsidian notebook/red",
+    "/mnt/DATA_D/DESKTOP/DATA_DESKTOP/0_Obsidian notebook/red"
+  ];
+  for (const candidate of localCandidates) {
+    if (fs.existsSync(path.join(candidate, ".git"))) {
+      console.log(`Đang sử dụng Obsidian Vault trực tiếp từ máy: ${candidate}`);
+      return candidate;
+    }
   }
   if (!fs.existsSync(CACHE_DIR)) {
     console.log(`Cloning repository from ${REPO_URL}...`);
@@ -290,6 +298,16 @@ async function main() {
     fs.mkdirSync(CONTENT_DIR, { recursive: true });
   }
 
+  // Xóa các thư mục bị loại trừ hoặc bị ignore (như hack the box) khỏi blog
+  const ignoredFolders = ["hack the box", "hackthebox", ".trash"];
+  for (const ign of ignoredFolders) {
+    const dest = path.join(CONTENT_DIR, ign);
+    if (fs.existsSync(dest)) {
+      console.log(`Loại bỏ thư mục ${ign} khỏi blog...`);
+      fs.rmSync(dest, { recursive: true, force: true });
+    }
+  }
+
   const foldersToCopy = [
     "0-asset",
     "0_Excalidraw",
@@ -298,7 +316,6 @@ async function main() {
     "3-ctf",
     "4-kiến thức bên lề",
     "5-Kinh nghiệm trải nghiệm",
-    "hack the box",
     "portswigger",
     "Tools",
     "tryhackme"
@@ -308,6 +325,9 @@ async function main() {
     const src = path.join(vaultPath, folder);
     const dest = path.join(CONTENT_DIR, folder);
     if (fs.existsSync(src)) {
+      if (fs.existsSync(dest)) {
+        fs.rmSync(dest, { recursive: true, force: true });
+      }
       copyDirRecursive(src, dest);
     }
   }

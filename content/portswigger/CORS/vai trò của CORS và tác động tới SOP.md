@@ -178,7 +178,7 @@ tags:
 <path d="M687.92 1228.69 C769.52 1225.44,852.57 1226.51,1013.35 1229.27 M688.64 1228.95 C804.53 1227.79,920.41 1227.07,1013.60 1228.92 M1012.35 1228.29 C1013.54 1235.21,1013.74 1242.02,1014.70 1262.78 M1013.13 1228.82 C1014.88 1241.37,1014.19 1254.16,1014.72 1262.34 M1012.77 1262.33 C887.02 1264.48,759.24 1264.52,687.91 1260.76 M1013.84 1261.67 C915.71 1264.40,816.60 1264.50,687.88 1261.28 M687.92 1261.72 C687.11 1251.53,687.41 1241.02,688.97 1226.96 M688.20 1261.94 C689.13 1249.52,688.93 1235.34,688.94 1228.32" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <a href="./bai1--cors" class="excalidraw-node-link" target="_self" title="bai1- cors"><g transform="translate(-43.83,-126.47)">
-<text x="342.50" y="1535.92" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="342.50" dy="0">📍bai1- cors</tspan></text>
+<text x="342.50" y="1535.92" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="342.50" dy="0">bai1- cors</tspan></text>
 </g></a>
 </svg>
     </div>

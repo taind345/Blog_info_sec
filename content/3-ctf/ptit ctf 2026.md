@@ -21,14 +21,11 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 321 317" class="excalidraw-svg" data-width="321" data-height="317">
-<a href="./approve-please,-genie" class="excalidraw-node-link" target="_self" title="Approve Please, Genie"><g transform="translate(-226.57,-280.64)">
-<text x="266.57" y="340.64" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="266.57" dy="0">📍Approve Please, Genie</tspan></text>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 928 833" class="excalidraw-svg" data-width="928" data-height="833">
+<a href="./domixi" class="excalidraw-node-link" target="_self" title="domixi"><g transform="translate(-243.17,-189.91)">
+<text x="326.54" y="479.79" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="326.54" dy="0">📍domixi</tspan></text>
 </g></a>
-<a href="./domixi" class="excalidraw-node-link" target="_self" title="domixi"><g transform="translate(-226.57,-280.64)">
-<text x="423.56" y="408.77" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="423.56" dy="0">📍domixi</tspan></text>
-</g></a>
-<a href="./operation" class="excalidraw-node-link" target="_self" title="operation"><g transform="translate(-226.57,-280.64)">
+<a href="./operation" class="excalidraw-node-link" target="_self" title="operation"><g transform="translate(-243.17,-189.91)">
 <text x="283.17" y="552.33" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="283.17" dy="0">📍operation</tspan></text>
 </g></a>
 </svg>
@@ -39,6 +36,5 @@ tags:
 
 ### 🔗 Các bài viết liên kết trong sơ đồ
 
-- [[Approve Please, Genie]]
 - [[domixi]]
 - [[operation]]

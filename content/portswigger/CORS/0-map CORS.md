@@ -21,21 +21,21 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 422 361" class="excalidraw-svg" data-width="422" data-height="361">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 397 361" class="excalidraw-svg" data-width="397" data-height="361">
 <a href="../../4-kiến-thức-bên-lề/same-origin-policy" class="excalidraw-node-link" target="_self" title="Same-Origin Policy"><g transform="translate(-138.50,-219.59)">
-<text x="320.50" y="282.19" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="320.50" dy="0">📍Same-Origin Policy</tspan></text>
+<text x="320.50" y="282.19" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="320.50" dy="0">Same-Origin Policy</tspan></text>
 </g></a>
 <g transform="translate(-138.50,-219.59)">
 <text x="199.17" y="279.59" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="199.17" dy="0">định nghĩa</tspan></text>
 </g>
 <a href="./vai-trò-của-cors-và-tác-động-tới-sop" class="excalidraw-node-link" target="_self" title="vai trò của CORS và tác động tới SOP"><g transform="translate(-138.50,-219.59)">
-<text x="191.02" y="349.89" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="191.02" dy="0">📍vai trò của CORS và</tspan><tspan x="191.02" dy="25">tác động tới SOP</tspan></text>
+<text x="191.02" y="349.89" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="191.02" dy="0">vai trò của CORS và</tspan><tspan x="191.02" dy="25">tác động tới SOP</tspan></text>
 </g></a>
 <a href="./vấn-đề-của-cors-với-bảo-mật" class="excalidraw-node-link" target="_self" title="vấn đề của CORS với bảo mật"><g transform="translate(-138.50,-219.59)">
-<text x="178.50" y="457.59" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="178.50" dy="0">📍vấn đề của CORS với bảo mật</tspan></text>
+<text x="178.50" y="457.59" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="178.50" dy="0">vấn đề của CORS với bảo mật</tspan></text>
 </g></a>
 <a href="./whitelist-cors" class="excalidraw-node-link" target="_self" title="whitelist CORS"><g transform="translate(-138.50,-219.59)">
-<text x="243.83" y="534.59" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="243.83" dy="0">📍whitelist CORS</tspan></text>
+<text x="243.83" y="534.59" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="243.83" dy="0">whitelist CORS</tspan></text>
 </g></a>
 </svg>
     </div>

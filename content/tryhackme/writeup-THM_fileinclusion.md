@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1242 3852" class="excalidraw-svg" data-width="1242" data-height="3852">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 3852" class="excalidraw-svg" data-width="1240" data-height="3852">
 <g transform="translate(-23.16,255.64)">
 
 <rect x="120.12210083007812" y="169.68960202239282" width="742.4681895410207" height="3386.000278348701" rx="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5" class="excalidraw-md-bg"/>
@@ -289,7 +289,7 @@ if (array_key_exists($page, $allowed_pages)) {
 <text x="721.16" y="-190.95" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="721.16" dy="0">Tạo HTTP POST </tspan></text>
 </g>
 <a href="../tools/cách-để-gửi-post-trong-burp" class="excalidraw-node-link" target="_self" title="cách để gửi POST trong burp"><g transform="translate(-23.16,255.64)">
-<text x="914.45" y="-195.64" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="914.45" dy="0">📍cách để gửi POST trong burp</tspan></text>
+<text x="914.45" y="-195.64" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="914.45" dy="0">cách để gửi POST trong burp</tspan></text>
 </g></a>
 <g transform="translate(-23.16,255.64)">
 <path d="M63.39 2693.84 C275.04 2695.95,486.66 2695.57,849.05 2694.41 M63.56 2693.98 C284.74 2692.35,505.32 2692.32,849.72 2693.76 M848.92 2693.52 C850.75 2765.77,851.98 2833.54,847.78 2882.35 M848.71 2694.47 C848.27 2746.17,849.03 2797.36,849.18 2882.87 M849.53 2883.96 C657.63 2882.57,464.86 2883.92,63.65 2882.66 M849.57 2883.28 C582.50 2884.58,315.42 2884.39,63.03 2883.37 M63.61 2884.67 C63.87 2839.92,62.67 2791.91,64.74 2694.89 M62.22 2883.34 C61.69 2841.59,60.76 2801.24,62.77 2692.89" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -359,6 +359,9 @@ if (array_key_exists($page, $allowed_pages)) {
 </g>
 <g transform="translate(-23.16,255.64)">
 <path d="M877.30 423.96 L876.71 424.85 L876.02 425.56 L874.74 426.93 L873.51 428.17 L872.92 428.89 L871.70 430.13 L870.58 431.32 L869.99 431.86 L869.14 432.81 L867.86 434.29 L867.27 435.00 L866.84 435.84 L867.22 436.67 L869.40 438.27 L871.38 439.34 L873.30 440.59 L875.43 441.84 L877.51 442.96 L879.59 444.03 L881.67 444.87 L883.75 445.58 L885.78 446.11 L887.43 446.17 L887.43 446.17" stroke="#000000" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g transform="translate(-23.16,255.64)">
+<path d="M1130.98 13.11 L1131.90 13.11 L1131.90 13.11" stroke="#000000" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </svg>
     </div>

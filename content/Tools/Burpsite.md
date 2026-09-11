@@ -21,19 +21,22 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 341" class="excalidraw-svg" data-width="580" data-height="341">
-<a href="./keyword-burp" class="excalidraw-node-link" target="_self" title="keyword burp"><g transform="translate(-123.74,457.75)">
-<text x="163.74" y="-397.75" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="163.74" dy="0">📍keyword burp</tspan></text>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 697 592" class="excalidraw-svg" data-width="697" data-height="592">
+<a href="./keyword-burp" class="excalidraw-node-link" target="_self" title="keyword burp"><g transform="translate(-123.74,708.65)">
+<text x="163.74" y="-397.75" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="163.74" dy="0">keyword burp</tspan></text>
 </g></a>
-<a href="./cách-để-filter-respond-ở-burpsite" class="excalidraw-node-link" target="_self" title="cách để filter respond ở burpsite"><g transform="translate(-123.74,457.75)">
-<text x="317.68" y="-318.61" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="317.68" dy="0">📍cách để filter respond ở burpsite</tspan></text>
+<a href="./cách-để-filter-respond-ở-burpsite" class="excalidraw-node-link" target="_self" title="cách để filter respond ở burpsite"><g transform="translate(-123.74,708.65)">
+<text x="317.68" y="-318.61" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="317.68" dy="0">cách để filter respond ở burpsite</tspan></text>
 </g></a>
-<a href="./trick-lỏ-xuất-ra-file-rồi-đưa-cho-con-ai-nó-phân-tích-request" class="excalidraw-node-link" target="_self" title="trick lỏ xuất ra file rồi đưa cho con AI nó phân tích request"><g transform="translate(-123.74,457.75)">
-<text x="242.81" y="-236.01" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="242.81" dy="0">📍trick lỏ xuất ra file rồi đưa cho</tspan><tspan x="242.81" dy="25">con AI nó phân tích request</tspan></text>
+<a href="./trick-lỏ-xuất-ra-file-rồi-đưa-cho-con-ai-nó-phân-tích-request" class="excalidraw-node-link" target="_self" title="trick lỏ xuất ra file rồi đưa cho con AI nó phân tích request"><g transform="translate(-123.74,708.65)">
+<text x="242.81" y="-236.01" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="242.81" dy="0">trick lỏ xuất ra file rồi đưa cho</tspan><tspan x="242.81" dy="25">con AI nó phân tích request</tspan></text>
 </g></a>
-<a href="./cách-để-gửi-post-trong-burp" class="excalidraw-node-link" target="_self" title="cách để gửi POST trong burp"><g transform="translate(-123.74,457.75)">
-<text x="326.73" y="-162.77" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="326.73" dy="0">📍cách để gửi POST trong burp</tspan></text>
+<a href="./cách-để-gửi-post-trong-burp" class="excalidraw-node-link" target="_self" title="cách để gửi POST trong burp"><g transform="translate(-123.74,708.65)">
+<text x="326.73" y="-162.77" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="326.73" dy="0">cách để gửi POST trong burp</tspan></text>
 </g></a>
+<g transform="translate(-123.74,708.65)">
+<path d="M780.34 -668.65 L780.02 -667.60 L779.71 -666.48 L779.33 -665.43 L779.33 -665.43" stroke="#1e1e1e" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
 </svg>
     </div>
   </div>
