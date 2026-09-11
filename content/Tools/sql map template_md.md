@@ -4,7 +4,6 @@ title: "sql map template_md"
 
 Dưới đây là tổng hợp các **template sử dụng SQLMap** cho nhiều tình huống tấn công SQL injection phổ biến. Các lệnh được phân loại theo mục đích và dạng request, giúp bạn dễ dàng áp dụng khi pentest hợp pháp.
 
----
 
 ## 1. SQL Injection cơ bản với tham số GET
 
