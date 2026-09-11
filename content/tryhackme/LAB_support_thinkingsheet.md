@@ -674,7 +674,7 @@ curl -s http://10.48.187.204/footer.php
 <text x="1337.32" y="8233.21" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1337.32" dy="0">con AI nó từ chối</tspan><tspan x="1337.32" dy="25">bruteforce==&gt; bây giờ</tspan><tspan x="1337.32" dy="25">mình brutefoce chay thôi</tspan></text>
 </g>
 <a href="../tools/template-fuff-dùng-cho-cổng-đăng-nhập" class="excalidraw-node-link" target="_self" title="template fuff dùng cho cổng đăng nhập"><g transform="translate(-162.80,29.87)">
-<text x="1137.75" y="8110.84" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1137.75" dy="0">template fuff dùng cho cổng đăng nhập</tspan></text>
+<text x="1137.75" y="8110.84" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="1137.75" dy="0">📍 template fuff dùng cho cổng đăng nhập</tspan></text>
 </g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M1515.21 8227.96 L1516.46 8227.83 L1518.53 8227.13 L1522.11 8225.52 L1523.30 8224.89 L1525.87 8222.93 L1528.51 8220.28 L1531.02 8216.99 L1533.72 8212.66 L1536.29 8207.77 L1538.55 8202.67 L1539.55 8200.08 L1541.43 8194.84 L1542.94 8189.81 L1543.88 8184.99 L1544.38 8177.93 L1544.01 8173.46 L1543.13 8169.19 L1542.50 8167.24 L1540.99 8163.39 L1539.11 8159.90 L1537.10 8156.75 L1535.10 8153.82 L1533.21 8151.51 L1531.46 8149.35 L1529.76 8147.32 L1528.95 8146.41 L1527.32 8144.66 L1524.99 8142.15 L1523.55 8140.68 L1522.17 8139.15 L1520.73 8137.54 L1519.35 8136.00 L1518.66 8135.23 L1517.21 8133.76 L1516.52 8133.06 L1514.70 8131.32 L1513.14 8130.13 L1512.38 8129.64 L1511.06 8128.66 L1508.74 8127.33 L1507.74 8126.91 L1506.86 8126.49 L1505.79 8126.00 L1504.98 8125.58 L1504.04 8125.17 L1503.10 8124.75 L1502.22 8124.33 L1501.46 8123.70 L1501.46 8123.70" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1496,7 +1496,7 @@ Bắt request <code>footer.php?skin=default</code> ném vào Burp Repeater, đ�
 <path d="M1843.67 9195.48 L1845.05 9195.89 L1846.31 9196.94 L1848.31 9198.55 L1850.76 9200.65 L1853.71 9203.02 L1856.66 9205.33 L1858.04 9206.52 L1858.04 9206.52" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <a href="../tools/dùng-fuff-trong-thực-tế" class="excalidraw-node-link" target="_self" title="dùng fuff trong thực tế"><g transform="translate(-162.80,29.87)">
-<text x="648.65" y="11688.98" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="648.65" dy="0">dùng fuff trong thực tế</tspan></text>
+<text x="648.65" y="11688.98" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="648.65" dy="0">📍 dùng fuff trong thực tế</tspan></text>
 </g></a>
 <g transform="translate(-162.80,29.87)">
 <text x="727.72" y="11724.28" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="727.72" dy="0">ok nhé, quay lại phần /tool để biết cách dùng -f và -request nha &lt;3 </tspan></text>
@@ -1679,7 +1679,7 @@ Bắt request <code>footer.php?skin=default</code> ném vào Burp Repeater, đ�
 <text x="691.18" y="14406.44" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="691.18" dy="0">cái này phân tích bên trên</tspan><tspan x="691.18" dy="20">==&gt; vào được config.php nhờ LFI </tspan></text>
 </g>
 <a href="./writeup_lab_thm_support" class="excalidraw-node-link" target="_self" title="writeup_LAB_THM_support"><g transform="translate(-162.80,29.87)">
-<text x="367.21" y="26.13" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="367.21" dy="0">writeup_LAB_THM_support</tspan></text>
+<text x="367.21" y="26.13" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="367.21" dy="0">📍 writeup_LAB_THM_support</tspan></text>
 </g></a>
 <g transform="translate(-162.80,29.87)">
 <path d="M1326.70 13028.98 L1326.70 13027.98 L1326.70 13027.98" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>

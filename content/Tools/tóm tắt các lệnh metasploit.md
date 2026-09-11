@@ -454,7 +454,7 @@ tags:
 <text x="501.88" y="740.98" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="501.88" dy="0">cái này áp dụng cho phần III)</tspan><tspan x="501.88" dy="25">=&gt; cứ xem là mình sẽ hiểu</tspan></text>
 </g>
 <a href="./metasploit---post-exploit" class="excalidraw-node-link" target="_self" title="metasploit - post exploit"><g transform="translate(98.59,25.19)">
-<text x="799.48" y="769.56" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="799.48" dy="0">metasploit - post exploit</tspan></text>
+<text x="799.48" y="769.56" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="799.48" dy="0">📍 metasploit - post exploit</tspan></text>
 </g></a>
 <g transform="translate(98.59,25.19)">
 <path d="M799.96 2583.02 L800.84 2583.02 L801.76 2583.02 L801.76 2581.95 L802.83 2581.95 L804.96 2581.95 L806.03 2581.95 L807.10 2583.02 L809.72 2584.35 L812.12 2587.02 L812.12 2590.83 L813.19 2594.18 L814.44 2597.74 L815.84 2602.64 L815.84 2607.46 L815.84 2612.66 L815.84 2615.96 L815.84 2620.33 L815.84 2622.46 L815.84 2624.59 L814.77 2626.73 L813.50 2627.79 L812.42 2629.04 L812.42 2630.04 L813.58 2630.04 L813.58 2630.04" stroke="#c2255c" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>

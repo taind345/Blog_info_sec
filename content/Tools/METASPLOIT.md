@@ -29,13 +29,13 @@ tags:
 <text x="239.77" y="315.78" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="239.77" dy="0">đến với lab đầu tiên của metasploit</tspan></text>
 </g>
 <a href="./metasploit-thebasic" class="excalidraw-node-link" target="_self" title="metasploit-thebasic"><g transform="translate(-113.50,-59.13)">
-<text x="282.32" y="353.11" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="282.32" dy="0">metasploit-thebasic</tspan></text>
+<text x="282.32" y="353.11" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="282.32" dy="0">📍 metasploit-thebasic</tspan></text>
 </g></a>
 <a href="./tóm-tắt-các-lệnh-metasploit" class="excalidraw-node-link" target="_self" title="tóm tắt các lệnh metasploit"><g transform="translate(-113.50,-59.13)">
-<text x="567.09" y="192.42" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="567.09" dy="0">tóm tắt các lệnh metasploit</tspan></text>
+<text x="567.09" y="192.42" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="567.09" dy="0">📍 tóm tắt các lệnh metasploit</tspan></text>
 </g></a>
 <a href="./metasploit-scanning-and-exploitation" class="excalidraw-node-link" target="_self" title="metasploit scanning and exploitation"><g transform="translate(-113.50,-59.13)">
-<text x="279.02" y="452.46" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="279.02" dy="0">metasploit scanning and exploitation</tspan></text>
+<text x="279.02" y="452.46" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="279.02" dy="0">📍 metasploit scanning and exploitation</tspan></text>
 </g></a>
 <g transform="translate(-113.50,-59.13)">
 <text x="558.33" y="481.93" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="558.33" dy="0">phần này có 2 bài lab con,</tspan><tspan x="558.33" dy="20">mình sẽ thực hiện ở đây</tspan></text>
@@ -50,16 +50,16 @@ tags:
 <path d="M960.24 541.25 L959.81 540.59 L960.29 540.00 L961.47 540.00 L963.17 540.95 L963.92 541.43 L964.88 542.67 L965.47 543.80 L965.63 544.99 L965.36 546.18 L964.19 547.96 L961.95 549.98 L958.96 551.88 L954.96 553.78 L952.72 554.61 L950.59 555.33 L950.59 555.33" stroke="#000000" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <a href="./exploit1-external-blue" class="excalidraw-node-link" target="_self" title="exploit1 External blue"><g transform="translate(-113.50,-59.13)">
-<text x="819.77" y="504.50" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="819.77" dy="0">exploit1 External blue</tspan></text>
+<text x="819.77" y="504.50" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="819.77" dy="0">📍 exploit1 External blue</tspan></text>
 </g></a>
 <a href="./metasploit---post-exploit" class="excalidraw-node-link" target="_self" title="metasploit - post exploit"><g transform="translate(-113.50,-59.13)">
-<text x="460.00" y="618.19" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="460.00" dy="0">metasploit - post exploit</tspan></text>
+<text x="460.00" y="618.19" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="460.00" dy="0">📍 metasploit - post exploit</tspan></text>
 </g></a>
 <a href="./payload-dùng-ở-phase-nào" class="excalidraw-node-link" target="_self" title="payload dùng ở phase nào"><g transform="translate(-113.50,-59.13)">
-<text x="846.88" y="676.11" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="846.88" dy="0">payload dùng ở phase nào</tspan></text>
+<text x="846.88" y="676.11" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="846.88" dy="0">📍 payload dùng ở phase nào</tspan></text>
 </g></a>
 <a href="./cách-hoạt-động-của-metterpreter" class="excalidraw-node-link" target="_self" title="cách hoạt động của metterpreter"><g transform="translate(-113.50,-59.13)">
-<text x="840.85" y="715.34" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="840.85" dy="0">cách hoạt động của metterpreter</tspan></text>
+<text x="840.85" y="715.34" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="840.85" dy="0">📍 cách hoạt động của metterpreter</tspan></text>
 </g></a>
 <g transform="translate(-113.50,-59.13)">
 <text x="574.77" y="675.44" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16.1639956519717" fill="#000000" text-anchor="start"><tspan x="574.77" dy="0">từ room này mình có</tspan><tspan x="574.77" dy="20.204994564964625">thêm các câu hỏi</tspan></text>
@@ -311,7 +311,7 @@ tags:
 <path d="M846.70 325.86 L846.06 326.51 L845.21 328.41 L844.30 330.32 L843.34 332.51 L842.38 334.95 L841.47 337.56 L840.57 340.12 L839.93 342.55 L839.29 344.81 L839.07 345.82 L838.75 347.72 L838.43 349.15 L838.38 350.39 L838.27 351.40 L838.38 352.53 L838.54 353.54 L838.81 354.55 L839.18 355.38 L839.61 356.10 L840.46 356.57 L841.37 356.39 L842.22 355.98 L843.13 355.56 L844.51 354.49 L845.85 353.30 L846.97 352.06 L847.50 351.34 L848.35 349.98 L848.99 348.67 L849.47 347.42 L849.85 346.47 L850.11 345.58 L850.27 344.57 L850.06 343.50 L848.89 343.56 L848.25 344.21 L847.29 345.70 L846.33 347.30 L845.74 348.73 L845.31 349.98 L845.21 351.05 L845.26 352.12 L845.53 353.42 L846.33 354.61 L847.71 355.92 L849.47 356.75 L851.61 357.10 L853.85 357.10 L856.14 356.81 L856.14 356.81" stroke="#000000" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <a href="./thm_post-exploit-challenge" class="excalidraw-node-link" target="_self" title="THM_post exploit challenge"><g transform="translate(-113.50,-59.13)">
-<text x="753.10" y="614.18" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="753.10" dy="0">THM_post exploit challenge</tspan></text>
+<text x="753.10" y="614.18" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="753.10" dy="0">📍 THM_post exploit challenge</tspan></text>
 </g></a>
 <g transform="translate(-113.50,-59.13)">
 <path d="M1025.31 363.63 L1024.46 363.92 L1023.77 364.34 L1023.55 365.47 L1023.45 366.66 L1023.45 368.38 L1023.23 370.64 L1023.18 371.65 L1022.97 373.37 L1022.91 374.73 L1022.81 375.80 L1022.75 377.11 L1022.70 378.12 L1023.39 376.46 L1023.87 374.44 L1024.46 372.54 L1025.10 370.58 L1025.42 369.80 L1025.90 368.50 L1026.38 367.55 L1026.91 366.89 L1027.61 366.36 L1028.57 366.77 L1028.83 367.55 L1028.99 368.62 L1029.21 370.22 L1029.42 373.61 L1029.47 374.73 L1029.58 376.04 L1029.79 376.93 L1030.33 376.28 L1030.70 375.45 L1031.50 374.08 L1032.57 372.24 L1033.05 371.29 L1033.58 370.58 L1034.17 369.92 L1035.13 370.10 L1035.34 370.93 L1035.71 372.30 L1035.87 373.25 L1036.67 376.81 L1036.99 378.12 L1037.42 379.19 L1037.90 379.96 L1038.59 380.62 L1039.71 380.56 L1041.37 378.95 L1041.95 378.30 L1042.38 377.53 L1043.45 375.09 L1043.77 374.08 L1043.87 373.01 L1043.61 372.18 L1042.54 372.06 L1041.15 373.43 L1040.19 374.97 L1039.50 376.58 L1039.18 378.00 L1039.18 379.31 L1039.29 380.38 L1039.71 381.33 L1040.62 382.40 L1041.15 382.87 L1042.27 383.64 L1043.45 383.82 L1044.62 383.70 L1044.62 383.70" stroke="#000000" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -356,7 +356,7 @@ tags:
 <path d="M604.01 839.42 L604.07 840.68 L604.54 841.58 L605.41 842.47 L605.41 842.47" stroke="#000000" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <a href="./metasploit--payload-generation" class="excalidraw-node-link" target="_self" title="Metasploit- Payload Generation"><g transform="translate(-113.50,-59.13)">
-<text x="440.00" y="876.00" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="440.00" dy="0">Metasploit- Payload Generation</tspan></text>
+<text x="440.00" y="876.00" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="440.00" dy="0">📍 Metasploit- Payload Generation</tspan></text>
 </g></a>
 <g transform="translate(-113.50,-59.13)">
 <text x="240.00" y="816.00" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="240.00" dy="0">Phần này dạy mày custom</tspan><tspan x="240.00" dy="20">exploit bằng msfvenom,</tspan><tspan x="240.00" dy="20">khái niệm handler</tspan></text>
@@ -614,16 +614,16 @@ tags:
 <path d="M471.25 625.62 L470.64 624.99 L471.31 624.30 L472.26 623.92 L473.67 623.74 L474.68 623.49 L476.53 623.43 L478.10 623.43 L479.51 623.49 L480.52 623.80 L481.47 624.11 L482.43 624.74 L483.04 625.68 L483.32 626.86 L483.16 630.43 L482.48 633.12 L481.08 636.43 L479.11 639.68 L479.11 639.68" stroke="#000000" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <a href="./thm_msfvenom" class="excalidraw-node-link" target="_self" title="THM_msfvenom"><g transform="translate(-113.50,-59.13)">
-<text x="720.00" y="916.00" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="720.00" dy="0">THM_msfvenom</tspan></text>
+<text x="720.00" y="916.00" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="720.00" dy="0">📍 THM_msfvenom</tspan></text>
 </g></a>
 <a href="../0-asset/pasted-image-20260908201206_030.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260908201206_030.png"><g transform="translate(-113.50,-59.13)">
 <image x="280" y="1600" width="727.4172185430464" height="640" href="../0-asset/pasted-image-20260908201206_030.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
 <a href="./cheetsheet-metasploit" class="excalidraw-node-link" target="_self" title="Cheetsheet metasploit"><g transform="translate(-113.50,-59.13)">
-<text x="584.78" y="116.88" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="584.78" dy="0">Cheetsheet metasploit</tspan></text>
+<text x="584.78" y="116.88" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="584.78" dy="0">📍 Cheetsheet metasploit</tspan></text>
 </g></a>
 <a href="./shells_fundalmental" class="excalidraw-node-link" target="_self" title="shells_fundalmental"><g transform="translate(-113.50,-59.13)">
-<text x="479.45" y="1067.63" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="479.45" dy="0">shells_fundalmental</tspan></text>
+<text x="479.45" y="1067.63" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="479.45" dy="0">📍 shells_fundalmental</tspan></text>
 </g></a>
 <g transform="translate(-113.50,-59.13)">
 <text x="272.11" y="1028.96" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#000000" text-anchor="start"><tspan x="272.11" dy="0">Phần này dạy mình về các loại shell </tspan></text>

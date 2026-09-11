@@ -23,55 +23,55 @@ tags:
     <div class="excalidraw-canvas-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 829 1176" class="excalidraw-svg" data-width="829" data-height="1176">
 <a href="./three-way-handsake" class="excalidraw-node-link" target="_self" title="three way handsake"><g transform="translate(34.67,-61.01)">
-<text x="48.28" y="213.24" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="48.28" dy="0">three way handsake</tspan></text>
+<text x="48.28" y="213.24" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="48.28" dy="0">📍 three way handsake</tspan></text>
 </g></a>
 <a href="./http-vs-https" class="excalidraw-node-link" target="_self" title="http vs https"><g transform="translate(34.67,-61.01)">
-<text x="50.94" y="277.81" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="50.94" dy="0">http vs https</tspan></text>
+<text x="50.94" y="277.81" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="50.94" dy="0">📍 http vs https</tspan></text>
 </g></a>
 <a href="./reverse-proxy-là-gì" class="excalidraw-node-link" target="_self" title="Reverse Proxy là gì"><g transform="translate(34.67,-61.01)">
-<text x="54.78" y="322.48" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="54.78" dy="0">Reverse Proxy là gì</tspan></text>
+<text x="54.78" y="322.48" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="54.78" dy="0">📍 Reverse Proxy là gì</tspan></text>
 </g></a>
 <a href="./cookie-hoạt-động-thế-nào" class="excalidraw-node-link" target="_self" title="Cookie hoạt động thế nào"><g transform="translate(34.67,-61.01)">
-<text x="61.33" y="385.62" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="61.33" dy="0">Cookie hoạt động thế nào</tspan></text>
+<text x="61.33" y="385.62" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="61.33" dy="0">📍 Cookie hoạt động thế nào</tspan></text>
 </g></a>
 <a href="./session" class="excalidraw-node-link" target="_self" title="session"><g transform="translate(34.67,-61.01)">
-<text x="70.22" y="444.29" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="70.22" dy="0">session</tspan></text>
+<text x="70.22" y="444.29" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="70.22" dy="0">📍 session</tspan></text>
 </g></a>
 <a href="./jwt-là-gì" class="excalidraw-node-link" target="_self" title="JWT là gì"><g transform="translate(34.67,-61.01)">
-<text x="83.56" y="485.33" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="83.56" dy="0">JWT là gì</tspan></text>
+<text x="83.56" y="485.33" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="83.56" dy="0">📍 JWT là gì</tspan></text>
 </g></a>
 <a href="./same-origin-policy" class="excalidraw-node-link" target="_self" title="Same-Origin Policy"><g transform="translate(34.67,-61.01)">
-<text x="82.89" y="534.06" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="82.89" dy="0">Same-Origin Policy</tspan></text>
+<text x="82.89" y="534.06" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="82.89" dy="0">📍 Same-Origin Policy</tspan></text>
 </g></a>
 <g transform="translate(34.67,-61.01)">
 <path d="M5.09 162.98 C136.32 162.64,266.53 163.40,416.71 163.13 M5.59 163.11 C169.35 162.56,332.53 162.46,417.55 163.03 M417.61 163.98 C418.77 310.10,417.77 456.30,418.46 575.45 M417.60 162.78 C418.63 318.11,418.84 472.77,418.03 576.36 M417.57 576.35 C273.10 576.20,128.85 574.88,5.74 576.33 M417.45 576.77 C259.09 576.04,100.84 575.43,5.81 576.58 M5.18 577.40 C3.96 472.41,5.30 366.45,5.69 162.72 M4.98 576.77 C6.99 464.74,7.72 354.19,5.66 163.16" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <a href="./xss" class="excalidraw-node-link" target="_self" title="XSS"><g transform="translate(34.67,-61.01)">
-<text x="87.33" y="795.40" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="87.33" dy="0">XSS</tspan></text>
+<text x="87.33" y="795.40" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="87.33" dy="0">📍 XSS</tspan></text>
 </g></a>
 <a href="./idor" class="excalidraw-node-link" target="_self" title="idor"><g transform="translate(34.67,-61.01)">
-<text x="174.22" y="890.66" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="174.22" dy="0">idor</tspan></text>
+<text x="174.22" y="890.66" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="174.22" dy="0">📍 idor</tspan></text>
 </g></a>
 <a href="./api" class="excalidraw-node-link" target="_self" title="API"><g transform="translate(34.67,-61.01)">
-<text x="128.22" y="945.62" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="128.22" dy="0">API</tspan></text>
+<text x="128.22" y="945.62" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="128.22" dy="0">📍 API</tspan></text>
 </g></a>
 <a href="./các-thành-phần-bên-trong-gói-tin-http-request" class="excalidraw-node-link" target="_self" title="các thành phần bên trong gói tin http request"><g transform="translate(34.67,-61.01)">
-<text x="497.62" y="233.61" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="497.62" dy="0">các thành phần bên trong</tspan><tspan x="497.62" dy="25">gói tin http request</tspan></text>
+<text x="497.62" y="233.61" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="497.62" dy="0">📍 các thành phần bên trong</tspan><tspan x="497.62" dy="25">gói tin http request</tspan></text>
 </g></a>
 <a href="./mfa-bypass" class="excalidraw-node-link" target="_self" title="MFA Bypass"><g transform="translate(34.67,-61.01)">
-<text x="53.65" y="712.00" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="53.65" dy="0">MFA Bypass</tspan></text>
+<text x="53.65" y="712.00" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="53.65" dy="0">📍 MFA Bypass</tspan></text>
 </g></a>
 <a href="./chienluoc-hoc" class="excalidraw-node-link" target="_self" title="chienluoc hoc"><g transform="translate(34.67,-61.01)">
-<text x="489.76" y="857.36" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="489.76" dy="0">chienluoc hoc</tspan></text>
+<text x="489.76" y="857.36" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="489.76" dy="0">📍 chienluoc hoc</tspan></text>
 </g></a>
 <a href="./hiểu-internal-network-của-1-system-như-nào-cho-đúng" class="excalidraw-node-link" target="_self" title="Hiểu internal network của 1 system như nào cho đúng"><g transform="translate(34.67,-61.01)">
-<text x="156.76" y="1041.71" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="156.76" dy="0">Hiểu internal network của</tspan><tspan x="156.76" dy="25">1 system như nào cho đúng</tspan></text>
+<text x="156.76" y="1041.71" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="156.76" dy="0">📍 Hiểu internal network của</tspan><tspan x="156.76" dy="25">1 system như nào cho đúng</tspan></text>
 </g></a>
 <g transform="translate(34.67,-61.01)">
-<text x="166.67" y="1191.61" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="166.67" dy="0">{{}} thường có ở các chức năng nào </tspan></text>
+<text x="166.67" y="1191.61" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="166.67" dy="0">📍 {{}} thường có ở các chức năng nào </tspan></text>
 </g>
 <a href="./roadmap" class="excalidraw-node-link" target="_self" title="roadmap"><g transform="translate(34.67,-61.01)">
-<text x="498.10" y="121.01" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="498.10" dy="0">roadmap</tspan></text>
+<text x="498.10" y="121.01" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="498.10" dy="0">📍 roadmap</tspan></text>
 </g></a>
 </svg>
     </div>

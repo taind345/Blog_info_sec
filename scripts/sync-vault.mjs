@@ -30,7 +30,20 @@ function renderCustomText(el) {
   }
   const fontSize = el.fontSize || 20;
   const color = el.strokeColor || "#1e1e1e";
-  const lines = (el.text || el.originalText || "").split("\n");
+
+  let rawStr = (el.text || el.originalText || "");
+
+  // Tự động thêm linkPrefix '📍' cho liên kết nội bộ Obsidian nếu chưa có (đồng bộ với Obsidian Excalidraw plugin)
+  const isWikiLink = (el.rawText && el.rawText.includes("[[")) || (el.link && !el.link.startsWith("http"));
+  const isUrlLink = el.link && (el.link.startsWith("http://") || el.link.startsWith("https://"));
+
+  if (isWikiLink && !rawStr.startsWith("📍") && !rawStr.startsWith("🔗")) {
+    rawStr = "📍 " + rawStr;
+  } else if (isUrlLink && !rawStr.startsWith("🌐") && !rawStr.startsWith("🔗")) {
+    rawStr = "🌐 " + rawStr;
+  }
+
+  const lines = rawStr.split("\n");
   const lineHeight = fontSize * 1.25;
 
   let anchor = "start";
