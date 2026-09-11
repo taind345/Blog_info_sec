@@ -1,107 +1,86 @@
-# 📖 HƯỚNG DẪN VẬN HÀNH & KIẾN TRÚC HỆ THỐNG BLOG (PRIVATE MANUAL)
+# Huong dan Van hanh & Kien truc He thong Blog
 
-> Tài liệu hướng dẫn nội bộ chi tiết về toàn bộ luồng dữ liệu, cơ chế kỹ thuật, cấu hình tự động hóa và cách vận hành hệ thống **Security Blog**.
+Tai lieu huong dan noi bo ve toan bo luong du lieu, co che ky thuat, cau hinh tu dong hoa va cach van hanh he thong Security Blog.
 
 ---
 
-## 🏗️ 1. Kiến trúc Tổng thể (System Architecture)
+## 1. Kien truc tong the
 
-Hệ thống hoạt động theo mô hình **GitOps & Static Site Generation (SSG)** tách biệt giữa kho ghi chú và kho blog:
+He thong hoat dong theo mo hinh GitOps va Static Site Generation (SSG) tach biet giua kho ghi chu va kho blog:
 
 ```mermaid
 flowchart LR
-    A["Obsidian Vault Gốc\n(taind345/PortSwigger...)"] -->|"Git Push"| B["GitHub Source Repo"]
-    B -->|"Auto-Sync / Cron 6h"| C["Script Chuyển Đổi\n(scripts/sync-vault.mjs)"]
-    C -->|"Generate Markdown + SVG"| D["Thư mục content/\n(Blog_info_sec)"]
+    A["Obsidian Vault Goc\n(taind345/PortSwigger...)"] -->|"Git Push"| B["GitHub Source Repo"]
+    B -->|"Auto-Sync / Cron 6h"| C["Script Chuyen Doi\n(scripts/sync-vault.mjs)"]
+    C -->|"Generate Markdown + SVG"| D["Thu muc content/\n(Blog_info_sec)"]
     D -->|"Quartz v5 Engine"| E["Static HTML/CSS/JS\n(public/)"]
     E -->|"GitHub Actions"| F["GitHub Pages CDN\n(taind345.github.io/Blog_info_sec)"]
 ```
 
-### Các thành phần chính:
-1. **Repo gốc (Source Vault)**: `https://github.com/taind345/PortSwigger__TryHackMe__Writeup....etc-`  
-   Nơi bạn viết bài, chèn ảnh và vẽ sơ đồ trên ứng dụng Obsidian hàng ngày.
+### Cac thanh phan chinh:
+1. **Repo goc (Source Vault)**: `https://github.com/taind345/PortSwigger__TryHackMe__Writeup....etc-`  
+   Noi luu tru bai viet, anh va so do tren ung dung Obsidian.
 2. **Repo website (Blog Info Sec)**: `https://github.com/taind345/Blog_info_sec`  
-   Mã nguồn Quartz v5 đã được tùy biến toàn diện (giao diện Notion, font Cascadia Code, font Excalidraw tiếng Việt, engine pan/zoom tăng tốc phần cứng).
-3. **Môi trường Hosting**: **GitHub Pages** (Miễn phí, băng thông toàn cầu, SSL tự động, uptime 99.9%).
+   Ma nguon Quartz v5 da duoc tuy bien toi gian (giao dien Notion, font Cascadia Code, font Excalidraw tieng Viet, engine pan/zoom tang toc phan cung).
+3. **Moi truong Hosting**: **GitHub Pages** (Mien phi, bang thong toan cau, SSL tu dong, uptime 99.9%).
 
 ---
 
-## ⚙️ 2. Cơ chế Xử lý Sơ đồ Excalidraw (`scripts/sync-vault.mjs`)
+## 2. Co che xu ly so do Excalidraw (`scripts/sync-vault.mjs`)
 
-Đây là linh hồn của hệ thống, giải quyết các bài toán hóc búa của Excalidraw trên web:
-
-1. **Giải nén dữ liệu nén**:  
-   File Excalidraw của Obsidian chứa JSON nén qua `lz-string` ẩn trong comment ```` ```json:compressed-json ... ``` ````. Script tự động phát hiện, trích xuất và giải mã JSON.
-2. **Khắc phục lỗi font Tiếng Việt có dấu (`DFVN-excalidraw`)**:  
-   - Font gốc Virgil của Excalidraw thiếu ký tự tiếng Việt dẫn đến tình trạng đứt chữ hoặc font hệ thống nhảy lung tung.
-   - Script biên dịch text SVG với `font-family: 'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive`.
-   - Toàn bộ font WOFF2 nhẹ (~72KB) được nạp offline từ `quartz/static/fonts/DFVN-Excalifont.woff2`.
-3. **Tương tác liên kết (Interactive Clickable Links)**:  
-   Mỗi node chứa link dạng `[[0-XSS]]` hoặc URL `https://...` được bọc riêng biệt trong thẻ `<a class="excalidraw-node-link">` trỏ thẳng tới bài viết tương ứng mà không làm hỏng cấu trúc SVG.
-4. **Nhúng hình ảnh chụp màn hình (Embedded Screenshots)**:  
-   Đọc bảng `## Embedded Files` trong file Excalidraw, map `fileId` sang đường dẫn thực tế trong `0-asset/` và nhúng trực tiếp bằng thẻ `<image href="...">`.
-5. **Thẻ Markdown nhúng (`<!-- excalidraw-markdown-image:fileId -->`)**:  
-   Tự động biên dịch markdown thành thẻ HTML `<foreignObject>` hiển thị dạng card Notion trên canvas, đồng thời chèn nội dung đầy đủ xuống chân trang bài viết.
+1. **Giai nen du lieu**:  
+   File Excalidraw cua Obsidian chua JSON nen bang `lz-string`. Script tu dong trich xuat va giai ma JSON.
+2. **Xu ly font Tieng Viet co dau (`DFVN-excalidraw`)**:  
+   - Font Virgil goc thieu ky tu tieng Viet dan den gay net.
+   - Script gan `font-family: 'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive`.
+   - Font WOFF2 (~72KB) duoc nap offline tu `quartz/static/fonts/DFVN-Excalifont.woff2`.
+3. **Tuong tac lien ket (Interactive Clickable Links)**:  
+   Moi node chua link `[[ten-bai]]` hoac URL duoc boc trong the `<a class="excalidraw-node-link">` de click chuyen bai.
+4. **Nhung hinh anh chup man hinh (Embedded Screenshots)**:  
+   Doc muc `## Embedded Files` trong Excalidraw, map `fileId` sang file anh trong `0-asset/` va nhung truc tiep qua the `<image href="...">`.
+5. **The Markdown nhung (`<!-- excalidraw-markdown-image:fileId -->`)**:  
+   Bien dich markdown thanh card `<foreignObject>` tren canvas, dong thoi chen noi dung chi tiet xuong cuoi bai viet.
 6. **Deterministic Hashing (MD5)**:  
-   ID của từng sơ đồ được tạo từ `ex-` + `md5(đường dẫn file)`. Nhờ vậy, khi nội dung không đổi, ID giữ nguyên 100%, không sinh ra commit rác trong Git.
+   ID phan tu so do duoc sinh tu `ex-` + `md5(duong-dan-file)`. Khi noi dung khong doi, ID khong doi, tranh tao commit rac trong Git.
 
 ---
 
-## 🚀 3. Tối ưu Hiệu năng Canvas (`excalidraw.inline.ts`)
+## 3. Toi uu hieu nang Canvas (`excalidraw.inline.ts`)
 
-- **Tăng tốc phần cứng 3D (GPU)**: Áp dụng `translate3d(x, y, 0) scale(...)` kết hợp `requestAnimationFrame`, đảm bảo tốc độ phản hồi 60/120fps.
-- **Kéo thả không giật lag (`.is-panning`)**: Khi bắt đầu kéo sơ đồ, toàn bộ `pointer-events` trên các node con tạm thời bị vô hiệu hóa, loại bỏ hoàn toàn hiện tượng khựng do trình duyệt phải hit-test hàng trăm phần tử SVG.
-- **Thu phóng mượt (Exponential Zoom)**: Sử dụng hàm số mũ `scale * Math.exp(delta * 0.0018)` giúp thao tác lăn chuột và pinch trên trackpad mượt mà tự nhiên như Figma.
-- **Tự động căn giữa (Auto-fit)**: Tự động tính toán kích thước khung nhìn và sơ đồ để căn giữa vừa vặn khi trang vừa tải xong hoặc khi nhấn nút reset `↺`.
+- **Tang toc phan cung 3D (GPU)**: Su dung `translate3d(x, y, 0) scale(...)` va `requestAnimationFrame`, dam bao toc do 60/120fps.
+- **Keo tha khong giat lag (`.is-panning`)**: Khi bat dau keo, tam thoi ngat `pointer-events` tren cac node con de triet tieu do tre hit-test.
+- **Thu phong muot (Exponential Zoom)**: Su dung ham so mu `scale * Math.exp(delta * 0.0018)` giup thao tac lan chuot va pinch trackpad muot ma nhu Figma.
+- **Tu dong can giua (Auto-fit)**: Can giua so do vua van khung nhin khi vua mo trang hoac khi nhan nut reset.
 
 ---
 
-## 🔄 4. Quy trình Cập nhật & Đồng bộ Hàng ngày
+## 4. Quy trinh cap nhat & dong bo
 
-### Cách 1: Chạy 1 lệnh từ máy tính (Khuyên dùng khi ngồi máy)
-Mỗi khi bạn vừa viết xong bài mới trên Obsidian và muốn đẩy lên web ngay:
+### Cach 1: Chay 1 lenh tu may tinh
 ```bash
 npm run auto-sync
 ```
-Script sẽ tự động kéo repo gốc về -> chuyển đổi -> phát hiện bài mới -> commit -> push lên GitHub.
+Script se tu dong keo repo goc ve, chuyen doi, commit va day len GitHub neu co thay doi.
 
-### Cách 2: Tự động 100% trên Cloud (Không cần mở máy tính)
-- **Tự động mỗi 6 tiếng**: GitHub Actions chạy ngầm định kỳ vào lúc `00:00`, `06:00`, `12:00`, `18:00` UTC để kiểm tra và cập nhật bài viết mới từ repo gốc.
-- **Bấm nút cập nhật thủ công trên điện thoại**:
-  1. Vào link: [GitHub Actions Workflow](https://github.com/taind345/Blog_info_sec/actions/workflows/deploy.yml)
-  2. Bấm nút **Run workflow** -> Chọn branch `main` -> Bấm nút xanh **Run workflow**.
+### Cach 2: Tu dong tren Cloud (Khong can mo may)
+- **Dinh ky moi 6 tieng**: GitHub Actions tu dong chay luc 00:00, 06:00, 12:00, 18:00 UTC.
+- **Nut bam thu cong**: Vao muc Actions tren GitHub repo Blog_info_sec, chon workflow "Deploy Quartz Blog to GitHub Pages" va bam "Run workflow".
 
 ---
 
-## 🛠️ 5. Các Lệnh Điều Khiển Thường Dùng (Cheatsheet)
+## 5. Bang lenh dieu khien
 
-| Lệnh | Ý nghĩa | Khi nào dùng |
-|---|---|---|
-| `npm run auto-sync` | Đồng bộ trọn gói từ repo gốc -> commit -> push | Thường dùng nhất để cập nhật bài mới |
-| `npm run dev` hoặc `npm run serve` | Chạy web server thử nghiệm tại `http://localhost:8080` | Khi muốn xem trước giao diện trên máy |
-| `npm run build` | Đồng bộ và biên dịch static files ra thư mục `public/` | Kiểm tra lỗi build mã nguồn |
-| `npm run sync` | Chỉ kéo repo gốc và chuyển đổi Excalidraw sang `content/` | Khi chỉ muốn cập nhật nội dung markdown |
-
----
-
-## 💡 6. Quy tắc viết bài trên Obsidian để tương thích hoàn hảo
-
-1. **Liên kết bài viết**: Dùng cú pháp chuẩn `[[Tên file]]` hoặc `[[Tên file|Tên hiển thị]]`.
-2. **Hình ảnh**: Lưu hình ảnh vào thư mục `0-asset/` (mặc định của vault), khi chèn ảnh dùng cú pháp `![[Pasted image ...png]]`.
-3. **Sơ đồ Excalidraw**:
-   - Để tạo link trong sơ đồ, nhấp đúp vào phần tử chữ và gõ `[[Tên bài viết]]` hoặc dán link web trực tiếp.
-   - Viết tiếng Việt thoải mái, font `DFVN-excalidraw` hỗ trợ 100% tất cả các dấu thanh tiếng Việt.
+| Lenh | Y nghia |
+|---|---|
+| `npm run auto-sync` | Dong bo tron goi tu repo goc, commit va push |
+| `npm run dev` / `npm run serve` | Chay web server thu nghiem tai `http://localhost:8080` |
+| `npm run build` | Bien dich static site ra thu muc `public/` |
+| `npm run sync` | Chi keo repo goc va chuyen doi sang `content/` |
 
 ---
 
-## ❓ 7. Xử lý sự cố (Troubleshooting)
+## 6. Xu ly su co thuong gap
 
-- **Trình duyệt vẫn hiển thị font hoặc tiêu đề cũ?**  
-  Do trình duyệt lưu cache trang web. Hãy nhấn `Ctrl + F5` (Windows/Linux) hoặc `Cmd + Shift + R` (Mac) để buộc trình duyệt tải lại tài nguyên mới nhất.
-- **Báo lỗi port 8080 đã được sử dụng khi chạy `npm run dev`?**  
-  Chạy lệnh tắt tiến trình đang chiếm port:
-  ```bash
-  fuser -k 8080/tcp || kill -9 $(lsof -t -i:8080)
-  ```
-- **Repo gốc đổi tên hoặc đổi đường dẫn?**  
-  Mở file [scripts/sync-vault.mjs](scripts/sync-vault.mjs), tìm biến `REPO_URL` ở dòng 20 và cập nhật lại URL mới.
+- **Trinh duyet hien thi cache cu**: Nhan `Ctrl + F5` (Windows/Linux) hoac `Cmd + Shift + R` (Mac).
+- **Port 8080 bi chiem**: Chay `fuser -k 8080/tcp` de giai phong port.
+- **Doi URL repo goc**: Cap nhat bien `REPO_URL` tai dong 20 trong file `scripts/sync-vault.mjs`.
