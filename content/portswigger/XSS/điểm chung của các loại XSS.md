@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1127 1033" class="excalidraw-svg" data-width="1127" data-height="1033">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1127 1033" width="1127" height="1033" class="excalidraw-svg" data-width="1127" data-height="1033">
 <g transform="translate(-20.24,-201.66)">
 <text x="260.41" y="367.69" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="260.41" dy="0">storeed xss</tspan></text>
 </g>

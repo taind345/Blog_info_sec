@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1149 2179" class="excalidraw-svg" data-width="1149" data-height="2179">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1149 2179" width="1149" height="2179" class="excalidraw-svg" data-width="1149" data-height="2179">
 <g transform="translate(-55.80,664.54)">
 <text x="943.47" y="-189.53" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="943.47" dy="0">TRUE/FALSE--&gt; đều</tspan><tspan x="943.47" dy="25">cho ra kết quả đúng</tspan></text>
 </g>

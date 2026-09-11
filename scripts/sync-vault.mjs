@@ -240,7 +240,7 @@ function renderExcalidrawToSvgWithLinks(
     rendered.push(group);
   }
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" class="excalidraw-svg" data-width="${width}" data-height="${height}">\n${rendered.join("\n")}\n</svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" class="excalidraw-svg" data-width="${width}" data-height="${height}">\n${rendered.join("\n")}\n</svg>`;
 }
 
 // 1. Acquire Vault

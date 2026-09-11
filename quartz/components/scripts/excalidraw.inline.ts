@@ -31,31 +31,62 @@ function setupExcalidraw() {
       })
     }
 
+    // Ensure SVG has explicit dimensions matching its intrinsic viewBox
+    const svgW = parseFloat(svg.getAttribute("data-width") || "1000")
+    const svgH = parseFloat(svg.getAttribute("data-height") || "800")
+    svg.style.width = `${svgW}px`
+    svg.style.height = `${svgH}px`
+
+    // Embedded image path auto-recovery (handles trailing-slash / SPA router path differences)
+    svg.querySelectorAll<SVGImageElement>("image.excalidraw-embedded-img").forEach((img) => {
+      img.addEventListener("error", () => {
+        const href = img.getAttribute("href") || ""
+        const fileName = href.split("/").pop()
+        if (fileName) {
+          const isGhPages = window.location.pathname.includes("/Blog_info_sec")
+          const resolved = isGhPages ? `/Blog_info_sec/0-asset/${fileName}` : `/0-asset/${fileName}`
+          img.setAttribute("href", resolved)
+        }
+      }, { once: true })
+    })
+
     // Auto-fit & center the diagram within the viewport
     function fitToScreen() {
-      const vRect = viewport.getBoundingClientRect()
-      const vw = vRect.width || 800
-      const vh = vRect.height || 560
-      const svgW = parseFloat(svg.getAttribute("data-width") || "1000")
-      const svgH = parseFloat(svg.getAttribute("data-height") || "800")
+      const vw = viewport.clientWidth || viewport.getBoundingClientRect().width || 800
+      const vh = viewport.clientHeight || viewport.getBoundingClientRect().height || 560
 
-      const pad = 36
-      const availW = Math.max(vw - pad * 2, 100)
-      const availH = Math.max(vh - pad * 2, 100)
+      const pad = 24
+      const availW = Math.max(vw - pad * 2, 80)
+      const availH = Math.max(vh - pad * 2, 80)
 
-      const fitScale = Math.min(availW / svgW, availH / svgH, 1.25)
-      scale = Math.max(Math.min(fitScale, 2.5), 0.25)
+      const fitScale = Math.min(availW / svgW, availH / svgH, 1.0)
+      // Allow scale down to 0.03 for huge/tall diagrams (e.g. 5000px+), max 2.5
+      scale = Math.max(Math.min(fitScale, 2.5), 0.03)
 
       pointX = (vw - svgW * scale) / 2
-      pointY = (vh - svgH * scale) / 2
+      // For very tall vertical mindmaps, align to top so first nodes are immediately readable
+      if (svgH > svgW * 1.5 && (svgH * scale) > vh) {
+        pointY = pad
+      } else {
+        pointY = (vh - svgH * scale) / 2
+      }
 
       scheduleUpdate()
     }
 
-    // Initial fit on load
+    // Initial fit on load and on viewport resize
     requestAnimationFrame(() => {
       fitToScreen()
     })
+
+    if (window.ResizeObserver) {
+      const ro = new ResizeObserver(() => {
+        if (!isPanning) {
+          fitToScreen()
+        }
+      })
+      ro.observe(viewport)
+    }
 
     const btnZoomIn = container.querySelector(".zoom-in")
     const btnZoomOut = container.querySelector(".zoom-out")

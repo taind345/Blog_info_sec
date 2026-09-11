@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 598" class="excalidraw-svg" data-width="640" data-height="598">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 598" width="640" height="598" class="excalidraw-svg" data-width="640" data-height="598">
 <g transform="translate(-11.95,-208.35)">
 <text x="51.95" y="268.35" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="51.95" dy="0">MFA Bypass là gì?</tspan></text>
 </g>

@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 237 205" class="excalidraw-svg" data-width="237" data-height="205">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 237 205" width="237" height="205" class="excalidraw-svg" data-width="237" data-height="205">
 <a href="./in-ra-man-hinh" class="excalidraw-node-link" target="_self" title="in ra man hinh"><g transform="translate(-182.50,-91.19)">
 <text x="222.50" y="211.69" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="222.50" dy="0">📍in ra man hinh</tspan></text>
 </g></a>

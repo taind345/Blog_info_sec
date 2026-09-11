@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 2077" class="excalidraw-svg" data-width="1360" data-height="2077">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 2077" width="1360" height="2077" class="excalidraw-svg" data-width="1360" data-height="2077">
 <g transform="translate(842.71,481.21)">
 <text x="-743.91" y="-384.26" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-743.91" dy="0">&apos; UNION SELECT username, password FROM users--</tspan></text>
 </g>

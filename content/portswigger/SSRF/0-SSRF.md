@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 776 599" class="excalidraw-svg" data-width="776" data-height="599">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 776 599" width="776" height="599" class="excalidraw-svg" data-width="776" data-height="599">
 <g transform="translate(-221.93,-246.73)">
 <text x="261.93" y="648.12" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="261.93" dy="0">2-bypass nhu the nao??</tspan></text>
 </g>

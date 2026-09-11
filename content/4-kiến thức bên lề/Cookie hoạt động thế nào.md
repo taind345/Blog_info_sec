@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 835 690" class="excalidraw-svg" data-width="835" data-height="690">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 835 690" width="835" height="690" class="excalidraw-svg" data-width="835" data-height="690">
 <g transform="translate(-36.72,-54.25)">
 <path d="M466.22 154.54 L560.77 152.60 L559.52 249.04 L464.76 248.54" stroke="none" fill="#eeeeee"/>
 <path d="M466.68 152.69 C486.36 153.93,511.71 154.72,561.42 151.99 M464.56 153.58 C499.59 154.76,532.86 153.84,562.30 152.76 M560.01 152.31 C560.08 174.24,560.32 191.41,562.21 247.33 M562.21 154.50 C561.75 172.96,561.80 193.36,561.41 247.15 M560.61 249.39 C529.29 248.91,499.65 246.67,466.30 249.48 M562.11 248.65 C530.93 247.17,498.44 248.77,465.54 248.63 M465.64 248.68 C466.03 226.05,466.29 207.63,463.62 151.77 M465.85 247.94 C465.02 216.81,464.74 187.08,465.01 153.95" stroke="#000000" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>

@@ -343,20 +343,16 @@ code, pre, kbd, samp {
 }
 
 .excalidraw-canvas-wrapper {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   transform-origin: 0 0;
   will-change: transform;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
 .excalidraw-svg {
-  max-width: 100%;
-  height: auto;
   display: block;
   shape-rendering: geometricPrecision;
   text-rendering: optimizeLegibility;

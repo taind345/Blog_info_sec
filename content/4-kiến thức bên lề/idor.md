@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 821 425" class="excalidraw-svg" data-width="821" data-height="425">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 821 425" width="821" height="425" class="excalidraw-svg" data-width="821" data-height="425">
 <g transform="translate(31.17,-320.69)">
 <text x="86.13" y="380.69" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="86.13" dy="0">Nếu (Người_đang_đăng_nhập.ID == </tspan></text>
 </g>

@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1056 2570" class="excalidraw-svg" data-width="1056" data-height="2570">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1056 2570" width="1056" height="2570" class="excalidraw-svg" data-width="1056" data-height="2570">
 <g transform="translate(-236.05,-81.87)">
 <text x="349.83" y="184.72" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="349.83" dy="0">là kiểu sql</tspan><tspan x="349.83" dy="25">injection mà ko trả</tspan><tspan x="349.83" dy="25">ra kết quả</tspan></text>
 </g>

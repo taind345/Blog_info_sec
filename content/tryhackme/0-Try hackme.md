@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1833 4350" class="excalidraw-svg" data-width="1833" data-height="4350">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1833 4350" width="1833" height="4350" class="excalidraw-svg" data-width="1833" data-height="4350">
 <a href="./search-skill" class="excalidraw-node-link" target="_self" title="search skill"><g transform="translate(53.81,42.53)">
 <text x="332.57" y="254.08" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="332.57" dy="0">📍 search skill</tspan></text>
 </g></a>

@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1255 1500" class="excalidraw-svg" data-width="1255" data-height="1500">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1255 1500" width="1255" height="1500" class="excalidraw-svg" data-width="1255" data-height="1500">
 <g transform="translate(1450.33,702.57)">
 <text x="-1387.42" y="-625.68" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="17.990350697994668" fill="#1e1e1e" text-anchor="start"><tspan x="-1387.42" dy="0">authentication vs authorize ?</tspan></text>
 </g>

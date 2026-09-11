@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1340 5909" class="excalidraw-svg" data-width="1340" data-height="5909">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1340 5909" width="1340" height="5909" class="excalidraw-svg" data-width="1340" data-height="5909">
 <g transform="translate(98.59,25.19)">
 
 <rect x="138.13368620948438" y="21.91697105079851" width="771.01650209275" height="757.9993403691061" rx="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1.5" class="excalidraw-md-bg"/>

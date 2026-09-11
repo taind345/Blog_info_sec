@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1170 964" class="excalidraw-svg" data-width="1170" data-height="964">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1170 964" width="1170" height="964" class="excalidraw-svg" data-width="1170" data-height="964">
 <a href="./xss-là-gì" class="excalidraw-node-link" target="_self" title="Xss là gì"><g transform="translate(14.31,-129.40)">
 <text x="64.37" y="298.85" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="64.37" dy="0">📍Xss là gì</tspan></text>
 </g></a>

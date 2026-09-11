@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1227 2221" class="excalidraw-svg" data-width="1227" data-height="2221">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1227 2221" width="1227" height="2221" class="excalidraw-svg" data-width="1227" data-height="2221">
 <g transform="translate(-113.50,-59.13)">
 <text x="160.91" y="275.33" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="160.91" dy="0">I) Try hack me metasploit</tspan></text>
 </g>

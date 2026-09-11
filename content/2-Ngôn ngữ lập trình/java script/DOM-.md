@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 453 239" class="excalidraw-svg" data-width="453" data-height="239">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 453 239" width="453" height="239" class="excalidraw-svg" data-width="453" data-height="239">
 <g transform="translate(-82.88,-288.10)">
 <text x="122.88" y="348.10" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="122.88" dy="0">tìm phần tử--&gt; tìm thẻ HTML</tspan></text>
 </g>

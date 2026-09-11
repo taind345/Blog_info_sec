@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1057 1114" class="excalidraw-svg" data-width="1057" data-height="1114">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1057 1114" width="1057" height="1114" class="excalidraw-svg" data-width="1057" data-height="1114">
 <a href="./portswigger/xss/0-xss" class="excalidraw-node-link" target="_self" title="0-XSS"><g transform="translate(-27.94,445.78)">
 <text x="192.12" y="376.19" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="192.12" dy="0">📍0-XSS</tspan></text>
 </g></a>

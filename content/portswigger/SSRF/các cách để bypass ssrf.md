@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1054 1308" class="excalidraw-svg" data-width="1054" data-height="1308">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1054 1308" width="1054" height="1308" class="excalidraw-svg" data-width="1054" data-height="1308">
 <g transform="translate(699.57,517.80)">
 <text x="-595.54" y="-393.08" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="-595.54" dy="0">cơ chế chặn blacklist</tspan></text>
 </g>

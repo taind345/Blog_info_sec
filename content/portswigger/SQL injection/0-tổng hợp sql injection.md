@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1412 1037" class="excalidraw-svg" data-width="1412" data-height="1037">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1412 1037" width="1412" height="1037" class="excalidraw-svg" data-width="1412" data-height="1037">
 <a href="./các-kỹ-thuật-chèn-sql" class="excalidraw-node-link" target="_self" title="các kỹ thuật chèn sql"><g transform="translate(1144.41,680.87)">
 <text x="-1075.05" y="-104.91" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-1075.05" dy="0">📍các kỹ thuật chèn sql</tspan></text>
 </g></a>

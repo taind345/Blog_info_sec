@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1249 1922" class="excalidraw-svg" data-width="1249" data-height="1922">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1249 1922" width="1249" height="1922" class="excalidraw-svg" data-width="1249" data-height="1922">
 <a href="../../0-asset/pasted-image-20260629045856_592.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629045856_592.png"><g transform="translate(-63.28,-48.96)">
 <image x="181.35914414833974" y="244.74124908447266" width="711.3680154142581" height="416" href="../../0-asset/pasted-image-20260629045856_592.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>

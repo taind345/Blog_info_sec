@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 861 1000" class="excalidraw-svg" data-width="861" data-height="1000">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 861 1000" width="861" height="1000" class="excalidraw-svg" data-width="861" data-height="1000">
 <a href="./burpsite" class="excalidraw-node-link" target="_self" title="Burpsite"><g transform="translate(-105.01,92.25)">
 <text x="785.10" y="303.30" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#000000" text-anchor="start"><tspan x="785.10" dy="0">📍 Burpsite</tspan></text>
 </g></a>

@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 211" class="excalidraw-svg" data-width="268" data-height="211">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 211" width="268" height="211" class="excalidraw-svg" data-width="268" data-height="211">
 <a href="./crack-the-gate" class="excalidraw-node-link" target="_self" title="Crack the gate"><g transform="translate(-271.46,-318.15)">
 <text x="328.37" y="378.15" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="328.37" dy="0">📍Crack the gate</tspan></text>
 </g></a>

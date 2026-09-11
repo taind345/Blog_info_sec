@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 807 1199" class="excalidraw-svg" data-width="807" data-height="1199">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 807 1199" width="807" height="1199" class="excalidraw-svg" data-width="807" data-height="1199">
 <g transform="translate(22.30,-338.99)">
 <text x="111.16" y="488.35" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="111.16" dy="0">Header.Payload.Signature</tspan></text>
 </g>

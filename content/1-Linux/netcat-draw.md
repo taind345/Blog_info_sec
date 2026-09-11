@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 815 581" class="excalidraw-svg" data-width="815" data-height="581">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 815 581" width="815" height="581" class="excalidraw-svg" data-width="815" data-height="581">
 <g transform="translate(-357.40,-197.62)">
 <text x="414.89" y="257.62" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="414.89" dy="0">nguoi nhan</tspan></text>
 </g>

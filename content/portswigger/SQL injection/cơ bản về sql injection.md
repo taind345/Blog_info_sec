@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 911 1488" class="excalidraw-svg" data-width="911" data-height="1488">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 911 1488" width="911" height="1488" class="excalidraw-svg" data-width="911" data-height="1488">
 <g transform="translate(205.19,567.24)">
 <text x="-53.25" y="-310.57" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="-53.25" dy="0">cách test sql injection</tspan></text>
 </g>

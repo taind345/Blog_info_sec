@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 307 111" class="excalidraw-svg" data-width="307" data-height="111">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 307 111" width="307" height="111" class="excalidraw-svg" data-width="307" data-height="111">
 <g transform="translate(-240.87,-286.86)">
 <text x="280.87" y="353.03" font-family="Cascadia Code, Consolas, monospace" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="280.87" dy="0">📍tạo link thư mục</tspan></text>
 </g>

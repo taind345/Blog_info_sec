@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 843 456" class="excalidraw-svg" data-width="843" data-height="456">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 843 456" width="843" height="456" class="excalidraw-svg" data-width="843" data-height="456">
 <a href="./networking-concept" class="excalidraw-node-link" target="_self" title="networking concept"><g transform="translate(-261.73,-184.12)">
 <text x="305.72" y="313.38" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="305.72" dy="0">📍networking concept</tspan></text>
 </g></a>

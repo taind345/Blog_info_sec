@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 829 1176" class="excalidraw-svg" data-width="829" data-height="1176">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 829 1176" width="829" height="1176" class="excalidraw-svg" data-width="829" data-height="1176">
 <a href="./three-way-handsake" class="excalidraw-node-link" target="_self" title="three way handsake"><g transform="translate(34.67,-61.01)">
 <text x="48.28" y="213.24" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="48.28" dy="0">📍 three way handsake</tspan></text>
 </g></a>

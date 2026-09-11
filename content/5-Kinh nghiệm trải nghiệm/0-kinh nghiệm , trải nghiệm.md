@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 541 320" class="excalidraw-svg" data-width="541" data-height="320">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 541 458" width="541" height="458" class="excalidraw-svg" data-width="541" data-height="458">
 <a href="./workflow-pentest-chuẩn-với-ai" class="excalidraw-node-link" target="_self" title="workflow pentest chuẩn với AI"><g transform="translate(-258.27,-223.95)">
 <text x="347.20" y="279.95" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="347.20" dy="0">📍workflow pentest chuẩn với AI</tspan></text>
 </g></a>
@@ -43,6 +43,9 @@ tags:
 <g transform="translate(-258.27,-223.95)">
 <path d="M555.99 487.09 L555.99 487.72 L556.54 487.72 L557.37 487.72 L557.37 488.57 L558.23 488.57 L559.08 489.44 L559.95 490.31 L560.80 491.17 L561.66 492.02 L561.66 492.87 L562.51 493.72 L562.51 494.56 L560.82 496.24 L559.02 497.12 L556.42 498.01 L553.15 499.94 L550.35 500.80 L547.44 501.92 L544.20 503.03 L542.24 503.03 L542.24 503.03" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<a href="./system-thinking-while-coding" class="excalidraw-node-link" target="_self" title="system thinking while coding"><g transform="translate(-258.27,-223.95)">
+<text x="315.92" y="637.30" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="315.92" dy="0">📍system thinking while coding</tspan></text>
+</g></a>
 </svg>
     </div>
   </div>
@@ -54,3 +57,4 @@ tags:
 - [[workflow pentest chuẩn với AI]]
 - [[taị sao mình cứ stuck mãi với lý thuyết]]
 - [[mind set học đúng]]
+- [[system thinking while coding]]

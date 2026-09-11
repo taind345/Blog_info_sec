@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 872 908" class="excalidraw-svg" data-width="872" data-height="908">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 872 908" width="872" height="908" class="excalidraw-svg" data-width="872" data-height="908">
 <g transform="translate(477.46,402.66)">
 <path d="M117.09 -304.44 L259.41 -302.98 L257.41 -167.51 L119.58 -166.94" stroke="none" fill="#eeeeee"/>
 <path d="M117.66 -305.55 C169.44 -304.85,222.70 -304.36,257.62 -305.78 M116.95 -304.88 C151.06 -302.78,183.39 -302.68,259.34 -304.35 M259.68 -303.72 C257.75 -264.67,257.77 -227.06,260.35 -164.88 M258.11 -304.10 C258.38 -262.62,258.54 -219.54,259.12 -166.44 M258.19 -168.25 C211.78 -164.84,166.26 -165.93,117.22 -166.48 M259.12 -167.13 C209.68 -166.58,162.10 -167.22,118.28 -165.47 M116.84 -167.60 C119.03 -198.40,119.98 -227.69,116.02 -304.51 M117.28 -167.23 C116.75 -195.29,118.05 -225.93,117.09 -304.80" stroke="#000000" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>

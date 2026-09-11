@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 588 299" class="excalidraw-svg" data-width="588" data-height="299">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 588 299" width="588" height="299" class="excalidraw-svg" data-width="588" data-height="299">
 <a href="./domixi" class="excalidraw-node-link" target="_self" title="domixi"><g transform="translate(-243.17,-298.76)">
 <text x="326.54" y="479.79" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="326.54" dy="0">📍domixi</tspan></text>
 </g></a>

@@ -13,3 +13,5 @@ replit.nix
 quartz/cli/tui/dist/
 .turbo/
 .vault-cache/
+.GUIDE_SYSTEM.md
+.README_INTERNAL.md

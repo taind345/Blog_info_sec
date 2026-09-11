@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 999 1429" class="excalidraw-svg" data-width="999" data-height="1429">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 999 1429" width="999" height="1429" class="excalidraw-svg" data-width="999" data-height="1429">
 <a href="./cách-auto-mount-ổ-d" class="excalidraw-node-link" target="_self" title="cách auto mount ổ D"><g transform="translate(-183.27,-35.13)">
 <text x="377.50" y="225.24" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="377.50" dy="0">📍 cách auto mount ổ D</tspan></text>
 </g></a>

@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 963 1358" class="excalidraw-svg" data-width="963" data-height="1358">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 963 1358" width="963" height="1358" class="excalidraw-svg" data-width="963" data-height="1358">
 <g transform="translate(-5.12,-132.35)">
 <text x="96.28" y="192.35" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="96.28" dy="0">-Session Hijacking </tspan></text>
 </g>

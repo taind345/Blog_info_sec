@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511 244" class="excalidraw-svg" data-width="511" data-height="244">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511 244" width="511" height="244" class="excalidraw-svg" data-width="511" data-height="244">
 <a href="./sodan" class="excalidraw-node-link" target="_self" title="sodan"><g transform="translate(-181.86,-180.23)">
 <text x="519.70" y="242.70" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="519.70" dy="0">📍sodan</tspan></text>
 </g></a>

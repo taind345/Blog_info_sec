@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 946 343" class="excalidraw-svg" data-width="946" data-height="343">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 946 343" width="946" height="343" class="excalidraw-svg" data-width="946" data-height="343">
 <a href="./server-side-template-injection" class="excalidraw-node-link" target="_self" title="server side template injection"><g transform="translate(-153.26,-240.46)">
 <text x="193.26" y="300.46" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="193.26" dy="0">📍server side template injection</tspan></text>
 </g></a>

@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 397 361" class="excalidraw-svg" data-width="397" data-height="361">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 397 361" width="397" height="361" class="excalidraw-svg" data-width="397" data-height="361">
 <a href="../../4-kiến-thức-bên-lề/same-origin-policy" class="excalidraw-node-link" target="_self" title="Same-Origin Policy"><g transform="translate(-138.50,-219.59)">
 <text x="320.50" y="282.19" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="320.50" dy="0">📍 Same-Origin Policy</tspan></text>
 </g></a>

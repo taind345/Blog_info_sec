@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1087 440" class="excalidraw-svg" data-width="1087" data-height="440">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1087 440" width="1087" height="440" class="excalidraw-svg" data-width="1087" data-height="440">
 <g transform="translate(-191.83,-128.25)">
 <text x="231.83" y="347.02" font-family="Cascadia Code, Consolas, monospace" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="231.83" dy="0">&lt;iframe src=&quot;https://ads-tinh-nghi.com&quot; sandbox=&quot;allow-scripts&quot;&gt;&lt;/iframe&gt;</tspan></text>
 </g>

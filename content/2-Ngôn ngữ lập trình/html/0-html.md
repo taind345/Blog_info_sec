@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232 130" class="excalidraw-svg" data-width="232" data-height="130">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232 130" width="232" height="130" class="excalidraw-svg" data-width="232" data-height="130">
 <a href="./keyword-html" class="excalidraw-node-link" target="_self" title="keyword html"><g transform="translate(-326.27,-168.53)">
 <text x="366.27" y="228.53" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="366.27" dy="0">📍keyword html</tspan><tspan x="366.27" dy="25"></tspan></text>
 </g></a>
