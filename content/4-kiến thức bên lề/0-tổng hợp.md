@@ -46,10 +46,10 @@ tags:
 <g transform="translate(34.67,-61.01)">
 <path d="M5.09 162.98 C136.32 162.64,266.53 163.40,416.71 163.13 M5.59 163.11 C169.35 162.56,332.53 162.46,417.55 163.03 M417.61 163.98 C418.77 310.10,417.77 456.30,418.46 575.45 M417.60 162.78 C418.63 318.11,418.84 472.77,418.03 576.36 M417.57 576.35 C273.10 576.20,128.85 574.88,5.74 576.33 M417.45 576.77 C259.09 576.04,100.84 575.43,5.81 576.58 M5.18 577.40 C3.96 472.41,5.30 366.45,5.69 162.72 M4.98 576.77 C6.99 464.74,7.72 354.19,5.66 163.16" stroke="#1e1e1e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<a href="./xss" class="excalidraw-node-link" target="_self" title="XSS"><g transform="translate(34.67,-61.01)">
+<a href="../5-kinh-nghiệm-trải-nghiệm/bugbounty-methodlogy/signs/xss" class="excalidraw-node-link" target="_self" title="XSS"><g transform="translate(34.67,-61.01)">
 <text x="87.33" y="795.40" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="87.33" dy="0">📍 XSS</tspan></text>
 </g></a>
-<a href="./idor" class="excalidraw-node-link" target="_self" title="idor"><g transform="translate(34.67,-61.01)">
+<a href="../5-kinh-nghiệm-trải-nghiệm/bugbounty-methodlogy/signs/idor" class="excalidraw-node-link" target="_self" title="idor"><g transform="translate(34.67,-61.01)">
 <text x="174.22" y="890.66" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="174.22" dy="0">📍 idor</tspan></text>
 </g></a>
 <a href="./api" class="excalidraw-node-link" target="_self" title="API"><g transform="translate(34.67,-61.01)">
@@ -88,8 +88,8 @@ tags:
 - [[session]]
 - [[JWT là gì]]
 - [[Same-Origin Policy]]
-- [[XSS]]
-- [[idor]]
+- [[4-kiến thức bên lề/XSS]]
+- [[4-kiến thức bên lề/idor]]
 - [[API]]
 - [[các thành phần bên trong gói tin http request]]
 - [[MFA Bypass]]

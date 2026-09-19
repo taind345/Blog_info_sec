@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1331 1288" width="1331" height="1288" class="excalidraw-svg" data-width="1331" data-height="1288">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1331 1940" width="1331" height="1940" class="excalidraw-svg" data-width="1331" data-height="1940">
 <g transform="translate(866.74,962.33)">
 <text x="-682.04" y="-820.10" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#e03131" text-anchor="start"><tspan x="-682.04" dy="0">writeup</tspan></text>
 </g>
@@ -126,6 +126,18 @@ tags:
 <a href="./whitelist-bypass" class="excalidraw-node-link" target="_self" title="whitelist bypass"><g transform="translate(866.74,962.33)">
 <text x="-482.01" y="-902.33" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-482.01" dy="0">📍whitelist bypass</tspan></text>
 </g></a>
+<g transform="translate(866.74,962.33)">
+<path d="M-199.75 407.45 C-176.02 409.06,-152.60 409.68,-90.96 408.03 M-199.40 409.50 C-172.06 409.69,-146.11 410.47,-91.38 409.51 M-90.79 408.41 C-93.96 433.60,-92.33 459.51,-92.59 471.56 M-91.48 410.05 C-91.97 430.89,-91.25 452.55,-93.10 472.05 M-91.95 473.77 C-118.25 471.85,-141.21 472.01,-198.16 473.36 M-92.85 472.59 C-121.79 474.48,-151.38 473.60,-200.47 473.18 M-197.55 473.34 C-197.91 456.77,-199.12 439.82,-199.75 408.83 M-199.22 473.86 C-199.13 450.97,-199.62 430.02,-200.26 409.15" stroke="#1971c2" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g transform="translate(866.74,962.33)">
+<path d="M-370.89 877.00 L-369.90 877.00 L-368.92 877.00 L-367.68 877.99 L-367.68 879.20 L-366.70 879.20 L-366.70 880.19 L-366.70 881.14 L-366.70 882.10 L-366.70 884.07 L-367.68 886.04 L-367.68 888.01 L-368.96 890.29 L-370.21 892.56 L-370.21 894.53 L-371.21 897.51 L-372.50 900.39 L-373.76 902.99 L-374.76 905.21 L-374.76 907.19 L-375.74 909.15 L-375.74 910.14 L-375.74 911.12 L-375.74 912.11 L-375.74 913.09 L-375.74 914.07 L-375.74 915.05 L-375.74 916.00 L-374.76 916.00 L-374.76 916.99 L-373.78 916.99 L-373.78 917.97 L-372.79 917.97 L-371.81 917.97 L-370.82 919.17 L-368.61 919.17 L-367.63 919.17 L-364.68 919.17 L-361.42 919.17 L-359.17 919.17 L-354.30 919.17 L-348.87 919.17 L-342.76 919.17 L-337.63 919.17 L-332.49 919.17 L-327.69 919.17 L-324.16 919.17 L-322.92 919.17 L-319.97 919.17 L-318.99 919.17 L-318.00 919.17 L-317.02 919.17 L-316.04 919.17 L-315.07 919.17 L-316.58 919.17 L-316.58 919.17" stroke="#1971c2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g transform="translate(866.74,962.33)">
+<path d="M-328.46 910.34 L-326.51 910.34 L-325.53 910.34 L-324.55 911.32 L-323.56 911.32 L-322.58 911.32 L-320.61 912.31 L-319.63 912.31 L-319.63 913.51 L-318.42 914.50 L-317.44 914.50 L-317.44 915.48 L-316.45 917.92 L-315.47 918.90 L-315.47 919.89 L-315.47 920.87 L-315.47 921.85 L-315.47 922.84 L-315.47 923.82 L-315.47 924.80 L-315.47 925.79 L-315.47 926.77 L-316.45 927.75 L-318.68 928.97 L-319.66 930.21 L-321.91 931.45 L-324.18 931.45 L-326.15 932.44 L-328.11 933.42 L-329.10 933.42 L-330.08 933.42 L-331.07 933.42 L-331.07 934.40 L-332.05 934.40 L-332.05 934.40" stroke="#1971c2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g transform="translate(866.74,962.33)">
+<text x="-303.25" y="931.91" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="-303.25" dy="0">đại khái là mượn server vượt qua trust boundary</tspan></text>
+</g>
 </svg>
     </div>
   </div>

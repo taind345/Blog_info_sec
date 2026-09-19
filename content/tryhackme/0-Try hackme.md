@@ -21,33 +21,33 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1833 4350" width="1833" height="4350" class="excalidraw-svg" data-width="1833" data-height="4350">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1833 4668" width="1833" height="4668" class="excalidraw-svg" data-width="1833" data-height="4668">
 <a href="./search-skill" class="excalidraw-node-link" target="_self" title="search skill"><g transform="translate(53.81,42.53)">
-<text x="332.57" y="254.08" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="332.57" dy="0">📍 search skill</tspan></text>
+<text x="332.57" y="254.08" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="332.57" dy="0">📍search skill</tspan></text>
 </g></a>
 <a href="./guid-pentest-web" class="excalidraw-node-link" target="_self" title="Guid pentest web"><g transform="translate(53.81,42.53)">
-<text x="335.60" y="318.29" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="335.60" dy="0">📍 Guid pentest web</tspan></text>
+<text x="335.60" y="318.29" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="335.60" dy="0">📍Guid pentest web</tspan></text>
 </g></a>
 <a href="./guid-pentest-infrastructure" class="excalidraw-node-link" target="_self" title="guid pentest infrastructure"><g transform="translate(53.81,42.53)">
-<text x="326.35" y="365.29" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="326.35" dy="0">📍 guid pentest infrastructure</tspan></text>
+<text x="326.35" y="365.29" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="326.35" dy="0">📍guid pentest infrastructure</tspan></text>
 </g></a>
 <a href="./nháp-thm" class="excalidraw-node-link" target="_self" title="nháp-THM"><g transform="translate(53.81,42.53)">
-<text x="324.61" y="122.82" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="324.61" dy="0">📍 nháp-THM</tspan></text>
+<text x="324.61" y="122.82" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="324.61" dy="0">📍nháp-THM</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="-13.81" y="202.43" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="-13.81" dy="0">I-Junior pentester</tspan></text>
 </g>
 <a href="./learning-path-thm" class="excalidraw-node-link" target="_self" title="learning path THM"><g transform="translate(53.81,42.53)">
-<text x="315.13" y="53.98" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="315.13" dy="0">📍 learning path THM</tspan></text>
+<text x="315.13" y="53.98" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="315.13" dy="0">📍learning path THM</tspan></text>
 </g></a>
 <a href="./dive-into-pentesting" class="excalidraw-node-link" target="_self" title="Dive Into Pentesting"><g transform="translate(53.81,42.53)">
-<text x="349.78" y="437.88" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="349.78" dy="0">📍 Dive Into Pentesting</tspan></text>
+<text x="349.78" y="437.88" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="349.78" dy="0">📍Dive Into Pentesting</tspan></text>
 </g></a>
 <a href="./cyber-killchain" class="excalidraw-node-link" target="_self" title="Cyber killchain"><g transform="translate(53.81,42.53)">
-<text x="355.14" y="500.40" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="355.14" dy="0">📍 Cyber killchain</tspan></text>
+<text x="355.14" y="500.40" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="355.14" dy="0">📍Cyber killchain</tspan></text>
 </g></a>
 <a href="./penetration-testing-frameworks" class="excalidraw-node-link" target="_self" title="Penetration Testing Frameworks"><g transform="translate(53.81,42.53)">
-<text x="364.18" y="564.41" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="364.18" dy="0">📍 Penetration Testing Frameworks</tspan></text>
+<text x="364.18" y="564.41" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="364.18" dy="0">📍Penetration Testing Frameworks</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="114.67" y="271.79" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="114.67" dy="0">1.foundation</tspan></text>
@@ -56,25 +56,25 @@ tags:
 <text x="141.35" y="636.54" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="141.35" dy="0">2.network recon</tspan></text>
 </g>
 <a href="./passive-reconnaissance" class="excalidraw-node-link" target="_self" title="Passive Reconnaissance"><g transform="translate(53.81,42.53)">
-<text x="271.75" y="687.37" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="271.75" dy="0">📍 Passive Reconnaissance</tspan></text>
+<text x="271.75" y="687.37" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="271.75" dy="0">📍Passive Reconnaissance</tspan></text>
 </g></a>
 <a href="./active-reconnaissance" class="excalidraw-node-link" target="_self" title="Active Reconnaissance"><g transform="translate(53.81,42.53)">
-<text x="287.06" y="747.90" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="287.06" dy="0">📍 Active Reconnaissance</tspan></text>
+<text x="287.06" y="747.90" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="287.06" dy="0">📍Active Reconnaissance</tspan></text>
 </g></a>
 <a href="./networking" class="excalidraw-node-link" target="_self" title="Networking"><g transform="translate(53.81,42.53)">
-<text x="659.72" y="690.35" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="659.72" dy="0">📍 Networking</tspan></text>
+<text x="659.72" y="690.35" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="659.72" dy="0">📍Networking</tspan></text>
 </g></a>
 <a href="./protocols-and-servers" class="excalidraw-node-link" target="_self" title="Protocols and Servers"><g transform="translate(53.81,42.53)">
-<text x="291.32" y="812.32" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="291.32" dy="0">📍 Protocols and Servers</tspan></text>
+<text x="291.32" y="812.32" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="291.32" dy="0">📍Protocols and Servers</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="125.18" y="960.98" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="125.18" dy="0">3.web application fundalmental</tspan><tspan x="125.18" dy="25"></tspan></text>
 </g>
 <a href="./walking-an-application" class="excalidraw-node-link" target="_self" title="Walking An Application"><g transform="translate(53.81,42.53)">
-<text x="622.33" y="1023.73" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="622.33" dy="0">📍 Walking An Application</tspan></text>
+<text x="622.33" y="1023.73" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="622.33" dy="0">📍Walking An Application</tspan></text>
 </g></a>
 <a href="./content-discovery" class="excalidraw-node-link" target="_self" title="Content Discovery"><g transform="translate(53.81,42.53)">
-<text x="647.29" y="1137.66" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="647.29" dy="0">📍 Content Discovery</tspan></text>
+<text x="647.29" y="1137.66" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="647.29" dy="0">📍Content Discovery</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="283.85" y="1121.73" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="283.85" dy="0">dạy mình recon bằng gobuster,...</tspan><tspan x="283.85" dy="25">và các công cụ hỗ trợ recon</tspan></text>
@@ -107,7 +107,7 @@ tags:
 <text x="278.17" y="1227.36" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="278.17" dy="0">tiếp tục , ta sẽ học về các framwork lập trình web phổ biến hiện</tspan><tspan x="278.17" dy="25">nay, đồng thời xào qua các lỗ hổng về các framework này</tspan></text>
 </g>
 <a href="./modern-web-stacks" class="excalidraw-node-link" target="_self" title="Modern Web Stacks"><g transform="translate(53.81,42.53)">
-<text x="444.17" y="1299.44" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="444.17" dy="0">📍 Modern Web Stacks</tspan><tspan x="444.17" dy="25"></tspan></text>
+<text x="444.17" y="1299.44" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="444.17" dy="0">📍Modern Web Stacks</tspan><tspan x="444.17" dy="25"></tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="616.81" y="1328.60" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="616.81" dy="0">ở đây tao học được nhiều thứ</tspan><tspan x="616.81" dy="25">phết, hochj thêm được tư duy</tspan><tspan x="616.81" dy="25">cách khai thác thực tế</tspan></text>
@@ -122,19 +122,19 @@ tags:
 <text x="270.48" y="1459.91" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="270.48" dy="0">oke, tiếp tục chiến tới phần này</tspan><tspan x="270.48" dy="25"></tspan></text>
 </g>
 <a href="./web-server-attack-1" class="excalidraw-node-link" target="_self" title="web server attack 1"><g transform="translate(53.81,42.53)">
-<text x="451.50" y="1525.31" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="451.50" dy="0">📍 web server attack 1</tspan></text>
+<text x="451.50" y="1525.31" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="451.50" dy="0">📍web server attack 1</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="725.84" y="1512.09" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="725.84" dy="0">cái lab này tập trung đa</tspan><tspan x="725.84" dy="25">số ở miscofigurationn</tspan></text>
 </g>
 <a href="./web-server-attack-2" class="excalidraw-node-link" target="_self" title="web server attack 2"><g transform="translate(53.81,42.53)">
-<text x="439.37" y="1625.48" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="439.37" dy="0">📍 web server attack 2</tspan></text>
+<text x="439.37" y="1625.48" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="439.37" dy="0">📍web server attack 2</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="272.35" y="1573.61" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="272.35" dy="0">tiếp theo ta sẽ học sơ qua về IIS , các lỗ hổng cơ bản với IIS</tspan></text>
 </g>
 <a href="./mind-set-học-đúng" class="excalidraw-node-link" target="_self" title="mind set học đúng"><g transform="translate(53.81,42.53)">
-<text x="667.78" y="112.82" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="667.78" dy="0">📍 mind set học đúng</tspan></text>
+<text x="667.78" y="112.82" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="667.78" dy="0">📍mind set học đúng</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="699.76" y="1612.97" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="699.76" dy="0">phần này đáng quan</tspan><tspan x="699.76" dy="25">tâm nhất là học về</tspan><tspan x="699.76" dy="25">nmap script engine</tspan></text>
@@ -143,7 +143,7 @@ tags:
 <text x="147.28" y="1726.93" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="147.28" dy="0">4.Burpsuite</tspan></text>
 </g>
 <a href="./burpsite-basic" class="excalidraw-node-link" target="_self" title="burpsite basic"><g transform="translate(53.81,42.53)">
-<text x="257.55" y="1789.74" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="257.55" dy="0">📍 burpsite basic</tspan></text>
+<text x="257.55" y="1789.74" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="257.55" dy="0">📍burpsite basic</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="156.16" y="1862.13" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="156.16" dy="0">5.Web application vulnerablilities I</tspan></text>
@@ -155,22 +155,22 @@ tags:
 <text x="157.74" y="2033.79" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="157.74" dy="0">6.Web application vulnerabilities II</tspan></text>
 </g>
 <a href="../tools/burpsite" class="excalidraw-node-link" target="_self" title="Burpsite"><g transform="translate(53.81,42.53)">
-<text x="275.72" y="1751.61" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="275.72" dy="0">📍 Burpsite</tspan></text>
+<text x="275.72" y="1751.61" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="275.72" dy="0">📍Burpsite</tspan></text>
 </g></a>
 <a href="./session-management" class="excalidraw-node-link" target="_self" title="session management"><g transform="translate(53.81,42.53)">
-<text x="548.61" y="2093.11" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="548.61" dy="0">📍 session management</tspan></text>
+<text x="548.61" y="2093.11" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="548.61" dy="0">📍session management</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="212.32" y="2086.99" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="212.32" dy="0">học xong cái này thì có thể chôm</tspan><tspan x="212.32" dy="25">phiên làm việc của người khác ko ??</tspan></text>
 </g>
 <a href="./broken-authentication" class="excalidraw-node-link" target="_self" title="broken authentication"><g transform="translate(53.81,42.53)">
-<text x="561.42" y="2225.84" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="561.42" dy="0">📍 broken authentication</tspan></text>
+<text x="561.42" y="2225.84" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="561.42" dy="0">📍broken authentication</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="173.03" y="2195.07" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="173.03" dy="0">dùng ffuf để bắn request lới login hoặc registration, </tspan><tspan x="173.03" dy="25">logic chung là dựa vào mã lỗi , để tìm </tspan></text>
 </g>
 <a href="./command-injection" class="excalidraw-node-link" target="_self" title="command injection"><g transform="translate(53.81,42.53)">
-<text x="384.19" y="2349.43" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="384.19" dy="0">📍 command injection</tspan></text>
+<text x="384.19" y="2349.43" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="384.19" dy="0">📍command injection</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="178.60" y="2324.53" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="178.60" dy="0">phần này học về command injection</tspan></text>
@@ -179,7 +179,7 @@ tags:
 <text x="192.25" y="2506.87" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="192.25" dy="0">Tiếp theo, ta sẽ học về API testing </tspan></text>
 </g>
 <a href="./api_testing" class="excalidraw-node-link" target="_self" title="API_testing"><g transform="translate(53.81,42.53)">
-<text x="454.84" y="2552.84" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="454.84" dy="0">📍 API_testing</tspan></text>
+<text x="454.84" y="2552.84" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="454.84" dy="0">📍API_testing</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="651.79" y="2550.67" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="651.79" dy="0">sau khi học thì biết thêm</tspan><tspan x="651.79" dy="25">-Mass asisgnment: POST update vô tội vạ</tspan><tspan x="651.79" dy="25">-BOLA : IDOR cho api enpoint</tspan><tspan x="651.79" dy="25">-Rate:imit: nhận biết qua header?</tspan></text>
@@ -272,7 +272,7 @@ tags:
 <text x="1697.02" y="2018.01" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="24.832466569527163" fill="#1e1e1e" text-anchor="start"><tspan x="1697.02" dy="0">ggg</tspan></text>
 </g>
 <a href="./file-inclusion" class="excalidraw-node-link" target="_self" title="file inclusion"><g transform="translate(53.81,42.53)">
-<text x="461.52" y="2674.48" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="461.52" dy="0">📍 file inclusion</tspan></text>
+<text x="461.52" y="2674.48" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="461.52" dy="0">📍file inclusion</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <path d="M260.83 2381.17 L260.83 2381.17" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -284,16 +284,16 @@ tags:
 <path d="M646.20 2690.54 L646.38 2689.49 L647.26 2689.07 L648.39 2689.29 L649.84 2690.89 L650.65 2692.85 L651.03 2694.80 L651.03 2696.62 L650.53 2699.35 L649.40 2702.15 L648.45 2703.61 L643.81 2708.43 L638.54 2711.93 L638.54 2711.93" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g transform="translate(53.81,42.53)">
-<text x="759.58" y="17.47" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="759.58" dy="0">📍 nháp 2-THM</tspan></text>
+<text x="759.58" y="17.47" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="759.58" dy="0">📍nháp 2-THM</tspan></text>
 </g>
 <a href="./writeup-thm_fileinclusion" class="excalidraw-node-link" target="_self" title="writeup-THM_fileinclusion"><g transform="translate(53.81,42.53)">
-<text x="676.07" y="2705.80" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="676.07" dy="0">📍 writeup-THM_fileinclusion</tspan></text>
+<text x="676.07" y="2705.80" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="676.07" dy="0">📍writeup-THM_fileinclusion</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="196.26" y="2795.86" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="196.26" dy="0">Cuối cùng trong phần nafyyyyy, là thực hành Hand ons 1 cái lab thật</tspan></text>
 </g>
 <a href="./lab_support_thinkingsheet" class="excalidraw-node-link" target="_self" title="LAB_support_thinkingsheet"><g transform="translate(53.81,42.53)">
-<text x="543.36" y="2862.25" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="543.36" dy="0">📍 LAB_support_thinkingsheet</tspan></text>
+<text x="543.36" y="2862.25" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="543.36" dy="0">📍LAB_support_thinkingsheet</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="708.72" y="368.60" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="708.72" dy="0">học về msfconsole</tspan><tspan x="708.72" dy="25"></tspan></text>
@@ -314,13 +314,13 @@ tags:
 <text x="224.99" y="3094.18" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="224.99" dy="0">phần này mình cứ có cảm giác học lại mấy cái trên kia thế đ nào ý nhỉ =))</tspan></text>
 </g>
 <a href="./vulnerability-scanning-tools" class="excalidraw-node-link" target="_self" title="Vulnerability Scanning Tools"><g transform="translate(53.81,42.53)">
-<text x="373.70" y="3181.52" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="373.70" dy="0">📍 Vulnerability Scanning Tools</tspan></text>
+<text x="373.70" y="3181.52" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="373.70" dy="0">📍Vulnerability Scanning Tools</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="724.73" y="3168.49" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="724.73" dy="0">lab này basic quá =((, chỉ</tspan><tspan x="724.73" dy="25">giơi thiệu các tool là</tspan><tspan x="724.73" dy="25">chính, sao nó cứ xào đi</tspan><tspan x="724.73" dy="25">xào lại vậy nhỉ</tspan></text>
 </g>
 <a href="./basic-vulnerability-identification-techniques" class="excalidraw-node-link" target="_self" title="Basic Vulnerability Identification Techniques"><g transform="translate(53.81,42.53)">
-<text x="358.21" y="3316.51" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="358.21" dy="0">📍 Basic Vulnerability Identification Techniques</tspan></text>
+<text x="358.21" y="3316.51" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="358.21" dy="0">📍Basic Vulnerability Identification Techniques</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="593.28" y="3353.27" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="593.28" dy="0">dạy mình bước tận dụng kết quả từ recon</tspan><tspan x="593.28" dy="25">=&gt; từ đó biết được cần đánh vào đâu</tspan></text>
@@ -329,19 +329,19 @@ tags:
 <text x="603.78" y="3412.62" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="603.78" dy="0">phần này cũng thuần lý thuyết,</tspan><tspan x="603.78" dy="25">học nhanh thôi còn qua mấy cái</tspan><tspan x="603.78" dy="25">khác =D</tspan></text>
 </g>
 <a href="./noscope--finding-rce" class="excalidraw-node-link" target="_self" title="NoScope- Finding RCE"><g transform="translate(53.81,42.53)">
-<text x="688.65" y="3617.69" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="688.65" dy="0">📍 NoScope- Finding RCE</tspan></text>
+<text x="688.65" y="3617.69" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="688.65" dy="0">📍NoScope- Finding RCE</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="296.33" y="3507.58" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="296.33" dy="0">Tiếp đến ta sẽ thực hành trong room này</tspan><tspan x="296.33" dy="25">Phần này ta sẽ tận dụng lỗ hổng để cố thoát khỏi sandbox của js, RCE</tspan><tspan x="296.33" dy="25">==&gt; thực thi lệnh hệ điều hành</tspan><tspan x="296.33" dy="25">=&gt; đồng thời giới thiệu tool &quot;NoScope&quot;</tspan></text>
 </g>
 <a href="./n8n-cve-2025-68613" class="excalidraw-node-link" target="_self" title="n8n CVE-2025-68613"><g transform="translate(53.81,42.53)">
-<text x="760.00" y="3760.00" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="760.00" dy="0">📍 n8n CVE-2025-68613</tspan></text>
+<text x="760.00" y="3760.00" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="760.00" dy="0">📍n8n CVE-2025-68613</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="290.14" y="3738.32" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="290.14" dy="0">phần này mình sẽ thực hành một bài lab về</tspan><tspan x="290.14" dy="25">phiên bản cũ của n8n, mấu chốt ở thoát</tspan><tspan x="290.14" dy="25">sanbox qua {{}} và tiến hành thực thi RCE</tspan></text>
 </g>
 <a href="./ad--badsuccessor" class="excalidraw-node-link" target="_self" title="AD- BadSuccessor"><g transform="translate(53.81,42.53)">
-<text x="606.34" y="3906.04" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="606.34" dy="0">📍 AD- BadSuccessor</tspan></text>
+<text x="606.34" y="3906.04" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="606.34" dy="0">📍AD- BadSuccessor</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
 <text x="828.29" y="3951.89" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="828.29" dy="0">Trong cái này, mình học thêm được</tspan><tspan x="828.29" dy="25">về các loại tài khoản như local</tspan><tspan x="828.29" dy="25">account,service account ,</tspan><tspan x="828.29" dy="25">kerberos, TGT, TGS</tspan></text>
@@ -359,7 +359,16 @@ tags:
 <text x="157.38" y="4227.60" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="157.38" dy="0">8.metasploit </tspan></text>
 </g>
 <a href="../tools/metasploit" class="excalidraw-node-link" target="_self" title="METASPLOIT"><g transform="translate(53.81,42.53)">
-<text x="270.40" y="4261.82" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="270.40" dy="0">📍 METASPLOIT</tspan></text>
+<text x="270.40" y="4261.82" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="270.40" dy="0">📍METASPLOIT</tspan></text>
+</g></a>
+<g transform="translate(53.81,42.53)">
+<text x="180.00" y="4420.00" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="180.00" dy="0">📍Linux Priviledge escalation</tspan></text>
+</g>
+<g transform="translate(53.81,42.53)">
+<text x="160.00" y="4520.00" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="160.00" dy="0">9-Vulnerabilities I</tspan><tspan x="160.00" dy="25"></tspan></text>
+</g>
+<a href="../portswigger/sql-injection/thm-0-sql-injection" class="excalidraw-node-link" target="_self" title="THM-0-sql injection"><g transform="translate(53.81,42.53)">
+<text x="260.00" y="4580.00" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="260.00" dy="0">📍THM-0-sql injection</tspan></text>
 </g></a>
 </svg>
     </div>
@@ -403,3 +412,5 @@ tags:
 - [[n8n CVE-2025-68613]]
 - [[AD- BadSuccessor]]
 - [[METASPLOIT]]
+- [[Linux Priviledge escalation]]
+- [[THM-0-sql injection]]
