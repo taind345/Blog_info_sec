@@ -72,7 +72,7 @@ echo "$STATUS"
 
 echo ""
 echo "🚀 Đang commit và đẩy lên GitHub Pages..."
-git add content/ quartz/static/ scripts/ package.json .github/ quartz/styles/ quartz/components/
+git add content/ quartz/static/ scripts/ package.json .github/ quartz/styles/ quartz/components/ docs/ README.md
 
 COMMIT_TIME=$(date '+%Y-%m-%d %H:%M:%S')
 git commit -m "chore(sync): auto-sync notes from vault [$COMMIT_TIME]"

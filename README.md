@@ -34,4 +34,4 @@ Kho ghi chú gốc (Obsidian Vault): [taind345/PortSwigger__TryHackMe__Writeup..
 - Tự động đồng bộ từ repo gốc và đẩy lên GitHub: `npm run auto-sync`
 - Biên dịch trang tĩnh: `npm run build`
 
-Tài liệu chi tiết về kiến trúc hệ thống xem tại [GUIDE_SYSTEM.md](GUIDE_SYSTEM.md).
+Tài liệu chi tiết về kiến trúc hệ thống xem tại [docs/internal/GUIDE_SYSTEM.md](docs/internal/GUIDE_SYSTEM.md).

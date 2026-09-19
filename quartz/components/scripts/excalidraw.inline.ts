@@ -52,6 +52,7 @@ function setupExcalidraw() {
 
     // Auto-fit & center the diagram within the viewport
     function fitToScreen() {
+      if (!viewport) return
       const vw = viewport.clientWidth || viewport.getBoundingClientRect().width || 800
       const vh = viewport.clientHeight || viewport.getBoundingClientRect().height || 560
 
