@@ -2,8 +2,9 @@
 title: "0-roadmap SSRF"
 ---
 
-PortSwigger SSRF chia kiến thức chính thành: **hiểu SSRF → khai thác nội bộ → bypass filter → blind SSRF → tìm attack surface ẩn**. [PortSwigger](https://portswigger.net/web-security/ssrf?utm_source=chatgpt.com)
+### 1-ROADMAP SSRF
 
+<div class="ascii-tree">
 
 SSRF (Server-Side Request Forgery)
 │
@@ -177,6 +178,9 @@ SSRF (Server-Side Request Forgery)
     ├── Disable unnecessary protocols
     └── Monitor outbound requests
 
+</div>
+
+
 
 **Thứ tự học lab PortSwigger nên đi:**
 
@@ -196,19 +200,19 @@ SSRF (Server-Side Request Forgery)
 7. SSRF + Cloud Metadata
 ```
 
-Hai lab đầu giúp hiểu bản chất: server bị ép gửi request tới `localhost` hoặc mạng nội bộ. [PortSwigger](https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-localhost?utm_source=chatgpt.com)
 
-Khi học SSRF để đi pentest, nên nhớ một câu:
-
-
-SSRF = "Tôi không truy cập được mục tiêu,
-nhưng server có quyền truy cập,
-nên tôi bắt server truy cập hộ tôi."
-
+> [!NOTE]
+> SSRF = "Tôi không truy cập được mục tiêu,
+> nhưng server có quyền truy cập,
+> nên tôi bắt server truy cập hộ tôi."
+> 
 
 Sau SSRF nên học tiếp **XXE → File Upload → Deserialization → Cloud Security**, vì các lỗi này thường chain với SSRF trong pentest thực tế. [PortSwigger](https://portswigger.net/web-security/all-topics?utm_source=chatgpt.com)
 
 
+### 2-LAB-SSRF
 
 
-### LAB-SSRF 
+
+### 3-Personal note SSRF
+-có thể dùng kiểu dạng na ná path traversal để có thể thay url được request tới

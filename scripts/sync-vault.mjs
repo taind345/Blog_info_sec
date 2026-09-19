@@ -303,6 +303,78 @@ function getAllFiles(dir, ext = "") {
   return results;
 }
 
+function wrapAsciiTreesInMarkdown(content) {
+  const treeChars = ["├──", "└──", "│", "┌──", "├─", "└─"];
+  const lines = content.split("\n");
+  let inCodeBlock = false;
+  let inAsciiDiv = false;
+  const blocks = [];
+  let currentBlock = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmed = line.trim();
+
+    if (trimmed.startsWith("```") || trimmed.startsWith("~~~")) {
+      inCodeBlock = !inCodeBlock;
+      if (currentBlock.length >= 3) {
+        blocks.push([currentBlock[0], currentBlock[currentBlock.length - 1]]);
+      }
+      currentBlock = [];
+      continue;
+    }
+
+    if (inCodeBlock) continue;
+
+    if (trimmed.includes("<div class=\"ascii-tree\">") || trimmed.includes("<div class='ascii-tree'>")) {
+      inAsciiDiv = true;
+      continue;
+    }
+    if (trimmed.includes("</div>") && inAsciiDiv) {
+      inAsciiDiv = false;
+      continue;
+    }
+    if (inAsciiDiv) continue;
+
+    const isTreeLine = treeChars.some((tc) => line.includes(tc));
+    if (isTreeLine) {
+      currentBlock.push(i);
+    } else {
+      if (currentBlock.length >= 3) {
+        blocks.push([currentBlock[0], currentBlock[currentBlock.length - 1]]);
+      }
+      currentBlock = [];
+    }
+  }
+
+  if (currentBlock.length >= 3) {
+    blocks.push([currentBlock[0], currentBlock[currentBlock.length - 1]]);
+  }
+
+  if (blocks.length === 0) return content;
+
+  for (let b = blocks.length - 1; b >= 0; b--) {
+    let [start, end] = blocks[b];
+
+    if (
+      start > 0 &&
+      lines[start - 1].trim() &&
+      !lines[start - 1].startsWith("#") &&
+      !lines[start - 1].startsWith("-") &&
+      !lines[start - 1].startsWith("*") &&
+      !lines[start - 1].startsWith(">") &&
+      !treeChars.some((tc) => lines[start - 1].includes(tc))
+    ) {
+      start -= 1;
+    }
+
+    lines.splice(end + 1, 0, "", "</div>", "");
+    lines.splice(start, 0, "", "<div class=\"ascii-tree\">", "");
+  }
+
+  return lines.join("\n");
+}
+
 async function main() {
   console.log("=== Bắt đầu tối ưu và đồng bộ nội dung Obsidian Blog ===");
   const vaultPath = getVaultPath();
@@ -513,12 +585,23 @@ tags:
       fs.writeFileSync(mdPath, body, "utf8");
     } else {
       normalNoteCount++;
+      let modified = false;
       if (!content.startsWith("---")) {
         content = `---
 title: "${baseName}"
 ---
 
 ` + content;
+        modified = true;
+      }
+
+      const formatted = wrapAsciiTreesInMarkdown(content);
+      if (formatted !== content) {
+        content = formatted;
+        modified = true;
+      }
+
+      if (modified) {
         fs.writeFileSync(mdPath, content, "utf8");
       }
     }

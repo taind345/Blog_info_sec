@@ -77,7 +77,7 @@ git add content/ quartz/static/ scripts/ package.json .github/ quartz/styles/ qu
 COMMIT_TIME=$(date '+%Y-%m-%d %H:%M:%S')
 git commit -m "chore(sync): auto-sync notes from vault [$COMMIT_TIME]"
 
-git push origin main
+git push origin main || (git pull --rebase origin main && git push origin main)
 
 echo ""
 echo "=========================================================="

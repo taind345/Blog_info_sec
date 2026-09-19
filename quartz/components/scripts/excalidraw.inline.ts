@@ -249,9 +249,28 @@ function setupExcalidraw() {
   })
 }
 
-document.addEventListener("nav", setupExcalidraw)
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", setupExcalidraw)
-} else {
-  setupExcalidraw()
+// Automatically detect and format ASCII Tree roadmaps in notes
+function setupAsciiTrees() {
+  const treeChars = ["├──", "└──", "┌──", "├─", "└─"]
+  const selector = "article p, .popover p, .page p, .center p, main p"
+  document.querySelectorAll<HTMLElement>(selector).forEach((p) => {
+    if (p.classList.contains("ascii-tree") || p.closest(".ascii-tree")) return
+    const text = p.textContent || ""
+    if (treeChars.some((char) => text.includes(char))) {
+      p.classList.add("ascii-tree")
+    }
+  })
 }
+
+function initAll() {
+  setupExcalidraw()
+  setupAsciiTrees()
+}
+
+document.addEventListener("nav", initAll)
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initAll)
+} else {
+  initAll()
+}
+

@@ -84,11 +84,17 @@ Tai
 ```
 **-pramgrams có kiểu dữ liệu là gì ?**
 	-> kiểu dữ liệu là OBJECT URLSearch pagrams :
+
+<div class="ascii-tree">
+
 				URLSearchParams
 				├── .get()
 				├── .set()
 				├── .delete()
 				└── .has()
+
+</div>
+
      Nó là một **object đặc biệt có sẵn các method để xử lý query parameters**.
 **-Object này giúp tách các tham số trong url**
 	-> Ví dụ URL:	https://example.com/search?name=Tai&age=21	

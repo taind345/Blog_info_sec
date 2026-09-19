@@ -21,7 +21,7 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 776 665" width="776" height="665" class="excalidraw-svg" data-width="776" data-height="665">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 776 777" width="776" height="777" class="excalidraw-svg" data-width="776" data-height="777">
 <g transform="translate(-221.93,-180.92)">
 <text x="261.93" y="648.12" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="261.93" dy="0">2-bypass nhu the nao??</tspan></text>
 </g>
@@ -67,6 +67,12 @@ tags:
 <a href="./0-roadmap-ssrf" class="excalidraw-node-link" target="_self" title="0-roadmap SSRF"><g transform="translate(-221.93,-180.92)">
 <text x="277.35" y="240.92" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="277.35" dy="0">📍0-roadmap SSRF</tspan></text>
 </g></a>
+<g transform="translate(-221.93,-180.92)">
+<text x="265.95" y="869.76" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#c2255c" text-anchor="start"><tspan x="265.95" dy="0">3-THM SSRS</tspan></text>
+</g>
+<a href="./intro-to-ssrf" class="excalidraw-node-link" target="_self" title="intro to ssrf"><g transform="translate(-221.93,-180.92)">
+<text x="322.14" y="912.72" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="322.14" dy="0">📍intro to ssrf</tspan></text>
+</g></a>
 </svg>
     </div>
   </div>
@@ -84,3 +90,4 @@ tags:
 - [[Hướng tư duy khai thác SSRF]]
 - [[định nghĩa SSRF]]
 - [[0-roadmap SSRF]]
+- [[intro to ssrf]]
