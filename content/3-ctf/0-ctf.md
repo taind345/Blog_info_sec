@@ -21,15 +21,12 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 288" width="268" height="288" class="excalidraw-svg" data-width="268" data-height="288">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 211" width="268" height="211" class="excalidraw-svg" data-width="268" data-height="211">
 <a href="./crack-the-gate" class="excalidraw-node-link" target="_self" title="Crack the gate"><g transform="translate(-271.46,-318.15)">
 <text x="328.37" y="378.15" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="328.37" dy="0">📍Crack the gate</tspan></text>
 </g></a>
 <a href="./ptit-ctf-2026" class="excalidraw-node-link" target="_self" title="ptit ctf 2026"><g transform="translate(-271.46,-318.15)">
 <text x="311.46" y="484.08" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="311.46" dy="0">📍ptit ctf 2026</tspan></text>
-</g></a>
-<a href="./recruit" class="excalidraw-node-link" target="_self" title="recruit"><g transform="translate(-271.46,-318.15)">
-<text x="331.16" y="560.63" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="331.16" dy="0">📍recruit</tspan></text>
 </g></a>
 </svg>
     </div>
@@ -41,4 +38,3 @@ tags:
 
 - [[Crack the gate]]
 - [[ptit ctf 2026]]
-- [[recruit]]

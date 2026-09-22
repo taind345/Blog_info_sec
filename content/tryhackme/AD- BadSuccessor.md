@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-d8769fe7">
+<div class="excalidraw-container" id="ex-f3301bb3">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -25,8 +25,8 @@ tags:
 <g transform="translate(-76.18,-144.84)">
 <text x="121.29" y="200.84" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#c2255c" text-anchor="start"><tspan x="121.29" dy="0">I) Intro</tspan></text>
 </g>
-<a href="../../0-asset/pasted-image-20260903201216_261.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260903201216_261.png"><g transform="translate(-76.18,-144.84)">
-<image x="201.5132673783736" y="209.8366241455078" width="744.6989657315341" height="706.1800537109375" href="../../0-asset/pasted-image-20260903201216_261.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+<a href="../0-asset/pasted-image-20260903201216_261.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260903201216_261.png"><g transform="translate(-76.18,-144.84)">
+<image x="201.5132673783736" y="209.8366241455078" width="744.6989657315341" height="706.1800537109375" href="../0-asset/pasted-image-20260903201216_261.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
 <g transform="translate(-76.18,-144.84)">
 <path d="M1034.65 281.96 L1035.45 282.25 L1036.30 282.55 L1036.30 282.55" stroke="#1971c2" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -484,17 +484,17 @@ TRYHACKME\tbyte  {OU=LabOU,DC=tryhackme,DC=local}
 <g transform="translate(-76.18,-144.84)">
 <path d="M857.49 2096.97 L858.82 2097.26 L861.86 2097.98 L861.86 2097.98" stroke="#1971c2" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<a href="../../0-asset/pasted-image-20260903223351_457.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260903223351_457.png"><g transform="translate(-76.18,-144.84)">
-<image x="243.84805204904626" y="2637.5410576690015" width="597.9828847507534" height="423.7504614960376" href="../../0-asset/pasted-image-20260903223351_457.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+<a href="../0-asset/pasted-image-20260903223351_457.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260903223351_457.png"><g transform="translate(-76.18,-144.84)">
+<image x="243.84805204904626" y="2637.5410576690015" width="597.9828847507534" height="423.7504614960376" href="../0-asset/pasted-image-20260903223351_457.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
-<a href="../../0-asset/pasted-image-20260903224406_980.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260903224406_980.png"><g transform="translate(-76.18,-144.84)">
-<image x="241.49535734757137" y="3079.3059470398784" width="664.6746905782949" height="335.06888511344175" href="../../0-asset/pasted-image-20260903224406_980.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+<a href="../0-asset/pasted-image-20260903224406_980.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260903224406_980.png"><g transform="translate(-76.18,-144.84)">
+<image x="241.49535734757137" y="3079.3059470398784" width="664.6746905782949" height="335.06888511344175" href="../0-asset/pasted-image-20260903224406_980.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
 <g transform="translate(-76.18,-144.84)">
 <text x="166.69" y="2635.10" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1971c2" text-anchor="start"><tspan x="166.69" dy="0">đầu tiên kết nối bằng remina</tspan></text>
 </g>
-<a href="../../0-asset/pasted-image-20260903224626_274.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260903224626_274.png"><g transform="translate(-76.18,-144.84)">
-<image x="236.53467252884798" y="3554.0531200754444" width="571.1293854110542" height="367.380824626704" href="../../0-asset/pasted-image-20260903224626_274.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+<a href="../0-asset/pasted-image-20260903224626_274.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260903224626_274.png"><g transform="translate(-76.18,-144.84)">
+<image x="236.53467252884798" y="3554.0531200754444" width="571.1293854110542" height="367.380824626704" href="../0-asset/pasted-image-20260903224626_274.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
 <g transform="translate(-76.18,-144.84)">
 <text x="190.29" y="3527.62" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1971c2" text-anchor="start"><tspan x="190.29" dy="0">1-đầu tiên ta sẽ recon</tspan></text>
@@ -1249,8 +1249,8 @@ TRYHACKME\tbyte  {OU=LabOU,DC=tryhackme,DC=local}
 <g transform="translate(-76.18,-144.84)">
 <text x="1057.21" y="5950.88" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1971c2" text-anchor="start"><tspan x="1057.21" dy="0">TGT : vé để đi vào tòa nhà , được kerberos cấp</tspan><tspan x="1057.21" dy="20">khi đăng nhập</tspan><tspan x="1057.21" dy="20"></tspan><tspan x="1057.21" dy="20">TGS : vé để đi vào 1 phòng nào đó ( 1 dịch vụ),</tspan><tspan x="1057.21" dy="20">cái này cũng được kerberos cấp khi mày xòe cái</tspan><tspan x="1057.21" dy="20">TGT ra</tspan></text>
 </g>
-<a href="../../0-asset/pasted-image-20260904000020_181.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260904000020_181.png"><g transform="translate(-76.18,-144.84)">
-<image x="197.6039547867643" y="6473.86518304998" width="572.7479098911201" height="702.5566406250001" href="../../0-asset/pasted-image-20260904000020_181.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+<a href="../0-asset/pasted-image-20260904000020_181.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260904000020_181.png"><g transform="translate(-76.18,-144.84)">
+<image x="197.6039547867643" y="6473.86518304998" width="572.7479098911201" height="702.5566406250001" href="../0-asset/pasted-image-20260904000020_181.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
 <g transform="translate(-76.18,-144.84)">
 <path d="M1005.72 2588.45 L1006.28 2589.29 L1007.04 2590.13 L1009.67 2592.93 L1011.43 2594.81 L1012.12 2595.79 L1012.12 2595.79" stroke="#1971c2" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>

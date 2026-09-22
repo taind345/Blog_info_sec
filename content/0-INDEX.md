@@ -70,7 +70,7 @@ tags:
 <g transform="translate(-27.94,445.78)">
 <text x="71.05" y="537.50" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="71.05" dy="0">4-try hack me</tspan></text>
 </g>
-<a href="./tryhackme/jr-pen/0-try-hackme" class="excalidraw-node-link" target="_self" title="0-Try hackme"><g transform="translate(-27.94,445.78)">
+<a href="./tryhackme/0-try-hackme" class="excalidraw-node-link" target="_self" title="0-Try hackme"><g transform="translate(-27.94,445.78)">
 <text x="240.25" y="589.95" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="240.25" dy="0">📍0-Try hackme</tspan></text>
 </g></a>
 <g transform="translate(-27.94,445.78)">

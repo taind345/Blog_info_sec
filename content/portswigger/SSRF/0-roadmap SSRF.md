@@ -212,3 +212,7 @@ Sau SSRF nên học tiếp **XXE → File Upload → Deserialization → Cloud S
 
 ### 2-LAB-SSRF
 
+
+
+### 3-Personal note SSRF
+-có thể dùng kiểu dạng na ná path traversal để có thể thay url được request tới
