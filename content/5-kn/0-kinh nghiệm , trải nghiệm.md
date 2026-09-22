@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-863dcb88">
+<div class="excalidraw-container" id="ex-8b17151d">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -21,14 +21,14 @@ tags:
   </div>
   <div class="excalidraw-viewport">
     <div class="excalidraw-canvas-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 541 458" width="541" height="458" class="excalidraw-svg" data-width="541" data-height="458">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 541 507" width="541" height="507" class="excalidraw-svg" data-width="541" data-height="507">
 <a href="./workflow-pentest-chuẩn-với-ai" class="excalidraw-node-link" target="_self" title="workflow pentest chuẩn với AI"><g transform="translate(-258.27,-223.95)">
 <text x="347.20" y="279.95" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="347.20" dy="0">📍workflow pentest chuẩn với AI</tspan></text>
 </g></a>
 <a href="./taị-sao-mình-cứ-stuck-mãi-với-lý-thuyết" class="excalidraw-node-link" target="_self" title="taị sao mình cứ stuck mãi với lý thuyết"><g transform="translate(-258.27,-223.95)">
 <text x="298.27" y="382.81" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="298.27" dy="0">📍taị sao mình cứ stuck mãi với</tspan><tspan x="298.27" dy="20">lý thuyết</tspan></text>
 </g></a>
-<a href="../tryhackme/mind-set-học-đúng" class="excalidraw-node-link" target="_self" title="mind set học đúng"><g transform="translate(-258.27,-223.95)">
+<a href="../tryhackme/jr-pen/mind-set-học-đúng" class="excalidraw-node-link" target="_self" title="mind set học đúng"><g transform="translate(-258.27,-223.95)">
 <text x="598.59" y="449.83" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="598.59" dy="0">📍mind set học đúng</tspan></text>
 </g></a>
 <g transform="translate(-258.27,-223.95)">
@@ -46,6 +46,9 @@ tags:
 <a href="./system-thinking-while-coding" class="excalidraw-node-link" target="_self" title="system thinking while coding"><g transform="translate(-258.27,-223.95)">
 <text x="315.92" y="637.30" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="315.92" dy="0">📍system thinking while coding</tspan></text>
 </g></a>
+<a href="./login-bypass" class="excalidraw-node-link" target="_self" title="login bypass"><g transform="translate(-258.27,-223.95)">
+<text x="314.49" y="686.39" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="16" fill="#1e1e1e" text-anchor="start"><tspan x="314.49" dy="0">📍login bypass</tspan></text>
+</g></a>
 </svg>
     </div>
   </div>
@@ -58,3 +61,4 @@ tags:
 - [[taị sao mình cứ stuck mãi với lý thuyết]]
 - [[mind set học đúng]]
 - [[system thinking while coding]]
+- [[login bypass]]

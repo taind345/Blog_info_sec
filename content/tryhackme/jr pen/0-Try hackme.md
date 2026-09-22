@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-a134a863">
+<div class="excalidraw-container" id="ex-76753a6a">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -154,7 +154,7 @@ tags:
 <g transform="translate(53.81,42.53)">
 <text x="157.74" y="2033.79" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="157.74" dy="0">6.Web application vulnerabilities II</tspan></text>
 </g>
-<a href="../tools/burpsite" class="excalidraw-node-link" target="_self" title="Burpsite"><g transform="translate(53.81,42.53)">
+<a href="../../tools/burpsite" class="excalidraw-node-link" target="_self" title="Burpsite"><g transform="translate(53.81,42.53)">
 <text x="275.72" y="1751.61" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="275.72" dy="0">📍Burpsite</tspan></text>
 </g></a>
 <a href="./session-management" class="excalidraw-node-link" target="_self" title="session management"><g transform="translate(53.81,42.53)">
@@ -358,7 +358,7 @@ tags:
 <g transform="translate(53.81,42.53)">
 <text x="157.38" y="4227.60" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="157.38" dy="0">8.metasploit </tspan></text>
 </g>
-<a href="../tools/metasploit" class="excalidraw-node-link" target="_self" title="METASPLOIT"><g transform="translate(53.81,42.53)">
+<a href="../../tools/metasploit" class="excalidraw-node-link" target="_self" title="METASPLOIT"><g transform="translate(53.81,42.53)">
 <text x="270.40" y="4261.82" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="270.40" dy="0">📍METASPLOIT</tspan></text>
 </g></a>
 <g transform="translate(53.81,42.53)">
@@ -367,7 +367,7 @@ tags:
 <g transform="translate(53.81,42.53)">
 <text x="160.00" y="4520.00" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="160.00" dy="0">9-Vulnerabilities I</tspan><tspan x="160.00" dy="25"></tspan></text>
 </g>
-<a href="../portswigger/sql-injection/thm-0-sql-injection" class="excalidraw-node-link" target="_self" title="THM-0-sql injection"><g transform="translate(53.81,42.53)">
+<a href="../../portswigger/sql-injection/thm-0-sql-injection" class="excalidraw-node-link" target="_self" title="THM-0-sql injection"><g transform="translate(53.81,42.53)">
 <text x="260.00" y="4580.00" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="260.00" dy="0">📍THM-0-sql injection</tspan></text>
 </g></a>
 </svg>

@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-c3cd5df9">
+<div class="excalidraw-container" id="ex-cc332b08">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -120,8 +120,8 @@ tags:
 <g transform="translate(-56.90,-122.44)">
 <path d="M418.90 846.84 L419.22 847.67 L420.07 848.09 L420.98 847.79 L421.78 847.32 L422.74 846.90 L424.28 845.89 L426.10 844.76 L427.86 843.34 L428.87 842.68 L428.87 842.68" stroke="#c2255c" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<a href="../0-asset/pasted-image-20260903194748_336.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260903194748_336.png"><g transform="translate(-56.90,-122.44)">
-<image x="141.90391646984028" y="945.4224144060588" width="890.3390105491457" height="394.6863655011677" href="../0-asset/pasted-image-20260903194748_336.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+<a href="../../0-asset/pasted-image-20260903194748_336.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260903194748_336.png"><g transform="translate(-56.90,-122.44)">
+<image x="141.90391646984028" y="945.4224144060588" width="890.3390105491457" height="394.6863655011677" href="../../0-asset/pasted-image-20260903194748_336.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
 <g transform="translate(-56.90,-122.44)">
 <path d="M663.94 1028.75 C708.28 1029.55,750.36 1028.33,874.13 1028.77 M662.59 1026.95 C727.25 1027.64,790.41 1026.85,874.05 1028.28 M875.64 1026.90 C875.41 1040.92,875.48 1058.86,873.94 1070.33 M875.39 1027.71 C873.67 1042.93,874.04 1059.13,874.73 1069.00 M873.22 1068.60 C816.41 1069.96,758.07 1071.90,664.33 1070.05 M875.71 1070.37 C808.45 1069.61,740.98 1069.16,662.71 1069.94 M664.49 1069.00 C662.81 1052.19,663.31 1040.31,664.73 1025.53 M662.55 1069.96 C661.82 1053.26,663.15 1037.03,662.19 1027.30" stroke="#c2255c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -129,8 +129,8 @@ tags:
 <g transform="translate(-56.90,-122.44)">
 <path d="M425.85 1103.03 C492.06 1101.49,558.00 1101.60,668.82 1103.15 M426.72 1102.05 C523.15 1104.31,618.47 1103.09,669.44 1102.94 M669.43 1102.88 C670.37 1134.55,670.20 1162.65,669.50 1190.10 M670.01 1102.97 C669.11 1128.17,669.03 1156.36,669.51 1190.75 M667.81 1192.05 C619.31 1192.98,568.38 1194.18,428.15 1191.86 M669.29 1191.31 C581.26 1191.86,492.38 1192.85,426.15 1192.16 M425.15 1189.87 C427.10 1155.88,427.14 1119.85,426.72 1101.18 M425.91 1191.44 C427.14 1159.25,426.93 1126.41,426.86 1102.85" stroke="#c2255c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<a href="../0-asset/pasted-image-20260903194936_024.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260903194936_024.png"><g transform="translate(-56.90,-122.44)">
-<image x="182.3880525965269" y="1396.2853546142578" width="636.1088435374149" height="482" href="../0-asset/pasted-image-20260903194936_024.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
+<a href="../../0-asset/pasted-image-20260903194936_024.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260903194936_024.png"><g transform="translate(-56.90,-122.44)">
+<image x="182.3880525965269" y="1396.2853546142578" width="636.1088435374149" height="482" href="../../0-asset/pasted-image-20260903194936_024.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
 </svg>
     </div>

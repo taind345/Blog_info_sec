@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<div class="excalidraw-container" id="ex-cc53b0bc">
+<div class="excalidraw-container" id="ex-0fea32c9">
   <div class="excalidraw-toolbar">
     <div class="excalidraw-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
@@ -288,7 +288,7 @@ if (array_key_exists($page, $allowed_pages)) {
 <g transform="translate(-23.16,255.64)">
 <text x="721.16" y="-190.95" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="721.16" dy="0">Tạo HTTP POST </tspan></text>
 </g>
-<a href="../tools/cách-để-gửi-post-trong-burp" class="excalidraw-node-link" target="_self" title="cách để gửi POST trong burp"><g transform="translate(-23.16,255.64)">
+<a href="../../tools/cách-để-gửi-post-trong-burp" class="excalidraw-node-link" target="_self" title="cách để gửi POST trong burp"><g transform="translate(-23.16,255.64)">
 <text x="914.45" y="-195.64" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="914.45" dy="0">📍 cách để gửi POST trong burp</tspan></text>
 </g></a>
 <g transform="translate(-23.16,255.64)">
