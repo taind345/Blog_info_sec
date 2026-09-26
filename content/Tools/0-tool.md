@@ -28,7 +28,7 @@ tags:
 <a href="./danh-sách-các-tool-kali" class="excalidraw-node-link" target="_self" title="danh sách các tool kali"><g transform="translate(-105.01,92.25)">
 <text x="152.06" y="211.91" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#000000" text-anchor="start"><tspan x="152.06" dy="0">📍 danh sách các tool kali</tspan></text>
 </g></a>
-<a href="../1-linux/cheetsheet-nmap" class="excalidraw-node-link" target="_self" title="cheetsheet nmap"><g transform="translate(-105.01,92.25)">
+<a href="../3-linux/cheetsheet-nmap" class="excalidraw-node-link" target="_self" title="cheetsheet nmap"><g transform="translate(-105.01,92.25)">
 <text x="145.01" y="160.35" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#000000" text-anchor="start"><tspan x="145.01" dy="0">📍 cheetsheet nmap</tspan></text>
 </g></a>
 <a href="./curl" class="excalidraw-node-link" target="_self" title="curl"><g transform="translate(-105.01,92.25)">

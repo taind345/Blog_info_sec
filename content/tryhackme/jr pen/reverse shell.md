@@ -25,7 +25,7 @@ tags:
 <g transform="translate(-279.26,-127.44)">
 <text x="319.26" y="187.44" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="319.26" dy="0">đọc phần này trước</tspan></text>
 </g>
-<a href="../../1-linux/netcat" class="excalidraw-node-link" target="_self" title="netcat"><g transform="translate(-279.26,-127.44)">
+<a href="../../3-linux/netcat" class="excalidraw-node-link" target="_self" title="netcat"><g transform="translate(-279.26,-127.44)">
 <text x="549.79" y="194.51" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="549.79" dy="0">📍netcat</tspan></text>
 </g></a>
 <g transform="translate(-279.26,-127.44)">
