@@ -99,7 +99,33 @@
   font-display: swap;
 }
 
-// === 2. Global Notion Typography & Reset ===
+// === 2. Global High-Contrast Typography & Reset ===
+:root {
+  --bg-grid: linear-gradient(to right, rgba(203, 213, 225, 0.45) 1px, transparent 1px),
+             linear-gradient(to bottom, rgba(203, 213, 225, 0.45) 1px, transparent 1px);
+  --card-bg: #ffffff;
+  --card-border: #cbd5e1;
+  --card-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --card-hover-shadow: 0 6px 18px -2px rgba(5, 150, 105, 0.2);
+  --code-bg: #f1f5f9;
+  --code-border: #cbd5e1;
+  --code-accent: #059669;
+  --code-text: #0f172a;
+}
+
+:root[saved-theme="dark"] {
+  --bg-grid: linear-gradient(to right, rgba(0, 255, 102, 0.05) 1px, transparent 1px),
+             linear-gradient(to bottom, rgba(0, 255, 102, 0.05) 1px, transparent 1px);
+  --card-bg: #0d141f;
+  --card-border: #1e293b;
+  --card-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  --card-hover-shadow: 0 0 20px -2px rgba(0, 255, 102, 0.35);
+  --code-bg: #090e15;
+  --code-border: #1e293b;
+  --code-accent: #00ff66;
+  --code-text: #f8fafc;
+}
+
 html, body {
   font-family: 'Cascadia Code', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
   letter-spacing: -0.012em;
@@ -107,9 +133,26 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  background-image: var(--bg-grid) !important;
+  background-size: 28px 28px !important;
+  color: var(--darkgray);
+}
+
+::selection {
+  background: var(--secondary);
+  color: #00280b;
+}
+
+:root:not([saved-theme="dark"]) ::selection,
+:root[saved-theme="light"] ::selection {
+  background: #a7f3d0;
+  color: #064e3b;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Cascadia Code', -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--dark);
 }
@@ -118,142 +161,230 @@ code, pre, kbd, samp {
   font-family: 'Cascadia Code', Consolas, Monaco, monospace !important;
 }
 
-// === 3. Notion Minimalist Hero Section ===
+// === 3. Tactical HUD Hero Section ===
 .hero-section {
-  padding: 1.8rem 1.4rem 1.6rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  background: var(--light);
-  border: 1px solid var(--lightgray);
+  position: relative;
+  padding: 2rem 1.6rem 1.8rem;
+  margin-bottom: 2.2rem;
+  border-radius: 6px;
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  box-shadow: var(--card-shadow);
   text-align: left;
+  overflow: hidden;
+
+  // Corner crosshair markers
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 14px;
+    height: 14px;
+    border-top: 2.5px solid var(--secondary);
+    border-left: 2.5px solid var(--secondary);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 14px;
+    height: 14px;
+    border-bottom: 2.5px solid var(--secondary);
+    border-right: 2.5px solid var(--secondary);
+    pointer-events: none;
+  }
 }
 
 .hero-badge {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding: 0.2rem 0.65rem;
-  margin-bottom: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 0.85rem;
   border-radius: 4px;
-  background: rgba(35, 131, 226, 0.08);
-  color: var(--secondary) !important;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
+  font-family: 'Cascadia Code', monospace;
+
+  background: rgba(5, 150, 105, 0.1);
+  border: 1px solid rgba(5, 150, 105, 0.3);
+  color: #065f46 !important;
+}
+
+:root[saved-theme="dark"] .hero-badge {
+  background: rgba(0, 255, 102, 0.1);
+  border: 1px solid rgba(0, 255, 102, 0.35);
+  color: #00ff66 !important;
 }
 
 .hero-title {
-  font-size: 1.9rem;
-  font-weight: 700;
-  margin: 0.2rem 0 0.5rem;
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin: 0.2rem 0 0.6rem;
   color: var(--dark);
   line-height: 1.25;
 }
 
-.hero-desc {
-  font-size: 0.92rem;
-  color: var(--darkgray);
-  max-width: 760px;
-  margin: 0;
-  line-height: 1.6;
+:root[saved-theme="dark"] .hero-title {
+  text-shadow: 0 0 12px rgba(0, 255, 102, 0.2);
 }
 
-// === 4. Notion Category Grid ===
+.hero-desc {
+  font-size: 1rem;
+  color: var(--darkgray);
+  max-width: 820px;
+  margin: 0;
+  line-height: 1.65;
+}
+
+// === 4. High-Contrast Tactical Category Grid ===
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 0.85rem;
-  margin: 1.6rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.1rem;
+  margin: 1.8rem 0;
 }
 
 .cat-card {
+  position: relative;
   display: flex;
   align-items: flex-start;
-  gap: 0.8rem;
-  padding: 0.9rem 1rem;
-  border-radius: 8px;
-  background: var(--light);
-  border: 1px solid var(--lightgray);
+  gap: 0.95rem;
+  padding: 1.15rem 1.25rem;
+  border-radius: 6px;
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  box-shadow: var(--card-shadow);
   text-decoration: none !important;
   color: inherit !important;
-  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
-}
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 
-.cat-card:hover {
-  background: #fbfbfa;
-  border-color: var(--secondary);
-  transform: translateY(-1px);
+  &:hover {
+    border-color: var(--secondary);
+    box-shadow: var(--card-hover-shadow);
+    transform: translateY(-2px);
+  }
 }
 
 :root[saved-theme="dark"] .cat-card:hover {
-  background: #232323;
-  border-color: var(--secondary);
+  background: #131b26;
 }
 
 .cat-icon {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 1;
   flex-shrink: 0;
   margin-top: 3px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
 }
 
 .cat-info h3 {
-  margin: 0 0 0.2rem 0;
-  font-size: 0.92rem;
-  font-weight: 600;
+  margin: 0 0 0.3rem 0;
+  font-size: 0.98rem;
+  font-weight: 700;
   color: var(--dark);
+  transition: color 0.15s ease;
+}
+
+.cat-card:hover .cat-info h3 {
+  color: var(--secondary);
 }
 
 .cat-info p {
   margin: 0;
-  font-size: 0.8rem;
-  color: var(--gray);
-  line-height: 1.4;
+  font-size: 0.85rem;
+  color: var(--darkgray);
+  line-height: 1.48;
 }
 
-// === 5. Notion Mindmap Master Card on Homepage ===
+// === 5. High-Contrast Master Mindmap Card ===
 .mindmap-preview-card {
-  padding: 1.3rem 1.4rem;
-  margin: 1.4rem 0;
-  border-radius: 8px;
-  background: var(--light);
-  border: 1px solid var(--lightgray);
+  position: relative;
+  padding: 1.5rem 1.6rem;
+  margin: 1.8rem 0;
+  border-radius: 6px;
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  box-shadow: var(--card-shadow);
   text-align: left;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid var(--tertiary);
+    border-left: 2px solid var(--tertiary);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 12px;
+    height: 12px;
+    border-bottom: 2px solid var(--tertiary);
+    border-right: 2px solid var(--tertiary);
+    pointer-events: none;
+  }
 }
 
 .preview-info h3 {
-  margin: 0 0 0.4rem;
-  font-size: 1.1rem;
+  margin: 0 0 0.45rem;
+  font-size: 1.15rem;
+  font-weight: 700;
   color: var(--dark);
 }
 
 .preview-info p {
   color: var(--darkgray);
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  line-height: 1.5;
+  font-size: 0.94rem;
+  margin-bottom: 1.1rem;
+  line-height: 1.55;
 }
 
 .open-mindmap-btn {
   display: inline-block;
-  padding: 0.45rem 1rem;
+  padding: 0.55rem 1.25rem;
   background: var(--secondary);
   color: #ffffff !important;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
+  border-radius: 5px;
+  font-size: 0.88rem;
+  font-weight: 700;
   text-decoration: none !important;
-  transition: opacity 0.15s ease;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.25);
+  transition: all 0.15s ease;
+}
+
+:root[saved-theme="dark"] .open-mindmap-btn {
+  color: #00280b !important;
+  font-weight: 800;
+  box-shadow: 0 0 16px rgba(0, 255, 102, 0.4);
 }
 
 .open-mindmap-btn:hover {
-  opacity: 0.9;
+  opacity: 0.92;
+  transform: translateY(-1px);
 }
 
-// === 6. Excalidraw Container & Viewport (High Performance & Smooth) ===
+// === 6. High-Contrast Excalidraw Container & Viewport ===
 .excalidraw-container {
-  margin: 1.6rem 0;
-  border-radius: 8px;
-  border: 1px solid var(--lightgray);
-  background: var(--light);
+  margin: 1.8rem 0;
+  border-radius: 6px;
+  border: 1.5px solid var(--card-border);
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
   overflow: hidden;
   position: relative;
   display: flex;
@@ -276,9 +407,9 @@ code, pre, kbd, samp {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.45rem 0.85rem;
-  background: var(--light);
-  border-bottom: 1px solid var(--lightgray);
+  padding: 0.5rem 0.95rem;
+  background: var(--card-bg);
+  border-bottom: 1.5px solid var(--card-border);
   user-select: none;
   z-index: 10;
 }
@@ -286,26 +417,26 @@ code, pre, kbd, samp {
 .excalidraw-badge {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.82rem;
-  font-weight: 600;
+  gap: 0.45rem;
+  font-size: 0.84rem;
+  font-weight: 700;
   color: var(--dark);
 }
 
 .excalidraw-controls {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.35rem;
 }
 
 .excalidraw-btn {
   background: var(--light);
-  border: 1px solid var(--lightgray);
+  border: 1px solid var(--card-border);
   color: var(--dark);
-  padding: 0.25rem 0.55rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  border-radius: 5px;
+  padding: 0.28rem 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 4px;
   cursor: pointer;
   line-height: 1;
   transition: all 0.15s ease;
@@ -317,13 +448,17 @@ code, pre, kbd, samp {
   border-color: var(--secondary);
 }
 
+:root[saved-theme="dark"] .excalidraw-btn:hover {
+  color: #00280b;
+}
+
 .excalidraw-viewport {
   width: 100%;
   height: clamp(540px, 60vh, 660px);
   overflow: hidden;
   position: relative;
   cursor: grab;
-  background-image: radial-gradient(var(--lightgray) 1px, transparent 1px);
+  background-image: radial-gradient(var(--card-border) 1.2px, transparent 1.2px);
   background-size: 20px 20px;
   user-select: none;
   -webkit-user-select: none;
@@ -339,7 +474,7 @@ code, pre, kbd, samp {
 }
 
 .excalidraw-container.is-fullscreen .excalidraw-viewport {
-  height: calc(100vh - 42px);
+  height: calc(100vh - 46px);
 }
 
 .excalidraw-canvas-wrapper {
@@ -374,7 +509,7 @@ code, pre, kbd, samp {
 }
 
 .excalidraw-embedded-img:hover {
-  filter: brightness(1.05);
+  filter: brightness(1.08);
 }
 
 // Clickable Node Links
@@ -393,11 +528,11 @@ code, pre, kbd, samp {
 
 .excalidraw-node-link:hover text,
 .excalidraw-node-link:hover tspan {
-  fill: #2383e2 !important;
+  fill: var(--tertiary) !important;
   text-decoration: underline !important;
 }
 
-// === 7. Notion Markdown Cards on Excalidraw Canvas ===
+// === 7. High-Contrast Embedded Markdown Cards on Excalidraw Canvas ===
 .excalidraw-foreign-md {
   overflow: visible;
   pointer-events: auto;
@@ -407,10 +542,10 @@ code, pre, kbd, samp {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  background: #ffffff;
-  border: 1px solid #e3e2e0;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 6px;
+  box-shadow: var(--card-shadow);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -422,11 +557,11 @@ code, pre, kbd, samp {
   align-items: center;
   justify-content: space-between;
   padding: 8px 12px;
-  background: #f7f6f3;
-  border-bottom: 1px solid #e3e2e0;
+  background: var(--light);
+  border-bottom: 1.5px solid var(--card-border);
   font-size: 12px;
-  font-weight: 600;
-  color: #37352f;
+  font-weight: 700;
+  color: var(--dark);
   user-select: none;
   flex-shrink: 0;
 }
@@ -448,19 +583,25 @@ code, pre, kbd, samp {
 
 .notion-embed-jump {
   font-size: 11px;
-  color: #2383e2 !important;
+  color: var(--secondary) !important;
   text-decoration: none !important;
-  padding: 3px 7px;
+  padding: 3px 8px;
   border-radius: 4px;
-  background: rgba(35, 131, 226, 0.08);
-  font-weight: 600;
+  background: var(--highlight);
+  font-weight: 700;
   cursor: pointer;
   flex-shrink: 0;
-  transition: background 0.15s ease;
+  border: 1px solid var(--card-border);
+  transition: all 0.15s ease;
 }
 
 .notion-embed-jump:hover {
-  background: rgba(35, 131, 226, 0.2);
+  background: var(--secondary);
+  color: #ffffff !important;
+}
+
+:root[saved-theme="dark"] .notion-embed-jump:hover {
+  color: #00280b !important;
 }
 
 .notion-embed-body {
@@ -469,20 +610,20 @@ code, pre, kbd, samp {
   flex-grow: 1;
   font-size: 13px;
   line-height: 1.6;
-  color: #37352f;
+  color: var(--darkgray);
 }
 
-.notion-embed-body h1 { font-size: 1.3rem; margin: 0.8rem 0 0.4rem; }
-.notion-embed-body h2 { font-size: 1.15rem; margin: 0.7rem 0 0.35rem; }
-.notion-embed-body h3 { font-size: 1rem; margin: 0.6rem 0 0.3rem; }
+.notion-embed-body h1 { font-size: 1.3rem; margin: 0.8rem 0 0.4rem; color: var(--dark); }
+.notion-embed-body h2 { font-size: 1.15rem; margin: 0.7rem 0 0.35rem; color: var(--dark); }
+.notion-embed-body h3 { font-size: 1rem; margin: 0.6rem 0 0.3rem; color: var(--dark); }
 
 .notion-embed-body pre {
-  background: #f1f1ef;
+  background: var(--code-bg);
   padding: 8px 10px;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 12px;
   overflow-x: auto;
-  border: 1px solid #e3e2e0;
+  border: 1px solid var(--code-border);
 }
 
 .notion-embed-body table {
@@ -493,175 +634,100 @@ code, pre, kbd, samp {
 }
 
 .notion-embed-body th, .notion-embed-body td {
-  border: 1px solid #e3e2e0;
+  border: 1px solid var(--card-border);
   padding: 5px 8px;
 }
 
 .notion-embed-body th {
-  background: #f7f6f3;
-  font-weight: 600;
+  background: var(--light);
+  font-weight: 700;
+  color: var(--dark);
 }
 
-// === 8. Notion Callout Card in Document Body ===
+// === 8. High-Contrast Callout Card in Document Body ===
 .notion-callout-card {
   padding: 1.4rem 1.6rem;
   margin: 1.6rem 0;
-  border-radius: 8px;
-  background: #fbfbfa;
-  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  box-shadow: var(--card-shadow);
 }
 
-:root[saved-theme="dark"] .notion-callout-card {
-  background: #202020;
-  border-color: #2f2f2f;
-}
-
-// === 9. Clean Dark Mode Overrides ===
+// === 9. Dark Mode Theme Overrides ===
 :root[saved-theme="dark"] {
   .excalidraw-container {
-    background: #191919;
-    border-color: #2f2f2f;
+    background: #05080c;
+    border-color: #1e293b;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
   }
 
   .excalidraw-toolbar {
-    background: #191919;
-    border-color: #2f2f2f;
+    background: #0d141f;
+    border-color: #1e293b;
   }
 
   .excalidraw-badge {
-    color: #e3e2e0;
+    color: #f8fafc;
   }
 
   .excalidraw-btn {
-    background: #242424;
-    border-color: #333333;
-    color: #e3e2e0;
+    background: #131b26;
+    border-color: #1e293b;
+    color: #f8fafc;
   }
 
   .excalidraw-viewport {
-    background-image: radial-gradient(#2f2f2f 1px, transparent 1px);
+    background-image: radial-gradient(#1e293b 1.2px, transparent 1.2px);
   }
 
   .excalidraw-svg text[fill="#1e1e1e"],
   .excalidraw-svg text[fill="#000000"] {
-    fill: #e3e2e0 !important;
+    fill: #f8fafc !important;
   }
 
   .excalidraw-svg path[stroke="#1e1e1e"],
   .excalidraw-svg path[stroke="#000000"] {
-    stroke: #e3e2e0 !important;
+    stroke: #f8fafc !important;
   }
 
   .excalidraw-md-bg {
-    fill: #202020 !important;
-    stroke: #333333 !important;
+    fill: #0d141f !important;
+    stroke: #1e293b !important;
   }
 
   .notion-embed-card {
-    background: #202020;
-    border-color: #333333;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    background: #0d141f;
+    border-color: #1e293b;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
   }
 
   .notion-embed-header {
-    background: #252525;
-    border-color: #333333;
-    color: #e3e2e0;
+    background: #131b26;
+    border-color: #1e293b;
+    color: #f8fafc;
   }
 
   .notion-embed-body {
-    color: #d4d4d4;
+    color: #cbd5e1;
   }
 
   .notion-embed-body pre {
-    background: #141416;
-    border-color: #2f2f2f;
+    background: #090e15;
+    border-color: #1e293b;
   }
 
   .notion-embed-body th, .notion-embed-body td {
-    border-color: #2f2f2f;
+    border-color: #1e293b;
   }
 
   .notion-embed-body th {
-    background: #252525;
+    background: #131b26;
   }
 
   .excalidraw-node-link:hover text,
   .excalidraw-node-link:hover tspan {
-    fill: #529cca !important;
-  }
-}
-
-/* ==========================================================
-   ASCII Tree Roadmap Styling (Clean Notion-like Interactive Card)
-   ========================================================== */
-.ascii-tree,
-p.ascii-tree {
-  white-space: pre-wrap !important;
-  font-family: var(--codeFont), 'Cascadia Code', Consolas, monospace !important;
-  font-size: 0.92rem;
-  line-height: 1.6;
-  letter-spacing: 0;
-  tab-size: 2;
-  overflow-x: auto;
-  word-break: normal;
-  display: block;
-  padding: 1.25rem 1.5rem;
-  background-color: #f7f6f3;
-  color: var(--dark);
-  border: 1px solid var(--lightgray);
-  border-left: 4px solid var(--secondary);
-  border-radius: 8px;
-  margin: 1.5rem 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-
-  p {
-    white-space: pre-wrap !important;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    margin: 0;
-    padding: 0;
-  }
-
-  a {
-    color: var(--secondary);
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    transition: color 0.15s ease;
-
-    &:hover {
-      color: var(--tertiary);
-    }
-  }
-
-  strong {
-    color: var(--dark);
-    font-weight: 700;
-  }
-}
-
-:root[saved-theme="dark"] {
-  .ascii-tree,
-  p.ascii-tree {
-    background-color: #1a1a1c !important;
-    border-color: #2e2e32 !important;
-    border-left-color: var(--secondary) !important;
-    color: #e4e4e7 !important;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) !important;
-  }
-
-  article code:not(pre code) {
-    background: #27272a;
-    border-color: #3f3f46;
-    color: #e4e4e7;
-  }
-
-  pre,
-  article pre {
-    background-color: #1e1e20 !important;
-    border-color: #2f2f2f !important;
+    fill: #38bdf8 !important;
   }
 }
 
@@ -671,33 +737,130 @@ p.ascii-tree {
   .excalidraw-svg text[fill="#ffffff"],
   .excalidraw-svg text[fill="#f8fafc"],
   .excalidraw-svg text[fill="#e3e2e0"] {
-    fill: #1e1e1e !important;
+    fill: #0f172a !important;
   }
 
   .excalidraw-svg path[stroke="#ffffff"],
   .excalidraw-svg path[stroke="#f8fafc"],
   .excalidraw-svg path[stroke="#e3e2e0"] {
-    stroke: #1e1e1e !important;
+    stroke: #0f172a !important;
   }
 }
 
-// === 10. Optimized Wide Layout & Sleek Compact Sidebars ===
+/* ==========================================================
+   ASCII Tree Roadmap Styling (Tactical High-Contrast HUD Card)
+   ========================================================== */
+.ascii-tree,
+p.ascii-tree {
+  white-space: pre-wrap !important;
+  font-family: var(--codeFont), 'Cascadia Code', Consolas, monospace !important;
+  font-size: 0.94rem;
+  line-height: 1.62;
+  letter-spacing: 0;
+  tab-size: 2;
+  overflow-x: auto;
+  word-break: normal;
+  display: block;
+  padding: 1.25rem 1.5rem;
+  background-color: #f8fafc;
+  color: #0f172a;
+  border: 1.5px solid #cbd5e1;
+  border-left: 4px solid #059669;
+  border-radius: 6px;
+  margin: 1.6rem 0;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+
+  a {
+    color: var(--secondary) !important;
+    text-decoration: underline dotted 1.5px !important;
+    text-underline-offset: 3px !important;
+    font-weight: 700;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: var(--tertiary) !important;
+      text-decoration: underline solid 2px !important;
+    }
+  }
+}
+
+:root[saved-theme="dark"] {
+  .ascii-tree,
+  p.ascii-tree {
+    background-color: #090e15 !important;
+    border-color: #1e293b !important;
+    border-left-color: #00ff66 !important;
+    color: #00ff66 !important;
+    text-shadow: 0 0 6px rgba(0, 255, 102, 0.35);
+    box-shadow: 0 0 16px -3px rgba(0, 255, 102, 0.2) !important;
+
+    a {
+      color: #38bdf8 !important;
+      text-shadow: 0 0 6px rgba(56, 189, 248, 0.4);
+
+      &:hover {
+        color: #00ff66 !important;
+        text-shadow: 0 0 8px rgba(0, 255, 102, 0.6);
+      }
+    }
+  }
+
+  article code:not(pre code) {
+    background: rgba(0, 255, 102, 0.1) !important;
+    border-color: rgba(0, 255, 102, 0.3) !important;
+    color: #00ff66 !important;
+  }
+
+  pre,
+  article pre {
+    background-color: #090e15 !important;
+    border-color: #1e293b !important;
+    border-left-color: #00ff66 !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6) !important;
+  }
+}
+
+// === 10. Preserved Wide Layout & High-Contrast Sidebars ===
 .page {
   max-width: min(94vw, 1680px) !important;
 }
 
 @media all and ($desktop) {
-  // Sleek, compact left sidebar
+  // Sleek, high-contrast left sidebar
   .sidebar.left {
     padding: $topSpacing 0.8rem 2rem 0.6rem !important;
 
     .page-title {
       font-size: 1.35rem;
-      margin-bottom: 0.4rem;
+      font-weight: 800;
+      margin-bottom: 0.45rem;
+      color: var(--dark);
+      letter-spacing: -0.02em;
     }
 
     .search {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
+
+      input {
+        background: var(--card-bg);
+        border: 1.5px solid var(--card-border);
+        color: var(--dark);
+        border-radius: 5px;
+        padding: 0.4rem 0.7rem;
+        font-family: 'Cascadia Code', monospace;
+        font-size: 0.88rem;
+        transition: all 0.15s ease;
+
+        &:focus {
+          border-color: var(--secondary);
+          box-shadow: 0 0 8px rgba(5, 150, 105, 0.25);
+          outline: none;
+        }
+      }
+    }
+
+    :root[saved-theme="dark"] .search input:focus {
+      box-shadow: 0 0 10px rgba(0, 255, 102, 0.35);
     }
 
     .explorer {
@@ -705,58 +868,113 @@ p.ascii-tree {
       line-height: 1.5;
 
       button.folder-button {
-        padding: 0.18rem 0.3rem;
+        padding: 0.2rem 0.35rem;
+        font-weight: 600;
+        color: var(--dark);
+
+        &:hover {
+          color: var(--secondary);
+        }
       }
 
       ul.overflow {
         max-height: calc(100vh - 180px);
       }
+
+      li > a {
+        color: var(--darkgray);
+        transition: color 0.15s ease;
+
+        &:hover {
+          color: var(--secondary);
+        }
+      }
+
+      // Active selected note in explorer
+      li > a.active,
+      li > div.active {
+        background: var(--highlight) !important;
+        border-left: 3px solid var(--secondary) !important;
+        color: var(--secondary) !important;
+        font-weight: 700 !important;
+      }
     }
   }
 
-  // Sleek, compact right sidebar
+  // Sleek, high-contrast right sidebar
   .sidebar.right {
     padding: $topSpacing 0.6rem 2rem 0.8rem !important;
 
     .graph {
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.4rem;
       h3 {
         font-size: 0.95rem;
-        margin-bottom: 0.35rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+        color: var(--dark);
       }
       .graph-outer {
         height: 200px;
+        background: var(--card-bg);
+        border: 1.5px solid var(--card-border);
+        border-radius: 6px;
+        overflow: hidden;
       }
     }
 
     .toc {
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.4rem;
       button.toc-header h3 {
         font-size: 0.95rem;
-        margin-bottom: 0.3rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+        color: var(--dark);
       }
       #toc-content {
         font-size: 0.88rem;
-        line-height: 1.45;
+        line-height: 1.5;
         max-height: calc(50vh - 80px);
         overflow-y: auto;
+
+        a {
+          color: var(--darkgray);
+          transition: color 0.15s ease;
+
+          &:hover {
+            color: var(--secondary);
+          }
+
+          &.in-view {
+            color: var(--secondary);
+            font-weight: 700;
+          }
+        }
       }
     }
 
     .backlinks {
       h3 {
         font-size: 0.95rem;
-        margin-bottom: 0.3rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+        color: var(--dark);
       }
       .overflow {
         font-size: 0.88rem;
-        line-height: 1.45;
+        line-height: 1.5;
+
+        a {
+          color: var(--darkgray);
+          &:hover {
+            color: var(--secondary);
+          }
+        }
       }
     }
   }
 }
 
-// === 11. Article Content & Enhanced Typography ===
+// === 11. Article Content & Maximum Contrast Typography ===
 .center {
   padding: 0 1.5rem !important;
 }
@@ -764,14 +982,16 @@ p.ascii-tree {
 // Breadcrumbs
 .breadcrumb-container {
   font-size: 0.95rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.7rem;
   line-height: 1.5;
   color: var(--gray);
 
   a {
     color: var(--secondary);
+    font-weight: 600;
     &:hover {
       color: var(--tertiary);
+      text-decoration: underline;
     }
   }
 }
@@ -779,12 +999,16 @@ p.ascii-tree {
 // Article Title
 h1.article-title {
   font-size: 2.35rem !important;
-  font-weight: 700 !important;
+  font-weight: 800 !important;
   line-height: 1.25 !important;
   letter-spacing: -0.025em;
   color: var(--dark) !important;
   margin-top: 0.25rem !important;
-  margin-bottom: 0.6rem !important;
+  margin-bottom: 0.65rem !important;
+}
+
+:root[saved-theme="dark"] h1.article-title {
+  text-shadow: 0 0 14px rgba(0, 255, 102, 0.15);
 }
 
 // Content Meta (Date, read time)
@@ -793,6 +1017,7 @@ h1.article-title {
   color: var(--gray);
   margin-bottom: 1.8rem;
   line-height: 1.5;
+  font-weight: 500;
 }
 
 // Article Body Content
@@ -800,25 +1025,26 @@ article,
 .markdown-rendered,
 .popover-hint article {
   font-size: 1.12rem;
-  line-height: 1.8;
+  line-height: 1.82;
   color: var(--darkgray);
 
   p {
     font-size: 1.12rem;
     line-height: 1.82;
     margin: 1.15rem 0;
-    color: var(--dark);
+    color: var(--darkgray);
   }
 
   // Headings within article
   h1 {
     font-size: 2rem !important;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.3;
-    margin-top: 2.4rem;
+    margin-top: 2.5rem;
     margin-bottom: 0.9rem;
-    padding-bottom: 0.35rem;
-    border-bottom: 1px solid var(--lightgray);
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--card-border);
+    color: var(--dark);
   }
 
   h2 {
@@ -827,14 +1053,16 @@ article,
     line-height: 1.35;
     margin-top: 2.2rem;
     margin-bottom: 0.8rem;
+    color: var(--dark);
   }
 
   h3 {
     font-size: 1.35rem !important;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.4;
     margin-top: 1.85rem;
     margin-bottom: 0.7rem;
+    color: var(--dark);
   }
 
   h4, h5, h6 {
@@ -843,48 +1071,74 @@ article,
     line-height: 1.45;
     margin-top: 1.4rem;
     margin-bottom: 0.5rem;
+    color: var(--dark);
+  }
+
+  // Links in text
+  a {
+    color: var(--secondary);
+    font-weight: 600;
+    text-decoration: underline dotted 1.5px;
+    text-underline-offset: 3px;
+    transition: all 0.15s ease;
+
+    &:hover {
+      color: var(--tertiary);
+      text-decoration: underline solid 2px;
+    }
   }
 
   // Lists
   ul, ol {
     padding-left: 1.8rem;
-    margin: 0.9rem 0;
+    margin: 0.95rem 0;
 
     li {
       font-size: 1.12rem;
       line-height: 1.8;
       margin-bottom: 0.45rem;
-      color: var(--dark);
+      color: var(--darkgray);
 
       &::marker {
         color: var(--secondary);
+        font-weight: 700;
       }
     }
   }
 
   // Code blocks & figures
   figure[data-rehype-pretty-code-figure] {
-    margin: 1.5rem 0;
+    margin: 1.6rem 0;
 
     [data-rehype-pretty-code-title] {
-      font-size: 0.92rem;
-      padding: 0.2rem 0.65rem;
+      font-size: 0.88rem;
+      font-weight: 700;
+      font-family: 'Cascadia Code', monospace;
+      padding: 0.3rem 0.8rem;
+      background: var(--light);
+      border: 1.5px solid var(--code-border);
+      border-bottom: none;
+      border-radius: 6px 6px 0 0;
+      display: inline-block;
+      color: var(--dark);
     }
   }
 
   pre {
-    padding: 0.85rem 1.1rem;
-    border-radius: 8px;
-    margin: 1.4rem 0;
-    background-color: #f7f6f3;
-    border: 1px solid var(--lightgray);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    padding: 0.95rem 1.25rem;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    background-color: var(--code-bg);
+    border: 1.5px solid var(--code-border);
+    border-left: 4px solid var(--code-accent);
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
 
     & > code {
       font-size: 0.98rem !important;
       line-height: 1.68 !important;
       font-family: 'Cascadia Code', Consolas, Monaco, monospace !important;
       padding: 0.3rem 0;
+      color: var(--code-text);
 
       & > [data-line]::before {
         font-size: 0.88rem;
@@ -896,35 +1150,61 @@ article,
 
   // Inline code
   code:not(pre code) {
-    font-size: 0.94em;
-    padding: 0.18rem 0.42rem;
-    border-radius: 5px;
-    background: var(--lightgray);
-    color: var(--dark);
-    font-weight: 500;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 0.92em;
+    padding: 0.2rem 0.45rem;
+    border-radius: 4px;
+    background: #ecfdf5;
+    color: #065f46;
+    font-weight: 600;
+    border: 1px solid #a7f3d0;
   }
 
   // Tables
   table {
     font-size: 1.05rem;
     line-height: 1.65;
-    margin: 1.5rem 0;
+    margin: 1.6rem 0;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1.5px solid var(--card-border);
+    border-radius: 6px;
+    overflow: hidden;
 
     th, td {
-      padding: 0.65rem 0.9rem;
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--card-border);
     }
+
+    th {
+      background: var(--light);
+      font-weight: 700;
+      color: var(--dark);
+      border-bottom: 2px solid var(--card-border);
+    }
+
+    tr:nth-child(even) td {
+      background: rgba(0, 0, 0, 0.02);
+    }
+  }
+
+  :root[saved-theme="dark"] table tr:nth-child(even) td {
+    background: #090e15;
   }
 
   // Blockquotes
   blockquote {
     font-size: 1.12rem;
-    line-height: 1.8;
-    margin: 1.4rem 0;
-    padding: 0.8rem 1.4rem;
+    line-height: 1.82;
+    margin: 1.6rem 0;
+    padding: 0.9rem 1.5rem;
     border-left: 4px solid var(--secondary);
     background: var(--highlight);
     border-radius: 0 6px 6px 0;
+    color: var(--dark);
+
+    p {
+      margin: 0.4rem 0;
+      color: var(--dark);
+    }
   }
 }
-
