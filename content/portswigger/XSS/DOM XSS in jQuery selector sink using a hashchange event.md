@@ -1,5 +1,5 @@
 ---
-title: "lab-DOM XSS in jQuery selector sink using a hashchange event"
+title: "DOM XSS in jQuery selector sink using a hashchange event"
 ---
 
  This lab contains a DOM-based cross-site scripting vulnerability on the home page. It uses jQuery's $() selector function to auto-scroll to a given post, whose title is passed via the location.hash property.
