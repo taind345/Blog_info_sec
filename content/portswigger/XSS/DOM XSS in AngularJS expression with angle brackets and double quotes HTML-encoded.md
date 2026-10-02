@@ -1,5 +1,5 @@
 ---
-title: "lab-DOM XSS in AngularJS expression with angle brackets and double quotes HTML-encoded"
+title: "DOM XSS in AngularJS expression with angle brackets and double quotes HTML-encoded"
 ---
 
 This lab contains a DOM-based cross-site scripting vulnerability in a AngularJS expression within the search functionality.
