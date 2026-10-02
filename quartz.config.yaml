@@ -28,7 +28,7 @@ configuration:
         dark: "#191919"
         secondary: "#2383e2"
         tertiary: "#0f7b6c"
-        highlight: "rgba(35, 131, 226, 0.07)"
+        highlight: "rgba(35, 131, 226, 0.08)"
         textHighlight: "#fff27588"
       darkMode:
         light: "#191919"
