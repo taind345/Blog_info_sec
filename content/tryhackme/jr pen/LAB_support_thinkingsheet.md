@@ -1495,9 +1495,9 @@ Bắt request <code>footer.php?skin=default</code> ném vào Burp Repeater, đ�
 <g transform="translate(-162.80,29.87)">
 <path d="M1843.67 9195.48 L1845.05 9195.89 L1846.31 9196.94 L1848.31 9198.55 L1850.76 9200.65 L1853.71 9203.02 L1856.66 9205.33 L1858.04 9206.52 L1858.04 9206.52" stroke="#c2255c" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<a href="../../tools/dùng-fuff-trong-thực-tế" class="excalidraw-node-link" target="_self" title="dùng fuff trong thực tế"><g transform="translate(-162.80,29.87)">
+<g transform="translate(-162.80,29.87)">
 <text x="648.65" y="11688.98" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="648.65" dy="0">📍 dùng fuff trong thực tế</tspan></text>
-</g></a>
+</g>
 <g transform="translate(-162.80,29.87)">
 <text x="727.72" y="11724.28" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="727.72" dy="0">ok nhé, quay lại phần /tool để biết cách dùng -f và -request nha &lt;3 </tspan></text>
 </g>

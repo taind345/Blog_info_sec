@@ -164,7 +164,7 @@ code, pre, kbd, samp {
 // === 3. Tactical HUD Hero Section ===
 .hero-section {
   position: relative;
-  padding: 2rem 1.6rem 1.8rem;
+  padding: 1.6rem 1.6rem 1.8rem;
   margin-bottom: 2.2rem;
   border-radius: 6px;
   background: var(--card-bg);
@@ -197,6 +197,63 @@ code, pre, kbd, samp {
     border-right: 2.5px solid var(--secondary);
     pointer-events: none;
   }
+}
+
+// Hero Terminal Titlebar
+.hero-terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.85rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1.5px solid var(--card-border);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.terminal-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+
+  &.dot-red { background-color: #ef4444; box-shadow: 0 0 6px rgba(239, 68, 68, 0.4); }
+  &.dot-yellow { background-color: #f59e0b; box-shadow: 0 0 6px rgba(245, 158, 11, 0.4); }
+  &.dot-green { background-color: #10b981; box-shadow: 0 0 6px rgba(16, 185, 129, 0.4); }
+  &.dot-cyan { background-color: #00f0ff; box-shadow: 0 0 6px rgba(0, 240, 255, 0.4); }
+}
+
+.terminal-path {
+  font-family: 'Cascadia Code', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray);
+  margin-left: 0.4rem;
+}
+
+.terminal-status .status-verified {
+  font-family: 'Cascadia Code', monospace;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  letter-spacing: 0.04em;
+  background: rgba(5, 150, 105, 0.1);
+  border: 1px solid rgba(5, 150, 105, 0.35);
+  color: #065f46;
+}
+
+:root[saved-theme="dark"] .terminal-status .status-verified {
+  background: rgba(0, 255, 102, 0.12);
+  border: 1px solid rgba(0, 255, 102, 0.4);
+  color: #00ff66;
+  text-shadow: 0 0 8px rgba(0, 255, 102, 0.35);
 }
 
 .hero-badge {
@@ -242,74 +299,379 @@ code, pre, kbd, samp {
   line-height: 1.65;
 }
 
-// === 4. High-Contrast Tactical Category Grid ===
-.category-grid {
+// Quick Terminal Stats HUD
+.hero-stats-hud {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.1rem;
-  margin: 1.8rem 0;
-}
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.6rem;
+  padding-top: 1.2rem;
+  border-top: 1.5px solid var(--card-border);
 
-.cat-card {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.95rem;
-  padding: 1.15rem 1.25rem;
-  border-radius: 6px;
-  background: var(--card-bg);
-  border: 1.5px solid var(--card-border);
-  box-shadow: var(--card-shadow);
-  text-decoration: none !important;
-  color: inherit !important;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-
-  &:hover {
-    border-color: var(--secondary);
-    box-shadow: var(--card-hover-shadow);
-    transform: translateY(-2px);
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-:root[saved-theme="dark"] .cat-card:hover {
-  background: #131b26;
+.stat-card {
+  padding: 0.65rem 0.85rem;
+  border-radius: 5px;
+  background: var(--light);
+  border: 1.5px solid var(--card-border);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  .stat-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    font-family: 'Cascadia Code', monospace;
+    color: var(--gray);
+    letter-spacing: 0.06em;
+    margin-bottom: 0.2rem;
+  }
+
+  .stat-value {
+    font-size: 1.05rem;
+    font-weight: 800;
+    font-family: 'Cascadia Code', monospace;
+    letter-spacing: 0.02em;
+  }
+
+  &.stat-emerald .stat-value { color: #059669; }
+  &.stat-cyan .stat-value { color: #0284c7; }
+  &.stat-slate .stat-value { color: var(--dark); }
+  &.stat-red .stat-value { color: #dc2626; }
 }
 
-.cat-icon {
-  font-size: 1.5rem;
-  line-height: 1;
-  flex-shrink: 0;
-  margin-top: 3px;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+:root[saved-theme="dark"] {
+  .stat-card {
+    background: #090e15;
+    border-color: #1e293b;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+
+    &.stat-emerald {
+      border-color: rgba(0, 255, 102, 0.3);
+      .stat-value { color: #00ff66; text-shadow: 0 0 8px rgba(0, 255, 102, 0.4); }
+    }
+    &.stat-cyan {
+      border-color: rgba(56, 189, 248, 0.3);
+      .stat-value { color: #38bdf8; text-shadow: 0 0 8px rgba(56, 189, 248, 0.4); }
+    }
+    &.stat-slate {
+      border-color: #1e293b;
+      .stat-value { color: #f8fafc; }
+    }
+    &.stat-red {
+      border-color: rgba(248, 113, 113, 0.3);
+      .stat-value { color: #f87171; text-shadow: 0 0 8px rgba(248, 113, 113, 0.35); }
+    }
+  }
 }
 
-.cat-info h3 {
-  margin: 0 0 0.3rem 0;
-  font-size: 0.98rem;
+// Section HUD Header
+.section-hud-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.2rem 0 1.2rem;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hud-header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .hud-prompt {
+    color: var(--secondary);
+    font-family: 'Cascadia Code', monospace;
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
+
+  h2, .hud-title-text {
+    margin: 0 !important;
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+    color: var(--dark) !important;
+    letter-spacing: -0.01em;
+  }
+}
+
+.hud-badge {
+  font-family: 'Cascadia Code', monospace;
+  font-size: 0.72rem;
   font-weight: 700;
-  color: var(--dark);
-  transition: color 0.15s ease;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  background: rgba(5, 150, 105, 0.08);
+  border: 1px solid rgba(5, 150, 105, 0.3);
+  color: #065f46;
 }
 
-.cat-card:hover .cat-info h3 {
-  color: var(--secondary);
+:root[saved-theme="dark"] .hud-badge {
+  background: rgba(0, 255, 102, 0.1);
+  border: 1px solid rgba(0, 255, 102, 0.35);
+  color: #00ff66;
 }
 
-.cat-info p {
-  margin: 0;
-  font-size: 0.85rem;
-  color: var(--darkgray);
-  line-height: 1.48;
+// === 4. High-Contrast 3D Tactical Bento Category Grid ===
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  margin: 1.4rem 0 2.2rem;
 }
+
+// Global Override for Bento Card Links (Prevents Quartz base.scss pollution)
+a.cat-card,
+a.internal.cat-card,
+.popover-hint a.cat-card,
+article a.cat-card {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  min-height: 185px !important;
+  padding: 1.25rem 1.35rem !important;
+  border-radius: 6px !important;
+  text-decoration: none !important;
+  box-sizing: border-box !important;
+  line-height: inherit !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+
+  // Light Mode 3D Elevation
+  background-color: #ffffff !important;
+  border: 2px solid #cbd5e1 !important;
+  box-shadow: 0 4px 14px -2px rgba(15, 23, 42, 0.08), 0 2px 4px -1px rgba(15, 23, 42, 0.04) !important;
+
+  &:hover {
+    transform: translateY(-4px) !important;
+  }
+}
+
+:root[saved-theme="dark"] a.cat-card,
+:root[saved-theme="dark"] a.internal.cat-card,
+:root[saved-theme="dark"] .popover-hint a.cat-card,
+:root[saved-theme="dark"] article a.cat-card {
+  background-color: #0d141f !important;
+  border: 2px solid #1e293b !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+// Specific Bento Card Variations (Cyan, Emerald, Sky, Red)
+.cat-card-cyan {
+  &:hover {
+    border-color: #0284c7 !important;
+    box-shadow: 0 8px 24px -2px rgba(2, 132, 199, 0.25) !important;
+  }
+}
+:root[saved-theme="dark"] .cat-card-cyan {
+  border-color: rgba(56, 189, 248, 0.35) !important;
+  &:hover {
+    border-color: #38bdf8 !important;
+    box-shadow: 0 0 24px -2px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.8) !important;
+  }
+}
+
+.cat-card-emerald {
+  &:hover {
+    border-color: #059669 !important;
+    box-shadow: 0 8px 24px -2px rgba(5, 150, 105, 0.25) !important;
+  }
+}
+:root[saved-theme="dark"] .cat-card-emerald {
+  border-color: rgba(0, 255, 102, 0.35) !important;
+  &:hover {
+    border-color: #00ff66 !important;
+    box-shadow: 0 0 24px -2px rgba(0, 255, 102, 0.4), 0 8px 24px rgba(0, 0, 0, 0.8) !important;
+  }
+}
+
+.cat-card-sky {
+  &:hover {
+    border-color: #0284c7 !important;
+    box-shadow: 0 8px 24px -2px rgba(2, 132, 199, 0.25) !important;
+  }
+}
+:root[saved-theme="dark"] .cat-card-sky {
+  border-color: rgba(56, 189, 248, 0.35) !important;
+  &:hover {
+    border-color: #38bdf8 !important;
+    box-shadow: 0 0 24px -2px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.8) !important;
+  }
+}
+
+.cat-card-red {
+  &:hover {
+    border-color: #ef4444 !important;
+    box-shadow: 0 8px 24px -2px rgba(239, 68, 68, 0.25) !important;
+  }
+}
+:root[saved-theme="dark"] .cat-card-red {
+  border-color: rgba(248, 113, 113, 0.35) !important;
+  &:hover {
+    border-color: #f87171 !important;
+    box-shadow: 0 0 24px -2px rgba(248, 113, 113, 0.4), 0 8px 24px rgba(0, 0, 0, 0.8) !important;
+  }
+}
+
+// Inside Bento Card Elements
+.cat-top {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 0.9rem !important;
+  width: 100% !important;
+
+  .cat-icon {
+    font-size: 1.6rem !important;
+    line-height: 1 !important;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  }
+
+  .cat-badge {
+    font-family: 'Cascadia Code', monospace !important;
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.06em !important;
+    padding: 0.2rem 0.55rem !important;
+    border-radius: 4px !important;
+  }
+}
+
+// Badge Color Themes
+.cat-card-cyan .cat-badge {
+  background: #e0f2fe !important;
+  border: 1px solid #7dd3fc !important;
+  color: #0369a1 !important;
+}
+:root[saved-theme="dark"] .cat-card-cyan .cat-badge {
+  background: #082f49 !important;
+  border-color: #38bdf8 !important;
+  color: #38bdf8 !important;
+}
+
+.cat-card-emerald .cat-badge {
+  background: #ecfdf5 !important;
+  border: 1px solid #6ee7b7 !important;
+  color: #047857 !important;
+}
+:root[saved-theme="dark"] .cat-card-emerald .cat-badge {
+  background: #022c22 !important;
+  border-color: #00ff66 !important;
+  color: #00ff66 !important;
+}
+
+.cat-card-sky .cat-badge {
+  background: #e0f2fe !important;
+  border: 1px solid #7dd3fc !important;
+  color: #0369a1 !important;
+}
+:root[saved-theme="dark"] .cat-card-sky .cat-badge {
+  background: #082f49 !important;
+  border-color: #38bdf8 !important;
+  color: #38bdf8 !important;
+}
+
+.cat-card-red .cat-badge {
+  background: #fef2f2 !important;
+  border: 1px solid #fca5a5 !important;
+  color: #b91c1c !important;
+}
+:root[saved-theme="dark"] .cat-card-red .cat-badge {
+  background: #450a0a !important;
+  border-color: #f87171 !important;
+  color: #f87171 !important;
+}
+
+.cat-body {
+  width: 100% !important;
+
+  .cat-title {
+    font-size: 1.15rem !important;
+    font-weight: 800 !important;
+    color: var(--dark) !important;
+    margin-bottom: 0.4rem !important;
+    letter-spacing: -0.015em !important;
+    transition: color 0.15s ease !important;
+  }
+
+  .cat-desc {
+    font-size: 0.88rem !important;
+    color: var(--darkgray) !important;
+    line-height: 1.55 !important;
+    margin: 0 !important;
+  }
+}
+
+.cat-card-cyan:hover .cat-title { color: #0284c7 !important; }
+:root[saved-theme="dark"] .cat-card-cyan:hover .cat-title { color: #38bdf8 !important; }
+
+.cat-card-emerald:hover .cat-title { color: #059669 !important; }
+:root[saved-theme="dark"] .cat-card-emerald:hover .cat-title { color: #00ff66 !important; }
+
+.cat-card-sky:hover .cat-title { color: #0284c7 !important; }
+:root[saved-theme="dark"] .cat-card-sky:hover .cat-title { color: #38bdf8 !important; }
+
+.cat-card-red:hover .cat-title { color: #ef4444 !important; }
+:root[saved-theme="dark"] .cat-card-red:hover .cat-title { color: #f87171 !important; }
+
+.cat-footer {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-top: 1.2rem !important;
+  padding-top: 0.75rem !important;
+  border-top: 1.5px solid var(--card-border) !important;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.05em !important;
+  font-family: 'Cascadia Code', monospace !important;
+  color: var(--gray) !important;
+  transition: all 0.2s ease !important;
+  width: 100% !important;
+
+  .cat-arrow {
+    font-size: 0.95rem !important;
+    transition: transform 0.2s ease !important;
+  }
+}
+
+.cat-card:hover .cat-footer {
+  .cat-arrow {
+    transform: translateX(4px) !important;
+  }
+}
+
+.cat-card-cyan:hover .cat-footer { color: #0284c7 !important; }
+:root[saved-theme="dark"] .cat-card-cyan:hover .cat-footer { color: #38bdf8 !important; }
+
+.cat-card-emerald:hover .cat-footer { color: #059669 !important; }
+:root[saved-theme="dark"] .cat-card-emerald:hover .cat-footer { color: #00ff66 !important; }
+
+.cat-card-sky:hover .cat-footer { color: #0284c7 !important; }
+:root[saved-theme="dark"] .cat-card-sky:hover .cat-footer { color: #38bdf8 !important; }
+
+.cat-card-red:hover .cat-footer { color: #ef4444 !important; }
+:root[saved-theme="dark"] .cat-card-red:hover .cat-footer { color: #f87171 !important; }
 
 // === 5. High-Contrast Master Mindmap Card ===
 .mindmap-preview-card {
   position: relative;
-  padding: 1.5rem 1.6rem;
+  padding: 1.6rem 1.7rem;
   margin: 1.8rem 0;
   border-radius: 6px;
   background: var(--card-bg);
-  border: 1.5px solid var(--card-border);
+  border: 2px solid var(--card-border);
   box-shadow: var(--card-shadow);
   text-align: left;
   overflow: hidden;
@@ -319,10 +681,10 @@ code, pre, kbd, samp {
     position: absolute;
     top: -1px;
     left: -1px;
-    width: 12px;
-    height: 12px;
-    border-top: 2px solid var(--tertiary);
-    border-left: 2px solid var(--tertiary);
+    width: 14px;
+    height: 14px;
+    border-top: 2.5px solid var(--tertiary);
+    border-left: 2.5px solid var(--tertiary);
     pointer-events: none;
   }
 
@@ -331,51 +693,90 @@ code, pre, kbd, samp {
     position: absolute;
     bottom: -1px;
     right: -1px;
-    width: 12px;
-    height: 12px;
-    border-bottom: 2px solid var(--tertiary);
-    border-right: 2px solid var(--tertiary);
+    width: 14px;
+    height: 14px;
+    border-bottom: 2.5px solid var(--tertiary);
+    border-right: 2.5px solid var(--tertiary);
     pointer-events: none;
   }
 }
 
+:root[saved-theme="dark"] .mindmap-preview-card {
+  background: #0d141f;
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.mindmap-terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 1.5px solid var(--card-border);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.mindmap-badge {
+  font-family: 'Cascadia Code', monospace;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  background: #e0f2fe;
+  border: 1px solid #7dd3fc;
+  color: #0369a1;
+}
+
+:root[saved-theme="dark"] .mindmap-badge {
+  background: #082f49;
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+.preview-info .preview-title,
 .preview-info h3 {
   margin: 0 0 0.45rem;
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 800;
   color: var(--dark);
 }
 
 .preview-info p {
   color: var(--darkgray);
   font-size: 0.94rem;
-  margin-bottom: 1.1rem;
-  line-height: 1.55;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
 }
 
 .open-mindmap-btn {
   display: inline-block;
-  padding: 0.55rem 1.25rem;
+  padding: 0.6rem 1.4rem;
   background: var(--secondary);
   color: #ffffff !important;
   border-radius: 5px;
-  font-size: 0.88rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 800;
   text-decoration: none !important;
-  letter-spacing: 0.02em;
-  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.25);
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
   transition: all 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(5, 150, 105, 0.35);
+  }
 }
 
 :root[saved-theme="dark"] .open-mindmap-btn {
   color: #00280b !important;
-  font-weight: 800;
-  box-shadow: 0 0 16px rgba(0, 255, 102, 0.4);
-}
+  box-shadow: 0 0 18px rgba(0, 255, 102, 0.45);
 
-.open-mindmap-btn:hover {
-  opacity: 0.92;
-  transform: translateY(-1px);
+  &:hover {
+    box-shadow: 0 0 24px rgba(0, 255, 102, 0.65);
+  }
 }
 
 // === 6. High-Contrast Excalidraw Container & Viewport ===
