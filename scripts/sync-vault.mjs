@@ -252,7 +252,9 @@ function getVaultPath() {
   // Ưu tiên đọc trực tiếp từ Vault Obsidian local nếu đang chạy trên máy
   const localCandidates = [
     "/home/ti/Desktop/DATA_DESKTOP/0_Obsidian notebook/red",
-    "/mnt/DATA_D/DESKTOP/DATA_DESKTOP/0_Obsidian notebook/red"
+    "/mnt/DATA_D/DESKTOP/DATA_DESKTOP/0_Obsidian notebook/red",
+    "/mnt/d/DESKTOP/DATA_DESKTOP/0_Obsidian notebook/red",
+    path.resolve(process.cwd(), "../../0_Obsidian notebook/red")
   ];
   for (const candidate of localCandidates) {
     if (fs.existsSync(path.join(candidate, ".git"))) {

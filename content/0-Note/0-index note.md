@@ -16,3 +16,8 @@ title: "0-index note"
 
 -ôn phỏng vấn 
 [[1-10-26]]
+-minh tim hieu ve cve, va day la bo promt giup ai tim bug cve
+[[promt cve]]
+
+-note về finding cve trong EP002 [[9-10-26]]
+[[CVE/Untitled.mynote]]

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # ==============================================================================
 # Script tự động đồng bộ từ Obsidian Vault gốc sang Security Blog & GitHub Pages
+# Tương thích 100% trên cả Fedora (Linux native) và Windows (WSL)
 # Repo gốc: https://github.com/taind345/PortSwigger__TryHackMe__Writeup....etc-
 # ==============================================================================
 
@@ -14,25 +15,48 @@ echo "=========================================================="
 echo "  🔄 [1/4] KIỂM TRA & ĐỒNG BỘ THƯ MỤC GỐC (RED VAULT)"
 echo "=========================================================="
 
-# Tìm thư mục red trên máy
-RED_VAULT="/home/ti/Desktop/DATA_DESKTOP/0_Obsidian notebook/red"
-if [ ! -d "$RED_VAULT/.git" ]; then
-  RED_VAULT="/mnt/DATA_D/DESKTOP/DATA_DESKTOP/0_Obsidian notebook/red"
-fi
+# Tự động tìm thư mục Obsidian Vault trên mọi nền tảng:
+# 1. Đường dẫn tương đối (cấu trúc thư mục song song chuẩn)
+# 2. WSL trên Windows (/mnt/d/...)
+# 3. Mount point trên Fedora (/mnt/DATA_D/...)
+# 4. Thư mục Home trên Fedora/Ubuntu (~/Desktop/...)
+RED_CANDIDATES=(
+  "$PROJECT_DIR/../../0_Obsidian notebook/red"
+  "/mnt/d/DESKTOP/DATA_DESKTOP/0_Obsidian notebook/red"
+  "/mnt/DATA_D/DESKTOP/DATA_DESKTOP/0_Obsidian notebook/red"
+  "/home/ti/Desktop/DATA_DESKTOP/0_Obsidian notebook/red"
+  "$HOME/Desktop/DATA_DESKTOP/0_Obsidian notebook/red"
+)
 
-if [ -d "$RED_VAULT/.git" ]; then
-  echo "📂 Đang kiểm tra thư mục: $RED_VAULT"
-  RED_STATUS=$(git -C "$RED_VAULT" status --porcelain)
-  if [ -n "$RED_STATUS" ]; then
-    echo "📝 Phát hiện bài viết/ảnh mới trong thư mục red, đang đẩy lên GitHub..."
-    git -C "$RED_VAULT" add .
-    COMMIT_MSG="docs: auto-sync notes [$(date '+%Y-%m-%d %H:%M:%S')]"
-    git -C "$RED_VAULT" commit -m "$COMMIT_MSG" || true
-    git -C "$RED_VAULT" push origin main || echo "⚠️ Push repo red gặp sự cố mạng, vẫn tiếp tục đồng bộ blog..."
-    echo "✅ Đã đẩy thư mục red lên GitHub thành công!"
-  else
-    echo "✅ Thư mục red đã là bản mới nhất trên GitHub."
+RED_VAULT=""
+for candidate in "${RED_CANDIDATES[@]}"; do
+  if [ -d "$candidate/.git" ]; then
+    RED_VAULT="$(cd "$candidate" && pwd)"
+    break
   fi
+done
+
+if [ -n "$RED_VAULT" ] && [ -d "$RED_VAULT" ]; then
+  echo "📂 Đang kiểm tra thư mục: $RED_VAULT"
+  # Kiểm tra xem có quyền đọc/ghi vào git của thư mục red không
+  RED_STATUS=""
+  if git -C "$RED_VAULT" status --porcelain >/dev/null 2>&1; then
+    RED_STATUS=$(git -C "$RED_VAULT" status --porcelain 2>/dev/null || true)
+    if [ -n "$RED_STATUS" ]; then
+      echo "📝 Phát hiện bài viết/ảnh mới trong thư mục red, đang đẩy lên GitHub..."
+      git -C "$RED_VAULT" add . 2>/dev/null || true
+      COMMIT_MSG="docs: auto-sync notes [$(date '+%Y-%m-%d %H:%M:%S')]"
+      git -C "$RED_VAULT" commit -m "$COMMIT_MSG" 2>/dev/null || true
+      git -C "$RED_VAULT" push origin main 2>/dev/null || echo "⚠️ Push repo red gặp sự cố mạng, vẫn tiếp tục đồng bộ blog..."
+      echo "✅ Đã đẩy thư mục red lên GitHub thành công!"
+    else
+      echo "✅ Thư mục red đã là bản mới nhất trên GitHub."
+    fi
+  else
+    echo "⚠️ Thư mục red đang bị khóa quyền Git (.git/index), tạm thời bỏ qua push repo red và tiếp tục đồng bộ nội dung sang blog..."
+  fi
+else
+  echo "⚠️ Không tìm thấy thư mục Obsidian local, chuyển sang bước đồng bộ blog..."
 fi
 
 echo ""
@@ -52,8 +76,13 @@ if [ -z "$(git status --porcelain content quartz/static)" ]; then
   git pull --rebase origin main 2>/dev/null || true
 fi
 
-echo "📥 [3/4] Đang đồng bộ ghi chú & chuyển đổi sơ đồ Excalidraw..."
-node scripts/sync-vault.mjs
+echo "📖 [3/4] Đang đồng bộ ghi chú & chuyển đổi sơ đồ Excalidraw..."
+if [ -n "$RED_VAULT" ] && [ -d "$RED_VAULT" ]; then
+  export VAULT_PATH="$RED_VAULT"
+  node scripts/sync-vault.mjs "$RED_VAULT"
+else
+  node scripts/sync-vault.mjs
+fi
 
 echo "🔍 [4/4] Kiểm tra các thay đổi mới và đẩy lên GitHub Pages..."
 STATUS=$(git status --porcelain content quartz/static)

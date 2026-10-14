@@ -9,18 +9,24 @@ TẬP 1 – GIỚI THIỆU, KINH NGHIỆM, PENTEST METHODOLOGY
 ============================================================
 
 Câu 1. Hãy giới thiệu bản thân.
-Đáp án. Em là sinh viên năm tư An toàn thông tin tại PTIT, tập trung vào Web Security và Digital Forensics. Em đã có kinh nghiệm Web Pentester Intern, sử dụng Burp Suite, OWASP ZAP, Nmap, và thực hành qua PortSwigger, TryHackMe, picoCTF và CTF.
+Trước tiên, giới thiệu về bản thân em, thì em tên Nguyễn Đức Tài, hiện tại em đang là sinh viên năm thứ tư ngành An toàn thông tin tại PTIT. ~~Trong quá trình học ở trường, ngoài những kiến thức nền tảng về An toàn thông tin, em tập trung nhiều hơn vào Web Security, đặc biệt là Web Pentest~~.
 
-Câu 2. Tại sao bạn chọn Information Security?
+Trong quá trinfh học tập, bên cạnh việc học trên trường, em cũng chủ động tự học và thực hành thêm qua các nền tảng như PortSwigger, TryHackMe, picoCTF và các cuộc thi CTF. Trong quá trình đó, em tập trung tìm hiểu các lỗ hổng Web phổ biến, ~~cách phân tích request/response~~,đồng thời học cách tư duy tìm ra lỗ hổng, và học cách sử dụng các công cụ như Burp Suite,  Nmap,... để hỗ trợ quá trình kiểm thử.
+
+Ngoài môi trường lab, em cũng chủ động tìm hiểu và thực hành trên một số target thực tế trong phạm vi cho phép. Trong quá trình tìm hiểu thực tế đó, em đã phát hiện và tìm hiểu được một vài lỗ hổng bảo mật, đặc biệt là trên một số Web App được xây dựng theo kiểu vibe coding. ~~Việc này giúp em có thêm góc nhìn thực tế về những vấn đề bảo mật có thể phát sinh khi ứng dụng được phát triển nhanh.~~
+
+Hiện tại, em muốn tiếp tục phát triển sâu hơn về Web Pentest, đồng thời có cơ hội được học hỏi và nâng cao kinh nghiệm thực tế trong môi trường chuyên nghiệp.
+
+~~Câu 2. Tại sao bạn chọn Information Security?~~
 Đáp án. Vì em thích tìm nguyên nhân của lỗi, thử nghiệm hệ thống và tư duy theo hướng tấn công để giúp hệ thống an toàn hơn.
 
-Câu 3. Tại sao bạn chọn Web Security?
+~~Câu 3. Tại sao bạn chọn Web Security?~~
 Đáp án. Web có phạm vi kiến thức rõ, có thể thực hành trực tiếp và kết hợp tốt giữa networking, HTTP, programming và security testing.
 
-Câu 4. Tại sao bạn muốn làm Pentest?
+~~Câu 4. Tại sao bạn muốn làm Pentest?~~
 Đáp án. Vì em thích quá trình từ reconnaissance, phát hiện lỗi, kiểm chứng impact đến viết report và đề xuất remediation.
 
-Câu 5. Mục tiêu nghề nghiệp của bạn là gì?
+~~Câu 5. Mục tiêu nghề nghiệp của bạn là gì?~~
 Đáp án. Trước mắt em muốn phát triển kỹ năng Web và API Pentest trong môi trường thực tế; về lâu dài em muốn trở thành security engineer có năng lực assessment và exploitation tốt.
 
 Câu 6. Điểm mạnh của bạn là gì?
@@ -29,10 +35,10 @@ Câu 6. Điểm mạnh của bạn là gì?
 Câu 7. Điểm yếu của bạn là gì?
 Đáp án. Một số kiến thức ngoài Web Security của em chưa sâu. Em đang cải thiện bằng cách học có hệ thống và thực hành thường xuyên.
 
-Câu 8. Tại sao chúng tôi nên chọn bạn?
+~~Câu 8. Tại sao chúng tôi nên chọn bạn?~~
 Đáp án. Em có nền tảng học thuật, đã có trải nghiệm intern và có thói quen tự thực hành qua lab. Em cũng có blog và CTF nên quen với việc tự nghiên cứu và trình bày kết quả.
 
-Câu 9. Bạn thường học một vulnerability mới như thế nào?
+~~Câu 9. Bạn thường học một vulnerability mới như thế nào?~~
 Đáp án. Em học nguyên nhân trước, sau đó source và sink, điều kiện khai thác, PoC, impact, remediation rồi làm lab để kiểm chứng.
 
 Câu 10. Quy trình Web Pentest của bạn từ đầu đến cuối?
@@ -45,7 +51,7 @@ Câu 12. Recon là gì?
 Đáp án. Recon là quá trình thu thập thông tin về target để hiểu attack surface trước khi kiểm thử sâu.
 
 Câu 13. Attack surface là gì?
-Đáp án. Là toàn bộ các điểm có thể bị tác động như domain, API, parameter, upload, authentication flow, network service và chức năng nghiệp vụ.
+Đáp án. <u>Là toàn bộ các điểm có thể bị tác động như </u>domain, API, parameter, upload, authentication flow, network service và chức năng nghiệp vụ.
 
 Câu 14. Discovery khác exploitation thế nào?
 Đáp án. Discovery tìm và xác định vấn đề có thể tồn tại; exploitation kiểm chứng khả năng khai thác và impact trong phạm vi được phép.
@@ -80,11 +86,19 @@ Câu 23. Khi nào bạn dừng exploitation?
 Câu 24. Nếu scanner báo lỗi nhưng bạn không reproduce được?
 Đáp án. Em xem request, response và điều kiện scanner sử dụng, sau đó <u>manual retest</u>. Nếu không xác minh được thì không kết luận chắc chắn là vulnerability.
 
-Câu 25. Một Pentester giỏi cần gì?
+Câu 25. ~~Một Pentester giỏi cần gì?~~
 Đáp án. Nề<u>n tảng networking và Web</u>, khả năng phân tích, manual testing, scripting, tư duy tấn công,<u> hiểu business logic</u> và kỹ năng viết report.
 
-# TẬP 2 – HTTP, WEB ARCHITECTURE, AUTHENTICATION, SESSION, ACCESS CONTROL
+> [!NOTE]
+> Công việc trước đây của em là Web Pentester Intern tại G-Innovations. Tuy nhiên, công ty không phải là một công ty chuyên về lĩnh vực Security, nên công việc của em chủ yếu là pentest nội bộ, tập trung kiểm tra bảo mật cho các Web App và API của công ty.
+> 
+> Trong thời gian đó, em chủ yếu phân tích request và response, kiểm tra các chức năng liên quan đến Authentication, Session Management, Access Control và một số lỗ hổng thuộc OWASP Top 10. Em sử dụng Burp Suite và OWASP ZAP để bắt, chỉnh sửa và phân tích request, đồng thời sử dụng Nmap để hỗ trợ scan và thu thập thông tin cơ bản về hệ thống.
+> 
+> Khi phát hiện một vấn đề, em sẽ kiểm tra và reproduce lại để xác định mức độ ảnh hưởng, sau đó ghi nhận PoC, đánh giá risk và viết report, kèm theo hướng khắc phục để phía phát triển có thể xử lý.
+> 
+> Điểm em thấy khá thú vị trong công việc này là vì đây là môi trường nội bộ nên em được tiếp cận trực tiếp với ứng dụng và cách hệ thống được phát triển, từ đó hiểu rõ hơn mối liên hệ giữa việc phát triển tính năng và các vấn đề bảo mật có thể phát sinh.
 
+# TẬP 2 – HTTP, WEB ARCHITECTURE, AUTHENTICATION, SESSION, ACCESS CONTROL
 
 Câu 26. HTTP request gồm những gì?
 Đáp án. <u>Request line, headers và body</u>; request line gồm method, path và HTTP version.
@@ -2210,3 +2224,6 @@ Chín. Tại sao prepared statements chống SQLi?
 Mười. Một finding tốt cần có những gì?
 
 Hết tập ôn.
+
+> [!NOTE] postman
+> **Tóm gọn:** Fuzz → import Postman → test từng endpoint theo checklist (auth, method, IDOR, mass assignment, injection). Fuzzing chỉ là bước đầu.
