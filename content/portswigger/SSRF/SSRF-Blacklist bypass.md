@@ -36,11 +36,20 @@ tags:
     </div>
     <div class="notion-embed-body">
       <ol start="4">
+
+<div class="ascii-tree">
+
 <li>SSRF Filter Bypass
 │
 ├── Bối cảnh
 │   └── Ứng dụng thường chặn SSRF bằng blacklist: cấm &quot;localhost&quot;,
 │       &quot;127.0.0.1&quot;, &quot;169.254.169.254&quot;... Nhưng blacklist dễ bị qua mặt</li>
+
+</div>
+
+
+<div class="ascii-tree">
+
 </ol>
 <p>│       vì có nhiều cách viết khác nhau của cùng một địa chỉ IP.
 │
@@ -107,6 +116,9 @@ tags:
     │   └── <a href="http://allowed.com.attacker.com">http://allowed.com.attacker.com</a>
     └── Unicode / homoglyph
         └── Dùng ký tự Unicode giống chữ cái gốc</p>
+
+</div>
+
 
     </div>
   </div>
@@ -198,6 +210,9 @@ tags:
       <a href="#doc-37455358caa14c5b0f64435238b985cac0541ede" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
     </div>
     <div class="notion-embed-body">
+
+<div class="ascii-tree">
+
       <pre><code>DNS Rebinding
 │
 ├── Khái niệm cốt lõi
@@ -257,6 +272,9 @@ tags:
     │   └── Chặn nếu IP nằm trong dải private
     └── Sử dụng DNS nội bộ (Internal DNS)
         └── Không phụ thuộc vào DNS bên ngoài cho request nội bộ
+
+</div>
+
 </code></pre>
 
     </div>
@@ -339,6 +357,9 @@ tags:
 
 <div id="doc-7ad59cc3593356356f8dd180e84ba4cd8a243c51" class="notion-callout-card">
 
+
+<div class="ascii-tree">
+
 4. SSRF Filter Bypass
 │
 ├── Bối cảnh
@@ -409,6 +430,9 @@ tags:
     │   └── http://allowed.com.attacker.com
     └── Unicode / homoglyph
         └── Dùng ký tự Unicode giống chữ cái gốc
+
+</div>
+
 
 </div>
 
