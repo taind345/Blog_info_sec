@@ -241,9 +241,6 @@ curl -s http://10.48.187.204/footer.php
 </ul>
 <hr>
 <h2>4. Cấu Trúc Ứng Dụng Web Tổng Hợp</h2>
-
-<div class="ascii-tree">
-
 <pre><code>http://10.48.187.204/
 ├── index.php             (Trang chủ / Form đăng nhập nhân viên)
 ├── dashboard.php         (Trang quản trị / Dashboard - Yêu cầu auth, HTTP 302 -&gt; index.php)
@@ -264,9 +261,6 @@ curl -s http://10.48.187.204/footer.php
 │   └── bootstrap.min.css
 └── js/                   (Thư mục Javascript - Bật Directory Listing)
     └── bootstrap.bundle.min.js
-
-</div>
-
 </code></pre>
 <hr>
 <h2>5. Danh Sách Lỗ Hổng &amp; Điểm Yếu Ghi Nhận (Security Findings)</h2>
