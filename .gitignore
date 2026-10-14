@@ -13,3 +13,10 @@ replit.nix
 quartz/cli/tui/dist/
 .turbo/
 .vault-cache/
+pass.md
+*.pass.md
+*.key
+*.pem
+.env*
+credentials*
+.trash/

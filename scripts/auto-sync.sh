@@ -95,8 +95,8 @@ fi
 
 echo "🔍 [4/4] Kiểm tra các thay đổi mới và đẩy lên GitHub Pages..."
 
-# Stage các thư mục và tệp liên quan của blog (bao gồm cả package-lock.json nếu có thay đổi)
-git add content/ quartz/static/ scripts/ package.json package-lock.json .github/ quartz/styles/ quartz/components/ docs/ README.md 2>/dev/null || true
+# Stage các thư mục và tệp liên quan của blog (bao gồm cả package-lock.json, .gitignore nếu có thay đổi)
+git add content/ quartz/static/ scripts/ package.json package-lock.json .github/ quartz/styles/ quartz/components/ docs/ README.md .gitignore quartz.config.yaml 2>/dev/null || true
 
 # Kiểm tra xem có thay đổi nào đang được staged không
 STAGED_DIFF=$(git diff --cached --name-only)
