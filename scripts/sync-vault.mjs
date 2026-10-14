@@ -262,6 +262,13 @@ function getVaultPath() {
       return candidate;
     }
   }
+
+  // Nếu đang chạy trên GitHub Actions (CI) và content/ đã có sẵn dữ liệu từ git commit
+  if (process.env.CI && fs.existsSync(CONTENT_DIR) && fs.readdirSync(CONTENT_DIR).length > 2) {
+    console.log("Môi trường CI: Giữ nguyên nội dung content/ đã commit từ Git (không ghi đè từ cache).");
+    return null;
+  }
+
   if (!fs.existsSync(CACHE_DIR)) {
     console.log(`Cloning repository from ${REPO_URL}...`);
     execSync(`git clone --depth 1 "${REPO_URL}" "${CACHE_DIR}"`, { stdio: "inherit" });
@@ -282,12 +289,33 @@ function getVaultPath() {
   return CACHE_DIR;
 }
 
+const EXCLUDED_ENTRIES = new Set([
+  ".git",
+  ".obsidian",
+  ".trash",
+  ".gitignore",
+  ".ds_store",
+  "pass.md",
+  "private",
+  "templates",
+]);
+
+function isExcludedEntry(fileName) {
+  if (!fileName) return true;
+  const lower = fileName.toLowerCase().trim();
+  if (EXCLUDED_ENTRIES.has(lower)) return true;
+  if (lower.startsWith(".env") || lower.endsWith(".key") || lower.endsWith(".pem")) return true;
+  if (lower.startsWith("id_rsa") || lower.startsWith("id_ed25519")) return true;
+  if (lower.endsWith(".pass.md") || lower === "credentials.json" || lower === "credentials.txt") return true;
+  return false;
+}
+
 function copyDirRecursive(src, dest) {
   if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
   for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+    if (isExcludedEntry(entry.name)) continue;
     const srcPath = path.join(src, entry.name);
     const destPath = path.join(dest, entry.name);
-    if (entry.name === ".git" || entry.name === ".obsidian") continue;
     if (entry.isDirectory()) copyDirRecursive(srcPath, destPath);
     else fs.copyFileSync(srcPath, destPath);
   }
@@ -297,8 +325,8 @@ function getAllFiles(dir, ext = "") {
   let results = [];
   if (!fs.existsSync(dir)) return results;
   for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (isExcludedEntry(item.name)) continue;
     const full = path.join(dir, item.name);
-    if (item.name === ".git" || item.name === ".obsidian") continue;
     if (item.isDirectory()) results = results.concat(getAllFiles(full, ext));
     else if (!ext || item.name.endsWith(ext)) results.push(full);
   }
@@ -385,46 +413,41 @@ async function main() {
     fs.mkdirSync(CONTENT_DIR, { recursive: true });
   }
 
-  // Các tệp / thư mục hệ thống hoặc file mật khẩu cá nhân TUYỆT ĐỐI không đưa lên blog công khai
-  const excludedEntries = new Set([
-    ".git",
-    ".obsidian",
-    ".trash",
-    ".gitignore",
-    "pass.md" // Giữ an toàn cho mật khẩu và mã 2FA tài khoản
-  ]);
+  if (vaultPath) {
+    console.log("Đồng bộ toàn bộ nội dung an toàn từ Vault gốc sang Blog...");
 
-  console.log("Đồng bộ toàn bộ nội dung từ Vault gốc sang Blog (không giới hạn whitelist)...");
+    // 1. Sao chép toàn bộ thư mục và tệp từ vault gốc (loại trừ các file nhạy cảm)
+    for (const entry of fs.readdirSync(vaultPath, { withFileTypes: true })) {
+      const name = entry.name;
+      if (isExcludedEntry(name)) continue;
 
-  // 1. Sao chép toàn bộ thư mục và tệp từ vault gốc
-  for (const entry of fs.readdirSync(vaultPath, { withFileTypes: true })) {
-    const name = entry.name;
-    if (excludedEntries.has(name)) continue;
+      const src = path.join(vaultPath, name);
+      const dest = path.join(CONTENT_DIR, name);
 
-    const src = path.join(vaultPath, name);
-    const dest = path.join(CONTENT_DIR, name);
-
-    if (entry.isDirectory()) {
-      if (fs.existsSync(dest)) {
-        fs.rmSync(dest, { recursive: true, force: true });
+      if (entry.isDirectory()) {
+        if (fs.existsSync(dest)) {
+          fs.rmSync(dest, { recursive: true, force: true });
+        }
+        copyDirRecursive(src, dest);
+      } else {
+        // Bỏ qua README.md ở gốc vault nếu blog đã có trang chủ riêng (index.md)
+        if (name.toLowerCase() === "readme.md") continue;
+        fs.copyFileSync(src, dest);
       }
-      copyDirRecursive(src, dest);
-    } else {
-      // Bỏ qua README.md ở gốc vault nếu blog đã có trang chủ riêng (index.md)
-      if (name.toLowerCase() === "readme.md") continue;
-      fs.copyFileSync(src, dest);
     }
-  }
 
-  // 2. Dọn dẹp các tệp/thư mục trong content/ đã bị xóa ở vault gốc
-  for (const entry of fs.readdirSync(CONTENT_DIR, { withFileTypes: true })) {
-    const name = entry.name;
-    if (name === "index.md" || name === ".gitkeep") continue;
-    const src = path.join(vaultPath, name);
-    if (!fs.existsSync(src) || excludedEntries.has(name)) {
-      console.log(`Dọn dẹp tệp/thư mục không còn trong vault: ${name}`);
-      fs.rmSync(path.join(CONTENT_DIR, name), { recursive: true, force: true });
+    // 2. Dọn dẹp các tệp/thư mục trong content/ đã bị xóa ở vault gốc hoặc thuộc danh sách cấm
+    for (const entry of fs.readdirSync(CONTENT_DIR, { withFileTypes: true })) {
+      const name = entry.name;
+      if (name === "index.md" || name === ".gitkeep") continue;
+      const src = path.join(vaultPath, name);
+      if (!fs.existsSync(src) || isExcludedEntry(name)) {
+        console.log(`Dọn dẹp tệp/thư mục không hợp lệ hoặc không còn trong vault: ${name}`);
+        fs.rmSync(path.join(CONTENT_DIR, name), { recursive: true, force: true });
+      }
     }
+  } else {
+    console.log("Giữ nguyên nội dung content/ hiện tại để build (không đồng bộ lại)...");
   }
 
   // Build slug map for markdown files
