@@ -150,9 +150,6 @@ tags:
       <a href="#doc-67c6bc7897dacbd26c645c8d062c638ac66457e9" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
     </div>
     <div class="notion-embed-body">
-
-<div class="ascii-tree">
-
       <pre><code>5. Blind SSRF
 │
 ├── Định nghĩa (Definition)
@@ -228,9 +225,6 @@ tags:
         ├── Gopherus
         ├── Burp Collaborator
         └── interactsh
-
-</div>
-
 </code></pre>
 
     </div>

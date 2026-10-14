@@ -15,13 +15,12 @@ title: "Security Blog"
     </div>
   </div>
 
-  <div class="hero-badge">🛡️ InfoSec Knowledge Base &amp; CTF Writeups</div>
+  <div class="hero-badge">🛡️ InfoSec Knowledge Base &amp; Pentest Research</div>
   <h1 class="hero-title">Security Blog</h1>
   <p class="hero-desc">
     Ghi chú, sơ đồ tư duy tương tác (Mindmap) và bài viết phân tích kỹ thuật về an toàn thông tin &amp; pentest từ: 
     <strong>PortSwigger Web Security Academy</strong>, 
     <strong>TryHackMe</strong>, 
-    <strong>HackTheBox</strong>, 
     <strong>Linux</strong> &amp; 
     <strong>Tools</strong>.
   </p>
@@ -77,7 +76,7 @@ Toàn bộ hệ thống ghi chú bảo mật, sơ đồ tư duy và lab thực c
     <span class="hud-prompt">&gt;&gt;</span>
     <span class="hud-title-text">Hệ Thống Phân Tích &amp; Mod-Index</span>
   </div>
-  <span class="hud-badge">[6 TACTICAL MODULES LOADED]</span>
+  <span class="hud-badge">[5 TACTICAL MODULES LOADED]</span>
 </div>
 
 <div class="category-grid">
@@ -103,7 +102,7 @@ Toàn bộ hệ thống ghi chú bảo mật, sơ đồ tư duy và lab thực c
     </div>
     <div class="cat-body">
       <div class="cat-title">TryHackMe Labs</div>
-      <div class="cat-desc">Active Directory, CVEs, RCE, Reverse Shells &amp; Walkthroughs.</div>
+      <div class="cat-desc">Active Directory, RCE, Reverse Shells &amp; Walkthroughs.</div>
     </div>
     <div class="cat-footer">
       <span>DEPLOY PAYLOAD</span>
@@ -152,21 +151,6 @@ Toàn bộ hệ thống ghi chú bảo mật, sơ đồ tư duy và lab thực c
     </div>
     <div class="cat-footer">
       <span>FOUNDATION PROTOCOL</span>
-      <span class="cat-arrow">→</span>
-    </div>
-  </a>
-
-  <a href="./ctf/0-ctf" class="cat-card cat-card-red">
-    <div class="cat-top">
-      <span class="cat-icon">🎯</span>
-      <span class="cat-badge">[CTF-COMBAT]</span>
-    </div>
-    <div class="cat-body">
-      <div class="cat-title">CTF Writeups</div>
-      <div class="cat-desc">Writeup giải đề PTIT CTF, HackTheBox, TryHackMe.</div>
-    </div>
-    <div class="cat-footer">
-      <span>FLAG HUNT</span>
       <span class="cat-arrow">→</span>
     </div>
   </a>

@@ -5,6 +5,7 @@ import { execSync } from "child_process";
 import LZString from "lz-string";
 import { marked } from "marked";
 import { slugifyFilePath } from "@quartz-community/utils";
+import ignore from "ignore";
 import { getBoundingBox } from "../node_modules/@moona3k/excalidraw-export/src/utils.js";
 import {
   renderRectangle,
@@ -289,45 +290,117 @@ function getVaultPath() {
   return CACHE_DIR;
 }
 
-const EXCLUDED_ENTRIES = new Set([
+const DEFAULT_EXCLUDES = [
   ".git",
+  ".git/**",
   ".obsidian",
+  ".obsidian/**",
   ".trash",
+  ".trash/**",
   ".gitignore",
   ".ds_store",
   "pass.md",
+  "**/pass.md",
+  "**/*.pass.md",
   "private",
+  "private/**",
   "templates",
-]);
+  "templates/**",
+  "CVE",
+  "CVE/**",
+  "cve",
+  "cve/**",
+  "ctf",
+  "ctf/**",
+  "hack the box",
+  "hack the box/**",
+  "hackthebox",
+  "hackthebox/**",
+  "0-Note",
+  "0-Note/**",
+  "0-note",
+  "0-note/**",
+  ".env*",
+  "**/.env*",
+  "*.key",
+  "**/*.key",
+  "*.pem",
+  "**/*.pem",
+  "id_rsa*",
+  "**/id_rsa*",
+  "id_ed25519*",
+  "**/id_ed25519*",
+  "credentials.json",
+  "**/credentials.json",
+  "credentials.txt",
+  "**/credentials.txt",
+];
 
-function isExcludedEntry(fileName) {
-  if (!fileName) return true;
-  const lower = fileName.toLowerCase().trim();
-  if (EXCLUDED_ENTRIES.has(lower)) return true;
-  if (lower.startsWith(".env") || lower.endsWith(".key") || lower.endsWith(".pem")) return true;
-  if (lower.startsWith("id_rsa") || lower.startsWith("id_ed25519")) return true;
-  if (lower.endsWith(".pass.md") || lower === "credentials.json" || lower === "credentials.txt") return true;
-  return false;
+function createVaultFilter(vaultDir) {
+  const ig = ignore();
+  ig.add(DEFAULT_EXCLUDES);
+
+  // Nạp trực tiếp từ file .gitignore của thư mục vault nếu tồn tại
+  const candidateGitignores = [
+    vaultDir ? path.join(vaultDir, ".gitignore") : null,
+    "/mnt/DATA_D/DESKTOP/DATA_DESKTOP/0_Obsidian notebook/red/.gitignore",
+    "/home/ti/Desktop/DATA_DESKTOP/0_Obsidian notebook/red/.gitignore",
+    path.resolve(process.cwd(), "../../0_Obsidian notebook/red/.gitignore"),
+  ].filter(Boolean);
+
+  for (const giPath of candidateGitignores) {
+    if (fs.existsSync(giPath)) {
+      try {
+        const lines = fs.readFileSync(giPath, "utf8");
+        ig.add(lines);
+        console.log(`📋 Đã nạp thành công quy tắc .gitignore từ: ${giPath}`);
+        break;
+      } catch (err) {
+        console.warn(`⚠️ Không thể nạp ${giPath}:`, err);
+      }
+    }
+  }
+
+  return {
+    isIgnored(relPath, isDir = false) {
+      if (!relPath) return false;
+      const normalized = relPath.replace(/\\/g, "/").replace(/^\/+/, "");
+      if (!normalized) return false;
+      if (isDir) {
+        return ig.ignores(normalized) || ig.ignores(normalized + "/");
+      }
+      return ig.ignores(normalized);
+    }
+  };
 }
 
-function copyDirRecursive(src, dest) {
+function copyDirRecursive(src, dest, vaultBaseDir, filter) {
   if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
   for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
-    if (isExcludedEntry(entry.name)) continue;
     const srcPath = path.join(src, entry.name);
     const destPath = path.join(dest, entry.name);
-    if (entry.isDirectory()) copyDirRecursive(srcPath, destPath);
-    else fs.copyFileSync(srcPath, destPath);
+    const relPath = vaultBaseDir ? path.relative(vaultBaseDir, srcPath) : entry.name;
+
+    if (filter && filter.isIgnored(relPath, entry.isDirectory())) {
+      continue;
+    }
+
+    if (entry.isDirectory()) {
+      copyDirRecursive(srcPath, destPath, vaultBaseDir, filter);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
   }
 }
 
-function getAllFiles(dir, ext = "") {
+function getAllFiles(dir, ext = "", filter = null) {
   let results = [];
   if (!fs.existsSync(dir)) return results;
   for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (isExcludedEntry(item.name)) continue;
     const full = path.join(dir, item.name);
-    if (item.isDirectory()) results = results.concat(getAllFiles(full, ext));
+    const rel = path.relative(CONTENT_DIR, full);
+    if (filter && filter.isIgnored(rel, item.isDirectory())) continue;
+    if (item.isDirectory()) results = results.concat(getAllFiles(full, ext, filter));
     else if (!ext || item.name.endsWith(ext)) results.push(full);
   }
   return results;
@@ -413,13 +486,15 @@ async function main() {
     fs.mkdirSync(CONTENT_DIR, { recursive: true });
   }
 
-  if (vaultPath) {
-    console.log("Đồng bộ toàn bộ nội dung an toàn từ Vault gốc sang Blog...");
+  const filter = createVaultFilter(vaultPath);
 
-    // 1. Sao chép toàn bộ thư mục và tệp từ vault gốc (loại trừ các file nhạy cảm)
+  if (vaultPath) {
+    console.log("Đồng bộ toàn bộ nội dung an toàn từ Vault gốc sang Blog (tôn trọng .gitignore)...");
+
+    // 1. Sao chép toàn bộ thư mục và tệp từ vault gốc (loại trừ theo .gitignore và bảo mật)
     for (const entry of fs.readdirSync(vaultPath, { withFileTypes: true })) {
       const name = entry.name;
-      if (isExcludedEntry(name)) continue;
+      if (filter.isIgnored(name, entry.isDirectory())) continue;
 
       const src = path.join(vaultPath, name);
       const dest = path.join(CONTENT_DIR, name);
@@ -428,7 +503,7 @@ async function main() {
         if (fs.existsSync(dest)) {
           fs.rmSync(dest, { recursive: true, force: true });
         }
-        copyDirRecursive(src, dest);
+        copyDirRecursive(src, dest, vaultPath, filter);
       } else {
         // Bỏ qua README.md ở gốc vault nếu blog đã có trang chủ riêng (index.md)
         if (name.toLowerCase() === "readme.md") continue;
@@ -436,22 +511,48 @@ async function main() {
       }
     }
 
-    // 2. Dọn dẹp các tệp/thư mục trong content/ đã bị xóa ở vault gốc hoặc thuộc danh sách cấm
-    for (const entry of fs.readdirSync(CONTENT_DIR, { withFileTypes: true })) {
-      const name = entry.name;
-      if (name === "index.md" || name === ".gitkeep") continue;
-      const src = path.join(vaultPath, name);
-      if (!fs.existsSync(src) || isExcludedEntry(name)) {
-        console.log(`Dọn dẹp tệp/thư mục không hợp lệ hoặc không còn trong vault: ${name}`);
-        fs.rmSync(path.join(CONTENT_DIR, name), { recursive: true, force: true });
+    // 2. Dọn dẹp các tệp/thư mục trong content/ đã bị xóa ở vault gốc hoặc thuộc danh sách gitignore / cấm
+    function cleanContentDir(currentDir) {
+      for (const entry of fs.readdirSync(currentDir, { withFileTypes: true })) {
+        const itemPath = path.join(currentDir, entry.name);
+        const relPath = path.relative(CONTENT_DIR, itemPath);
+
+        if (relPath === "index.md" || relPath === ".gitkeep") continue;
+
+        const isIgnored = filter.isIgnored(relPath, entry.isDirectory());
+        const vaultSrc = path.join(vaultPath, relPath);
+
+        if (isIgnored || !fs.existsSync(vaultSrc)) {
+          console.log(`Dọn dẹp tệp/thư mục bị loại trừ hoặc không còn trong vault: ${relPath}`);
+          fs.rmSync(itemPath, { recursive: true, force: true });
+        } else if (entry.isDirectory()) {
+          cleanContentDir(itemPath);
+        }
       }
     }
+    cleanContentDir(CONTENT_DIR);
   } else {
-    console.log("Giữ nguyên nội dung content/ hiện tại để build (không đồng bộ lại)...");
+    console.log("Kiểm tra và dọn dẹp các tệp bị loại trừ trong content/...");
+    function purgeIgnored(currentDir) {
+      for (const entry of fs.readdirSync(currentDir, { withFileTypes: true })) {
+        const itemPath = path.join(currentDir, entry.name);
+        const relPath = path.relative(CONTENT_DIR, itemPath);
+
+        if (relPath === "index.md" || relPath === ".gitkeep") continue;
+
+        if (filter.isIgnored(relPath, entry.isDirectory())) {
+          console.log(`Dọn dẹp tệp/thư mục bị loại trừ khỏi content/: ${relPath}`);
+          fs.rmSync(itemPath, { recursive: true, force: true });
+        } else if (entry.isDirectory()) {
+          purgeIgnored(itemPath);
+        }
+      }
+    }
+    purgeIgnored(CONTENT_DIR);
   }
 
   // Build slug map for markdown files
-  const allMdFiles = getAllFiles(CONTENT_DIR, ".md");
+  const allMdFiles = getAllFiles(CONTENT_DIR, ".md", filter);
   const slugMap = new Map();
 
   for (const mdPath of allMdFiles) {
@@ -660,13 +761,12 @@ title: "Security Blog"
     </div>
   </div>
 
-  <div class="hero-badge">🛡️ InfoSec Knowledge Base &amp; CTF Writeups</div>
+  <div class="hero-badge">🛡️ InfoSec Knowledge Base &amp; Pentest Research</div>
   <h1 class="hero-title">Security Blog</h1>
   <p class="hero-desc">
     Ghi chú, sơ đồ tư duy tương tác (Mindmap) và bài viết phân tích kỹ thuật về an toàn thông tin &amp; pentest từ: 
     <strong>PortSwigger Web Security Academy</strong>, 
     <strong>TryHackMe</strong>, 
-    <strong>HackTheBox</strong>, 
     <strong>Linux</strong> &amp; 
     <strong>Tools</strong>.
   </p>
@@ -722,7 +822,7 @@ Toàn bộ hệ thống ghi chú bảo mật, sơ đồ tư duy và lab thực c
     <span class="hud-prompt">&gt;&gt;</span>
     <span class="hud-title-text">Hệ Thống Phân Tích &amp; Mod-Index</span>
   </div>
-  <span class="hud-badge">[6 TACTICAL MODULES LOADED]</span>
+  <span class="hud-badge">[5 TACTICAL MODULES LOADED]</span>
 </div>
 
 <div class="category-grid">
@@ -748,7 +848,7 @@ Toàn bộ hệ thống ghi chú bảo mật, sơ đồ tư duy và lab thực c
     </div>
     <div class="cat-body">
       <div class="cat-title">TryHackMe Labs</div>
-      <div class="cat-desc">Active Directory, CVEs, RCE, Reverse Shells &amp; Walkthroughs.</div>
+      <div class="cat-desc">Active Directory, RCE, Reverse Shells &amp; Walkthroughs.</div>
     </div>
     <div class="cat-footer">
       <span>DEPLOY PAYLOAD</span>
@@ -797,21 +897,6 @@ Toàn bộ hệ thống ghi chú bảo mật, sơ đồ tư duy và lab thực c
     </div>
     <div class="cat-footer">
       <span>FOUNDATION PROTOCOL</span>
-      <span class="cat-arrow">→</span>
-    </div>
-  </a>
-
-  <a href="./ctf/0-ctf" class="cat-card cat-card-red">
-    <div class="cat-top">
-      <span class="cat-icon">🎯</span>
-      <span class="cat-badge">[CTF-COMBAT]</span>
-    </div>
-    <div class="cat-body">
-      <div class="cat-title">CTF Writeups</div>
-      <div class="cat-desc">Writeup giải đề PTIT CTF, HackTheBox, TryHackMe.</div>
-    </div>
-    <div class="cat-footer">
-      <span>FLAG HUNT</span>
       <span class="cat-arrow">→</span>
     </div>
   </a>
