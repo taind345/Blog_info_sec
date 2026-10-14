@@ -796,6 +796,51 @@ title: "Security Blog"
 <div class="section-hud-header">
   <div class="hud-header-title">
     <span class="hud-prompt">&gt;&gt;</span>
+    <span class="hud-title-text">Bản Đồ Mạng Lưới Kiến Thức (Interactive Knowledge Graph)</span>
+  </div>
+  <span class="hud-badge">[LIVE TOPOLOGY NETWORK]</span>
+</div>
+
+Toàn bộ hệ thống ghi chú bảo mật, sơ đồ tư duy và lab thực chiến được tự động liên kết thành mạng lưới đồ thị tương tác thời gian thực. Bạn có thể cuộn chuột để phóng to/thu nhỏ, kéo thả các nốt hoặc bấm vào bất kỳ nốt nào để mở bài viết:
+
+<div class="home-graph-box">
+  <div class="home-graph-header">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+      <span class="terminal-path">network://topology/global-graph.interactive</span>
+    </div>
+    <div class="home-graph-header-actions">
+      <span class="home-graph-badge">[RADAR ACTIVE]</span>
+      <button class="home-graph-expand-btn global-graph-icon" title="Mở đồ thị toàn màn hình">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+        </svg>
+        <span>TOÀN MÀN HÌNH</span>
+      </button>
+    </div>
+  </div>
+  <div class="home-graph-canvas-wrapper">
+    <div class="graph-container" data-cfg='{"drag":true,"zoom":true,"depth":-1,"scale":0.95,"repelForce":0.55,"centerForce":0.25,"linkDistance":32,"fontSize":0.62,"opacityScale":1,"showTags":true,"removeTags":[],"focusOnHover":true,"enableRadial":true}'></div>
+  </div>
+  <div class="home-graph-footer">
+    <div class="home-graph-legend">
+      <span class="legend-item"><span class="legend-dot dot-current"></span> Trang chủ</span>
+      <span class="legend-item"><span class="legend-dot dot-tag"></span> Thẻ chuyên đề (#tag)</span>
+      <span class="legend-item"><span class="legend-dot dot-note"></span> Ghi chú / Labs</span>
+    </div>
+    <div class="home-graph-tip">
+      <span>⚡ Cuộn chuột để Zoom • Kéo để Di chuyển • Bấm vào Nốt để xem bài viết</span>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="section-hud-header">
+  <div class="hud-header-title">
+    <span class="hud-prompt">&gt;&gt;</span>
     <span class="hud-title-text">Bản đồ tư duy tổng thể (Master Mindmap)</span>
   </div>
   <span class="hud-badge">[RADAR TOPOLOGY READY]</span>
