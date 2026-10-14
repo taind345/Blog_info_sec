@@ -42,11 +42,14 @@ if [ -n "$RED_VAULT" ] && [ -d "$RED_VAULT" ]; then
   RED_STATUS=""
   if git -C "$RED_VAULT" status --porcelain >/dev/null 2>&1; then
     RED_STATUS=$(git -C "$RED_VAULT" status --porcelain 2>/dev/null || true)
-    if [ -n "$RED_STATUS" ]; then
-      echo "📝 Phát hiện bài viết/ảnh mới trong thư mục red, đang đẩy lên GitHub..."
-      git -C "$RED_VAULT" add . 2>/dev/null || true
-      COMMIT_MSG="docs: auto-sync notes [$(date '+%Y-%m-%d %H:%M:%S')]"
-      git -C "$RED_VAULT" commit -m "$COMMIT_MSG" 2>/dev/null || true
+    RED_AHEAD=$(git -C "$RED_VAULT" rev-list --count origin/main..HEAD 2>/dev/null || echo 0)
+    if [ -n "$RED_STATUS" ] || [ "$RED_AHEAD" -gt 0 ]; then
+      echo "📝 Phát hiện bài viết/ảnh mới hoặc commit chưa đẩy trong thư mục red, đang đẩy lên GitHub..."
+      if [ -n "$RED_STATUS" ]; then
+        git -C "$RED_VAULT" add . 2>/dev/null || true
+        COMMIT_MSG="docs: auto-sync notes [$(date '+%Y-%m-%d %H:%M:%S')]"
+        git -C "$RED_VAULT" commit -m "$COMMIT_MSG" 2>/dev/null || true
+      fi
       git -C "$RED_VAULT" push origin main 2>/dev/null || echo "⚠️ Push repo red gặp sự cố mạng, vẫn tiếp tục đồng bộ blog..."
       echo "✅ Đã đẩy thư mục red lên GitHub thành công!"
     else
@@ -71,9 +74,15 @@ if [ "$CURRENT_BRANCH" != "main" ]; then
   git checkout main
 fi
 
-# Chỉ pull nếu working tree sạch
-if [ -z "$(git status --porcelain content quartz/static)" ]; then
-  git pull --rebase origin main 2>/dev/null || true
+# Tải thông tin mới nhất từ GitHub
+echo "🌐 Đang kiểm tra cập nhật từ GitHub..."
+git fetch origin main 2>/dev/null || echo "⚠️ Không thể fetch từ GitHub, tiếp tục với dữ liệu local..."
+
+# Kiểm tra nếu remote có commit mới
+REMOTE_COMMITS=$(git rev-list --count HEAD..origin/main 2>/dev/null || echo 0)
+if [ "$REMOTE_COMMITS" -gt 0 ]; then
+  echo "📥 Phát hiện $REMOTE_COMMITS commit mới trên GitHub, đang đồng bộ về máy..."
+  git pull --rebase --autostash origin main 2>/dev/null || git merge -X ours origin/main -m "merge: sync remote updates [skip ci]" 2>/dev/null || echo "⚠️ Đồng bộ remote gặp cảnh báo, tiếp tục xử lý nội dung từ Vault..."
 fi
 
 echo "📖 [3/4] Đang đồng bộ ghi chú & chuyển đổi sơ đồ Excalidraw..."
@@ -85,9 +94,27 @@ else
 fi
 
 echo "🔍 [4/4] Kiểm tra các thay đổi mới và đẩy lên GitHub Pages..."
-STATUS=$(git status --porcelain content quartz/static)
 
-if [ -z "$STATUS" ]; then
+# Stage các thư mục và tệp liên quan của blog (bao gồm cả package-lock.json nếu có thay đổi)
+git add content/ quartz/static/ scripts/ package.json package-lock.json .github/ quartz/styles/ quartz/components/ docs/ README.md 2>/dev/null || true
+
+# Kiểm tra xem có thay đổi nào đang được staged không
+STAGED_DIFF=$(git diff --cached --name-only)
+
+# Tạo commit mới nếu có thay đổi
+if [ -n "$STAGED_DIFF" ]; then
+  echo "📝 Đã phát hiện các tệp tin mới/chỉnh sửa trong blog:"
+  echo "$STAGED_DIFF"
+  echo ""
+  echo "🚀 Đang commit các thay đổi..."
+  COMMIT_TIME=$(date '+%Y-%m-%d %H:%M:%S')
+  git commit -m "chore(sync): auto-sync notes from vault [$COMMIT_TIME]"
+fi
+
+# Kiểm tra xem nhánh local có đang đi trước remote không (commit vừa tạo hoặc commit chưa đẩy từ trước)
+AHEAD_COMMITS=$(git rev-list --count origin/main..HEAD 2>/dev/null || echo 0)
+
+if [ "$AHEAD_COMMITS" -eq 0 ] && [ -z "$STAGED_DIFF" ]; then
   echo ""
   echo "=========================================================="
   echo "✅ HOÀN TẤT: Không có bài viết hoặc sơ đồ mới nào thay đổi."
@@ -96,17 +123,13 @@ if [ -z "$STATUS" ]; then
   exit 0
 fi
 
-echo "📝 Đã phát hiện các tệp tin mới/chỉnh sửa trong blog:"
-echo "$STATUS"
-
 echo ""
-echo "🚀 Đang commit và đẩy lên GitHub Pages..."
-git add content/ quartz/static/ scripts/ package.json .github/ quartz/styles/ quartz/components/ docs/ README.md
-
-COMMIT_TIME=$(date '+%Y-%m-%d %H:%M:%S')
-git commit -m "chore(sync): auto-sync notes from vault [$COMMIT_TIME]"
-
-git push origin main || (git pull --rebase origin main && git push origin main)
+echo "🚀 Đang đẩy dữ liệu lên GitHub Pages ($AHEAD_COMMITS commit)..."
+if ! git push origin main; then
+  echo "⚠️ Push trực tiếp chưa được, đang tự động kết hợp với remote và thử lại..."
+  git pull --rebase --autostash -X theirs origin main 2>/dev/null || git merge -X ours origin/main -m "merge: auto-merge before push [skip ci]" 2>/dev/null || true
+  git push origin main
+fi
 
 echo ""
 echo "=========================================================="
