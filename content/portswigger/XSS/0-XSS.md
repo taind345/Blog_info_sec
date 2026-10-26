@@ -52,9 +52,9 @@ tags:
 <g transform="translate(14.31,-76.13)">
 <path d="M855.93 226.00 L855.93 226.00" stroke="#1e1e1e" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<a href="./xss-portswigger-lab" class="excalidraw-node-link" target="_self" title="XSS portswigger lab"><g transform="translate(14.31,-76.13)">
+<g transform="translate(14.31,-76.13)">
 <text x="122.10" y="1047.93" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="122.10" dy="0">📍XSS portswigger lab</tspan></text>
-</g></a>
+</g>
 <a href="./stored-xss" class="excalidraw-node-link" target="_self" title="stored xss"><g transform="translate(14.31,-76.13)">
 <text x="157.79" y="838.48" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="157.79" dy="0">📍stored xss</tspan></text>
 </g></a>
@@ -124,6 +124,9 @@ tags:
 <a href="./thm_blindxss" class="excalidraw-node-link" target="_self" title="THM_blindxss"><g transform="translate(14.31,-76.13)">
 <text x="131.27" y="1467.40" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="131.27" dy="0">📍THM_blindxss</tspan></text>
 </g></a>
+<a href="./0-xss-cheetsheet" class="excalidraw-node-link" target="_self" title="0-xss cheetsheet"><g transform="translate(14.31,-76.13)">
+<text x="398.83" y="176.12" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="398.83" dy="0">📍0-xss cheetsheet</tspan></text>
+</g></a>
 </svg>
     </div>
   </div>
@@ -138,7 +141,7 @@ tags:
 - [[Dangling Markup]]
 - [[phòng chống xss]]
 - [[so sánh xss. csrf, sql injection]]
-- [[XSS portswigger lab]]
+- [[0-XSS portswigger lab]]
 - [[stored xss]]
 - [[điểm chung của các loại XSS]]
 - [[reflect XSS]]
@@ -150,3 +153,4 @@ tags:
 - [[THM_reflect xss]]
 - [[THM_stored xss]]
 - [[THM_blindxss]]
+- [[0-xss cheetsheet]]
