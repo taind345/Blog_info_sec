@@ -8,6 +8,8 @@ import spaRouterScript from "../../components/scripts/spa.inline"
 import popoverScript from "../../components/scripts/popover.inline"
 // @ts-ignore
 import excalidrawScript from "../../components/scripts/excalidraw.inline"
+// @ts-ignore
+import musicScript from "../../components/scripts/music.inline"
 import baseStyles from "../../styles/base.scss"
 import customStyles from "../../styles/custom.scss"
 import popoverStyle from "../../components/styles/popover.scss"
@@ -94,6 +96,9 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
 
   // excalidraw viewer
   componentResources.afterDOMLoaded.push(excalidrawScript)
+
+  // background music player
+  componentResources.afterDOMLoaded.push(musicScript)
 
   if (cfg.analytics?.provider === "google") {
     const tagId = cfg.analytics.tagId

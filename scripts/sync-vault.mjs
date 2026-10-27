@@ -738,7 +738,92 @@ title: "${baseName}"
   // Create Clean HomePage index.md (Notion minimal style)
   createHomePage(CONTENT_DIR);
 
+  // Sync background music files from music/ to static/music/
+  syncMusicFiles();
+
   console.log("=== Hoàn tất xử lý! ===");
+}
+
+function syncMusicFiles() {
+  const musicSrcDir = path.resolve("music");
+  const quartzStaticMusic = path.resolve("quartz", "static", "music");
+  const publicStaticMusic = path.resolve("public", "static", "music");
+
+  if (!fs.existsSync(musicSrcDir)) {
+    console.log("ℹ️ Thư mục music/ không tồn tại. Bỏ qua đồng bộ nhạc.");
+    return;
+  }
+
+  if (!fs.existsSync(quartzStaticMusic)) {
+    fs.mkdirSync(quartzStaticMusic, { recursive: true });
+  }
+
+  const audioExts = [".mp3", ".wav", ".ogg", ".m4a", ".flac", ".aac"];
+  const files = fs.readdirSync(musicSrcDir).filter((file) => {
+    const ext = path.extname(file).toLowerCase();
+    return audioExts.includes(ext);
+  });
+
+  if (files.length === 0) {
+    console.log("ℹ️ Không tìm thấy file âm thanh nào trong music/.");
+    return;
+  }
+
+  const playlist = [];
+
+  for (let idx = 0; idx < files.length; idx++) {
+    const filename = files[idx];
+    const srcFile = path.join(musicSrcDir, filename);
+    const destQuartz = path.join(quartzStaticMusic, filename);
+
+    // Copy to quartz/static/music
+    fs.copyFileSync(srcFile, destQuartz);
+
+    // Also copy to public/static/music if public exists
+    if (fs.existsSync(path.resolve("public", "static"))) {
+      if (!fs.existsSync(publicStaticMusic)) fs.mkdirSync(publicStaticMusic, { recursive: true });
+      fs.copyFileSync(srcFile, path.join(publicStaticMusic, filename));
+    }
+
+    // Clean track title & artist from filename
+    let cleanName = filename.replace(/\.[^/.]+$/, "");
+    cleanName = cleanName.replace(/\[[a-zA-Z0-9_-]{8,15}\]/g, "").trim();
+    cleanName = cleanName.replace(/\((?:Official|Audio|Video|Performance|MV|Lyric|Lyrics)[^)]*\)/gi, "").trim();
+
+    let title = cleanName;
+    let artist = "Music Box";
+
+    if (cleanName.includes(" - ")) {
+      const parts = cleanName.split(" - ");
+      title = parts[0].trim();
+      artist = parts.slice(1).join(" - ").trim();
+    } else if (cleanName.toLowerCase().includes("feat.")) {
+      title = cleanName;
+      const featMatch = cleanName.match(/feat\.?\s*([^)]+)/i);
+      if (featMatch) {
+        artist = featMatch[1].trim();
+      }
+    }
+
+    playlist.push({
+      id: idx,
+      file: filename,
+      title: title || filename,
+      artist: artist || "Cyber BGM",
+      src: `static/music/${encodeURIComponent(filename)}`
+    });
+  }
+
+  const playlistJson = JSON.stringify(playlist, null, 2);
+  fs.writeFileSync(path.join(quartzStaticMusic, "playlist.json"), playlistJson, "utf8");
+  if (fs.existsSync(publicStaticMusic)) {
+    fs.writeFileSync(path.join(publicStaticMusic, "playlist.json"), playlistJson, "utf8");
+  }
+
+  console.log(`🎵 Đã đồng bộ ${playlist.length} bài hát từ music/ sang static/music/ và tạo playlist.json:`);
+  for (const item of playlist) {
+    console.log(`   ▶ [${item.id + 1}] ${item.title} — ${item.artist}`);
+  }
 }
 
 function createHomePage(contentDir) {
