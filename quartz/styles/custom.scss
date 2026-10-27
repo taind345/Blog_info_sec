@@ -3296,7 +3296,9 @@ article,
   pointer-events: none;
   z-index: 995; // Placed over content so rain streaks, glass droplets & lightning are vividly visible
   opacity: 0;
-  transition: opacity 0.8s ease;
+  transition: opacity 0.5s ease;
+  will-change: transform;
+  transform: translateZ(0); // Hardware-accelerated GPU layer prevents DOM hydration lag
 
   &.is-active {
     opacity: 1;
