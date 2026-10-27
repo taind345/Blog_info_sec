@@ -1,7 +1,7 @@
 // Background Music Player & Cyber Glass Weather Engine for Security Blog
 // Features: Vinyl Record HUD, Fine Cyber Rain, Delicate Glass Condensation & Trickling Water Droplets,
 // Branching Jagged Lightning Arcs, Gapless SPA Audio, and Foolproof Autoplay System.
-// Performance Optimized: Batch Canvas 2D Draw Calls, Zero-Blur Lightning, 60 FPS Lightweight Physics.
+// Performance Optimized: Progressive Staggered Loading, Batched Canvas 2D Draw Calls, Zero-Blur Lightning, 60 FPS.
 
 interface Track {
   id: number
@@ -131,6 +131,7 @@ class CyberWeatherEngine {
   nextLightningTime: number = 0
   frameCounter: number = 0
   isTabVisible: boolean = true
+  resizeTimeout: any = null
 
   constructor() {
     const saved = localStorage.getItem("weather_active")
@@ -141,7 +142,7 @@ class CyberWeatherEngine {
     this.canvas = document.getElementById("weather-rain-canvas") as HTMLCanvasElement | null
     if (!this.canvas) return
 
-    this.ctx = this.canvas.getContext("2d", { alpha: true })
+    this.ctx = this.canvas.getContext("2d", { alpha: true, desynchronized: true })
     this.resize()
 
     window.removeEventListener("resize", this.handleResize)
@@ -165,7 +166,10 @@ class CyberWeatherEngine {
   }
 
   handleResize = () => {
-    this.resize()
+    clearTimeout(this.resizeTimeout)
+    this.resizeTimeout = setTimeout(() => {
+      this.resize()
+    }, 150)
   }
 
   resize() {
@@ -179,33 +183,33 @@ class CyberWeatherEngine {
     this.canvas.style.width = `${this.width}px`
     this.canvas.style.height = `${this.height}px`
 
-    // Initialize Fine, Lightweight Airborne Rain Streaks (120 particles)
-    const streakCount = Math.min(130, Math.max(70, Math.floor((this.width * this.height) / 11000)))
+    // Ultra-lightweight Particle Pool (80 fine streaks)
+    const streakCount = Math.min(85, Math.max(50, Math.floor((this.width * this.height) / 16000)))
     this.streaks = []
     for (let i = 0; i < streakCount; i++) {
       this.streaks.push({
-        x: Math.random() * (this.width + 150) - 75,
+        x: Math.random() * (this.width + 120) - 60,
         y: Math.random() * this.height,
-        l: 12 + Math.random() * 14, // Smaller, fine streaks (12 - 26px)
-        speed: 16 + Math.random() * 10,
-        alpha: 0.25 + Math.random() * 0.35,
+        l: 10 + Math.random() * 12, // Small, sleek streaks (10 - 22px)
+        speed: 16 + Math.random() * 9,
+        alpha: 0.22 + Math.random() * 0.32,
       })
     }
 
-    // Pre-populate Small, Delicate Glass Droplets (25-35 droplets)
+    // Pre-populate Small, Delicate Glass Droplets (18-24 droplets)
     if (this.glassDrops.length === 0) {
-      const dropCount = Math.min(35, Math.max(18, Math.floor((this.width * this.height) / 45000)))
+      const dropCount = Math.min(22, Math.max(12, Math.floor((this.width * this.height) / 60000)))
       for (let i = 0; i < dropCount; i++) {
         this.glassDrops.push({
           x: Math.random() * this.width,
           y: Math.random() * this.height,
-          r: 1.0 + Math.random() * 1.5, // Small delicate water beads (1.0 - 2.5px)
-          alpha: 0.4 + Math.random() * 0.35,
-          isDripping: Math.random() < 0.25,
+          r: 0.9 + Math.random() * 1.3, // Tiny delicate water beads (0.9 - 2.2px)
+          alpha: 0.35 + Math.random() * 0.3,
+          isDripping: Math.random() < 0.22,
           dripDelay: Math.floor(60 + Math.random() * 240),
-          speed: 1.4 + Math.random() * 1.8,
+          speed: 1.2 + Math.random() * 1.6,
           wigglePhase: Math.random() * Math.PI * 2,
-          wiggleSpeed: 0.05 + Math.random() * 0.06,
+          wiggleSpeed: 0.04 + Math.random() * 0.05,
           trail: [],
         })
       }
@@ -215,10 +219,11 @@ class CyberWeatherEngine {
   initRainAudio() {
     if (this.rainAudio) return
     try {
-      this.rainAudio = new Audio(resolveAssetUrl("static/music/rain-ambient.mp3"))
+      this.rainAudio = new Audio()
+      this.rainAudio.preload = "none" // Do not block initial network with 9.3MB download
+      this.rainAudio.src = resolveAssetUrl("static/music/rain-ambient.mp3")
       this.rainAudio.loop = true
       this.rainAudio.volume = 0.35
-      this.rainAudio.preload = "auto"
     } catch (e) {
       console.warn("[Weather] Rain audio init error:", e)
     }
@@ -350,7 +355,6 @@ class CyberWeatherEngine {
       createBolt(x1, y1, midX, midY, roughness * 0.55, depth + 1, width)
       createBolt(midX, midY, x2, y2, roughness * 0.55, depth + 1, width)
 
-      // Fork out a single child branch
       if (depth < 3 && Math.random() < 0.28) {
         const branchAngle = angle + (Math.random() - 0.5) * 0.9
         const branchLen = 40 + Math.random() * 90
@@ -439,8 +443,8 @@ class CyberWeatherEngine {
       // ==========================================
       // 2. RENDER FINE FALLING RAIN (Batched 1-Pass)
       // ==========================================
-      ctx.lineWidth = 0.85 // Thinner, delicate raindrops
-      ctx.strokeStyle = "rgba(186, 230, 253, 0.42)"
+      ctx.lineWidth = 0.8 // Fine, thin raindrops
+      ctx.strokeStyle = "rgba(186, 230, 253, 0.38)"
       ctx.beginPath()
 
       for (let i = 0; i < this.streaks.length; i++) {
@@ -453,7 +457,7 @@ class CyberWeatherEngine {
 
         if (s.y > this.height) {
           s.y = -s.l
-          s.x = Math.random() * (this.width + 150) - 75
+          s.x = Math.random() * (this.width + 120) - 60
         }
       }
       ctx.stroke()
@@ -461,44 +465,44 @@ class CyberWeatherEngine {
       // ==========================================
       // 3. RENDER GLASS IMPACT RIPPLES (Batched)
       // ==========================================
-      if (this.frameCounter % 24 === 0 && this.glassDrops.length < 35) {
+      if (this.frameCounter % 30 === 0 && this.glassDrops.length < 24) {
         const ix = Math.random() * this.width
         const iy = Math.random() * (this.height * 0.85)
 
-        if (this.ripples.length < 6) {
+        if (this.ripples.length < 4) {
           this.ripples.push({
             x: ix,
             y: iy,
-            r: 1.5,
-            maxR: 6 + Math.random() * 4, // Smaller subtle ripples
-            alpha: 0.65,
+            r: 1.2,
+            maxR: 5 + Math.random() * 3, // Smaller subtle ripples
+            alpha: 0.6,
           })
         }
 
         this.glassDrops.push({
           x: ix,
           y: iy,
-          r: 1.0 + Math.random() * 1.5, // Small delicate water beads
-          alpha: 0.45 + Math.random() * 0.35,
-          isDripping: Math.random() < 0.25,
-          dripDelay: Math.floor(60 + Math.random() * 220),
-          speed: 1.4 + Math.random() * 1.8,
+          r: 0.9 + Math.random() * 1.3, // Small delicate water beads
+          alpha: 0.38 + Math.random() * 0.3,
+          isDripping: Math.random() < 0.22,
+          dripDelay: Math.floor(60 + Math.random() * 200),
+          speed: 1.2 + Math.random() * 1.6,
           wigglePhase: Math.random() * Math.PI * 2,
-          wiggleSpeed: 0.05 + Math.random() * 0.06,
+          wiggleSpeed: 0.04 + Math.random() * 0.05,
           trail: [],
         })
       }
 
       if (this.ripples.length > 0) {
-        ctx.lineWidth = 0.6
-        ctx.strokeStyle = "rgba(165, 243, 252, 0.38)"
+        ctx.lineWidth = 0.5
+        ctx.strokeStyle = "rgba(165, 243, 252, 0.32)"
         ctx.beginPath()
         for (let r = this.ripples.length - 1; r >= 0; r--) {
           const rp = this.ripples[r]
           ctx.moveTo(rp.x + rp.r, rp.y)
           ctx.arc(rp.x, rp.y, rp.r, 0, Math.PI * 2)
 
-          rp.r += 0.8
+          rp.r += 0.7
           rp.alpha -= 0.045
           if (rp.alpha <= 0 || rp.r >= rp.maxR) {
             this.ripples.splice(r, 1)
@@ -510,8 +514,10 @@ class CyberWeatherEngine {
       // ==========================================
       // 4. RENDER GLASS WATER DROPLETS & TRICKLES
       // ==========================================
+      const updatePhysics = this.frameCounter % 2 === 0
+
       // Batch 4A: Droplet Trails
-      ctx.fillStyle = "rgba(186, 230, 253, 0.22)"
+      ctx.fillStyle = "rgba(186, 230, 253, 0.18)"
       ctx.beginPath()
       for (let d = 0; d < this.glassDrops.length; d++) {
         const drop = this.glassDrops[d]
@@ -519,7 +525,7 @@ class CyberWeatherEngine {
           const pt = drop.trail[t]
           ctx.moveTo(pt.x + pt.r, pt.y)
           ctx.arc(pt.x, pt.y, pt.r, 0, Math.PI * 2)
-          pt.alpha -= 0.012
+          pt.alpha -= 0.015
           if (pt.alpha <= 0) {
             drop.trail.splice(t, 1)
           }
@@ -528,28 +534,30 @@ class CyberWeatherEngine {
       ctx.fill()
 
       // Batch 4B: Droplet Bodies (Meniscus)
-      ctx.fillStyle = "rgba(186, 230, 253, 0.32)"
+      ctx.fillStyle = "rgba(186, 230, 253, 0.28)"
       ctx.beginPath()
       for (let d = this.glassDrops.length - 1; d >= 0; d--) {
         const drop = this.glassDrops[d]
 
-        if (!drop.isDripping) {
-          drop.dripDelay--
-          if (drop.dripDelay <= 0) {
-            drop.isDripping = true
-          }
-        } else {
-          drop.y += drop.speed
-          drop.x += Math.sin(drop.wigglePhase) * 0.35
-          drop.wigglePhase += drop.wiggleSpeed
+        if (updatePhysics) {
+          if (!drop.isDripping) {
+            drop.dripDelay--
+            if (drop.dripDelay <= 0) {
+              drop.isDripping = true
+            }
+          } else {
+            drop.y += drop.speed
+            drop.x += Math.sin(drop.wigglePhase) * 0.3
+            drop.wigglePhase += drop.wiggleSpeed
 
-          if (this.frameCounter % 5 === 0 && drop.trail.length < 5) {
-            drop.trail.push({
-              x: drop.x,
-              y: drop.y,
-              r: Math.max(0.4, drop.r * 0.45),
-              alpha: drop.alpha * 0.5,
-            })
+            if (this.frameCounter % 6 === 0 && drop.trail.length < 4) {
+              drop.trail.push({
+                x: drop.x,
+                y: drop.y,
+                r: Math.max(0.35, drop.r * 0.4),
+                alpha: drop.alpha * 0.45,
+              })
+            }
           }
         }
 
@@ -566,12 +574,12 @@ class CyberWeatherEngine {
       }
       ctx.fill()
 
-      // Batch 4C: Specular Highlights (Top-left glint, tiny 0.4px)
-      ctx.fillStyle = "rgba(255, 255, 255, 0.85)"
+      // Batch 4C: Specular Highlights (Top-left glint, pinpoint 0.3px)
+      ctx.fillStyle = "rgba(255, 255, 255, 0.8)"
       ctx.beginPath()
       for (let d = 0; d < this.glassDrops.length; d++) {
         const drop = this.glassDrops[d]
-        const hr = Math.max(0.4, drop.r * 0.32)
+        const hr = Math.max(0.35, drop.r * 0.3)
         ctx.moveTo(drop.x - drop.r * 0.3 + hr, drop.y - drop.r * 0.3)
         ctx.arc(drop.x - drop.r * 0.3, drop.y - drop.r * 0.3, hr, 0, Math.PI * 2)
       }
@@ -610,11 +618,10 @@ function formatTime(secs: number): string {
 function initBgmPlayer() {
   if (typeof window === "undefined" || !document.body) return
 
-  // 1. Initialize Global Singleton Audio Player
+  // 1. Initialize Global Singleton Audio Player with lazy preloading (0 initial network lag)
   if (!window.__bgm_player) {
     const audio = new Audio()
-    audio.preload = "auto"
-    audio.autoplay = true
+    audio.preload = "none" // Do NOT pre-download 10MB audio file before initial page paint!
 
     const savedVol = parseFloat(localStorage.getItem("bgm_vol") || "0.7")
     const savedMode = (localStorage.getItem("bgm_mode") || "all") as "all" | "one" | "shuffle"
@@ -669,41 +676,43 @@ function initBgmPlayer() {
       updateDurationDisplay()
     })
 
-    // Fetch dynamic playlist.json from server
-    fetch(resolveAssetUrl("static/music/playlist.json"))
-      .then((res) => (res.ok ? res.json() : null))
-      .then((data: Track[]) => {
-        if (Array.isArray(data) && data.length > 0 && window.__bgm_player) {
-          window.__bgm_player.playlist = data
-          if (!window.__bgm_player.isPlaying) {
-            loadTrack(0, true)
-          }
-          renderTracklist()
-          updatePillInfo()
-        }
-      })
-      .catch(() => {})
-
     // Clear stale pause flag on fresh entry to guarantee autoplay
     localStorage.removeItem("bgm_user_paused")
 
-    // Setup initial source (Bài 0: "Tình Yêu Mới") & trigger instant autoplay
-    loadTrack(0, true)
-    attemptAutoplay()
+    // Setup gesture triggers immediately
     setupFirstGestureTrigger()
+
+    // 2. Progressive Staggered Loading: Let DOM paint First, then initialize Audio & Fetch
+    setTimeout(() => {
+      fetch(resolveAssetUrl("static/music/playlist.json"))
+        .then((res) => (res.ok ? res.json() : null))
+        .then((data: Track[]) => {
+          if (Array.isArray(data) && data.length > 0 && window.__bgm_player) {
+            window.__bgm_player.playlist = data
+            renderTracklist()
+            updatePillInfo()
+          }
+        })
+        .catch(() => {})
+
+      loadTrack(0, true)
+      attemptAutoplay()
+    }, 350)
   }
 
-  // 2. Render or Re-attach DOM Elements
+  // 3. Render DOM Elements immediately (zero lag layout)
   ensurePlayerDom()
   updatePlayVisuals(window.__bgm_player.isPlaying)
   updatePillInfo()
   renderTracklist()
 
-  // 3. Initialize or Re-attach Weather Engine
+  // 4. Staggered Weather Canvas Engine Start (prevents First-Paint jank)
   if (!window.__cyber_weather) {
     window.__cyber_weather = new CyberWeatherEngine()
   }
-  window.__cyber_weather.initDOM()
+  setTimeout(() => {
+    window.__cyber_weather?.initDOM()
+  }, 250)
 }
 
 function loadTrack(index: number, autoPlay: boolean = true) {
@@ -721,7 +730,6 @@ function loadTrack(index: number, autoPlay: boolean = true) {
 
   if (p.audio.src !== fullSrc && !p.audio.src.endsWith(encodeURI(track.file))) {
     p.audio.src = fullSrc
-    p.audio.load()
   }
 
   updatePillInfo()
