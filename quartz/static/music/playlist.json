@@ -1,30 +1,37 @@
 [
   {
     "id": 0,
+    "file": "Tình Yêu Mới - Chillies (Official Audio) - (320 Kbps).mp3",
+    "title": "Tình Yêu Mới",
+    "artist": "Chillies",
+    "src": "static/music/T%C3%ACnh%20Y%C3%AAu%20M%E1%BB%9Bi%20-%20Chillies%20(Official%20Audio)%20-%20(320%20Kbps).mp3"
+  },
+  {
+    "id": 1,
+    "file": "Tình Yêu Mới - Chillies (Official Performance Video) [DZyeMmeQo-U].mp3",
+    "title": "Tình Yêu Mới",
+    "artist": "Chillies",
+    "src": "static/music/T%C3%ACnh%20Y%C3%AAu%20M%E1%BB%9Bi%20-%20Chillies%20(Official%20Performance%20Video)%20%5BDZyeMmeQo-U%5D.mp3"
+  },
+  {
+    "id": 2,
     "file": "Chờ Anh Nhé (feat. Hoàng Rob) [0chK12qHGfM].mp3",
     "title": "Chờ Anh Nhé (feat. Hoàng Rob)",
     "artist": "Hoàng Rob",
     "src": "static/music/Ch%E1%BB%9D%20Anh%20Nh%C3%A9%20(feat.%20Ho%C3%A0ng%20Rob)%20%5B0chK12qHGfM%5D.mp3"
   },
   {
-    "id": 1,
+    "id": 3,
     "file": "GIẤC MƠ KHÁC - CHILLIES (Official Music Video) [WfGn1yTL8TI].mp3",
     "title": "GIẤC MƠ KHÁC",
     "artist": "CHILLIES",
     "src": "static/music/GI%E1%BA%A4C%20M%C6%A0%20KH%C3%81C%20-%20CHILLIES%20(Official%20Music%20Video)%20%5BWfGn1yTL8TI%5D.mp3"
   },
   {
-    "id": 2,
+    "id": 4,
     "file": "Hạnh Phúc Mới (Cover) - Sơn Tùng M-TP x TUYENVU「Lo - Fi Version by 1 9 6 7」_ Audio Lyrics - (320 Kbps).mp3",
     "title": "Hạnh Phúc Mới (Cover)",
-    "artist": "Sơn Tùng M-TP x TUYENVU「Lo - Fi Version by 1 9 6 7」_ Audio Lyrics - (320 Kbps)",
+    "artist": "Sơn Tùng M-TP x TUYENVU「Lo - Fi Version by 1 9 6 7」",
     "src": "static/music/H%E1%BA%A1nh%20Ph%C3%BAc%20M%E1%BB%9Bi%20(Cover)%20-%20S%C6%A1n%20T%C3%B9ng%20M-TP%20x%20TUYENVU%E3%80%8CLo%20-%20Fi%20Version%20by%201%209%206%207%E3%80%8D_%20Audio%20Lyrics%20-%20(320%20Kbps).mp3"
-  },
-  {
-    "id": 3,
-    "file": "Tình Yêu Mới - Chillies (Official Performance Video) [DZyeMmeQo-U].mp3",
-    "title": "Tình Yêu Mới",
-    "artist": "Chillies",
-    "src": "static/music/T%C3%ACnh%20Y%C3%AAu%20M%E1%BB%9Bi%20-%20Chillies%20(Official%20Performance%20Video)%20%5BDZyeMmeQo-U%5D.mp3"
   }
 ]

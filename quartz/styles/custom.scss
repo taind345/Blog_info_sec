@@ -2013,8 +2013,9 @@ article,
 
 .quartz-bgm {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  top: 18px;
+  right: 28px;
+  bottom: auto;
   z-index: 1000;
   font-family: var(--codeFont), "Cascadia Code", Consolas, monospace;
   user-select: none;
@@ -2023,17 +2024,18 @@ article,
 // Autoplay Hint Banner
 .bgm-autoplay-hint {
   position: absolute;
-  bottom: 68px;
+  top: calc(100% + 12px);
+  bottom: auto;
   right: 0;
   display: flex;
   align-items: center;
   gap: 8px;
   background: #090e15;
-  border: 1px solid #00ff66;
+  border: 1.5px solid #00ff66;
   border-radius: 20px;
-  padding: 6px 14px;
+  padding: 7px 16px;
   cursor: pointer;
-  box-shadow: 0 0 16px rgba(0, 255, 102, 0.4), inset 0 0 8px rgba(0, 255, 102, 0.15);
+  box-shadow: 0 0 18px rgba(0, 255, 102, 0.5), inset 0 0 8px rgba(0, 255, 102, 0.2);
   animation: pulseHint 1.8s infinite ease-in-out;
   white-space: nowrap;
   z-index: 1001;
@@ -3170,8 +3172,9 @@ article,
 // Responsive adjustments
 @media (max-width: 768px) {
   .quartz-bgm {
-    bottom: 16px;
-    right: 16px;
+    top: 12px;
+    right: 12px;
+    bottom: auto;
   }
 
   .bgm-floating-widget {

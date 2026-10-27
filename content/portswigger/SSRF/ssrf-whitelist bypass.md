@@ -35,9 +35,6 @@ tags:
       <a href="#doc-c12979e9e9bbf6494d0f6865cd0b91b776ca6490" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
     </div>
     <div class="notion-embed-body">
-
-<div class="ascii-tree">
-
       <pre><code>Whitelist Filter
 │
 ├── Bối cảnh
@@ -91,9 +88,6 @@ tags:
     ├── Bước 3: Internal target
     │   └── Server follow redirect và gửi request tới 169.254.169.254
     └── Hệ quả: Filter bị qua mặt hoàn toàn vì request đầu tiên là hợp lệ
-
-</div>
-
 </code></pre>
 
     </div>

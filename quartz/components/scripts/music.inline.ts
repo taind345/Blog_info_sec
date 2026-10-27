@@ -12,17 +12,24 @@ interface Track {
 const FALLBACK_PLAYLIST: Track[] = [
   {
     id: 0,
-    file: "Chờ Anh Nhé (feat. Hoàng Rob) [0chK12qHGfM].mp3",
-    title: "Chờ Anh Nhé",
-    artist: "Hoàng Rob",
-    src: "static/music/Ch%E1%BB%9D%20Anh%20Nh%C3%A9%20(feat.%20Ho%C3%A0ng%20Rob)%20%5B0chK12qHGfM%5D.mp3",
-  },
-  {
-    id: 1,
     file: "Tình Yêu Mới - Chillies (Official Performance Video) [DZyeMmeQo-U].mp3",
     title: "Tình Yêu Mới",
     artist: "Chillies",
     src: "static/music/T%C3%ACnh%20Y%C3%AAu%20M%E1%BB%9Bi%20-%20Chillies%20(Official%20Performance%20Video)%20%5BDZyeMmeQo-U%5D.mp3",
+  },
+  {
+    id: 1,
+    file: "Chờ Anh Nhé (feat. Hoàng Rob) [0chK12qHGfM].mp3",
+    title: "Chờ Anh Nhé (feat. Hoàng Rob)",
+    artist: "Hoàng Rob",
+    src: "static/music/Ch%E1%BB%9D%20Anh%20Nh%C3%A9%20(feat.%20Ho%C3%A0ng%20Rob)%20%5B0chK12qHGfM%5D.mp3",
+  },
+  {
+    id: 2,
+    file: "GIẤC MƠ KHÁC - CHILLIES (Official Music Video) [WfGn1yTL8TI].mp3",
+    title: "GIẤC MƠ KHÁC",
+    artist: "CHILLIES",
+    src: "static/music/GI%E1%BA%A4C%20M%C6%A0%20KH%C3%81C%20-%20CHILLIES%20(Official%20Music%20Video)%20%5BWfGn1yTL8TI%5D.mp3",
   },
 ]
 
@@ -71,16 +78,14 @@ function initBgmPlayer() {
     audio.preload = "auto"
 
     const savedVol = parseFloat(localStorage.getItem("bgm_vol") || "0.7")
-    const savedIdx = parseInt(localStorage.getItem("bgm_idx") || "0", 10)
     const savedMode = (localStorage.getItem("bgm_mode") || "all") as "all" | "one" | "shuffle"
-    const userPaused = localStorage.getItem("bgm_user_paused") === "true"
 
     audio.volume = isNaN(savedVol) ? 0.7 : Math.max(0, Math.min(1, savedVol))
 
     window.__bgm_player = {
       audio,
       playlist: [...FALLBACK_PLAYLIST],
-      currentIndex: isNaN(savedIdx) ? 0 : Math.max(0, savedIdx),
+      currentIndex: 0, // Mặc định luôn ưu tiên phát bài 0 ("Tình Yêu Mới")
       isPlaying: false,
       isMuted: false,
       volume: audio.volume,
@@ -95,8 +100,19 @@ function initBgmPlayer() {
       .then((data: Track[]) => {
         if (Array.isArray(data) && data.length > 0 && window.__bgm_player) {
           window.__bgm_player.playlist = data
-          if (window.__bgm_player.currentIndex >= data.length) {
+          // Tìm bài "Tình Yêu Mới" để ưu tiên phát đầu tiên
+          const targetIndex = data.findIndex(
+            (t) =>
+              t.title.toLowerCase().includes("tình yêu mới") ||
+              t.file.toLowerCase().includes("tình yêu mới") ||
+              t.title.toLowerCase().includes("tinh yeu moi")
+          )
+          if (targetIndex >= 0 && !window.__bgm_player.isPlaying) {
+            window.__bgm_player.currentIndex = targetIndex
+            loadTrack(targetIndex, true)
+          } else if (window.__bgm_player.currentIndex >= data.length) {
             window.__bgm_player.currentIndex = 0
+            loadTrack(0, true)
           }
           renderTracklist()
           updatePillInfo()
@@ -135,15 +151,10 @@ function initBgmPlayer() {
       updateDurationDisplay()
     })
 
-    // Setup initial source
-    loadTrack(window.__bgm_player.currentIndex, false)
-
-    // Autoplay attempt (if not explicitly paused by user)
-    if (!userPaused) {
-      setTimeout(() => {
-        attemptAutoplay()
-      }, 600)
-    }
+    // Setup initial source (Bài 0: "Tình Yêu Mới") và tự động phát ngay
+    loadTrack(0, true)
+    attemptAutoplay()
+    setupFirstGestureTrigger()
   }
 
   // 2. Render or Re-attach DOM Elements
@@ -230,38 +241,52 @@ function attemptAutoplay() {
   const p = window.__bgm_player
   if (!p) return
 
-  p.audio.play().then(() => {
-    p.isPlaying = true
-    updatePlayVisuals(true)
-    hideAutoplayHint()
-  }).catch(() => {
-    // Autoplay blocked by browser policy: show interactive HUD hint & wait for first gesture
-    showAutoplayHint()
-    setupFirstGestureTrigger()
-  })
+  const playPromise = p.audio.play()
+  if (playPromise !== undefined) {
+    playPromise
+      .then(() => {
+        p.isPlaying = true
+        updatePlayVisuals(true)
+        hideAutoplayHint()
+      })
+      .catch((err) => {
+        console.log("[BGM] Autoplay blocked by browser policy, awaiting first gesture:", err)
+        showAutoplayHint()
+        setupFirstGestureTrigger()
+      })
+  }
 }
 
 function setupFirstGestureTrigger() {
   const unlockAudio = () => {
     const p = window.__bgm_player
-    if (p && p.audio.paused && localStorage.getItem("bgm_user_paused") !== "true") {
-      p.audio.play().then(() => {
-        hideAutoplayHint()
-      }).catch(() => {})
+    if (p && p.audio.paused) {
+      p.audio
+        .play()
+        .then(() => {
+          p.isPlaying = true
+          updatePlayVisuals(true)
+          hideAutoplayHint()
+        })
+        .catch(() => {})
     }
-    window.removeEventListener("click", unlockAudio)
-    window.removeEventListener("keydown", unlockAudio)
-    window.removeEventListener("touchstart", unlockAudio)
+    const events = ["click", "keydown", "touchstart", "scroll", "pointerdown", "mousedown"]
+    events.forEach((evt) => {
+      window.removeEventListener(evt, unlockAudio, true)
+      document.removeEventListener(evt, unlockAudio, true)
+    })
   }
 
-  window.addEventListener("click", unlockAudio, { once: true })
-  window.addEventListener("keydown", unlockAudio, { once: true })
-  window.addEventListener("touchstart", unlockAudio, { once: true })
+  const events = ["click", "keydown", "touchstart", "scroll", "pointerdown", "mousedown"]
+  events.forEach((evt) => {
+    window.addEventListener(evt, unlockAudio, { once: true, passive: true, capture: true })
+    document.addEventListener(evt, unlockAudio, { once: true, passive: true, capture: true })
+  })
 }
 
 function showAutoplayHint() {
   const hint = document.getElementById("bgm-autoplay-hint")
-  if (hint && localStorage.getItem("bgm_user_paused") !== "true") {
+  if (hint) {
     hint.style.display = "flex"
   }
 }

@@ -769,6 +769,15 @@ function syncMusicFiles() {
     return;
   }
 
+  // Sort files: Ưu tiên đưa bài "Tình Yêu Mới" lên đầu danh sách (index 0)
+  files.sort((a, b) => {
+    const isAFirst = a.toLowerCase().includes("tình yêu mới") || a.toLowerCase().includes("tinh yeu moi");
+    const isBFirst = b.toLowerCase().includes("tình yêu mới") || b.toLowerCase().includes("tinh yeu moi");
+    if (isAFirst && !isBFirst) return -1;
+    if (!isAFirst && isBFirst) return 1;
+    return a.localeCompare(b, "vi", { sensitivity: "base" });
+  });
+
   const playlist = [];
 
   for (let idx = 0; idx < files.length; idx++) {
@@ -789,6 +798,8 @@ function syncMusicFiles() {
     let cleanName = filename.replace(/\.[^/.]+$/, "");
     cleanName = cleanName.replace(/\[[a-zA-Z0-9_-]{8,15}\]/g, "").trim();
     cleanName = cleanName.replace(/\((?:Official|Audio|Video|Performance|MV|Lyric|Lyrics)[^)]*\)/gi, "").trim();
+    cleanName = cleanName.replace(/[-_]?\s*\(?(?:320|128|256)\s*kbps\)?/gi, "").trim();
+    cleanName = cleanName.replace(/[-_]?\s*Audio\s*Lyrics\s*[-_]?/gi, "").trim();
 
     let title = cleanName;
     let artist = "Music Box";
