@@ -1,6 +1,7 @@
 // Background Music Player & Cyber Glass Weather Engine for Security Blog
-// Features: Vinyl Record HUD, Multi-Depth Rain, Glass Condensation & Trickling Water Droplets,
+// Features: Vinyl Record HUD, Fine Cyber Rain, Delicate Glass Condensation & Trickling Water Droplets,
 // Branching Jagged Lightning Arcs, Gapless SPA Audio, and Foolproof Autoplay System.
+// Performance Optimized: Batch Canvas 2D Draw Calls, Zero-Blur Lightning, 60 FPS Lightweight Physics.
 
 interface Track {
   id: number
@@ -60,18 +61,16 @@ interface BgmGlobalState {
   initialized: boolean
 }
 
-// 1. Falling rain streaks (airborne atmosphere)
+// 1. Falling rain streaks (airborne atmosphere, fine & delicate)
 interface RainStreak {
   x: number
   y: number
   l: number
   speed: number
-  width: number
   alpha: number
-  color: string
 }
 
-// 2. Glass water droplets (hitting screen and trickling down)
+// 2. Glass water droplets (small beads on screen, trickling down)
 interface GlassDrop {
   x: number
   y: number
@@ -121,7 +120,7 @@ class CyberWeatherEngine {
   isSoundRunning: boolean = false
   isWeatherActive: boolean = true
 
-  // Atmospheric Particles
+  // Atmospheric Particles (Lightweight & Small)
   streaks: RainStreak[] = []
   glassDrops: GlassDrop[] = []
   ripples: GlassRipple[] = []
@@ -129,9 +128,9 @@ class CyberWeatherEngine {
 
   width: number = 0
   height: number = 0
-  dpr: number = 1
   nextLightningTime: number = 0
   frameCounter: number = 0
+  isTabVisible: boolean = true
 
   constructor() {
     const saved = localStorage.getItem("weather_active")
@@ -142,16 +141,26 @@ class CyberWeatherEngine {
     this.canvas = document.getElementById("weather-rain-canvas") as HTMLCanvasElement | null
     if (!this.canvas) return
 
-    this.ctx = this.canvas.getContext("2d")
+    this.ctx = this.canvas.getContext("2d", { alpha: true })
     this.resize()
 
     window.removeEventListener("resize", this.handleResize)
     window.addEventListener("resize", this.handleResize)
 
+    document.removeEventListener("visibilitychange", this.handleVisibility)
+    document.addEventListener("visibilitychange", this.handleVisibility)
+
     if (this.isWeatherActive) {
       this.start()
     } else {
       this.stop(false)
+    }
+  }
+
+  handleVisibility = () => {
+    this.isTabVisible = !document.hidden
+    if (this.isTabVisible && this.isWeatherActive && !this.animFrameId) {
+      this.loop()
     }
   }
 
@@ -161,51 +170,42 @@ class CyberWeatherEngine {
 
   resize() {
     if (!this.canvas) return
-    this.dpr = Math.min(window.devicePixelRatio || 1, 2)
     this.width = window.innerWidth
     this.height = window.innerHeight
 
-    this.canvas.width = this.width * this.dpr
-    this.canvas.height = this.height * this.dpr
+    // 1x resolution buffer eliminates high-DPI fillrate lag on 2K/4K screens
+    this.canvas.width = this.width
+    this.canvas.height = this.height
     this.canvas.style.width = `${this.width}px`
     this.canvas.style.height = `${this.height}px`
 
-    if (this.ctx) {
-      this.ctx.setTransform(1, 0, 0, 1, 0, 0)
-      this.ctx.scale(this.dpr, this.dpr)
-    }
-
-    // Initialize Airborne Rain Streaks
-    const streakCount = Math.min(220, Math.max(90, Math.floor((this.width * this.height) / 7500)))
+    // Initialize Fine, Lightweight Airborne Rain Streaks (120 particles)
+    const streakCount = Math.min(130, Math.max(70, Math.floor((this.width * this.height) / 11000)))
     this.streaks = []
     for (let i = 0; i < streakCount; i++) {
-      const isForeground = Math.random() < 0.28
-      const isMid = !isForeground && Math.random() < 0.5
       this.streaks.push({
-        x: Math.random() * (this.width + 200) - 100,
+        x: Math.random() * (this.width + 150) - 75,
         y: Math.random() * this.height,
-        l: isForeground ? 32 + Math.random() * 22 : isMid ? 20 + Math.random() * 15 : 12 + Math.random() * 12,
-        speed: isForeground ? 24 + Math.random() * 12 : isMid ? 18 + Math.random() * 8 : 13 + Math.random() * 6,
-        width: isForeground ? 1.6 + Math.random() * 0.7 : isMid ? 1.1 + Math.random() * 0.4 : 0.8 + Math.random() * 0.3,
-        alpha: isForeground ? 0.65 + Math.random() * 0.3 : isMid ? 0.35 + Math.random() * 0.25 : 0.2 + Math.random() * 0.18,
-        color: isForeground ? "#e0f2fe" : isMid ? "#bae6fd" : "#7dd3fc",
+        l: 12 + Math.random() * 14, // Smaller, fine streaks (12 - 26px)
+        speed: 16 + Math.random() * 10,
+        alpha: 0.25 + Math.random() * 0.35,
       })
     }
 
-    // Pre-populate Glass Droplets across screen
+    // Pre-populate Small, Delicate Glass Droplets (25-35 droplets)
     if (this.glassDrops.length === 0) {
-      const dropCount = Math.min(65, Math.max(30, Math.floor((this.width * this.height) / 25000)))
+      const dropCount = Math.min(35, Math.max(18, Math.floor((this.width * this.height) / 45000)))
       for (let i = 0; i < dropCount; i++) {
         this.glassDrops.push({
           x: Math.random() * this.width,
           y: Math.random() * this.height,
-          r: 2.2 + Math.random() * 3.2,
-          alpha: 0.5 + Math.random() * 0.4,
-          isDripping: Math.random() < 0.2,
-          dripDelay: Math.floor(60 + Math.random() * 300),
-          speed: 1.6 + Math.random() * 2.8,
+          r: 1.0 + Math.random() * 1.5, // Small delicate water beads (1.0 - 2.5px)
+          alpha: 0.4 + Math.random() * 0.35,
+          isDripping: Math.random() < 0.25,
+          dripDelay: Math.floor(60 + Math.random() * 240),
+          speed: 1.4 + Math.random() * 1.8,
           wigglePhase: Math.random() * Math.PI * 2,
-          wiggleSpeed: 0.06 + Math.random() * 0.08,
+          wiggleSpeed: 0.05 + Math.random() * 0.06,
           trail: [],
         })
       }
@@ -233,7 +233,7 @@ class CyberWeatherEngine {
     this.startRainSound()
     this.scheduleNextLightning()
 
-    if (!this.animFrameId) {
+    if (!this.animFrameId && this.isTabVisible) {
       this.loop()
     }
   }
@@ -260,7 +260,6 @@ class CyberWeatherEngine {
       this.stop(true)
     } else {
       this.start()
-      // Trigger instant demonstration lightning bolt
       setTimeout(() => this.triggerLightning(), 400)
     }
   }
@@ -311,17 +310,17 @@ class CyberWeatherEngine {
   }
 
   scheduleNextLightning() {
-    const delay = 16000 + Math.random() * 20000
+    const delay = 18000 + Math.random() * 22000
     this.nextLightningTime = Date.now() + delay
   }
 
-  // Generate Procedural Branching Jagged Lightning Bolt
+  // Lightweight Fractal Lightning Bolt (Zero Gaussian Blur Overhead)
   triggerLightning() {
     if (!this.isWeatherActive) return
 
     const rootX = this.width * (0.2 + Math.random() * 0.6)
     const rootY = 0
-    const endX = rootX + (Math.random() - 0.5) * 450
+    const endX = rootX + (Math.random() - 0.5) * 400
     const endY = this.height * (0.65 + Math.random() * 0.35)
 
     const segments: LightningSegment[] = []
@@ -336,12 +335,11 @@ class CyberWeatherEngine {
       width: number
     ) => {
       const dist = Math.hypot(x2 - x1, y2 - y1)
-      if (depth >= 5 || dist < 18) {
+      if (depth >= 4 || dist < 22) {
         segments.push({ x1, y1, x2, y2, width })
         return
       }
 
-      // Midpoint displacement perpendicular to branch direction
       const angle = Math.atan2(y2 - y1, x2 - x1)
       const normal = angle + Math.PI / 2
       const offset = (Math.random() - 0.5) * roughness
@@ -349,25 +347,25 @@ class CyberWeatherEngine {
       const midX = (x1 + x2) / 2 + Math.cos(normal) * offset
       const midY = (y1 + y2) / 2 + Math.sin(normal) * offset
 
-      createBolt(x1, y1, midX, midY, roughness * 0.6, depth + 1, width)
-      createBolt(midX, midY, x2, y2, roughness * 0.6, depth + 1, width)
+      createBolt(x1, y1, midX, midY, roughness * 0.55, depth + 1, width)
+      createBolt(midX, midY, x2, y2, roughness * 0.55, depth + 1, width)
 
-      // Fork out a child branch
-      if (depth < 4 && Math.random() < 0.32) {
-        const branchAngle = angle + (Math.random() - 0.5) * 0.95
-        const branchLen = 50 + Math.random() * 110
+      // Fork out a single child branch
+      if (depth < 3 && Math.random() < 0.28) {
+        const branchAngle = angle + (Math.random() - 0.5) * 0.9
+        const branchLen = 40 + Math.random() * 90
         const bx = midX + Math.cos(branchAngle) * branchLen
         const by = midY + Math.sin(branchAngle) * branchLen
-        createBolt(midX, midY, bx, by, roughness * 0.5, depth + 2, width * 0.6)
+        createBolt(midX, midY, bx, by, roughness * 0.45, depth + 2, width * 0.6)
       }
     }
 
-    createBolt(rootX, rootY, endX, endY, 180, 0, 2.5)
+    createBolt(rootX, rootY, endX, endY, 150, 0, 2.0)
 
     this.activeLightning = {
       segments,
       startTime: Date.now(),
-      duration: 260,
+      duration: 220,
       rootX,
       rootY,
     }
@@ -376,7 +374,10 @@ class CyberWeatherEngine {
   }
 
   loop = () => {
-    if (!this.isWeatherActive) return
+    if (!this.isWeatherActive || !this.isTabVisible) {
+      this.animFrameId = null
+      return
+    }
 
     if (Date.now() >= this.nextLightningTime) {
       this.triggerLightning()
@@ -384,153 +385,154 @@ class CyberWeatherEngine {
 
     this.frameCounter++
 
-    if (this.ctx && this.canvas) {
-      this.ctx.clearRect(0, 0, this.width, this.height)
+    const ctx = this.ctx
+    if (ctx && this.canvas) {
+      ctx.clearRect(0, 0, this.width, this.height)
 
-      const windAngle = -1.8
+      const windAngle = -1.6
 
       // ==========================================
-      // 1. RENDER LIGHTNING BOLT & ATMOSPHERIC AURA
+      // 1. RENDER LIGHTNING BOLT (High-Perf Dual-Pass)
       // ==========================================
       if (this.activeLightning) {
         const elapsed = Date.now() - this.activeLightning.startTime
         if (elapsed > this.activeLightning.duration) {
           this.activeLightning = null
         } else {
-          // Lightning multi-flash discharge timing
           let alpha = 1.0
-          if (elapsed < 50) {
+          if (elapsed < 40) {
             alpha = 1.0
-          } else if (elapsed < 90) {
+          } else if (elapsed < 80) {
             alpha = 0.25
-          } else if (elapsed < 160) {
-            alpha = 0.9 // return stroke flicker
+          } else if (elapsed < 140) {
+            alpha = 0.85
           } else {
-            alpha = Math.max(0, 0.9 * (1 - (elapsed - 160) / 100))
+            alpha = Math.max(0, 0.85 * (1 - (elapsed - 140) / 80))
           }
 
           if (alpha > 0.02) {
-            // Soft atmospheric sky illumination centered at strike root
-            const glow = this.ctx.createRadialGradient(
-              this.activeLightning.rootX,
-              this.activeLightning.rootY,
-              20,
-              this.activeLightning.rootX,
-              this.activeLightning.rootY,
-              this.width * 0.75
-            )
-            glow.addColorStop(0, `rgba(56, 189, 248, ${alpha * 0.16})`)
-            glow.addColorStop(0.5, `rgba(30, 58, 138, ${alpha * 0.07})`)
-            glow.addColorStop(1, "rgba(2, 6, 23, 0)")
-            this.ctx.fillStyle = glow
-            this.ctx.fillRect(0, 0, this.width, this.height)
+            // Subtle sky illumination
+            ctx.fillStyle = `rgba(56, 189, 248, ${alpha * 0.08})`
+            ctx.fillRect(0, 0, this.width, this.height)
 
-            // Pass 1: Electric Cyan Aura with Shadow Glow
-            this.ctx.save()
-            this.ctx.shadowColor = "#38bdf8"
-            this.ctx.shadowBlur = 22
-            this.ctx.strokeStyle = `rgba(56, 189, 248, ${alpha * 0.85})`
-            this.ctx.lineCap = "round"
-            this.ctx.lineJoin = "round"
-
-            this.ctx.beginPath()
+            // Pass 1: Soft Cyan Electric Glow (Zero blur overhead)
+            ctx.lineCap = "round"
+            ctx.lineJoin = "round"
+            ctx.strokeStyle = `rgba(56, 189, 248, ${alpha * 0.55})`
+            ctx.lineWidth = 3.2
+            ctx.beginPath()
             for (let i = 0; i < this.activeLightning.segments.length; i++) {
               const seg = this.activeLightning.segments[i]
-              this.ctx.moveTo(seg.x1, seg.y1)
-              this.ctx.lineTo(seg.x2, seg.y2)
+              ctx.moveTo(seg.x1, seg.y1)
+              ctx.lineTo(seg.x2, seg.y2)
             }
-            this.ctx.lineWidth = 4
-            this.ctx.stroke()
+            ctx.stroke()
 
-            // Pass 2: Electric Pure White Core
-            this.ctx.shadowColor = "#ffffff"
-            this.ctx.shadowBlur = 8
-            this.ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`
-            this.ctx.lineWidth = 1.5
-            this.ctx.stroke()
-            this.ctx.restore()
+            // Pass 2: Sharp Electric White Core
+            ctx.strokeStyle = `rgba(255, 255, 255, ${alpha * 0.95})`
+            ctx.lineWidth = 1.1
+            ctx.stroke()
           }
         }
       }
 
       // ==========================================
-      // 2. RENDER FALLING RAIN STREAKS
+      // 2. RENDER FINE FALLING RAIN (Batched 1-Pass)
       // ==========================================
-      this.ctx.lineCap = "round"
+      ctx.lineWidth = 0.85 // Thinner, delicate raindrops
+      ctx.strokeStyle = "rgba(186, 230, 253, 0.42)"
+      ctx.beginPath()
+
       for (let i = 0; i < this.streaks.length; i++) {
         const s = this.streaks[i]
-        this.ctx.lineWidth = s.width
-        this.ctx.strokeStyle = s.color
-        this.ctx.globalAlpha = s.alpha
-
-        this.ctx.beginPath()
-        this.ctx.moveTo(s.x, s.y)
-        this.ctx.lineTo(s.x + windAngle * (s.l / 10), s.y + s.l)
-        this.ctx.stroke()
+        ctx.moveTo(s.x, s.y)
+        ctx.lineTo(s.x + windAngle * (s.l / 10), s.y + s.l)
 
         s.x += windAngle
         s.y += s.speed
 
         if (s.y > this.height) {
           s.y = -s.l
-          s.x = Math.random() * (this.width + 200) - 100
+          s.x = Math.random() * (this.width + 150) - 75
         }
       }
-      this.ctx.globalAlpha = 1.0
+      ctx.stroke()
 
       // ==========================================
-      // 3. RENDER GLASS IMPACT RIPPLES
+      // 3. RENDER GLASS IMPACT RIPPLES (Batched)
       // ==========================================
-      // Periodically spawn new glass impact
-      if (this.frameCounter % 14 === 0 && this.glassDrops.length < 75) {
+      if (this.frameCounter % 24 === 0 && this.glassDrops.length < 35) {
         const ix = Math.random() * this.width
         const iy = Math.random() * (this.height * 0.85)
 
-        this.ripples.push({
-          x: ix,
-          y: iy,
-          r: 2,
-          maxR: 12 + Math.random() * 14,
-          alpha: 0.75,
-        })
+        if (this.ripples.length < 6) {
+          this.ripples.push({
+            x: ix,
+            y: iy,
+            r: 1.5,
+            maxR: 6 + Math.random() * 4, // Smaller subtle ripples
+            alpha: 0.65,
+          })
+        }
 
         this.glassDrops.push({
           x: ix,
           y: iy,
-          r: 2.2 + Math.random() * 3.2,
-          alpha: 0.55 + Math.random() * 0.35,
-          isDripping: Math.random() < 0.22,
-          dripDelay: Math.floor(60 + Math.random() * 240),
-          speed: 1.8 + Math.random() * 3.0,
+          r: 1.0 + Math.random() * 1.5, // Small delicate water beads
+          alpha: 0.45 + Math.random() * 0.35,
+          isDripping: Math.random() < 0.25,
+          dripDelay: Math.floor(60 + Math.random() * 220),
+          speed: 1.4 + Math.random() * 1.8,
           wigglePhase: Math.random() * Math.PI * 2,
-          wiggleSpeed: 0.07 + Math.random() * 0.08,
+          wiggleSpeed: 0.05 + Math.random() * 0.06,
           trail: [],
         })
       }
 
-      for (let r = this.ripples.length - 1; r >= 0; r--) {
-        const rp = this.ripples[r]
-        this.ctx.strokeStyle = `rgba(165, 243, 252, ${rp.alpha * 0.6})`
-        this.ctx.lineWidth = 1.2
-        this.ctx.beginPath()
-        this.ctx.arc(rp.x, rp.y, rp.r, 0, Math.PI * 2)
-        this.ctx.stroke()
+      if (this.ripples.length > 0) {
+        ctx.lineWidth = 0.6
+        ctx.strokeStyle = "rgba(165, 243, 252, 0.38)"
+        ctx.beginPath()
+        for (let r = this.ripples.length - 1; r >= 0; r--) {
+          const rp = this.ripples[r]
+          ctx.moveTo(rp.x + rp.r, rp.y)
+          ctx.arc(rp.x, rp.y, rp.r, 0, Math.PI * 2)
 
-        rp.r += 1.4
-        rp.alpha -= 0.04
-
-        if (rp.alpha <= 0 || rp.r >= rp.maxR) {
-          this.ripples.splice(r, 1)
+          rp.r += 0.8
+          rp.alpha -= 0.045
+          if (rp.alpha <= 0 || rp.r >= rp.maxR) {
+            this.ripples.splice(r, 1)
+          }
         }
+        ctx.stroke()
       }
 
       // ==========================================
       // 4. RENDER GLASS WATER DROPLETS & TRICKLES
       // ==========================================
+      // Batch 4A: Droplet Trails
+      ctx.fillStyle = "rgba(186, 230, 253, 0.22)"
+      ctx.beginPath()
+      for (let d = 0; d < this.glassDrops.length; d++) {
+        const drop = this.glassDrops[d]
+        for (let t = drop.trail.length - 1; t >= 0; t--) {
+          const pt = drop.trail[t]
+          ctx.moveTo(pt.x + pt.r, pt.y)
+          ctx.arc(pt.x, pt.y, pt.r, 0, Math.PI * 2)
+          pt.alpha -= 0.012
+          if (pt.alpha <= 0) {
+            drop.trail.splice(t, 1)
+          }
+        }
+      }
+      ctx.fill()
+
+      // Batch 4B: Droplet Bodies (Meniscus)
+      ctx.fillStyle = "rgba(186, 230, 253, 0.32)"
+      ctx.beginPath()
       for (let d = this.glassDrops.length - 1; d >= 0; d--) {
         const drop = this.glassDrops[d]
 
-        // Update dripping behavior
         if (!drop.isDripping) {
           drop.dripDelay--
           if (drop.dripDelay <= 0) {
@@ -538,63 +540,42 @@ class CyberWeatherEngine {
           }
         } else {
           drop.y += drop.speed
-          drop.x += Math.sin(drop.wigglePhase) * 0.45
+          drop.x += Math.sin(drop.wigglePhase) * 0.35
           drop.wigglePhase += drop.wiggleSpeed
 
-          // Record wet trail every 4 frames
-          if (this.frameCounter % 4 === 0) {
+          if (this.frameCounter % 5 === 0 && drop.trail.length < 5) {
             drop.trail.push({
               x: drop.x,
               y: drop.y,
-              r: drop.r * 0.55,
-              alpha: drop.alpha * 0.6,
+              r: Math.max(0.4, drop.r * 0.45),
+              alpha: drop.alpha * 0.5,
             })
           }
         }
 
-        // Draw wet trails behind trickling droplets
-        for (let t = drop.trail.length - 1; t >= 0; t--) {
-          const pt = drop.trail[t]
-          this.ctx.fillStyle = `rgba(186, 230, 253, ${pt.alpha * 0.35})`
-          this.ctx.beginPath()
-          this.ctx.arc(pt.x, pt.y, Math.max(0.6, pt.r), 0, Math.PI * 2)
-          this.ctx.fill()
+        ctx.moveTo(drop.x + drop.r, drop.y)
+        ctx.arc(drop.x, drop.y, drop.r, 0, Math.PI * 2)
 
-          pt.alpha -= 0.008
-          if (pt.alpha <= 0) {
-            drop.trail.splice(t, 1)
-          }
-        }
-
-        // Render Realistic Optical Droplet on Glass
-        // Layer A: Water meniscus body
-        this.ctx.fillStyle = `rgba(186, 230, 253, ${drop.alpha * 0.35})`
-        this.ctx.beginPath()
-        this.ctx.arc(drop.x, drop.y, drop.r, 0, Math.PI * 2)
-        this.ctx.fill()
-
-        // Layer B: Bottom ambient sky reflection
-        this.ctx.fillStyle = `rgba(56, 189, 248, ${drop.alpha * 0.55})`
-        this.ctx.beginPath()
-        this.ctx.arc(drop.x + drop.r * 0.22, drop.y + drop.r * 0.22, Math.max(0.6, drop.r * 0.28), 0, Math.PI * 2)
-        this.ctx.fill()
-
-        // Layer C: Crisp specular reflection glint (top-left)
-        this.ctx.fillStyle = `rgba(255, 255, 255, ${drop.alpha * 0.95})`
-        this.ctx.beginPath()
-        this.ctx.arc(drop.x - drop.r * 0.3, drop.y - drop.r * 0.3, Math.max(0.7, drop.r * 0.34), 0, Math.PI * 2)
-        this.ctx.fill()
-
-        // Recycle drop once it falls off bottom or trail is cleared
-        if (drop.y > this.height + 30) {
-          if (drop.trail.length === 0) {
-            drop.y = -10
-            drop.x = Math.random() * this.width
-            drop.isDripping = false
-            drop.dripDelay = Math.floor(80 + Math.random() * 300)
-          }
+        if (drop.y > this.height + 20) {
+          drop.y = -10
+          drop.x = Math.random() * this.width
+          drop.isDripping = false
+          drop.dripDelay = Math.floor(90 + Math.random() * 260)
+          drop.trail = []
         }
       }
+      ctx.fill()
+
+      // Batch 4C: Specular Highlights (Top-left glint, tiny 0.4px)
+      ctx.fillStyle = "rgba(255, 255, 255, 0.85)"
+      ctx.beginPath()
+      for (let d = 0; d < this.glassDrops.length; d++) {
+        const drop = this.glassDrops[d]
+        const hr = Math.max(0.4, drop.r * 0.32)
+        ctx.moveTo(drop.x - drop.r * 0.3 + hr, drop.y - drop.r * 0.3)
+        ctx.arc(drop.x - drop.r * 0.3, drop.y - drop.r * 0.3, hr, 0, Math.PI * 2)
+      }
+      ctx.fill()
     }
 
     this.animFrameId = requestAnimationFrame(this.loop)
@@ -755,7 +736,6 @@ function loadTrack(index: number, autoPlay: boolean = true) {
         window.__cyber_weather.startRainSound()
       }
     }).catch(() => {
-      // If unmuted playback is blocked, attemptAutoplay will handle muted transition & prompt
       attemptAutoplay()
     })
   }
@@ -818,7 +798,6 @@ function attemptAutoplay() {
   const p = window.__bgm_player
   if (!p) return
 
-  // 1. Try unmuted playback directly
   p.audio.muted = false
   p.audio.volume = p.volume > 0 ? p.volume : 0.7
 
@@ -834,15 +813,13 @@ function attemptAutoplay() {
         }
       })
       .catch((err) => {
-        console.log("[BGM] Unmuted autoplay held by browser policy. Starting active timeline:", err)
-        // 2. Play muted so vinyl disc, HUD, and time progress are immediately running
+        console.log("[BGM] Autoplay policy held unmuted playback. Starting active timeline:", err)
         p.audio.muted = true
         p.audio.play().then(() => {
           p.isPlaying = true
           updatePlayVisuals(true)
         }).catch(() => {})
 
-        // 3. Show prominent Cyber HUD unlock banner
         showAutoplayPrompt()
         setupFirstGestureTrigger()
       })
