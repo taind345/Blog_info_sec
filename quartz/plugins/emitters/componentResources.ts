@@ -88,6 +88,20 @@ async function joinScripts(scripts: string[]): Promise<string> {
 function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentResources) {
   const cfg = ctx.cfg.configuration
 
+  // Default to dark theme on initial visit if not explicitly chosen
+  const defaultDarkInitScript = `
+    try {
+      const currentTheme = localStorage.getItem("theme");
+      if (!currentTheme) {
+        localStorage.setItem("theme", "dark");
+        document.documentElement.setAttribute("saved-theme", "dark");
+      } else {
+        document.documentElement.setAttribute("saved-theme", currentTheme);
+      }
+    } catch (e) {}
+  `
+  componentResources.beforeDOMLoaded.unshift(defaultDarkInitScript)
+
   // popovers
   if (cfg.enablePopovers) {
     componentResources.afterDOMLoaded.push(popoverScript)

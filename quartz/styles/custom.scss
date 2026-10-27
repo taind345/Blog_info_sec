@@ -2013,9 +2013,9 @@ article,
 
 .quartz-bgm {
   position: fixed;
-  top: 18px;
-  right: 28px;
-  bottom: auto;
+  bottom: 24px;
+  right: 24px;
+  top: auto;
   z-index: 1000;
   font-family: var(--codeFont), "Cascadia Code", Consolas, monospace;
   user-select: none;
@@ -2024,8 +2024,8 @@ article,
 // Autoplay Hint Banner
 .bgm-autoplay-hint {
   position: absolute;
-  top: calc(100% + 12px);
-  bottom: auto;
+  bottom: calc(100% + 12px);
+  top: auto;
   right: 0;
   display: flex;
   align-items: center;
@@ -3172,9 +3172,9 @@ article,
 // Responsive adjustments
 @media (max-width: 768px) {
   .quartz-bgm {
-    top: 12px;
-    right: 12px;
-    bottom: auto;
+    bottom: 16px;
+    right: 16px;
+    top: auto;
   }
 
   .bgm-floating-widget {
@@ -3211,5 +3211,93 @@ article,
 
   .bgm-modal-container {
     max-width: 95vw;
+  }
+}
+
+/* ==========================================================
+   AMBIENT RAIN & LIGHTNING WEATHER FX
+   ========================================================== */
+
+.weather-rain-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  mix-blend-mode: screen;
+
+  &.is-active {
+    opacity: 0.85;
+  }
+}
+
+.weather-flash-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 998;
+  background: rgba(220, 245, 255, 0.45);
+  opacity: 0;
+  mix-blend-mode: screen;
+  transition: opacity 0.06s ease;
+
+  &.is-flashing {
+    opacity: 0.75;
+  }
+}
+
+// Weather Toggle Buttons
+.weather-toggle-btn {
+  font-size: 0.85rem;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+  .weather-icon-indicator {
+    line-height: 1;
+    display: inline-block;
+    filter: drop-shadow(0 0 2px rgba(56, 189, 248, 0.4));
+  }
+
+  &.is-weather-on {
+    border-color: #38bdf8 !important;
+    background: rgba(56, 189, 248, 0.18) !important;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+
+    .weather-icon-indicator {
+      filter: drop-shadow(0 0 6px #38bdf8);
+      animation: rainBounce 2s infinite ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 6px #38bdf8;
+    }
+  }
+}
+
+@keyframes rainBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1.5px); }
+}
+
+.bgm-weather-ctrl-btn {
+  &.is-weather-on {
+    border-color: #38bdf8 !important;
+    color: #38bdf8 !important;
+    background: rgba(56, 189, 248, 0.12) !important;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
   }
 }

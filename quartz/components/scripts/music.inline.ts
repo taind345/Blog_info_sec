@@ -45,9 +45,376 @@ interface BgmGlobalState {
   initialized: boolean
 }
 
+interface RainDrop {
+  x: number
+  y: number
+  l: number
+  speed: number
+  alpha: number
+  width: number
+}
+
+interface RainSplash {
+  x: number
+  y: number
+  vx: number
+  vy: number
+  radius: number
+  alpha: number
+}
+
+class CyberWeatherEngine {
+  canvas: HTMLCanvasElement | null = null
+  ctx: CanvasRenderingContext2D | null = null
+  flashEl: HTMLElement | null = null
+  animFrameId: number | null = null
+
+  // Sound Engine
+  audioCtx: AudioContext | null = null
+  rainGain: GainNode | null = null
+  rainSource: AudioBufferSourceNode | null = null
+  isSoundRunning: boolean = false
+  isWeatherActive: boolean = true
+
+  // Visuals
+  drops: RainDrop[] = []
+  splashes: RainSplash[] = []
+  width: number = 0
+  height: number = 0
+  nextLightningTime: number = 0
+
+  constructor() {
+    const saved = localStorage.getItem("weather_active")
+    this.isWeatherActive = saved === null ? true : saved === "true"
+  }
+
+  initDOM() {
+    this.canvas = document.getElementById("weather-rain-canvas") as HTMLCanvasElement | null
+    this.flashEl = document.getElementById("weather-flash-overlay")
+    if (!this.canvas) return
+
+    this.ctx = this.canvas.getContext("2d")
+    this.resize()
+
+    window.removeEventListener("resize", this.handleResize)
+    window.addEventListener("resize", this.handleResize)
+
+    if (this.isWeatherActive) {
+      this.start()
+    } else {
+      this.stop(false)
+    }
+  }
+
+  handleResize = () => {
+    this.resize()
+  }
+
+  resize() {
+    if (!this.canvas) return
+    this.width = window.innerWidth
+    this.height = window.innerHeight
+    this.canvas.width = this.width
+    this.canvas.height = this.height
+
+    const count = Math.min(220, Math.max(90, Math.floor((this.width * this.height) / 8000)))
+    this.drops = []
+    for (let i = 0; i < count; i++) {
+      this.drops.push({
+        x: Math.random() * this.width,
+        y: Math.random() * this.height,
+        l: 14 + Math.random() * 18,
+        speed: 13 + Math.random() * 10,
+        alpha: 0.15 + Math.random() * 0.35,
+        width: 1 + Math.random() * 0.8,
+      })
+    }
+    this.splashes = []
+  }
+
+  start() {
+    this.isWeatherActive = true
+    localStorage.setItem("weather_active", "true")
+    if (this.canvas) this.canvas.classList.add("is-active")
+    this.updateButtons(true)
+
+    this.startRainSound()
+    this.scheduleNextLightning()
+
+    if (!this.animFrameId) {
+      this.loop()
+    }
+  }
+
+  stop(save: boolean = true) {
+    this.isWeatherActive = false
+    if (save) localStorage.setItem("weather_active", "false")
+    if (this.canvas) this.canvas.classList.remove("is-active")
+    this.updateButtons(false)
+
+    this.stopRainSound()
+
+    if (this.animFrameId) {
+      cancelAnimationFrame(this.animFrameId)
+      this.animFrameId = null
+    }
+    if (this.ctx && this.canvas) {
+      this.ctx.clearRect(0, 0, this.width, this.height)
+    }
+  }
+
+  toggle() {
+    if (this.isWeatherActive) {
+      this.stop(true)
+    } else {
+      this.start()
+    }
+  }
+
+  updateButtons(active: boolean) {
+    const quickBtn = document.getElementById("bgm-quick-weather")
+    const modalBtn = document.getElementById("bgm-modal-weather")
+    const label = document.getElementById("bgm-weather-label")
+
+    if (quickBtn) {
+      if (active) {
+        quickBtn.classList.add("is-weather-on")
+        quickBtn.title = "Thời tiết: Mưa chill & sấm chớp (ĐANG BẬT) - Bấm để tắt"
+      } else {
+        quickBtn.classList.remove("is-weather-on")
+        quickBtn.title = "Thời tiết: Mưa chill & sấm chớp (ĐANG TẮT) - Bấm để bật"
+      }
+    }
+    if (modalBtn) {
+      if (active) {
+        modalBtn.classList.add("is-weather-on")
+      } else {
+        modalBtn.classList.remove("is-weather-on")
+      }
+    }
+    if (label) {
+      label.textContent = active ? "🌧️ MƯA: BẬT" : "☁️ MƯA: TẮT"
+    }
+  }
+
+  // Web Audio Rain Ambient Synthesis
+  initAudio() {
+    if (this.audioCtx) return
+    const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext
+    if (!AudioContextClass) return
+    this.audioCtx = new AudioContextClass()
+  }
+
+  startRainSound() {
+    try {
+      this.initAudio()
+      if (!this.audioCtx) return
+      if (this.audioCtx.state === "suspended") {
+        this.audioCtx.resume().catch(() => {})
+      }
+      if (this.isSoundRunning) return
+
+      const bufferSize = this.audioCtx.sampleRate * 2
+      const noiseBuffer = this.audioCtx.createBuffer(2, bufferSize, this.audioCtx.sampleRate)
+      for (let channel = 0; channel < 2; channel++) {
+        const output = noiseBuffer.getChannelData(channel)
+        let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0
+        for (let i = 0; i < bufferSize; i++) {
+          const white = Math.random() * 2 - 1
+          b0 = 0.99886 * b0 + white * 0.0555179
+          b1 = 0.99332 * b1 + white * 0.0750759
+          b2 = 0.96900 * b2 + white * 0.1538520
+          b3 = 0.86650 * b3 + white * 0.3104856
+          b4 = 0.55000 * b4 + white * 0.5329522
+          b5 = -0.7616 * b5 - white * 0.0168980
+          output[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.045
+          b6 = white * 0.115926
+        }
+      }
+
+      const source = this.audioCtx.createBufferSource()
+      source.buffer = noiseBuffer
+      source.loop = true
+
+      const lowpass = this.audioCtx.createBiquadFilter()
+      lowpass.type = "lowpass"
+      lowpass.frequency.setValueAtTime(1050, this.audioCtx.currentTime)
+
+      const highpass = this.audioCtx.createBiquadFilter()
+      highpass.type = "highpass"
+      highpass.frequency.setValueAtTime(200, this.audioCtx.currentTime)
+
+      this.rainGain = this.audioCtx.createGain()
+      this.rainGain.gain.setValueAtTime(0.001, this.audioCtx.currentTime)
+      this.rainGain.gain.exponentialRampToValueAtTime(0.22, this.audioCtx.currentTime + 1.8)
+
+      source.connect(highpass)
+      highpass.connect(lowpass)
+      lowpass.connect(this.rainGain)
+      this.rainGain.connect(this.audioCtx.destination)
+
+      source.start()
+      this.rainSource = source
+      this.isSoundRunning = true
+    } catch (_) {}
+  }
+
+  stopRainSound() {
+    if (!this.audioCtx || !this.isSoundRunning) return
+    try {
+      if (this.rainGain) {
+        this.rainGain.gain.setValueAtTime(this.rainGain.gain.value, this.audioCtx.currentTime)
+        this.rainGain.gain.exponentialRampToValueAtTime(0.0001, this.audioCtx.currentTime + 1.0)
+      }
+      setTimeout(() => {
+        try {
+          if (this.rainSource) {
+            this.rainSource.stop()
+            this.rainSource.disconnect()
+            this.rainSource = null
+          }
+        } catch (_) {}
+        this.isSoundRunning = false
+      }, 1100)
+    } catch (_) {
+      this.isSoundRunning = false
+    }
+  }
+
+  scheduleNextLightning() {
+    const delay = 18000 + Math.random() * 22000
+    this.nextLightningTime = Date.now() + delay
+  }
+
+  triggerLightning() {
+    if (!this.isWeatherActive || !this.flashEl) return
+
+    this.flashEl.classList.add("is-flashing")
+    setTimeout(() => {
+      if (this.flashEl) this.flashEl.classList.remove("is-flashing")
+      setTimeout(() => {
+        if (this.flashEl && Math.random() > 0.35) {
+          this.flashEl.classList.add("is-flashing")
+          setTimeout(() => {
+            if (this.flashEl) this.flashEl.classList.remove("is-flashing")
+          }, 80)
+        }
+      }, 50)
+    }, 90)
+
+    setTimeout(() => {
+      this.playThunderSound()
+    }, 400 + Math.random() * 300)
+
+    this.scheduleNextLightning()
+  }
+
+  playThunderSound() {
+    if (!this.isWeatherActive || !this.audioCtx) return
+    if (this.audioCtx.state === "suspended") return
+
+    try {
+      const duration = 3.5 + Math.random() * 2.2
+      const bufferSize = Math.floor(this.audioCtx.sampleRate * duration)
+      const thunderBuffer = this.audioCtx.createBuffer(1, bufferSize, this.audioCtx.sampleRate)
+      const data = thunderBuffer.getChannelData(0)
+      let lastOut = 0.0
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1
+        data[i] = (lastOut + 0.02 * white) / 1.02
+        lastOut = data[i]
+        data[i] *= 3.8
+      }
+
+      const thunderSource = this.audioCtx.createBufferSource()
+      thunderSource.buffer = thunderBuffer
+
+      const thunderFilter = this.audioCtx.createBiquadFilter()
+      thunderFilter.type = "lowpass"
+      thunderFilter.frequency.setValueAtTime(140, this.audioCtx.currentTime)
+      thunderFilter.frequency.exponentialRampToValueAtTime(55, this.audioCtx.currentTime + duration)
+
+      const gain = this.audioCtx.createGain()
+      const now = this.audioCtx.currentTime
+      gain.gain.setValueAtTime(0.001, now)
+      gain.gain.linearRampToValueAtTime(0.35 + Math.random() * 0.25, now + 0.35)
+      gain.gain.exponentialRampToValueAtTime(0.001, now + duration)
+
+      thunderSource.connect(thunderFilter)
+      thunderFilter.connect(gain)
+      gain.connect(this.audioCtx.destination)
+
+      thunderSource.start()
+    } catch (_) {}
+  }
+
+  loop = () => {
+    if (!this.isWeatherActive) return
+
+    if (Date.now() >= this.nextLightningTime) {
+      this.triggerLightning()
+    }
+
+    if (this.ctx && this.canvas) {
+      this.ctx.clearRect(0, 0, this.width, this.height)
+
+      const windAngle = -1.2
+      this.ctx.lineWidth = 1.2
+      this.ctx.lineCap = "round"
+
+      for (let i = 0; i < this.drops.length; i++) {
+        const d = this.drops[i]
+        this.ctx.strokeStyle = `rgba(140, 220, 255, ${d.alpha})`
+        this.ctx.beginPath()
+        this.ctx.moveTo(d.x, d.y)
+        this.ctx.lineTo(d.x + windAngle * (d.l / 10), d.y + d.l)
+        this.ctx.stroke()
+
+        d.x += windAngle
+        d.y += d.speed
+
+        if (d.y > this.height) {
+          if (Math.random() < 0.25 && this.splashes.length < 50) {
+            this.splashes.push({
+              x: d.x,
+              y: this.height - 2,
+              vx: (Math.random() - 0.5) * 3,
+              vy: -Math.random() * 2.5 - 1,
+              radius: 1 + Math.random() * 1.5,
+              alpha: 0.6,
+            })
+          }
+          d.y = -d.l
+          d.x = Math.random() * (this.width + 100) - 50
+        }
+      }
+
+      for (let s = this.splashes.length - 1; s >= 0; s--) {
+        const sp = this.splashes[s]
+        this.ctx.fillStyle = `rgba(180, 235, 255, ${sp.alpha})`
+        this.ctx.beginPath()
+        this.ctx.arc(sp.x, sp.y, sp.radius, 0, Math.PI * 2)
+        this.ctx.fill()
+
+        sp.x += sp.vx
+        sp.y += sp.vy
+        sp.vy += 0.25
+        sp.alpha -= 0.04
+
+        if (sp.alpha <= 0) {
+          this.splashes.splice(s, 1)
+        }
+      }
+    }
+
+    this.animFrameId = requestAnimationFrame(this.loop)
+  }
+}
+
 declare global {
   interface Window {
     __bgm_player?: BgmGlobalState
+    __cyber_weather?: CyberWeatherEngine
   }
 }
 
@@ -162,6 +529,12 @@ function initBgmPlayer() {
   updatePlayVisuals(window.__bgm_player.isPlaying)
   updatePillInfo()
   renderTracklist()
+
+  // 3. Initialize or Re-attach Weather Engine
+  if (!window.__cyber_weather) {
+    window.__cyber_weather = new CyberWeatherEngine()
+  }
+  window.__cyber_weather.initDOM()
 }
 
 function loadTrack(index: number, autoPlay: boolean = true) {
@@ -270,6 +643,10 @@ function setupFirstGestureTrigger() {
         })
         .catch(() => {})
     }
+    // Also unlock rain ambient audio
+    if (window.__cyber_weather && window.__cyber_weather.isWeatherActive) {
+      window.__cyber_weather.startRainSound()
+    }
     const events = ["click", "keydown", "touchstart", "scroll", "pointerdown", "mousedown"]
     events.forEach((evt) => {
       window.removeEventListener(evt, unlockAudio, true)
@@ -308,6 +685,10 @@ function ensurePlayerDom() {
     root.setAttribute("data-persist", "true")
 
     root.innerHTML = `
+      <!-- Ambient Rain Canvas & Lightning Flash -->
+      <canvas id="weather-rain-canvas" class="weather-rain-canvas"></canvas>
+      <div id="weather-flash-overlay" class="weather-flash-overlay"></div>
+
       <!-- Autoplay Hint Banner -->
       <div class="bgm-autoplay-hint" id="bgm-autoplay-hint" style="display: none;" title="Bấm để phát nhạc nền">
         <span class="hint-pulse"></span>
@@ -371,6 +752,9 @@ function ensurePlayerDom() {
             </button>
             <button class="pill-btn" id="bgm-quick-next" title="Bài tiếp theo" aria-label="Next track">
               <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+            </button>
+            <button class="pill-btn weather-toggle-btn is-weather-on" id="bgm-quick-weather" title="Thời tiết: Bật/Tắt mưa chill & sấm chớp" aria-label="Toggle Weather FX">
+              <span class="weather-icon-indicator">🌧️</span>
             </button>
             <button class="pill-btn" id="bgm-quick-playlist" title="Chọn nhạc trong thư mục" aria-label="Open playlist">
               <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
@@ -444,6 +828,9 @@ function ensurePlayerDom() {
                   <button class="bgm-ctrl-btn" id="bgm-btn-mode" title="Chế độ phát">
                     <span id="bgm-mode-label">🔁 TẤT CẢ</span>
                   </button>
+                  <button class="bgm-ctrl-btn bgm-weather-ctrl-btn is-weather-on" id="bgm-modal-weather" title="Bật / Tắt thời tiết mưa chill & sấm chớp">
+                    <span id="bgm-weather-label">🌧️ MƯA: BẬT</span>
+                  </button>
                   <button class="bgm-ctrl-btn" id="bgm-btn-prev" title="Bài trước (Prev)">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
                   </button>
@@ -498,7 +885,9 @@ function bindPlayerEvents() {
   const pillInfo = document.getElementById("bgm-pill-info")
   const quickPlay = document.getElementById("bgm-quick-play")
   const quickNext = document.getElementById("bgm-quick-next")
+  const quickWeather = document.getElementById("bgm-quick-weather")
   const quickPlaylist = document.getElementById("bgm-quick-playlist")
+  const modalWeather = document.getElementById("bgm-modal-weather")
   const autoplayHint = document.getElementById("bgm-autoplay-hint")
 
   const modalBackdrop = document.getElementById("bgm-modal-backdrop")
@@ -556,6 +945,20 @@ function bindPlayerEvents() {
   quickNext?.addEventListener("click", (e) => {
     e.stopPropagation()
     playNextTrack()
+  })
+
+  quickWeather?.addEventListener("click", (e) => {
+    e.stopPropagation()
+    if (window.__cyber_weather) {
+      window.__cyber_weather.toggle()
+    }
+  })
+
+  modalWeather?.addEventListener("click", (e) => {
+    e.stopPropagation()
+    if (window.__cyber_weather) {
+      window.__cyber_weather.toggle()
+    }
   })
 
   btnPlay?.addEventListener("click", togglePlayPause)
