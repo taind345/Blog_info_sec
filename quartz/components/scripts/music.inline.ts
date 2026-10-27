@@ -12,24 +12,38 @@ interface Track {
 const FALLBACK_PLAYLIST: Track[] = [
   {
     id: 0,
+    file: "Tình Yêu Mới - Chillies (Official Audio) - (320 Kbps).mp3",
+    title: "Tình Yêu Mới (Studio HQ)",
+    artist: "Chillies",
+    src: "static/music/T%C3%ACnh%20Y%C3%AAu%20M%E1%BB%9Bi%20-%20Chillies%20(Official%20Audio)%20-%20(320%20Kbps).mp3",
+  },
+  {
+    id: 1,
     file: "Tình Yêu Mới - Chillies (Official Performance Video) [DZyeMmeQo-U].mp3",
-    title: "Tình Yêu Mới",
+    title: "Tình Yêu Mới (Live Performance)",
     artist: "Chillies",
     src: "static/music/T%C3%ACnh%20Y%C3%AAu%20M%E1%BB%9Bi%20-%20Chillies%20(Official%20Performance%20Video)%20%5BDZyeMmeQo-U%5D.mp3",
   },
   {
-    id: 1,
+    id: 2,
     file: "Chờ Anh Nhé (feat. Hoàng Rob) [0chK12qHGfM].mp3",
     title: "Chờ Anh Nhé (feat. Hoàng Rob)",
     artist: "Hoàng Rob",
     src: "static/music/Ch%E1%BB%9D%20Anh%20Nh%C3%A9%20(feat.%20Ho%C3%A0ng%20Rob)%20%5B0chK12qHGfM%5D.mp3",
   },
   {
-    id: 2,
+    id: 3,
     file: "GIẤC MƠ KHÁC - CHILLIES (Official Music Video) [WfGn1yTL8TI].mp3",
     title: "GIẤC MƠ KHÁC",
     artist: "CHILLIES",
     src: "static/music/GI%E1%BA%A4C%20M%C6%A0%20KH%C3%81C%20-%20CHILLIES%20(Official%20Music%20Video)%20%5BWfGn1yTL8TI%5D.mp3",
+  },
+  {
+    id: 4,
+    file: "Hạnh Phúc Mới (Cover) - Sơn Tùng M-TP x TUYENVU「Lo - Fi Version by 1 9 6 7」_ Audio Lyrics - (320 Kbps).mp3",
+    title: "Hạnh Phúc Mới (Cover) (Studio HQ)",
+    artist: "Sơn Tùng M-TP x TUYENVU",
+    src: "static/music/H%E1%BA%A1nh%20Ph%C3%BAc%20M%E1%BB%9Bi%20(Cover)%20-%20S%C6%A1n%20T%C3%B9ng%20M-TP%20x%20TUYENVU%E3%80%8CLo%20-%20Fi%20Version%20by%201%209%206%207%E3%80%8D_%20Audio%20Lyrics%20-%20(320%20Kbps).mp3",
   },
 ]
 
@@ -69,10 +83,8 @@ class CyberWeatherEngine {
   flashEl: HTMLElement | null = null
   animFrameId: number | null = null
 
-  // Sound Engine
-  audioCtx: AudioContext | null = null
-  rainGain: GainNode | null = null
-  rainSource: AudioBufferSourceNode | null = null
+  // Rain Sound Engine using Authentic Audio from music folder
+  rainAudio: HTMLAudioElement | null = null
   isSoundRunning: boolean = false
   isWeatherActive: boolean = true
 
@@ -130,6 +142,18 @@ class CyberWeatherEngine {
       })
     }
     this.splashes = []
+  }
+
+  initRainAudio() {
+    if (this.rainAudio) return
+    try {
+      this.rainAudio = new Audio(resolveAssetUrl("static/music/rain-ambient.mp3"))
+      this.rainAudio.loop = true
+      this.rainAudio.volume = 0.35
+      this.rainAudio.preload = "auto"
+    } catch (e) {
+      console.warn("[Weather] Rain audio init error:", e)
+    }
   }
 
   start() {
@@ -197,86 +221,21 @@ class CyberWeatherEngine {
     }
   }
 
-  // Web Audio Rain Ambient Synthesis
-  initAudio() {
-    if (this.audioCtx) return
-    const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext
-    if (!AudioContextClass) return
-    this.audioCtx = new AudioContextClass()
-  }
-
   startRainSound() {
-    try {
-      this.initAudio()
-      if (!this.audioCtx) return
-      if (this.audioCtx.state === "suspended") {
-        this.audioCtx.resume().catch(() => {})
-      }
-      if (this.isSoundRunning) return
-
-      const bufferSize = this.audioCtx.sampleRate * 2
-      const noiseBuffer = this.audioCtx.createBuffer(2, bufferSize, this.audioCtx.sampleRate)
-      for (let channel = 0; channel < 2; channel++) {
-        const output = noiseBuffer.getChannelData(channel)
-        let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0
-        for (let i = 0; i < bufferSize; i++) {
-          const white = Math.random() * 2 - 1
-          b0 = 0.99886 * b0 + white * 0.0555179
-          b1 = 0.99332 * b1 + white * 0.0750759
-          b2 = 0.96900 * b2 + white * 0.1538520
-          b3 = 0.86650 * b3 + white * 0.3104856
-          b4 = 0.55000 * b4 + white * 0.5329522
-          b5 = -0.7616 * b5 - white * 0.0168980
-          output[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.045
-          b6 = white * 0.115926
-        }
-      }
-
-      const source = this.audioCtx.createBufferSource()
-      source.buffer = noiseBuffer
-      source.loop = true
-
-      const lowpass = this.audioCtx.createBiquadFilter()
-      lowpass.type = "lowpass"
-      lowpass.frequency.setValueAtTime(1050, this.audioCtx.currentTime)
-
-      const highpass = this.audioCtx.createBiquadFilter()
-      highpass.type = "highpass"
-      highpass.frequency.setValueAtTime(200, this.audioCtx.currentTime)
-
-      this.rainGain = this.audioCtx.createGain()
-      this.rainGain.gain.setValueAtTime(0.001, this.audioCtx.currentTime)
-      this.rainGain.gain.exponentialRampToValueAtTime(0.22, this.audioCtx.currentTime + 1.8)
-
-      source.connect(highpass)
-      highpass.connect(lowpass)
-      lowpass.connect(this.rainGain)
-      this.rainGain.connect(this.audioCtx.destination)
-
-      source.start()
-      this.rainSource = source
-      this.isSoundRunning = true
-    } catch (_) {}
+    if (!this.isWeatherActive) return
+    this.initRainAudio()
+    if (this.rainAudio && this.rainAudio.paused) {
+      this.rainAudio.play().then(() => {
+        this.isSoundRunning = true
+      }).catch((e) => {
+        console.log("[Weather] Rain audio waiting for gesture unlock:", e)
+      })
+    }
   }
 
   stopRainSound() {
-    if (!this.audioCtx || !this.isSoundRunning) return
-    try {
-      if (this.rainGain) {
-        this.rainGain.gain.setValueAtTime(this.rainGain.gain.value, this.audioCtx.currentTime)
-        this.rainGain.gain.exponentialRampToValueAtTime(0.0001, this.audioCtx.currentTime + 1.0)
-      }
-      setTimeout(() => {
-        try {
-          if (this.rainSource) {
-            this.rainSource.stop()
-            this.rainSource.disconnect()
-            this.rainSource = null
-          }
-        } catch (_) {}
-        this.isSoundRunning = false
-      }, 1100)
-    } catch (_) {
+    if (this.rainAudio && !this.rainAudio.paused) {
+      this.rainAudio.pause()
       this.isSoundRunning = false
     }
   }
@@ -302,50 +261,7 @@ class CyberWeatherEngine {
       }, 50)
     }, 90)
 
-    setTimeout(() => {
-      this.playThunderSound()
-    }, 400 + Math.random() * 300)
-
     this.scheduleNextLightning()
-  }
-
-  playThunderSound() {
-    if (!this.isWeatherActive || !this.audioCtx) return
-    if (this.audioCtx.state === "suspended") return
-
-    try {
-      const duration = 3.5 + Math.random() * 2.2
-      const bufferSize = Math.floor(this.audioCtx.sampleRate * duration)
-      const thunderBuffer = this.audioCtx.createBuffer(1, bufferSize, this.audioCtx.sampleRate)
-      const data = thunderBuffer.getChannelData(0)
-      let lastOut = 0.0
-      for (let i = 0; i < bufferSize; i++) {
-        const white = Math.random() * 2 - 1
-        data[i] = (lastOut + 0.02 * white) / 1.02
-        lastOut = data[i]
-        data[i] *= 3.8
-      }
-
-      const thunderSource = this.audioCtx.createBufferSource()
-      thunderSource.buffer = thunderBuffer
-
-      const thunderFilter = this.audioCtx.createBiquadFilter()
-      thunderFilter.type = "lowpass"
-      thunderFilter.frequency.setValueAtTime(140, this.audioCtx.currentTime)
-      thunderFilter.frequency.exponentialRampToValueAtTime(55, this.audioCtx.currentTime + duration)
-
-      const gain = this.audioCtx.createGain()
-      const now = this.audioCtx.currentTime
-      gain.gain.setValueAtTime(0.001, now)
-      gain.gain.linearRampToValueAtTime(0.35 + Math.random() * 0.25, now + 0.35)
-      gain.gain.exponentialRampToValueAtTime(0.001, now + duration)
-
-      thunderSource.connect(thunderFilter)
-      thunderFilter.connect(gain)
-      gain.connect(this.audioCtx.destination)
-
-      thunderSource.start()
-    } catch (_) {}
   }
 
   loop = () => {
@@ -443,6 +359,7 @@ function initBgmPlayer() {
   if (!window.__bgm_player) {
     const audio = new Audio()
     audio.preload = "auto"
+    audio.autoplay = true
 
     const savedVol = parseFloat(localStorage.getItem("bgm_vol") || "0.7")
     const savedMode = (localStorage.getItem("bgm_mode") || "all") as "all" | "one" | "shuffle"
@@ -461,34 +378,15 @@ function initBgmPlayer() {
       initialized: false,
     }
 
-    // Attempt to fetch dynamic playlist.json from server
-    fetch(resolveAssetUrl("static/music/playlist.json"))
-      .then((res) => (res.ok ? res.json() : null))
-      .then((data: Track[]) => {
-        if (Array.isArray(data) && data.length > 0 && window.__bgm_player) {
-          window.__bgm_player.playlist = data
-          // Tìm bài "Tình Yêu Mới" để ưu tiên phát đầu tiên
-          const targetIndex = data.findIndex(
-            (t) =>
-              t.title.toLowerCase().includes("tình yêu mới") ||
-              t.file.toLowerCase().includes("tình yêu mới") ||
-              t.title.toLowerCase().includes("tinh yeu moi")
-          )
-          if (targetIndex >= 0 && !window.__bgm_player.isPlaying) {
-            window.__bgm_player.currentIndex = targetIndex
-            loadTrack(targetIndex, true)
-          } else if (window.__bgm_player.currentIndex >= data.length) {
-            window.__bgm_player.currentIndex = 0
-            loadTrack(0, true)
-          }
-          renderTracklist()
-          updatePillInfo()
-        }
-      })
-      .catch(() => {})
-
     // Audio Event Listeners
     audio.addEventListener("play", () => {
+      if (window.__bgm_player) window.__bgm_player.isPlaying = true
+      updatePlayVisuals(true)
+      localStorage.setItem("bgm_user_paused", "false")
+      hideAutoplayHint()
+    })
+
+    audio.addEventListener("playing", () => {
       if (window.__bgm_player) window.__bgm_player.isPlaying = true
       updatePlayVisuals(true)
       localStorage.setItem("bgm_user_paused", "false")
@@ -518,7 +416,23 @@ function initBgmPlayer() {
       updateDurationDisplay()
     })
 
-    // Setup initial source (Bài 0: "Tình Yêu Mới") và tự động phát ngay
+    // Fetch dynamic playlist.json from server
+    fetch(resolveAssetUrl("static/music/playlist.json"))
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data: Track[]) => {
+        if (Array.isArray(data) && data.length > 0 && window.__bgm_player) {
+          window.__bgm_player.playlist = data
+          // Bài 0 đã được sort lên đầu ("Tình Yêu Mới")
+          if (!window.__bgm_player.isPlaying) {
+            loadTrack(0, true)
+          }
+          renderTracklist()
+          updatePillInfo()
+        }
+      })
+      .catch(() => {})
+
+    // Setup initial source (Bài 0: "Tình Yêu Mới") và kích hoạt tự động phát
     loadTrack(0, true)
     attemptAutoplay()
     setupFirstGestureTrigger()
@@ -558,9 +472,16 @@ function loadTrack(index: number, autoPlay: boolean = true) {
   updatePillInfo()
   renderTracklist()
 
-  if (autoPlay) {
-    p.audio.play().catch((err) => {
-      console.log("[BGM] Autoplay policy prevented playback:", err)
+  if (autoPlay && localStorage.getItem("bgm_user_paused") !== "true") {
+    p.audio.play().then(() => {
+      p.isPlaying = true
+      updatePlayVisuals(true)
+      hideAutoplayHint()
+      if (window.__cyber_weather && window.__cyber_weather.isWeatherActive) {
+        window.__cyber_weather.startRainSound()
+      }
+    }).catch((err) => {
+      console.log("[BGM] Autoplay policy prevented immediate playback:", err)
       showAutoplayHint()
     })
   }
@@ -598,14 +519,22 @@ function togglePlayPause() {
   if (!p) return
 
   hideAutoplayHint()
+
   if (p.audio.paused) {
     p.audio.play().then(() => {
+      p.isPlaying = true
+      updatePlayVisuals(true)
       localStorage.setItem("bgm_user_paused", "false")
+      if (window.__cyber_weather && window.__cyber_weather.isWeatherActive) {
+        window.__cyber_weather.startRainSound()
+      }
     }).catch((err) => {
       console.warn("[BGM] Play error:", err)
     })
   } else {
     p.audio.pause()
+    p.isPlaying = false
+    updatePlayVisuals(false)
     localStorage.setItem("bgm_user_paused", "true")
   }
 }
@@ -614,6 +543,11 @@ function attemptAutoplay() {
   const p = window.__bgm_player
   if (!p) return
 
+  if (localStorage.getItem("bgm_user_paused") === "true") {
+    updatePlayVisuals(false)
+    return
+  }
+
   const playPromise = p.audio.play()
   if (playPromise !== undefined) {
     playPromise
@@ -621,9 +555,12 @@ function attemptAutoplay() {
         p.isPlaying = true
         updatePlayVisuals(true)
         hideAutoplayHint()
+        if (window.__cyber_weather && window.__cyber_weather.isWeatherActive) {
+          window.__cyber_weather.startRainSound()
+        }
       })
       .catch((err) => {
-        console.log("[BGM] Autoplay blocked by browser policy, awaiting first gesture:", err)
+        console.log("[BGM] Autoplay deferred until user gesture:", err)
         showAutoplayHint()
         setupFirstGestureTrigger()
       })
@@ -631,33 +568,45 @@ function attemptAutoplay() {
 }
 
 function setupFirstGestureTrigger() {
+  const events = ["click", "pointerdown", "touchstart", "keydown"]
+
   const unlockAudio = () => {
     const p = window.__bgm_player
-    if (p && p.audio.paused) {
+    if (!p) return
+
+    // Trigger rain ambient sound if weather is active
+    if (window.__cyber_weather && window.__cyber_weather.isWeatherActive) {
+      window.__cyber_weather.startRainSound()
+    }
+
+    // Trigger music if not explicitly paused by user
+    if (p.audio.paused && localStorage.getItem("bgm_user_paused") !== "true") {
       p.audio
         .play()
         .then(() => {
           p.isPlaying = true
           updatePlayVisuals(true)
           hideAutoplayHint()
+          removeListeners()
         })
-        .catch(() => {})
+        .catch(() => {
+          // If browser rejected on this attempt, keep listeners active for next gesture
+        })
+    } else {
+      removeListeners()
     }
-    // Also unlock rain ambient audio
-    if (window.__cyber_weather && window.__cyber_weather.isWeatherActive) {
-      window.__cyber_weather.startRainSound()
-    }
-    const events = ["click", "keydown", "touchstart", "scroll", "pointerdown", "mousedown"]
+  }
+
+  const removeListeners = () => {
     events.forEach((evt) => {
       window.removeEventListener(evt, unlockAudio, true)
       document.removeEventListener(evt, unlockAudio, true)
     })
   }
 
-  const events = ["click", "keydown", "touchstart", "scroll", "pointerdown", "mousedown"]
   events.forEach((evt) => {
-    window.addEventListener(evt, unlockAudio, { once: true, passive: true, capture: true })
-    document.addEventListener(evt, unlockAudio, { once: true, passive: true, capture: true })
+    window.addEventListener(evt, unlockAudio, { passive: true, capture: true })
+    document.addEventListener(evt, unlockAudio, { passive: true, capture: true })
   })
 }
 
@@ -690,7 +639,7 @@ function ensurePlayerDom() {
       <div id="weather-flash-overlay" class="weather-flash-overlay"></div>
 
       <!-- Autoplay Hint Banner -->
-      <div class="bgm-autoplay-hint" id="bgm-autoplay-hint" style="display: none;" title="Bấm để phát nhạc nền">
+      <div class="bgm-autoplay-hint" id="bgm-autoplay-hint" style="display: none;" title="Bấm vào đây để phát nhạc nền">
         <span class="hint-pulse"></span>
         <span class="hint-text">🎵 BẤM ĐỂ PHÁT NHẠC NỀN ⚡</span>
       </div>
@@ -742,7 +691,7 @@ function ensurePlayerDom() {
               </div>
             </div>
             <div class="pill-title-marquee">
-              <span class="pill-track-title" id="bgm-track-title">Loading track...</span>
+              <span class="pill-track-title" id="bgm-track-title">Tình Yêu Mới • Chillies</span>
             </div>
           </div>
           <div class="pill-actions">
@@ -782,7 +731,7 @@ function ensurePlayerDom() {
 
           <!-- Modal Body -->
           <div class="bgm-modal-body">
-            <!-- Spotlight: Big Vinyl & Controls -->
+            <!-- Spotlight: Big Vinyl & Spacious Controls -->
             <div class="bgm-spotlight">
               <div class="spotlight-vinyl-box">
                 <div class="spotlight-vinyl-disc" id="bgm-spotlight-disc">
@@ -823,29 +772,38 @@ function ensurePlayerDom() {
                   <span id="bgm-time-total">00:00</span>
                 </div>
 
-                <!-- Controls -->
-                <div class="bgm-controls-row">
-                  <button class="bgm-ctrl-btn" id="bgm-btn-mode" title="Chế độ phát">
-                    <span id="bgm-mode-label">🔁 TẤT CẢ</span>
-                  </button>
-                  <button class="bgm-ctrl-btn bgm-weather-ctrl-btn is-weather-on" id="bgm-modal-weather" title="Bật / Tắt thời tiết mưa chill & sấm chớp">
-                    <span id="bgm-weather-label">🌧️ MƯA: BẬT</span>
-                  </button>
-                  <button class="bgm-ctrl-btn" id="bgm-btn-prev" title="Bài trước (Prev)">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
-                  </button>
-                  <button class="bgm-ctrl-btn bgm-ctrl-play" id="bgm-btn-play" title="Phát / Tạm dừng">
-                    <svg class="icon-play" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                    <svg class="icon-pause" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-                  </button>
-                  <button class="bgm-ctrl-btn" id="bgm-btn-next" title="Bài tiếp (Next)">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
-                  </button>
-                  <div class="bgm-volume-box">
-                    <button class="bgm-ctrl-btn" id="bgm-btn-mute" title="Tắt / Bật âm">
-                      <span id="bgm-mute-icon">🔊</span>
+                <!-- Controls Panel (Spacious 2-tier layout, no crowding) -->
+                <div class="bgm-controls-panel">
+                  <!-- Row 1: Primary Centered Transport Controls -->
+                  <div class="bgm-transport-row">
+                    <button class="bgm-step-btn" id="bgm-btn-prev" title="Bài trước (Prev)" aria-label="Previous track">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
                     </button>
-                    <input type="range" class="bgm-volume-slider" id="bgm-volume-slider" min="0" max="1" step="0.01" value="0.7" />
+                    <button class="bgm-ctrl-play" id="bgm-btn-play" title="Phát / Tạm dừng" aria-label="Play or Pause">
+                      <svg class="icon-play" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                      <svg class="icon-pause" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                    </button>
+                    <button class="bgm-step-btn" id="bgm-btn-next" title="Bài tiếp (Next)" aria-label="Next track">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+                    </button>
+                  </div>
+
+                  <!-- Row 2: Secondary Utilities (Mode, Weather, Volume) -->
+                  <div class="bgm-utility-row">
+                    <div class="utility-left">
+                      <button class="bgm-pill-chip" id="bgm-btn-mode" title="Chế độ phát">
+                        <span id="bgm-mode-label">🔁 TẤT CẢ</span>
+                      </button>
+                      <button class="bgm-pill-chip bgm-weather-chip is-weather-on" id="bgm-modal-weather" title="Bật / Tắt thời tiết mưa chill">
+                        <span id="bgm-weather-label">🌧️ MƯA: BẬT</span>
+                      </button>
+                    </div>
+                    <div class="bgm-volume-box">
+                      <button class="bgm-mute-btn" id="bgm-btn-mute" title="Tắt / Bật âm">
+                        <span id="bgm-mute-icon">🔊</span>
+                      </button>
+                      <input type="range" class="bgm-volume-slider" id="bgm-volume-slider" min="0" max="1" step="0.01" value="0.7" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -858,19 +816,13 @@ function ensurePlayerDom() {
                   <span class="header-prompt">&gt;&gt;</span>
                   <span class="header-text">KHO NHẠC BẢN QUYỀN (THƯ MỤC MUSIC/)</span>
                 </div>
-                <span class="playlist-count" id="bgm-playlist-count">2 tracks</span>
+                <span class="playlist-count" id="bgm-playlist-count">5 tracks</span>
               </div>
 
               <div class="bgm-tracklist" id="bgm-tracklist">
-                <!-- Tracks will be rendered here -->
+                <!-- Tracks dynamically rendered -->
               </div>
             </div>
-          </div>
-
-          <!-- Modal Footer -->
-          <div class="bgm-modal-footer">
-            <span class="footer-tip">⚡ Bấm vào bất kỳ bài hát nào để nghe • Nhạc tự động phát liên tục khi xem bài viết khác</span>
-            <span class="footer-engine">[HTML5 AUDIO ENGINE]</span>
           </div>
         </div>
       </div>
@@ -977,7 +929,7 @@ function bindPlayerEvents() {
     updateModeDisplay()
   })
 
-  // Volume & Mute
+  // Volume & Mute (Sync with Weather rain ambient audio)
   volSlider?.addEventListener("input", (e) => {
     const p = window.__bgm_player
     if (!p) return
@@ -987,6 +939,11 @@ function bindPlayerEvents() {
     p.isMuted = val === 0
     localStorage.setItem("bgm_vol", String(val))
     updateVolumeIcon()
+
+    if (window.__cyber_weather?.rainAudio) {
+      window.__cyber_weather.rainAudio.volume = Math.min(0.5, val * 0.5)
+      window.__cyber_weather.rainAudio.muted = p.isMuted
+    }
   })
 
   btnMute?.addEventListener("click", () => {
@@ -996,10 +953,15 @@ function bindPlayerEvents() {
     if (p.isMuted) {
       p.audio.volume = 0
       if (volSlider) volSlider.value = "0"
+      if (window.__cyber_weather?.rainAudio) window.__cyber_weather.rainAudio.muted = true
     } else {
       const v = p.volume > 0 ? p.volume : 0.7
       p.audio.volume = v
       if (volSlider) volSlider.value = String(v)
+      if (window.__cyber_weather?.rainAudio) {
+        window.__cyber_weather.rainAudio.muted = false
+        window.__cyber_weather.rainAudio.volume = Math.min(0.5, v * 0.5)
+      }
     }
     updateVolumeIcon()
   })
@@ -1016,6 +978,8 @@ function bindPlayerEvents() {
 
 // 4. Visual State Updaters
 function updatePlayVisuals(isPlaying: boolean) {
+  const modalContainer = document.getElementById("bgm-modal-container")
+  const widget = document.getElementById("bgm-floating-widget")
   const disc1 = document.getElementById("bgm-vinyl-disc")
   const disc2 = document.getElementById("bgm-spotlight-disc")
   const tonearm1 = document.getElementById("bgm-tonearm")
@@ -1029,6 +993,8 @@ function updatePlayVisuals(isPlaying: boolean) {
   const statusTag = document.getElementById("spotlight-status-tag")
 
   if (isPlaying) {
+    modalContainer?.classList.add("is-playing")
+    widget?.classList.add("is-playing")
     disc1?.classList.add("is-spinning")
     disc2?.classList.add("is-spinning")
     tonearm1?.classList.add("is-active")
@@ -1045,6 +1011,8 @@ function updatePlayVisuals(isPlaying: boolean) {
       statusTag.className = "spotlight-status-tag tag-playing"
     }
   } else {
+    modalContainer?.classList.remove("is-playing")
+    widget?.classList.remove("is-playing")
     disc1?.classList.remove("is-spinning")
     disc2?.classList.remove("is-spinning")
     tonearm1?.classList.remove("is-active")

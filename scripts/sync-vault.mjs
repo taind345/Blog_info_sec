@@ -769,8 +769,30 @@ function syncMusicFiles() {
     return;
   }
 
+  // 1. Tách và đồng bộ file âm thanh mưa nền (Weather FX)
+  const rainFile = files.find((f) => {
+    const l = f.toLowerCase();
+    return l.includes("rain") || l.includes("thunder") || l.includes("tiếng mưa");
+  });
+
+  if (rainFile) {
+    const srcRain = path.join(musicSrcDir, rainFile);
+    fs.copyFileSync(srcRain, path.join(quartzStaticMusic, "rain-ambient.mp3"));
+    if (fs.existsSync(path.resolve("public", "static"))) {
+      if (!fs.existsSync(publicStaticMusic)) fs.mkdirSync(publicStaticMusic, { recursive: true });
+      fs.copyFileSync(srcRain, path.join(publicStaticMusic, "rain-ambient.mp3"));
+    }
+    console.log(`🌧️ Đã thiết lập âm thanh mưa nền: ${rainFile} -> static/music/rain-ambient.mp3`);
+  }
+
+  // 2. Lọc bỏ file mưa khỏi danh sách bài hát (để không bị phát lẫn khi nghe nhạc)
+  const musicFiles = files.filter((f) => {
+    const l = f.toLowerCase();
+    return !(l.includes("rain") || l.includes("thunder") || l.includes("tiếng mưa"));
+  });
+
   // Sort files: Ưu tiên đưa bài "Tình Yêu Mới" lên đầu danh sách (index 0)
-  files.sort((a, b) => {
+  musicFiles.sort((a, b) => {
     const isAFirst = a.toLowerCase().includes("tình yêu mới") || a.toLowerCase().includes("tinh yeu moi");
     const isBFirst = b.toLowerCase().includes("tình yêu mới") || b.toLowerCase().includes("tinh yeu moi");
     if (isAFirst && !isBFirst) return -1;
@@ -780,8 +802,8 @@ function syncMusicFiles() {
 
   const playlist = [];
 
-  for (let idx = 0; idx < files.length; idx++) {
-    const filename = files[idx];
+  for (let idx = 0; idx < musicFiles.length; idx++) {
+    const filename = musicFiles[idx];
     const srcFile = path.join(musicSrcDir, filename);
     const destQuartz = path.join(quartzStaticMusic, filename);
 
@@ -814,6 +836,13 @@ function syncMusicFiles() {
       if (featMatch) {
         artist = featMatch[1].trim();
       }
+    }
+
+    // Phân biệt 2 bản Tình Yêu Mới
+    if (filename.toLowerCase().includes("performance") && !title.toLowerCase().includes("performance")) {
+      title += " (Live Performance)";
+    } else if ((filename.toLowerCase().includes("audio") || filename.includes("320")) && !title.toLowerCase().includes("hq")) {
+      title += " (Studio HQ)";
     }
 
     playlist.push({
