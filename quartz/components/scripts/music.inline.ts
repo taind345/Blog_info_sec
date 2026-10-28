@@ -530,6 +530,8 @@ class CyberWeatherEngine {
   }
 }
 
+export {}
+
 declare global {
   interface Window {
     __bgm_player?: BgmGlobalState
