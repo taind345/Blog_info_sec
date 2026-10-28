@@ -785,10 +785,33 @@ function syncMusicFiles() {
     console.log(`🌧️ Đã thiết lập âm thanh mưa nền: ${rainFile} -> static/music/rain-ambient.mp3`);
   }
 
-  // 2. Lọc bỏ file mưa khỏi danh sách bài hát (để không bị phát lẫn khi nghe nhạc)
+  // 1b. Tách và đồng bộ file âm thanh Giáng sinh (Christmas FX)
+  const christmasFile = files.find((f) => {
+    const l = f.toLowerCase();
+    return l.includes("christmas") || l.includes("noel") || l.includes("jingle");
+  });
+
+  if (christmasFile) {
+    const srcChristmas = path.join(musicSrcDir, christmasFile);
+    fs.copyFileSync(srcChristmas, path.join(quartzStaticMusic, "christmas-ambient.mp3"));
+    if (fs.existsSync(path.resolve("public", "static"))) {
+      if (!fs.existsSync(publicStaticMusic)) fs.mkdirSync(publicStaticMusic, { recursive: true });
+      fs.copyFileSync(srcChristmas, path.join(publicStaticMusic, "christmas-ambient.mp3"));
+    }
+    console.log(`❄️ Đã thiết lập âm thanh Giáng sinh: ${christmasFile} -> static/music/christmas-ambient.mp3`);
+  }
+
+  // 2. Lọc bỏ file hiệu ứng thời tiết (mưa, giáng sinh) khỏi danh sách bài hát
   const musicFiles = files.filter((f) => {
     const l = f.toLowerCase();
-    return !(l.includes("rain") || l.includes("thunder") || l.includes("tiếng mưa"));
+    return !(
+      l.includes("rain") ||
+      l.includes("thunder") ||
+      l.includes("tiếng mưa") ||
+      l.includes("christmas") ||
+      l.includes("noel") ||
+      l.includes("jingle")
+    );
   });
 
   // Sort files: Ưu tiên đưa bài "Tình Yêu Mới" lên đầu danh sách (index 0)
