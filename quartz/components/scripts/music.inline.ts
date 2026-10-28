@@ -131,16 +131,16 @@ class CyberWeatherEngine {
   }
 
   initDOM() {
-    this.canvas = document.getElementById("weather-rain-canvas") as HTMLCanvasElement | null
-    if (!this.canvas) return
+    const canvas = document.getElementById("weather-rain-canvas") as HTMLCanvasElement | null
+    if (!canvas) return
 
-    if (this.isInitialized && this.animFrameId) {
-      return
+    const canvasChanged = this.canvas !== canvas || !this.ctx
+    this.canvas = canvas
+
+    if (canvasChanged) {
+      this.ctx = canvas.getContext("2d", { alpha: true })
+      this.resize()
     }
-    this.isInitialized = true
-
-    this.ctx = this.canvas.getContext("2d", { alpha: true })
-    this.resize()
 
     window.removeEventListener("resize", this.handleResize)
     window.addEventListener("resize", this.handleResize)
@@ -149,9 +149,15 @@ class CyberWeatherEngine {
     document.addEventListener("visibilitychange", this.handleVisibility)
 
     if (this.isWeatherActive) {
-      this.start()
+      this.canvas.classList.add("is-active")
+      this.updateButtons(true)
+      if (!this.animFrameId && this.isTabVisible) {
+        this.lastTime = 0
+        this.loop(performance.now())
+      }
     } else {
-      this.stop(false)
+      this.canvas.classList.remove("is-active")
+      this.updateButtons(false)
     }
   }
 
@@ -180,36 +186,38 @@ class CyberWeatherEngine {
     this.canvas.style.width = `${this.width}px`
     this.canvas.style.height = `${this.height}px`
 
-    // Pre-allocated Static Pool of Fine Streaks (75 particles)
-    const streakCount = Math.min(75, Math.max(45, Math.floor((this.width * this.height) / 19000)))
-    this.streaks = []
-    for (let i = 0; i < streakCount; i++) {
-      this.streaks.push({
-        x: Math.random() * (this.width + 100) - 50,
-        y: Math.random() * this.height,
-        l: 10 + Math.random() * 12,
-        speed: 15 + Math.random() * 8,
-        alpha: 0.22 + Math.random() * 0.25,
-      })
+    // Pre-allocated Static Pool of Fine Streaks (75 particles, allocate only once)
+    if (this.streaks.length === 0) {
+      const streakCount = Math.min(75, Math.max(45, Math.floor((this.width * this.height) / 19000)))
+      for (let i = 0; i < streakCount; i++) {
+        this.streaks.push({
+          x: Math.random() * (this.width + 100) - 50,
+          y: Math.random() * this.height,
+          l: 10 + Math.random() * 12,
+          speed: 15 + Math.random() * 8,
+          alpha: 0.22 + Math.random() * 0.25,
+        })
+      }
     }
 
-    // Pre-allocated Static Pool of Delicate Glass Droplets (16 particles)
-    const dropCount = Math.min(18, Math.max(10, Math.floor((this.width * this.height) / 80000)))
-    this.glassDrops = []
-    for (let i = 0; i < dropCount; i++) {
-      const y = Math.random() * this.height
-      this.glassDrops.push({
-        x: Math.random() * this.width,
-        y: y,
-        startY: y,
-        r: 0.85 + Math.random() * 1.15,
-        alpha: 0.32 + Math.random() * 0.25,
-        isDripping: Math.random() < 0.2,
-        dripDelay: Math.floor(60 + Math.random() * 240),
-        speed: 1.1 + Math.random() * 1.3,
-        wigglePhase: Math.random() * Math.PI * 2,
-        wiggleSpeed: 0.04 + Math.random() * 0.04,
-      })
+    // Pre-allocated Static Pool of Delicate Glass Droplets (16 particles, allocate only once)
+    if (this.glassDrops.length === 0) {
+      const dropCount = Math.min(18, Math.max(10, Math.floor((this.width * this.height) / 80000)))
+      for (let i = 0; i < dropCount; i++) {
+        const y = Math.random() * this.height
+        this.glassDrops.push({
+          x: Math.random() * this.width,
+          y: y,
+          startY: y,
+          r: 0.85 + Math.random() * 1.15,
+          alpha: 0.32 + Math.random() * 0.25,
+          isDripping: Math.random() < 0.2,
+          dripDelay: Math.floor(60 + Math.random() * 240),
+          speed: 1.1 + Math.random() * 1.3,
+          wigglePhase: Math.random() * Math.PI * 2,
+          wiggleSpeed: 0.04 + Math.random() * 0.04,
+        })
+      }
     }
   }
 
@@ -482,7 +490,7 @@ class CyberWeatherEngine {
         const drop = this.glassDrops[d]
 
         if (!drop.isDripping) {
-          drop.dripDelay--
+          drop.dripDelay -= dt
           if (drop.dripDelay <= 0) {
             drop.isDripping = true
             drop.startY = drop.y
@@ -1340,15 +1348,18 @@ function renderTracklist() {
 let bgmInitialized = false
 
 function onNav() {
+  ensurePlayerDom()
+
   if (!bgmInitialized) {
     bgmInitialized = true
     initBgmPlayer()
   } else {
     // On subsequent SPA page transitions, keep audio & canvas running with zero interruption
-    ensurePlayerDom()
     updatePlayVisuals(window.__bgm_player?.isPlaying ?? false)
     updatePillInfo()
     renderTracklist()
+    // Re-verify & re-sync weather engine canvas across notes
+    window.__cyber_weather?.initDOM()
   }
 }
 

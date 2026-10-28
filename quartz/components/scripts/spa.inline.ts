@@ -107,8 +107,18 @@ async function _navigate(url: URL, isBack: boolean = false) {
   announcer.dataset.persist = ""
   html.body.appendChild(announcer)
 
+  // Preserve persistent background components (Music Player & Cyber Weather Engine) across SPA note transitions
+  const bgmRoot = document.getElementById("quartz-bgm-root")
+  if (bgmRoot && bgmRoot.parentNode) {
+    bgmRoot.remove()
+  }
+
   document.querySelector(".navigation-progress")?.remove()
   micromorph(document.body, html.body)
+
+  if (bgmRoot && !document.getElementById("quartz-bgm-root")) {
+    document.body.appendChild(bgmRoot)
+  }
 
   // scroll into place and add history
   if (!isBack) {
