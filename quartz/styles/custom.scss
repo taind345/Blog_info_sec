@@ -2262,38 +2262,26 @@ article,
 }
 
 .vinyl-center-label {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
-  background: radial-gradient(circle, #00ff66 0%, #059669 70%, #022c22 100%);
+  background: radial-gradient(circle, #062e19 0%, #090e15 100%);
+  border: 1.5px solid #00ff66;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  box-shadow: 0 0 8px rgba(0, 255, 102, 0.6);
+  box-shadow: 0 0 10px rgba(0, 255, 102, 0.7), inset 0 0 5px rgba(0, 255, 102, 0.4);
 
-  .vinyl-hole {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: #05070a;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    z-index: 2;
-  }
-
-  .vinyl-center-art {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .vinyl-music-icon {
-      width: 10px;
-      height: 10px;
-      color: #05070a;
-      opacity: 0.85;
-    }
+  .vinyl-music-icon {
+    width: 13px;
+    height: 13px;
+    color: #ffffff;
+    fill: #ffffff;
+    filter: drop-shadow(0 0 3px #00ff66) drop-shadow(0 0 1px #000000);
+    opacity: 1;
+    z-index: 3;
+    pointer-events: none;
   }
 }
 
@@ -2409,20 +2397,21 @@ article,
 .pill-equalizer {
   display: flex;
   align-items: flex-end;
-  gap: 2px;
-  height: 9px;
+  gap: 2.5px;
+  height: 12px;
 
   .eq-bar {
-    width: 2px;
-    height: 3px;
-    background: #64748b;
+    width: 2.5px;
+    height: 4px;
+    background: #475569;
     border-radius: 1px;
-    transition: height 0.15s ease;
+    transition: height 0.15s ease, background 0.2s ease;
   }
 
   &.is-active {
     .eq-bar {
       background: #00ff66;
+      box-shadow: 0 0 6px rgba(0, 255, 102, 0.7);
     }
     .bar-1 {
       animation: eqBounce 0.7s infinite alternate ease-in-out;
@@ -2432,6 +2421,9 @@ article,
     }
     .bar-3 {
       animation: eqBounce 0.9s infinite alternate ease-in-out 0.4s;
+    }
+    .bar-4 {
+      animation: eqBounce 0.65s infinite alternate ease-in-out 0.15s;
     }
   }
 }
@@ -2642,7 +2634,8 @@ article,
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg, #00ff66, #38bdf8, #a855f7);
+    background: #00ff66;
+    box-shadow: 0 0 12px rgba(0, 255, 102, 0.8), 0 0 24px rgba(0, 255, 102, 0.4);
   }
 }
 
@@ -2705,20 +2698,26 @@ article,
 }
 
 .spotlight-center-label {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: radial-gradient(circle, #00ff66 0%, #059669 65%, #022c22 100%);
+  background: radial-gradient(circle, #062e19 0%, #090e15 100%);
+  border: 2px solid #00ff66;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  box-shadow: 0 0 12px rgba(0, 255, 102, 0.7);
+  box-shadow: 0 0 16px rgba(0, 255, 102, 0.8), inset 0 0 8px rgba(0, 255, 102, 0.4);
 
-  .vinyl-pulse-icon {
-    font-size: 16px;
-    color: #05070a;
-    font-weight: 900;
+  .spotlight-music-icon {
+    width: 26px;
+    height: 26px;
+    color: #ffffff;
+    fill: #ffffff;
+    filter: drop-shadow(0 0 6px #00ff66) drop-shadow(0 0 2px #000000);
+    opacity: 1;
+    z-index: 3;
+    pointer-events: none;
   }
 }
 
@@ -2819,6 +2818,27 @@ article,
   color: #94a3b8;
 }
 
+// Animated Undulating Music Wave Line
+.bgm-soundwave-container {
+  width: 100%;
+  height: 34px;
+  background: rgba(4, 8, 14, 0.5);
+  border: 1px solid rgba(0, 255, 102, 0.2);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.7);
+}
+
+.bgm-soundwave-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 // Progress Bar
 .bgm-progress-container {
   padding: 6px 0;
@@ -2828,7 +2848,7 @@ article,
 .bgm-progress-bar {
   position: relative;
   height: 6px;
-  background: #1e293b;
+  background: #151f2e;
   border-radius: 3px;
   overflow: visible;
 
@@ -2838,9 +2858,24 @@ article,
     left: 0;
     bottom: 0;
     width: 0%;
-    background: linear-gradient(90deg, #00ff66, #38bdf8);
+    background: #00ff66;
     border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 255, 102, 0.85);
     transition: width 0.1s linear;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.65),
+        transparent
+      );
+      animation: waveShimmer 2s infinite ease-in-out;
+    }
   }
 
   .bgm-progress-thumb {
@@ -2852,7 +2887,7 @@ article,
     border-radius: 50%;
     background: #00ff66;
     border: 2px solid #090e15;
-    box-shadow: 0 0 8px #00ff66;
+    box-shadow: 0 0 10px #00ff66;
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.15s ease;
@@ -2861,6 +2896,11 @@ article,
   &:hover .bgm-progress-thumb {
     opacity: 1;
   }
+}
+
+@keyframes waveShimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 .bgm-time-row {

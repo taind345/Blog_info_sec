@@ -530,12 +530,123 @@ class CyberWeatherEngine {
   }
 }
 
+// 5. Dynamic Undulating Audio Soundwave Line (Sóng âm uốn lượn)
+class SoundwaveEngine {
+  canvas: HTMLCanvasElement | null = null
+  ctx: CanvasRenderingContext2D | null = null
+  animId: number | null = null
+  phase: number = 0
+  currentAmp: number = 2.0
+  targetAmp: number = 2.0
+
+  init() {
+    this.canvas = document.getElementById("bgm-soundwave-canvas") as HTMLCanvasElement | null
+    if (!this.canvas) return
+    this.ctx = this.canvas.getContext("2d")
+    this.resize()
+
+    if (!this.animId) {
+      this.loop()
+    }
+  }
+
+  resize() {
+    if (!this.canvas) return
+    const rect = this.canvas.parentElement?.getBoundingClientRect()
+    const w = rect && rect.width > 0 ? Math.floor(rect.width) : 380
+    this.canvas.width = w
+    this.canvas.height = 34
+    this.canvas.style.width = `${w}px`
+    this.canvas.style.height = `34px`
+  }
+
+  loop = () => {
+    this.animId = requestAnimationFrame(this.loop)
+
+    const modal = document.getElementById("bgm-modal-backdrop")
+    // Only execute render pass when modal is open to ensure zero background CPU usage
+    if (!modal || modal.style.display === "none") return
+
+    if (!this.canvas || !this.ctx) {
+      this.canvas = document.getElementById("bgm-soundwave-canvas") as HTMLCanvasElement | null
+      if (this.canvas) {
+        this.ctx = this.canvas.getContext("2d")
+        this.resize()
+      }
+      return
+    }
+
+    const ctx = this.ctx
+    const w = this.canvas.width
+    const h = this.canvas.height
+    if (w <= 0 || h <= 0) return
+
+    const midY = h / 2
+    const isPlaying = window.__bgm_player?.isPlaying ?? false
+
+    // Smooth amplitude transitions (lerp)
+    this.targetAmp = isPlaying ? 9.5 : 1.2
+    this.currentAmp += (this.targetAmp - this.currentAmp) * 0.08
+
+    if (isPlaying) {
+      this.phase += 0.075
+    } else {
+      this.phase += 0.015
+    }
+
+    ctx.clearRect(0, 0, w, h)
+
+    const segments = 60
+    const step = w / segments
+
+    // 1. Primary glowing undulating wave line (Uốn lượn chính - Cyber Neon Green #00ff66)
+    ctx.beginPath()
+    ctx.lineWidth = 2.2
+    ctx.strokeStyle = "#00ff66"
+    ctx.shadowColor = "#00ff66"
+    ctx.shadowBlur = 8
+
+    for (let i = 0; i <= segments; i++) {
+      const x = i * step
+      const taper = Math.sin((i / segments) * Math.PI)
+      const y =
+        midY +
+        Math.sin(i * 0.25 + this.phase) * (this.currentAmp * taper) +
+        Math.sin(i * 0.12 - this.phase * 0.75) * (this.currentAmp * 0.45 * taper)
+
+      if (i === 0) ctx.moveTo(x, y)
+      else ctx.lineTo(x, y)
+    }
+    ctx.stroke()
+
+    // 2. Secondary translucent harmonic wave line (Uốn lượn phụ mềm mại)
+    ctx.beginPath()
+    ctx.lineWidth = 1.2
+    ctx.strokeStyle = "rgba(0, 255, 102, 0.4)"
+    ctx.shadowBlur = 0
+
+    for (let i = 0; i <= segments; i++) {
+      const x = i * step
+      const taper = Math.sin((i / segments) * Math.PI)
+      const y =
+        midY +
+        Math.sin(i * 0.32 - this.phase * 1.3) * (this.currentAmp * 0.65 * taper) +
+        Math.cos(i * 0.16 + this.phase * 0.6) * (this.currentAmp * 0.35 * taper)
+
+      if (i === 0) ctx.moveTo(x, y)
+      else ctx.lineTo(x, y)
+    }
+    ctx.stroke()
+  }
+}
+
 export {}
 
 declare global {
   interface Window {
     __bgm_player?: BgmGlobalState
     __cyber_weather?: CyberWeatherEngine
+    __soundwave_engine?: SoundwaveEngine
     __bgm_initialized?: boolean
   }
 }
@@ -645,12 +756,16 @@ function initBgmPlayer() {
   updatePillInfo()
   renderTracklist()
 
-  // 3. Staggered Weather Canvas Engine Start
+  // 3. Staggered Weather Canvas & Soundwave Engine Start
   if (!window.__cyber_weather) {
     window.__cyber_weather = new CyberWeatherEngine()
   }
+  if (!window.__soundwave_engine) {
+    window.__soundwave_engine = new SoundwaveEngine()
+  }
   setTimeout(() => {
     window.__cyber_weather?.initDOM()
+    window.__soundwave_engine?.init()
   }, 200)
 }
 
@@ -869,12 +984,9 @@ function ensurePlayerDom() {
           <div class="bgm-vinyl-disc" id="bgm-vinyl-disc">
             <div class="vinyl-groove-inner"></div>
             <div class="vinyl-center-label">
-              <div class="vinyl-hole"></div>
-              <div class="vinyl-center-art">
-                <svg viewBox="0 0 24 24" class="vinyl-music-icon" fill="currentColor">
-                  <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
-                </svg>
-              </div>
+              <svg viewBox="0 0 24 24" class="vinyl-music-icon" fill="currentColor">
+                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+              </svg>
             </div>
           </div>
           <!-- Tonearm needle -->
@@ -895,6 +1007,7 @@ function ensurePlayerDom() {
                 <span class="eq-bar bar-1"></span>
                 <span class="eq-bar bar-2"></span>
                 <span class="eq-bar bar-3"></span>
+                <span class="eq-bar bar-4"></span>
               </div>
             </div>
             <div class="pill-title-marquee">
@@ -944,8 +1057,9 @@ function ensurePlayerDom() {
                 <div class="spotlight-vinyl-disc" id="bgm-spotlight-disc">
                   <div class="spotlight-vinyl-grooves"></div>
                   <div class="spotlight-center-label">
-                    <div class="vinyl-hole"></div>
-                    <div class="vinyl-pulse-icon">♪</div>
+                    <svg viewBox="0 0 24 24" class="spotlight-music-icon" fill="currentColor">
+                      <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                    </svg>
                   </div>
                 </div>
                 <div class="spotlight-tonearm" id="bgm-spotlight-tonearm">
@@ -962,6 +1076,11 @@ function ensurePlayerDom() {
                 </div>
                 <div class="spotlight-track-title" id="bgm-spotlight-title">---</div>
                 <div class="spotlight-artist" id="bgm-spotlight-artist">---</div>
+
+                <!-- Animated Undulating Music Wave Line (Sóng âm uốn lượn) -->
+                <div class="bgm-soundwave-container" id="bgm-soundwave-container" title="Audio Waveform Visualizer">
+                  <canvas id="bgm-soundwave-canvas" class="bgm-soundwave-canvas" height="34"></canvas>
+                </div>
 
                 <!-- Scrubbable Progress Bar -->
                 <div class="bgm-progress-container" id="bgm-progress-container">
@@ -1064,6 +1183,7 @@ function bindPlayerEvents() {
     if (modalBackdrop) {
       modalBackdrop.style.display = "flex"
       document.body.classList.add("bgm-modal-open")
+      window.__soundwave_engine?.resize()
     }
   }
 
@@ -1362,6 +1482,7 @@ function onNav() {
     renderTracklist()
     // Re-verify & re-sync weather engine canvas across notes
     window.__cyber_weather?.initDOM()
+    window.__soundwave_engine?.init()
   }
 }
 
