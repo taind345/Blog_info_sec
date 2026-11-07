@@ -1768,7 +1768,7 @@ p.ascii-tree {
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55), inset 0 0 8px rgba(56, 189, 248, 0.04) !important;
   margin-top: 0.5rem !important;
   font-family: "DFVN-excalidraw", "DFVN Excalifont", "Excalifont", "Virgil", cursive, sans-serif !important;
-  contain: layout style;
+  box-sizing: border-box !important;
   transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
 
   // Optimized font inheritance without universal selector
@@ -1815,10 +1815,13 @@ button.title-button.explorer-toggle {
 
 // Explorer Content & High-Performance Scroll Container
 .explorer-content {
+  display: block !important;
   overflow-y: auto !important;
+  overflow-x: hidden !important;
   max-height: calc(100vh - 210px) !important;
   padding-right: 4px !important;
-  contain: content;
+  overscroll-behavior: auto !important;
+  -webkit-overflow-scrolling: touch;
 
   &::-webkit-scrollbar {
     width: 5px !important;
@@ -1834,23 +1837,46 @@ button.title-button.explorer-toggle {
     }
   }
 
+  // Crucial: Disable conflicting secondary scroll container on ul so mouse wheel events scroll .explorer-content natively
+  ul.explorer-ul,
   ul.overflow {
     max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
+    overscroll-behavior: auto !important;
     padding: 0 !important;
     margin: 0 !important;
     list-style: none !important;
   }
+
+  .folder-outer > ul {
+    overflow: visible !important;
+  }
 }
 
-// Virtual rendering optimization for large note trees
-.explorer-ul > li {
-  content-visibility: auto;
-  contain-intrinsic-size: 0 38px;
+// Instant & zero-lag folder expansion (replaces Quartz's sluggish 300ms grid-template-rows layout thrashing)
+.explorer-content .folder-outer {
+  display: none !important;
+  grid-template-rows: none !important;
+  visibility: visible !important;
+  transition: none !important;
 }
 
-.explorer-content .folder-outer > ul.tree-item-children > li {
-  content-visibility: auto;
-  contain-intrinsic-size: 0 34px;
+.explorer-content .folder-outer.open {
+  display: block !important;
+  animation: folderFadeIn 0.08s ease-out !important;
+}
+
+@keyframes folderFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 // Hide sentinel item from overflowing list
@@ -1873,20 +1899,20 @@ li.overflow-end {
   border: 1.5px solid var(--explorer-border) !important;
   border-radius: 6px !important;
   background: var(--explorer-box-bg) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), inset 0 0 4px rgba(56, 189, 248, 0.05) !important;
+  box-shadow: none !important;
   cursor: pointer !important;
   transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease !important;
 
   &:hover {
     border-color: var(--explorer-border-hover) !important;
     background: var(--explorer-box-hover-bg) !important;
-    box-shadow: 0 0 12px rgba(56, 189, 248, 0.35), 0 3px 10px rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.35) !important;
     transform: translateY(-1px) !important;
   }
 }
 
 :root:not([saved-theme="dark"]) .explorer-ul > li:not(:has(> .folder-outer.open)) > .folder-container {
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06) !important;
+  box-shadow: none !important;
   &:hover {
     box-shadow: 0 0 10px rgba(2, 132, 199, 0.25) !important;
   }
@@ -1909,7 +1935,6 @@ li.overflow-end {
     box-shadow: none !important;
     padding: 3px 4px 6px 4px !important;
     margin-bottom: 6px !important;
-    border-bottom: 1px dashed var(--explorer-border) !important;
     width: 100% !important;
 
     .folder-title {
@@ -1957,21 +1982,24 @@ li.overflow-end {
 
 // 4. Vertical Tree Indentation Guide Lines
 .explorer-content .folder-outer > ul.tree-item-children {
-  margin-left: 9px !important;
-  padding-left: 9px !important;
+  margin-left: 12px !important;
+  padding-left: 10px !important;
   border-left: 1.5px solid var(--explorer-tree-line) !important;
   list-style: none !important;
 }
 
-// 5. Leaf File Notes (Pill / Button Box Style)
+// 5. Leaf File Notes (Pill / Button Box Style - Inline Hugging Content)
 .explorer-content li > a.nav-file-title,
 .explorer-content li > a {
-  display: block !important;
+  display: inline-block !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
   border: 1.5px solid var(--explorer-border) !important;
   border-radius: 6px !important;
   background: var(--explorer-box-bg) !important;
-  padding: 4px 10px !important;
-  margin: 5px 0 !important;
+  padding: 3.5px 10px !important;
+  margin: 3.5px 0 !important;
   color: var(--explorer-text) !important;
   font-family: "DFVN-excalidraw", "DFVN Excalifont", cursive, sans-serif !important;
   font-size: 0.86rem !important;
@@ -1979,16 +2007,16 @@ li.overflow-end {
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35) !important;
+  vertical-align: middle !important;
+  box-shadow: none !important;
   text-decoration: none !important;
-  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease, color 0.15s ease !important;
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease !important;
   opacity: 1 !important;
 
   &:hover {
     border-color: var(--explorer-border-hover) !important;
     background: var(--explorer-box-hover-bg) !important;
-    box-shadow: 0 0 10px rgba(56, 189, 248, 0.35), 0 2px 8px rgba(0, 0, 0, 0.4) !important;
-    transform: translateX(2px) !important;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.35) !important;
     color: var(--explorer-text-hover) !important;
   }
 
@@ -2004,7 +2032,7 @@ li.overflow-end {
 
 :root:not([saved-theme="dark"]) .explorer-content li > a.nav-file-title,
 :root:not([saved-theme="dark"]) .explorer-content li > a {
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05) !important;
+  box-shadow: none !important;
 
   &:hover {
     box-shadow: 0 0 8px rgba(2, 132, 199, 0.2) !important;
