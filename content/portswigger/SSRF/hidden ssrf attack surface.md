@@ -35,6 +35,9 @@ tags:
       <a href="#doc-6f388a58aee8570e4a72f348f7a6d9676396db0c" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
     </div>
     <div class="notion-embed-body">
+
+<div class="ascii-tree">
+
       <pre><code>6. Hidden SSRF Attack Surface (Bề mặt tấn công SSRF ẩn)
 │
 ├── Bối cảnh chung
@@ -100,6 +103,9 @@ tags:
         ├── Attacker upload file .docx chứa link tới internal service
         ├── Khi user mở preview, server fetch link đó
         └── Thường gặp trong Google Docs, Office Online, hệ thống quản lý tài liệu
+
+</div>
+
 </code></pre>
 
     </div>
