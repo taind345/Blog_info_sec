@@ -143,20 +143,20 @@
   --code-border: #cbd5e1;
   --code-accent: #059669;
   --code-text: #0f172a;
-  --explorer-border: #6366f1;
-  --explorer-border-hover: #4338ca;
+  --explorer-border: #cbd5e1;
+  --explorer-border-hover: #0284c7;
   --explorer-panel-bg: #ffffff;
-  --explorer-container-bg: rgba(241, 245, 249, 0.7);
+  --explorer-container-bg: #f8fafc;
   --explorer-box-bg: #ffffff;
-  --explorer-box-hover-bg: #eef2ff;
-  --explorer-tree-line: rgba(99, 102, 241, 0.45);
+  --explorer-box-hover-bg: #f0f9ff;
+  --explorer-tree-line: rgba(2, 132, 199, 0.4);
   --explorer-text: #0f172a;
-  --explorer-text-hover: #4338ca;
-  --explorer-active-border: #0284c7;
-  --explorer-active-bg: rgba(2, 132, 199, 0.12);
-  --explorer-active-text: #0369a1;
-  --explorer-scrollbar-thumb: rgba(99, 102, 241, 0.35);
-  --explorer-scrollbar-hover: rgba(99, 102, 241, 0.65);
+  --explorer-text-hover: #0284c7;
+  --explorer-active-border: #059669;
+  --explorer-active-bg: rgba(5, 150, 105, 0.1);
+  --explorer-active-text: #047857;
+  --explorer-scrollbar-thumb: rgba(2, 132, 199, 0.3);
+  --explorer-scrollbar-hover: rgba(2, 132, 199, 0.6);
 }
 
 :root[saved-theme="dark"] {
@@ -171,20 +171,20 @@
   --code-border: #1e293b;
   --code-accent: #00ff66;
   --code-text: #f8fafc;
-  --explorer-border: rgba(165, 180, 252, 0.85);
-  --explorer-border-hover: #c7d2fe;
-  --explorer-panel-bg: #070a18;
-  --explorer-container-bg: rgba(10, 14, 34, 0.65);
-  --explorer-box-bg: rgba(14, 18, 43, 0.9);
-  --explorer-box-hover-bg: rgba(26, 33, 76, 0.95);
-  --explorer-tree-line: rgba(165, 180, 252, 0.75);
-  --explorer-text: #ffffff;
-  --explorer-text-hover: #ffffff;
-  --explorer-active-border: #38bdf8;
-  --explorer-active-bg: rgba(56, 189, 248, 0.22);
-  --explorer-active-text: #38bdf8;
-  --explorer-scrollbar-thumb: rgba(165, 180, 252, 0.4);
-  --explorer-scrollbar-hover: rgba(165, 180, 252, 0.75);
+  --explorer-border: rgba(56, 189, 248, 0.4);
+  --explorer-border-hover: #38bdf8;
+  --explorer-panel-bg: #0d141f;
+  --explorer-container-bg: rgba(16, 24, 38, 0.7);
+  --explorer-box-bg: #111a26;
+  --explorer-box-hover-bg: #172435;
+  --explorer-tree-line: rgba(56, 189, 248, 0.4);
+  --explorer-text: #f8fafc;
+  --explorer-text-hover: #38bdf8;
+  --explorer-active-border: #00ff66;
+  --explorer-active-bg: rgba(0, 255, 102, 0.16);
+  --explorer-active-text: #00ff66;
+  --explorer-scrollbar-thumb: rgba(56, 189, 248, 0.35);
+  --explorer-scrollbar-hover: rgba(56, 189, 248, 0.75);
 }
 
 html,
@@ -1765,19 +1765,24 @@ p.ascii-tree {
   border-radius: 10px !important;
   background: var(--explorer-panel-bg) !important;
   padding: 10px 8px 12px 8px !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 8px rgba(165, 180, 252, 0.05) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55), inset 0 0 8px rgba(56, 189, 248, 0.04) !important;
   margin-top: 0.5rem !important;
   font-family: "DFVN-excalidraw", "DFVN Excalifont", "Excalifont", "Virgil", cursive, sans-serif !important;
+  contain: layout style;
   transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
 
-  // Apply handwritten Excalidraw font to all internal items
-  *,
+  // Optimized font inheritance without universal selector
   button,
   a,
   span,
-  h2 {
+  h2,
+  div {
     font-family: "DFVN-excalidraw", "DFVN Excalifont", "Excalifont", "Virgil", cursive, sans-serif !important;
   }
+}
+
+:root[saved-theme="dark"] .explorer {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.65), inset 0 0 8px rgba(56, 189, 248, 0.05) !important;
 }
 
 // Title Toggle Header ("Nội dung" / Explorer)
@@ -1808,11 +1813,12 @@ button.title-button.explorer-toggle {
   }
 }
 
-// Explorer Content & Sleek Rounded Scrollbar
+// Explorer Content & High-Performance Scroll Container
 .explorer-content {
   overflow-y: auto !important;
   max-height: calc(100vh - 210px) !important;
   padding-right: 4px !important;
+  contain: content;
 
   &::-webkit-scrollbar {
     width: 5px !important;
@@ -1836,6 +1842,17 @@ button.title-button.explorer-toggle {
   }
 }
 
+// Virtual rendering optimization for large note trees
+.explorer-ul > li {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 38px;
+}
+
+.explorer-content .folder-outer > ul.tree-item-children > li {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 34px;
+}
+
 // Hide sentinel item from overflowing list
 li.overflow-end {
   display: none !important;
@@ -1856,15 +1873,22 @@ li.overflow-end {
   border: 1.5px solid var(--explorer-border) !important;
   border-radius: 6px !important;
   background: var(--explorer-box-bg) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), inset 0 0 4px rgba(165, 180, 252, 0.08) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), inset 0 0 4px rgba(56, 189, 248, 0.05) !important;
   cursor: pointer !important;
-  transition: all 0.15s ease !important;
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease !important;
 
   &:hover {
     border-color: var(--explorer-border-hover) !important;
     background: var(--explorer-box-hover-bg) !important;
-    box-shadow: 0 0 10px rgba(165, 180, 252, 0.4), 0 3px 10px rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.35), 0 3px 10px rgba(0, 0, 0, 0.5) !important;
     transform: translateY(-1px) !important;
+  }
+}
+
+:root:not([saved-theme="dark"]) .explorer-ul > li:not(:has(> .folder-outer.open)) > .folder-container {
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06) !important;
+  &:hover {
+    box-shadow: 0 0 10px rgba(2, 132, 199, 0.25) !important;
   }
 }
 
@@ -1876,8 +1900,8 @@ li.overflow-end {
   padding: 8px 8px 10px 8px !important;
   margin-bottom: 10px !important;
   background: var(--explorer-container-bg) !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55), inset 0 0 6px rgba(165, 180, 252, 0.05) !important;
-  transition: all 0.2s ease !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55), inset 0 0 6px rgba(56, 189, 248, 0.05) !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease !important;
 
   > .folder-container {
     border: none !important;
@@ -1885,7 +1909,7 @@ li.overflow-end {
     box-shadow: none !important;
     padding: 3px 4px 6px 4px !important;
     margin-bottom: 6px !important;
-    border-bottom: 1px dashed rgba(165, 180, 252, 0.3) !important;
+    border-bottom: 1px dashed var(--explorer-border) !important;
     width: 100% !important;
 
     .folder-title {
@@ -1894,6 +1918,10 @@ li.overflow-end {
       color: var(--explorer-text) !important;
     }
   }
+}
+
+:root:not([saved-theme="dark"]) .explorer-ul > li:has(> .folder-outer.open) {
+  box-shadow: 0 4px 14px -2px rgba(15, 23, 42, 0.08) !important;
 }
 
 // 3. Subfolders (Inside Open Parent Folders)
@@ -1907,10 +1935,10 @@ li.overflow-end {
   align-items: center !important;
   cursor: pointer !important;
   border-radius: 4px !important;
-  transition: all 0.15s ease !important;
+  transition: background-color 0.15s ease, color 0.15s ease !important;
 
   &:hover {
-    background: rgba(165, 180, 252, 0.12) !important;
+    background: rgba(56, 189, 248, 0.1) !important;
     .folder-title {
       color: var(--explorer-text-hover) !important;
     }
@@ -1921,6 +1949,10 @@ li.overflow-end {
     font-weight: 500 !important;
     color: var(--explorer-text) !important;
   }
+}
+
+:root:not([saved-theme="dark"]) .explorer-ul ul.tree-item-children .folder-container:hover {
+  background: rgba(2, 132, 199, 0.08) !important;
 }
 
 // 4. Vertical Tree Indentation Guide Lines
@@ -1949,13 +1981,13 @@ li.overflow-end {
   text-overflow: ellipsis !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35) !important;
   text-decoration: none !important;
-  transition: all 0.15s ease !important;
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease, color 0.15s ease !important;
   opacity: 1 !important;
 
   &:hover {
     border-color: var(--explorer-border-hover) !important;
     background: var(--explorer-box-hover-bg) !important;
-    box-shadow: 0 0 10px rgba(165, 180, 252, 0.45), 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.35), 0 2px 8px rgba(0, 0, 0, 0.4) !important;
     transform: translateX(2px) !important;
     color: var(--explorer-text-hover) !important;
   }
@@ -1965,8 +1997,22 @@ li.overflow-end {
     border-color: var(--explorer-active-border) !important;
     background: var(--explorer-active-bg) !important;
     color: var(--explorer-active-text) !important;
-    box-shadow: 0 0 12px rgba(56, 189, 248, 0.5) !important;
+    box-shadow: 0 0 12px rgba(0, 255, 102, 0.45) !important;
     font-weight: 700 !important;
+  }
+}
+
+:root:not([saved-theme="dark"]) .explorer-content li > a.nav-file-title,
+:root:not([saved-theme="dark"]) .explorer-content li > a {
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05) !important;
+
+  &:hover {
+    box-shadow: 0 0 8px rgba(2, 132, 199, 0.2) !important;
+  }
+
+  &.active,
+  &.is-active {
+    box-shadow: 0 0 10px rgba(5, 150, 105, 0.25) !important;
   }
 }
 
@@ -2035,24 +2081,24 @@ li:has(> .folder-outer.open) > .folder-container > svg {
   transform: none !important;
 }
 
-// Folder outline icons - Dark mode
+// Folder outline icons - Dark mode (Cyber Cyan stroke)
 :root[saved-theme="dark"] .folder-icon,
 :root[saved-theme="dark"] li:has(> .folder-outer:not(.open)) > .folder-container .folder-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z'/%3E%3C/svg%3E") !important;
 }
 
 :root[saved-theme="dark"] li:has(> .folder-outer.open) > .folder-container .folder-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E") !important;
 }
 
-// Folder outline icons - Light mode
+// Folder outline icons - Light mode (Sky Cyan stroke)
 :root:not([saved-theme="dark"]) .folder-icon,
 :root:not([saved-theme="dark"]) li:has(> .folder-outer:not(.open)) > .folder-container .folder-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230f172a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230284c7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z'/%3E%3C/svg%3E") !important;
 }
 
 :root:not([saved-theme="dark"]) li:has(> .folder-outer.open) > .folder-container .folder-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230f172a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230284c7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E") !important;
 }
 
 // === 11. Article Content & Maximum Contrast Typography ===
@@ -3861,6 +3907,25 @@ article,
     pointer-events: auto;
     transform: translateY(0) scale(1);
     animation: snowmanFloat 4.5s infinite ease-in-out;
+
+    .snowman-arm-left {
+      transform-origin: 35px 88px;
+      animation: armWave 2.8s infinite ease-in-out;
+    }
+
+    .snowman-arm-right {
+      transform-origin: 85px 88px;
+      animation: armGentle 3.5s infinite ease-in-out;
+    }
+
+    .scarf-tail {
+      transform-origin: 68px 81px;
+      animation: scarfFlutter 2.2s infinite ease-in-out;
+    }
+
+    .snowman-eyes {
+      animation: eyeBlink 4.5s infinite;
+    }
   }
 
   &:hover {
@@ -3906,21 +3971,6 @@ article,
 
   .snowman-arm-left {
     transform-origin: 35px 88px;
-    animation: armWave 2.8s infinite ease-in-out;
-  }
-
-  .snowman-arm-right {
-    transform-origin: 85px 88px;
-    animation: armGentle 3.5s infinite ease-in-out;
-  }
-
-  .scarf-tail {
-    transform-origin: 68px 81px;
-    animation: scarfFlutter 2.2s infinite ease-in-out;
-  }
-
-  .snowman-eyes {
-    animation: eyeBlink 4.5s infinite;
   }
 }
 
