@@ -143,6 +143,20 @@
   --code-border: #cbd5e1;
   --code-accent: #059669;
   --code-text: #0f172a;
+  --explorer-border: #6366f1;
+  --explorer-border-hover: #4338ca;
+  --explorer-panel-bg: #ffffff;
+  --explorer-container-bg: rgba(241, 245, 249, 0.7);
+  --explorer-box-bg: #ffffff;
+  --explorer-box-hover-bg: #eef2ff;
+  --explorer-tree-line: rgba(99, 102, 241, 0.45);
+  --explorer-text: #0f172a;
+  --explorer-text-hover: #4338ca;
+  --explorer-active-border: #0284c7;
+  --explorer-active-bg: rgba(2, 132, 199, 0.12);
+  --explorer-active-text: #0369a1;
+  --explorer-scrollbar-thumb: rgba(99, 102, 241, 0.35);
+  --explorer-scrollbar-hover: rgba(99, 102, 241, 0.65);
 }
 
 :root[saved-theme="dark"] {
@@ -157,6 +171,20 @@
   --code-border: #1e293b;
   --code-accent: #00ff66;
   --code-text: #f8fafc;
+  --explorer-border: rgba(165, 180, 252, 0.85);
+  --explorer-border-hover: #c7d2fe;
+  --explorer-panel-bg: #070a18;
+  --explorer-container-bg: rgba(10, 14, 34, 0.65);
+  --explorer-box-bg: rgba(14, 18, 43, 0.9);
+  --explorer-box-hover-bg: rgba(26, 33, 76, 0.95);
+  --explorer-tree-line: rgba(165, 180, 252, 0.75);
+  --explorer-text: #ffffff;
+  --explorer-text-hover: #ffffff;
+  --explorer-active-border: #38bdf8;
+  --explorer-active-bg: rgba(56, 189, 248, 0.22);
+  --explorer-active-text: #38bdf8;
+  --explorer-scrollbar-thumb: rgba(165, 180, 252, 0.4);
+  --explorer-scrollbar-hover: rgba(165, 180, 252, 0.75);
 }
 
 html,
@@ -1656,43 +1684,6 @@ p.ascii-tree {
     :root[saved-theme="dark"] .search input:focus {
       box-shadow: 0 0 10px rgba(0, 255, 102, 0.35);
     }
-
-    .explorer {
-      font-size: 0.9rem;
-      line-height: 1.5;
-
-      button.folder-button {
-        padding: 0.2rem 0.35rem;
-        font-weight: 600;
-        color: var(--dark);
-
-        &:hover {
-          color: var(--secondary);
-        }
-      }
-
-      ul.overflow {
-        max-height: calc(100vh - 180px);
-      }
-
-      li > a {
-        color: var(--darkgray);
-        transition: color 0.15s ease;
-
-        &:hover {
-          color: var(--secondary);
-        }
-      }
-
-      // Active selected note in explorer
-      li > a.active,
-      li > div.active {
-        background: var(--highlight) !important;
-        border-left: 3px solid var(--secondary) !important;
-        color: var(--secondary) !important;
-        font-weight: 700 !important;
-      }
-    }
   }
 
   // Sleek, high-contrast right sidebar
@@ -1766,6 +1757,302 @@ p.ascii-tree {
       }
     }
   }
+}
+
+// === 10B. Obsidian Neo-Cyber Boxed Explorer Sidebar ===
+.explorer {
+  border: 1.5px solid var(--explorer-border) !important;
+  border-radius: 10px !important;
+  background: var(--explorer-panel-bg) !important;
+  padding: 10px 8px 12px 8px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 8px rgba(165, 180, 252, 0.05) !important;
+  margin-top: 0.5rem !important;
+  font-family: "DFVN-excalidraw", "DFVN Excalifont", "Excalifont", "Virgil", cursive, sans-serif !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+
+  // Apply handwritten Excalidraw font to all internal items
+  *,
+  button,
+  a,
+  span,
+  h2 {
+    font-family: "DFVN-excalidraw", "DFVN Excalifont", "Excalifont", "Virgil", cursive, sans-serif !important;
+  }
+}
+
+// Title Toggle Header ("Nội dung" / Explorer)
+button.title-button.explorer-toggle {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  padding: 4px 6px 8px 6px !important;
+  margin-bottom: 8px !important;
+  border: none !important;
+  border-bottom: 1.5px solid var(--explorer-border) !important;
+  background: transparent !important;
+  cursor: pointer !important;
+
+  h2 {
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    color: var(--explorer-text) !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    margin: 0 !important;
+  }
+
+  svg.fold {
+    color: var(--explorer-border) !important;
+    transition: transform 0.2s ease !important;
+  }
+}
+
+// Explorer Content & Sleek Rounded Scrollbar
+.explorer-content {
+  overflow-y: auto !important;
+  max-height: calc(100vh - 210px) !important;
+  padding-right: 4px !important;
+
+  &::-webkit-scrollbar {
+    width: 5px !important;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--explorer-scrollbar-thumb) !important;
+    border-radius: 6px !important;
+    &:hover {
+      background: var(--explorer-scrollbar-hover) !important;
+    }
+  }
+
+  ul.overflow {
+    max-height: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+}
+
+// Hide sentinel item from overflowing list
+li.overflow-end {
+  display: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+// 1. Root Level Closed Folders: Standalone Rounded Boxed Pills
+.explorer-ul > li:not(:has(> .folder-outer.open)) > .folder-container {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  padding: 6px 10px !important;
+  margin-bottom: 7px !important;
+  border: 1.5px solid var(--explorer-border) !important;
+  border-radius: 6px !important;
+  background: var(--explorer-box-bg) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), inset 0 0 4px rgba(165, 180, 252, 0.08) !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+
+  &:hover {
+    border-color: var(--explorer-border-hover) !important;
+    background: var(--explorer-box-hover-bg) !important;
+    box-shadow: 0 0 10px rgba(165, 180, 252, 0.4), 0 3px 10px rgba(0, 0, 0, 0.5) !important;
+    transform: translateY(-1px) !important;
+  }
+}
+
+// 2. Root Level Open Folder: Large Outer Border Box Enclosing Subtree
+.explorer-ul > li:has(> .folder-outer.open) {
+  display: block !important;
+  border: 1.5px solid var(--explorer-border) !important;
+  border-radius: 8px !important;
+  padding: 8px 8px 10px 8px !important;
+  margin-bottom: 10px !important;
+  background: var(--explorer-container-bg) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55), inset 0 0 6px rgba(165, 180, 252, 0.05) !important;
+  transition: all 0.2s ease !important;
+
+  > .folder-container {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 3px 4px 6px 4px !important;
+    margin-bottom: 6px !important;
+    border-bottom: 1px dashed rgba(165, 180, 252, 0.3) !important;
+    width: 100% !important;
+
+    .folder-title {
+      font-weight: 700 !important;
+      font-size: 0.95rem !important;
+      color: var(--explorer-text) !important;
+    }
+  }
+}
+
+// 3. Subfolders (Inside Open Parent Folders)
+.explorer-ul ul.tree-item-children .folder-container {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 3px 6px !important;
+  margin: 3px 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  border-radius: 4px !important;
+  transition: all 0.15s ease !important;
+
+  &:hover {
+    background: rgba(165, 180, 252, 0.12) !important;
+    .folder-title {
+      color: var(--explorer-text-hover) !important;
+    }
+  }
+
+  .folder-title {
+    font-size: 0.92rem !important;
+    font-weight: 500 !important;
+    color: var(--explorer-text) !important;
+  }
+}
+
+// 4. Vertical Tree Indentation Guide Lines
+.explorer-content .folder-outer > ul.tree-item-children {
+  margin-left: 9px !important;
+  padding-left: 9px !important;
+  border-left: 1.5px solid var(--explorer-tree-line) !important;
+  list-style: none !important;
+}
+
+// 5. Leaf File Notes (Pill / Button Box Style)
+.explorer-content li > a.nav-file-title,
+.explorer-content li > a {
+  display: block !important;
+  border: 1.5px solid var(--explorer-border) !important;
+  border-radius: 6px !important;
+  background: var(--explorer-box-bg) !important;
+  padding: 4px 10px !important;
+  margin: 5px 0 !important;
+  color: var(--explorer-text) !important;
+  font-family: "DFVN-excalidraw", "DFVN Excalifont", cursive, sans-serif !important;
+  font-size: 0.86rem !important;
+  line-height: 1.4 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35) !important;
+  text-decoration: none !important;
+  transition: all 0.15s ease !important;
+  opacity: 1 !important;
+
+  &:hover {
+    border-color: var(--explorer-border-hover) !important;
+    background: var(--explorer-box-hover-bg) !important;
+    box-shadow: 0 0 10px rgba(165, 180, 252, 0.45), 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+    transform: translateX(2px) !important;
+    color: var(--explorer-text-hover) !important;
+  }
+
+  &.active,
+  &.is-active {
+    border-color: var(--explorer-active-border) !important;
+    background: var(--explorer-active-bg) !important;
+    color: var(--explorer-active-text) !important;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.5) !important;
+    font-weight: 700 !important;
+  }
+}
+
+// Prevent folder buttons/links from inheriting file pill styling
+.explorer-content .folder-container a.folder-button,
+.explorer-content .folder-container button.folder-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  width: 100% !important;
+  cursor: pointer !important;
+  transform: none !important;
+}
+
+// 6. Folder Containers and Line-Art Folder SVG Icons
+.folder-container {
+  display: flex !important;
+  align-items: center !important;
+  user-select: none !important;
+
+  .folder-icon {
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px !important;
+    margin-right: 8px !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    transform: none !important;
+
+    polyline {
+      display: none !important;
+    }
+  }
+
+  div {
+    flex: 1 !important;
+    min-width: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .folder-title {
+    font-family: "DFVN-excalidraw", "DFVN Excalifont", cursive, sans-serif !important;
+    font-size: 0.92rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+}
+
+// Override Quartz default rotation for chevron
+li:has(> .folder-outer:not(.open)) > .folder-container > svg,
+li:has(> .folder-outer.open) > .folder-container > svg {
+  transform: none !important;
+}
+
+// Folder outline icons - Dark mode
+:root[saved-theme="dark"] .folder-icon,
+:root[saved-theme="dark"] li:has(> .folder-outer:not(.open)) > .folder-container .folder-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z'/%3E%3C/svg%3E") !important;
+}
+
+:root[saved-theme="dark"] li:has(> .folder-outer.open) > .folder-container .folder-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E") !important;
+}
+
+// Folder outline icons - Light mode
+:root:not([saved-theme="dark"]) .folder-icon,
+:root:not([saved-theme="dark"]) li:has(> .folder-outer:not(.open)) > .folder-container .folder-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230f172a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z'/%3E%3C/svg%3E") !important;
+}
+
+:root:not([saved-theme="dark"]) li:has(> .folder-outer.open) > .folder-container .folder-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230f172a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E") !important;
 }
 
 // === 11. Article Content & Maximum Contrast Typography ===
