@@ -64,3 +64,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          timeout: 1800000 # 30 phút (mặc định 10 phút dễ bị timeout khi đồng bộ nhiều tài nguyên media)
