@@ -35,6 +35,9 @@ tags:
       <a href="#doc-dd2234858b9be0070d4c6763a7114fae6ab606dd" class="notion-embed-jump" title="Cuộn xuống đọc chi tiết toàn bộ nội dung">↓ Đọc bài viết</a>
     </div>
     <div class="notion-embed-body">
+
+<div class="ascii-tree">
+
       <pre><code>3. SSRF Against Other Back-end Systems
 │
 ├── Mục đích
@@ -82,6 +85,9 @@ tags:
     ├── Access internal API        ← gọi API nội bộ không xác thực
     │                                   hoặc xác thực yếu
     └── Extract sensitive data     ← lấy dữ liệu nhạy cảm:
+
+</div>
+
                                         - Credentials
                                         - Token
                                         - Config
