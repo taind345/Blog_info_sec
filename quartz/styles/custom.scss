@@ -1761,15 +1761,8 @@ p.ascii-tree {
 
 // === 10B. Obsidian Neo-Cyber Boxed Explorer Sidebar ===
 .explorer {
-  border: 1.5px solid var(--explorer-border) !important;
-  border-radius: 10px !important;
-  background: var(--explorer-panel-bg) !important;
-  padding: 10px 8px 12px 8px !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55), inset 0 0 8px rgba(56, 189, 248, 0.04) !important;
-  margin-top: 0.5rem !important;
   font-family: "DFVN-excalidraw", "DFVN Excalifont", "Excalifont", "Virgil", cursive, sans-serif !important;
   box-sizing: border-box !important;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
 
   // Optimized font inheritance without universal selector
   button,
@@ -1781,44 +1774,215 @@ p.ascii-tree {
   }
 }
 
-:root[saved-theme="dark"] .explorer {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.65), inset 0 0 8px rgba(56, 189, 248, 0.05) !important;
+// --- DESKTOP VIEW (> 800px) ---
+@media all and (min-width: 801px) {
+  .explorer {
+    border: 1.5px solid var(--explorer-border) !important;
+    border-radius: 10px !important;
+    background: var(--explorer-panel-bg) !important;
+    padding: 10px 8px 12px 8px !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55), inset 0 0 8px rgba(56, 189, 248, 0.04) !important;
+    margin-top: 0.5rem !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  }
+
+  :root[saved-theme="dark"] .explorer {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.65), inset 0 0 8px rgba(56, 189, 248, 0.05) !important;
+  }
+
+  // Desktop Title Toggle Header ("Nội dung" / Explorer)
+  button.title-button.explorer-toggle.desktop-explorer,
+  button.title-button.explorer-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding: 4px 6px 8px 6px !important;
+    margin-bottom: 8px !important;
+    border: none !important;
+    border-bottom: 1.5px solid var(--explorer-border) !important;
+    background: transparent !important;
+    cursor: pointer !important;
+
+    h2 {
+      font-size: 0.95rem !important;
+      font-weight: 700 !important;
+      color: var(--explorer-text) !important;
+      letter-spacing: 0.04em !important;
+      text-transform: uppercase !important;
+      margin: 0 !important;
+    }
+
+    svg.fold {
+      color: var(--explorer-border) !important;
+      transition: transform 0.2s ease !important;
+    }
+  }
+
+  // Hide mobile button on desktop
+  button.explorer-toggle.mobile-explorer {
+    display: none !important;
+  }
+
+  // Desktop Explorer Content
+  .explorer-content {
+    display: block !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    max-height: calc(100vh - 210px) !important;
+    padding-right: 4px !important;
+    overscroll-behavior: auto !important;
+    -webkit-overflow-scrolling: touch;
+    position: static !important;
+    width: auto !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+
+  .explorer.collapsed > .explorer-content {
+    display: none !important;
+  }
 }
 
-// Title Toggle Header ("Nội dung" / Explorer)
-button.title-button.explorer-toggle {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  width: 100% !important;
-  padding: 4px 6px 8px 6px !important;
-  margin-bottom: 8px !important;
-  border: none !important;
-  border-bottom: 1.5px solid var(--explorer-border) !important;
-  background: transparent !important;
-  cursor: pointer !important;
+// --- MOBILE VIEW (<= 800px) ---
+@media all and (max-width: 800px) {
+  .explorer {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    width: auto !important;
+    min-height: unset !important;
+    height: auto !important;
+    align-self: center !important;
+  }
 
-  h2 {
-    font-size: 0.95rem !important;
-    font-weight: 700 !important;
-    color: var(--explorer-text) !important;
-    letter-spacing: 0.04em !important;
-    text-transform: uppercase !important;
+  // Hide desktop header button on mobile
+  button.title-button.explorer-toggle.desktop-explorer {
+    display: none !important;
+  }
+
+  // Mobile Cyber Hamburger Icon Button
+  button.explorer-toggle.mobile-explorer {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    padding: 0 !important;
+    margin: 0 0 0 6px !important;
+    background: var(--card-bg) !important;
+    border: 1.5px solid var(--card-border) !important;
+    border-radius: 6px !important;
+    color: var(--secondary) !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+    transition: all 0.15s ease !important;
+    z-index: 101 !important;
+
+    &:hover,
+    &:active {
+      border-color: var(--secondary) !important;
+      background: rgba(0, 255, 102, 0.08) !important;
+      box-shadow: 0 0 10px rgba(0, 255, 102, 0.3) !important;
+    }
+
+    svg {
+      stroke: var(--secondary) !important;
+      width: 20px !important;
+      height: 20px !important;
+    }
+  }
+
+  // CRITICAL: Mobile Closed State completely hidden (eliminates black overlay bug)
+  .explorer > .explorer-content,
+  .explorer.collapsed > .explorer-content,
+  .explorer:not([aria-expanded="true"]) > .explorer-content {
+    display: none !important;
+    visibility: hidden !important;
+    transform: translateX(-110%) !important;
+    pointer-events: none !important;
+  }
+
+  // Mobile Open State: Slide-out Cyber Drawer
+  .explorer:not(.collapsed)[aria-expanded="true"] > .explorer-content,
+  .explorer.is-open > .explorer-content {
+    display: block !important;
+    visibility: visible !important;
+    transform: translateX(0) !important;
+    pointer-events: auto !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: min(85vw, 340px) !important;
+    max-width: 85vw !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    z-index: 10000 !important;
+    background: var(--explorer-panel-bg) !important;
+    border-right: 2px solid var(--explorer-border) !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-radius: 0 !important;
+    box-shadow: 12px 0 35px rgba(0, 0, 0, 0.85), 0 0 20px rgba(56, 189, 248, 0.15) !important;
+    padding: 1.2rem 0.85rem 2.5rem 0.85rem !important;
+    margin: 0 !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior: contain !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s ease !important;
+
+    // Mobile Drawer Header
+    &::before {
+      content: "📁 MỤC LỤC BÀI VIẾT" !important;
+      display: block !important;
+      font-family: "Cascadia Code", monospace !important;
+      font-size: 0.82rem !important;
+      font-weight: 700 !important;
+      color: var(--secondary) !important;
+      letter-spacing: 0.08em !important;
+      padding-bottom: 0.8rem !important;
+      margin-bottom: 0.9rem !important;
+      border-bottom: 1.5px solid var(--explorer-border) !important;
+      text-transform: uppercase !important;
+    }
+  }
+
+  // Backdrop overlay when mobile drawer is open
+  .explorer:not(.collapsed)[aria-expanded="true"]::before,
+  .explorer.is-open::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100dvh;
+    background: rgba(3, 7, 8, 0.75);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 9999;
+    pointer-events: auto;
+  }
+
+  // Mobile top header polish
+  .page > #quartz-body .sidebar.left {
+    padding-top: 1rem !important;
+    padding-bottom: 0.5rem !important;
+    align-items: center !important;
+  }
+
+  .page > #quartz-body .sidebar.left .page-title {
+    font-size: 1.25rem !important;
     margin: 0 !important;
   }
-
-  svg.fold {
-    color: var(--explorer-border) !important;
-    transition: transform 0.2s ease !important;
-  }
 }
 
-// Explorer Content & High-Performance Scroll Container
+// Common Explorer Content & High-Performance Scroll Container
 .explorer-content {
-  display: block !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  max-height: calc(100vh - 210px) !important;
   padding-right: 4px !important;
   overscroll-behavior: auto !important;
   -webkit-overflow-scrolling: touch;
@@ -4049,5 +4213,46 @@ article,
     &.is-active {
       transform: translateY(0) scale(0.78);
     }
+  }
+}
+
+// === Global Mobile Responsiveness Safeguards ===
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+article table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+article pre {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+article img,
+article svg,
+.markdown-rendered img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 480px) {
+  .quartz-bgm {
+    bottom: 12px !important;
+    right: 12px !important;
+    max-width: calc(100vw - 24px) !important;
+  }
+
+  .bgm-floating-widget {
+    padding: 3px 6px 3px 3px !important;
+    gap: 4px !important;
+    transform-origin: bottom right;
   }
 }

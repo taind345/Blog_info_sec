@@ -122,9 +122,9 @@ tags:
 <a href="../../0-asset/pasted-image-20260629083625_830.png" class="excalidraw-node-link external" target="_blank" rel="noopener" title="Xem ảnh: Pasted Image 20260629083625_830.png"><g transform="translate(-63.28,-48.96)">
 <image x="131.10830776069753" y="789.5929383162608" width="635.1284003200303" height="245.18910337936055" href="../../0-asset/pasted-image-20260629083625_830.png" preserveAspectRatio="xMidYMid meet" class="excalidraw-embedded-img"/>
 </g></a>
-<a href="./bai1--based-errorr-sql-injection" class="excalidraw-node-link" target="_self" title="bai1- based errorr sql injection"><g transform="translate(-63.28,-48.96)">
+<g transform="translate(-63.28,-48.96)">
 <text x="942.83" y="388.85" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="942.83" dy="0">📍bai1- based</tspan><tspan x="942.83" dy="25">errorr sql injection</tspan></text>
-</g></a>
+</g>
 <g transform="translate(-63.28,-48.96)">
 <text x="818.83" y="924.25" font-family="'DFVN-excalidraw', 'DFVN Excalifont', Virgil, cursive" font-size="20" fill="#1e1e1e" text-anchor="start"><tspan x="818.83" dy="0">đại khái là thông báo lỗi nó sẽ</tspan><tspan x="818.83" dy="25">vô tình khai luôn sai ở đâu</tspan><tspan x="818.83" dy="25">--&gt; biết được thêm thông tin</tspan></text>
 </g>
@@ -140,9 +140,9 @@ tags:
 <g transform="translate(-63.28,-48.96)">
 <text x="782.00" y="1185.10" font-family="Cascadia Code, Consolas, monospace" font-size="15.777791341145825" fill="#1e1e1e" text-anchor="start"><tspan x="782.00" dy="0">Ví dụ: Lệnh CAST(&apos;Tên_bí_mật&apos; AS</tspan><tspan x="782.00" dy="19.722239176432282">int) sẽ gây lỗi: Invalid input for</tspan><tspan x="782.00" dy="19.722239176432282">integer: &quot;Tên_bí_mật&quot;. Lúc này, kẻ</tspan><tspan x="782.00" dy="19.722239176432282">xấu đã đọc được &quot;Tên_bí_mật&quot; ngay</tspan><tspan x="782.00" dy="19.722239176432282">trong dòng lỗi.</tspan></text>
 </g>
-<a href="./bai2-error-based-injection" class="excalidraw-node-link" target="_self" title="bai2-error based injection"><g transform="translate(-63.28,-48.96)">
+<g transform="translate(-63.28,-48.96)">
 <text x="203.50" y="1366.85" font-family="Cascadia Code, Consolas, monospace" font-size="20" fill="#1971c2" text-anchor="start"><tspan x="203.50" dy="0">📍bai2-error based injection</tspan></text>
-</g></a>
+</g>
 <g transform="translate(-63.28,-48.96)">
 <path d="M350.52 1040.87 C435.47 1040.59,519.99 1038.94,642.75 1039.12 M352.08 1039.51 C423.22 1038.94,495.27 1039.58,642.56 1039.85 M644.16 1039.35 C641.59 1047.72,643.61 1052.81,643.98 1056.85 M643.26 1040.42 C642.59 1045.36,642.27 1050.50,643.07 1058.80 M642.10 1058.15 C550.98 1056.67,458.10 1057.70,352.70 1057.95 M643.41 1057.53 C563.53 1060.05,483.69 1060.01,350.83 1057.51 M351.76 1056.83 C350.59 1052.77,351.46 1050.04,351.62 1040.45 M351.01 1059.03 C350.51 1053.42,352.12 1047.36,351.79 1039.40" stroke="#1971c2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -238,5 +238,5 @@ tags:
 
 ### 🔗 Các bài viết liên kết trong sơ đồ
 
-- [[bai1- based errorr sql injection]]
-- [[bai2-error based injection]]
+- [[lab- based errorr sql injection]]
+- [[lab2-error based injection]]

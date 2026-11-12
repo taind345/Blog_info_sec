@@ -1,5 +1,5 @@
 ---
-title: "bai2-error based injection"
+title: "lab2-error based injection"
 ---
 
 

@@ -1843,6 +1843,41 @@ function initExplorerWheelHandler() {
   }
 }
 
+// Auto-close mobile explorer drawer when clicking backdrop or clicking an article link
+function initMobileExplorerDrawer() {
+  if (window.innerWidth <= 800) {
+    const explorer = document.querySelector(".explorer")
+    if (explorer && !explorer.classList.contains("collapsed")) {
+      explorer.classList.add("collapsed")
+      explorer.setAttribute("aria-expanded", "false")
+    }
+  }
+
+  if (!(window as any).__mobile_drawer_bound) {
+    ;(window as any).__mobile_drawer_bound = true
+    document.addEventListener("click", (e) => {
+      if (window.innerWidth > 800) return
+      const target = e.target as HTMLElement | null
+      if (!target) return
+
+      const openExplorer = document.querySelector(".explorer:not(.collapsed)[aria-expanded='true']")
+      if (!openExplorer) return
+
+      const content = openExplorer.querySelector(".explorer-content")
+      const toggle = openExplorer.querySelector(".mobile-explorer")
+
+      const clickedLink = target.closest(".explorer-content a")
+      const clickedOutside = content && !content.contains(target) && (!toggle || !toggle.contains(target))
+
+      if (clickedLink || clickedOutside) {
+        openExplorer.classList.add("collapsed")
+        openExplorer.setAttribute("aria-expanded", "false")
+        document.documentElement.classList.remove("mobile-no-scroll")
+      }
+    })
+  }
+}
+
 // 6. Robust Lifecycle hook: runs once for singleton setup, preserves continuity on SPA transitions
 let bgmInitialized = false
 
@@ -1863,6 +1898,7 @@ function onNav() {
   }
 
   initExplorerWheelHandler()
+  initMobileExplorerDrawer()
 }
 
 document.addEventListener("nav", onNav)
